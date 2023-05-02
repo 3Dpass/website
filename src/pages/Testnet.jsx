@@ -289,11 +289,7 @@ rm -rf ~/3dp-chain/chains/3dpass-test/db
               Open powershell as administrator and go to the Desktop (we use
               this as an example). You can choose any location you like:
             </div>
-            <pre className="main-pre">
-              {`
-cd C:\Users\YourUserNameHere\Desktop\
-`}
-            </pre>
+            <pre className="main-pre">cd C:\Users\YourUserNameHere\Desktop\</pre>
             <div className="page-content-text">Install llvm with choco</div>
             <pre className="main-pre">
               {`
