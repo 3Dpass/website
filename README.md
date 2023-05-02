@@ -5,7 +5,7 @@ In the project directory, you can run:
 
 ### `pnpm install`
 
-Install dependencies.\
+Install dependencies.
 
 ### `pnpm start`
 
