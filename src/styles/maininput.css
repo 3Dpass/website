@@ -1,0 +1,22 @@
+.main-input {
+  display: inline-block;
+  min-width: 300px;
+
+  padding: 15px;
+
+  background: #333333;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+
+  border-radius: 12px;
+  border: 0px none;
+
+  outline: none;
+}
+
+.main-input::placeholder {
+  color: #676767;
+}

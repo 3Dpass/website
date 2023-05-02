@@ -1,0 +1,161 @@
+.main-header {
+  position: relative;
+  display: inline-block;
+
+  width: 100%;
+  height: 90px;
+
+  padding: 20px 0px;
+
+  background-color: transparent;
+
+  text-align: center;
+
+  z-index: 1;
+}
+
+.logo {
+  display: inline-block;
+
+  width: 136px;
+  height: 31px;
+
+  background-image: url("../../public/images/logo-main.svg");
+  background-position: center;
+  background-size: 136px 31px;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  vertical-align: middle;
+}
+
+.header-navs {
+  display: inline-block;
+
+  width: calc(100% - 436px);
+
+  padding-left: 120px;
+
+  text-align: left;
+
+  vertical-align: middle;
+}
+
+.header-right-navs {
+  display: inline-block;
+
+  width: 300px;
+
+  text-align: right;
+
+  vertical-align: middle;
+}
+
+.header-nav {
+  display: inline-block;
+
+  margin-right: 65px;
+
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+}
+
+.header-nav.active {
+  color: #00eb81;
+}
+
+.hamburger-menu {
+  display: none;
+
+  width: 38px;
+  height: 30px;
+
+  background-image: url("../../public/images/hamburger.svg");
+  background-position: center;
+  background-size: 38px 30px;
+  background-repeat: no-repeat;
+}
+
+.right-menu {
+  position: fixed;
+  top: 0px;
+  right: -6000px;
+
+  transition: right 1s;
+
+  width: 100vw;
+  height: 100vh;
+
+  padding: 50px 20px;
+
+  background: #1e1e1e;
+
+  z-index: 5;
+}
+
+.right-menu.active {
+  right: 0px;
+}
+
+.right-menu-nav {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.right-menu-nav.active {
+  color: #00eb81;
+  font-weight: 500;
+}
+
+.logo-holdeer-right {
+  display: inline-block;
+
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .header-nav {
+    margin-right: 20px;
+  }
+
+  .header-navs {
+    width: calc(100% - 136px);
+
+    padding-left: 40px;
+
+    text-align: right;
+  }
+
+  .header-right-navs {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .header-nav {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,88 @@
+.faq-holder {
+  display: inline-block;
+
+  width: 100%;
+
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.faq-title {
+  position: relative;
+  display: inline-block;
+
+  width: 100%;
+  max-width: 1100px;
+
+  padding: 25px 75px 25px 35px;
+
+  background: #333333;
+
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+  color: #ffffff;
+  text-align: left;
+
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.faq-title.active {
+  background: linear-gradient(104.04deg, #00eb81 5.83%, #0b828c 97.92%);
+
+  border-radius: 12px 12px 0px 0px;
+}
+
+.arrow-faq {
+  position: absolute;
+  top: 50%;
+  right: 35px;
+  transform: translateY(-50%);
+
+  width: 21px;
+  height: 10px;
+
+  background-image: url("../../public/images/arrow-d.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px 10px;
+}
+
+.faq-title.active .arrow-faq {
+  background-image: url("../../public/images/arrow-u.svg");
+}
+
+.faq-description {
+  display: inline-block;
+
+  width: 100%;
+  max-width: 1100px;
+
+  padding: 30px;
+
+  background: #333333;
+
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: #ffffff;
+
+  border-radius: 0px 0px 12px 12px;
+}
+
+.faq-description a {
+  text-decoration: none;
+  color: #00eb81;
+}
+
+@media only screen and (max-width: 768px) {
+  .faq-title,
+  .faq-description {
+    font-size: 14px;
+  }
+}

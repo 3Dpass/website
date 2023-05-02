@@ -1,0 +1,41 @@
+.table-main {
+  width: 100%;
+
+  margin: 20px 0px;
+
+  border-collapse: collapse;
+}
+
+.table-main th {
+  padding: 15px 30px;
+
+  background-color: #141414;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+
+  border: 1px solid #141414;
+}
+
+.table-main td {
+  padding: 15px 30px;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+
+  background-color: #333333;
+
+  border-bottom: 1px solid #5e5e5e;
+}
+
+@media only screen and (max-width: 768px) {
+  .table-main th,
+  .table-main td {
+    padding: 15px 10px;
+    font-size: 12px;
+  }
+}

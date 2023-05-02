@@ -1,0 +1,75 @@
+.user-card-holder {
+  display: inline-block;
+
+  width: 300px;
+
+  margin-right: 20px;
+  margin-bottom: 20px;
+
+  vertical-align: top;
+}
+
+.user-card-image {
+  width: 100%;
+  height: 300px;
+
+  background: #d9d9d9;
+
+  border-radius: 12px 12px 0px 0px;
+}
+
+.user-card-image img {
+  width: 100%;
+  height: 100%;
+
+  border-radius: 12px 12px 0px 0px;
+}
+
+.user-info-holder {
+  width: 100%;
+  height: 100px;
+
+  padding: 15px 0px;
+
+  background: #333333;
+
+  border-radius: 0px 0px 12px 12px;
+}
+
+.user-card-name {
+  width: 100%;
+
+  margin-bottom: 10px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #00eb81;
+}
+
+.user-card-title {
+  width: 100%;
+
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.user-card-description {
+  width: 100%;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 450px) {
+  .user-card-holder {
+    width: 100%;
+  }
+}

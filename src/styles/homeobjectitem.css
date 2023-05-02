@@ -1,0 +1,81 @@
+.home-object-item {
+  display: inline-block;
+
+  text-align: center;
+
+  vertical-align: middle;
+
+  cursor: pointer;
+}
+
+.home-object-item-square {
+  display: inline-block;
+
+  width: 80px;
+  height: 80px;
+
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border: 1px solid #00eb81;
+
+  border-radius: 12px;
+}
+
+.finger-print {
+  background-image: url("../../public/images/finger-print.svg");
+  background-size: 32px 36px;
+}
+
+.object {
+  background-image: url("../../public/images/objects-icon.svg");
+  background-size: 37px;
+}
+
+.key {
+  background-image: url("../../public/images/key-icon.svg");
+  background-size: 24px 36px;
+}
+
+.note {
+  background-image: url("../../public/images/note-icon.svg");
+  background-size: 36px 33px;
+}
+
+.diamond {
+  background-image: url("../../public/images/diamond.svg");
+  background-size: 36px 29px;
+}
+
+.home-object-item:hover .home-object-item-square {
+  background-color: #00eb81;
+}
+
+.home-object-title {
+  width: 100%;
+  max-width: 170px;
+
+  margin-top: 10px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.home-object-title span {
+  color: #00eb81;
+}
+
+@media only screen and (max-width: 900px) {
+  .home-object-item {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  .home-object-title {
+    max-width: 100%;
+  }
+}

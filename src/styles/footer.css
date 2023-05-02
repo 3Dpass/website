@@ -1,0 +1,202 @@
+.footer {
+  display: inline-block;
+
+  width: 100%;
+
+  padding: 50px 0px;
+
+  background: #141414;
+
+  text-align: center;
+}
+
+.footer-left-content {
+  display: inline-block;
+
+  width: 400px;
+
+  text-align: left;
+
+  vertical-align: top;
+}
+
+.footer-logo {
+  display: inline-block;
+
+  width: 136px;
+  height: 31px;
+
+  background-image: url("../../public/images/logo-main.svg");
+  background-position: center;
+  background-size: 136px 31px;
+  background-repeat: no-repeat;
+
+  cursor: pointer;
+
+  vertical-align: middle;
+}
+
+.footer-right-content {
+  display: inline-block;
+
+  width: calc(100% - 400px);
+
+  text-align: left;
+
+  vertical-align: top;
+}
+
+.footer-input-title {
+  width: 100%;
+
+  margin-top: 80px;
+
+  text-align: left;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+
+.footer-input-subtitle {
+  width: 100%;
+
+  margin-top: 8px;
+
+  text-align: left;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #868686;
+}
+
+.footer-input-holder {
+  display: inline-block;
+
+  width: 100%;
+
+  margin: 15px 0px;
+
+  text-align: left;
+}
+
+.footer-four-parts {
+  display: inline-block;
+
+  width: 25%;
+
+  text-align: left;
+
+  vertical-align: top;
+}
+
+.footer-parts-title {
+  width: 100%;
+
+  margin-bottom: 20px;
+
+  text-align: left;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #00eb81;
+}
+
+.footer-item {
+  width: 100%;
+
+  margin-bottom: 15px;
+
+  text-align: left;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 17px;
+  color: #868686;
+
+  cursor: pointer;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.icon-social-holder {
+  display: inline-block;
+
+  width: 100%;
+
+  margin: 20px 0px;
+
+  text-align: left;
+}
+
+.social-icon {
+  display: inline-block;
+
+  width: 40px;
+  height: 40px;
+
+  margin: 10px;
+
+  background-color: #333333;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  border-radius: 50%;
+
+  cursor: pointer;
+}
+
+.twitter {
+  background-image: url("../../public/images/twitter.svg");
+}
+
+.twitter:hover {
+  background-image: url("../../public/images/twitter-active.svg");
+}
+
+.github {
+  background-image: url("../../public/images/github.svg");
+}
+
+.github:hover {
+  background-image: url("../../public/images/github-active.svg");
+}
+
+.discord {
+  background-image: url("../../public/images/discord.svg");
+}
+
+.discord:hover {
+  background-image: url("../../public/images/discord-active.svg");
+}
+
+.telegram {
+  background-image: url("../../public/images/telefram.svg");
+}
+
+.telegram:hover {
+  background-image: url("../../public/images/telefram-active.svg");
+}
+
+.instagram {
+  background-image: url("../../public/images/instagram.svg");
+}
+
+.instagram:hover {
+  background-image: url("../../public/images/instagram-active.svg");
+}
+
+@media only screen and (max-width: 950px) {
+  .footer-left-content,
+  .footer-right-content,
+  .footer-four-parts {
+    width: 100%;
+
+    margin-bottom: 20px;
+  }
+
+  .footer-input-title {
+    margin-top: 20px;
+  }
+}

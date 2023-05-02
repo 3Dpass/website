@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+
+  font-family: "Roboto", sans-serif;
+
+  background: #1e1e1e;
+}
+
+.message-text {
+  color: #00EB81;
+  font-size: 18px;
+  padding-top: 16px;
+  text-align: center;
+  
+}
+
+.special-message {
+  background-color: #141414;
+  height: 55px;
+
+  ;
+}
+
+.main-holder {
+  display: inline-block;
+
+  width: 100%;
+
+  text-align: center;
+}
+
+.mw-content {
+  max-width: 1600px;
+}
+
+.inner-content {
+  display: inline-block;
+
+  width: 100%;
+  max-width: 1600px;
+}
+
+.home-items-content {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+
+  width: 100%;
+
+  padding: 50px 0px;
+
+  text-align: center;
+}
+
+.home-items-content a,
+.a-none {
+  text-decoration: none;
+}
+
+.mb0 {
+  margin-bottom: 0px !important;
+}
+
+pre {
+  white-space: pre-wrap; /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+@media only screen and (max-width: 1650px) {
+  .inner-content {
+    padding: 0px 20px;
+  }
+
+  .mw-content {
+    padding: 0px 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .special-message {
+    display: none;
+  }
+}

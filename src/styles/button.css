@@ -1,0 +1,23 @@
+.main-btn {
+  display: inline-block;
+
+  padding: 15px 55px;
+
+  background: transparent;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+
+  border: 1px solid #868686;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.main-btn:hover {
+  background: linear-gradient(104.04deg, #00eb81 5.83%, #0b828c 97.92%);
+
+  border: 1px solid #00eb81;
+}
