@@ -253,7 +253,7 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li><Link to="/grid2d">Grid2D</Link> algorithm optimization - (<Link to="https://github.com/3Dpass/3DP/releases/tag/v0.1.0">released v0.1.0</Link>)</li>
               <li>Core: Mining pool trait implementation (<Link to="/mainnet#mining-pool">released</Link>)</li>
-              <li>Web wallet: Validator control panel GUI (in the process)</li>
+              <li>Web wallet: <del>Validator</del> Mining pool control panel GUI (<Link to="https://wallet.3dpass.org">done</Link>)</li>
               <li><Link to="/governance">Governance</Link> elections (<Link to="https://github.com/3Dpass/3DP">released</Link>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
