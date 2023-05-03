@@ -265,7 +265,7 @@ ETH SIGNATURE
               <li>3DP-RC2 smart contract standard for NFTs based on <Link to="/features#3drecognition-hash-id">HASH ID</Link></li>
               <li>Mobile wallet: 3DP-RC2 integration</li>
               <li>Web3 wallet: 3DP-RC2 integration</li>
-              <li>CEX: Middle size exchange listing</li>
+              <li>CEX: Middle size exchange listing (listed on <Link to="https://txbit.io/Trade/P3D/USDT">txbit</Link>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
               Q3 - Asset marketplace
