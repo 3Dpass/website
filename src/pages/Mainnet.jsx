@@ -410,17 +410,17 @@ const Mainnet = () => {
             <div className="page-content-text">
               Block rewards = 500 P3D, pool fee = 10 %, validators fee = 30%.
               After excluding validators fee 150 P3D, the rest 350 P3D will be
-              divided among miniers and pool's admin. Therefore, pool's fee 10%
+              divided among miniers and the pool operator. Therefore, pool's fee 10%
               = 35 P3D, and 315 P3D will be distributed among all miners in the
               pool.
             </div>
             <div className="page-content-text">
-              In order for the minier to take a share in the block rewards it is
+              In order for the minier to take a share of the block rewards it is
               required to push at least one correct 3D object, the hash ID of
               which would be below the additional off-chian difficulty number.
               All other pushed objects above the limit will not be counted.
               Assume, we have 3 miners in the pool, which pushed 10 correct 3D
-              objects to, and 1 block was mined.
+              objects, and 1 block was mined.
             </div>
             <div className="page-content-text">Pool report:</div>
             <ul className="page-content-text">
