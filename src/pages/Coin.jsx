@@ -493,7 +493,7 @@ ETH SIGNATURE
               <div className="page-table-left page-table-info">Marketcap</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://www.livecoinwatch.com/price/3DPassCoin-P3D">
-                  Livescoinwatch
+                  Livecoinwatch
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Licence</div>
