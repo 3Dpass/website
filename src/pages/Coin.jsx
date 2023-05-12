@@ -395,7 +395,7 @@ ETH SIGNATURE
                 API/RPC endpoint
               </div>
               <div className="page-table-right page-table-content">
-                wss://rpc2.3dpass.org; wss://rpc2.3dpass.org; via caldera:
+                wss://rpc.3dpass.org; wss://rpc.3dpscan.io; via caldera:
                 wss://rpc.caldera.network
               </div>
               <div className="page-table-left page-table-info">Web3 wallet</div>
@@ -424,14 +424,14 @@ ETH SIGNATURE
                 Explorer API
               </div>
               <div className="page-table-right page-table-content">
-                <Link to="https://explorer-api.3dpass.org/graphql/">
-                  https://explorer-api.3dpass.org/graphql/
+                <Link to="https://explorer-api.3dpscan.io/graphql/">
+                  https://explorer-api.3dpscan.io/graphql/
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Telemetry</div>
               <div className="page-table-right page-table-content">
-                <Link to="https://telemetry.3dpass.org">
-                  https://telemetry.3dpass.org
+                <Link to="https://telemetry.3dpscan.io/">
+                  https://telemetry.3dpscan.io/
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Mining</div>
