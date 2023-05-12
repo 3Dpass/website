@@ -240,7 +240,7 @@ ETH SIGNATURE
             </div>
             <ul className="page-content-text">
               <li>Mobile wallet (<Link to="/mobile-wallet">released</Link>)</li>
-              <li>Web Block Explorer (<Link to="https://explorer.3dpass.org/">released</Link>)</li>
+              <li>Web Block Explorer (<Link to="https://3dpscan.io/">released</Link>)</li>
               <li>
                 Core: Major update "<Link to="/mainnet#validator">Validator set</Link> auto selection" (<Link to="https://github.com/3Dpass/3DP/releases">released v0.0.8</Link>)
               </li>
@@ -529,15 +529,15 @@ ETH SIGNATURE
                   Team share - 101 000 000 P3D (10.1% of total supply), issued
                   in genesis block
                 </li>
-                <li>a. <Link to="https://explorer.3dpass.org/account/d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ">d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ</Link></li>
-                <li>b. <Link to="https://explorer.3dpass.org/account/d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE">d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE</Link></li>
-                <li>c. <Link to="https://explorer.3dpass.org/account/d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF">d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF</Link></li>
+                <li>a. <Link to="https://3dpscan.io/account/d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ">d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ</Link></li>
+                <li>b. <Link to="https://3dpscan.ioaccount/d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE">d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE</Link></li>
+                <li>c. <Link to="https://3dpscan.io/account/d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF">d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF</Link></li>
 
                 <li>
                   Marketing budget - 110 000 000 P3D (11% of total supply),
                   issued in genesis block
                 </li>
-                <li>a. <Link to="https://explorer.3dpass.org/account/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>
+                <li>a. <Link to="https://3dpscan.io/account/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>
                 <li>
                   b. The budget is being spent through the Treasury account
                   controlled by the <Link to="/governance">Governance</Link>
@@ -546,7 +546,7 @@ ETH SIGNATURE
                   Contribution budget: 60 000 000 P3D (6% of total supply),
                   issued in genesis block
                 </li>
-                <li>a. <Link to="https://explorer.3dpass.org/account/d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf">d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf</Link></li>
+                <li>a. <Link to="https://3dpscan.io/account/d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf">d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf</Link></li>
               </ul>
               <img
                 className="page-img"
@@ -638,7 +638,7 @@ ETH SIGNATURE
               </div>
               <ul className="page-content-text">
                 <li>Non official node and miner: <Link to="https://github.com/easy-3dp">"easy-3dp"</Link></li>
-                <li>Web Block Explorer: <Link to="https://explorer.3dpass.org/">https://explorer.3dpass.org/</Link></li>
+                <li>Web Block Explorer: <Link to="https://3dpscan.io/">https://3dpscan.io/</Link></li>
                 <li>Mining pool trait: <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/mining-pool">GitHub</Link></li>
               </ul>
               <div className="page-content-subtitle">
