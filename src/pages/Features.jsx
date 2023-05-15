@@ -391,15 +391,15 @@ const Features = () => {
             <div className="page-content-text">Useful Links: </div>
             <ul className="page-content-text">
               <li>
-                <Link to="https://telemetry.3dpass.org/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">
+                <Link to="https://telemetry.3dpass.org/">
                   Network telemetry server
                 </Link>
               </li>
               <li>
-                <Link to="https://explorer.3dpass.org/">Block explorer</Link>
+                <Link to="https://3dpscan.io/">Block explorer</Link>
               </li>
               <li>
-                <Link to="https://explorer-api.3dpass.org/graphql/">
+                <Link to="https://explorer-api.3dpscan.io/graphql/">
                   Block explorer API
                 </Link>
               </li>
