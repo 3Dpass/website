@@ -720,7 +720,7 @@ electorate - the total number of tokens issued in the network
               The Treasury is a pot of funds collected through either <Link to="/mainnet#validator-punishments">slashing
               Validators accounts</Link> for missbehaviour or direct donations. 3DPass
               mainnet treasury accound is{" "}
-              <Link to="https://explorer.3dpass.org/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
+              <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
             </div>
             <div className="page-content-text">
               The funds held in the Treasury can be spent by making a spending
