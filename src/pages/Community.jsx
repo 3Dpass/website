@@ -332,6 +332,9 @@ const Community = () => {
                 <Link to="https://xeggex.com/market/P3D_BTC">
                   <li>Xeggex P3D/BTC</li>
                 </Link>
+                <Link to="https://txbit.io/Trade/P3D/USDT">
+                  <li>Txbit P3D/USDT</li>
+                </Link>
               </ul>
             </div>
             <div className="url-block">
