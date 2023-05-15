@@ -436,8 +436,8 @@ ETH SIGNATURE
               </div>
               <div className="page-table-left page-table-info">Telemetry</div>
               <div className="page-table-right page-table-content">
-                <Link to="https://telemetry.3dpscan.io/">
-                  https://telemetry.3dpscan.io/
+                <Link to="https://telemetry.3dpass.org/">
+                  https://telemetry.3dpass.org/
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Mining</div>
