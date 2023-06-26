@@ -1,4 +1,7 @@
 # 3dpass.org website
+
+![Icon-02](https://github.com/3Dpass/website/assets/107915078/df9fd41a-e4bc-4687-9ccf-dbbf0f5bb3cb)
+
 ## Available Scripts
 
 In the project directory, you can run:
