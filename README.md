@@ -1,6 +1,7 @@
 # 3dpass.org website
 
-![Icon-02](https://github.com/3Dpass/website/assets/107915078/df9fd41a-e4bc-4687-9ccf-dbbf0f5bb3cb)
+![3dpass_logo_new_200x200](https://github.com/3Dpass/website/assets/107915078/cd443578-2a87-48e4-86ae-2efa9b1109ce)
+
 
 ## Available Scripts
 
