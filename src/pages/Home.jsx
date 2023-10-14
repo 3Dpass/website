@@ -22,7 +22,7 @@ const Home = () => {
         "3DPass allows for anyone to use 3D object as a seed data for the password or keys creation. In combination with the owner's biometric data or some additional properties, this <a href='/features#multiobject'>multi-object Hash ID</a> provides zero knowledge proof of the object authenticity, and eventually can be recovered by means of its scanning. <a href='/features#passwords'>Learn more >></a>",
     },
     {
-      title: "Metaverse, Gaming, Added reality, IoT, Robotics",
+      title: "Metaverse, Gaming, Added reality, IoT, Robotics, AI",
       description:
         "3DPass provides the oportunity for machines to assign a <a href='/features#3drecognition-hash-id'>sustainable unique identity named HASH_ID</a> for each real or virtual object that we could have simultaniously used in reality, as well, as on the Internet. Not only you can <a href='/features#tokenization'>tokenize the object</a> in static, but also <a href='/features#tokenization'>follow its dynamics</a>. And that would be nothing but a sequence of the object Hash IDs captured in different state, time, place and linked together on the blockchain. <a href='/community#use-cases-gaming'>Learn about some cases >></a>",
     },
@@ -30,24 +30,25 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
-      title: "3Dpass coin is now available on Nova wallet app!",
+      title: "3Dpass has been listed on CoinGecko!",
       description:
-      "Nova wallet just announced about 3Dpass coin integration!",
-      date: "Apr 26, 2023",
-      link: "https://novawallet.io/"
+      "3dpass coin (P3D) is now available on CoinGecko",
+      date: "Oct 8, 2023",
+      link: "https://www.coingecko.com/en/coins/3dpass"
     },
     {
-      title: "3Dpass coin has been listed on Txbit exchange!",
+      title: "3DPRC-2 tokenization standard is published!",
       description:
-        "Txbit exchange announced 3Dpass coin listing!",
-      date: "Apr 24, 2023",
-      link: "https://www.txbit.io/Trade/P3D/USDT"
+      "3DPRC-2 (Request for Comments) on the object tokenization standard has been published, the API is available on github.",
+      date: "Sep 29, 2023",
+      link: "https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API"
     },
     {
-      title: "The Ledger of Things iOS wallet is available on AppStore!",
-      description: "The Ledger of Things iOS wallet is now available to download on AppStore.",
-      date: "Apr 19, 2023",
-      link: "https://apps.apple.com/app/3dpass/id6447526851"
+      title: "The user object authientication protocol is available on Testnet!",
+      description:
+      "One of the most important parts of the object tokenization API has been rolled out for public testings",
+      date: "Aug 12, 2023",
+      link: "https://github.com/3Dpass/3DP/tree/test"
     },
   ]);
 
@@ -61,24 +62,28 @@ const Home = () => {
             Layer 1 blockchain platform for the tokenization of objects
           </div>
           <div className="home-button-holder">
-            <Link to="/mainnet">
-              <Button type="button" label="Join The Mainnet" />
+          <Link to="/features#scanproof-3dprc-2">
+              <Button type="button" label="3DPRC-2 standard" />
+            </Link>
+            <Link to="/features#smartcontracts">
+              <Button type="button" label="Smart Contracts" />
             </Link>
             <Link to="https://wallet.3dpass.org">
               <Button type="button" label="Web3 Wallet" />
             </Link>
-            <a href="/features#smartcontracts">
-              <Button type="button" label="Smart Contracts and dApps" />
-            </a>
+            <Link to="/mobile-wallet">
+              <Button type="button" label="Mobile wallet" />
+            </Link>
           </div>
         </div>
       </div>
       <div className="home-one-content home-first-content inner-content">
         <div className="home-left-title">The Ledger Of Things</div>
         <div className="home-left-description">
-          Proof of Scan is a revolutionary protocol preventing digital assets
-          from being copyied, recognition-based algorithm: Grid2d, deterministic finality, Layer 1
-          blockchain, 3Dpass Coin: mineable
+          Layer 1 blockchain, Proof of Scan is a revolutionary protocol preventing digital assets
+          from being copied, recognition-based algorithm Grid2d, deterministic blockchain finality, 
+          3Dpass Coin: mineable, 3DPRC-2 tokenization standard, Decentralized governance, Forkless upgrade, 
+          On-chain Identity, Smart Contracts. 
         </div>
         <div className="home-items-content">
           <HomeItem
@@ -105,8 +110,8 @@ const Home = () => {
         <div className="home-objects-content">
           <a href="/features#3drecognition-hash-id">
             <HomeObjectItem
-              icon={"finger-print"}
-              title={"Create a <span>Hash ID</span> out of any 3D object"}
+              icon={"diamond"}
+              title={"Create the <span>Hash ID</span> out of any object"}
             />
           </a>
           <div className="object-item-divider">
@@ -143,8 +148,8 @@ const Home = () => {
           </div>
           <a href="/features#multiobject">
             <HomeObjectItem
-              icon={"diamond"}
-              title={"Enjoy biometric and <span>multi-object options</span>"}
+              icon={"finger-print"}
+              title={"Enjoy biometrics and <span>multi-object option</span>"}
             />
           </a>
           <div className="home-centered-btn">
@@ -194,15 +199,15 @@ const Home = () => {
           <a href="https://xeggex.com/market/P3D_USDT">
             <div className="partners-icon xegex"></div>
           </a>
-          <a href="https://txbit.io/Trade/P3D/USDT">
-            <div className="partners-icon txbit"></div>
-          </a>
         </div>
       </div>
       <div className="home-one-content inner-content">
         <div className="home-partners-title">Marketcap</div>
         <div className="partners-icons-holder">
           <div className="partners-icons-holder">
+          <a href="https://www.coingecko.com/en/coins/3dpass">
+              <div className="partners-icon coingecko"></div>
+            </a>
             <a href="https://coinpaprika.com/coin/p3d-3dpass-coin/">
               <div className="partners-icon coin-paprika"></div>
             </a>
@@ -211,9 +216,6 @@ const Home = () => {
             </a>
             <a href="https://coincodex.com/crypto/3dpass/">
               <div className="partners-icon coin-codex"></div>
-            </a>
-            <a href="https://blockspot.io/coin/3dpass-coin/">
-              <div className="partners-icon block-spot"></div>
             </a>
           </div>
         </div>

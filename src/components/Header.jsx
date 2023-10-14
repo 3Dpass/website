@@ -88,7 +88,7 @@ const Header = () => {
                   : "header-nav"
               }
             >
-              3DPass Coin
+              3Dpass Coin
             </div>
           </Link>
           <Link to="/mainnet">
@@ -165,7 +165,7 @@ const Header = () => {
         </div>
         <div className="header-right-navs">
           <Link to="/mainnet">
-            <Button type="button" label="Join Mainnet" />
+            <Button type="button" label="Join The Mainnet" />
           </Link>
         </div>
       </div>

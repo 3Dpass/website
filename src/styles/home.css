@@ -255,6 +255,11 @@
   background-image: url("../../public/images/txbit.svg");
 }
 
+.coingecko {
+  background-size: 200px 44px;
+  background-image: url("../../public/images/coingecko.svg");
+}
+
 .coin-paprika {
   background-size: 200px 34px;
   background-image: url("../../public/images/coin-paprika.svg");

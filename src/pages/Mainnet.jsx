@@ -119,19 +119,7 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              How To Start Mining SOLO On Linux or Mac OS
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#windows">
-            <div
-              className={
-                locationHash.includes("windows")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              How To Start Mining SOLO On Windows
+              Mining SOLO On Linux or Mac OS
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -240,7 +228,7 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              On Chain Identity
+              On-chain Identity
               <div className="page-nav-circle"></div>
               <div className="page-nav-line chain-line"></div>
             </div>
@@ -281,11 +269,36 @@ const Mainnet = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#tokenization">
+            <div
+              className={
+                locationHash.includes("tokenization")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              The object tokenization
+              <div className="page-nav-circle"></div>
+              <div className="page-nav-line tokenization-line"></div>
+            </div>
+          </a>
+          <a href="#put-object">
+            <div className="page-nav-inside">
+              Put new object on chain 
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#get-object-info">
+            <div className="page-nav-inside">
+              Get object info
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="page-content">
         <div className="sub-header-holder">
-          <a href="https://telemetry.3dpass.org/">
+          <a href="https://telemetry.3dpscan.io/">
             <div className="one-subheader">Mainnet Telemetry</div>
           </a>
           <a href="https://wallet.3dpass.org/">
@@ -294,10 +307,13 @@ const Mainnet = () => {
           <a href="/mobile-wallet">
             <div className="one-subheader">Mobile Wallet</div>
           </a>
-          <a href="https://explorer.3dpass.org/">
-            <div className="one-subheader">Block Explorer</div>
+          <a href="https://3dpscan.io">
+            <div className="one-subheader">Block Explorer 1</div>
           </a>
-          <a href="https://explorer-api.3dpass.org/graphql/">
+          <a href="https://explorer.3dpassmining.info">
+            <div className="one-subheader">Block Explorer 2</div>
+          </a>
+          <a href="https://explorer-api.3dpscan.io/graphql/">
             <div className="one-subheader">Block Explorer API</div>
           </a>
           <a href="https://discord.gg/u24WkXcwug">
@@ -305,6 +321,15 @@ const Mainnet = () => {
           </a>
           <a href="https://t.me/pass3d">
             <div className="one-subheader">Telegram</div>
+          </a>
+          <a href="https://github.com/3Dpass/3DP/wiki">
+            <div className="one-subheader">Dev Wiki</div>
+          </a>
+          <a href="https://github.com/3Dpass">
+            <div className="one-subheader">GitHub</div>
+          </a>
+          <a href="https://www.3dpassmining.info">
+            <div className="one-subheader">Mining leaders</div>
           </a>
         </div>
         <div className="page-content-block first-page-block" id="requirements">
@@ -410,7 +435,7 @@ const Mainnet = () => {
             <div className="page-content-text">
               Block rewards = 500 P3D, pool fee = 10 %, validators fee = 30%.
               After excluding validators fee 150 P3D, the rest 350 P3D will be
-              divided among miniers and the pool operator. Therefore, pool's fee 10%
+              divided among miniers and and the pool operator. Therefore, pool's fee 10%
               = 35 P3D, and 315 P3D will be distributed among all miners in the
               pool.
             </div>
@@ -619,7 +644,7 @@ pool_rate >= 2*limit`}
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              4. Set up the pool's fee %:
+              4. Set up the pool fee %:
             </div>
             <img
               className="page-img"
@@ -630,7 +655,7 @@ pool_rate >= 2*limit`}
             <div className="page-content-text">
               5. Set up the additional off-chain Difficulty min limit for your
               pool. All 3D objects having its hash ids below the limit will be
-              rejected. miningPool - setPoolDifficulty(difficulty):
+              rejected:
             </div>
             <img
               className="page-img"
@@ -639,13 +664,12 @@ pool_rate >= 2*limit`}
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              6. Set up the pool mode (either KYC or Anonymous min requirement
-              will be applied to all the pool members). miningPool -
-              setPoolMode(KYC):
+              6. Set up the KYC mode. Either the KYC or no_KYC requirements will be applied
+             to the pool members joining:
             </div>
             <img
               className="page-img"
-              src="/images/pool_mode_setup1.png"
+              src="/images/set_up_the_pool_kyc_mode.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -660,11 +684,11 @@ pool_rate >= 2*limit`}
               pool --suri 0x...
             </pre>
             <div className="page-content-text">
-              --suri is the Secret seed (hex) from your GRANDPA key Check your
-              keystore ~/3dp-chain/chains/3dpass/keystore. There supposed to be
+              <code>--suri</code> is the Secret seed (hex) from your GRANDPA key. Check your
+              keystore <code>~/3dp-chain/chains/3dpass/keystore</code>. There supposed to be
               3 keys in there, such as: Mining key, GRANDPA key and Pool key.
               Pool key looks almost the same to your Minig key, but with the
-              different prefix 706... Your keystore should look this way:
+              different prefix "706...". Your keystore should look this way:
             </div>
             <img
               className="page-img"
@@ -673,7 +697,7 @@ pool_rate >= 2*limit`}
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              8. Run the Node with following:
+              8. Run the Node with the following:
             </div>
             <pre className="main-pre">
               ./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain
@@ -683,13 +707,22 @@ pool_rate >= 2*limit`}
               --unsafe-rpc-external --rpc-port 9933
             </pre>
             <div className="page-content-text">
-              9. Open up port 9933 for incoming connections and make sure it is
+              9. Open up the port 9933 for incoming connections and make sure it is
               forwarded to your server's local LAN IP.
             </div>
             <div className="page-content-text">10. Add your first miner:</div>
             <img
               className="page-img"
-              src="/images/add_miner1.png"
+              src="/images/add_miner_new.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+               In order to remove use the following:
+            </div>
+            <img
+              className="page-img"
+              src="/images/remove_miner_new.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -698,22 +731,22 @@ pool_rate >= 2*limit`}
               share it with them:
             </div>
             <pre className="main-pre">
-              ./target/release/pass3d-pool --algo grid2d_v2 --pool-id
+              ./target/release/pass3d-pool run --pool-id
               MY_POOL_P3D_ADDRESS --url http://1.2.3.4:9933/ --threads 32
               --member-id MINER's_P3D_ADDRESS --key MINER's_PRIVATE_KEY
             </pre>
             <div className="page-content-text">
-              --pool-id is your mining pool P3D address (Reasonable),
+              <code>--pool-id</code> is your mining pool P3D address (Reasonable),
             </div>
             <div className="page-content-text">
-              --url is your server ip/host the node is available by,
+              <code>--url</code> is your server ip/host the node is available by,
             </div>
             <div className="page-content-text">
-              --threads is amount of threads used for handling the objects
-              coming from miners.
+              <code>--threads</code> is the amount of threads used for handling the objects
+              coming from miners with.
             </div>
             <div className="page-content-text">
-              --key is the private key for minier's P3D address, which is used for signing the PoW messages being pushed over towards the pool. Inspect the seed phrase to get one.
+              <code>--key</code> is the private key for the minier P3D address, which is used for signing the PoW messages being pushed over towards the pool. Inspect the seed phrase to get one.
             </div>
             <div className="page-content-text">
               12. Use <Link to="https://github.com/3Dpass/pass3d-pool">pass3d-pool</Link> client app to check connection.
@@ -782,7 +815,7 @@ pool_rate >= 2*limit`}
             </div>
             <pre className="main-pre">
               wget
-              https://github.com/3Dpass/pass3d-pool/releases/download/v12/pass3d-pool-linux.tar.gz
+              https://github.com/3Dpass/pass3d-pool/releases/download/v15/pass3d-pool-linux.tar.gz
               tar xzf pass3d-pool-linux.tar.gz
             </pre>
             <div className="page-content-text">
@@ -800,53 +833,23 @@ cargo build --release
               ./target/release/pass3d-pool inspect --seed 'one two ... twelve'
             </pre>
             <div className="page-content-text">
-              --seed is the seed phrase for your P3D address
+              <code>--seed</code> is the seed phrase for your P3D address
             </div>
             <div className="page-content-text">
               6. Pick up some parameters for the pool you want to connect to
               (Pool address and URL) and run pass3d-pool ap with the following:
             </div>
             <pre className="main-pre">
-              ./target/release/pass3d-pool --algo grid2d_v2 --pool-id
+              ./target/release/pass3d-pool run --pool-id
               POOL_P3D_ADDRESS --url http://1.2.3.4:9933 --threads 32
               --member-id YOUR_P3D_ADDRESS --key YOUR_PRIVATE_KEY
             </pre>
             <div className="page-content-text">
-              You are going to see the Mining params applied message, if you got
-              connected successfully:
+              You are going to see this screen if success:
             </div>
             <img
               className="page-img"
-              src="/images/params_applied1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              Failure would look this way:
-            </div>
-            <img
-              className="page-img"
-              src="/images/pool_not_responding1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              7. Check if pass3d-pool app has started handling objects from the
-              miner:
-            </div>
-            <img
-              className="page-img"
-              src="/images/pass3d-pool_handling_objects1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              Once the minier's share is being pushed to the pool, the following
-              message appears:
-            </div>
-            <img
-              className="page-img"
-              src="/images/pushing1.png"
+              src="/images/pass3d-pool-running.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -863,7 +866,7 @@ cargo build --release
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-subtitle" id="mining-pool-fetching">
-              Fetching mining information
+              Fetching some mining information
             </div>
             <div className="page-content-text">
               By following some tips below, you can get some mining information
@@ -871,7 +874,7 @@ cargo build --release
             </div>
             <div className="page-content-text">
               Pools and its members (pool admins have passed KYC, you can look
-              up their contact information on the <Link to="https://explorer.3dpass.org/">block explorer</Link>):
+              up their contact information on the <Link to="https://3dpscan.io">block explorer</Link>):
             </div>
             <img
               className="page-img"
@@ -928,7 +931,7 @@ cargo build --release
             <div className="page-content-text">1. reb0rn-3dpool</div>
             <div className="page-content-text">
               Pool id:{" "}
-              <Link to="https://explorer.3dpass.org/account/d1DrnnYYFwynxpnZJork1TB8spm26AWaLPo7u9NukFQNSkoiK">
+              <Link to="https://3dpscan.io/account/d1DrnnYYFwynxpnZJork1TB8spm26AWaLPo7u9NukFQNSkoiK">
                 d1DrnnYYFwynxpnZJork1TB8spm26AWaLPo7u9NukFQNSkoiK
               </Link>
             </div>
@@ -938,7 +941,7 @@ cargo build --release
             <pre className="main-pre">
               {`
   cd ~/pass3d-pool 
-  ./target/release/pass3d-pool --algo grid2d_v2
+  ./target/release/pass3d-pool run 
   --pool-id d1DrnnYYFwynxpnZJork1TB8spm26AWaLPo7u9NukFQNSkoiK --url
   http://3dpool.cryptohood.org:9933/ --threads 32 --member-id
   YOUR_P3D_ADDRESS --key YOUR_PRIVATE_KEY
@@ -947,7 +950,7 @@ cargo build --release
             <div className="page-content-text">2. Pool_3dpassmining (<Link to="https://www.3dpassmining.info/">3dpassmining.info</Link> )</div>
             <div className="page-content-text">
               Pool id:{" "}
-              <Link to="https://explorer.3dpass.org/account/d1G2JYmaLeoyDbqAQRD3bfdbNosjAC2bDM6Qkvtjx6iZ3u88Z">
+              <Link to="https://3dpscan.io/account/d1G2JYmaLeoyDbqAQRD3bfdbNosjAC2bDM6Qkvtjx6iZ3u88Z">
               d1G2JYmaLeoyDbqAQRD3bfdbNosjAC2bDM6Qkvtjx6iZ3u88Z
               </Link>
             </div>
@@ -957,9 +960,28 @@ cargo build --release
             <pre className="main-pre">
               {`
   cd ~/pass3d-pool
-  ./pass3d-pool run --algo grid2d_v2 
+  ./pass3d-pool run 
   --pool-id d1G2JYmaLeoyDbqAQRD3bfdbNosjAC2bDM6Qkvtjx6iZ3u88Z 
   --url http://pool.3dpassmining.info:9933/ --threads 32 
+  --member-id YOUR_P3D_ADDRESS --key YOUR_PRIVATE_KEY
+            `}
+            </pre>
+            <div className="page-content-text">3. Pool Frank (<Link to="http://162.62.55.86:16000">http://162.62.55.86:16000</Link> )</div>
+            <div className="page-content-text">
+              Pool id:{" "}
+              <Link to="https://3dpscan.io/account/d1GnDxkQfbZZzwhEVS3SrW3sfzxQjoRmwyBLFG8C1JTs12Vyh">
+              d1GnDxkQfbZZzwhEVS3SrW3sfzxQjoRmwyBLFG8C1JTs12Vyh
+              </Link>
+            </div>
+            <div className="page-content-text">
+              pass3d-pool running command:
+            </div>
+            <pre className="main-pre">
+              {`
+  cd ~/pass3d-pool
+  ./pass3d-pool run 
+  --pool-id d1GnDxkQfbZZzwhEVS3SrW3sfzxQjoRmwyBLFG8C1JTs12Vyh 
+  --url http://162.62.55.86:16000/ --threads 32 
   --member-id YOUR_P3D_ADDRESS --key YOUR_PRIVATE_KEY
             `}
             </pre>
@@ -1067,31 +1089,8 @@ docker compose rm -f
               How to start mining on Linux or MAC OS
             </div>
             <div className="page-content-text">
-              Open your Terminal and build the Node with the folowing:
+              Open your Terminal. Follow <Link to="https://github.com/3Dpass/3DP#getting-started-with-3dpass-node">these guidelines</Link> to download the latest release or build the Node yourself out of the sourcecodes.
             </div>
-            <pre className="main-pre">
-              {`
-cd ~ 
-git clone https://github.com/3Dpass/3DP.git
-cd 3DP
-curl https://sh.rustup.rs -sSf | sh -s -- -y --default-toolchain nightly
-source $HOME/.cargo/env
-rustup update nightly
-rustup target add wasm32-unknown-unknown --toolchain nightly
-sudo apt-get install -y libclang-dev libssl-dev clang
-cargo build --release
-                    `}
-            </pre>
-            <div className="page-content-text">
-              Option (for Linux only): You can download the latest release
-              instead of building yourself:
-            </div>
-            <pre className="main-pre">
-              {`
-wget https://github.com/3Dpass/3DP/releases/download/v2/poscan-consensus-linux.tar.gz
-tar xzf poscan-consensus-linux.tar.gz
-                    `}
-            </pre>
             <div className="page-content-text">Generate your mining key:</div>
             <pre className="main-pre">
               {`
@@ -1123,7 +1122,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              The seed phrase must be the same as for your mining key.
+              The seed phrase must be the same as the one used for your mining key.
             </div>
             <div className="page-content-text">
               The output would be like this:
@@ -1167,7 +1166,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
             </div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpass.org/submit 0" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
+./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
                     `}
             </pre>
             <div className="page-content-text">
@@ -1177,18 +1176,17 @@ ls ~/3dp-chain/chains/3dpass/keystore
               --threads is the number of threads you're about to use for mining
               ("--threads 2" means, you are going to leverage 2 threads)
             </div>
-            <div className="page-content-text">Install <Link to="https://nodejs.org/en/">Nodejs v16</Link> and <Link to="https://pnpm.io/installation">pnpm</Link></div>
+            <div className="page-content-text">Install <Link to="https://bun.sh/">Bun</Link></div>
             <div className="page-content-text">Install miner:</div>
             <pre className="main-pre">
               {`
-corepack enable
-pnpm i
+bun install
                     `}
             </pre>
             <div className="page-content-text">Run miner:</div>
             <pre className="main-pre">
               {`
-pnpm miner --interval 6 --threads 32
+bun miner.js --host 127.0.0.1 --port 9933
                     `}
             </pre>
             <div className="page-content-text">
@@ -1202,7 +1200,7 @@ pnpm miner --interval 6 --threads 32
               connections and forwarded to your server's local LAN IP
             </div>
             <div className="page-content-text">
-              Make sure you can see your Node in the <Link to="https://telemetry.3dpass.org/">list</Link>
+              Make sure you can see your Node in the <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
             <div className="page-content-text">
               There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link> you can also use with your node.
@@ -1217,77 +1215,10 @@ rm -rf ~/3dp-chain/chains/3dpass/db
             </pre>
           </div>
         </div>
-        <div className="page-content-block" id="windows">
-          <div className="page-content-inner">
-            <div className="page-content-title">
-              How to start mining on Windows
-            </div>
-            <div className="page-content-text">Download and install <Link to="https://www.rust-lang.org/tools/install">Rust</Link></div>
-            <div className="page-content-text">
-              Install <Link to="https://git-scm.com/download/win">Git</Link> if you havent installed it yet
-            </div>
-            <div className="page-content-text">
-              Install <Link tp="https://nodejs.org/en/download/">Node.js</Link>. Make sure you have picked up "Chocolatey
-              installation", which is required for the node to work correctly
-            </div>
-            <div className="page-content-text">
-              Open powershell as administrator and go to the Desktop (we use
-              this as an example). You can choose any location you like:
-            </div>
-            <pre className="main-pre">cd C:\Users\YourUserNameHere\Desktop\</pre>
-            <div className="page-content-text">Install llvm with choco</div>
-            <pre className="main-pre">{`choco install llvm`}</pre>
-            <div className="page-content-text">
-              Configure Rust with the following:
-            </div>
-            <pre className="main-pre">
-              {`
-rustup install nightly-2022-06-17
-rustup default nightly-2022-06-17
-rustup toolchain install nightly-2022-06-17
-rustup target add wasm32-unknown-unknown --toolchain nightly-2022-06-17-x86_64-pc-windows-msvc
-                    `}
-            </pre>
-            <div className="page-content-text">
-              Clone the node from the repo:
-            </div>
-            <pre className="main-pre">{`git clone https://github.com/3Dpass/3DP.git`}</pre>
-            <div className="page-content-text">
-              Build the node with the command:
-            </div>
-            <pre className="main-pre">
-              {`
-cd 3DP
-cargo build --release
-                    `}
-            </pre>
-            <div className="page-content-text">
-              Set up your keys for mining and Grandpa finalization and run the
-              Node as it's shown above
-            </div>
-            <div className="page-content-text">
-              Install pnpm and then configure it up by the following:
-            </div>
-            <pre className="main-pre">
-              {`
-corepack
-enable pnpm i
-                    `}
-            </pre>
-            <div className="page-content-text">Run miner:</div>
-            <pre className="main-pre">{`pnpm miner --interval 6 --threads 32`}</pre>
-            <div className="page-content-text">
-              --interval is the amount of time in miliseconds between the last
-              and the next one objects being sent towards the Node. Dependidng
-              on how much threads are you mining with, reduce the interval until
-              you reach desired proc load.
-            </div>
-          </div>
-        </div>
         <div className="page-content-block" id="wallet">
           <div className="page-content-inner">
             <div className="page-content-title">
-              How to use 3DPass web wallet
+              How to use 3Dpass web wallet
             </div>
             <div className="page-content-text">
               <Link to="https://wallet.3dpass.org/">3DPass browser wallet</Link> is a Java Script page interacting with the
@@ -1303,10 +1234,12 @@ enable pnpm i
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">API Endpoints</div>
+            <div className="page-content-text">Mainnet API Endpoints</div>
             <ul className="page-content-text">
-              <li>wss://rpc.3dpass.org - mainnet</li>
-              <li>wss://rpc2.3dpass.org - mainnet</li>
+              <li>wss://rpc.3dpass.org</li>
+              <li>wss://rpc2.3dpass.org</li>
+              <li>wss://rpc.3dpscan.io</li>
+              <li>wss://rpc.caldera.network</li>
               <li>ws://127.0.0.1:9944 - local Node</li>
             </ul>
             <img
@@ -1408,7 +1341,7 @@ enable pnpm i
               </li>
             </ul>
             <div className="page-content-subtitle">
-              Node is always falliing behind the other nodes and wouldn't catch
+              The node is always falling behind the others and wouldn't catch
               up with the chain
             </div>
             <div className="page-content-text">
@@ -1452,7 +1385,7 @@ enable pnpm i
               provides there is no locks for the address you have requested,
               despite the fact that a certain amount of P3D is still locked in.
               Ex. you can see some funds locked, while observing your account
-              over the <Link to="https://explorer.3dpass.org/">block explorer</Link>. The chain state output would look like
+              over the <Link to="https://3dpscan.io">block explorer</Link>. The chain state output would look like
               this:
             </div>
             <pre className="main-pre">
@@ -1659,11 +1592,11 @@ enable pnpm i
                     `}
             </pre>
             <div className="page-content-text">
-              --suri is the Secret seed (hex) from your GRANDPA key Check your
-              keystore ~/3dp-chain/chains/3dpass/keystore. There supposed to be
+              <code>--suri</code> is the Secret seed (hex) from your GRANDPA key. Check your
+              keystore <code>~/3dp-chain/chains/3dpass/keystore</code>. There supposed to be
               3 keys now: Mining key, Grandpa and Imonline key. Imonline key
               looks almost the same to your Minig key, but with the different
-              prefix 696... Your keystore should look this way:
+              prefix "696...". Your keystore should look this way:
             </div>
             <img
               className="page-img"
@@ -1766,17 +1699,17 @@ enable pnpm i
             />
             <div className="page-content-text">
               10. Would you like to highlight your node with the "dot" on the
-              <Link to="https://telemetry.3dpass.org/">telemetry list</Link>, use this flag with the running comand:
+              <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
             </div>
             <pre className="main-pre">
               {`
---telemetry-url "wss://submit.telemetry.3dpass.org/submit 1"
+--telemetry-url "wss://submit.telemetry.3dpscan.io/submit 1"
                     `}
             </pre>
             <div className="page-content-text">like this:</div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpass.org/submit 1" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
+./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 1" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
                     `}
             </pre>
             <div className="page-content-text">
@@ -1913,19 +1846,19 @@ enable pnpm i
             <ul className="page-content-text">
               <li>
                 3DPASS REGISTRAR:{" "}
-                <Link to="https://explorer.3dpass.org/account/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link> | fee: 20 P3D
+                <Link to="https://3dpscan.io/account/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link> | fee: 20 P3D
                 | regIndex: 0
               </li>
               <li>
-                CALDERATRADE: <Link to="https://explorer.3dpass.org/account/d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF">d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF</Link>
+                CALDERATRADE: <Link to="https://3dpscan.io/account/d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF">d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF</Link>
                 | fee: 20 P3D | regIndex: 1
               </li>
               <li>
-                REB0RN-DEDI-1: <Link to="https://explorer.3dpass.org/account/d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz">d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz</Link>
+                REB0RN-DEDI-1: <Link to="https://3dpscan.io/account/d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz">d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz</Link>
                 | fee: 20 P3D | regIndex: 2
               </li>
               <li>
-                WLINK-NETWORK: <Link to="https://explorer.3dpass.org/account/d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f">d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f</Link>
+                WLINK-NETWORK: <Link to="https://3dpscan.io/account/d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f">d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f</Link>
                 | fee: 20 P3D | regIndex: 3
               </li>
             </ul>
@@ -1940,35 +1873,36 @@ enable pnpm i
               new lock without auto re-lock period specified and wait till it
               has expired.
             </div>
-            <div className="page-content-text">1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org&types=eNqrVnJMTs4vzSvxzEvLV7JC5oVnlmS4lCbmBKWmOYPElHSUHFNSilKLi5HUpQBFffLzs0sLgvNLi5JT0aTCUzPTM0qAgqXGRkq1AEo%2FJWY%3D">polkadot js wallet</Link></div>
             <div className="page-content-text">
-              2. Set up on-chain identity for your account and provide some
-              additional contact to verify (Twitter, Google, Discord, Telegram)
-            </div>
-            <div className="page-content-text">
-              3. Include your contact information to verify (ex. your Discord
-              account), 10 P3D will be charged:
+              1. Open <Link to="https://wallet.3dpass.org">3Dpass web wallet</Link> and pick up the "Identity: Claim" option.
             </div>
             <img
               className="page-img"
-              src="/images/set_identity_filled1.png"
+              src="/images/identity_claim.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              4. Request a Registrar for judgement. Registrar fee will be
-              charged:
+            <div className="page-content-text">
+              2. Choose a registrar from the list:
             </div>
             <img
               className="page-img"
-              src="/images/request_judgement1.png"
+              src="/images/picking_up_registrar.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+              3. Fill out your contact information to verify (ex. your Discord
+              account) and request the registrar for judgement:
+            </div>
+            <img
+              className="page-img"
+              src="/images/Identity_form.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              5. Open <Link to="https://wallet.3dpass.org/">3DPass wallet</Link> and import your account from the seed phrase
-              or get it injected with <Link to="https://polkadot.js.org/extension/">polkadot browser extension</Link>, pick up
-              Sign&Verivy:
+              5. Pick up "Sign&Verify" option:
             </div>
             <img
               className="page-img"
@@ -2033,7 +1967,7 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
             </div>
             <div className="page-content-text">
               For example, let's verify the Identity of 3DPASS REGISTRAR's
-              account <Link to="https://explorer.3dpass.org/account/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link>. Assume,
+              account <Link to="https://3dpscan.io/account/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link>. Assume,
               you have received this "Hello" message from @3dpass1 over Twitter:
             </div>
             <div className="page-content-text" id="check-signature">Valid signature (verified):</div>
@@ -2208,6 +2142,61 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                     `}
             </pre>
           </div>
+        </div>
+        <div className="page-content-block" id="tokenization">
+          <div className="page-content-inner">
+            <div className="page-content-title">The object tokenization</div>
+            <div className="page-content-text">
+              The user objects can be tokenized in accordance to <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> standard rules. 
+            </div>
+            <div className="page-content-subtitle" id="put-object">
+              Submit new object on The Ledger of Things
+            </div>
+            <div className="page-content-text">
+              3D model in <i>.obj</i> format could be submitted. Requirements: 
+            </div>
+            <ul className="page-content-text">
+              <li>Max file size: 150 kB</li>
+              <li>Authentication fee: 1000 P3D (will be paid to miners and validators for their job)</li>
+            </ul>
+            <div className="page-content-text">
+              Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/extrinsics">Polka wallet</Link> 
+            </div>
+            <div className="page-content-text">
+              In order to submit the object this method should be used <i> Extrinsics - PoScan - putObject(category, obj, numApprovals, hashes)</i>: 
+            </div>
+            <img
+              className="page-img"
+              src="/images/put_object_mainnet.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+              This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#1-poscanputobject">PoScan pallet API</Link>
+            </div>
+            <div className="page-content-subtitle" id="get-object-info">
+              Get the object data
+            </div>
+            <div className="page-content-text">
+              Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polka wallet</Link> 
+            </div>
+            <div className="page-content-text">
+              In order to get some data from the blockchain this method should be used <i> Chain state - PoScan - Objects(u32)</i>: 
+            </div>
+            <img
+              className="page-img"
+              src="/images/get_object_info.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+          </div>
+          <div className="page-content-text">
+            The output returns all the data about the object from the storage. 
+            Use <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#2-poscan_getposcanobject">this description</Link> for better understanding of the object parameters. 
+          </div>
+          <div className="page-content-text">
+              This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#2-poscan_getposcanobject">PoScan pallet API</Link>
+            </div>
         </div>
       </div>
     </React.Fragment>

@@ -120,30 +120,46 @@ const Community = () => {
           <div className="page-content-inner">
             <div className="page-content-title">About Us</div>
             <div className="page-content-text">
-              <Link to="/images/3DPass_pitch_deck.pdf">
-                Download pitch deck slides (.pdf)
-              </Link>
-            </div>
+                "The Ledger of Things" is a revolutionary <Link to="https://github.com/3dpass">open source</Link> Layer 1 blockchain platform for the tokenization of objects.
+                Current list of the object categories is presented as follows:
+              </div>
+            <ul className="page-content-text">
+              <li>3D objects</li>
+              <li>2D drawings</li>
+              <li>Music</li>
+              <li>Biometrics</li>
+              <li>Radio signals</li>
+              <li>Movements</li>
+              <li>Texts</li>
+            </ul>
+              <div className="page-content-text">
+                <Link to="/proof-of-scan">Proof of Scan</Link> is a decentralized protocol, which is based on recognition technology. Every object, transformed by 3DPass, obtains its own unique and sustainable identity
+                called <Link to="/features#3drecognition-hash-id">HASH ID</Link> the object could be recognized by. 
+                This will prevent the copying of digital assets and thus open a door for the entire blockchain space to potentially trillions in deals all over the globe.
+              </div>
+              <div className="page-content-text">
+                <Link to="/grid2d">Grid2d</Link> is the first 3D shape recognition algorithm, <Link to="https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">suggested</Link> by Michael Co in 2020, which is
+                implemented now as <Link to="/pass3d">pass3d</Link> recognition toolkit. Grid2d is utilized as the hash function for
+                the <Link to="/proof-of-scan">Proof of Scan</Link> protocol.
+              </div>
+              <div className="page-content-text">
+                <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments) is a standard p2p protocol for the tokenization of the User objects operating within “The Ledger of Things”,
+                by which the most useful aspect of the "Proof of Scan" consensus is getting uncovered. 3DPRC-2 provides decentralized <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">PoScan API</Link> available for customers. 
+              </div>
+              <div className="page-content-text">
+                The scope of potential 3Dpass applications goes way beyond 3D object recognition and not limited to.
+                Being naturally organized and still cultivating this community driven spirit, 3Dpass is here to encourage developers from all aroud the globe to upgrade the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> open source toolkit with new fascinating recognition algorithms and make it even more useful for human civilization.
+                Learn more about the <Link to="http://localhost:3000/proof-of-scan#object">algorithm requirements</Link>.
+              </div>
             <div className="page-content-text">
-              3DPass is an OpenSource decentralized Layer 1 blockchain-based <Link to="/features#ledger">WEB
-              3.0 platform</Link> for the tokenization of real physical and virtual
-              objects and its transformation into digital assets. Since the
-              early days of 2019 we have put our mind on solving the <Link to="https://3dpass.medium.com/3d-objects-digital-transformation-5181973909a8">Real world
-              objects digital transformation challenge</Link>. The very first algorithm
-              called <Link to="/grid2d">Grid2d</Link> was <Link to="https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">suggested</Link> by Michael Co in 2020 and has been
-              implemented now as <Link to="/pass3d">pass3d recognition toolkit</Link> serving the basement
-              of 3DPass network consensus called <Link to="/proof-of-scan">Proof of Scan</Link>. The main idea of
-              3DPass is to make it possible for people to use real world objects
-              in digital within smart-contracts and deals and to take all
-              advantages of that. By means of creation and implementation <Link to="https://github.com/3Dpass/pass3d/issues">new
-              recognition algorithms</Link> into our network, we are building this
-              bridge between decentralized blockchain digital space and
-              trillions in deals all over the globe. Every 3D object,
-              transformed by 3DPass, has its own unique and stable identity
-              called <Link to="/features#3drecognition-hash-id">HASH ID</Link> the object might be recognized by. In order to
-              encourage users to maintain the network and to solve issues there
-              is a cryptocurrency <Link to="/coin">3DP Coin</Link> which is also required to move the
-              assets.
+              Feel free to implement or suggest new algorithm for any category above and jump right
+              in <Link to="/coin#distribution-contribution">3DPass contribution rewards program</Link>
+            </div>
+              <div className="page-content-text">
+                <Link to="/coin">3DPass Coin</Link> (P3D) is a native utility token, operating on The Ledger of Things, 
+                which serves to incentivise community members to maintain the network infrastructure. 
+                Such aspects as: Storage fee, Gas fee, The object authentication fee, Transaction fee, 
+                The validator collaterals, Penalties -  are all being counted in P3D.
             </div>
             <video
               src="/images/3dpass_concept.mp4"
@@ -168,7 +184,7 @@ const Community = () => {
               image="/images/anon.jpg"
             />
             <UserCard
-              name="tvc.Micle"
+              name="Mikhail"
               title="Front-end developer and co-founder"
               description="10+ years experience"
               image="/images/anon.jpg"
@@ -187,7 +203,7 @@ const Community = () => {
             <UserCard
               name="A Mo"
               title="Community Representative"
-              description="Europe"
+              description="Europe, Discord: A_Mo#2060"
               image="/images/anon.jpg"
             />
           </div>
@@ -262,30 +278,33 @@ const Community = () => {
               <div className="url-block-title">Network</div>
               <ul className="page-content-text">
                 <Link to="https://wallet.3dpass.org/">
-                  <li>3DPass Web3 wallet</li>
+                  <li>3Dpass Web3 wallet</li>
                 </Link>
                 <Link to="/mobile-wallet">
                   <li>Mobile wallet</li>
                 </Link>
-                <Link to="https://explorer.3dpass.org/">
-                  <li>Web Block Explorer</li>
+                <Link to="https://3dpscan.io">
+                  <li>Web Block Explorer 1</li>
                 </Link>
-                {/*<Link to="">
+                <Link to="http://explorer.3dpassmining.info">
                   <li>Web Block Explorer 2</li>
-                </Link>*/}
+                </Link>
               </ul>
             </div>
             <div className="url-block">
               <div className="url-block-title url-empty-title"></div>
               <ul className="page-content-text">
-                <Link to="https://telemetry.3dpass.org">
+                <Link to="https://telemetry.3dpscan.io">
                   <li>Telemetry server</li>
                 </Link>
-                <Link to="https://explorer-api.3dpass.org/graphql/">
+                <Link to="https://explorer-api.3dpscan.io/graphql/">
                   <li>Block Explorer API graphql</li>
                 </Link>
                 <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org&types=eNqrVnJMTs4vzSvxzEvLV7JC5oVnlmS4lCbmBKWmOYPElHSUHFNSilKLi5HUpQBFffLzs0sLgvNLi5JT0aTCUzPTM0qAgqXGRkq1AEo%2FJWY%3D">
                   <li>Polkadot js wallet</li>
+                </Link>
+                <Link to="https://novawallet.io">
+                  <li>Nova wallet</li>
                 </Link>
                 <Link to="https://www.3dpassmining.info/">
                   <li>Mining dash board</li>
@@ -295,17 +314,14 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title">Market cap</div>
               <ul className="page-content-text">
-                <Link to="https://nomics.com/assets/p3d-3dpass-coin/">
-                  <li>Nomics</li>
+              <Link to="https://www.coingecko.com/en/coins/3dpass">
+                  <li>CoinGecko</li>
                 </Link>
                 <Link to="https://coinpaprika.com/coin/p3d-3dpass-coin/">
                   <li>Coinpaprika</li>
                 </Link>
                 <Link to="https://www.livecoinwatch.com/price/3DPassCoin-P3D">
                   <li>Livecoinwatch</li>
-                </Link>
-                <Link to="https://coincodex.com/crypto/3dpass/">
-                  <li>Coincodex</li>
                 </Link>
               </ul>
             </div>
@@ -315,11 +331,8 @@ const Community = () => {
                 <Link to="https://blockspot.io/coin/3dpass-coin/">
                   <li>Blockspot</li>
                 </Link>
-                <Link to="">
-                  <li>Coinmarketcap</li>
-                </Link>
-                <Link to="">
-                  <li>Coingecko</li>
+                <Link to="https://coincodex.com/crypto/3dpass/">
+                  <li>Coincodex</li>
                 </Link>
               </ul>
             </div>
@@ -331,9 +344,6 @@ const Community = () => {
                 </Link>
                 <Link to="https://xeggex.com/market/P3D_BTC">
                   <li>Xeggex P3D/BTC</li>
-                </Link>
-                <Link to="https://txbit.io/Trade/P3D/USDT">
-                  <li>Txbit P3D/USDT</li>
                 </Link>
               </ul>
             </div>
@@ -381,13 +391,19 @@ const Community = () => {
               </ul>
             </div>
             <div className="url-block">
-              <div className="url-block-title">Source Code</div>
+              <div className="url-block-title">Source Codes</div>
               <ul className="page-content-text">
                 <Link to="https://github.com/3Dpass/">
-                  <li>3DPass GitHub</li>
+                  <li>3Dpass GitHub</li>
                 </Link>
                 <Link to="https://github.com/easy-3dp">
                   <li>Non official Node and miner (easy-3dp)</li>
+                </Link>
+                <Link to="https://github.com/3DP-The-AllFather/unofficial-3dp-miner">
+                  <li>3DP-The-AllFather unofficial miner CPU/GPU</li>
+                </Link>
+                <Link to="https://github.com/seineken/unofficial-3dp-miner/">
+                  <li>Seineken's unofficial miner CPU/GPU "HiveOS integration"</li>
                 </Link>
               </ul>
             </div>
@@ -395,10 +411,10 @@ const Community = () => {
               <div className="url-block-title url-empty-title"></div>
               <ul className="page-content-text">
                 <Link to="https://github.com/WlinkNET/Prometheus/tree/main">
-                  <li>Prometheus and Graphana for 3DPass</li>
+                  <li>Prometheus and Graphana for 3Dpass</li>
                 </Link>
                 <Link to="https://github.com/Caldera-Trade/3dp-registrar/">
-                  <li>https://github.com/Caldera-Trade/3dp-registrar/</li>
+                  <li>Registrar bot from Caldera</li>
                 </Link>
               </ul>
             </div>

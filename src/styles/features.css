@@ -253,11 +253,11 @@
 }
 
 .object-line {
-  height: 18px;
+  height: 64px;
 }
 
 .scanproof-line {
-  height: 125px;
+  height: 189px;
 }
 
 .usecase-line {
@@ -377,7 +377,7 @@ iframe {
 }
 
 .distribution-line {
-  height: 365px;
+  height: 323px;
 }
 
 .road-map-text {
@@ -411,6 +411,22 @@ iframe {
 
 .chain-line {
   height: 175px;
+}
+
+.democracy-line {
+  height: 180px;
+}
+
+.council-line {
+  height: 275px;
+}
+
+.tokenization-line {
+  height: 60px;
+}
+
+.roadmap-line {
+  height: 106px;
 }
 
 .sub-header-holder {

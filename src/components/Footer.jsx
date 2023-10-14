@@ -31,13 +31,16 @@ const Footer = () => {
               <div className="footer-parts-title">Features</div>
             </a>
             <a href="/features#3drecognition">
-              <div className="footer-item">3D Object Recognition</div>
+              <div className="footer-item">The Object Recognition</div>
             </a>
             <a href="/features#multiobject">
-              <div className="footer-item">Multi Object Options</div>
+              <div className="footer-item">Multi-Object Option</div>
             </a>
             <a href="/features#scanproof">
               <div className="footer-item">Proof of Scan Protocol</div>
+            </a>
+            <a href="/features#scanproof-3dprc-2">
+              <div className="footer-item">3DPRC-2 standard</div>
             </a>
             <a href="/features#ledger">
               <div className="footer-item">The Ledger of Things</div>
@@ -45,20 +48,17 @@ const Footer = () => {
             <a href="/features#smartcontracts">
               <div className="footer-item">Smart Contracts</div>
             </a>
-            <a href="/features#tokenization">
-              <div className="footer-item">Tokenization of3D Objects</div>
-            </a>
-            <a href="/features#passwords">
-              <div className="footer-item">Password and Keys Creation</div>
-            </a>
-            <a href="/features#integration">
-              <div className="footer-item">Integration</div>
-            </a>
             <a href="/fungible-tokens-minting">
               <div className="footer-item">Fungible Tokens Minting</div>
             </a>
             <a href="/pass3d">
               <div className="footer-item">Pass3d toolkit</div>
+            </a>
+            <a href="/grid2d">
+              <div className="footer-item">Grid2d Algo</div>
+            </a>
+            <a href="/forkless-upgrade">
+              <div className="footer-item">Forkless Upgrade</div>
             </a>
           </div>
           <div className="footer-four-parts">
@@ -78,16 +78,10 @@ const Footer = () => {
               <div className="footer-item">Resources</div>
             </a>
             <a href="/community#download">
-              <div className="footer-item">Downloads</div>
+              <div className="footer-item">Download</div>
             </a>
             <a href="/community#use-cases">
               <div className="footer-item">Use Cases</div>
-            </a>
-            <a href="/forkless-upgrade">
-              <div className="footer-item">Forkless-upgrade</div>
-            </a>
-            <a href="/grid2d">
-              <div className="footer-item">Grid2d Algo</div>
             </a>
           </div>
           <div className="footer-four-parts">
@@ -97,6 +91,12 @@ const Footer = () => {
             <a href="/coin#white-papper">
               <div className="footer-item">White Paper</div>
             </a>
+            <a href="/coin#3DPRC-2">
+              <div className="footer-item">3DPRC-2 Paper</div>
+            </a>
+            <a href="/proof-of-scan">
+              <div className="footer-item">Pitch Deck Slides</div>
+            </a>
             <a href="/coin#road-map">
               <div className="footer-item">Road Map</div>
             </a>
@@ -105,12 +105,6 @@ const Footer = () => {
             </a>
             <a href="/coin#distribution">
               <div className="footer-item">Distribution</div>
-            </a>
-            <a href="/testnet-rewards">
-              <div className="footer-item">Testnet coin reward</div>
-            </a>
-            <a href="/proof-of-scan">
-              <div className="footer-item">Proof of Scan</div>
             </a>
           </div>
           <div className="footer-four-parts">
@@ -123,10 +117,13 @@ const Footer = () => {
             <a href="/mobile-wallet">
               <div className="footer-item">Mobile Wallet</div>
             </a>
-            <a href="explorer.3dpass.org">
-              <div className="footer-item">Block Explorer</div>
+            <a href="https://3dpscan.io">
+              <div className="footer-item">Block Explorer 1</div>
             </a>
-            <a href="https://telemetry.3dpass.org/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">
+            <a href="https://explorer.3dpassmining.info">
+              <div className="footer-item">Block Explorer 2</div>
+            </a>
+            <a href="https://telemetry.3dpscan.io">
               <div className="footer-item">Telemetry Server</div>
             </a>
             <a href="/mainnet#mining-pool">
@@ -135,12 +132,15 @@ const Footer = () => {
             <a href="/mainnet#validator">
               <div className="footer-item">Validator Setup</div>
             </a>
+            <a href="/mainnet#tokenization">
+            <div className="footer-item">The Object Tokenization</div>
+            </a>   
+            <a href="/mainnet#tokenization">
+            <div className="footer-item">On-chain Identity</div>
+            </a>
             <a href="https://github.com/3Dpass/3DP/wiki">
               <div className="footer-item">Development Docs</div>
-            </a>
-            <a href="/testnet">
-            <div className="footer-item">Testnet</div>
-            </a>            
+            </a>          
           </div>
         </div>
       </div>

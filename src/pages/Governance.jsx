@@ -77,6 +77,31 @@ const Governance = () => {
             >
               Democracy
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line democracy-line"></div>
+            </div>
+          </a>
+          <a href="#referenda">
+            <div className="page-nav-inside">
+              Referenda
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-fetch-referendum-result">
+            <div className="page-nav-inside">
+              How to fetch the result
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-get-voting-history">
+            <div className="page-nav-inside">
+              How to get the voting history
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-get-detailed-voting-data">
+            <div className="page-nav-inside">
+              How to get detailed voting data 
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#council">
@@ -89,6 +114,37 @@ const Governance = () => {
             >
               Council
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line council-line"></div>
+            </div>
+          </a>
+          <a href="#referendum-proposed-by-council">
+            <div className="page-nav-inside">
+              Referendum proposed by Council
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#council-elections">
+            <div className="page-nav-inside">
+              Council elections
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-fetch-elections-data">
+            <div className="page-nav-inside">
+              How to fetch the elections data 
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-vote">
+            <div className="page-nav-inside">
+              How to vote for a candidate
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-submit-candidacy">
+            <div className="page-nav-inside">
+              How to submit a candidacy
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#technical">
@@ -146,26 +202,26 @@ const Governance = () => {
           <div className="page-content-inner">
             <div className="page-content-title">General</div>
             <div className="page-content-text">
-              3DPass uses a sophisticated self governance mechanism that allows
+              3Dpass uses a sophisticated self governance mechanism that allows
               it to evolve gracefully overtime at the ultimate behest of its
               assembled stakeholders. The stated goal is to ensure that the
               majority of the stake can always command the network.
             </div>
             <div className="page-content-text">
-              3DPass decentralised governance system is comprised of three main
+              3Dpass decentralised governance system is comprised of three main
               components:
             </div>
             <ul className="page-content-text">
               <li>
-                Council - An approval-voted, elected executive "government" to
+                <strong>Council</strong> - An approval-voted, elected executive "government" to
                 manage parameters, admin and spending proposals.
               </li>
               <li>
-                Technical Committee - A technocratic committee to manage the {" "}
+                <strong>Technical Committee (TC)</strong> - A technocratic committee to manage the {" "}
                 <Link to="/forkless-upgrade">forkless online upgrade</Link> timelines.
               </li>
               <li>
-                Referenda - A general voting system for everything else which
+                <strong>Referenda</strong> - A general voting system for everything else which
                 rewarded long-term stakeholders with increased influence.
               </li>
             </ul>
@@ -189,7 +245,7 @@ const Governance = () => {
           <div className="page-content-inner">
             <div className="page-content-title">Democracy</div>
             <div className="page-content-text">
-              3DPass has implemented <Link to="https://github.com/paritytech/substrate/tree/master/frame/democracy">Democracy</Link> pallet using <Link to="https://github.com/paritytech/substrate/tree/master/frame/referenda">Referenda</Link> trait as a
+              3Dpass has implemented <Link to="https://github.com/paritytech/substrate/tree/master/frame/democracy">Democracy</Link> pallet using <Link to="https://github.com/paritytech/substrate/tree/master/frame/referenda">Referenda</Link> trait as a
               voting system.
             </div>
             <div className="page-content-text">
@@ -200,7 +256,7 @@ const Governance = () => {
               go through a referendum to let all holders, weighted by stake,
               make the decision.
             </div>
-            <div className="page-content-subtitle">Referenda</div>
+            <div className="page-content-subtitle" id="referenda">Referenda</div>
             <div className="page-content-text">
               Referenda are simple, inclusive, stake-based voting schemes. Each
               referendum has a specific proposal associated with it that takes
@@ -469,7 +525,7 @@ electorate - the total number of tokens issued in the network
             </div>
             <div className="page-content-subtitle">Voluntary Locking</div>
             <div className="page-content-text">
-              3DPass utilizes an idea called Voluntary Locking that allows token
+              3Dpass utilizes an idea called Voluntary Locking that allows token
               holders to increase their voting power by declaring how long they
               are willing to lock up their tokens, hence, the number of votes
               for each token holder will be calculated by the following formula:
@@ -502,7 +558,7 @@ electorate - the total number of tokens issued in the network
             </div>
             <div className="page-content-subtitle">Adaptive Quorum Biasing</div>
             <div className="page-content-text">
-              3DPass leverages a concept, "Adaptive Quorum Biasing" (first
+              3Dpass leverages a concept, "Adaptive Quorum Biasing" (first
               introdused by Polkadot), which functions as a lever that the
               council can use to alter the effective super-majority required to
               make it easier or more difficult for a proposal to pass in the
@@ -551,31 +607,71 @@ electorate - the total number of tokens issued in the network
               approve, and super-majority against - equate to a simple
               majority-carries system at 100% turnout.
             </div>
+            <div className="page-content-subtitle" id="how-to-fetch-referendum-result">How to fetch a Referendum result</div>
+            <div className="page-content-text">
+              In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
+              "Developer - Chain state" and call out the method <code>Democracy - referenduminfoOf(u32)</code>. The result would look like this:
+            </div>
+            <pre className="main-pre">
+            {`
+  Finished: {
+    approved: true
+    end: 404,526
+  }`
+            }
+            </pre>
+            <img
+              className="page-img"
+              src="/images/referendum_result.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />  
+          <div className="page-content-subtitle" id="how-to-get-voting-history">How to get the voting history</div>
+          <div className="page-content-text">
+               Follow this <Link to="https://3dpscan.io/events/1">link</Link> and filter the events by the Event module "Democracy" as follows:
           </div>
-        </div>
+          <img
+              className="page-img"
+              src="/images/event_module-democracy.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+          <div className="page-content-subtitle" id="how-to-get-detailed-voting-data">How to get detailed voting data</div>
+          <div className="page-content-text">
+          In order to fetch some detailed information (votes, locked P3Ds, conviction multiplier, delegations) use the method <code>Chain state - Democracy - votingOf(AccountId32: PalletDemocracyVoteVoting)</code>:
+          </div>
+          <img
+              className="page-img"
+              src="/images/detailed_voting_data.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            </div>
+          </div>
         <div className="page-content-block" id="council">
           <div className="page-content-inner">
             <div className="page-content-title">Council</div>
             <div className="page-content-text">
               The Council is an on-chain entity embracing several actors,
-              whereas each one represents an on-chain account. Current 3DPass
-              Counsil consists of 3 initial accounts obtained by co-founders and
-              will be expanded up to 13 members gradually elected within
-              upcoming 2 Years starting from 2023.
-            </div>
+              whereas each one represents an on-chain account. Current 3Dpass
+              Council consists of 13 accounts elected by 3Dpass community.
+              </div>
             <div className="page-content-subtitle">
               Council responsibilities
             </div>
             <ol className="page-content-text">
-              <li>Having control over Treasury spendings</li>
+              <li>Taking control over Treasury spendings</li>
               <li>Proposing sensible referenda</li>
               <li>Cancelling dangerous or malicious referenda</li>
               <li>Electing the Technical Committee</li>
               <li>Aproving new recognition algorithms for Proof of Scan</li>
               <li>Dealing with Validators</li>
             </ol>
+            <div className="page-content-subtitle" id="referendum-proposed-by-council">
+              The referendum proposed by Council
+            </div>
             <div className="page-content-text">
-              For a referendum to be proposed by the council, a strict majority
+              For a referendum to be proposed by the Council, a strict majority
               of members must be in favor, with no member exercising a veto.
               Vetoes may be exercised only once by a member for any single
               proposal; if, after a cool-down period, the proposal is
@@ -590,26 +686,26 @@ electorate - the total number of tokens issued in the network
               negative adaptive quorum biasing.
             </div>
             <div className="page-content-subtitle">
-              Council responsibilities
+             A referendum proposal cancelation
             </div>
             <div className="page-content-text">
-              A proposal could be canceled if the technical committee would
+              A proposal could be canceled, as long as the Technical Committee would
               unanimously agree to do so, or if Root origin (e.g. sudo)
               triggered this functionality.
             </div>
             <div className="page-content-text">
-              Additionally, a two-thirds majority of the council can cancel a
+              Additionally, the two-thirds (2/3) of majority of the Council can cancel a
               referendum. This may function as a last-resort if there is an
-              issue found late in a referendum's proposal such as a bug in the
+              issue found late in the referendum proposal, such as a bug in the
               code of the runtime that the proposal would institute.
             </div>
             <div className="page-content-text">
-              If the cancellation is controversial enough that the council
-              cannot get a two-thirds majority, then it will be left to the
+              If the cancellation is controversial enough that the Council
+              cannot exceed the two-thirds of majority, then it will be left to the
               stakeholders en masse to determine the fate of the proposal.
             </div>
-            <div className="page-content-subtitle">
-              Council responsibilities
+            <div className="page-content-subtitle" id="council-elections">
+              Council elections
             </div>
             <img
               className="page-img"
@@ -632,7 +728,7 @@ electorate - the total number of tokens issued in the network
               At the end of each term, Phragmén election algorithm runs and the
               result will choose the new councillors based on the vote
               configurations of all voters. The election also chooses a set
-              number of runners up which is currently (20 that will remain in
+              number of runners up which is currently 20 that will remain in
               the queue with their votes intact. The algorithm is implemented as
               {" "} <Link to="https://github.com/paritytech/substrate/tree/master/frame/elections-phragmen">Phragmén Election Module</Link>.
             </div>
@@ -671,7 +767,7 @@ electorate - the total number of tokens issued in the network
               unused approvals, it is higher than B.
             </div>
             <div className="page-content-subtitle" id="prime">
-            Prime members
+            Prime member
             </div>
             <div className="page-content-text">
             The council, being an instantiation of <Link to="https://github.com/paritytech/substrate/tree/master/frame/collective">Substrate's Collective pallet</Link>, implements what's called a 
@@ -686,12 +782,62 @@ electorate - the total number of tokens issued in the network
             by not voting and letting the others vote. With the existence of a prime member, it forces councillors 
             to be explicit in their votes or have their vote counted for whatever is voted on by the prime.
             </div>
+            <div className="page-content-subtitle" id="how-to-fetch-elections-data">
+              How to fetch the actual elections data
+            </div>
+            <div className="page-content-text">
+            In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
+              "Developer - Chain state" and call out the method <code>phragmenElection - voting(AccountId32)</code>.
+            </div>
+            <img
+              className="page-img"
+              src="/images/council_elections_data.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+             You can also leverage other methods of the <code>phragmenElection</code> pallet to get some supplementary data available on the sorage (current members, runners up, candidates, etc).
+            </div>
+            <div className="page-content-subtitle" id="how-to-vote">
+              How to vote for a candidate
+            </div>
+            <div className="page-content-text">
+            In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
+              "Governance - Council" and click on the "vote" button:
+            </div>
+            <img
+              className="page-img"
+              src="/images/council_vote_1.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+            It is required to define both the voting value and the candidates you would like to support before you vote. A certain amount of funds will be locked. 
+            </div>
+            <img
+              className="page-img"
+              src="/images/council_vote_2.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-subtitle" id="how-to-submit-candidacy">
+              How to submit a candidate
+            </div>
+            <div className="page-content-text">
+            Go to "Governance - Council" and use "Submit candidacy" button:
+            </div>
+            <img
+              className="page-img"
+              src="/images/submit_candidacy.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-subtitle" id="technical">
               Technical Committee
             </div>
             <div className="page-content-text">
               The Technical Committee (TC) is composed of the teams that have
-              successfully implemented or specified 3DPass runtime. Teams are
+              successfully implemented or specified 3Dpass runtime. Teams are
               added or removed from the TC via a simple majority vote of the
               Council.
             </div>
@@ -711,6 +857,14 @@ electorate - the total number of tokens issued in the network
               referendums at the same time. Voting on one does not prevent a
               user from voting on the other.
             </div>
+            <div className="page-content-subtitle">
+              TC members
+            </div>
+            <ul className="page-content-text">
+                <li>PaulS: <Link to="https://3dpscan.io/account/d1G1TXAfLWrAV4CH6bvFdTodp8xNeeLJEQzaAUty3XCgEiLor">d1G1TXAfLWrAV4CH6bvFdTodp8xNeeLJEQzaAUty3XCgEiLor</Link></li>
+                <li>Mikhail: <Link to="https://3dpscan.io/account/d1CVafcqJ71h94V5Evf85TpRqn5Grcw1vni6TwWGokRiYSGoG">d1CVafcqJ71h94V5Evf85TpRqn5Grcw1vni6TwWGokRiYSGoG</Link></li>
+                <li>Michael Co: <Link to="https://3dpscan.io/account/d1FSXz2PUvULgekcwXug3yF3WLeDZxou6GouVrWzZf5Jq41ZP">d1FSXz2PUvULgekcwXug3yF3WLeDZxou6GouVrWzZf5Jq41ZP</Link></li>
+              </ul>
           </div>
         </div>
         <div className="page-content-block" id="treasury">
@@ -718,7 +872,7 @@ electorate - the total number of tokens issued in the network
             <div className="page-content-title">Treasury</div>
             <div className="page-content-text">
               The Treasury is a pot of funds collected through either <Link to="/mainnet#validator-punishments">slashing
-              Validators accounts</Link> for missbehaviour or direct donations. 3DPass
+              Validators accounts</Link> for missbehaviour or direct donations. 3Dpass
               mainnet treasury accound is{" "}
               <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
             </div>
@@ -802,11 +956,11 @@ electorate - the total number of tokens issued in the network
             <div className="page-content-text">
               The Fellowship is a mostly self-governing expert body with a
               primary goal of representing humans who embody and contain the
-              technical knowledge base of 3DPass network and protocols. This is
+              technical knowledge base of 3Dpass network and protocols. This is
               accomplished by associating a rank with members to categorize the
               degree to which the system expects their opinion to be
               well-informed, of a sound technical basis and in line with the
-              interests of 3DPass.
+              interests of 3Dpass.
             </div>
             <div className="page-content-text">
               Unlike the Technical Committee, it is designed to be far broader
@@ -894,7 +1048,7 @@ electorate - the total number of tokens issued in the network
               This system enables the ability to have a new parallel Track
               (Whitelisted-Root Origin), whose parameters allow for a shorter
               voting turnaround. Through an open and transparent process, a body
-              of global experts on 3DPass have determined that the action is
+              of global experts on 3Dpass have determined that the action is
               both safe and time-critical.
             </div>
             <div className="page-content-subtitle">Blacklisting</div>
@@ -908,7 +1062,7 @@ electorate - the total number of tokens issued in the network
             </div>
             <div className="page-content-text">
               Upon seeing their proposal removed, a submitter who is not
-              properly introduced to the democracy system of 3DPass might be
+              properly introduced to the democracy system of 3Dpass might be
               tempted to re-submit the same proposal. That said, this is far
               from a fool-proof method of preventing invalid proposals from
               being submitted - a single changed character in a proposal's text
