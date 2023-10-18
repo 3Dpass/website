@@ -36,7 +36,7 @@ ETH SIGNATURE
                   : "one-page-nav"
               }
             >
-              White Papper
+              White Paper
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -167,7 +167,7 @@ ETH SIGNATURE
       <div className="page-content">
         <div className="page-content-block first-page-block" id="white-papper">
           <div className="page-content-inner">
-            <div className="page-content-title">White Papper</div>
+            <div className="page-content-title">White Paper</div>
             <Link
               className="a-none"
               to="/3DPass_white_paper.pdf"
@@ -175,7 +175,7 @@ ETH SIGNATURE
               download
             >
               <div className="page-lead-content">
-                White Papper
+                White Paper
                 <div className="page-lead-button">PDF</div>
               </div>
             </Link>
@@ -515,7 +515,7 @@ ETH SIGNATURE
                 </Link>
               </div>
               <div className="page-table-left page-table-info">
-                White Papper
+                White Paper
               </div>
               <div className="page-table-right page-table-content">
                 <Link to="https://3dpass.org/3DPass_white_paper.pdf">
