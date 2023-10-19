@@ -118,6 +118,18 @@ const Features = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#atomicswap">
+            <div
+              className={
+                locationHash.includes("atomicswap")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Atomic Swap
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
           <a href="#tokenization">
             <div
               className={
@@ -513,7 +525,7 @@ const Features = () => {
                 <Link to="/mainnet#mining-pool">How to start mining</Link>
               </li>
               <li>
-                <Link to="/mainnet#validator">How to become a Validator</Link>
+                <Link to="/mainnet#validator">How to become Validator</Link>
               </li>
               <li>
                 <Link to="/features#smartcontracts">Smart contracts</Link> trait
@@ -586,14 +598,12 @@ const Features = () => {
               In order to implement a custom pallet into <Link to="https://github.com/3Dpass/3DP/blob/main/runtime/src/lib.rs">
                 3Dpass runtime
               </Link>{" "}
-              Pull request is required.
+              Pull Request is required.
             </div>
             <div className="page-content-subtitle">Fungible Tokens</div>
             <div className="page-content-text">
-              As an example of leveraging the runtime development, 3Dpass has
-              integrated a pallet called "Assets" providing useful methods for
-              dealing with simple fungible assets without a necessity to run a
-              smart contract.
+              "The Ledger of Things" has the <Link to="https://github.com/paritytech/substrate/tree/master/frame/assets">Assets</Link> pallet implemented, 
+              which provided some useful methods for dealing with simple fungible assets without a necessity to run a smart contract.
             </div>
             <Link to="/fungible-tokens-minting">
             <div className="page-lead-content">
@@ -601,6 +611,16 @@ const Features = () => {
                 <div className="page-lead-button">Mint</div>
             </div>
             </Link>
+          </div>
+        </div>
+        <div className="page-content-block" id="atomicswap">
+          <div className="page-content-inner">
+          <div className="page-content-title">Atomic Swap</div>
+           <div className="page-content-text">
+            <Link to="https://github.com/paritytech/substrate/tree/master/frame/atomic-swap">Atomic Swap</Link> substrate module providing the option of making safely and the time-proof-based p2p swap between two given assets issued on The Ledger of Things.
+            In order to recieve some funds, atomically sent from one account to another, the "claim" transaction must be initiated by the target account. 
+            If the swap has still not been claimed during the timeframe limit, it will then be available to cancel by its sender. 
+           </div>
           </div>
         </div>
         <div className="page-content-block" id="tokenization">

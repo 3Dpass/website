@@ -331,6 +331,12 @@ const Mainnet = () => {
           <a href="https://www.3dpassmining.info">
             <div className="one-subheader">Mining leaders</div>
           </a>
+          <a href="/fungible-tokens-minting#assets">
+            <div className="one-subheader">Fungible tokens (Assets)</div>
+          </a>
+          <a href="fungible-tokens-minting#smart">
+            <div className="one-subheader">Smart Contracts</div>
+          </a>
         </div>
         <div className="page-content-block first-page-block" id="requirements">
           <div className="page-content-inner">

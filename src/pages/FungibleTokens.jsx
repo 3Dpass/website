@@ -41,7 +41,7 @@ const FungibleTokens = () => {
                   : "one-page-nav"
               }
             >
-              How To Mint Fungible Tokens With Assets Trait
+              The Assets module
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -53,7 +53,7 @@ const FungibleTokens = () => {
                   : "one-page-nav"
               }
             >
-              How To Mint Fungible Tokens With Smart Contract
+              Smart Contracts
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -69,16 +69,35 @@ const FungibleTokens = () => {
               is equivalent to the next one. By means of 3DPass platform you can
               mint your own fungible currency (token), which will operate on
               3DPass blockchain network. In order to move your token some P3D is
-              also required for transaction fee.
+              also required.
             </div>
           </div>
         </div>
         <div className="page-content-block" id="assets">
           <div className="page-content-inner">
             <div className="page-content-title">
-              How To Mint Fungible Tokens With Assets Trait
+              How to deal with Fungible Tokens using the Assets module
             </div>
-            <div className="page-content-text">1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org&types=eNqrVnJMTs4vzSvxzEvLV7JC5oVnlmS4lCbmBKWmOYPElHSUHFNSilKLi5HUpQBFffLzs0sLgvNLi5JT0aTCUzPTM0qAgqXGRkq1AEo%2FJWY%3D">Polkadot js wallet</Link></div>
+            <div className="page-content-text">
+              The Ledger of Things has the <Link to="https://github.com/paritytech/substrate/tree/master/frame/assets">Assets</Link> pallet implemented, 
+              which provided some useful methods for dealing with simple fungible assets without a necessity to run a smart contract:
+            </div>
+            <ul className="page-content-text">
+              <li><i>Asset Issuance:</i> New asset creation, the total supply of which will belong to the issuer account</li>
+              <li><i>Asset Transfer:</i> Transfering assets from one account to another</li>
+              <li><i>Asset Destruction:</i> Allows to destroy the asset and its supply entirely</li>
+              <li><i>Asset Burning:</i> Burning some certain amount of tokens (reducing the balance of a given account and update the total supply)</li>
+              <li><i>Asset Ownership Transfer:</i> Changing the asset owner</li>
+              <li><i>Asset Freeze:</i> Disalows the asset transfers from a given account</li>
+              <li><i>Set the Asset Team:</i> Sets up the Issuer, Admin and Freezer of the asset</li>
+            </ul>
+            <div className="page-content-text">
+              All the methods of the Assets module are available via the <Link to="https://polkadot.js.org/docs/api/">polkadot JS API</Link>. The Assets <Link to="https://polkascan.github.io/py-substrate-metadata-docs/statemint/assets/">API metadata</Link> description. 
+            </div>
+            <div className="page-content-subtitle">
+              How to mint fungible tokens via the wallet:
+            </div>
+            <div className="page-content-text">1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org">Polkadot js wallet</Link></div>
             <div className="page-content-text">2. Go to Network - Assets</div>
             <img
               className="page-img"
@@ -99,14 +118,14 @@ const FungibleTokens = () => {
             </div>
             <div className="page-content-text">5. Mint your tokens</div>
             <div className="page-content-text">
-              6. Transfer tokens with the wallet
+              6. Transfer tokens
             </div>
           </div>
         </div>
         <div className="page-content-block" id="smart">
           <div className="page-content-inner">
             <div className="page-content-title">
-              How To Mint Fungible Tokens With Assets Trait
+              How to deal with Fungible Tokens using Smart Contracts
             </div>
             <div className="page-content-text">
               3DPass supports Substrate smart contract trait using <Link to="https://use.ink/">ink</Link>, a
