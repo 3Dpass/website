@@ -93,12 +93,6 @@ const MobileWallet = () => {
               alt="img"
             />
             <div className="page-lead-content">
-              iOS
-              <Link to="https://apps.apple.com/app/3dpass/id6447526851">
-                <div className="page-lead-button">App Store</div>
-              </Link>
-            </div>
-            <div className="page-lead-content">
               Android
               <Link to="https://play.google.com/store/apps/details?id=com.threedpass.wallet">
                 <div className="page-lead-button">Play Store</div>

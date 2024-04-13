@@ -444,12 +444,6 @@ const Community = () => {
                   Get it on Google Play
                 </Link>
               </div>
-              <div className="page-table-left page-table-info">IOS</div>
-              <div className="page-table-right page-table-content">
-                <Link to="https://apps.apple.com/app/3dpass/id6447526851">
-                  Download on AppStore
-                </Link>
-              </div>
               <div className="page-table-left page-table-info">Windows</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://3dpass.org/mainnet.html#mining_docker">

@@ -460,14 +460,6 @@ ETH SIGNATURE
                   Android
                 </Link>
               </div>
-              <div className="page-table-left page-table-info">
-                Mobile wallet
-              </div>
-              <div className="page-table-right page-table-content">
-                <Link to="https://apps.apple.com/app/3dpass/id6447526851">
-                  iOS
-                </Link>
-              </div>
               <div className="page-table-left page-table-info">Block Explorer</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://3dpscan.io">
