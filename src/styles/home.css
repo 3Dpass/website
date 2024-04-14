@@ -250,9 +250,19 @@
   background-image: url("../../public/images/xegex-logo.svg");
 }
 
-.txbit {
+.mexc {
   background-size: 200px 52px;
-  background-image: url("../../public/images/txbit.svg");
+  background-image: url("../../public/images/mexc_logo.svg");
+}
+
+.coinex {
+  background-size: 200px 46px;
+  background-image: url("../../public/images/CoinEx.svg");
+}
+
+.coinmarketcap {
+  background-size: 200px 62px;
+  background-image: url("../../public/images/coinmarketcap.svg");
 }
 
 .coingecko {
@@ -266,13 +276,13 @@
 }
 
 .live-coin {
-  background-size: 300px 21px;
+  background-size: 200px 21px;
   background-image: url("../../public/images/live-coin.svg");
   background-position: 0px 10px;
 }
 
 .coin-codex {
-  background-size: 300px 31px;
+  background-size: 200px 31px;
   background-image: url("../../public/images/coin-codex.svg");
 }
 

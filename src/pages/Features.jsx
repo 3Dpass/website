@@ -88,12 +88,6 @@ const Features = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#scanproof-3dprc-2">
-            <div className="page-nav-inside">
-              3DPRC-2 the user object tokenization standard
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
           <a href="#ledger">
             <div
               className={
@@ -103,6 +97,55 @@ const Features = () => {
               }
             >
               The Ledger of Things
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#3dprc-2">
+            <div
+              className={
+                locationHash.includes("3dprc-2")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              3DPRC-2 standard
+              <div className="page-nav-circle"></div>
+              <div className="page-nav-line rc-line"></div>
+            </div>
+          </a>
+          <a href="#3dprc-2-overview">
+            <div className="page-nav-inside">
+              Overview
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#3dprc-2-implementation">
+            <div className="page-nav-inside">
+              Implementation
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#3dprc-2-assets">
+            <div className="page-nav-inside">
+              Fungible and Non-fungible backed assets
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#3dprc-2-asset-management">
+            <div className="page-nav-inside">
+              Asset management
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#fungibleassets">
+            <div
+              className={
+                locationHash.includes("fungibleassets")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Fungible assets
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -127,6 +170,18 @@ const Features = () => {
               }
             >
               Atomic Swap
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#dex">
+            <div
+              className={
+                locationHash.includes("dex")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Embedded DEX
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -224,16 +279,6 @@ const Features = () => {
                 <div className="page-lead-button">Download</div>
             </div>
             </a>
-            <div className="page-content-text" id="difference">
-              Learn the difference between sustainable unique identity <Link to="/features#3drecognition-hash-id">HASH ID</Link>
-              {" "}
-               and conventional NFT based just on digital signature:
-            </div>
-            <video
-              src="/images/video3dp.mp4"
-              className="page-video"
-              controls
-            ></video>
             <div className="page-content-subtitle" id="object-categories">
               The Object Categories
             </div>
@@ -403,72 +448,12 @@ const Features = () => {
               compared to conventional PoW <i>(Proof of Work)</i>. Follow either the <Link to="/proof-of-scan">full protocol description</Link> or <Link to="/coin#white-papper">White paper</Link> to get some detailed
               information.
             </div>
-            <div
-              className="page-content-subtitle"
-              id="scanproof-3dprc-2"
-            >
-              3DPRC-2 - the user object tokenization standard
-            </div>
-            <div className="page-content-text">
-              <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments), <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">proposed</Link> by PaulS in September 2023, 
-              is a standard p2p protocol for the tokenization of the user objects operating within “The Ledger of Things”. Its implementation represents
-               one of the most useful aspects of "Proof of Scan" consesus, which opens the capabibility 
-               for the network to provide the tokenization service to customer. 
-            </div>
-            <div className="page-content-subtitle">
-              3DPRC-2 is implemented as the following components:
-            </div>
-            <ul className="page-content-text">
-              <li>
-                <strong>
-                  Advanced version of “Proof of Scan”
-                </strong>
-                - The protocol is weaved into “The Ledger of Things” PoW component in a way to tackle the user 
-                objects authentication along with the ones being mined. The protocol ensures for users to get 
-                a complete service always resulting as either the object acceptance (the asset is allowed to 
-                be created) or its rejection (copy is found on the db). The network is responsible for the user 
-                object authentication as much as for any block on the blockchain irrespective to the actual 
-                dollar value attached to
-              </li>
-              <li>
-                <strong>
-                  “0 knowledge proof”
-                </strong> 
-                - Every judgement provided by miners about the object authenticity is protected by a secret knowledge 
-                of its HASH ID being unavailable for them, until they get the object processed. Every proof is being 
-                verified by the majority of the network to make a final decision on whether to accept or reject the 
-                block containing the judgement
-              </li>
-              <li>
-                <strong>
-                <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan">PoScan</Link> Substrate-based pallet 
-                (storage and <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API</Link>) </strong> 
-                - The PoScan pallet is integrated into the network runtime providing the access to the network 
-                decentralized storage by means of the object tokenization 
-                <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API</Link>, which allows for:
-                <ul className="page-content-text">
-                  <li>
-                    the user object authentication and its protection from being copied to the extent for the 
-                    recognition algorithm precision;
-                  </li>
-                  <li>
-                    non-fungible digital asset creation;
-                  </li>
-                  <li>
-                    property rights definition and its transfers;
-                  </li>
-                  <li>
-                    backed cryptocurrency issuance (fungible tokens backed by the asset)
-                  </li>
-                </ul>
-              </li>
-            </ul>
           </div>
         </div>
         <div className="page-content-block" id="ledger">
           <div className="page-content-inner">
             <div className="page-content-title">
-              The Ledger OF Unique Things
+              The Ledger Of Things
             </div>
             <div className="page-content-text">
               3DPass decentralized p2p platform represents Layer 1 blockchain,
@@ -556,9 +541,146 @@ const Features = () => {
             </a>
           </div>
         </div>
+        <div className="page-content-block" id="3dprc-2">
+          <div className="page-content-inner">
+          <div className="page-content-title">3DPRC-2 the object tokenizaton standard</div>
+          <div
+              className="page-content-subtitle"
+              id="3dprc-2-overview"
+            >
+              Overview
+            </div>
+            <div className="page-content-text">
+              <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments), <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">proposed</Link> by PaulS in September 2023, 
+              is a standard p2p protocol for the tokenization of the user objects operating within “The Ledger of Things”. Its implementation represents
+               one of the most useful aspects of "Proof of Scan" consensus, which opens the capability 
+               for the network to provide the tokenization service to customer. 
+            </div>
+            <div className="page-content-text" id="difference">
+              Learn the difference between the revolutionary 3DPRC-2 tokenizaton standard based on the object recognition
+              {" "}
+               and conventional ERC-721 for NFT using just an account signature:
+            </div>
+            <video
+              src="/images/3DPRC-2.mp4"
+              className="page-video"
+              controls
+            ></video>
+            <Link to="/assets#object-authentication">
+            <div className="page-lead-content">
+               Put your object on The Ledger of Things
+                <div className="page-lead-button">Put the object</div>
+            </div>
+            </Link>
+            <div className="page-content-subtitle" id="3dprc-2-implementation">
+              3DPRC-2 implementation:
+            </div>
+            <ul className="page-content-text">
+              <li>
+                <strong>
+                  Advanced version of <Link to="/proof-of-scan">Proof of Scan</Link>
+                </strong>
+                - The protocol is weaved into “The Ledger of Things” PoW component in a way to tackle the user 
+                objects authentication along with the ones being mined. The protocol ensures for users to get 
+                a complete service always resulting as either the object acceptance (the asset is allowed to 
+                be created) or its rejection (copy is found on the db). The network is responsible for the user 
+                object authentication as much as for any block on the blockchain irrespective to the actual 
+                dollar value attached to
+              </li>
+              <li>
+                <strong>
+                  “0 knowledge proof”
+                </strong> 
+                - Every judgement provided by miners about the object authenticity is protected by a secret knowledge 
+                of its HASH ID being unavailable for them, until they get the object processed. Every proof is being 
+                verified by the majority of the network to make a final decision on whether to accept or reject the 
+                block containing the judgement
+              </li>
+              <li>
+                <strong>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan">PoScan</Link> pallet and <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> module
+                (storage and <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API</Link>) </strong> 
+                - The PoScan pallet as well as the poscanAssets module are both integrated into the network runtime providing the access to the network 
+                decentralized storage by means of the object tokenization <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API</Link>, which allows for:
+                <ul className="page-content-text">
+                  <li>
+                    the user object authentication and its protection from being copied to the extent for the 
+                    recognition algorithm precision;
+                  </li>
+                  <li>
+                    non-fungible backed asset creation;
+                  </li>
+                  <li>
+                    property rights definition and its transfers;
+                  </li>
+                  <li>
+                    backed cryptocurrency issuance (the tokenizaton of the object share)
+                  </li>
+                  <li>
+                    collective asset management
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <div className="page-content-subtitle" id="3dprc-2-assets">
+              Fungible and Non-fungible backed assets
+            </div>
+            <div className="page-content-text">
+            By means of dealing with the additional properties 3DPRC-2 makes it possible to tokenize the object into either 
+            Fungible or Non-fungible asset, depending on the purpose of its tokenization. And only one of its properties could have been tokenized simultaneously. 
+            It is prohibited to have multiple properties tokenized at the time (It's not allowed to sell one object twice).
+            </div>
+
+            <div className="page-content-text">
+            Thus, the tokenization of the object Share, as well as such properties as: Weight, Square, Volume, Length, etc, 
+            will always stand for its collective ownership or ICO (Initial Coin Offering). 
+            These properties will be tokenized as Fungible assets, the MaxSupply of which is limited to the property value attached to the object. 
+            For example, if the object weight is 1000 gram, then the "MaxSupply=1000" limit will be set up for the token created (you won't be able to issue more than 1000 minimum indivisible units). 
+            While transferring tokens, the object share ownership is being transferred accordingly.
+            </div>
+            <Link to="/assets#3dprc2-fungible">
+            <div className="page-lead-content">
+               Get the object share tokenized
+                <div className="page-lead-button">Tokenize</div>
+            </div>
+            </Link>
+            <div className="page-content-text">
+            3DPRC-2 allows to tokenize every single object into the Non-Fungible asset.
+            If chosen, the "MaxSupply = 1" limit will be applied to the token created. Whereas "1" is the minimum indivisible unit of The Ledger of Things. 
+            By means of transferring this unit, the ownership of the entire object is being transferred.
+            </div>
+            <Link to="/assets#3dprc2-non-fungible">
+            <div className="page-lead-content">
+               Turn the object into non-fungible asset
+                <div className="page-lead-button">Tokenize</div>
+            </div>
+            </Link>
+            <div className="page-content-subtitle" id="3dprc-2-asset-management">
+              Collective asset management
+            </div>
+            <div className="page-content-text">
+              The asset management system is designed for its shareholders to manage the asset via democracy vote.
+            </div>
+          </div>
+        </div>
+        <div className="page-content-block" id="fungibleassets">
+          <div className="page-content-inner">
+          <div className="page-content-title">Fungible assets</div>
+          <div className="page-content-text">
+              "The Ledger of Things" is equipped with the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> module
+              providing some useful methods for dealing with simple fungible assets without a necessity to run a smart contract.
+            </div>
+            <Link to="/assets#conventional-fungible-assets">
+            <div className="page-lead-content">
+              Regular fungible asset
+                <div className="page-lead-button">Create</div>
+            </div>
+            </Link>
+          </div>
+        </div>
         <div className="page-content-block" id="smartcontracts">
           <div className="page-content-inner">
-            <div className="page-content-title">Smart Contracts And dApps</div>
+            <div className="page-content-title">Smart Contracts</div>
             <div className="page-content-text">
               Substrate Smart contract trait using <Link to="https://use.ink/">ink</Link>, a <Link to="https://www.rust-lang.org/">Rust</Link>-based embedded
               domain specific language (
@@ -569,7 +691,7 @@ const Features = () => {
               <Link to="https://webassembly.org/">WebAssembly</Link> smart
               contracts. Learn more about{" "}
               <Link to="https://use.ink/ink-vs-solidity/">
-                how it compares to Solidity
+                how could that be compared to Solidity
               </Link>
               . Follow the <Link to="/fungible-tokens-minting">guiudelines</Link> to run your smart contract on 3Dpsass.
             </div>
@@ -579,36 +701,10 @@ const Features = () => {
               to closely emulate the functionality of executing contracts on the
               Ethereum mainnet within 3Dpass network.
             </div>
-            <div className="page-content-subtitle">Runtime Development</div>
-            <div className="page-content-text">
-              There is an alternative approach to implementation and execution
-              of custom business logic called Runtime development, which allows
-              for creation of custom "pallets" leveraging network events as a
-              trigger. Custom pallet would provide a logic "what to do on new
-              block initialization or finalization, storage changes, transaction
-              status changes, etc." It might, as well, be equipped with RPC API
-              calls to interact with and off-chain worker possibilities. Use{" "}
-              <Link to="https://docs.substrate.io/fundamentals/runtime-development/">
-                Substrate documentation
-              </Link>{" "}
-              for more details. Compare{" "}
-              <Link to="https://stackoverflow.com/questions/56040779/when-should-i-build-a-substrate-runtime-module-versus-a-substrate-smart-contract">
-                Smart Contracts VS Runtime development
-              </Link>{" "}
-              In order to implement a custom pallet into <Link to="https://github.com/3Dpass/3DP/blob/main/runtime/src/lib.rs">
-                3Dpass runtime
-              </Link>{" "}
-              Pull Request is required.
-            </div>
-            <div className="page-content-subtitle">Fungible Tokens</div>
-            <div className="page-content-text">
-              "The Ledger of Things" has the <Link to="https://github.com/paritytech/substrate/tree/master/frame/assets">Assets</Link> pallet implemented, 
-              which provided some useful methods for dealing with simple fungible assets without a necessity to run a smart contract.
-            </div>
-            <Link to="/fungible-tokens-minting">
+            <Link to="/assets#smart-contracts">
             <div className="page-lead-content">
-              Fungible Tokens
-                <div className="page-lead-button">Mint</div>
+              Smart contract
+                <div className="page-lead-button">Run</div>
             </div>
             </Link>
           </div>
@@ -617,9 +713,18 @@ const Features = () => {
           <div className="page-content-inner">
           <div className="page-content-title">Atomic Swap</div>
            <div className="page-content-text">
-            <Link to="https://github.com/paritytech/substrate/tree/master/frame/atomic-swap">Atomic Swap</Link> substrate module providing the option of making safely and the time-proof-based p2p swap between two given assets issued on The Ledger of Things.
+            <Link to="https://github.com/paritytech/substrate/tree/master/frame/atomic-swap">Atomic Swap</Link> Substrate module providing the option of making safely and the time-proof-based p2p swap between two given assets issued on The Ledger of Things.
             In order to recieve some funds, atomically sent from one account to another, the "claim" transaction must be initiated by the target account. 
             If the swap has still not been claimed during the timeframe limit, it will then be available to cancel by its sender. 
+           </div>
+          </div>
+        </div>
+        <div className="page-content-block" id="dex">
+          <div className="page-content-inner">
+          <div className="page-content-title">Embedded DEX module</div>
+           <div className="page-content-text">
+            The <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> Substrate module representing a full featured decentralized exchange, based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> protocol rules, integrated into The Ledger of Things runtime.  
+            Enjoy the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX API</Link> on Github, create Liquidity Pools and trade the assets issued on The Ledger of Things.
            </div>
           </div>
         </div>

@@ -77,12 +77,6 @@ ETH SIGNATURE
               <div className="page-nav-line roadmap-line"></div>
             </div>
           </a>
-          <a href="#2021">
-            <div className="page-nav-inside">
-              2021
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
           <a href="#2022">
             <div className="page-nav-inside">
               2022
@@ -92,6 +86,12 @@ ETH SIGNATURE
           <a href="#2023">
             <div className="page-nav-inside">
               2023
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#2024">
+            <div className="page-nav-inside">
+              2024
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -186,7 +186,7 @@ ETH SIGNATURE
             <div className="page-content-title">3DPRC-2</div>
             <Link
               className="a-none"
-              to="/3DPRC-2_draft.pdf"
+              to="/3DPRC-2_v2.pdf"
               target="blank"
               download
             >
@@ -305,11 +305,11 @@ ETH SIGNATURE
               Q2 - Object tokenization feature
             </div>
             <ul className="page-content-text">
-              <li>HASH ID: <Link to="/features#multiobject">Multi object option</Link> implementation (<i> in the process</i>)</li>
+              <li>HASH ID: <Link to="/features#multiobject">Multi object option</Link> implementation (<i> in the process, shiftted to 2024</i>)</li>
               <li>Core: Object authentication API implementation (<i><Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">Done</Link></i>)</li>
               <li>3DPRC-2 tokenization standard for NFTs based on <Link to="/features#3drecognition-hash-id">HASH ID</Link> (<i>Implemented, <Link to="#3DPRC-2">3DPRC-2 Paper</Link> is published</i>)</li>
-              <li>Mobile wallet: 3DPRC-2 integration (<i> in the process</i>)</li>
-              <li>Web3 wallet: 3DPRC-2 integration (<i> in the process</i>)</li>
+              <li>Mobile wallet: 3DPRC-2 integration (<i> in the process, shiftted to 2024</i>)</li>
+              <li>Web3 wallet: 3DPRC-2 integration (<i> in the process, shifted to 2024</i>)</li>
               <li>CEX: Middle size exchange listing (listed on <Link to="https://txbit.io/Trade/P3D/USDT">txbit</Link>)</li>
               <li>Unexpected "Proof of Scan" mining loop patch (<Link to="https://github.com/3Dpass/3DP/releases/tag/v6">released</Link>)</li>
               <li>Unexpected difficulty patch (<Link to="https://github.com/3Dpass/3DP/releases/tag/v7">released</Link>)</li>
@@ -320,35 +320,69 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li>Public Governance Elections (the first <Link to="https://3dpass.org/governance#general">Council</Link> are elected, the governance got operational)</li>
               <li>Web wallet: Asset/NFT marketplace implementation</li>
-              <li>DEX: Cross-chain bridge with Polkadot or Ethereum</li>
-              <li>EVM (Ethereum Virtual Machine) emulator trait</li>
-              <li>DEX integration</li>
+              <li>DEX: Cross-chain bridge with Polkadot or Ethereum (<i> shifted to 2024</i>)</li>
+              <li>EVM (Ethereum Virtual Machine) emulator trait (<i> shifted to 2024</i>)</li>
+              <li>DEX integration (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v10">Substrate embedded DEX module</Link> based on Uniswap v2 logic is released</i>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
               Q4 - New recognition algorithm
             </div>
             <ul className="page-content-text">
-              <li>Core: 2D drawings recognition algorrithm implementation (<i> in the process</i>)</li>
-              <li>Demo dApp</li>
-              <li>CEX: Tier1 exchange listing (<i> <Link to="https://www.mexc.com">MEXC</Link> is in the process</i>)</li>
-              <li>Foundation: forming up</li>
+              <li>Unexpected security patch for the validator set (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v10">released</Link></i>)</li>
+              <li>Core: 2D drawings recognition algorrithm implementation (<i> in the process, shifted to 2024</i>)</li>
+              <li>Demo dApp (transformed into the "business case implementation" -  Q3, 2024)</li>
+              <li>CEX: Tier1 exchange listing (<i>listed on <Link to="https://www.mexc.com/exchange/P3D_USDT">MEXC</Link></i>)</li>
+              <li>Foundation: forming up (postponed by the community discussion)</li>
             </ul>
-            <div className="page-content-subtitle">GitHub version</div>
-            <div className="page-content-text road-map-text">
-              <Link to="https://github.com/3Dpass/roadmap/tree/main/roadmap2023">Roadmap on GitHub</Link>
-            </div>
-            <div className="page-content-subtitle">2024</div>
+            <div className="page-content-subtitle" id="2024">2024 (forming up)</div>
             <div className="page-content-text road-map-text mb0">
-              Q1 - Release (stability and security)
+              Q1 - Release (stability & security)
             </div>
+            <ul className="page-content-text">
+              <li>PoW component (stability & security): <Link to="https://github.com/3Dpass/3DP/releases/tag/v11"> Node v11 release</Link></li>
+              <li>PoA component (stability & security): <Link to="https://github.com/3Dpass/3DP/releases/tag/v12"> Node v12 release</Link></li>
+              <li>PoW component (3D objects consistency check): <Link to="https://github.com/3Dpass/3DP/releases/tag/v19"> Node v19 release</Link></li>
+              <li>CEX listing: <Link to="https://www.coinex.com/en/exchange/p3d-usdt">CoinEx</Link> listed</li>
+              <li>Web: Embedded DEX UI</li>
+              <li>Mobile wallet: <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> UI integration (Putting objects on the blockchain - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"><i>done</i></Link>; Backed tokens issuace - <i> in the process</i>)</li>
+              <li>Core: Atomic swap for assets (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v11">released</Link></i>)</li>
+              <li>3DPRC-2: Assets management (<i> in the process</i>)</li>
+              <li>3DPRC-2: Grid2D_v3a multithreading optimization (<Link to="https://github.com/3Dpass/p3d/pull/4"><i>is being reviewed</i></Link>)</li>
+              <li>Core: Equivocation handler improvements (<i> is being tested</i>)</li>
+            </ul>
             <div className="page-content-text road-map-text mb0">
-              Q2 - Stablecoin
+              Q2 - Assets marketplace & cross-chain
             </div>
+            <ul className="page-content-text">
+              <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> is being estimated</i>)</li>
+              <li>DEX: Cross-chain bridge over to Ethereum (<i> is being researched</i>)</li>
+              <li>A stablecoin bridging/issuance (<i> is being researched</i>)</li>
+              <li>Web wallet: Asset/NFT marketplace UI implementation</li>
+              <li>Administrative: Governance server and UI</li>
+              <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
+              <li>Promotion target: Assets issuance and the embedded DEX usage</li>
+            </ul>
             <div className="page-content-text road-map-text mb0">
-              Q3 - dApp integrations
+              Q3 - dApps integration/business cases implementation
             </div>
+            <ul className="page-content-text">
+              <li>Utilization: A business case implementation ( is being researched)</li>
+              <li>Utilization: AI assistant</li>
+              <li>Decentralization: Taking out Sudo (replacement sudo key with the democratic <Link to="/governance#technical">Techinical Committee</Link>)</li>
+              <li>Public commons: Start importing and processing</li>
+              <li>Promotion target: Assets issuance and the embedded DEX usage</li>
+            </ul>
             <div className="page-content-text road-map-text ">
               Q4 - New recognition algorithm
+            </div>
+              <ul className="page-content-text">
+                <li>3DPass Foundation: forming up</li>
+                <li>Recognition toolkit: additional recognition algorithm implementation</li>
+                <li>Promotion target: dApps developers</li>
+              </ul>
+            <div className="page-content-subtitle">GitHub version</div>
+            <div className="page-content-text road-map-text">
+              <Link to="https://github.com/3Dpass/roadmap/tree/main/roadmap2023">Follow the GitHub</Link>
             </div>
           </div>
         </div>
@@ -392,20 +426,20 @@ ETH SIGNATURE
                 Address Format
               </div>
               <div className="page-table-right page-table-content">
-                type: 'sr25519', ss58Format: 71;
-                <Link to="https://github.com/3Dpass/3DP/wiki/Addresses-and-keys#ss58-address-format">
+                type: 'sr25519', ss58Format: 71
+                ; <Link to="https://github.com/3Dpass/3DP/wiki/Addresses-and-keys#ss58-address-format">
                   read more about 3dpass address format
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Purpose</div>
               <div className="page-table-right page-table-content">
                 The tokenization of real and virtual objects and its utilization
-                within smart-contracts and dApps
+                within smart-contracts and dApps. <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> the object tokenization standard.
               </div>
               <div className="page-table-left page-table-info">Consensus</div>
               <div className="page-table-right page-table-content">
               <Link to="/proof-of-scan">Proof of Scan</Link> (Hybryd PoW + PoA GRANDPA deterministic finality),
-                Algorithm: Grid2D
+                Algorithm: <Link to="/grid2d">Grid2D</Link> (based on recognition)
               </div>
               <div className="page-table-left page-table-info">
                 Min unit "Crumb"
@@ -488,7 +522,7 @@ ETH SIGNATURE
                 Smart contracts
               </div>
               <div className="page-table-right page-table-content">
-                Smart contract tools using ink (Rust based embedded language)
+                Smart contract tools using <Link to="https://use.ink/">ink</Link> (Rust-based embedded language)
               </div>
               <div className="page-table-left page-table-info">Storage</div>
               <div className="page-table-right page-table-content"><Link to="https://ipfs.io/">IPFS</Link></div>
@@ -532,7 +566,10 @@ ETH SIGNATURE
               </div>
               <div className="page-table-left page-table-info">Marketcap</div>
               <div className="page-table-right page-table-content">
-                <Link to="https://www.livecoinwatch.com/price/3DPassCoin-P3D">
+              <Link to="https://www.coingecko.com/en/coins/3dpass">
+                  CoinGecko
+                </Link>
+                ; <Link to="https://www.livecoinwatch.com/price/3DPassCoin-P3D">
                   Livecoinwatch
                 </Link>
               </div>
@@ -545,6 +582,14 @@ ETH SIGNATURE
               <div className="page-table-left page-table-info">Fork</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://substrate.io/">Substrate</Link>
+              </div>
+              <div className="page-table-left page-table-info">Governance</div>
+              <div className="page-table-right page-table-content">
+                <Link to="/community#governance">Self-governed</Link>
+              </div>
+              <div className="page-table-left page-table-info">Forkless upgrade</div>
+              <div className="page-table-right page-table-content">
+                <Link to="/forkless-upgrade">Yes</Link> (based on WASM)
               </div>
             </div>
           </div>
@@ -617,8 +662,8 @@ ETH SIGNATURE
                 estimated assuming the certain amount of hours needed and the
                 average market price for the equal service. However, the final
                 amount will be determined on the proccess of negotiations. The
-                most important questions will be resolved by means of either
-                Governance Coincil voting or public Referenda.
+                most important questions will be resolved by means of either <Link to="/governance#council">Governance</Link> vote 
+                or public <Link to="/governance#democracy">Referenda</Link>.
               </div>
               <div className="page-content-subtitle">Grants</div>
               <div className="page-content-text">

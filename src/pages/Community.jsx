@@ -162,7 +162,7 @@ const Community = () => {
                 The validator collaterals, Penalties -  are all being counted in P3D.
             </div>
             <video
-              src="/images/3dpass_concept.mp4"
+              src="/images/3DPass_concept_v3.mp4"
               className="page-video"
               controls
             ></video>
@@ -339,6 +339,9 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title">Exchanges</div>
               <ul className="page-content-text">
+              <Link to="https://www.mexc.com/exchange/P3D_USDT">
+                  <li>MEXC P3D/USDT</li>
+                </Link>
                 <Link to="https://xeggex.com/market/P3D_USDT">
                   <li>Xeggex P3D/USDT</li>
                 </Link>

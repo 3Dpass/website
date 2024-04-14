@@ -30,25 +30,25 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
-      title: "3Dpass has been listed on CoinGecko!",
+      title: "The mobile wallet v2.13.0 has been released!",
       description:
-      "3dpass coin (P3D) is now available on CoinGecko",
-      date: "Oct 8, 2023",
-      link: "https://www.coingecko.com/en/coins/3dpass"
+      "The mobile wallet v2.13.0 allows for users to put new objects on chain, explore the objects uploaded and follow its 3DPRC-2 verification status.",
+      date: "Mar 19, 2024",
+      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"
     },
     {
-      title: "3DPRC-2 tokenization standard is published!",
+      title: "The Node v11 has been released!",
       description:
-      "3DPRC-2 (Request for Comments) on the object tokenization standard has been published, the API is available on github.",
-      date: "Sep 29, 2023",
-      link: "https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API"
+      "The Node v11 release containing some important security fixes and the Atomic Swap for assets is available for mainnet.",
+      date: "Feb 09, 2024",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v11"
     },
     {
-      title: "The user object authientication protocol is available on Testnet!",
+      title: "3DPass coin has been listed on Coinex exchange!",
       description:
-      "One of the most important parts of the object tokenization API has been rolled out for public testings",
-      date: "Aug 12, 2023",
-      link: "https://github.com/3Dpass/3DP/tree/test"
+      "P3D/USDT pair is now available for traders on Coinex",
+      date: "Jan 26, 2024",
+      link: "https://www.coinex.com/en/exchange/p3d-usdt"
     },
   ]);
 
@@ -199,12 +199,21 @@ const Home = () => {
           <a href="https://xeggex.com/market/P3D_USDT">
             <div className="partners-icon xegex"></div>
           </a>
+          <a href="https://www.mexc.com/exchange/P3D_USDT">
+            <div className="partners-icon mexc"></div>
+          </a>
+          <a href="https://www.coinex.com/en/exchange/p3d-usdt">
+            <div className="partners-icon coinex"></div>
+          </a>
         </div>
       </div>
       <div className="home-one-content inner-content">
         <div className="home-partners-title">Marketcap</div>
         <div className="partners-icons-holder">
           <div className="partners-icons-holder">
+          <a href="https://coinmarketcap.com/currencies/3dpass/">
+              <div className="partners-icon coinmarketcap"></div>
+            </a>
           <a href="https://www.coingecko.com/en/coins/3dpass">
               <div className="partners-icon coingecko"></div>
             </a>

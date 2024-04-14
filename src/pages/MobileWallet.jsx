@@ -40,7 +40,19 @@ const MobileWallet = () => {
                   : "one-page-nav"
               }
             >
-              3D Object Recognition
+              3D Object recognition
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#tokenization">
+            <div
+              className={
+                locationHash.includes("tokenization")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              The object tokenization
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -68,30 +80,12 @@ const MobileWallet = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#proof">
-            <div
-              className={
-                locationHash.includes("proof")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Proof of Scan verification demo
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
         </div>
       </div>
       <div className="page-content">
         <div className="page-content-block first-page-block" id="download">
           <div className="page-content-inner">
             <div className="page-content-title">Download</div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/mobile1.png"
-              alt="img"
-            />
             <div className="page-lead-content">
               Android
               <Link to="https://play.google.com/store/apps/details?id=com.threedpass.wallet">
@@ -110,44 +104,115 @@ const MobileWallet = () => {
           <div className="page-content-inner">
             <div className="page-content-title">3D Object Recognition</div>
             <div className="page-content-text">
-              This embedded option allows to recognize the same shaped 3D
-              objects by means of processing its 3D models in .obj format. Due
-              to the fact, that the app hasn't had a native 3D scanner
-              integrated yet, now you can only process 3D models made by third
-              party scanning/modeling apps and devices. <Link to="/pass3d">pass3d</Link> is an
-              implementation of <Link to="/grid2d">Grid2d</Link> algorithm, which is leveraged by the app.
+              This feature allows to recognize the object shape
+              by means of its 3D model processing, and thus orinal scans can be distinguished from fakes. <Link to="/pass3d">pass3d</Link> is an
+              implementation of <Link to="/grid2d">Grid2d</Link> algorithm, which is being utilized by the app.
             </div>
-            <div className="page-content-text">
-              Once the the model is picked up, the <Link to="/features#3drecognition-hash-id">Hash ID</Link> creation process is
-              getting started. All you should to do is to process 3D models one
-              by one and save its snapshots. The app will compare the <Link to="/features#3drecognition-hash-id">Hash ID</Link>s
-              and detect if there is any hashes matched. In the case the object
-              is considered to be recognized. Notice, that the same set of
-              parameter values must be applied every time in the settings. Learn
-              {" "} <Link to="/pass3d#params">how Grid2D algorithm parameters are suppose to be used</Link>.
+            <video
+              src="/images/3Dobject_original_fake_recognition.mp4"
+              className="page-video"
+              controls
+            ></video>
+            <div className="page-content-subtitle">
+              Guidelines:
             </div>
-            <div className="page-content-text">
-              Just keep processing some more different scans/models of the same
-              object until you get the stable hash, which will be highlighted.
-              This hash is inherent to the object shape the most. It remains
-              stable for all the future scans/models made with the same
-              precision.
-            </div>
-            <div className="page-content-text">In summary:</div>
             <ul className="page-content-text">
               <li>
-                Get 3D models processed one by one and save its snapshots until
-                hash match is found (the object recognized)
+                Pick up 3D models in <i><Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</Link></i> format up to 100 Kb. 
+                (Feel free to download this <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection">precious stones collection</Link> for testing purposes) 
+              <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/object_picked_up.png"
+              alt="img"
+            />
               </li>
               <li>
-                Keep processing different scans/models of the same object until
-                the stable hash is found (the HASH ID created)
+                Get the models processed one by one and save its snapshots, until the
+                {" "} HASH ID is matched <i>(the object is recognized)</i>. Otherwise, the object is considered to be unique. 
+                
+                <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/object_recognized.png"
+              alt="img"
+            />
               </li>
+              <li>
+                If the object tokenization is your primary goal, just keep processing its alternative scans/models, until
+                at least one stable hash is found <i>(the HASH ID is created)</i>. Make sure the stable hash is included into the HASH ID, before you put it on the blockchain.
+                <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/object_stable_hash_.png"
+              alt="img"
+            />
+              </li>
+              <li>
+                Using the same scanning settings is mandatory for every object processed. 
+                The <i>Rotation bytes</i> must be set at the same value, as well. "None" (no rotation) is recomended. 
+                <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/rotation_bytes_settings.png"
+              alt="img"
+            />
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="page-content-block" id="tokenization">
+          <div className="page-content-inner">
+            <div className="page-content-title">The object tokenization</div>
+            <div className="page-content-text">
+             The object tokenization procedure is being carried out in accordance to <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> standard.
+             3D models in  <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file"><i>.obj</i></Link> format only.
+            </div>
+            <div className="page-content-subtitle" id="put_object">
+              Put the object on the blockchain
+            </div>
+            <div className="page-content-text">
+              Put the object on chain to enable its copy protection. 
+              The property rights will take an effect as soon as the object is approved by the Ledger of Things.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/put_object_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Pick up the object properties allowed for its tokenization.
+              It is possible to tag along a bunch of properties inherent to the object, however, 
+              only one of them can be tokenized later on. Neither of the properties can be changed afterwards.
+            </div>
+            <ul className="page-content-text">
+              <li><i>"Non-fungible"</i> - if chosen, it means that the object can be tokenized into a non-fungible token</li>
+              <li><i>"Share"</i> - if chosen, the object is permitted to be tokenized as the share tokens, Max Supply of which will be equal to 100% of the object share.</li>
+              <li><i>"Weight"</i> - if chosen, the object is allowed to be tokenized into its weight tokens (gramms, kilogramms, carats, ounces, etc.), and Max supply will be equal to the total weight.</li>
             </ul>
             <img
               className="page-img"
               style={{ marginBottom: "20px" }}
-              src="/images/recognition1.png"
+              src="/images/put_object_properties_mobile.png"
+              alt="img"
+            />
+             <div className="page-content-text">
+              Follow the object status on the Explorer. If approved, the copy protection is being enabled, as well as the token issuance. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/objects_explorer_mobile.png"
+              alt="img"
+            />
+          </div>
+          <div className="page-content-text">
+              Make sure the <i>Rotation bytes</i> is set at <strong>"None"</strong> before getting the object imported into the app!
+                <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/rotation_bytes_settings.png"
               alt="img"
             />
           </div>
@@ -158,15 +223,15 @@ const MobileWallet = () => {
               3D-Object-Wallet Creation and Recovery
             </div>
             <div className="page-content-text">
-              3DPass mobile app allows to produce crypto wallet (address + keys)
-              out of 3D object and its recovery by means of scanning. Once HASH
-              ID is created, the stable hash might be used as a raw seed. In
-              order to recover all you need to do is to scan the object again.
-              The same presision of scanning is mandatory, as well as the same
-              Rotation bytes serving as an aditional secret. Either recognition
-              parameters or rotation bytes must be applied in the "Settings"
-              before the processing. Learn more about the <Link to="/grid2d#hash">hash strength</Link>.
+              3DPass mobile app allows for creation of crypto wallet
+              out of 3D object and its recovery by means of scanning. 
+              Learn more about the <Link to="/grid2d#hash">HASH ID strength</Link>.
             </div>
+            <ul className="page-content-text">
+              <li>Follow the instructions <Link to="#recognition">above</Link> to get the object processed for several times.</li>
+              <li>Use the <i>stable hash</i> to import an account, instead of mnemonic seed.</li>
+              <li>In order to recover, all you need to do is to get the object processed again.</li>
+            </ul>
             <img
               className="page-img"
               style={{ marginBottom: "20px" }}
@@ -185,7 +250,7 @@ const MobileWallet = () => {
               available to fetch some information or make a transfer.
             </div>
             <div className="page-content-text">
-              Mainnet public RPC/API endpoints are: wss://rpc.3dpass.org;
+              Mainnet public RPC/API endpoints are: wss://rpc.3dpscan.io;
               wss://rpc2.3dpass.org.
             </div>
             <img
@@ -194,152 +259,6 @@ const MobileWallet = () => {
               src="/images/accounts1.png"
               alt="img"
             />
-          </div>
-        </div>
-        <div className="page-content-block" id="proof">
-          <div className="page-content-inner">
-            <div className="page-content-title">
-              Proof of Scan Verification Demo
-            </div>
-            <div className="page-content-text">
-              In this demo we are about to provide you with some tips of how can {" "}
-              <Link to="/proof-of-scan">Proof of Scan</Link> protocol be proved to work. Using the <Link to="https://github.com/3Dpass/threedpass/releases">mobile app</Link>, we
-              are going to verify 3D object from a certain block. Then we will
-              slightly modify the cooridnates of just one peak of the object,
-              which doesn't cause any damage to its shape. Although, it
-              definitelly changes the file data. Now we have two different .obj
-              files but still the same object shape in each. Thus, we have made
-              a potential copy of the asset this block had been mined with.
-              However, after the processing of both, the object reveals to be
-              the same. Meaning, the fake has been recognized and the original
-              asset is secured.
-            </div>
-            <div className="page-content-text">
-              We suggest that you watch this one-minute video before you get
-              started:
-            </div>
-            <iframe
-              src="https://www.youtube.com/embed/5TlDE69Tmms"
-              className="page-video"
-              controls
-              title="wallet"
-            ></iframe>
-            <div className="page-content-subtitle">
-              Step 1: The object mined verification
-            </div>
-            <ul className="page-content-text">
-              <li>
-                Open the <Link to="https://wallet.3dpass.org/">Web wallet</Link> and download 3D object (.obj) form any block
-                header. In this demo we are about to use the object from the
-                block <Link to="https://wallet.3dpass.org/block/51414">#51414</Link>. You can download it from <a href="/assets/3dpass-51414.obj.zip">here</a>
-              </li>
-              <li>
-                Open <Link to="https://github.com/3Dpass/threedpass/releases">3Dpass mobile wallet</Link> and set up the recognition parameters.
-                Get the object processed and verify its HASH ID. Save the
-                shapshot.
-              </li>
-            </ul>
-            <div className="page-content-text">Set up Grid2d precision</div>
-            <div className="page-content-text">
-              Set up exactly the same parameter values as it's defined by The
-              <Link to="/features#ledger">Ledger of Things</Link> for the object.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/grid2d_settings1.png"
-              alt="img"
-            />
-            <div className="page-content-text">Set up Rotation</div>
-            <div className="page-content-text">
-              Look up the parent block hash and get the Rotation bytes. In this
-              demo the parent block is <Link to="https://wallet.3dpass.org/block/51413">#51413</Link>.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/rotation_bytes_settings1.png"
-              alt="img"
-            />
-            <div className="page-content-text">HASH ID Verification</div>
-            <div className="page-content-text">
-              Download and unzip the object from <a href="/assets/3dpass-51414.obj.zip">here</a> - on your smartphone. Open {" "}
-              <Link to="https://github.com/3Dpass/threedpass/releases">3Dpass mobile wallet</Link> and run the object (.obj) processing. Make
-              sure that you have got the same HASH ID as it is exposed on the
-              web wallet page.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/block_verification1.png"
-              alt="img"
-            />
-            <div className="page-content-text">Snapshot</div>
-            <div className="page-content-text">
-              Save the snapshot to make the app aware of the object in the
-              future.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/snapshot1.png"
-              alt="img"
-            />
-            <div className="page-content-subtitle">
-              Step 2: The Asset Copy Creation
-            </div>
-            <div className="page-content-text">
-              In order to create a copy of the asset open the object (.obj)
-              mined with Text editor. Pick up any vertice and modify its
-              coordinates just slightly, so that it doesn't affect the object
-              shape. In this demo we have changed the very first coordinate in
-              the list. Download and compare: <a href="/assets/3dpass-51414.obj.zip">Original one</a> and the <a href="/assets/3dpass-51414_modified.obj.zip">Fake one</a>.
-              Here we used MD5 hashes to prove the difference between those two
-              files:
-            </div>
-            <pre className="main-pre">
-              {`
-MD5 (3dpass-51414.obj) = bbeb319c8c27e73298bdad936ecf524f
-MD5 (3dpass-51414_modified.obj) = d65277a787889e20ad1b3b4f22dadccf
-
-`}
-            </pre>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/modification1.png"
-              alt="img"
-            />
-            <div className="page-content-text">
-              It's very important to understand at this point, that any
-              conventional blockchain platform (e.x. Ethereum), could only
-              provide the ability to mint two different assets out of those
-              files. And you would have never known if they are containing the
-              same object.
-            </div>
-            <div className="page-content-subtitle">
-              Step 3: The Asset Copy Creation
-            </div>
-            <div className="page-content-text">
-              Open <Link to="https://github.com/3Dpass/threedpass/releases">3Dpass mobile wallet</Link> and run the fake object (.obj)
-              processing. Once match is found, the fake object is becoming
-              recognized. Due to the fact, that the object shape is still the
-              same, the asset remains secured. You can never build new block
-              using this fake.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/compare_hashes1.png"
-              alt="img"
-            />
-            <div className="page-content-text">
-              By the way, you might continue this experiment and put some more
-              serious modification on the fake object. At the point 3DPass
-              mobile app will no longer be able to recognize it, the object
-              modified is different enough for the current definition error to
-              sustain its HASH ID.
-            </div>
           </div>
         </div>
       </div>
