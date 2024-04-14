@@ -28,7 +28,7 @@ const Header = () => {
         el.setAttribute("content", "3DPass - governance");
       } else if (location.includes("proof-of-scan")) {
         el.setAttribute("content", "3DPass - Proof of Scan protocol description");
-      } else if (location.includes("fungible-tokens-minting")) {
+      } else if (location.includes("assets")) {
         el.setAttribute("content", "3DPass - fungible tokens issuance guidelines");
       } else if (location.includes("forkless-upgrade")) {
         el.setAttribute("content", "3DPass - forkless upgrade");

@@ -257,7 +257,19 @@
 }
 
 .scanproof-line {
-  height: 189px;
+  height: 129px;
+}
+
+.rc-line {
+  height: 169px;
+}
+
+.assets-line {
+  height: 234px;
+}
+
+.fungibleassets-line {
+  height: 84px;
 }
 
 .usecase-line {

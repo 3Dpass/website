@@ -269,31 +269,6 @@ const Mainnet = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#tokenization">
-            <div
-              className={
-                locationHash.includes("tokenization")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              The object tokenization
-              <div className="page-nav-circle"></div>
-              <div className="page-nav-line tokenization-line"></div>
-            </div>
-          </a>
-          <a href="#put-object">
-            <div className="page-nav-inside">
-              Put new object on chain 
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#get-object-info">
-            <div className="page-nav-inside">
-              Get object info
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
         </div>
       </div>
       <div className="page-content">
@@ -331,10 +306,10 @@ const Mainnet = () => {
           <a href="https://www.3dpassmining.info">
             <div className="one-subheader">Mining leaders</div>
           </a>
-          <a href="/fungible-tokens-minting#assets">
-            <div className="one-subheader">Fungible tokens (Assets)</div>
+          <a href="/assets">
+            <div className="one-subheader">Assets</div>
           </a>
-          <a href="fungible-tokens-minting#smart">
+          <a href="/assets/#smart-contracts">
             <div className="one-subheader">Smart Contracts</div>
           </a>
         </div>
@@ -480,8 +455,8 @@ const Mainnet = () => {
               In order to ensure the network healthiness and prevent it from
               being taken over by just a few mining pool Nodes hosting the whole
               network, there is a restriction rule, which will incentivize to
-              create 10 mining pools at minimum. Each pool should not exceed the
-              limit = 10% of luck calculated statistically from the blockchain
+              create 5 mining pools at minimum. Each pool should not exceed the
+              limit = 20% of luck calculated statistically from the blockchain
               history. History depth for the pool_rate to calculate: 100 blocks
               back.
             </div>
@@ -490,7 +465,7 @@ const Mainnet = () => {
               being applied to the minng block rewards, once having the limit
               rule broken up. The maximum penalties share possible to get is
               100% mining block rewards, which is being slashed as the pool_rate
-              has exceded the threshold of 2*limit (20% of luck). All the
+              has exceded the threshold of 2*limit (40% of luck). All the
               penalties are being slashed to the <Link to="/governance#treasury">Treasury</Link> pot controlled by the{" "}
               <Link to="/governance">Governance</Link>.
             </div>
@@ -1872,14 +1847,6 @@ rm -rf ~/3dp-chain/chains/3dpass/db
               KYC procedure: Reasonable
             </div>
             <div className="page-content-text">
-              There is a legitimate way for Validators to exit without getting
-              penalties, which is to wait until after the lock period expires
-              and do "unlock funds". If the auto re-lock option have been used
-              so far, new lock is required to cancel autolocking. Just set up a
-              new lock without auto re-lock period specified and wait till it
-              has expired.
-            </div>
-            <div className="page-content-text">
               1. Open <Link to="https://wallet.3dpass.org">3Dpass web wallet</Link> and pick up the "Identity: Claim" option.
             </div>
             <img
@@ -2148,61 +2115,6 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                     `}
             </pre>
           </div>
-        </div>
-        <div className="page-content-block" id="tokenization">
-          <div className="page-content-inner">
-            <div className="page-content-title">The object tokenization</div>
-            <div className="page-content-text">
-              The user objects can be tokenized in accordance to <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> standard rules. 
-            </div>
-            <div className="page-content-subtitle" id="put-object">
-              Submit new object on The Ledger of Things
-            </div>
-            <div className="page-content-text">
-              3D model in <i>.obj</i> format could be submitted. Requirements: 
-            </div>
-            <ul className="page-content-text">
-              <li>Max file size: 150 kB</li>
-              <li>Authentication fee: 1000 P3D (will be paid to miners and validators for their job)</li>
-            </ul>
-            <div className="page-content-text">
-              Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/extrinsics">Polka wallet</Link> 
-            </div>
-            <div className="page-content-text">
-              In order to submit the object this method should be used <i> Extrinsics - PoScan - putObject(category, obj, numApprovals, hashes)</i>: 
-            </div>
-            <img
-              className="page-img"
-              src="/images/put_object_mainnet.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#1-poscanputobject">PoScan pallet API</Link>
-            </div>
-            <div className="page-content-subtitle" id="get-object-info">
-              Get the object data
-            </div>
-            <div className="page-content-text">
-              Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polka wallet</Link> 
-            </div>
-            <div className="page-content-text">
-              In order to get some data from the blockchain this method should be used <i> Chain state - PoScan - Objects(u32)</i>: 
-            </div>
-            <img
-              className="page-img"
-              src="/images/get_object_info.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-          </div>
-          <div className="page-content-text">
-            The output returns all the data about the object from the storage. 
-            Use <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#2-poscan_getposcanobject">this description</Link> for better understanding of the object parameters. 
-          </div>
-          <div className="page-content-text">
-              This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#2-poscan_getposcanobject">PoScan pallet API</Link>
-            </div>
         </div>
       </div>
     </React.Fragment>

@@ -5,7 +5,7 @@ import Community from "./pages/Community";
 import Features from "./pages/Features";
 import Footer from "./components/Footer";
 import ForklessUpgrade from "./pages/ForklessUpgrade";
-import FungibleTokens from "./pages/FungibleTokens";
+import Assets from "./pages/Assets";
 import Governance from "./pages/Governance";
 import Grid2D from "./pages/Grid2D";
 import Header from "./components/Header";
@@ -32,8 +32,8 @@ function App() {
             <Route path="/mainnet" element={<Mainnet />} />
             <Route path="/mobile-wallet" element={<MobileWallet />} />
             <Route
-              path="/fungible-tokens-minting"
-              element={<FungibleTokens />}
+              path="/assets"
+              element={<Assets />}
             />
             <Route path="/testnet-rewards" element={<TestnetRewards />} />
             <Route path="/forkless-upgrade" element={<ForklessUpgrade />} />
