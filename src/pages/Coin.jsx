@@ -348,7 +348,12 @@ ETH SIGNATURE
               <li>Core: Atomic swap for assets (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v11">released</Link></i>)</li>
               <li>3DPRC-2: Assets management (<i> in the process</i>)</li>
               <li>3DPRC-2: Grid2D_v3a multithreading optimization (<Link to="https://github.com/3Dpass/p3d/pull/4"><i>is being reviewed</i></Link>)</li>
-              <li>Core: Equivocation handler improvements (<i> is being tested</i>)</li>
+              <li>Core: Equivocation handler improvements (<i> is being tested on testnet</i>)</li>
+              <li>PoW component: GPU resistence feature (<i> in the process</i>)</li>
+              <li>Validator set (stability & security): additional checks on validators joining (<i> in the process</i>)</li>
+              <li>Validator set (stability & security): check if the validator is providing judgements during the session (<i> in the process</i>)</li>
+              <li>Validator set (stability & security): the validator performance test on 3DPRC-2</li>
+              <li>Forkless upgrade: online upgrade public verification procedure (<i>Done</i>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
               Q2 - Assets marketplace & cross-chain
@@ -465,7 +470,7 @@ ETH SIGNATURE
                 GRANDPA session length
               </div>
               <div className="page-table-right page-table-content">
-                30 blocks, <Link to="/mainnet#validator">how to become Validator</Link>
+                120 blocks, <Link to="/mainnet#validator">how to become Validator</Link>
               </div>
               <div className="page-table-left page-table-info">GitHub</div>
               <div className="page-table-right page-table-content">
