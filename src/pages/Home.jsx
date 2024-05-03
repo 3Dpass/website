@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The equivocation handler release v22!",
+      description:
+      "The equivocation handler security feature has been released on mainnet to ensure the network resilience against potential hard fork attempts in the future!",
+      date: "Apr 26, 2024",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v22"
+    },
+    {
       title: "The mobile wallet v2.13.0 has been released!",
       description:
       "The mobile wallet v2.13.0 allows for users to put new objects on chain, explore the objects uploaded and follow its 3DPRC-2 verification status.",
@@ -42,13 +49,6 @@ const Home = () => {
       "The Node v11 release containing some important security fixes and the Atomic Swap for assets is available for mainnet.",
       date: "Feb 09, 2024",
       link: "https://github.com/3Dpass/3DP/releases/tag/v11"
-    },
-    {
-      title: "3DPass coin has been listed on Coinex exchange!",
-      description:
-      "P3D/USDT pair is now available for traders on Coinex",
-      date: "Jan 26, 2024",
-      link: "https://www.coinex.com/en/exchange/p3d-usdt"
     },
   ]);
 
@@ -73,6 +73,9 @@ const Home = () => {
             </Link>
             <Link to="/mobile-wallet">
               <Button type="button" label="Mobile wallet" />
+            </Link>
+            <Link to="https://swap.3dpscan.io">
+              <Button type="button" label="3DPass Swap DEX" />
             </Link>
           </div>
         </div>

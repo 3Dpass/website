@@ -282,6 +282,9 @@ const Mainnet = () => {
           <a href="/mobile-wallet">
             <div className="one-subheader">Mobile Wallet</div>
           </a>
+          <a href="https://swap.3dpscan.io">
+            <div className="one-subheader">3DPass Swap DEX</div>
+          </a>
           <a href="https://3dpscan.io">
             <div className="one-subheader">Block Explorer 1</div>
           </a>
@@ -1497,7 +1500,7 @@ rm -rf ~/3dp-chain/chains/3dpass/db
             </div>
             <div className="page-content-subtitle">SLA</div>
             <ul className="page-content-text">
-              <li>Online: 24/7</li>
+              <li>Online: 24/7, ping 333 ms from all over the globe to participatte in GRANDPA voting rounds</li>
               <li>
                 Firewall: no Firewall (the locations such as China and Singapore
                 are not allowed for validator hosting)
@@ -1542,16 +1545,16 @@ rm -rf ~/3dp-chain/chains/3dpass/db
             </div>
             <ul className="page-content-text">
               <li>
-                PreVote Equivocation (voting for two different chains
-                simultaneously): 40 000 P3D and get off the validator set
+                Equivocation attack (Voting for two different chains
+                simultaneously. It mostly occurs to the validators using the same keyset on different servers and thus causing a threat for the network to get split): 40 000 P3D and getting out of the validator set as well as from the session
               </li>
               <li>
-                Not being online/available: 20 000 P3D and get off the validator
+                Not being online/available: 20 000 P3D and getting out of the validator
                 set
               </li>
               <li>
-                Not being able to vote for any reason (Firewall, incorrect keys
-                set up, etc.): 20 000 P3D and get off the validator set
+                Not being able to participate in GRANDPA voting rounds for any reason (Firewall, incorrect keys
+                set up, etc.): 20 000 P3D and getting out of the validator set
               </li>
             </ul>
             <div className="page-content-subtitle" id="validator-setting">

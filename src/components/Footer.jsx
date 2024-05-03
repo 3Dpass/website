@@ -51,6 +51,9 @@ const Footer = () => {
             <a href="/fungible-tokens-minting">
               <div className="footer-item">Fungible Tokens Minting</div>
             </a>
+            <a href="/features#dex">
+              <div className="footer-item">Embedded DEX</div>
+            </a>
             <a href="/pass3d">
               <div className="footer-item">Pass3d toolkit</div>
             </a>
@@ -122,6 +125,9 @@ const Footer = () => {
             </a>
             <a href="https://explorer.3dpassmining.info">
               <div className="footer-item">Block Explorer 2</div>
+            </a>
+            <a href="https://swap.3dpscan.io">
+              <div className="footer-item">3DPass DEX UI</div>
             </a>
             <a href="https://telemetry.3dpscan.io">
               <div className="footer-item">Telemetry Server</div>

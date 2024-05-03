@@ -300,7 +300,7 @@ const Community = () => {
                 <Link to="https://explorer-api.3dpscan.io/graphql/">
                   <li>Block Explorer API graphql</li>
                 </Link>
-                <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org&types=eNqrVnJMTs4vzSvxzEvLV7JC5oVnlmS4lCbmBKWmOYPElHSUHFNSilKLi5HUpQBFffLzs0sLgvNLi5JT0aTCUzPTM0qAgqXGRkq1AEo%2FJWY%3D">
+                <Link to="https://polkadot.js.org/apps/?rpc=wss%253A%252F%252Frpc.3dpscan.io">
                   <li>Polkadot js wallet</li>
                 </Link>
                 <Link to="https://novawallet.io">
@@ -347,6 +347,12 @@ const Community = () => {
                 </Link>
                 <Link to="https://xeggex.com/market/P3D_BTC">
                   <li>Xeggex P3D/BTC</li>
+                </Link>
+                <Link to="https://www.coinex.com/en/exchange/p3d-usdt">
+                  <li>Coinex P3D/USDT</li>
+                </Link>
+                <Link to="https://swap.3dpscan.io">
+                  <li>3DPass swap DEX</li>
                 </Link>
               </ul>
             </div>

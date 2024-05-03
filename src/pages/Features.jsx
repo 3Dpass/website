@@ -726,6 +726,14 @@ const Features = () => {
             The <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> Substrate module representing a full featured decentralized exchange, based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> protocol rules, integrated into The Ledger of Things runtime.  
             Enjoy the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX API</Link> on Github, create Liquidity Pools and trade the assets issued on The Ledger of Things.
            </div>
+           <ul className="page-content-text">
+            <li>
+            <Link to="https://swap.3dpscan.io">3DPass swap DEX User Interface</Link>
+            </li>
+            <li>
+            <Link to="https://github.com/3Dpass/swap">DEX UI GitHub link</Link>
+            </li>
+            </ul>
           </div>
         </div>
         <div className="page-content-block" id="tokenization">
