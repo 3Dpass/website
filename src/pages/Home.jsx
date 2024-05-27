@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The mobile wallet v2.15.0 release!",
+      description:
+      "Now you can make mint and transfer of either 3DPRC-2 share tokens or regular fungible assets via the mobile wallet. The update is available on Github and Google Play.",
+      date: "May 26, 2024",
+      link: "https://github.com/3Dpass/threedpass/releases/tag/v.2.15.0"
+    },
+    {
       title: "The equivocation handler release v22!",
       description:
       "The equivocation handler security feature has been released on mainnet to ensure the network resilience against potential hard fork attempts in the future!",
@@ -42,13 +49,6 @@ const Home = () => {
       "The mobile wallet v2.13.0 allows for users to put new objects on chain, explore the objects uploaded and follow its 3DPRC-2 verification status.",
       date: "Mar 19, 2024",
       link: "https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"
-    },
-    {
-      title: "The Node v11 has been released!",
-      description:
-      "The Node v11 release containing some important security fixes and the Atomic Swap for assets is available for mainnet.",
-      date: "Feb 09, 2024",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v11"
     },
   ]);
 

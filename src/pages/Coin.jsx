@@ -344,12 +344,12 @@ ETH SIGNATURE
               <li>PoW component (3D objects consistency check): <Link to="https://github.com/3Dpass/3DP/releases/tag/v19"> Node v19 release</Link></li>
               <li>CEX listing: <Link to="https://www.coinex.com/en/exchange/p3d-usdt">CoinEx</Link> listed</li>
               <li>Web: Embedded DEX UI: <Link to="https://swap.3dpascan.io">https://swap.3dpascan.io</Link> released</li>
-              <li>Mobile wallet: <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> UI integration (Putting objects on the blockchain - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"><i>done</i></Link>; Backed tokens issuace - <i> in the process</i>)</li>
+              <li>Mobile wallet: <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> UI integration (Putting objects on the blockchain - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"><i>done</i></Link>; Backed tokens issuace - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.15.0"><i>done</i></Link>)</li>
               <li>Core: Atomic swap for assets (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v11">released</Link></i>)</li>
               <li>3DPRC-2: Assets management (<i> in the process</i>)</li>
               <li>3DPRC-2: Grid2D_v3a multithreading optimization (<Link to="https://github.com/3Dpass/p3d/pull/4"><i>is being reviewed</i></Link>)</li>
               <li>Core: Equivocation handler improvements: <Link to="https://github.com/3Dpass/3DP/releases/tag/v22">Node v22 release</Link></li>
-              <li>PoW component: FPGA resistance feature (<i> in the process</i>)</li>
+              <li>PoW component: FPGA resistance feature (<i> is being tested</i>)</li>
               <li>Validator set (stability & security): additional checks on validators joining (<i> in the process</i>)</li>
               <li>Validator set (stability & security): check if the validator is providing judgements during the session (<i> in the process</i>)</li>
               <li>Validator set (stability & security): the validator performance test on 3DPRC-2</li>
@@ -361,6 +361,7 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> is being estimated</i>)</li>
               <li>DEX: Cross-chain bridge over to Ethereum (<i> is being researched</i>)</li>
+              <li>Mobile wallet: Embedded DEX UI integration (<i> in the process</i>)</li>
               <li>A stablecoin bridging/issuance (<i> is being researched</i>)</li>
               <li>Web wallet: Asset/NFT marketplace UI implementation</li>
               <li>Administrative: Governance server and UI</li>
