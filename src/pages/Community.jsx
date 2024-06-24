@@ -360,13 +360,16 @@ const Community = () => {
               <div className="url-block-title">Social Media</div>
               <ul className="page-content-text">
                 <Link to="https://twitter.com/3Dpass_official">
-                  <li>Twitter (the team, major news)</li>
+                  <li>X (the team, major news only)</li>
+                </Link>
+                <Link to="https://x.com/3dpass_open_gov">
+                  <li>X (the open governance news, community)</li>
                 </Link>
                 <Link to="https://twitter.com/3DPassTR">
-                  <li>Twitter (community)</li>
+                  <li>X (community)</li>
                 </Link>
                 <Link to="https://twitter.com/3DPassArmy">
-                  <li>Twitter (community)</li>
+                  <li>X (community)</li>
                 </Link>
                 <Link to="https://www.youtube.com/channel/UCYkrRxTgAQYwzFqRuQPOZ4w">
                   <li>Youtube</li>
