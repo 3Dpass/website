@@ -441,11 +441,14 @@ const Community = () => {
         <div className="page-content-block" id="download">
           <div className="page-content-inner">
             <div className="page-content-title">
-              Download: Stable Official{" "}
-              <Link to="https://github.com/3Dpass/3DP/releases">Release</Link>
+              Download: {" "}
             </div>
             <div className="page-content-text">
-              Mainnet: <Link to="/mainnet">guidelines</Link>
+            <ul className="page-content-text">
+              <li><Link to="https://github.com/3Dpass/3DP/releases">The Node latest release</Link></li>
+              <li><Link to="https://github.com/xchainw/p3d-db/releases">Latest blockchain db snapshot (by community)</Link></li>
+              <li><Link to="/mainnet">Mainnet guidelines</Link></li>
+            </ul>
             </div>
             <div className="page-table">
               <div className="page-table-header">
@@ -459,7 +462,7 @@ const Community = () => {
               <div className="page-table-left page-table-info">Android</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://play.google.com/store/apps/details?id=com.threedpass.wallet">
-                  Get it on Google Play
+                  Get the wallet on Google Play
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Windows</div>
@@ -467,29 +470,17 @@ const Community = () => {
                 <Link to="https://3dpass.org/mainnet.html#mining_docker">
                   How to run the Node with Docker{" "}
                 </Link>
-                |{" "}
-                <Link to="https://3dpass.org/mainnet.html#mining_manually_windows">
-                  How to build the Node manualy
-                </Link>
               </div>
               <div className="page-table-left page-table-info">Mac OS</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://3dpass.org/mainnet.html#mining_docker">
                   How to run the Node with Docker{" "}
                 </Link>
-                |{" "}
-                <Link to="https://3dpass.org/mainnet.html#mining_manually_windows">
-                  How to build the Node manualy
-                </Link>
               </div>
               <div className="page-table-left page-table-info">Linux</div>
               <div className="page-table-right page-table-content">
                 <Link to="https://github.com/3Dpass/3DP/releases">
-                  Node: poscan-consensus bin{" "}
-                </Link>
-                |{" "}
-                <Link to="https://3dpass.org/mainnet.html#mining_docker">
-                  How to run the Node with Docker{" "}
+                  Prebuilt poscan-consensus binaries{" "}
                 </Link>
                 |{" "}
                 <Link to="https://3dpass.org/mainnet.html#mining_manually_linux">

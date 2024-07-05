@@ -32,7 +32,7 @@ const Mainnet = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#mining-pool">
+           {/*<a href="#mining-pool">
             <div
               className={
                 locationHash.includes("mining-pool")
@@ -98,7 +98,7 @@ const Mainnet = () => {
               Mining Pool List
               <div className="inside-nav-circle"></div>
             </div>
-          </a>
+          </a>*/}
           <a href="#docker">
             <div
               className={
@@ -167,7 +167,7 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              How To Set Up a Validator
+              How To Set Up Validator
               <div className="page-nav-circle"></div>
               <div className="page-nav-line validator-line"></div>
             </div>
@@ -350,8 +350,7 @@ const Mainnet = () => {
             </div>
           </div>
         </div>
-
-        <div className="page-content-block" id="mining-pool">
+         {/* <div className="page-content-block" id="mining-pool">
           <div className="page-content-inner">
             <div className="page-content-title">Mining Pool Guidelines</div>
             <div className="page-content-subtitle" id="mining-pool-general">
@@ -970,7 +969,7 @@ cargo build --release
             `}
             </pre>
           </div>
-        </div>
+        </div>*/}
         <div className="page-content-block" id="docker">
           <div className="page-content-inner">
             <div className="page-content-title">
@@ -978,8 +977,8 @@ cargo build --release
               system)
             </div>
             <div className="page-content-text">
-              This way you can run both Node and Miner in one command. Windows,
-              Linux, Mac OS are supported.
+              Run both Node and Miner in one command. Windows,
+              Linux, Mac OS are all supported.
             </div>
             <div className="page-content-text">
               First, install{" "}
@@ -1029,16 +1028,16 @@ environment:
                     `}
             </pre>
             <div className="page-content-text">
-              - THREADS=2 is the amount of threads you are about to use
+              `- THREADS=2` - the amount of threads you are about to use
             </div>
             <div className="page-content-text">
-              - INTERVAL=6 is the amount of time in miliseconds between the last
+              `- INTERVAL=6` – the amount of time in miliseconds between the last
               and the next one objects being sent towards the Node. Dependidng
               on how much threads are you mining with, reduce the interval until
               you reach desired proc load.
             </div>
             <div className="page-content-text">
-              Run the Node again and make sure you can see it in the list.
+              Run the Node again and make sure you can see it on the  <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.
             </div>
             <div className="page-content-text">
               In order to assign a custom name to your Node you need to modify
@@ -1073,8 +1072,21 @@ docker compose rm -f
               How to start mining on Linux or MAC OS
             </div>
             <div className="page-content-text">
-              Open your Terminal. Follow <Link to="https://github.com/3Dpass/3DP#getting-started-with-3dpass-node">these guidelines</Link> to download the latest release or build the Node yourself out of the sourcecodes.
+              Open your Terminal. Follow <Link to="https://github.com/3Dpass/3DP#getting-started-with-3dpass-node">these guidelines</Link> either to <Link to="https://github.com/3Dpass/3DP/releases">download</Link> the <i>`poscan-consensus`</i> pre-built or build the Node yourself out of the source codes.
             </div>
+            <div className="page-content-text">Once the node is built make sure to list `3DP` directory:</div>
+            <pre className="main-pre">
+              {`
+cd 3DP
+                    `}
+            </pre>
+            <div className="page-content-text"><i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, you would have to clone the project into `3DP` directory and put the binary into the <i>`./target/release/poscan-consensus`</i>:</div>
+            <pre className="main-pre">
+              {`
+git clone https://github.com/3Dpass/3DP.git
+cd 3DP
+                    `}
+            </pre>
             <div className="page-content-text">Generate your mining key:</div>
             <pre className="main-pre">
               {`
@@ -1098,7 +1110,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              Generate the key for GRANDPA:
+              Generate the key for GRANDPA finalizaton:
             </div>
             <pre className="main-pre">
               {`
@@ -1106,7 +1118,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              The seed phrase must be the same as the one used for your mining key.
+              The seed phrase MUST be the same to the one used for your mining key! As a result, you have to have one single seed phrase and two different types of keys derived from it: the mining key and the GRANDPA key.  
             </div>
             <div className="page-content-text">
               The output would be like this:
@@ -1128,13 +1140,12 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
                     `}
             </pre>
             <div className="page-content-text">
-              --suri is your Secret seed for Grandpa (not a Secret phrase, but
-              this one
+              `--suri` is your Secret seed for Grandpa (this one
               0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3
               in the example above)
             </div>
             <div className="page-content-text">
-              Check if there are 2 keys in the keystore:
+              Check if there are both of your keys in the keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1143,10 +1154,10 @@ ls ~/3dp-chain/chains/3dpass/keystore
             </pre>
             <div className="page-content-text">
               You can also check the keys manualy
-              ~/3dp-chain/chains/3dpass/keystore
+              <i>~/3dp-chain/chains/3dpass/keystore</i>
             </div>
             <div className="page-content-text">
-              Restart the Node with the following:
+              Start the Node with the following:
             </div>
             <pre className="main-pre">
               {`
@@ -1154,49 +1165,52 @@ ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
             <div className="page-content-text">
-              --author is your Public key from mining account (the one you have
+              `--author` is your Public key from mining account (the one you have
               generated as mining key, in the example above it is
               0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e)
-              --threads is the number of threads you're about to use for mining
-              ("--threads 2" means, you are going to leverage 2 threads)
-            </div>
-            <div className="page-content-text">Install <Link to="https://bun.sh/">Bun</Link></div>
-            <div className="page-content-text">Install miner:</div>
-            <pre className="main-pre">
-              {`
-bun install
-                    `}
-            </pre>
-            <div className="page-content-text">Run miner:</div>
-            <pre className="main-pre">
-              {`
-bun miner.js --host 127.0.0.1 --port 9933
-                    `}
-            </pre>
-            <div className="page-content-text">
-              --interval is the amount of time in miliseconds between the last
-              and the next one objects being sent towards the Node. Dependidng
-              on how much threads are you mining with, reduce the interval until
-              you reach desired proc load.
+              `--threads` is the number of threads you're about to use for mining
+              (`--threads 2` means, you are going to leverage 2 threads for mining)
             </div>
             <div className="page-content-text">
-              Make sure you have open External port 30333 for incoming
-              connections and forwarded to your server's local LAN IP
+              You can also use the blockchain `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link> to start off with (the snapshots are provided by the community members).
+              In order to leverage the snapshot just unpack it and put the `db` into the <i>./3dp-chain/chains/3dpass/db</i>. Then start your node. 
             </div>
             <div className="page-content-text">
-              Make sure you can see your Node in the <Link to="https://telemetry.3dpscan.io/">list</Link>
+              Make sure you have the external port <i>`30333`</i> open for incoming
+              connections and forwarded to your server's local LAN IP. Check your Node on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
             <div className="page-content-text">
-              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link> you can also use with your node.
-            </div>
-            <div className="page-content-text">
-              In order ot remove your blockchain DB use this command:
+              In order to purge your blockchain DB use this command:
             </div>
             <pre className="main-pre">
               {`
 rm -rf ~/3dp-chain/chains/3dpass/db
                     `}
             </pre>
+            <div className="page-content-text">In orded to start mining the following steps are required:</div>
+            <div className="page-content-text">Install <Link to="https://bun.sh/">Bun</Link></div>
+            <div className="page-content-text">Install miner:</div>
+            <pre className="main-pre">
+              {`
+cd 3DP
+bun install
+                    `}
+            </pre>
+            <div className="page-content-text">Run the miner (the Node must be running):</div>
+            <pre className="main-pre">
+              {`
+bun miner.js --host 127.0.0.1 --port 9933
+                    `}
+            </pre>
+            <div className="page-content-text">
+              `--interval` is the amount of time in miliseconds between the last
+              and the next one objects being sent towards the Node. Dependidng
+              on the number of threads are you mining with, reduce the interval until
+              you reach desired proc load.
+            </div>
+            <div className="page-content-text">
+              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link> you can also use with your node.
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="wallet">

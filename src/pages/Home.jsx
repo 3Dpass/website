@@ -30,25 +30,25 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The migration to PoW v2 is completed!",
+      description:
+      "The mainnet has been upgraded online switching to the PoW v2 at the block height of 948592. A patch for the mining loop is available on GitHub!",
+      date: "July 4, 2024",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v25"
+    },
+    {
+      title: "The Node v24 PoW v2 ASIC/FPGA resistant is available on GitHub!",
+      description:
+      "PoW v2 component, which is CPU oriented and providing ASIC/FPGA resistance features, is now available on Github for mainnet. This is a major upgrade, which is mandatory for every node on the network.",
+      date: "June 28, 2024",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v24"
+    },
+    {
       title: "The mobile wallet v2.15.0 release!",
       description:
       "Now you can make mint and transfer of either 3DPRC-2 share tokens or regular fungible assets via the mobile wallet. The update is available on Github and Google Play.",
       date: "May 26, 2024",
       link: "https://github.com/3Dpass/threedpass/releases/tag/v.2.15.0"
-    },
-    {
-      title: "The equivocation handler release v22!",
-      description:
-      "The equivocation handler security feature has been released on mainnet to ensure the network resilience against potential hard fork attempts in the future!",
-      date: "Apr 26, 2024",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v22"
-    },
-    {
-      title: "The mobile wallet v2.13.0 has been released!",
-      description:
-      "The mobile wallet v2.13.0 allows for users to put new objects on chain, explore the objects uploaded and follow its 3DPRC-2 verification status.",
-      date: "Mar 19, 2024",
-      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"
     },
   ]);
 
