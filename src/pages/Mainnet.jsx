@@ -1452,7 +1452,7 @@ bun miner.js --host 127.0.0.1 --port 9933
         </div>
         <div className="page-content-block" id="validator">
           <div className="page-content-inner">
-            <div className="page-content-title">Validator Set up</div>
+            <div className="page-content-title">Validator (PoS )Set up</div>
             <div className="page-content-subtitle" id="validator-general">
               General
             </div>
@@ -1520,38 +1520,34 @@ bun miner.js --host 127.0.0.1 --port 9933
                 are not allowed for validator hosting)
               </li>
               <li>Internet trafic: no limits</li>
-              <li>Performance: no problem to keep up with the chain</li>
+              <li>Performance: no problem to catch up with the chain</li>
             </ul>
             <div className="page-content-subtitle" id="validator-threshold">
               Selection Threshold
             </div>
             <div className="page-content-text">
-              There is a threshold for new validator to pass, which depends on
-              the amount of P3D locked up for the collateral. It is required to
-              prove block authirship in the time frame of N recent blocks back.
-              Block authorship check is required to pass just once. Hovewer, the
+              There is a threshold for new validator to pass, which includes some 
+              certain amount of P3D locked up for the collateral as well as to
+              prove the set up fee transaction paid to Treasury.
+              The set up fee is required to pay just once. Hovewer, the
               collateral needs to remain locked up all the way through the node
               operating period. If the lock out period expires, the node is
-              being moved from the validator set. In order to get back the
+              being moved out the validator set. In order to get back the
               threshold is required to pass again.
             </div>
-            <div className="page-content-subtitle">Options</div>
+            <div className="page-content-subtitle">Collateral</div>
             <ul className="page-content-text">
               <li>
-                100 000 P3D locked + 1 block authorship in 100 recent blocks
-                back
+                400 000 P3D locked up on the owner's address
               </li>
               <li>
-                200 000 P3D locked + 1 block authorship in 2000 recent blocks
-                back
+                Minimum lock period is 43200 blocks (~ 1 month)
               </li>
+            </ul>
+            <div className="page-content-subtitle">Set up fee</div>
+            <ul className="page-content-text">
               <li>
-                300 000 P3D locked + 1 blok authorship in 4000 recent blocks
-                back
-              </li>
-              <li>
-                400 000 P3D locked + 1 block authorship in 8000 recent blocks
-                backn
+                20 000 P3D one-time payment to Treasury account <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
               </li>
             </ul>
             <div className="page-content-subtitle" id="validator-punishments">
@@ -1575,13 +1571,16 @@ bun miner.js --host 127.0.0.1 --port 9933
               Setting up procedure:
             </div>
             <div className="page-content-text">
-              It is assumed that you already have <Link to="/mainnet#linux-mac">set up a regular node</Link> and
-              mined a block in recent past before getting started with this
-              tutorial.
+              Make sure you have already set up a <Link to="/mainnet#linux-mac">regular node</Link> by the time you get to this tutorial. List to the project directory:
             </div>
+            <pre className="main-pre">
+              {`
+cd 3DP
+                    `}
+            </pre>
             <div className="page-content-text">1. Set up imOnline key.</div>
             <div className="page-content-text">
-              Open Terminal and insert imOnline key into the keystore by means
+              Insert imOnline key into the keystore by means
               of using this command:
             </div>
             <pre className="main-pre">
@@ -1636,6 +1635,9 @@ bun miner.js --host 127.0.0.1 --port 9933
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
+              5. Join the <Link to="https://discord.gg/u24WkXcwug">Discord</Link> and apply for validator to the Council. Make the set up payment during the application process. The application goes through the <Link to="/governance#council"></Link> Council vote. 
+            </div>
+            {/*<div className="page-content-text">
               5. Add your mining address into the Validator set:
             </div>
             <img
@@ -1643,9 +1645,9 @@ bun miner.js --host 127.0.0.1 --port 9933
               src="/images/add_to_validator1.png"
               alt="img"
               style={{ marginBottom: "20px" }}
-            />
+            />*/}
             <div className="page-content-text">
-              Make sure, that you can see your mining address in the
+              Once approved, make sure you can see your mining address in the
               validatorSet:
             </div>
             <img
@@ -1683,7 +1685,7 @@ bun miner.js --host 127.0.0.1 --port 9933
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              8. Wait for 60 blocks to pass
+              8. Wait for ~240 blocks (2 sessions) to pass
             </div>
             <div className="page-content-text">
               9. Make sure, that you can see your GRANDPA SS58 Address in the
@@ -1696,8 +1698,7 @@ bun miner.js --host 127.0.0.1 --port 9933
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              10. Would you like to highlight your node with the "dot" on the
-              <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
+              10. Would you like to highlight your node with the "dot" on the <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
             </div>
             <pre className="main-pre">
               {`
@@ -1726,9 +1727,8 @@ bun miner.js --host 127.0.0.1 --port 9933
               Rejoining the validator set
             </div>
             <div className="page-content-text">
-              There is a "comeback window" a validator can rejoin the validator
-              set after getting ruled out and witout a necessity of having yet a
-              block mined.
+              There is a "comeback window" validator can rejoin
+              after getting ruled out witout a necessity to pay the set up fee.
             </div>
             <ul className="page-content-text">
               <li>Ban period: 3 hours, since heading off the validator set</li>
