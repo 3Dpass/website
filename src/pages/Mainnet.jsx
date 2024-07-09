@@ -983,10 +983,7 @@ cargo build --release
             <div className="page-content-text">
               1. Install{" "}
               <Link to="https://docs.docker.com/get-docker/">Docker</Link> and{" "}
-              <Link to="https://docs.docker.com/compose/install/">
-                Docker Compose
-              </Link>
-              .
+              <Link to="https://docs.docker.com/compose/install/">Docker Compose</Link>.
             </div>
             <div className="page-content-text">
               2. Open Terminal and clone 3DPass Node. Use this command:
@@ -997,11 +994,13 @@ git clone https://github.com/3Dpass/3DP.git
               `}
             </pre>
             <div className="page-content-text">
-              3. List the project directory `3DP``:
+              3. List the project directory `3DP`and install Minier (<i>./3DP/miner.js</i>):
             </div>
             <pre className="main-pre">
                {`
 cd 3DP
+pnpm i
+pnpm miner
               `}
             </pre>
             <div className="page-content-text">
@@ -1014,6 +1013,15 @@ docker compose build
 docker compose up
                     `}
             </pre>
+            <div className="page-content-text">
+              Once the node is built, it will stop with this error:
+            </div>
+            <img
+              className="page-img"
+              src="/images/docker_invalid_author_address.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-text">
               4. Create your mining account:
             </div>
@@ -1060,26 +1068,24 @@ node:
 environment:
 - MEMO_SEED=PLACE MEMO SEED HERE
 - ADDRESS=PLACE MINER ADDRESS HERE
-- THREADS=2
-- INTERVAL=1000
                     `}
             </pre>
-            <ul className="page-content-text">
-              <li>
-              `- THREADS=2` - the amount of threads you are about to use
-              </li>
-              <li>
-              `- INTERVAL=1000` – the amount of time in miliseconds between the last
-              and the next one objects being sent towards the Node. Dependidng
-              on how much threads are you mining with, reduce the interval until
-              you reach desired proc load.
-              </li>
-            </ul>
             <div className="page-content-text">
               6. Run the Node and Miner.{" "}
               Check your node on the telemetry <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.{" "}
               Make sure it is up to date with the network. 
             </div>
+            <pre className="main-pre">
+              {`
+docker compose up
+                    `}
+            </pre>
+            <img
+              className="page-img"
+              src="/images/docker_syncing.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-subtitle">
               Additional options
             </div>
