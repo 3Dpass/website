@@ -119,8 +119,21 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              Mining SOLO On Linux or Mac OS
+              Mining SOLO Linux or MacOS
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line object-line"></div>
+            </div>
+          </a>
+          <a href="#simple_node">
+            <div className="page-nav-inside">
+              Setting up Node
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#mining_solo">
+            <div className="page-nav-inside">
+              Setting up Miner
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#wallet">
@@ -132,18 +145,6 @@ const Mainnet = () => {
               }
             >
               How To Use The Web Wallet
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#troubleshooting">
-            <div
-              className={
-                locationHash.includes("troubleshooting")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Troubleshooting
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -266,6 +267,18 @@ const Mainnet = () => {
               }
             >
               Addresses and Keys
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#troubleshooting">
+            <div
+              className={
+                locationHash.includes("troubleshooting")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Troubleshooting
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -994,17 +1007,19 @@ git clone https://github.com/3Dpass/3DP.git
               `}
             </pre>
             <div className="page-content-text">
-              3. List the project directory `3DP`and install Minier (<i>./3DP/miner.js</i>):
+              3. List the project directory `3DP`and install Minier (<i>./3DP/miner.js</i>) with pnpm:
             </div>
             <pre className="main-pre">
                {`
 cd 3DP
-pnpm i
-pnpm miner
+pnpm install
               `}
             </pre>
             <div className="page-content-text">
-              3. Run both Node and Miner with the following command:
+             Make you have <i>`./3DP/pnpm-lock.yaml`</i> file in the folder after it is completed. 
+            </div>
+            <div className="page-content-text">
+              4. Run both Node and Miner with the following command:
             </div>
             <pre className="main-pre">
               {`
@@ -1023,7 +1038,7 @@ docker compose up
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              4. Create your mining account:
+              5. Create your mining account:
             </div>
             <ul className="page-content-text">
               <li>
@@ -1056,7 +1071,7 @@ Address: d1GtBxnPwRZVez7VsQ9H7MskPn34H59RddrR9yXqhgDYsqC3t
               Once your account is generated, don't forget to replace the content of the <i>~/3DP/docker/node.sh</i> back with the original one!
             </div>
             <div className="page-content-text">
-              5. Put your `MEMO_SEED` phrase and miner's `ADDRESS` into the
+              6. Put your `MEMO_SEED` phrase and miner's `ADDRESS` into the
               <i> ~/3DP/docker-compose.override.yml.example</i> like this:
             </div>
             <pre className="main-pre">
@@ -1071,10 +1086,14 @@ environment:
                     `}
             </pre>
             <div className="page-content-text">
-              6. Run the Node and Miner.{" "}
+              7. Run the Node and Miner.{" "}
               Check your node on the telemetry <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.{" "}
-              Make sure it is up to date with the network. 
-            </div>
+              Make sure it is up to date with the network.
+              </div>
+              <div className="page-content-text">
+              <i>Info!</i> Both of your keys Mining key and GRANDPA key will be generated automatically out of the `MEMO SEED` phrase{" "}
+              and stored in the keystore: <i>./3DP/data/chain/chains/3dpass/keystore</i>.
+              </div>
             <pre className="main-pre">
               {`
 docker compose up
@@ -1092,7 +1111,7 @@ docker compose up
             <div className="page-content-text">
               You might as well, customize the Node name in the
                the <i>~/3DP/docker/node.sh</i> file. All you need to do is
-              to put it the `--name MY_NODE_NAME` like this:
+              to edit the `--name MY_NODE_NAME` parameter:
             </div>
             <pre className="main-pre">
               {`
@@ -1114,6 +1133,15 @@ cd 3DP
 docker compose rm -f
                     `}
             </pre>
+            <div className="page-content-text">
+             There is the blockchian `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshots</Link> provided by the community members for newcomers to speed up syncing:
+            </div>
+            <ul className="page-content-text">
+              <li>The blockchain db location: <i>./3DP/data/chain/chains/3dpass/db</i></li>
+              <li>Download and unpack the latest `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link></li>
+              <li>Replace the existing `db` folder with the one downloaded</li>
+              <li>Restart the node and miner</li>
+            </ul>
           </div>
         </div>
         <div className="page-content-block" id="linux-mac">
@@ -1121,23 +1149,29 @@ docker compose rm -f
             <div className="page-content-title">
               How to start mining on Linux or MAC OS
             </div>
-            <div className="page-content-text">
-              Open your Terminal. Follow <Link to="https://github.com/3Dpass/3DP#getting-started-with-3dpass-node">these guidelines</Link> either to <Link to="https://github.com/3Dpass/3DP/releases">download</Link> the <i>`poscan-consensus`</i> pre-built or build the Node yourself out of the source codes.
+            <div className="page-content-subtitle" id="simple_node">
+              Set up full Node
             </div>
-            <div className="page-content-text">Once the node is built make sure to list `3DP` directory:</div>
-            <pre className="main-pre">
-              {`
-cd 3DP
-                    `}
-            </pre>
-            <div className="page-content-text"><i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, you would have to clone the project into `3DP` directory and put the binary into the <i>`./target/release/poscan-consensus`</i>:</div>
+            <div className="page-content-text">
+              1. Open Terminal and clone the Node from the GitHub:
+            </div>
             <pre className="main-pre">
               {`
 git clone https://github.com/3Dpass/3DP.git
 cd 3DP
                     `}
             </pre>
-            <div className="page-content-text">Generate your mining key:</div>
+            <div className="page-content-text">
+              2. Follow <Link to="https://github.com/3Dpass/3DP#getting-started-with-3dpass-node">these guidelines</Link> to{" "}
+              <Link to="https://github.com/3Dpass/3DP/releases">download</Link> the <i>`poscan-consensus`</i>{" "}
+               pre-built binaries or build the Node yourself out of the source codes.
+               </div>
+            <div className="page-content-text">
+              <i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, put the binary into the <i>`./target/release/poscan-consensus`</i>:
+            </div>
+            <div className="page-content-text">
+              3. Generate your mining account (standard account, 'sr25519' type):
+            </div>
             <pre className="main-pre">
               {`
 ./target/release/poscan-consensus generate-mining-key --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json
@@ -1152,7 +1186,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              Register your mining key in the keystore:
+              4. Register your mining key in the keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1160,16 +1194,13 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              Generate the key for GRANDPA finalizaton:
+              5. Derive the key ('ed25519' type) for GRANDPA finalizaton from your seed phrase (THE SEED PHRASE FROM YOUR MINING ACCOUNT MUST BE USED):
             </div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus key inspect --scheme Ed25519 "your secret seed phrase"
+./target/release/poscan-consensus key inspect --scheme Ed25519 "your secret seed phrase from mining account previously generated"
                     `}
             </pre>
-            <div className="page-content-text">
-              The seed phrase MUST be the same to the one used for your mining key! As a result, you have to have one single seed phrase and two different types of keys derived from it: the mining key and the GRANDPA key.  
-            </div>
             <div className="page-content-text">
               The output would be like this:
             </div>
@@ -1182,7 +1213,7 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
                     `}
             </pre>
             <div className="page-content-text">
-              Insert Grandpa key into the keystore:
+              6. Insert the GRANDPA key into the keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1190,12 +1221,11 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
                     `}
             </pre>
             <div className="page-content-text">
-              `--suri` is your Secret seed for Grandpa (this one
-              0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3
-              in the example above)
+              `--suri` is your Secret seed `hex`` from GRANDPA key (in the example above:
+              0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3)
             </div>
             <div className="page-content-text">
-              Check if there are both of your keys in the keystore:
+              Make sure both of your keys are in the keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1203,11 +1233,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
             <div className="page-content-text">
-              You can also check the keys manualy
-              <i>~/3dp-chain/chains/3dpass/keystore</i>
-            </div>
-            <div className="page-content-text">
-              Start the Node with the following:
+              7. Start the Node with the following:
             </div>
             <pre className="main-pre">
               {`
@@ -1237,29 +1263,34 @@ ls ~/3dp-chain/chains/3dpass/keystore
 rm -rf ~/3dp-chain/chains/3dpass/db
                     `}
             </pre>
-            <div className="page-content-text">In orded to start mining the following steps are required:</div>
-            <div className="page-content-text">Install <Link to="https://bun.sh/">Bun</Link></div>
-            <div className="page-content-text">Install miner:</div>
+            <div className="page-content-subtitle" id="mining_solo">
+              Start mining
+            </div>
+            <div className="page-content-text">
+              Make sure you have <Link to="/mainnet#simple_node">full Node</Link> set up and proceed with the following steps:
+              </div>
+            <div className="page-content-text">1. Install <Link to="https://bun.sh/">Bun</Link></div>
+            <div className="page-content-text">2. Install miner:</div>
             <pre className="main-pre">
               {`
 cd 3DP
 bun install
                     `}
             </pre>
-            <div className="page-content-text">Run the miner (the Node must be running):</div>
+            <div className="page-content-text">3. Run the miner (the Node must be running):</div>
             <pre className="main-pre">
               {`
 bun miner.js --host 127.0.0.1 --port 9933
                     `}
             </pre>
             <div className="page-content-text">
-              `--interval` is the amount of time in miliseconds between the last
-              and the next one objects being sent towards the Node. Dependidng
-              on the number of threads are you mining with, reduce the interval until
+              `--interval 1000` is the amount of time in miliseconds defining the frequency, at which
+              random 3D models will be generated and sent towards the Node. Dependidng
+              on the number of threads in use and its capacity, reduce the interval until
               you reach desired proc load.
             </div>
             <div className="page-content-text">
-              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link> you can also use with your node.
+              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, which might be picked up as an option.
             </div>
           </div>
         </div>
@@ -1315,158 +1346,6 @@ bun miner.js --host 127.0.0.1 --port 9933
             </div>
           </div>
         </div>
-        <div className="page-content-block" id="troubleshooting">
-          <div className="page-content-inner">
-            <div className="page-content-title">Troubleshooting</div>
-            <div className="page-content-subtitle">
-              Node has no peers connected
-            </div>
-            <img
-              className="page-img"
-              src="/images/zero_peers1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              That 99% might be caused by your Iternet connection or Internet
-              settings.
-            </div>
-            <ul className="page-content-text">
-              <li>Check your Internet connection</li>
-              <li>
-                Make sure incoming connections are allowed, external port 30333
-                is open. Check your router, firewall, ddos protection, etc. For
-                some countries you might need to use VPN.
-              </li>
-              <li>Check if port 30334 is open on your computer/server</li>
-              <li>
-                Check your Internet speed. It should be at least 1 Mb/s for
-                download
-              </li>
-            </ul>
-            <div className="page-content-subtitle">
-              Node got stuck at the certain heght or it won't start syncing
-            </div>
-            <div className="page-content-text">
-              It looks like you have some peers connected, however the Node got
-              stuck indicating sync velocity 0 blocks per second and not
-              receiving any blocks.
-            </div>
-            <img
-              className="page-img"
-              src="/images/not_syncing1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">Solution</div>
-            <ul className="page-content-text">
-              <li>
-                Make sure incoming connections are allowed and external port
-                30333 is open for your node.
-              </li>
-              <li>
-                If you are behind the NAT or router, it's recomended that you
-                set up a static internal IP and forward external port 30333 to
-                your machine
-              </li>
-              <li>
-                Sometimes, it might get tricky to establish the first p2p
-                connection between nodes behind NAT. Try leveraging some
-                different Internet provider or direct connection from data
-                center, etc. That might really help. If you have your computer
-                connected via router, then turn it off for 10-15 min and then
-                try again.
-              </li>
-            </ul>
-            <div className="page-content-subtitle">
-              The node is always falling behind the others and wouldn't catch
-              up with the chain
-            </div>
-            <div className="page-content-text">
-              That kind of issue might be caused by either you have some
-              troubles with the Internet connection or your hardware doesn't
-              satisfy or lower than the standard <Link to="/mainnet">conditions reqired</Link>.
-            </div>
-            <ul className="page-content-text">
-              <li>
-                It's recommended that you upgrade the hardware and the Internet
-                connection speed.
-              </li>
-              <li>
-                You can also download the actual blockchain db and start syncing
-                from that point. Ask the db on Discord chat and replace your
-                folder ~/3dp-chain/chains/3dpass/db with the new one.
-              </li>
-            </ul>
-            <div className="page-content-subtitle">
-              Error: Service(Other("Unable to mine: fetch pair from author
-              failed"))
-            </div>
-            <div className="page-content-text">
-              Set up your keys for mining and for Grandpa as it's described in
-              the guidelines. If you are running the Node manually, make sure if
-              there are two keys in the keystore:
-              ~/3dp-chain/chains/3dp/keystore
-            </div>
-            <div className="page-content-subtitle">
-              "Expected prunning mode: constrained"
-            </div>
-            <div className="page-content-text">
-              Remove your blockchain db as it's described <Link to="/testnet">above</Link> and start the
-              node again.
-            </div>
-            <div className="page-content-subtitle">
-              Cannot unlock my old mining rewards
-            </div>
-            <div className="page-content-text">
-              The <Link to="https://polkadot.js.org/apps/#/chainstate">chain state</Link> on the blockchain storage for the Rewards pallet
-              provides there is no locks for the address you have requested,
-              despite the fact that a certain amount of P3D is still locked in.
-              Ex. you can see some funds locked, while observing your account
-              over the <Link to="https://3dpscan.io">block explorer</Link>. The chain state output would look like
-              this:
-            </div>
-            <pre className="main-pre">
-              {`
-[
-[ d1EssjuwKKqe4HRFejUTtT5BXAQVnUEMw2ddKkxC1fsxvt9Sn
-]
-{}
-]
-                    `}
-            </pre>
-            <div className="page-content-text">Solution</div>
-            <div className="page-content-text">
-              1. Check the chain storage for the Rewards pallet to figure it out
-              whether or not the output looks like in the example above.
-            </div>
-            <img
-              className="page-img"
-              src="/images/chainstorage_rewards1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text" id="cant-unlock">
-              2. If so, proceed the following steps:
-            </div>
-            <ul className="page-content-text">
-              <li>Execute Unlock funds mined via the <Link to="https://wallet.3dpass.org/">web wallet</Link></li>
-              <li>
-                Lock 1 Cramb (0.000000000001 P3D) with the Rewards pallet like
-                this
-              </li>
-            </ul>
-            <img
-              className="page-img"
-              src="/images/lock1cramb1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              Make sure you have your funds unlocked.
-            </div>
-          </div>
-        </div>
         <div className="page-content-block" id="unlock">
           <div className="page-content-inner">
             <div className="page-content-title">How to unlock funds mined</div>
@@ -1492,7 +1371,7 @@ bun miner.js --host 127.0.0.1 --port 9933
         </div>
         <div className="page-content-block" id="validator">
           <div className="page-content-inner">
-            <div className="page-content-title">Validator (PoS )Set up</div>
+            <div className="page-content-title">Validator (PoS) Set up</div>
             <div className="page-content-subtitle" id="validator-general">
               General
             </div>
@@ -2171,6 +2050,173 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
 Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9a is account: Network ID: 71 Secret seed: 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9a Public key (hex): 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Account ID: 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Public key (SS58): d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS SS58 Address: d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS
                     `}
             </pre>
+          </div>
+        </div>
+        <div className="page-content-block" id="troubleshooting">
+          <div className="page-content-inner">
+            <div className="page-content-title">Troubleshooting</div>
+            <div className="page-content-subtitle">
+              The Node has no peers
+            </div>
+            <img
+              className="page-img"
+              src="/images/zero_peers1.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+              The most probable reasons are: 
+            </div>
+            <ul className="page-content-text">
+              <li>
+                The Internet connection issues: settings/firewall, etc.
+              </li>
+              <li>
+                The lack of bootnodes (or low capacity of the bootnodes) on the Network at the moment.{" "}
+                The bootnodes are the nodes with `ipv4` providing the introduction list of peers for newcomers. 
+              </li>
+            </ul>
+            <div className="page-content-text">
+              Solution:
+            </div>
+            <ul className="page-content-text">
+              <li>Check your Internet connection</li>
+              <li>
+                Make sure the external port 30333 is open for incoming connections.{" "}
+                Check your router settings, firewall rules, DDos protection, etc. 
+              </li>
+              <li>Check if the port 30334 is open on your computer/server</li>
+              <li>
+                Check your Internet speed. It should be at least 1 Mb/s.
+              </li>
+              <li>
+                Make sure the bootnodes in the {" "}
+                <Link to="https://github.com/3Dpass/3DP/blob/main/mainnetSpecRaw.json">./3DP/mainnetSpecRaw.json</Link> file{" "} 
+                the node is starting with are available. In any case, feel free to ask for new fresh bootnodes in the community (over the Discord or Telegram) and add then into the list{" "}
+                Learn more about the bootnodes on the project <Link to="https://github.com/3Dpass/3DP/wiki/Setting-up-bootnode">Wiki</Link>.
+              </li>
+            </ul>
+            <div className="page-content-subtitle">
+              Node got stuck at the certain heght or it won't start syncing
+            </div>
+            <div className="page-content-text">
+              It looks like you have some peers connected, however the Node got
+              stuck indicating sync velocity 0 blocks per second and not
+              receiving any blocks.
+            </div>
+            <img
+              className="page-img"
+              src="/images/not_syncing1.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">Solution</div>
+            <ul className="page-content-text">
+              <li>
+                Make sure incoming connections are allowed and external port
+                30333 is open for your node.
+              </li>
+              <li>
+                If you are behind the NAT or router, it's recomended that you
+                set up a static internal IP and forward external port 30333 to
+                your machine
+              </li>
+              <li>
+                Sometimes, it might get tricky to establish the first p2p
+                connection between nodes behind NAT. Try leveraging some
+                different Internet provider or direct connection from data
+                center, etc. That might really help. If you have your computer
+                connected via router, then turn it off for 10-15 min and then
+                try again.
+              </li>
+            </ul>
+            <div className="page-content-subtitle">
+              The node is always falling behind and wouldn't catch
+              up with the chain
+            </div>
+            <div className="page-content-text">
+              That kind of issue might be caused by either you have some
+              troubles with the Internet connection or your hardware doesn't
+              satisfy or lower than standard requirements.
+            </div>
+            <ul className="page-content-text">
+              <li>
+                It's recommended that you upgrade the hardware and the Internet
+                connection speed.
+              </li>
+              <li>
+                You can also download the actual blockchain db and start syncing
+                from that point. Ask the db on Discord chat and replace your
+                folder <i>~/3dp-chain/chains/3dpass/db</i> with the new one.
+              </li>
+            </ul>
+            <div className="page-content-subtitle">
+              Error: Service(Other("Unable to mine: fetch pair from author
+              failed"))
+            </div>
+            <div className="page-content-text">
+              Set up your keys for mining and for Grandpa as it's described in
+              the guidelines. If you are running the Node manually, make sure if
+              there are two keys in the keystore:
+              ~/3dp-chain/chains/3dp/keystore
+            </div>
+            <div className="page-content-subtitle">
+              "Expected prunning mode: constrained"
+            </div>
+            <div className="page-content-text">
+              Remove your blockchain db as it's described <Link to="/testnet">above</Link> and start the
+              node again.
+            </div>
+            <div className="page-content-subtitle">
+              Cannot unlock my old mining rewards
+            </div>
+            <div className="page-content-text">
+              The <Link to="https://polkadot.js.org/apps/#/chainstate">chain state</Link> on the blockchain storage for the Rewards pallet
+              provides there is no locks for the address you have requested,
+              despite the fact that a certain amount of P3D is still locked in.
+              Ex. you can see some funds locked, while observing your account
+              over the <Link to="https://3dpscan.io">block explorer</Link>. The chain state output would look like
+              this:
+            </div>
+            <pre className="main-pre">
+              {`
+[
+[ d1EssjuwKKqe4HRFejUTtT5BXAQVnUEMw2ddKkxC1fsxvt9Sn
+]
+{}
+]
+                    `}
+            </pre>
+            <div className="page-content-text">Solution</div>
+            <div className="page-content-text">
+              1. Check the chain storage for the Rewards pallet to figure it out
+              whether or not the output looks like in the example above.
+            </div>
+            <img
+              className="page-img"
+              src="/images/chainstorage_rewards1.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text" id="cant-unlock">
+              2. If so, proceed the following steps:
+            </div>
+            <ul className="page-content-text">
+              <li>Execute Unlock funds mined via the <Link to="https://wallet.3dpass.org/">web wallet</Link></li>
+              <li>
+                Lock 1 Cramb (0.000000000001 P3D) with the Rewards pallet like
+                this
+              </li>
+            </ul>
+            <img
+              className="page-img"
+              src="/images/lock1cramb1.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+              Make sure you have your funds unlocked.
+            </div>
           </div>
         </div>
       </div>
