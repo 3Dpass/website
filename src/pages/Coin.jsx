@@ -334,7 +334,7 @@ ETH SIGNATURE
               <li>CEX: Tier1 exchange listing (<i>listed on <Link to="https://www.mexc.com/exchange/P3D_USDT">MEXC</Link></i>)</li>
               <li>Foundation: forming up (postponed by the community discussion)</li>
             </ul>
-            <div className="page-content-subtitle" id="2024">2024 (forming up)</div>
+            <div className="page-content-subtitle" id="2024">2024</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Release (stability & security)
             </div>
@@ -352,7 +352,7 @@ ETH SIGNATURE
               <li>PoW component: FPGA resistance feature: <Link to="https://github.com/3Dpass/3DP/releases/tag/v24">Node v24 release</Link></li>
               <li>Validator set (stability & security): additional checks on validators joining (<i> in the process</i>)</li>
               <li>Validator set (stability & security): check if the validator is providing judgements during the session (<i> in the process</i>)</li>
-              <li>Validator set (stability & security): the validator performance test on 3DPRC-2</li>
+              <li>Validator set (stability & security): the validator performance test on 3DPRC-2 (done: covered by <Link to="https://github.com/3Dpass/3DP/releases/tag/v24">Node v24 release</Link>)</li>
               <li>Forkless upgrade: online upgrade public verification procedure: <i>Done</i></li>
             </ul>
             <div className="page-content-text road-map-text mb0">
@@ -361,12 +361,12 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> is being estimated</i>)</li>
               <li>DEX: Cross-chain bridge over to Ethereum (<i> is being researched</i>)</li>
-              <li>Mobile wallet: Embedded DEX UI integration (<i> in the process</i>)</li>
+              <li>Mobile wallet: Embedded DEX UI integration (<i><Link to="https://github.com/3Dpass/threedpass">in the process</Link></i>)</li>
               <li>A stablecoin bridging/issuance (<i> is being researched</i>)</li>
               <li>Web wallet: Asset/NFT marketplace UI implementation</li>
               <li>Administrative: Governance server and UI</li>
               <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
-              <li>Promotion target: Assets issuance and the embedded DEX usage</li>
+              <li>Promotion target: Assets issuance and the embedded DEX usage (<i>the plan is being formed up</i>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
               Q3 - dApps integration/business cases implementation

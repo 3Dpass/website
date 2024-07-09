@@ -981,7 +981,7 @@ cargo build --release
               Linux, Mac OS are all supported.
             </div>
             <div className="page-content-text">
-              First, install{" "}
+              1. Install{" "}
               <Link to="https://docs.docker.com/get-docker/">Docker</Link> and{" "}
               <Link to="https://docs.docker.com/compose/install/">
                 Docker Compose
@@ -989,30 +989,67 @@ cargo build --release
               .
             </div>
             <div className="page-content-text">
-              Open Terminal and clone 3DPass Node. Use this command:
+              2. Open Terminal and clone 3DPass Node. Use this command:
             </div>
             <pre className="main-pre">
-              git clone https://github.com/3Dpass/3DP
+               {`
+git clone https://github.com/3Dpass/3DP.git
+              `}
             </pre>
             <div className="page-content-text">
-              Create your mining address via <Link to="https://wallet.3dpass.org/">Web wallet</Link>. Use <Link to="/mainnet#wallet">these</Link> guidelines if
-              you need help. Keep your seed phrase in a safe place. There is no
-              way to recover if it's lost.
+              3. List the project directory `3DP``:
             </div>
+            <pre className="main-pre">
+               {`
+cd 3DP
+              `}
+            </pre>
             <div className="page-content-text">
-              Run both Node and Miner with the following command:
+              3. Run both Node and Miner with the following command:
             </div>
             <pre className="main-pre">
               {`
 cp docker-compose.override.yml.example docker-compose.override.yml
-// TODO: put your MEMO_SEED and ADDRESS in docker-compose.override.yml
 docker compose build
 docker compose up
                     `}
             </pre>
             <div className="page-content-text">
-              Put your `MEMO_SEED` phrase and miner's `ADDRESS` into
-              `~/3DP/docker-compose.override.yml` like this:
+              4. Create your mining account:
+            </div>
+            <ul className="page-content-text">
+              <li>
+              <i>Option 1:</i> Genetate via the <Link to="https://wallet.3dpass.org/">Web wallet</Link>. How to: <Link to="/mainnet#wallet">guidelines</Link>.
+              </li>
+              <li>
+               <i>Option 2:</i> Run the script with Docker:
+              </li>
+            </ul>
+            <div className="page-content-text">
+              The easiest way to proceed with the <i>Option 2</i> would be to replace the content of the <i>~/3DP/docker/node.sh</i> file with this script and restart the node:
+            </div>
+            <pre className="main-pre">
+               {`
+#!/bin/bash
+./p3d generate-mining-key --base-path /var/chain --chain mainnetSpecRaw.json
+              `}
+            </pre>
+            <div className="page-content-text">
+              The output would be like this:
+            </div>
+            <pre className="main-pre">
+               {`
+Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e 
+Secret seed: fog olympic thrive recall allow page hood damage october curtain degrwe bubble 
+Address: d1GtBxnPwRZVez7VsQ9H7MskPn34H59RddrR9yXqhgDYsqC3t
+              `}
+            </pre>
+            <div className="page-content-text">
+              Once your account is generated, don't forget to replace the content of the <i>~/3DP/docker/node.sh</i> back with the original one!
+            </div>
+            <div className="page-content-text">
+              5. Put your `MEMO_SEED` phrase and miner's `ADDRESS` into the
+              <i> ~/3DP/docker-compose.override.yml.example</i> like this:
             </div>
             <pre className="main-pre">
               {`
@@ -1021,41 +1058,48 @@ version: "3.9"
 services: 
 node:
 environment:
-- MEMO_SEED=[PLACE MEMO SEED HERE]
-- ADDRESS=[PLACE MINER ADDRESS HERE]
+- MEMO_SEED=PLACE MEMO SEED HERE
+- ADDRESS=PLACE MINER ADDRESS HERE
 - THREADS=2
-- INTERVAL=6
+- INTERVAL=1000
                     `}
             </pre>
-            <div className="page-content-text">
+            <ul className="page-content-text">
+              <li>
               `- THREADS=2` - the amount of threads you are about to use
-            </div>
-            <div className="page-content-text">
-              `- INTERVAL=6` – the amount of time in miliseconds between the last
+              </li>
+              <li>
+              `- INTERVAL=1000` – the amount of time in miliseconds between the last
               and the next one objects being sent towards the Node. Dependidng
               on how much threads are you mining with, reduce the interval until
               you reach desired proc load.
+              </li>
+            </ul>
+            <div className="page-content-text">
+              6. Run the Node and Miner.{" "}
+              Check your node on the telemetry <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.{" "}
+              Make sure it is up to date with the network. 
+            </div>
+            <div className="page-content-subtitle">
+              Additional options
             </div>
             <div className="page-content-text">
-              Run the Node again and make sure you can see it on the  <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.
-            </div>
-            <div className="page-content-text">
-              In order to assign a custom name to your Node you need to modify
-              node.sh file located ~/3DP/docker/node.sh. All you have to do is
-              to add the flag --name YourNodeName \ like this:
+              You might as well, customize the Node name in the
+               the <i>~/3DP/docker/node.sh</i> file. All you need to do is
+              to put it the `--name MY_NODE_NAME` like this:
             </div>
             <pre className="main-pre">
               {`
+#!/bin/bash
 ./p3d import-mining-key "$MEMO_SEED" --base-path /var/chain --chain mainnetSpecRaw.json
-./p3d --unsafe-ws-external --unsafe-rpc-external --rpc-cors=all \
---chain mainnetSpecRaw.json --validator \
---base-path /var/chain \
---name YourNodeName \
---name YourNodeName \
+GRANDPA_KEY="$(./p3d key inspect --scheme Ed25519 "$MEMO_SEED" | sed -n 's/.*Secret seed://p')"
+./p3d key insert --base-path /var/chain --chain mainnetSpecRaw.json --scheme Ed25519 --key-type gran --suri $GRANDPA_KEY
+./p3d --chain mainnetSpecRaw.json --unsafe-ws-external --unsafe-rpc-external --rpc-cors=all --no-mdns \
+  --validator --base-path /var/chain --author "$ADDRESS" --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --name MY_NODE_NAME
                     `}
             </pre>
             <div className="page-content-text">
-              In order to remove your blockchain DB and keystore use this
+              In order to purge the blockchain DB and your keys on the keystore use this
               command:
             </div>
             <pre className="main-pre">
@@ -1234,10 +1278,7 @@ bun miner.js --host 127.0.0.1 --port 9933
             />
             <div className="page-content-text">Mainnet API Endpoints</div>
             <ul className="page-content-text">
-              <li>wss://rpc.3dpass.org</li>
-              <li>wss://rpc2.3dpass.org</li>
               <li>wss://rpc.3dpscan.io</li>
-              <li>wss://rpc.caldera.network</li>
               <li>ws://127.0.0.1:9944 - local Node</li>
             </ul>
             <img
@@ -1250,28 +1291,21 @@ bun miner.js --host 127.0.0.1 --port 9933
               How to create new address:
             </div>
             <div className="page-content-text">
-              Open <Link to="https://wallet.3dpass.org/">3DPass wallet page</Link> in your web browser.
+              1. Install the polkadot.js <Link to="https://polkadot.js.org/extension/">web browser extension</Link>.
             </div>
             <div className="page-content-text">
-              Make sure that you are connected to the correct endpoint:
-              wss://rpc.3dpass.org or wss://rpc2.3dpass.org as it's shown above.
-              Use "+" to generate new address. Keep your seed phrase in a safe
+              2. Generate new address for 3dpass - The Ledger of Things network. Keep your seed phrase in a safe
               place. There is no any possible ways to recover if it's lost. You
-              can also import your address from the seed phrase.
+              can also import your address from the seed phrase if you already have one. 
             </div>
             <img
               className="page-img"
-              src="/images/new_account1.png"
+              src="/images/new_account_extension.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-subtitle">
-              Remove your address after it's being used:
-            </div>
             <div className="page-content-text">
-              We recommend that you not to store your addresses in browser
-              constantly. Store your seed phrase in a safe place. You can import
-              the address again whenever you need.
+              3. Open <Link to="https://wallet.3dpass.org/">3DPass wallet</Link> in your web browser and provide polkadot extension with the access for the account to be injected into the wallet.  
             </div>
           </div>
         </div>
@@ -1474,7 +1508,7 @@ bun miner.js --host 127.0.0.1 --port 9933
             <div className="page-content-text">
               Once a new member headed in the validator set, the Session pallet
               takes over its keys. The Session pallet is going to wait until the
-              next session begins (session length = 30 blocks) to put the
+              next session begins (session length = 120 blocks) to put the
               validator in the queue, which is going to last one more session to
               add it into the actual GRANDPA Authority list. This cycle is
               designed to ensure secure rotation in the set, and it always takes
