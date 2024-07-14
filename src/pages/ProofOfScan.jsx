@@ -28,7 +28,7 @@ const ProofOfScan = () => {
                   : "one-page-nav"
               }
             >
-              3DPass p2p Network
+              LoT p2p Network
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -64,14 +64,14 @@ const ProofOfScan = () => {
                   : "one-page-nav"
               }
             >
-              Verification Mechanism
+              The Object Verification 
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#block">
+          <a href="#new-block">
             <div
               className={
-                locationHash.includes("block")
+                locationHash.includes("new")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
@@ -116,15 +116,39 @@ const ProofOfScan = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#fork">
+          <a href="#fork-choice-rule">
             <div
               className={
-                locationHash.includes("fork")
+                locationHash.includes("choice")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
             >
               Fork Choice Rule
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#block-execution">
+            <div
+              className={
+                locationHash.includes("execution")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Block Execution
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#forkless-upgrade">
+            <div
+              className={
+                locationHash.includes("upgrade")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Forkless Upgrade
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -170,16 +194,16 @@ const ProofOfScan = () => {
         <div className="page-content-block first-page-block" id="p2p">
           <div className="page-content-inner">
             <div className="page-content-title">
-              3DPass Blockchain p2p Network
+              The Ledger of Things p2p Network
             </div>
             <div className="page-content-text">
-              3DPass decentralized network is available to provide the next
-              level of quality to the entire blockchain market, so that anyone
-              could obtain proof that there is only one original object that is
-              published as a digital asset. At a minimum this will make it
-              transparent when dealing with copies. It is called the network of
-              unique things, which can be utilized within smart-contracts and
-              dApps. The network nodes will prevent the duplication of assets.
+            The Ledger of Things <Link to="https://telemetry.3dpscan.i">decentralized network</Link> is to provide the next level of quality {" "}
+            to the entire blockchain market, so that anyone could obtain a proof of {" "}
+            authenticity on every object published on the blockchian and transformed into its digital asset. {" "}
+            At minimum, this will make it transparent when dealing with copies. {" "}
+            It is called The Ledger of Things, which can be utilized as a platform for smart-contracts {" "}
+            and dApps. The network nodes will prevent the duplication of assets in accordance to {" "}
+             <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard.
             </div>
             <img
               className="page-img"
@@ -188,14 +212,14 @@ const ProofOfScan = () => {
               alt="img"
             />
             <div className="page-content-text">
-              It is essential to not only have the opportunity of issuing
-              non-fungible tokens but to also reliably be sure that the digital
-              assets are corresponding with the physical asset. Irrespective to
+              It is essential to not only have the capability of issuing
+              share tokens but also be sure that the digital
+              assets are corresponding with the physical ones. Irrespective to
               whether it pertains to the physical object or the digital 3D model,
               due to each one having a set of distinctive properties that can be
               recognized. In order to solve this issue, computing power is
               required within the network for 3D object processing as well as
-              spam protection. <Link to="https://ipfs.io/">IPFS</Link> is used as a decentralized storage for 3D
+              spam protection. <Link to="https://ipfs.io/">IPFS</Link> is used as a decentralized storage for the user
               objects. Integration is provided by the <Link to="https://substrate.io/">Substrate</Link> framework.
             </div>
           </div>
@@ -328,17 +352,16 @@ const ProofOfScan = () => {
         </div>
         <div className="page-content-block" id="verification">
           <div className="page-content-inner">
-            <div className="page-content-title">Verification Mechanism</div>
+            <div className="page-content-title">The Object Verification Mechanism</div>
             <div className="page-content-text">
-              3Dpass network based on blockchain and represents one layer of
+              The Ledger of Things network represents two layers of
               equal nodes leveraging <Link to="/grid2d">Grid2d</Link> recognition algorithm, mentioned
-              above. The very first purpose of the network is to check up the
-              authenticity and uniqueness of objects submitted by users.
+              above. The very first purpose of the network is to get the objets identified when user submits and make sure of its
+              authenticity and uniqueness afterwards.
             </div>
             <div className="page-content-text">
-              For example, someone has just submitted a 3D object, hoping to
-              construct a new block. Technically, it’s required three things to
-              be added into the queue, such as:
+              For example, had we had someone submitted a 3D object in hope to
+              construct a new block the following aspects would have been required as an input into the queue, such as:
             </div>
             <ul className="page-content-text">
               <li>
@@ -348,18 +371,21 @@ const ProofOfScan = () => {
               <Link to="/features#3drecognition-hash-id">Hash ID</Link> of the object, produced by <Link to="/grid2d">Grid2d</Link> recognition algorithm
               </li>
               <li>
-                An additional security token (rotation bytes) either produced by{" "}
-                <Link to="/grid2d">Grid2d</Link> which allows to verify the certain algorithm was really
-                used. This represents a hash taken from randomly chosen
-                intermediate calculation result of the object processing. So,
-                anyone can check it up and verify while the processing of the
-                object is going on.
+              An additional security token (rotation_bytes), either, being accepted by <Link to="/grid2d">Grid2d</Link>. {" "}
+              The token represents 8 bytes, by which an angle of rotation <i>(μ = x)</i> of the object {" "}
+              is defined before getting crossed.
               </li>
             </ul>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/x_rotation.png"
+              alt="img"
+            />
             <div className="page-content-text">
               Now, every Node of the network, being synchronized, can import the
-              object and run its 3D shape recognition processing. In order to
-              accept or decline the Node checks up the following:
+              object and run its 3D shape recognition processing. In order to either
+              accept or reject proposal the Node will checks on the following:
             </div>
             <ul className="page-content-text">
               <li>
@@ -374,15 +400,15 @@ const ProofOfScan = () => {
                 3D models (duplicates), which must be rejected;
               </li>
               <li>
-                Whether or not the security tokens matched. If matched, that
-                means the actual recognition algorithm was really leveraged by
-                user who submitted the object. It makes us sure that the <Link to="/features#3drecognition-hash-id">Hash ID</Link>{" "}
-                wasn’t copied and pasted from somewhere or just accidentally
-                generated.
+                Whether or not the security tokens matched. If matched, that means {" "}
+                the actual recognition algorithm was properly leveraged by the user {" "}
+                who submitted the object. It provides assurance that the {" "}
+                <Link to="/features#3drecognition-hash-id">Hash IDs</Link> was {" "}
+                not copied and pasted from somewhere or just accidentally generated.
               </li>
             </ul>
             <div className="page-content-text">
-              The object which passed the verification check will be accepted.
+              The object, which passed the verification check will be accepted.
             </div>
             <img
               className="page-img"
@@ -390,26 +416,26 @@ const ProofOfScan = () => {
               src="/images/3dpass_network2.png"
               alt="img"
             />
-            <div className="page-content-text">
-              P - Publisher (node which has submitted the object) V - Validators
-              (nodes which have verified the object authenticity)
-            </div>
           </div>
         </div>
-        <div className="page-content-block" id="block">
+        <div className="page-content-block" id="new-block">
           <div className="page-content-inner">
             <div className="page-content-title">New Block</div>
             <div className="page-content-text">
               Each new block is going to be built on top of the parent block of
-              the best chain (longest chain rule is actually applied). It is
-              also sealed to the parent block hash with <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link> cryptographic
-              hash-function.
+              the best chain (longest chain rule is currently applied). It is
+              sealed to the parent block hash with <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link> cryptographic
+              hash-function, resulting as <i>double_Hash</i> difficulty will be applied to.
             </div>
             <div className="page-content-text">
               Block header consists of the following data:
             </div>
             <div className="page-content-text">
-              3D model of the object in the content of <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</Link> file format (100kb
+              1. <i>Pre-hash</i> – main block identifier, which represents SHA256 hash sealed to the parent
+              block hash with the cryptographic hash function "090ae6b23e2192fa4c2fb40cddad6e8537e2b437c49ff9fb227cf32c4e4085f".
+            </div>
+            <div className="page-content-text">
+              2. <i>Nonce</i> - 3D model of the object in the content of <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</Link> file format (100kb
               limit)
             </div>
             <pre className="main-pre">
@@ -435,8 +461,7 @@ v 17.404690 -73.217438 28.568790...
 `}
             </pre>
             <div className="page-content-text">
-              The object's <Link to="/features#3drecognition-hash-id">Hash ID</Link> (Top10 hashes list coming from <Link to="/grid2d">Grid2d</Link> output
-              <Link to="/pass3d">result, -g 8 -s 66</Link>)
+              3. <i>Grid2d (μ = 0) hash</i> – 3D model Hash ID created with no rotation (μ = 0) {" "}
             </div>
             <pre className="main-pre">
               {`
@@ -455,80 +480,204 @@ Select top 10 hashes
 `}
             </pre>
             <div className="page-content-text">
-              Block hash - the main block identifier. It represents SHA256 hash
-              sealed to the parent block hash with the cryptographic hash
-              function. And besides, the very top hash of the Top10 is used as
-              an additional nonce. Let's say, if the parent block hash is
-              "090ae6b23e2192fa4c2fb40cddad6e8537e2b437c49ff9fb227cf32c4e4085fc"
-              and the very top hash is
-              "72592f8f6ea67c60ca7d9c7683256c3636a30be464952eb82996bff52ca4415d",
-              then the new block hash would be the hash taken from the seed like
-              this:
-            </div>
-            <pre className="main-pre">
-              {`
-"090ae6b23e2192fa4c2fb40cddad6e8537e2b437c49ff9fb227cf32c4e4085fc72592f8f6ea67c60ca7d9c7683256c3636a30be464952eb82996bff52ca4415d"
-`}
-            </pre>
-            <div className="page-content-text">
-              Difficulty number the block had been proposed with (e.x. 10)
+              4. <i>RandomX (Grid2d μ = x) hash</i> – 3D model Hash ID created with some certain 
+              angle of rotation (μ = x) and then processed by the RandomX hashing algorithm 
+              on top. The result is presented as a <i>blake2b</i> hash
             </div>
             <div className="page-content-text">
-              Considering the network needs the computing power for objects
-              processing, we came up with the rules applied to the object shape
-              possible to get rewarded for a new block with. The rules
-              principals, actually, quite similar to bitcoin, however, P3D
-              mining has objects recognition algorithm being involved.
+              5. <i>Time hash</i> – representation of the system time new block was created at
+            </div>
+            <div className="page-content-text">
+              6. <i>Proof of Context hash</i> – the output of the <i>hist_steps</i> extension (see more Proof of Work task)
+            </div>
+            <div className="page-content-text">
+              7. <i>Proof of Scan hash</i> – the user object verification proof in accordance with 3DPRC-2 tokenization standard
+            </div>
+            <div className="page-content-text">
+              8. GRANDPA** finality digest
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/block_structure.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+            Due to the fact that computing power is required for the object processing,{" "}
+            this will require a set of rules and rewards about new blocks. The rules in {" "}
+            principal are quite similar to bitcoin, however, P3D mining has an object {" "}
+            recognition algorithm involved.
             </div>
             <div className="page-content-text" id="nbrules">The rules are presented as follows:</div>
             <ul className="page-content-text">
               <li>New block target time: 1 block per 60 seconds</li>
               <li>
-                By default, each 243000 blocks there is a difficulty step up
-                involving “+0” requirement to be added at the front of the new
-                block hash. So, in order to create a new block after “climbing”
-                over the step and get rewarded, someone has to pick up a unique
-                3D object, the new block hash would include one more zero at the
-                front like in the examples below:
+              There is a dynamic difficulty adjustment rule, which serves to maintain the network {" "}
+              velocity around the block target time (1 block per 60 seconds) in average. Because {" "}
+              of the network hashrate volatility, the mining issue has to be made dynamic with {" "}
+              respect to difficulty by making it harder or easier to solve in order to ensure {" "}
+              that a certain amount of blocks are produced for the aggregation period (1 hour).
               </li>
               <li>
-                Block hash example, from genesis block to the block number
-                243000:
-                “090ae6b23e2192fa4c2fb40cddad6e8537e2b437c49ff9fb227cf32c4e4085fc”
+              Grid2d algorithm is part of Runtime logic, which is upgradable online by Open {" "}
+              Governance call (see more BLOCK EXECUTION and FORK-LESS UPGRADE)
               </li>
               <li>
-                from the block number 243001 to 486000:
-                “008cfda2b4811bf2ff1fe3ab92b38e64fc134d98c3dc8764eb8641a477b77a47”
-              </li>
-              <li>
-                from the block number 3402001 to 3645000:
-                “00000000000000f2ff1fe3abr6bt8e64fc134d98c3dc8764eb8641aff7b7sa4f”,
-                etc.
-              </li>
-              <li>
-                There is a difficulty adjustment dynamic rule on top, which
-                serves to maintain the network velosity around the block target
-                time (1 block per 60 seconds) in average. Because of the network
-                hashrate volatility, we have to be able to make the mining issue
-                harder and easier to solve in order to ensure the certain amount
-                of blocks to be produced for the aggregation period (1 hour).
+              Difficulty adjustment mechanism is part of the Runtime logic, which is upgradable 
+              online by Open Governance call (see more BLOCK EXECUTION and FORK-LESS UPGRADE). 
+              Current implementation of the Difficulty module is <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/difficulty"></Link>.
               </li>
             </ul>
             <div className="page-content-text">
-              Note, neither of the rules above touches the objects submitted
-              in the reason other, than getting mining rewards. So, miners have to
-              strict the rules but the other users don’t. They might submit any
-              objects they want, of course, being charged P3D for the
-              authenticity validation service provided by miners while they're
-              constructing a new block. So, they have all the authority at the
-              moment to validate either the object just mined and the users'
-              commercial ones. (See more The User Object Authentication Protocol)
+            Note, that neither of the rules above touches the user objects verification. {" "}
+            So, miners have to obey the rules but the other users do not. They might submit {" "}
+            any objects they want, of course, being charged with the verification fee in P3D {" "}
+            in accordance to 3DPRC- 2** tokenization standard rules.
             </div>
             <div className="page-content-text">
-              Once new block is produced, it is awaiting to be chosen as a
-              parent block for the next new block. The block reaches maturity
-              after 100 confirmations (100 blocks built on top). The block gets
-              finalized according to <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA</Link> protocol.
+              Once new block is produced, it is awaiting to be chosen as a {" "}
+              parent block for the next new block. The block reaches maturity {" "}
+              after 100 confirmations (100 blocks built on top). The block gets {" "}
+              finalized in accordancde to {" "}
+              <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA</Link> protocol.
+            </div>
+            <div className="page-content-subtitle">
+              PoW task: 1 Node = 1 Vote, ASIC-resistant
+            </div>
+            <div className="page-content-text">
+            This advanced version of PoW component is equipped with some unique features, especially designed to facilitate on {" "}
+            distributed mining and to ensure its resistance against ASIC/FPGA, such as:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Difficulty for the reverse method "illegal way" of calculation (x) is releated to {" "}
+               Difficulty for the straightforward method "legit way" (m) as (x = m^n). That will protect <i>nonce</i> {" "}
+               from being recovered out of the <i>pre_hash</i> derectly, which would let the block author skip Grid2d {" "}
+               recognition in the mining loop. Having this shortcut prohibited will ensure the user object to be handled {" "}
+               by the block author, once submitted.
+              </li>
+              <li>
+               Grid2d output is getting processed by the RandomX hashing function {" "}
+               to equalize the mining velocity of CPU and GPU to one another
+              </li>
+              <li>
+               Leveraging full blockchain db is required, because of the “proof of context” {" "}
+               extension ensuring the dynamic usage of memory in the mining loop, which helps {" "}
+               3DPass resist against FPGA devices sensitive to memory load speed.
+              </li>
+            </ul>
+            <div className="page-content-subtitle">
+              PoW task TO DO:
+            </div>
+            <div className="page-content-text">
+            1. In order to prove 3D object exists at the beginning of the mining loop the bock author 
+            first must get 3D object scanned with no rotation angle <i>(μ = 0)</i> resulting as Grid2d {" "}
+            output 1 (top 10 hashes).
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/no_rotation.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+            2. That is ensured by the <i>rotation_bytes</i> (8 bytes, by which the target rotation angle is defined) {" "}
+            calculated out of a combination of both the <i>pre_hash</i> and the topest Grid2d zero-angled hash {" "} 
+            <i>(μ = 0)</i> processed by the RandomX hashing. So that any modification made on either of them {" "} 
+            will inevitably impact on the rest. That is how the process of getting Grid2d output RandomXed would look like:
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/grid2d_randomXed.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+             3. It wasn’t until having the object scanned with zero angle the target rotation angle <i>(μ = x)</i> could be calculated.{" "} 
+             The same as usual the block author would be challenged with picking up some 3D object shape and get it scanned{" "} 
+             with the target rotation angle <i>(μ = x)</i> until the pre_hash meets the current difficulty number.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/x_rotation.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+            The entire cycle of the object processing would look like this:
+            </div>
+            <div className="page-content-text">
+            Random 3D model in obj → Grid2d (3D model μ = 0) output → Random X (Grid2d μ = 0) blake2b hash → rotation_bytes x = 4 bytes out of pre_hash + 4 bytes out of RandomX (Grid2d μ = 0) blake2b hash → Grid2d (3D model μ = xo) output → <strong>Random X (Grid2d μ = x) blake2b hash</strong> 
+            </div>
+            <div className="page-content-text">
+              4. However, there will be an additional “proof of context” task to solve having {" "} 
+              the access to the full blockchain db is required for. Depending on the pre_hash {" "} 
+              calculated, there is going to be a directed sequence of N pseudo randomly chosen {" "} 
+              blocks to pick up (ex. <i>104786 → 476673 → 219964 → 891987 → 12897</i> ) and prove its {" "} 
+              availability for the mining loop. Every mining loop will require another one {" "} 
+              different sequence to prove.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/proof_of_context.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle">
+             To be ruled out on block import
+            </div>
+            <div className="page-content-text">
+            There is a rule on new block import, which requires: <i>Grid2d output 1 ≠ Grid2d output 2</i> . {" "}
+            Therefore, the object shape must be complex enough to entirely avoid the Grid2d {" "}
+            recognition error that is most likely to face with, especially, when it comes to {" "}
+            scanning some regular- shaped objects (ex. a sphere).
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/collision_to_avoid.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              The object shape consistency check:
+            </div>
+            <div className="page-content-text">
+              In order to ensure 3D objects submitted as nonce meet the Grid2d recognition algorithm input {" "}
+              requirements, there is a bunch of checks on the object shape being applied on the block import {" "}
+              by both the Runtime and Native code, including but not limited to:
+          </div>
+          <ul className="page-content-text">
+            <li>Vertex (..) points to an invalid halfedge</li>
+            <li>Halfedge (..) pointed to by vertex (..) does not start in that vertex, but instead in (..)</li>
+            <li>Vertex (..) does not point to a halfedge</li>
+            <li>Halfedge (..) points to an invalid twin halfedge (..)</li>
+            <li>Halfedge twin pointed to by halfedge (..) does not point back to halfedge</li>
+            <li>Invalid orientation: The halfedge (..) and its twin halfedge (..) points to the same vertex</li>
+            <li>Halfedge (..) does not point to a twin halfedge</li>
+            <li>Halfedge (..) points to an invalid vertex (..)</li>
+            <li>Halfedge (..) does not point to a vertex</li>
+            <li>Halfedge (..) points to an invalid face (..)</li>
+            <li>Halfedge (..) points to a face but not a next halfedge</li>
+            <li>Halfedge (..) points to an invalid next halfedge (..)</li>
+            <li>Halfedge (..) points to a next halfedge but not a face</li>
+            <li>Halfedge next pointed to by halfedge (..) does not point back to halfedge</li>
+            <li>Length of edge (..) is too small</li>
+            <li>Face (..) points to an invalid halfedge (..)</li>
+            <li>Halfedge pointed to by face (..) does not point to back to face</li>
+            <li>Face (..) does not point to a halfedge</li>
+            <li>Vertex (..) and Vertex (..) is connected one way, but not the other way</li>
+            <li>Vertex (..) and Vertex (..) is connected by multiple edges</li>
+            <li>Volume is lower than 0.1 * bound_volume (see the figure down below)</li>
+          </ul>
+          <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/bound_volume.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              These checks will ensure 3D object’s surface is simply connected and has sufficient {" "}
+              volume to impact on the center of inertia of mass.
             </div>
           </div>
         </div>
@@ -665,7 +814,7 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             />
           </div>
         </div>
-        <div className="page-content-block" id="fork">
+        <div className="page-content-block" id="fork-choice-rule">
           <div className="page-content-inner">
             <div className="page-content-title">Fork Choice Rule</div>
             <div className="page-content-text">
@@ -687,6 +836,96 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             />
           </div>
         </div>
+        <div className="page-content-block" id="block-execution">
+          <div className="page-content-inner">
+            <div className="page-content-title">Block Execution</div>
+            <div className="page-content-text">
+            3DPass Node logic can be considered as kind of a two-piece design. {" "}
+            The first one is the Native RUST code and the second one is a WASM (WebAssembly) {" "}
+            based Runtime, which is upgradable online. Blocks are being imported through the {" "}
+            Native component and then executed by the Runtime logic.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/two-piece_node.png"
+              alt="img"
+            />
+          </div>
+        </div>
+        <div className="page-content-block" id="forkless-upgrade">
+          <div className="page-content-inner">
+            <div className="page-content-title">Forkless online Upgrade</div>
+            <div className="page-content-text">
+            By means of using WASM in Substrate (the framework powering 3DPass) the chain is given {" "}
+            the ability to upgrade its runtime logic without hard forking. Hard forking is a standard {" "}
+            method of upgrading a blockchain that is slow, inefficient, and error prone due to the {" "}
+            levels of offline coordination required, and thus, the propensity to bundle many upgrades {" "}
+            into one large-scale event. By deploying WASM on-chain and having nodes auto-enact the {" "}
+            new logic at a certain block height, upgrades can be small, isolated, and very specific.
+            </div>
+            <div className="page-content-text">
+            As a result of storing the Runtime as part of the state, the Runtime code itself becomes {" "}
+            state sensitive and calls to Runtime can change the Runtime code itself. Therefore the {" "}
+            3DPass Host needs to always make sure it provides the Runtime corresponding to the state {" "}
+            in which the entry point has been called. The Runtime upgrades can be deployed in accordance {" "}
+            with the <Link to="/community#governance">Open Governance</Link> procedures, such as Referendums, Technical Committee vote and Council vote.
+            </div>
+            <div className="page-content-subtitle">
+            Wasm based upgradable modules operating
+            </div>
+            <div className="page-content-text">
+            Here is the list of functional modules operating on mainnet, which might be leveraged for the community {" "}
+            dApps creation as well as for internal needs:
+            </div>
+            <ul className="page-content-text">
+              <li>Authorship module – traces block authors</li>
+              <li>Difficulty module – manages difficulty adjustments</li>
+              <li>Rewards module – mining PoW rewards implementation</li>
+              <li>MiningPool module – decentralized mining pool</li>
+              <li>Validator set module – manages PoA GRANDPA** validators rewards and logic</li>
+              <li>Session module – ensures the rotation of the PoA GRANDPA** Validators</li>
+              <li>Grandpa module – maps GRANDPA** off-chain voter with the Runtime</li>
+              <li>Offenses module – handles GRANDPA** equivocation reports (hard fork attempts)</li>
+              <li>ImOnline module – ensures that GRANDPA** validators have been online during the
+              session</li>
+              <li>PoScan module – handles the user objects verification in 3DPRC-2** standard</li>
+              <li>PoscanAssets module – allows for issuing of either 3DPRC-2** the object share
+              tokens or regular fungible assets</li>
+              <li>AssetsConversion module – on-chain DEX, decentralized exchange based on
+              Uniswap v2 rules</li>
+              <li>PoscanPoolAssets module – DEX Liquidity Pools (LP) tokens management</li>
+              <li>AtomicSwap module – allows to atomically swap any asset on-chain/cross-chain for
+              P3D</li>
+              <li>PoscanAtomicSwap module – allows to atomically swap any asset on-chain/cross-
+              chain for any on-chain asset on The Ledger of Things, except for P3D</li>
+              <li>Council module – manages the Council routine and the election of its members</li>
+              <li>Technical Committee module – manages the Technical Committee routine</li>
+              <li>Democracy module – handles referendums proposals made by Council</li>
+              <li>Referenda module – handles referendums proposals made by community members</li>
+              <li>ConvictionVoting module – ensures the network majority vote</li>
+              <li>phragmenElection module – ensures the Council vote</li>
+              <li>Bounties module – manages Treasury spending proposals</li>
+              <li>ChildBounties module – allows to split a bounty into several child-bounties and track
+              them separatelly</li>
+              <li>Treasury module – manages funding of spending proposals</li>
+              <li>White list module – allows to whitelist any call to be available for a referendum</li>
+              <li>Smart Contracts module – smart contracts based on ink language</li>
+              <li>IPFS file storage – decentralized file storage</li>
+              <li>Timestamp module – allows to timestamp on any on-chain data</li>
+              <li>System module – ensures the block size control, etc</li>
+              <li>Transaction storage module – transaction pool</li>
+              <li>MultiSig module – allows for leveraging multi-signature accounts</li>
+              <li>Transaction payment module – manages transaction fee</li>
+              <li>Vesting module – allows for vested transfers to operate</li>
+              <li>Substrate module – system substrate framework module</li>
+              <li>Scored pool module – allows to create a group of members elected</li>
+              <li>Scheduler module – allows to schedule any system call in the future</li>
+              <li>Preimage module – allows to create and manage system calls</li>
+              <li>Identity module – allows to assign on-chain identity to any account</li>
+            </ul>
+          </div>
+        </div>
         <div className="page-content-block" id="granpda">
           <div className="page-content-inner">
             <div className="page-content-title">Finality Gadget GRANDPA</div>
@@ -698,62 +937,19 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               description of the protocol.
             </div>
             <div className="page-content-text">
-              The block Author produced a correct block can take the authority to
-              vote for the best chain finality, as long as they have put 100 000
-              - 400 000 P3D in a collateral. Thus, Grandpa Authority set
-              consists of the most reliable block authors proved to produce some blocks
-              in the 100 - 8000 most recent blocks looking back, and 2/3 votes
-              of which is needed to make the final decision. After the voting is
-              complete there would be no chance to reselect the best chain.
+              There is a set of the most reliable nodes on the network called Validator set, which members {" "}
+              are allowed to take the authority to vote for Best chain finality, as long as they meet the {" "}
+              <Link to="/mainnet#validator-requirements">SLA conditions</Link>.
             </div>
             <div className="page-content-text">
-              There is a session of 30 blocks length, within which the current
+              There is a session of 120 blocks length, within which the current
               validator set is always stable. It can not be changed with new
               in/outcomers until the session is expired. If any validator left
               the set, in order to come back the selection
               threshold is required to pass again.
             </div>
-            <div className="page-content-subtitle">
-              Selection threshold:
-            </div>
-            <ul className="page-content-text">
-              <li>
-                100 000 P3D locked + 1 block mined in 100 recent blocks back
-              </li>
-              <li>
-                200 000 P3D locked + 1 block mined in 2000 recent blocks back
-              </li>
-              <li>
-                300 000 P3D locked + 1 block mined in 4000 recent blocks back
-              </li>
-              <li>
-                400 000 P3D locked + 1 block mined in 8000 recent blocks back
-              </li>
-            </ul>
-            <div className="page-content-subtitle">
-              Penalties:
-            </div>
             <div className="page-content-text">
-              There is a list of punishments for Validators that behave against
-              the GRANDPA protocol rules:
-            </div>
-            <ul className="page-content-text">
-              <li>
-                PreVote Equivocation (voting for two different chains
-                simultaneously): 40 000 P3D and get excluded from the validator
-                set
-              </li>
-              <li>
-                Not being online/available: 20 000 P3D and get excluded from the
-                validator set
-              </li>
-              <li>
-                Not being able to vote for any reason (e.x. Firewall): 20 000
-                P3D and get excluded from the validator set
-              </li>
-            </ul>
-            <div className="page-content-text">
-              Given the fact, that GRANDPA gadget in 3DPass is applied on top of
+              Given the fact that GRANDPA gadget in 3DPass is applied on top of
               PoScan chain already built by the time and providing itself
               conventional probabilistic finality, the finalization stall
               situation is a serious incident but might not be fatal. It does
