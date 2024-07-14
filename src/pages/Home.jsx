@@ -84,8 +84,8 @@ const Home = () => {
         <div className="home-left-title">The Ledger Of Things</div>
         <div className="home-left-description">
           Layer 1 blockchain, Proof of Scan is a revolutionary protocol preventing digital assets
-          from being copied, recognition-based algorithm Grid2d, deterministic blockchain finality, 
-          3Dpass Coin: mineable, 3DPRC-2 tokenization standard, Decentralized governance, Forkless upgrade, 
+          from being copied (<i> PoW ASIC-resistant and CPU oriented, object recognition-based + PoS</i>), Grid2d recognition algorithm, deterministic blockchain finality, 
+          3Dpass Coin: mineable, 3DPRC-2 tokenization standard, Decentralized  Open Governance, Forkless upgrade, 
           On-chain Identity, Smart Contracts. 
         </div>
         <div className="home-items-content">

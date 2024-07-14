@@ -748,24 +748,21 @@ ETH SIGNATURE
                 budget was turned into the public <Link to="/coin#contribution-budget">contribution budget</Link> controlled by the governance.
               </div>
               <div className="page-content-subtitle" id="distribution-rules">
-                P3D mining rules
+                P3D mining rules (PoW ASIC-resistant, CPU oriented protocol)
               </div>
               <div className="page-content-text">
                 According to the <Link to="/coin#white-papper">White Paper</Link> there are some mining rules every
                 miner have to follow in order to get rewarded by the network for
                 each new block production.
               </div>
-              <div className="page-content-text">
-                Learn about <Link to="/proof-of-scan#nbrules">new block creation rules</Link>. Enjoy mining on the
-                mainnet!
-              </div>
               <div className="page-content-subtitle" id="distribution-rewards">
                 Mining rewards and emission
               </div>
               <div className="page-content-text">
-                Miners put efforts to find a 3D object shape corresponding the
-                rules govern whether or not a new block would be rewarded by the
-                network. These are two rules of rewards calculation:
+                Miners are puting their efforts to pick up some specific 3D object shape corresponding the
+                rules govern whether or not new block will be rewarded by the
+                network. Mining share is 50% of total block rewards (the rest 50% is being distributed among the Validators PoS)
+                P3D emission curve rules are:
               </div>
               <ul className="page-content-text">
                 <li>
@@ -793,17 +790,16 @@ ETH SIGNATURE
                 className="page-content-subtitle"
                 id="distribution-validation"
               >
-                Validation service fee
+                Validation service fee (PoS)
               </div>
               <div className="page-content-text">
-                Validators represent the most reliable set of the network
-                authoritiess eligible to vote for blocks finalizatiion. There is
-                a rewards split 30/70 between a block author (miner) and the
-                current set of validators. Let's say, 500 P3D is the mining
-                reward, 150 P3D of which is to be devided among the current
-                validators in equal. Not only collateral (100 000 P3D - 400 000 P3D) is required to become Validator, but also at least one
-                proved block authourship within a certain time frame in the recent past. {" "}
-                <Link to="/mainnet#validator">How to become Validator</Link>
+                Validators represent the most reliable set of the network {" "}
+                authoritiess eligible to vote for Best chain finalizatiion as well {" "}
+                as to participate in the user object verification process specified in  {" "}
+                <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard. {" "}
+                Current validator set gets rewarded by the network 50% of total block rewards (the rest 50% goes to the block author). {" "}
+                The user objects processing rewards: 50% of the object verification fee (paid by user). {" "}
+                Rewards are getting distributed in equal among the current validator set members.  <Link to="/mainnet#validator">How to become Validator</Link>
               </div>
               <div
                 className="page-content-subtitle"

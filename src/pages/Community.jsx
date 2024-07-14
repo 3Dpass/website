@@ -42,7 +42,7 @@ const Community = () => {
                   : "one-page-nav"
               }
             >
-              Our Team
+              Representatives
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -54,7 +54,7 @@ const Community = () => {
                   : "one-page-nav"
               }
             >
-              Governance
+              Open Governance
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -170,11 +170,11 @@ const Community = () => {
         </div>
         <div className="page-content-block" id="our-team">
           <div className="page-content-inner">
-            <div className="page-content-title">Our Team</div>
+            <div className="page-content-title">Representatives</div>
             <UserCard
               name="PaulS"
-              title="Inventor and founder"
-              description="Several exits, 16+ years experience"
+              title="Founder"
+              description="16+ years experience"
               image="/images/anon.jpg"
             />
             <UserCard

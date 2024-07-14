@@ -333,15 +333,12 @@ const Mainnet = () => {
           <div className="page-content-inner">
             <div className="page-content-title">Requirements</div>
             <div className="page-content-text">
-              The most common way for a beginner to run a miner and validator is
-              to leverage a cloud server running Linux. You may choose whatever
-              VPS provider that your prefer, and whatever operating system you
-              are comfortable with. The transactions weights in PoScan were
-              benchmarked on standard hardware. It is recommended that miners
-              and validators run at least the standard hardware in order to
-              ensure they are able to process all blocks in time. The following
-              are not minimum requirements but if you decide to run with less
-              than this beware that you might have performance issue.
+              One of the most common ways for a beginner to get started with a simple Node is
+              to leverage a cloud server running Linux. The transaction weights in PoScan were
+              benchmarked on standard hardware. It is recommended that Node holders stick to at least 
+              the standard in order to ensure the Node capability of processing new blocks on time (<i>block target time = 60 sec</i>). 
+              The following are not minimum requirements, however downgrading hardware below the standard 
+              might lead to some issues with the Node performance.
             </div>
             <div className="page-content-subtitle">Standard Hardware</div>
             <ul className="page-content-text">
@@ -355,11 +352,10 @@ const Mainnet = () => {
               <li>Memory - 64GB.</li>
             </ul>
             <div className="page-content-text">
-              The specs posted above are by no means the minimum specs that you
-              could use when running a validator, however you should be aware
+              <i>Important!</i> The specs posted above are by no means the minimum specs that you
+              could use when running a  simple Node, however you should be aware
               that if you are using less you may ne​ed to toggle some extra
-              optimizations in order to be equal to other validators that are
-              running the standard.
+              optimizations in order to catch up with the chain.
             </div>
           </div>
         </div>
@@ -1088,7 +1084,7 @@ environment:
             <div className="page-content-text">
               7. Run the Node and Miner.{" "}
               Check your node on the telemetry <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.{" "}
-              Make sure it is up to date with the network.
+              
               </div>
               <div className="page-content-text">
               <i>Info!</i> Both of your keys Mining key and GRANDPA key will be generated automatically out of the `MEMO SEED` phrase{" "}
@@ -1105,6 +1101,27 @@ docker compose up
               alt="img"
               style={{ marginBottom: "20px" }}
             />
+            <div className="page-content-text">
+              8. Wait until the node gets synced. Make sure it is up to date with the network. {" "}
+              It must be <i>"on idle"</i> for the mining process to get going.
+            </div>
+            <img
+              className="page-img"
+              src="/images/docker_node_on_idle.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+             8.1. There is an option to speed up syncing process by leveraging the blockchian {" "}
+             `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshots</Link> provided by {" "}
+             the community members for newcomers:
+            </div>
+            <ul className="page-content-text">
+              <li>The blockchain db location: <i>./3DP/data/chain/chains/3dpass/db</i></li>
+              <li>Download and unpack the latest `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link></li>
+              <li>Replace the existing `db` folder with the one you just downloaded</li>
+              <li>Restart the node and miner</li>
+            </ul>
             <div className="page-content-subtitle">
               Additional options
             </div>
@@ -1133,15 +1150,6 @@ cd 3DP
 docker compose rm -f
                     `}
             </pre>
-            <div className="page-content-text">
-             There is the blockchian `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshots</Link> provided by the community members for newcomers to speed up syncing:
-            </div>
-            <ul className="page-content-text">
-              <li>The blockchain db location: <i>./3DP/data/chain/chains/3dpass/db</i></li>
-              <li>Download and unpack the latest `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link></li>
-              <li>Replace the existing `db` folder with the one downloaded</li>
-              <li>Restart the node and miner</li>
-            </ul>
           </div>
         </div>
         <div className="page-content-block" id="linux-mac">
@@ -1248,13 +1256,30 @@ ls ~/3dp-chain/chains/3dpass/keystore
               (`--threads 2` means, you are going to leverage 2 threads for mining)
             </div>
             <div className="page-content-text">
-              You can also use the blockchain `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link> to start off with (the snapshots are provided by the community members).
-              In order to leverage the snapshot just unpack it and put the `db` into the <i>./3dp-chain/chains/3dpass/db</i>. Then start your node. 
-            </div>
-            <div className="page-content-text">
               Make sure you have the external port <i>`30333`</i> open for incoming
               connections and forwarded to your server's local LAN IP. Check your Node on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
+            <div className="page-content-text">
+              8. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
+              It must be <i>"on idle"</i> for the mining process to start.
+            </div>
+            <img
+              className="page-img"
+              src="/images/node_on_idle.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+             8.1. There is an option to speed up syncing process by leveraging the blockchian {" "}
+             `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshots</Link> provided by {" "}
+             the community members for newcomers:
+            </div>
+            <ul className="page-content-text">
+              <li>The blockchain db location: <i>~/3dp-chain/chains/3dpass/db</i></li>
+              <li>Download and unpack the latest `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link></li>
+              <li>Replace the existing `db` folder with the one you just downloaded</li>
+              <li>Restart the Node</li>
+            </ul>
             <div className="page-content-text">
               In order to purge your blockchain DB use this command:
             </div>
@@ -1277,7 +1302,7 @@ cd 3DP
 bun install
                     `}
             </pre>
-            <div className="page-content-text">3. Run the miner (the Node must be running):</div>
+            <div className="page-content-text">3. Run the miner (the Node must be running <i>"on idle"</i> ):</div>
             <pre className="main-pre">
               {`
 bun miner.js --host 127.0.0.1 --port 9933
@@ -1287,10 +1312,16 @@ bun miner.js --host 127.0.0.1 --port 9933
               `--interval 1000` is the amount of time in miliseconds defining the frequency, at which
               random 3D models will be generated and sent towards the Node. Dependidng
               on the number of threads in use and its capacity, reduce the interval until
-              you reach desired proc load.
+              you reach desired proc load. Otherwise, it's going to be adjusted automatically to the node responce:
             </div>
+            <img
+              className="page-img"
+              src="/images/miner_adjustments.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-text">
-              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, which might be picked up as an option.
+              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, which might be leveraged as an option, either.
             </div>
           </div>
         </div>
@@ -1376,13 +1407,16 @@ bun miner.js --host 127.0.0.1 --port 9933
               General
             </div>
             <div className="page-content-text">
-              Validators are the most reliable authorities eligible to vote for
-              blocks finalization. In order to become one the node must not only
-              declare a block authirship, but also put some funds on a
-              collateral. Validators get rewarded 30% for every block in the
-              network. Rewards are to divide in equal among the current
-              validator set members.
+              Validators are the most reliable authorities eligible to vote for the
+              Best chain finalization as well as to participate in the user object verification process specified in  {" "}
+              <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link>  {" "}
+              tokenization standard. Rewards are getting distributed in equal among the current validator set members.
             </div>
+            <div className="page-content-text">Rewards:</div>
+            <ul className="page-content-text">
+              <li>Block finalizaton: 50% of total block rewards (the rest 50% goes to the block author)</li>
+              <li>The user objects processing: 50% of the object verification fee (paid by user)</li>
+            </ul>
             <div className="page-content-text">
               GRANDPA (PoA) protocol is implemented in 3DPass as a number of
               traits, such as: <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/validator-set">Validator set pallet</Link> - to control the set of
@@ -1403,43 +1437,24 @@ bun miner.js --host 127.0.0.1 --port 9933
               Requirements
             </div>
             <div className="page-content-text">
-              The most common way for a beginner to run a miner and validator is
-              to leverage a cloud server running Linux. You may choose whatever
-              VPS provider that your prefer, and whatever operating system you
-              are comfortable with. The transactions weights in PoScan were
-              benchmarked on standard hardware. It is recommended that miners
-              and validators run at least the standard hardware in order to
-              ensure they are able to process all blocks in time. The following
-              are not minimum requirements but if you decide to run with less
-              than this beware that you might have performance issue.
-            </div>
-            <div className="page-content-subtitle">Standard Hardware</div>
-            <ul className="page-content-text">
-              <li>CPU - Intel(R) Core(TM) i7-7700K CPU @ 4.20GHz</li>
-              <li>
-                Storage - A NVMe solid state drive. Should be reasonably sized
-                to deal with blockchain growth. Starting around 80GB - 160GB
-                will be okay for the first six months of Realis, but will need
-                to be re-evaluated every six months.
-              </li>
-              <li>Memory - 64GB.</li>
-            </ul>
-            <div className="page-content-text">
-              The specs posted above are by no means the minimum specs that you
-              could use when running a validator, however you should be aware
-              that if you are using less you may ne​ed to toggle some extra
-              optimizations in order to be equal to other validators that are
-              running the standard.
+             That is important for newcomers to familiarize thermselves with the <Link to="/mainnet#requirements">standard hardware</Link>{" "}
+             requirements, however, there is a strong recommendation for Validators to use a dedicated server to run the Node on.{" "}
+             Not only will it require to be capable of handling blocks on time (<i>target time: 60 sec</i>), but also to get the {" "}
+             user objects processed in accordance to <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> {" "}
+             tokenization  standard operating within The Ledger of Things. Unlike many other projects, it is REQUIRED for Validators in 3DPass {" "} 
+             to provide additional computing power leveraged for the user object processing in accordance to{" "} 
+              <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard.
+             
             </div>
             <div className="page-content-subtitle">SLA</div>
             <ul className="page-content-text">
               <li>Online: 24/7, ping 333 ms from all over the globe to participatte in GRANDPA voting rounds</li>
               <li>
-                Firewall: no Firewall (the locations such as China and Singapore
-                are not allowed for validator hosting)
+                Firewall: No restrictions
               </li>
-              <li>Internet trafic: no limits</li>
-              <li>Performance: no problem to catch up with the chain</li>
+              <li>Internet trafic: No limits</li>
+              <li>Performance imporing new blocks: up to 10 sec per block</li>
+              <li>Performance handling the user objects: up to 20 sec per object</li>
             </ul>
             <div className="page-content-subtitle" id="validator-threshold">
               Selection Threshold
@@ -1466,7 +1481,7 @@ bun miner.js --host 127.0.0.1 --port 9933
             <div className="page-content-subtitle">Set up fee</div>
             <ul className="page-content-text">
               <li>
-                20 000 P3D one-time payment to Treasury account <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
+                10 000 P3D one-time payment to Treasury account <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
               </li>
             </ul>
             <div className="page-content-subtitle" id="validator-punishments">
@@ -1484,6 +1499,9 @@ bun miner.js --host 127.0.0.1 --port 9933
               <li>
                 Not being able to participate in GRANDPA voting rounds for any reason (Firewall, incorrect keys
                 set up, etc.): 20 000 P3D and getting out of the validator set
+              </li>
+              <li>
+                Not being able to get the user object processed in 20 sec: 100% of the  user object validation serivce fee and getting out of the validator set
               </li>
             </ul>
             <div className="page-content-subtitle" id="validator-setting">

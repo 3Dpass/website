@@ -53,7 +53,7 @@ const Governance = () => {
   return (
     <React.Fragment>
       <div className="page-left-menu">
-        <div className="page-title">Governance in 3DPass</div>
+        <div className="page-title">Open Governance in 3DPass</div>
         <div className="page-nav-content">
           <a href="#general">
             <div
@@ -147,18 +147,6 @@ const Governance = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#technical">
-            <div
-              className={
-                locationHash.includes("technical")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Technical Committee
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
           <a href="#treasury">
             <div
               className={
@@ -171,6 +159,18 @@ const Governance = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#technical">
+            <div
+              className={
+                locationHash.includes("technical")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Technical Committee
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
           <a href="#fellowship">
             <div
               className={
@@ -180,18 +180,6 @@ const Governance = () => {
               }
             >
               Fellowship
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#governance">
-            <div
-              className={
-                locationHash.includes("governance")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Governance token (3DPg)
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -832,39 +820,6 @@ electorate - the total number of tokens issued in the network
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-subtitle" id="technical">
-              Technical Committee
-            </div>
-            <div className="page-content-text">
-              The Technical Committee (TC) is composed of the teams that have
-              successfully implemented or specified 3Dpass runtime. Teams are
-              added or removed from the TC via a simple majority vote of the
-              Council.
-            </div>
-            <div className="page-content-text">
-              The purpose of the TC is to safeguard against malicious referenda,
-              implement bug fixes, reverse faulty runtime updates, or add new
-              but battle-tested features. The TC has the power to fast-track
-              proposals by using the Democracy pallet, and is the only origin
-              that is able to trigger the fast-tracking functionality. We can
-              think of the TC as a "unique origin" that cannot generate
-              proposals, but are able to fast track existing proposals.
-            </div>
-            <div className="page-content-text">
-              Fast-tracked referenda are the only type of referenda that can be
-              active alongside another active referendum. Thus, with
-              fast-tracked referenda it is possible to have two active
-              referendums at the same time. Voting on one does not prevent a
-              user from voting on the other.
-            </div>
-            <div className="page-content-subtitle">
-              TC members
-            </div>
-            <ul className="page-content-text">
-                <li>PaulS: <Link to="https://3dpscan.io/account/d1G1TXAfLWrAV4CH6bvFdTodp8xNeeLJEQzaAUty3XCgEiLor">d1G1TXAfLWrAV4CH6bvFdTodp8xNeeLJEQzaAUty3XCgEiLor</Link></li>
-                <li>Mikhail: <Link to="https://3dpscan.io/account/d1CVafcqJ71h94V5Evf85TpRqn5Grcw1vni6TwWGokRiYSGoG">d1CVafcqJ71h94V5Evf85TpRqn5Grcw1vni6TwWGokRiYSGoG</Link></li>
-                <li>Michael Co: <Link to="https://3dpscan.io/account/d1FSXz2PUvULgekcwXug3yF3WLeDZxou6GouVrWzZf5Jq41ZP">d1FSXz2PUvULgekcwXug3yF3WLeDZxou6GouVrWzZf5Jq41ZP</Link></li>
-              </ul>
           </div>
         </div>
         <div className="page-content-block" id="treasury">
@@ -950,6 +905,41 @@ electorate - the total number of tokens issued in the network
             </div>
           </div>
         </div>
+        <div className="page-content-block" id="technical">
+          <div className="page-content-inner">
+            <div className="page-content-title">Technical Committee</div>
+            <div className="page-content-text">
+              The Technical Committee (TC) is composed of the teams that have
+              successfully implemented or specified 3Dpass runtime. Teams are
+              added or removed from the TC via a simple majority vote of the
+              Council.
+            </div>
+            <div className="page-content-text">
+              The purpose of the TC is to safeguard against malicious referenda,
+              implement bug fixes, reverse faulty runtime updates, or add new
+              but battle-tested features. The TC has the power to fast-track
+              proposals by using the Democracy pallet, and is the only origin
+              that is able to trigger the fast-tracking functionality. We can
+              think of the TC as a "unique origin" that cannot generate
+              proposals, but are able to fast track existing proposals.
+            </div>
+            <div className="page-content-text">
+              Fast-tracked referenda are the only type of referenda that can be
+              active alongside another active referendum. Thus, with
+              fast-tracked referenda it is possible to have two active
+              referendums at the same time. Voting on one does not prevent a
+              user from voting on the other.
+            </div>
+            <div className="page-content-subtitle">
+              TC members
+            </div>
+            <ul className="page-content-text">
+                <li>PaulS: <Link to="https://3dpscan.io/account/d1G1TXAfLWrAV4CH6bvFdTodp8xNeeLJEQzaAUty3XCgEiLor">d1G1TXAfLWrAV4CH6bvFdTodp8xNeeLJEQzaAUty3XCgEiLor</Link></li>
+                <li>Mikhail: <Link to="https://3dpscan.io/account/d1CVafcqJ71h94V5Evf85TpRqn5Grcw1vni6TwWGokRiYSGoG">d1CVafcqJ71h94V5Evf85TpRqn5Grcw1vni6TwWGokRiYSGoG</Link></li>
+                <li>Michael Co: <Link to="https://3dpscan.io/account/d1FSXz2PUvULgekcwXug3yF3WLeDZxou6GouVrWzZf5Jq41ZP">d1FSXz2PUvULgekcwXug3yF3WLeDZxou6GouVrWzZf5Jq41ZP</Link></li>
+              </ul>
+            </div>
+          </div>
         <div className="page-content-block" id="fellowship">
           <div className="page-content-inner">
             <div className="page-content-title">Fellowship</div>
@@ -1069,31 +1059,6 @@ electorate - the total number of tokens issued in the network
               will also change the hash of the proposal, rendering the per-hash
               blacklist invalid.
             </div>
-          </div>
-        </div>
-        <div className="page-content-block" id="governance">
-          <div className="page-content-inner">
-            <div className="page-content-title">Governance Token 3DPg</div>
-            <div className="page-content-text">
-              Governance Token (3DPg) is issued as an instrument for the
-              governance to provide its services, such as: extra permissions,
-              grants, obligations, social lifts, etc. For example, 3DPg might
-              have been used as an extra permission for someone to become a
-              Validator without having a block authorship. 3DPg is issued by
-              means of embedded Assets pallet, which is designed to deal with {" "}
-              <Link to="/fungible-tokens-minting#assets">fungible tokens</Link>.
-            </div>
-            <ul className="page-content-text">
-              <li>Current supply: 1000000 3DPg</li>
-              <li>Decimals: 12</li>
-              <li>Min indivisible unit: 0.000000000001 3DPg</li>
-            </ul>
-            <img
-              className="page-img"
-              src="/images/3DPg1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
           </div>
         </div>
       </div>
