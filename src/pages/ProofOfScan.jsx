@@ -260,7 +260,7 @@ const ProofOfScan = () => {
               definition level of processing to the resolution of scanning.
             </div>
             <div className="page-content-text">
-            This is apparent, that it does not make any sense to compare objects by its 
+            This is apparent, that it does not make any sense to compare objects by its {" "}
             <Link to="/features#3drecognition-hash-id">HASH ID</Link>, 
             provided they got processed with different recognition algorithms/parameters. However, 
             HASH IDs need to be compared in order to guarantee for users the absence of copies on 
@@ -408,7 +408,7 @@ const ProofOfScan = () => {
               </li>
             </ul>
             <div className="page-content-text">
-              The object, which passed the verification check will be accepted.
+              The object passed through the verification check will be accepted.
             </div>
             <img
               className="page-img"
@@ -422,10 +422,11 @@ const ProofOfScan = () => {
           <div className="page-content-inner">
             <div className="page-content-title">New Block</div>
             <div className="page-content-text">
-              Each new block is going to be built on top of the parent block of
-              the best chain (longest chain rule is currently applied). It is
-              sealed to the parent block hash with <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link> cryptographic
-              hash-function, resulting as <i>double_Hash</i> difficulty will be applied to.
+              New block is going to be built on top of the Best block currently chosen for the
+              Best chain (the longest chain rule is operating). Thus, Best block becomes the parent block while construction. {" "}
+              The block is sealed to its parent block hash with <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link> cryptographic {" "}
+              hash-function, resulting as <i>double_hash</i>, which is a subject for difficulty {" "}
+              to affect in order maintain the network target block time. 
             </div>
             <div className="page-content-text">
               Block header consists of the following data:
@@ -481,7 +482,7 @@ Select top 10 hashes
             </pre>
             <div className="page-content-text">
               4. <i>RandomX (Grid2d μ = x) hash</i> – 3D model Hash ID created with some certain 
-              angle of rotation (μ = x) and then processed by the RandomX hashing algorithm 
+              angle of rotation (μ = x) and then processed by the <Link to="https://github.com/tevador/RandomX">RandomX</Link> hashing algorithm 
               on top. The result is presented as a <i>blake2b</i> hash
             </div>
             <div className="page-content-text">
@@ -491,10 +492,10 @@ Select top 10 hashes
               6. <i>Proof of Context hash</i> – the output of the <i>hist_steps</i> extension (see more Proof of Work task)
             </div>
             <div className="page-content-text">
-              7. <i>Proof of Scan hash</i> – the user object verification proof in accordance with 3DPRC-2 tokenization standard
+              7. <i>Proof of Scan hash</i> – the user object verification proof in accordance with <Link to="#3dprc-2">3DPRC-2</Link> tokenization standard
             </div>
             <div className="page-content-text">
-              8. GRANDPA** finality digest
+              8. GRANDPA finality digest
             </div>
             <img
               className="page-img"
@@ -557,7 +558,7 @@ Select top 10 hashes
                by the block author, once submitted.
               </li>
               <li>
-               Grid2d output is getting processed by the RandomX hashing function {" "}
+               <Link to="/grid2d">Grid2d</Link> recognition algorithm output is getting processed by the <Link to="https://github.com/tevador/RandomX">RandomX</Link> hashing function {" "}
                to equalize the mining velocity of CPU and GPU to one another
               </li>
               <li>
@@ -872,15 +873,16 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             with the <Link to="/community#governance">Open Governance</Link> procedures, such as Referendums, Technical Committee vote and Council vote.
             </div>
             <div className="page-content-subtitle">
-            Wasm based upgradable modules operating
+            Wasm based upgradable runtime modules operating
             </div>
             <div className="page-content-text">
             Here is the list of functional modules operating on mainnet, which might be leveraged for the community {" "}
             dApps creation as well as for internal needs:
             </div>
             <ul className="page-content-text">
+              <li>3Dpass recognition toolkit: Grid2d WASM version is currently used on block import</li>
               <li>Authorship module – traces block authors</li>
-              <li>Difficulty module – manages difficulty adjustments</li>
+              <li>Difficulty module – manages PoW difficulty adjustments</li>
               <li>Rewards module – mining PoW rewards implementation</li>
               <li>MiningPool module – decentralized mining pool</li>
               <li>Validator set module – manages PoA GRANDPA** validators rewards and logic</li>
@@ -889,8 +891,8 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               <li>Offenses module – handles GRANDPA** equivocation reports (hard fork attempts)</li>
               <li>ImOnline module – ensures that GRANDPA** validators have been online during the
               session</li>
-              <li>PoScan module – handles the user objects verification in 3DPRC-2** standard</li>
-              <li>PoscanAssets module – allows for issuing of either 3DPRC-2** the object share
+              <li>PoScan module – handles the user objects verification in 3DPRC-2 standard</li>
+              <li>PoscanAssets module – allows for issuing of either 3DPRC-2 the object share
               tokens or regular fungible assets</li>
               <li>AssetsConversion module – on-chain DEX, decentralized exchange based on
               Uniswap v2 rules</li>
@@ -910,7 +912,7 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               them separatelly</li>
               <li>Treasury module – manages funding of spending proposals</li>
               <li>White list module – allows to whitelist any call to be available for a referendum</li>
-              <li>Smart Contracts module – smart contracts based on ink language</li>
+              <li>Smart Contracts module – smart contracts based on <Link to="https://use.ink">ink</Link> language</li>
               <li>IPFS file storage – decentralized file storage</li>
               <li>Timestamp module – allows to timestamp on any on-chain data</li>
               <li>System module – ensures the block size control, etc</li>

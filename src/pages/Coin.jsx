@@ -134,7 +134,7 @@ ETH SIGNATURE
           </a>
           <a href="#distribution-investors">
             <div className="page-nav-inside">
-              Early Investors
+              Investors
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -657,18 +657,19 @@ ETH SIGNATURE
                 className="page-content-subtitle"
                 id="distribution-contribution"
               >
-                Mainnet Rewards program
+                Mainnet Rewards program to speed up 3DPass
               </div>
               <div className="page-content-text">
-                All the activities, covered by the program, will be paid only in
-                P3D. No other currencies are accepted.
+                All the activities covered by the program will be paid only in
+                P3D. No other currencies are accepted. 
               </div>
               <div className="page-content-text">
-                For example, if you applied for the budget, the rewards would be
-                estimated assuming the certain amount of hours needed and the
-                average market price for the equal service. However, the final
-                amount will be determined on the proccess of negotiations. The
-                most important questions will be resolved by means of either <Link to="/governance#council">Governance</Link> vote 
+                For example, if you applied for the budget, the rewards would be {" "}
+                estimated assuming the certain amount of hours needed and the {" "}
+                average market price for the equal service. However, the final {" "}
+                amount will be determined on the proccess of negotiations. The {" "}
+                most important questions will be resolved by means of either {" "}
+                 <Link to="/governance#council">Governance</Link> vote {" "}
                 or public <Link to="/governance#democracy">Referenda</Link>.
               </div>
               <div className="page-content-subtitle">Grants</div>
@@ -686,6 +687,12 @@ ETH SIGNATURE
                 <li>
                   Useful dApp or project based on "The Ledger of Things" (ex. marketplace of assets, game, stable coin) - from 1 000 000  P3D
                 </li>
+                <li>
+                  Useful integrations around The Ledger of Things eco-system
+                </li>
+                <li>
+                  PR and promo activities (IT product oriented)
+                  </li>
               </ul>
               <div className="page-content-text">
                 Feel free to apply for grant over <Link to="https://discord.gg/u24WkXcwug">discord</Link>, provided you agree to
@@ -696,22 +703,19 @@ ETH SIGNATURE
                 The projects actually granted
               </div>
               <ul className="page-content-text">
-                <li>Non official node and miner: <Link to="https://github.com/easy-3dp">"easy-3dp"</Link></li>
+                <li>Non official node and miner: <Link to="#">"easy-3dp"</Link></li>
                 <li>Web Block Explorer: <Link to="https://3dpscan.io/">https://3dpscan.io/</Link></li>
                 <li>Mining pool trait: <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/mining-pool">GitHub</Link></li>
                 <li>On-chain identity Registrar bot: <Link to="https://github.com/Caldera-Trade/3dp-registrar/">GitHub</Link></li>
-                <li>Non-official minier CPU and GPU: <Link to="https://github.com/3DP-The-AllFather/unofficial-3dp-miner">GitHub</Link></li>
+                <li>Non-official minier: <Link to="https://github.com/3DP-The-AllFather/unofficial-3dp-miner">GitHub</Link></li>
               </ul>
-              <div className="page-content-subtitle">
-                Activities to speed up 3DPass
-              </div>
               <div className="page-content-subtitle">Developers:</div>
               <div className="page-content-text">
                 Guys, your help is always appreciated! Get yourself familiar with some <Link to="https://github.com/3Dpass/3DP/blob/main/CONTRIBUTING.md">contribution guidelines</Link> and dive down into 3Dpass. 
                 The most common repositories to contribute:
               </div>
                 <ul className="page-content-text">
-                <li><Link to="https://github.com/3Dpass/3DP">3Dpass Node (The Ledger Of Things)</Link></li>
+                <li><Link to="https://github.com/3Dpass/3DP">The Ledger Of Things Node</Link></li>
                 <li><Link to="https://github.com/3Dpass/wallet">3Dpass Web3 wallet</Link></li>
                 <li><Link to="https://github.com/3Dpass/threedpass">3Dpass mobile wallet</Link></li>
                 <li><Link to="https://github.com/3Dpass/pass3d-pool">Official Mining tools</Link></li>
@@ -720,32 +724,40 @@ ETH SIGNATURE
               <div className="page-content-text">
                 Looking forward to your Pull Request!
               </div>
-              <div className="page-content-subtitle">Miners:</div>
-              <ul className="page-content-text">
-                <li><Link to="/coin#distribution-rules">Mining rules</Link></li>
-                <li><Link to="/coin#distribution-validation">Validation rewards</Link></li>
-              </ul>
               <div className="page-content-subtitle">Marketing activities:</div>
               <div className="page-content-text">
-                Local translation, PR, Articles, Social Media
+                Local translation, PR, Articles, Social Media Marketing - should be product oriented!
               </div>
               <div className="page-content-subtitle">
-                Marketplaces, Games, DEXes, E-commerce, Jewelry, and other
-                projects:
+                Marketplaces, Games, DEXes, CEXes, E-commerce, and other projects:
               </div>
               <div className="page-content-text">
-                3DPass <Link to="/features#3drecognition-hash-id">Hash ID</Link> feature integration, 3DPass blockchain
-                integration
+                <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2 {" "}
+                 </Link>RWA tokenization standard integration. Facilitating to The Ledger of Things {" "}
+                 eco-system development, including but not limited to the DEX {" "}
+                 <Link to="https://swap.3dpscan.io">swap.3dpscan.io</Link> 
+
               </div>
               <div
                 className="page-content-subtitle"
                 id="distribution-investors"
               >
-                Early investors
+                Investors
               </div>
               <div className="page-content-text">
-                Private sale is closed by the communinty desision. Private sale
-                budget was turned into the public <Link to="/coin#contribution-budget">contribution budget</Link> controlled by the governance.
+                Dear Investors, private sale was closed in 2022 by the communinty desision. Private sale {" "}
+                budget was turned into the public <Link to="/coin#contribution-budget">contribution budget</Link> {" "}
+                controlled by the <Link to="/community#governance">Open Governance</Link>. No ICO has ever taken place around the project. 
+              </div>
+              <div className="page-content-text">
+                The best suggestion for investors would be to adhere to the formula of success as follows:
+              </div>
+              <div className="page-content-text">
+                <i> 1. Come up with some useful agenda to The Ledger of Things → 2. Head in and implement your agenda to add some value → 3. Capitalize on the project value.</i>
+              </div>
+              <div className="page-content-text">
+                The contribution aspect should never be skipped in the formula. P3D is a pure unility coin, {" "}
+                 and the best way to impact on its value is to add to its use. 
               </div>
               <div className="page-content-subtitle" id="distribution-rules">
                 P3D mining rules (PoW ASIC-resistant, CPU oriented protocol)
@@ -776,9 +788,12 @@ ETH SIGNATURE
                 </li>
               </ul>
               <div className="page-content-text">
-                Given the fact that the network speed is 1 block per 60 sec,
-                thus each step of 243000 blocks would approximately take about
-                169 days.
+                Given the fact that the network speed is 1 block per 60 sec, {" "}
+                thus each step of 243000 blocks would approximately take about {" "}
+                169 days. Check on current mining rewards and distribution over {" "}
+                the <Link to="http://3dpassmining.info">3dpassmining.info</Link> and {" "}
+                the <Link to="https://telemetry.3dpscan.io/">network telemetry</Link>. {" "}
+                Follow the <Link to="/mainnet">mining guidelines</Link> to join competition.
               </div>
               <img
                 className="page-img"
