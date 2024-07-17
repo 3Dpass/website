@@ -496,6 +496,9 @@ Select top 10 hashes
             <div className="page-content-text">
               8. GRANDPA finality digest
             </div>
+            <div className="page-content-text" id="block-structure">
+              Block structure:
+            </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
@@ -541,7 +544,7 @@ Select top 10 hashes
               finalized in accordancde to {" "}
               <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA</Link> protocol.
             </div>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="pow-task">
               PoW task: 1 Node = 1 Vote, ASIC-resistant
             </div>
             <div className="page-content-text">
@@ -572,7 +575,8 @@ Select top 10 hashes
             <div className="page-content-text">
             1. In order to prove 3D object exists at the beginning of the mining loop the bock author 
             first must get 3D object scanned with no rotation angle <i>(μ = 0)</i> resulting as Grid2d {" "}
-            output 1 (top 10 hashes).
+            output 1 (top 10 hashes). The second component is <i>time_hash</i>, which must be added into the 
+            block header and will impact the <i>pre_hash</i> , as well.
             </div>
             <img
               className="page-img"
@@ -798,17 +802,10 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               The block proposer, if verified, participates in Tie Break competition among the 
               other block authors attempting to construct the block on top of the longest chain, 
               which they believe to be Best chain. This logic is quite commmonly used in relation 
-              to PoW approach. The block proposed earlier wins.
-            </div>
-            <div className="page-content-text">
-              Once being created, the new block proposer consists of such things
-              as: block header, thansactions from transaction pool and some
-              metadata. All the data is signed with the block Author's
-              signature. In order to be able to prove authorship miner must have
-              generated the account, its private and public keys and a miner's
-              key (address). The block proposer is being imported by the network
-              Nodes and there is a validation procedure on import that causes
-              the blockchain reconstrucion. The best chain has to be chosen.
+              to PoW approach. The block proposed earlier wins. The block time is determined by {" "}
+              the <i>time_hash</i> being part of block header {" "}
+              (follow the <Link to="#block-structure">block structure</Link>) required for the {" "}
+              <Link to="#pow-task">PoW task</Link> to solve.
             </div>
             <img
               className="page-img"
