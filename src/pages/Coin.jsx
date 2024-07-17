@@ -28,6 +28,18 @@ ETH SIGNATURE
       <div className="page-left-menu">
         <div className="page-title">3Dpass Coin</div>
         <div className="page-nav-content">
+        <a href="#P3D">
+            <div
+              className={
+                locationHash.includes("P3D")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              P3D
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
           <a href="#white-papper">
             <div
               className={
@@ -165,9 +177,39 @@ ETH SIGNATURE
         </div>
       </div>
       <div className="page-content">
-        <div className="page-content-block first-page-block" id="white-papper">
+        <div className="page-content-block first-page-block" id="P3D">
           <div className="page-content-inner">
-            <div className="page-content-title">White Paper</div>
+            <div className="page-content-title">3Dpass coin (P3D)</div>
+            <div className="page-content-text">
+              <strong>P3D</strong> is a native utility token operating within <Link to="/proof-of-scan#p2p">The Ledger of Things</Link>{" "}
+              to facilitate on its use and encourage the efforts of the network maintainers (Block authors and Vaildators) {" "}
+              providing resources and equippment for <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> {" "}
+              tokenizaion standard to operate.  
+            </div>
+            <div className="page-content-text">
+              The smallest indivisible unit of account in 3Dpass is Crumb. 1 P3D is equal to <i>1e12</i> Crumb, {" "}
+              which is defined be the network genesis spec <Link to="https://raw.githubusercontent.com/3Dpass/3DP/main/mainnetSpecRaw.json">mainnetSpecRaw.json</Link>.
+              Explore the <Link to="#specification">network specificaton</Link> for more detail. 
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Crumb: 0.000000000001
+              </li>
+              <li>
+                MicroP3D (uP3D): 0.000001000000
+              </li>
+              <li>
+                MilliP3D (mP3D): 0.001000000000
+              </li>
+              <li>
+                P3D: 1.000000000000
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="page-content-block" id="white-papper">
+          <div className="page-content-inner">
+          <div className="page-content-title">White Paper</div>
             <Link
               className="a-none"
               to="/3DPass_white_paper.pdf"
@@ -175,7 +217,7 @@ ETH SIGNATURE
               download
             >
               <div className="page-lead-content">
-                White Paper
+                3DPRC-2 tokenization standard
                 <div className="page-lead-button">PDF</div>
               </div>
             </Link>

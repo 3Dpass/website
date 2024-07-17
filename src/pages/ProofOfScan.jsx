@@ -152,10 +152,10 @@ const ProofOfScan = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#granpda">
+          <a href="#grandpa">
             <div
               className={
-                locationHash.includes("granpda")
+                locationHash.includes("grandpa")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
@@ -176,18 +176,6 @@ const ProofOfScan = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#chains">
-            <div
-              className={
-                locationHash.includes("chains")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Layer 2: Public Chains Of Limited Assets
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
         </div>
       </div>
       <div className="page-content">
@@ -197,31 +185,42 @@ const ProofOfScan = () => {
               The Ledger of Things p2p Network
             </div>
             <div className="page-content-text">
-            The Ledger of Things <Link to="https://telemetry.3dpscan.i">decentralized network</Link> is to provide the next level of quality {" "}
-            to the entire blockchain market, so that anyone could obtain a proof of {" "}
-            authenticity on every object published on the blockchian and transformed into its digital asset. {" "}
-            At minimum, this will make it transparent when dealing with copies. {" "}
-            It is called The Ledger of Things, which can be utilized as a platform for smart-contracts {" "}
-            and dApps. The network nodes will prevent the duplication of assets in accordance to {" "}
-             <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard.
+            The Ledger of Things is Layer 1 blockchain and decentralized storage providing its instruments and tools 
+            for the tokenizaton of objects. The <Link to="https://github.com/3Dpass/3DP">Nodes</Link> are equipped with 
+            recognition toolkit and will prevent assets form beeing copied, even if its file was slightly changed 
+            (ex. with one dot, pixel or one byte). At minimum, it allows to establish and track 1:1 correspondence between 
+            the object and its digital asset. At max - to develop endless of useful smart contracts and dApps operating within 
+            the eco-system and exploiting the <Link to="/features#3drecognition-hash-id">HASH ID</Link> feature as an idea 
+            of authentication of real world objects (or digital objects) all across the Internet.
             </div>
+            <ul className="page-content-text">
+              <li>
+                "Proof of Scan" consensus protocol is a hybrid <i>PoW (Proof of Work) + PoA (Proof of Authority)</i>, where PoW aspect is based on 
+                recognition technology and ASIC-resistant, as well. PoA part is ensured by {" "}
+                <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA</Link> deterministic blockchian 
+                finality protocol leveraged by the most reliable nodes on the network called <Link to="/mainnet#validator">Validators</Link> {" "}
+                operating under SLA conditions (selecton mechanism is similar to Proof of Stake).
+              </li>
+             <li>
+              <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard is part of the network consensus,
+                 which is responsible for handling the user objects and its transformation into share-tokens (either, fungible or non-fungible). 
+              </li>
+              <li>
+              <Link to="https://ipfs.io/">IPFS</Link> is used as a decentralized storage
+              </li>
+              <li>
+              Integration is provided by the <Link to="https://substrate.io/">Substrate</Link> framework
+              </li>
+              <li>
+              <Link to="#forkless-upgrade">Forkless upgrade</Link> feature, Smart-contracts, embedded <Link to="https://swap.3dpscan.io">DEX</Link> and more than 30 useful modules operating.
+              </li>
+            </ul>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/blockchain_of_things2.png"
+              src="/images/the_ledger_of_things_structure.png"
               alt="img"
             />
-            <div className="page-content-text">
-              It is essential to not only have the capability of issuing
-              share tokens but also be sure that the digital
-              assets are corresponding with the physical ones. Irrespective to
-              whether it pertains to the physical object or the digital 3D model,
-              due to each one having a set of distinctive properties that can be
-              recognized. In order to solve this issue, computing power is
-              required within the network for 3D object processing as well as
-              spam protection. <Link to="https://ipfs.io/">IPFS</Link> is used as a decentralized storage for the user
-              objects. Integration is provided by the <Link to="https://substrate.io/">Substrate</Link> framework.
-            </div>
           </div>
         </div>
         <div className="page-content-block" id="object">
@@ -567,7 +566,7 @@ Select top 10 hashes
                3DPass resist against FPGA devices sensitive to memory load speed.
               </li>
             </ul>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="pow-task">
               PoW task TO DO:
             </div>
             <div className="page-content-text">
@@ -710,8 +709,8 @@ Select top 10 hashes
           <div className="page-content-inner">
             <div className="page-content-title">Block Production Mechanism</div>
             <div className="page-content-text">
-              Our block production begins with 3D objects queue. 3D models are
-              being sent to the input of PoScan via RPC like this:
+              New block production begins with the queue handling random 3D models, which are
+              being sent to the input of PoScan via the Node RPC API with <i>push_mining_object</i> method:
             </div>
             <pre className="main-pre">
               {`
@@ -731,8 +730,8 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
 `}
             </pre>
             <div className="page-content-text">
-              Where one of the parameters is the content of 3D model's file in
-              .obj format, but with\n added at the end of each line.
+              Where one of the parameters is the content of the file in
+              <i>.obj</i> standard format, but having <i>"\n"</i> added at the tail of each line.
             </div>
             <pre className="main-pre">
               {`
@@ -743,13 +742,14 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
 `}
             </pre>
             <div className="page-content-text">
-              There is a handler on the Node's side, which checks the queue. If
-              there is a 3D model found, the handler would run its shape
-              processing. Miners join the process, doing the same
-              simultaneuosly. All the nodes, including miners, have chosen the
-              best chain at the time. In odrder to create a new block they will
-              use the parent block (the top block of the best chain). So, the
-              process might look like this:
+              There is a handler on the Node side, which checks the queue 
+              and gets 3D objects processed consequentially slot by slot with grid2d 
+              recognition algorithm generating HASH ID for each as an output. 
+              The Node has selected Best chain by the time. So, miners will always 
+              pick up current Best block (the topest block in Best chain) as the parent to 
+              construct new one on top. They will join the competition simultaneuosly, 
+              handling 3D objects form the queue in hope to find the one, 
+              which makes grid2d produce correct HASH ID used as <i>nonce</i>. 
             </div>
             <img
               className="page-img"
@@ -758,12 +758,15 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               alt="img"
             />
             <div className="page-content-text">
-              After the HASH ID is calculated, miner tries to create a new block
-              hash. In order to do so, it seales the very top hash of the HASH
-              ID to the parent block hash already chosen at the time. If the
-              resulting hash corresponds to the new block mining rules, it
-              becomes a new block hash, and the new block proposer will be
-              created and broadcasted over the network.
+              Blcok author will try sealing the object HASH ID on top of the parent block
+              hash in the blockchain <Link to="https://en.wikipedia.org/wiki/Merkle_tree">Merkle tree</Link>, 
+              following the <Link to="#pow-task">PoW task</Link> exactly. 
+              If all required proofs are gathered and meet the rules, the new block 
+              proposer will be created → executed → signed with the block author signature and 
+              broadcasted out throught the Node peers. <Link to="#block-execution">Block execution</Link> means the execution of
+              of all the runtime calls/extrinsics and logic of its upgradable modules operating within 
+              The Ledger of Things, including but not limited to: translactions, 
+              smart-contracts, <Link to="#3dprc-2">3DPRC-2</Link> tokenizaton logic, etc. 
             </div>
             <img
               className="page-img"
@@ -772,12 +775,13 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               alt="img"
             />
             <div className="page-content-text">
-              If the resulting hash doesn't correspond to the rules, the object
-              will be rejected. And the node will keep checking the queue for a
-              new one to appear. The block verified participates the Tie Break
-              competition among the miners trying to construct the block on top
-              of the longest chain they believe to be the best one. This logic
-              is quite similar to conventional PoW.
+              There is a block verification procedure implemented on the block import 
+              of each Node (peer), which will repeat the <Link to="#pow-task">PoW task</Link> {" "}
+              independently and check on the proofs required. Having at least one check 
+              unpassed will result with the block rejection by the peer, due to the invalid block header.
+              Every runtime module operating will check their proofs diring the <Link to="#block-execution">block execution</Link> {" "}
+              in accordance of its logic. The block will also be rejected by runtime if the pfoofs are 
+              not delivered or incorrect. 
             </div>
             <img
               className="page-img"
@@ -791,11 +795,10 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
           <div className="page-content-inner">
             <div className="page-content-title">Tie Break Competition</div>
             <div className="page-content-text">
-              The block verified participates the Tie Break competition among
-              the other block Authors (miners), trying to construct the block on
-              top of the longest chain they believe to be the best one. The
-              block proposed earlier wins. This logic is quite similar to the
-              conventional PoW, 51% attack is possible.
+              The block proposer, if verified, participates in Tie Break competition among the 
+              other block authors attempting to construct the block on top of the longest chain, 
+              which they believe to be Best chain. This logic is quite commmonly used in relation 
+              to PoW approach. The block proposed earlier wins.
             </div>
             <div className="page-content-text">
               Once being created, the new block proposer consists of such things
@@ -819,20 +822,30 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
           <div className="page-content-inner">
             <div className="page-content-title">Fork Choice Rule</div>
             <div className="page-content-text">
-              The protocol contains a chain scoring rule for a given chain (the
-              best chain rule). Each honest node will propagate the chain with
-              the highest score it knows about to all other nodes. The best
-              chain is selected and must be accepted by all the nodes on the
-              network. The best block should be no further, than 3 blocks away
-              ahead from the last block finalized. Because of this rule, 51%
-              attack is still possible, however, the attacker must have taken
-              over at least 2/3 of GRANDPA votes in addition (see more Finality
-              gadget: GRANDPA), which makes it much more difficult to arrange.
+              The protocol contains a scoring rule for a given chain 
+              (the Best chain rule). Each honest Node will propagate the chain with
+              the highest score it knows about to all the other nodes through its peers. 
+              Best chain is selected and must be accepted by all the nodes on the
+              network. Current Best chain rule is the longest chain wins.
+            </div>
+            <div className="page-content-text">
+             The blockchain will stick with the rules of probabalistic finality and 
+             might be reorganized during the block authors competition, until Best chain 
+             is deternmined by the second layer of authorities (Validators) leveraging {" "}
+             <Link to="#grandpa">GRANDPA deterministic finality protocol</Link>. {" "}
+              Best cahin, once finalized, can never be reorganized. Block authors are not allowed
+              to construct new block outside of the finalized chain, because of the GRANDPA proofs being
+              part of block header.
+            </div>
+            <div className="page-content-text">
+              Validators will be monitoring over the blockchian being constructed by the block 
+              authors and chasing new blocks to finalize. They will vote upon Best chain and, 
+              once consensus is reached, Best chain reaches finality with new blocks include. 
             </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/best_chain2.png"
+              src="/images/best_chain_structure.png"
               alt="img"
             />
           </div>
@@ -928,11 +941,11 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             </ul>
           </div>
         </div>
-        <div className="page-content-block" id="granpda">
+        <div className="page-content-block" id="grandpa">
           <div className="page-content-inner">
             <div className="page-content-title">Finality Gadget GRANDPA</div>
             <div className="page-content-text">
-              3Dpass network implicates a provable finality protocol called
+              3Dpass network implicates a deterministic finality protocol called
               GRANDPA which guarantees blocks to reach finality in opposite to
               probabilistic finality (e.x. Nakamoto protocol which first was
               applied in Bitcoin). Pease refer to the <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA paper</Link> to read full
@@ -1384,42 +1397,6 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 16 -i m
 ]
               `}
             </pre>
-          </div>
-        </div>
-        <div className="page-content-block" id="chains">
-          <div className="page-content-inner">
-            <div className="page-content-title">
-              Layer 2: Public Chains Of Limited Assets
-            </div>
-            <div className="page-content-text">
-              Proof of Scan consensus allows to create your own rules to produce
-              chains of limited supply assets for gaming, metaverse,
-              augmented/virtual reality. All you need to do is to utilize the
-              same <Link to="/proof-of-scan#verification">verification mechanism</Link>.
-            </div>
-            <div className="page-content-text">
-              You could come up with some conditions for your objects submitted,
-              which will put some limitation to the total supply. For example,
-              you can set up the rule of only 3D models accepted which would
-              have up to 9 peaks on the surface and the HASH ID of which would
-              contain at least 10 prime numbers. Use 3DPass <Link to="/proof-of-scan#nbrules">new block rules</Link> as a
-              template.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "50px" }}
-              src="/images/l21.png"
-              alt="img"
-            />
-            <div className="page-content-text">
-              The are a lot of variations of that kind of rules which is
-              garanteed to provide you limited supply items for metaverse/AR/VR,
-              using 3DPass. And all of those assets would be tethered to its
-              owners, not to the particular platform. That makes owners able to
-              use their essets within different games and platforms, because the
-              asset has its own stabele identity <Link to="/features#3drecognition-hash-id">Hash ID</Link> it might be recognized
-              by anywhere you want.
-            </div>
           </div>
         </div>
       </div>

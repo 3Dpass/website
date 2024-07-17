@@ -72,19 +72,19 @@ const Features = () => {
           </a>
           <a href="#scanproof-block-production">
             <div className="page-nav-inside">
-              Block production (Mining)
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#scanproof-object-authenticity">
-            <div className="page-nav-inside">
-              Object authenticity and block verification
+              PoW ASIC-resistant
               <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#scanproof-deterministic">
             <div className="page-nav-inside">
-              Deterministic blockchain finality
+            PoA deterministic blockchain finality
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#network-structure">
+            <div className="page-nav-inside">
+              P2P network structure
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -388,66 +388,59 @@ const Features = () => {
               className="page-content-subtitle"
               id="scanproof-block-production"
             >
-              Block Production (Mining)
+              PoW component: CPU oriented, ASIC-resistant
             </div>
             <div className="page-content-text">
-              3Dpass exploits PoW (Proof of Work) concept for the block
-              production, due to the fact that the recognition always takes
-              computing power for the objects to get veryfied. In <Link to="/proof-of-scan">Proof of Scan</Link>{" "}
-              3D object ( in <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">obj</Link>. format) is used as a "nonce". And so, miners
-              are picking up a unique-shaped 3D object the <Link to="/features#3drecognition-hash-id">HASH ID</Link> of which,
-              being sealed to the parent block hash with <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link>, would make {" "}
-              <Link to="/grid2d">Grid2d</Link> recognition algorithm produce a specific output ( the hash
-              value below the limit called "Difficulty") like 000000...". <Link to="/mainnet">Learn {">>"}{" "}
-              how to mine 3Dpass coin</Link>
+              3Dpass PoW <i>(Proof of Work)</i> component provides resistance against ASIC/FPGA divices to always {" "}
+              reach high level of distribution at mining, which is the essential factor for <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> {" "}
+              tokenizaton standard to operate and safely to deliver the object verification service. Leveraging 3D object shape as <i>nonce</i> {" "}
+              makes <Link to="/proof-of-scan">Proof of Scan</Link> unique and stand out from any other PoW around the cryptospace.{" "}
+              In order to find new block miners are picking up a unique-shaped 3D object, the <Link to="/features#3drecognition-hash-id">HASH ID</Link> of which {" "}
+              would make <Link to="/grid2d">Grid2d</Link> recognition algorithm produce a specific output sealing the block on top of Best chain. {" "}
+              The objects found are available to observe over the <Link to="https://wallet.3dpass.org">web wallet</Link>.  See more detail on <Link to="/proof-of-scan#new-block">PoW task</Link>. Learn <Link to="/mainnet">how to mine 3Dpass coin</Link>.
+            </div>
+            <div className="page-content-subtitle" id="scanproof-deterministic">
+              PoA component: Deterministic Blockchain Finality
+            </div>
+            <div className="page-content-text">
+            <Link to="/proof-of-scan">Proof of Scan</Link> implementation is equipped {" "}
+            with <Link to="/proof-of-scan#granpda">GRANDPA</Link> finality {" "}
+              gadget, which guarantees for Best chain to reach finality in
+              oppose to the probabilistic finality (e.x. Nakamoto protocol which
+              first was applied in Bitcoin). PoA <i>(Proof of Authority)</i> concept is {" "}
+              being used. There is an Authority set called Validators consisting of the most 
+              reliable nodes selected by the algorithm. They vote upon Best chain 
+              to ensure there is no way for it to get reorganized afterwards. This will determine the preservation {" "}
+              of all the user assets and will make them available for transfer all the way trough {" "}
+              the lifetime. Learn <Link to="/mainnet#validator">how to become  Validator</Link> {" "} 
+              in The Ledger of Things.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/best_chain_structure.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Follow <Link to="/proof-of-scan">full protocol description</Link>{" "}
+               or the <Link to="/coin#white-papper">White paper</Link> to dive into detail.
             </div>
             <div
               className="page-content-subtitle"
-              id="scanproof-object-authenticity"
+              id="network-structure"
             >
-              Object Authenticity And Block Verification
+              P2P network structure
             </div>
             <div className="page-content-text">
-              The network will always agree upon the state of whether or not
-              each one object tokenized is considered to be original. It serves
-              as an object authentication service provided by one layer of equal
-              nodes.
-            </div>
-            <div className="page-content-text">
-              Use <Link to="/mobile-wallet">3Dpass mobile wallet</Link> to verify <Link to="/proof-of-scan">Proof of Scan</Link> to work.
+              The network structure is presented as two layers of equal nodes leveraging the same recognition 
+              toolkit, which is upgradable online.
             </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/3dpass_network1.png"
+              src="/images/p2p_network_structure.png"
               alt="img"
             />
-            <div className="page-content-subtitle" id="scanproof-deterministic">
-              Deterministic Blockchain Finality
-            </div>
-            <div className="page-content-text">
-            <Link to="/proof-of-scan">Proof of Scan</Link> implementation is equipped with <Link to="/proof-of-scan#granpda">GRANDPA</Link> finality
-              gadget which is guaranteed for blocks to reach finality in
-              opposite to probabilistic finality (e.x. Nakamoto protocol which
-              first was applied in Bitcoin). PoA (Proof of Authority) concept is
-              being used for block finalization. There is an Authority set
-              called Validators consisting of the most reliable nodes thoroughly
-              selected from miners. They vote upon Best chain and, after the
-              voting is complete, there is going to be no chance for the
-              finalized chain to get reorganized (2/3 + 1 positive votes is
-              enough to make the final decision)
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "50px" }}
-              src="/images/best_chain1.png"
-              alt="img"
-            />
-            <div className="page-content-text">
-              Read <Link to="https://3dpass.medium.com/proof-of-scan-consensus-how-does-that-work-7a88b0fc8530">this article</Link> to learn more about how <Link to="/proof-of-scan">Proof of Scan</Link> could be
-              compared to conventional PoW <i>(Proof of Work)</i>. Follow either the <Link to="/proof-of-scan">full protocol description</Link> or <Link to="/coin#white-papper">White paper</Link> to get some detailed
-              information.
-            </div>
           </div>
         </div>
         <div className="page-content-block" id="ledger">
@@ -456,29 +449,27 @@ const Features = () => {
               The Ledger Of Things
             </div>
             <div className="page-content-text">
-              3DPass decentralized p2p platform represents Layer 1 blockchain,
-              the Nodes of which will prevent assets form copying, even if you
-              change its model with one dot, pixel or one byte. We call it "The
-              Ledger of Unique Things".
+            The Ledger of Things is Layer 1 blockchain and decentralized storage providing its instruments and tools 
+            for the tokenizaton of objects. The <Link to="https://github.com/3Dpass/3DP">Nodes</Link> are equipped with 
+            recognition toolkit and will prevent assets form beeing copied, even if its file was slightly changed 
+            (ex. with one dot, pixel or one byte). At minimum, it allows to establish and track 1:1 correspondence between 
+            the object and its digital asset. At max - to develop endless of useful smart contracts and dApps operating within 
+            the eco-system and exploiting the <Link to="/features#3drecognition-hash-id">HASH ID</Link> feature as an idea 
+            of authentication of real world assets (or virtual objects) all across the Internet.
             </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/blockchain_of_things1.png"
+              src="/images/the_tokenization_of_the_object_share.png"
               alt="img"
             />
-            <div className="page-content-text">
-              The platform provides the ability to develop the endless of useful
-              smart contracts and dApps the logic of which would be tightly
-              tethered to something we use in life. Every object, transformed by
-              3Dpass, acquires its own unique and sustainable identity called
-              HASH ID which serves to be as 1:1 correspondence between the
-              object and its asset.
-            </div>
             <div className="page-content-text">Useful Links: </div>
             <ul className="page-content-text">
               <li>
-                <Link to="https://github.com/3Dpass/3DP">The Network NODE</Link>
+                <Link to="/proof-of-scan">Proof of Scan</Link> consensus protocol description
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP">The Ledger of Things NODE</Link>
               </li>
               <li>
                 <Link to="https://github.com/3Dpass/3DP/wiki">Development Wiki</Link>
@@ -717,6 +708,12 @@ const Features = () => {
             In order to recieve some funds, atomically sent from one account to another, the "claim" transaction must be initiated by the target account. 
             If the swap has still not been claimed during the timeframe limit, it will then be available to cancel by its sender. 
            </div>
+           <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/atomic_swap.png"
+              alt="img"
+            />
           </div>
         </div>
         <div className="page-content-block" id="dex">
@@ -734,6 +731,18 @@ const Features = () => {
             <Link to="https://github.com/3Dpass/swap">DEX UI GitHub link</Link>
             </li>
             </ul>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/the_ledger_of_things_dex.png"
+              alt="img"
+            />
+            <Link to="https://swap.3dpscan.io">
+            <div className="page-lead-content">
+                 Swap your tokens
+                <div className="page-lead-button">Swap</div>
+            </div>
+            </Link>
           </div>
         </div>
         <div className="page-content-block" id="tokenization">
