@@ -642,9 +642,8 @@ ETH SIGNATURE
             </div>
           </div>
         </div>
-        <div className="page-content">
           <div
-            className="page-content-block first-page-block"
+            className="page-content-block"
             id="distribution"
           >
             <div className="page-content-inner">
@@ -872,7 +871,6 @@ ETH SIGNATURE
               </div>
             </div>
           </div>
-        </div>
       </div>
     </React.Fragment>
   );

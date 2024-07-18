@@ -982,12 +982,12 @@ cargo build --release
         <div className="page-content-block" id="docker">
           <div className="page-content-inner">
             <div className="page-content-title">
-              How to start mining with Docker (Windows; Linux; Mac OS; any
+              How to start mining with Docker (Windows; Linux; Mac OS; Android, any
               system)
             </div>
             <div className="page-content-text">
-              Run both Node and Miner in one command. Windows,
-              Linux, Mac OS are all supported.
+              Run both Node and Miner in one command on <i>Windows,
+              Linux, Mac OS, Android</i> and all the systems supported by Docker.
             </div>
             <div className="page-content-text">
               1. Install{" "}
@@ -995,7 +995,7 @@ cargo build --release
               <Link to="https://docs.docker.com/compose/install/">Docker Compose</Link>.
             </div>
             <div className="page-content-text">
-              2. Open Terminal and clone 3DPass Node. Use this command:
+              2. Open Terminal and clone 3DPass Node. Copy and paste this command into your Terminal window:
             </div>
             <pre className="main-pre">
                {`
@@ -1003,17 +1003,13 @@ git clone https://github.com/3Dpass/3DP.git
               `}
             </pre>
             <div className="page-content-text">
-              3. List the project directory `3DP`and install Minier (<i>./3DP/miner.js</i>) with pnpm:
+              3. List the project directory `3DP`:
             </div>
             <pre className="main-pre">
                {`
 cd 3DP
-pnpm install
               `}
             </pre>
-            <div className="page-content-text">
-             Make you have <i>`./3DP/pnpm-lock.yaml`</i> file in the folder after it is completed. 
-            </div>
             <div className="page-content-text">
               4. Run both Node and Miner with the following command:
             </div>
@@ -1112,13 +1108,15 @@ docker compose up
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-             8.1. There is an option to speed up syncing process by leveraging the blockchian {" "}
-             `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshots</Link> provided by {" "}
-             the community members for newcomers:
+             8.1. There is an option to speed up syncing process by starting the Node with the 
+             latest blockchian `db`snapshots provided by the community members for newcomers:
             </div>
             <ul className="page-content-text">
               <li>The blockchain db location: <i>./3DP/data/chain/chains/3dpass/db</i></li>
-              <li>Download and unpack the latest `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link></li>
+              <li>Download and unpack the latest `db` from either {" "}
+                <Link to="https://github.com/Snezhnaya-Fatui/p3d-mainnet-db">repo 1</Link> or {" "}
+                <Link to="https://github.com/xchainw/p3d-db/releases">repo 2</Link>
+              </li>
               <li>Replace the existing `db` folder with the one you just downloaded</li>
               <li>Restart the node and miner</li>
             </ul>
@@ -1161,7 +1159,7 @@ docker compose rm -f
               Set up full Node
             </div>
             <div className="page-content-text">
-              1. Open Terminal and clone the Node from the GitHub:
+              1. Open Terminal and clone the Node from the GitHub to your computer:
             </div>
             <pre className="main-pre">
               {`
@@ -1175,10 +1173,56 @@ cd 3DP
                pre-built binaries or build the Node yourself out of the source codes.
                </div>
             <div className="page-content-text">
-              <i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, put the binary into the <i>`./target/release/poscan-consensus`</i>:
+              <i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, put the binary 
+              into the <i>`~/3DP/target/release/poscan-consensus`</i> and make it executable with the `<code>cmod a+x poscan-consensus</code>` command.
             </div>
             <div className="page-content-text">
-              3. Generate your mining account (standard account, 'sr25519' type):
+              3. Generate a bunch of keys for your account and import them into keystore. Create new account, if needed.
+              There is a <Link to="#script">script</Link> in place to set it up automatically. An alternative option is to 
+              proceed with the <Link to="#manual">manual set up</Link>. Once your keyset is ready, <Link to="#run">start your node</Link> . 
+            </div>
+            <div className="page-content-text" id="script">
+              USING THE SCRIPT
+            </div>
+            <div className="page-content-text">
+              3.1. Generate new account and import all of your keys (Mining key, GRANDPA key and ImOnline key) at once with the <i>keygen.sh</i> script. 
+              Save your Secret Seed phrase in a safe place: 
+            </div>
+            <pre className="main-pre">
+              {`
+sh keygen.sh
+                    `}
+            </pre>
+            <div className="page-content-text">
+              3.2. Have you already had a P3D account, use the <i>keygen_seed.sh</i> script
+              to generate the keys out of your Secret Seed phrase and import them all at once.
+            </div>
+            <div className="page-content-text">
+              Put your Secret Seed phrase into the <i>~/P3D/keygen_seed.sh</i> file like this:
+            </div>      
+            <pre className="main-pre">
+              {`
+#! /bin/bash
+# A keyset will be generated out of the seed phrase below
+MEMO_SEED="PUT YOUR MEMO SEED HERE"
+                    `}
+            </pre>
+            <div className="page-content-text">
+              Save the the <i>keygen_seed.sh</i> and execute the script:
+            </div>
+            <pre className="main-pre">
+              {`
+sh keygen_seed.sh
+                    `}
+            </pre>
+            <div className="page-content-text" id="manual">
+              MANUAL KEYS SET UP 
+            </div>
+            <div className="page-content-text">
+              3.3. If leveraging the script doesn't fit, the manual procedure will be as follows: 
+            </div>
+            <div className="page-content-text">
+              3.3.1. Generate your mining account (standard account, 'sr25519' type):
             </div>
             <pre className="main-pre">
               {`
@@ -1194,7 +1238,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              4. Register your mining key in the keystore:
+              3.3.2. Register your mining key in the keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1202,7 +1246,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
                     `}
             </pre>
             <div className="page-content-text">
-              5. Derive the key ('ed25519' type) for GRANDPA finalizaton from your seed phrase (THE SEED PHRASE FROM YOUR MINING ACCOUNT MUST BE USED):
+              3.3.3. Derive the key ('ed25519' type) for GRANDPA finalizaton from your seed phrase (THE SEED PHRASE FROM YOUR MINING ACCOUNT MUST BE USED):
             </div>
             <pre className="main-pre">
               {`
@@ -1221,7 +1265,7 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
                     `}
             </pre>
             <div className="page-content-text">
-              6. Insert the GRANDPA key into the keystore:
+              3.3.4. Insert the GRANDPA key into the keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1240,8 +1284,8 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
 ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
-            <div className="page-content-text">
-              7. Start the Node with the following:
+            <div className="page-content-text" id="run">
+              4. Start the Node with the following:
             </div>
             <pre className="main-pre">
               {`
@@ -1260,7 +1304,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
               connections and forwarded to your server's local LAN IP. Check your Node on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
             <div className="page-content-text">
-              8. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
+              5. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
               It must be <i>"on idle"</i> for the mining process to start.
             </div>
             <img
@@ -1270,13 +1314,15 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-             8.1. There is an option to speed up syncing process by leveraging the blockchian {" "}
-             `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshots</Link> provided by {" "}
-             the community members for newcomers:
+             5.1. There is an option to speed up syncing process by starting the node from the latest blockchian {" "}
+             `db` snapshot provided by the community members for newcomers:
             </div>
             <ul className="page-content-text">
               <li>The blockchain db location: <i>~/3dp-chain/chains/3dpass/db</i></li>
-              <li>Download and unpack the latest `db` <Link to="https://github.com/xchainw/p3d-db/releases">snapshot</Link></li>
+              <li>Download and unpack the latest `db` from either {" "}
+                <Link to="https://github.com/Snezhnaya-Fatui/p3d-mainnet-db">repo 1</Link> or {" "}
+                <Link to="https://github.com/xchainw/p3d-db/releases">repo 2</Link>
+              </li>
               <li>Replace the existing `db` folder with the one you just downloaded</li>
               <li>Restart the Node</li>
             </ul>
@@ -1292,7 +1338,7 @@ rm -rf ~/3dp-chain/chains/3dpass/db
               Start mining
             </div>
             <div className="page-content-text">
-              Make sure you have <Link to="/mainnet#simple_node">full Node</Link> set up and proceed with the following steps:
+             Make sure you have <Link to="/mainnet#simple_node">full Node</Link> set up and proceed with the following steps:
               </div>
             <div className="page-content-text">1. Install <Link to="https://bun.sh/">Bun</Link></div>
             <div className="page-content-text">2. Install miner:</div>
