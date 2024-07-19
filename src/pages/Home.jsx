@@ -83,10 +83,10 @@ const Home = () => {
       <div className="home-one-content home-first-content inner-content">
         <div className="home-left-title">The Ledger Of Things</div>
         <div className="home-left-description">
-          Layer 1 blockchain, Proof of Scan is a revolutionary protocol preventing digital assets
-          from being copied (<i> PoW ASIC-resistant and CPU oriented, object recognition-based + PoS</i>), Grid2d recognition algorithm, deterministic blockchain finality, 
-          3Dpass Coin: mineable, 3DPRC-2 tokenization standard, Decentralized  Open Governance, Forkless upgrade, 
-          On-chain Identity, Smart Contracts. 
+          Layer 1 blockchain, <Link to="/features#scanproof" className="message-text">Proof of Scan</Link> is a revolutionary protocol preventing digital assets
+          from being copied (<i> PoW ASIC-resistant and CPU oriented, object recognition-based + PoS</i>), <Link to="/grid2d" className="message-text">Grid2d</Link> recognition algorithm, <Link to="/features#scanproof-deterministic" className="message-text">deterministic</Link>  blockchain finality, 
+          3Dpass Coin: <Link to="/mainnet" className="message-text">mineable</Link>,  <Link to="/proof-of-scan#3dprc-2" className="message-text">3DPRC-2</Link> tokenization standard, Decentralized <Link to="/governance#general" className="message-text">Open Governance</Link>,{" "} 
+          <Link to="/proof-of-scan#forkless-upgrade" className="message-text">Forkless upgrade</Link>, On-chain Identity, <Link to="/features#smartcontracts" className="message-text">Smart Contracts</Link>. 
         </div>
         <div className="home-items-content">
           <HomeItem

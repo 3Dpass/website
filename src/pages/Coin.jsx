@@ -140,7 +140,7 @@ ETH SIGNATURE
           </a>
           <a href="#distribution-contribution">
             <div className="page-nav-inside">
-              Contribution Rewards Program
+              Contribution Grant Program
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -698,87 +698,15 @@ ETH SIGNATURE
                 className="page-content-subtitle"
                 id="distribution-contribution"
               >
-                Mainnet Rewards program to speed up 3DPass
+                Contribution Grant Program 
               </div>
               <div className="page-content-text">
-                All the activities covered by the program will be paid only in
-                P3D. No other currencies are accepted. 
-              </div>
-              <div className="page-content-text">
-                For example, if you applied for the budget, the rewards would be {" "}
-                estimated assuming the certain amount of hours needed and the {" "}
-                average market price for the equal service. However, the final {" "}
-                amount will be determined on the proccess of negotiations. The {" "}
-                most important questions will be resolved by means of either {" "}
-                 <Link to="/governance#council">Governance</Link> vote {" "}
-                or public <Link to="/governance#democracy">Referenda</Link>.
-              </div>
-              <div className="page-content-subtitle">Grants</div>
-              <div className="page-content-text">
-                There is a list of some important projects we would like to
-                highlight and grant a decent amount of P3D for its development.
-              </div>
-              <ul className="page-content-text">
-                <li>
-                  New recognition algorithm implementation - 3 000 000 P3D
-                </li>
-                <li>
-                  Finding and fixing a serious security issue - from 1 000 000  P3D 
-                </li>
-                <li>
-                  Useful dApp or project based on "The Ledger of Things" (ex. marketplace of assets, game, stable coin) - from 1 000 000  P3D
-                </li>
-                <li>
-                  Useful integrations around The Ledger of Things eco-system
-                </li>
-                <li>
-                  PR and promo activities (IT product oriented)
-                  </li>
-              </ul>
-              <div className="page-content-text">
-                Feel free to apply for grant over <Link to="https://discord.gg/u24WkXcwug">discord</Link>, provided you agree to
-                publish the source code, pass its review and maintain the
-                project in the future.
-              </div>
-              <div className="page-content-subtitle">
-                The projects actually granted
-              </div>
-              <ul className="page-content-text">
-                <li>Non official node and miner: <Link to="#">"easy-3dp"</Link></li>
-                <li>Web Block Explorer: <Link to="https://3dpscan.io/">https://3dpscan.io/</Link></li>
-                <li>Mining pool trait: <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/mining-pool">GitHub</Link></li>
-                <li>On-chain identity Registrar bot: <Link to="https://github.com/Caldera-Trade/3dp-registrar/">GitHub</Link></li>
-                <li>Non-official minier: <Link to="https://github.com/3DP-The-AllFather/unofficial-3dp-miner">GitHub</Link></li>
-              </ul>
-              <div className="page-content-subtitle">Developers:</div>
-              <div className="page-content-text">
-                Guys, your help is always appreciated! Get yourself familiar with some <Link to="https://github.com/3Dpass/3DP/blob/main/CONTRIBUTING.md">contribution guidelines</Link> and dive down into 3Dpass. 
-                The most common repositories to contribute:
-              </div>
-                <ul className="page-content-text">
-                <li><Link to="https://github.com/3Dpass/3DP">The Ledger Of Things Node</Link></li>
-                <li><Link to="https://github.com/3Dpass/wallet">3Dpass Web3 wallet</Link></li>
-                <li><Link to="https://github.com/3Dpass/threedpass">3Dpass mobile wallet</Link></li>
-                <li><Link to="https://github.com/3Dpass/pass3d-pool">Official Mining tools</Link></li>
-                <li><Link to="https://github.com/3Dpass/pass3d">Object recognition tools</Link></li>
-              </ul>
-              <div className="page-content-text">
-                Looking forward to your Pull Request!
-              </div>
-              <div className="page-content-subtitle">Marketing activities:</div>
-              <div className="page-content-text">
-                Local translation, PR, Articles, Social Media Marketing - should be product oriented!
-              </div>
-              <div className="page-content-subtitle">
-                Marketplaces, Games, DEXes, CEXes, E-commerce, and other projects:
-              </div>
-              <div className="page-content-text">
-                <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2 {" "}
-                 </Link>RWA tokenization standard integration. Facilitating to The Ledger of Things {" "}
-                 eco-system development, including but not limited to the DEX {" "}
-                 <Link to="https://swap.3dpscan.io">swap.3dpscan.io</Link> 
-
-              </div>
+              There is a <Link to="/grants">Contribution Grant Program</Link> operating around The Ledger of Things, 
+              which is established and managed by 3Dpass {" "}
+              <Link to="/community#governance">Open Governance</Link>{" "}
+              to encounrage community efforts on development of the eco-system. The program offers a variety of 
+              bounty options for contributors, as long as they meet the program <Link to="/grants">conditions</Link>.
+               </div>
               <div
                 className="page-content-subtitle"
                 id="distribution-investors"

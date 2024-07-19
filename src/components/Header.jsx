@@ -49,7 +49,13 @@ const Header = () => {
     <div>
     <div className="special-message">
   <div style={{width: "100%"}}>
-    <div className="message-text">Hey dev, we need your contribution and support. We are creating something special here!</div>
+    
+      <a  href="/grants" className="message-text">
+      <div className="message-text">
+      Hey dev, we need your contribution and support. We are creating something special here!
+      </div>
+      </a>
+     
   </div>
 </div>
     <header className="main-header">

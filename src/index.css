@@ -16,14 +16,13 @@ body {
   font-size: 18px;
   padding-top: 16px;
   text-align: center;
-  
+  text-decoration: none;
 }
 
 .special-message {
   background-color: #141414;
   height: 55px;
 
-  ;
 }
 
 .main-holder {

@@ -17,6 +17,7 @@ import ProofOfScan from "./pages/ProofOfScan";
 import ScrollToTop from "./components/ScrollToTop";
 import Testnet from "./pages/Testnet";
 import TestnetRewards from "./pages/TestnetRewards";
+import Grants from "./pages/Grants";
 
 function App() {
   return (
@@ -31,10 +32,7 @@ function App() {
             <Route path="/coin" element={<Coin />} />
             <Route path="/mainnet" element={<Mainnet />} />
             <Route path="/mobile-wallet" element={<MobileWallet />} />
-            <Route
-              path="/assets"
-              element={<Assets />}
-            />
+            <Route path="/assets" element={<Assets />} />
             <Route path="/testnet-rewards" element={<TestnetRewards />} />
             <Route path="/forkless-upgrade" element={<ForklessUpgrade />} />
             <Route path="/testnet" element={<Testnet />} />
@@ -42,6 +40,7 @@ function App() {
             <Route path="/grid2d" element={<Grid2D />} />
             <Route path="/governance" element={<Governance />} />
             <Route path="/proof-of-scan" element={<ProofOfScan />} />
+            <Route path="/grants" element={<Grants />} />
           </Routes>
         </ScrollToTop>
       </main>

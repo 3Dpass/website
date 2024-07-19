@@ -1194,11 +1194,11 @@ sh keygen.sh
                     `}
             </pre>
             <div className="page-content-text">
-              3.2. Have you already had a P3D account, use the <i>keygen_seed.sh</i> script
+              3.2. Have you already had an account, use the <i>keygen_seed.sh</i> script
               to generate the keys out of your Secret Seed phrase and import them all at once.
             </div>
             <div className="page-content-text">
-              Put your Secret Seed phrase into the <i>~/P3D/keygen_seed.sh</i> file like this:
+              Put your Secret Seed phrase into the <i>~/3DP/keygen_seed.sh</i> file like this:
             </div>      
             <pre className="main-pre">
               {`
