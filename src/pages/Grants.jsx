@@ -79,7 +79,7 @@ const Grants = () => {
                   : "one-page-nav"
               }
             >
-              Integrations bounty
+              Integration bounty
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -245,12 +245,12 @@ const Grants = () => {
                 <Link to="https://3dpassmining.info">Mining dash-board</Link>"
                </li>
                <li>
-                Validators: "Join the validator set getting rewarded 50% of block rewards, 
-                <Link to="/mainnet#validator">How to become Validaotor</Link>"
+                Validators: "Join the validator set getting rewarded 50% of block rewards, {" "}
+                <Link to="/mainnet#validator">How to become Validator</Link>"
                </li>
-               <li><Link to="/grants#dev-bounty">Developers</Link>: Build your dApp on The Ledger of Things,
+               <li>Developers: Build your dApp on The Ledger of Things,
                 use <Link to="/features#3dprc-2">3DPRC-2</Link> tokenization standard, contribute on the {" "}
-                <Link to="https://github.com/3dpass">GitHub</Link> and get granted.
+                <Link to="https://github.com/3dpass">GitHub</Link> and get <Link to="/grants#dev-bounty">granted</Link>.
                </li>
                <li>
                  Users: "Get your assets tokenized with the <Link to="/mobile-wallet">mobile wallet</Link> - 
@@ -269,7 +269,7 @@ const Grants = () => {
               Should be avoided:
             </div>
             <div className="page-content-text">
-              Trading channels, pump/dump signals, any ohter useless activities should never be rewarded. 
+              Trading channels, pump/dump signals, any other useless activities should never be rewarded. 
               All actions of that sort are totally out of the project strategy.
             </div>
             <div className="page-content-subtitle">
@@ -302,7 +302,7 @@ const Grants = () => {
         <div className="page-content-block" id="integrations-bounty">
           <div className="page-content-inner">
             <div className="page-content-title">
-              Integrations and partnersip bounty program
+              Integration bounty program
             </div>
             <div className="page-content-text">
               Having <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
