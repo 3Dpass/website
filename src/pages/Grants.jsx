@@ -172,6 +172,12 @@ const Grants = () => {
                 who is to check on the Pull Request and approve the payout.
               </li>
             </ul>
+            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <div className="page-lead-content">
+               Bug Bounty
+                <div className="page-lead-button">Apply</div>
+            </div>
+            </a>
           </div>
         </div>
         <div className="page-content-block" id="dev-bounty">
@@ -221,6 +227,12 @@ const Grants = () => {
                 who is to check on the Pull Request and approve the payout.
               </li>
             </ul>
+            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <div className="page-lead-content">
+               Dev Bounty
+                <div className="page-lead-button">Apply</div>
+            </div>
+            </a>
           </div>
         </div>
         <div className="page-content-block" id="marketing-bounty">
@@ -240,29 +252,35 @@ const Grants = () => {
             </div>
             <ul className="page-content-text">
                <li>
-                 Mining: "Join distributed mining, ASIC-resistant, 
+                 Mining:<br />
+                 - "Join distributed mining, ASIC-resistant, 
                  CPU, 50% of block rewards, <Link to="/mainnet">how to mine P3D</Link>,
                 <Link to="https://3dpassmining.info">Mining dash-board</Link>"
                </li>
                <li>
-                Validators: "Join the validator set getting rewarded 50% of block rewards, {" "}
-                <Link to="/mainnet#validator">How to become Validator</Link>"
+                Validators:<br />
+                <i>- "Join the validator set getting rewarded 50% of block rewards, {" "}
+                <Link to="/mainnet#validator">How to become Validator</Link>"</i>
                </li>
-               <li>Developers: Build your dApp on The Ledger of Things,
+               <li>Developers:<br />
+               <i>- "Build your dApp on The Ledger of Things,
                 use <Link to="/features#3dprc-2">3DPRC-2</Link> tokenization standard, contribute on the {" "}
-                <Link to="https://github.com/3dpass">GitHub</Link> and get <Link to="/grants#dev-bounty">granted</Link>.
+                <Link to="https://github.com/3dpass">GitHub</Link> and get <Link to="/grants#dev-bounty">granted</Link>."</i>
                </li>
                <li>
-                 Users: "Get your assets tokenized with the <Link to="/mobile-wallet">mobile wallet</Link> - 
-                 mint share tokens and trade them on DEX: <Link to="https://swap.3dpscan.io">https://swap.3dpscan.io</Link> "
+                 Users:<br />
+                 <i> - "Get your assets tokenized with the <Link to="/mobile-wallet">mobile wallet</Link> - 
+                 mint share tokens and trade them on DEX: <Link to="https://swap.3dpscan.io">https://swap.3dpscan.io</Link> "</i>
                </li>
                <li>
-                 Investors: "Come up with some useful agenda to The Ledger of Things, 
-                 join to implement your plan and add to the project value, capitalize on the vallue"
+                 Investors:<br /> 
+                 <i>- "Come up with some useful agenda to The Ledger of Things, 
+                 join to implement your plan and add to the project value, capitalize on the vallue"</i>
                </li>
                 <li>
-                Observers: "Take part in "game to earn" mechanics, entertain yourself, 
-                while picking up some practice using The Ledger of Things"
+                Observers:<br />
+                <i>- "Take part in "game to earn" mechanics, entertain yourself, 
+                while picking up some practice using The Ledger of Things"</i>
                 </li>
             </ul>
             <div className="page-content-subtitle">
@@ -297,6 +315,12 @@ const Grants = () => {
                 who is to check on the posts and approve the payout.
               </li>
             </ul>
+            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <div className="page-lead-content">
+               Marketing Bounty
+                <div className="page-lead-button">Apply</div>
+            </div>
+            </a>
           </div>
         </div>
         <div className="page-content-block" id="integrations-bounty">
@@ -360,6 +384,12 @@ const Grants = () => {
                 who is to check on the Pull Request and approve the payout.
               </li>
             </ul>
+            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <div className="page-lead-content">
+               Integration Bounty
+                <div className="page-lead-button">Apply</div>
+            </div>
+            </a>
           </div>
         </div>
       </div>

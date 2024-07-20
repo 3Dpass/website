@@ -714,20 +714,24 @@ ETH SIGNATURE
                 Investors
               </div>
               <div className="page-content-text">
-                Dear Investors, private sale was closed in 2022 by the communinty desision. Private sale {" "}
+                Dear Investors, private sale was closed in 2022 by the community desision, totaling with ~5M P3D at 0.0495 USD. Private sale {" "}
                 budget was turned into the public <Link to="/coin#contribution-budget">contribution budget</Link> {" "}
                 controlled by the <Link to="/community#governance">Open Governance</Link>. No ICO has ever taken place around the project. 
               </div>
               <div className="page-content-text">
-                The best suggestion for investors would be to adhere to the formula of success as follows:
+                The formula of synergy would be as follows:
               </div>
               <div className="page-content-text">
-                <i> 1. Come up with some useful agenda to The Ledger of Things → 2. Head in and implement your agenda to add some value → 3. Capitalize on the project value.</i>
+                <i> 1. Come up with some useful agenda to The Ledger of Things → 2. Head in and implement your plan to add some value → 3. Capitalize on the project value.</i>
               </div>
               <div className="page-content-text">
-                The contribution aspect should never be skipped in the formula. P3D is a pure unility coin, {" "}
-                 and the best way to impact on its value is to add to its use. 
+                The contribution aspect should never be skipped in the formula. P3D is a pure unility token, {" "}
+                and the best way to impact on its value is to add to its use. Additional options would be:
               </div>
+              <ul className="page-content-text">
+                <li>Joining the <Link to="/community#governance">Council</Link> to balance decisions by vote</li>
+                <li>Participating in the <Link to="/grants"> Contribution Grant Program</Link> to ask communinty support for your project</li>
+              </ul>
               <div className="page-content-subtitle" id="distribution-rules">
                 P3D mining rules (PoW ASIC-resistant, CPU oriented protocol)
               </div>

@@ -1185,7 +1185,7 @@ cd 3DP
               USING THE SCRIPT
             </div>
             <div className="page-content-text">
-              3.1. Generate new account and import all of your keys (Mining key, GRANDPA key and ImOnline key) at once with the <i>keygen.sh</i> script. 
+              3.1. Generate new account and import all of your keys <i>(Mining key, GRANDPA key and ImOnline key)</i> at once with the <i>keygen.sh</i> script. 
               Save your Secret Seed phrase in a safe place: 
             </div>
             <pre className="main-pre">
@@ -1245,7 +1245,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
 ./target/release/poscan-consensus import-mining-key 'your secret seed phrase' --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json
                     `}
             </pre>
-            <div className="page-content-text">
+            <div className="page-content-text" id="grandpa_key">
               3.3.3. Derive the key ('ed25519' type) for GRANDPA finalizaton from your seed phrase (THE SEED PHRASE FROM YOUR MINING ACCOUNT MUST BE USED):
             </div>
             <pre className="main-pre">
@@ -1303,7 +1303,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
               Make sure you have the external port <i>`30333`</i> open for incoming
               connections and forwarded to your server's local LAN IP. Check your Node on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
-            <div className="page-content-text">
+            <div className="page-content-text" id="sync">
               5. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
               It must be <i>"on idle"</i> for the mining process to start.
             </div>
@@ -1501,6 +1501,7 @@ bun miner.js --host 127.0.0.1 --port 9933
               <li>Internet trafic: No limits</li>
               <li>Performance imporing new blocks: up to 10 sec per block</li>
               <li>Performance handling the user objects: up to 20 sec per object</li>
+              <li>On-chain identity level of confidence: <Link to="#chain-general">Reasonable</Link></li>
             </ul>
             <div className="page-content-subtitle" id="validator-threshold">
               Selection Threshold
@@ -1549,34 +1550,36 @@ bun miner.js --host 127.0.0.1 --port 9933
               <li>
                 Not being able to get the user object processed in 20 sec: 100% of the  user object validation serivce fee and getting out of the validator set
               </li>
+              <li>
+                Losing <Link to="#chain-general">Reasonable</Link> level of confidence: getting out of the validator set
+               </li>
             </ul>
             <div className="page-content-subtitle" id="validator-setting">
               Setting up procedure:
             </div>
             <div className="page-content-text">
-              Make sure you have already set up a <Link to="/mainnet#linux-mac">regular node</Link> by the time you get to this tutorial. List to the project directory:
+              1. Set up a full Node in accordance to this <Link to="/mainnet#linux-mac">tutorial</Link> {" "} 
+              and list to the project directory:
             </div>
             <pre className="main-pre">
               {`
 cd 3DP
                     `}
             </pre>
-            <div className="page-content-text">1. Set up imOnline key.</div>
             <div className="page-content-text">
-              Insert imOnline key into the keystore by means
-              of using this command:
-            </div>
+              2. Make sure you have all the keys required in your keystore <i>~/3dp-chain/chains/3dpass/keystore</i>:
+              </div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus key insert --scheme Sr25519 --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --key-type imon --suri 0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3
+ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
             <div className="page-content-text">
-              <code>--suri</code> is the Secret seed (hex) from your GRANDPA key. Check your
-              keystore <code>~/3dp-chain/chains/3dpass/keystore</code>. There supposed to be
-              3 keys now: Mining key, Grandpa and Imonline key. Imonline key
-              looks almost the same to your Minig key, but with the different
-              prefix "696...". Your keystore should look this way:
+            There supposed to be three keys in there, such as: <i>Mining key, 
+            GRANDPA key and ImOnline key</i>. The whole bunch of keys must have 
+            been derived from the same Secret Seed phrase (account is <Link to="#addresses">defined</Link> by your Secret Seed phrase).
+            It is recommended that you generate the whole bunch of keys with this {" "}
+            <Link to="#script">script</Link> to avoid potential mistakes. 
             </div>
             <img
               className="page-img"
@@ -1585,30 +1588,43 @@ cd 3DP
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              2. Run the Node without mining as it's described <Link to="/mainnet#linux-mac">here</Link>
+             You might, as well, have created both <i>Mining key</i> and <i>GRANDPA key</i> {" "}
+             <Link to="manual">manually</Link> and then use this command to add <i>ImOnline key</i> to your keystore:
+            </div>
+            <pre className="main-pre">
+              {`
+./target/release/poscan-consensus key insert --scheme Sr25519 --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --key-type imon --suri 0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3
+                    `}
+            </pre>
+            <div className="page-content-text">
+              <code>--suri</code> is the Secret seed (hex) from your <Link to="#grandpa_key">GRANDPA key</Link>.
             </div>
             <div className="page-content-text">
-              3. Connect <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polka wallet</Link> to the Node in local (on the same server
-              wss://127.0.0.1.:9944)
+              3. Run the Node with <Link to="/mainnet#run">this</Link> command and get it <Link to="#sync">synced</Link> with the network.
+            </div>
+            <div className="page-content-text">
+              4. Connect <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/chainstate">Polka js wallet</Link> to the Node in local 
+              (RPC API endpoint for your local server is ws://127.0.0.1.:9944).
             </div>
             <div className="page-content-text" id="lock-check">
-              4. Lock up your funds until a certain block number in the future.
+              5. Lock up your funds to a certain block number in the future.
               There is no way to unlock until it's expired.
             </div>
             <ul className="page-content-text">
               <li>
-                Amount u128 (in min units): +12 zeros at the tail e.x. 400 000
-                P3D becomes 400 000 000 000 000 000)
+                Amount <i>u128</i> (in min units): +12 zeros at the tail e.x. 400 000
+                P3D becomes 400 000 000 000 000 000
               </li>
               <li>
                 Minimum lock time: 1 month (+ 43200 blocks ahead the current
                 best block)
               </li>
               <li>
-                Auto re-lock option (period): a period in blocks every which
-                funds are going to be re-locked automatically. For example, if
-                45000 is chosen, then the funds are going to be re-locked for
-                the next 45000 blocks every 45000 blocks.
+                Auto <i>re-lock</i> option (period): a period in blocks your
+                funds are going to be re-locked over and over automatically. For example, if
+                chosen 45000 blocks, when expired the funds are going to be re-locked for
+                the next 45000 blocks over and over again, until you <Link to="#validator-exit">exit</Link> {" "}
+                the loop manually. Skip this option if you want to control your locks manually.
               </li>
             </ul>
             <img
@@ -1618,7 +1634,7 @@ cd 3DP
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              5. Join the <Link to="https://discord.gg/u24WkXcwug">Discord</Link> and apply for validator to the Council. Make the set up payment during the application process. The application goes through the <Link to="/governance#council"></Link> Council vote. 
+              6. Join the <Link to="https://discord.gg/u24WkXcwug">Discord</Link> and apply for validator to the Council. Make the set up payment during the application process. The application goes through the <Link to="/governance#council"></Link> Council vote. 
             </div>
             {/*<div className="page-content-text">
               5. Add your mining address into the Validator set:
@@ -1640,7 +1656,7 @@ cd 3DP
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              6. Do rotateKeys and get "proof Bytes":
+              7. Do rotateKeys and get "proof Bytes":
             </div>
             <img
               className="page-img"
@@ -1649,7 +1665,7 @@ cd 3DP
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              7. Use your GRANDPA Public key (hex), Mining public key (hex) and
+              8. Use your GRANDPA Public key (hex), Mining public key (hex) and
               the proof Bytes to set up session keys:
             </div>
             <img
@@ -1668,10 +1684,10 @@ cd 3DP
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              8. Wait for ~240 blocks (2 sessions) to pass
+              9. Wait for ~240 blocks (2 sessions) to pass
             </div>
             <div className="page-content-text">
-              9. Make sure, that you can see your GRANDPA SS58 Address in the
+              10. Make sure, that you can see your GRANDPA SS58 Address in the
               Grandpa Authorities:
             </div>
             <img
@@ -1681,7 +1697,7 @@ cd 3DP
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              10. Would you like to highlight your node with the "dot" on the <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
+              11. Would you like to highlight your node with the "dot" on the <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
             </div>
             <pre className="main-pre">
               {`
@@ -1695,7 +1711,7 @@ cd 3DP
                     `}
             </pre>
             <div className="page-content-text">
-              11. Check if your node is not being exposed on the missing list.
+              12. Check if your node is not being exposed on the missing list.
               If your node is unable to vofe for some reason (incorrect setup
               keys, firewall, server responce longer than 333 ms, etc.) it's
               going to show up as missing, like this:
@@ -1760,11 +1776,15 @@ cd 3DP
             </div>
             <div className="page-content-text">
               There is a legitimate way for Validators to exit without getting
-              penalties, which is to wait until after the lock period expires
-              and do "unlock funds". If the auto re-lock option have been used
-              so far, new lock is required to cancel autolocking. Just set up a
-              new lock without auto re-lock period specified and wait till it
-              has expired.
+              penalties, which is to wait until the lock period has expired
+              and call out the <i>"unlock funds"</i>.
+            </div>
+            <div className="page-content-text">
+              In case the auto <i>re-lock</i> option is being used,
+              placing new lock is required to exit the loop. Just set up a
+              new lock without auto <i>re-lock</i> option <i>(min lock period is + 43200 
+              blocks ahead the current best block)</i> and wait, till it has expired.
+              And then call out the <i>"unlock funds"</i>.
             </div>
             <div className="page-content-text">
               Unlock funds with validatorSet - unlock:

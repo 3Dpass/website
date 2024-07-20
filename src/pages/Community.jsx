@@ -210,7 +210,7 @@ const Community = () => {
         </div>
         <div className="page-content-block" id="governance">
           <div className="page-content-inner">
-            <Link to="/governance"><div className="page-content-title">Governance</div></Link>
+            <Link className="message-text" to="/governance"><div className="page-content-title">Governance</div></Link>
             <div className="page-content-text">
               3DPass leverages a sophisticated self governance mechanism, which
               allows it to evolve gracefully overtime at the ultimate behest of
@@ -252,8 +252,7 @@ const Community = () => {
               waiting period before distribution.
             </div>
             <div className="page-content-text">
-              There is also the <Link to="/governance#governance">Governance token 3DPg</Link>, which serves for internal
-              communinty needs, permissions and governance services.
+              Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
             </div>
           </div>
         </div>

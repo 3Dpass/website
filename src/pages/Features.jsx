@@ -273,7 +273,7 @@ const Features = () => {
               src="/images/slide2_phone1.png"
               alt="img"
             />
-            <a href="/mobile-wallet#download">
+            <a className="message-text" href="/mobile-wallet#download">
             <div className="page-lead-content">
               Mobile Wallet
                 <div className="page-lead-button">Download</div>
@@ -524,7 +524,7 @@ const Features = () => {
                 </Link>
               </li>
             </ul>
-            <a href="/mainnet">
+            <a className="message-text" href="/mainnet">
             <div className="page-lead-content">
               Mainnet
                 <div className="page-lead-button">Join the Network</div>
@@ -557,7 +557,7 @@ const Features = () => {
               className="page-video"
               controls
             ></video>
-            <Link to="/assets#object-authentication">
+            <Link className="message-text" to="/assets#object-authentication">
             <div className="page-lead-content">
                Put your object on The Ledger of Things
                 <div className="page-lead-button">Put the object</div>
@@ -629,7 +629,7 @@ const Features = () => {
             For example, if the object weight is 1000 gram, then the "MaxSupply=1000" limit will be set up for the token created (you won't be able to issue more than 1000 minimum indivisible units). 
             While transferring tokens, the object share ownership is being transferred accordingly.
             </div>
-            <Link to="/assets#3dprc2-fungible">
+            <Link className="message-text" to="/assets#3dprc2-fungible">
             <div className="page-lead-content">
                Get the object share tokenized
                 <div className="page-lead-button">Tokenize</div>
@@ -640,7 +640,7 @@ const Features = () => {
             If chosen, the "MaxSupply = 1" limit will be applied to the token created. Whereas "1" is the minimum indivisible unit of The Ledger of Things. 
             By means of transferring this unit, the ownership of the entire object is being transferred.
             </div>
-            <Link to="/assets#3dprc2-non-fungible">
+            <Link className="message-text" to="/assets#3dprc2-non-fungible">
             <div className="page-lead-content">
                Turn the object into non-fungible asset
                 <div className="page-lead-button">Tokenize</div>
@@ -661,7 +661,7 @@ const Features = () => {
               "The Ledger of Things" is equipped with the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> module
               providing some useful methods for dealing with simple fungible assets without a necessity to run a smart contract.
             </div>
-            <Link to="/assets#conventional-fungible-assets">
+            <Link className="message-text" to="/assets#conventional-fungible-assets">
             <div className="page-lead-content">
               Regular fungible asset
                 <div className="page-lead-button">Create</div>
@@ -692,7 +692,7 @@ const Features = () => {
               to closely emulate the functionality of executing contracts on the
               Ethereum mainnet within 3Dpass network.
             </div>
-            <Link to="/assets#smart-contracts">
+            <Link className="message-text" to="/assets#smart-contracts">
             <div className="page-lead-content">
               Smart contract
                 <div className="page-lead-button">Run</div>
@@ -737,7 +737,7 @@ const Features = () => {
               src="/images/the_ledger_of_things_dex.png"
               alt="img"
             />
-            <Link to="https://swap.3dpscan.io">
+            <Link className="message-text" to="https://swap.3dpscan.io">
             <div className="page-lead-content">
                  Swap your tokens
                 <div className="page-lead-button">Swap</div>
