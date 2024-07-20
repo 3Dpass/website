@@ -209,15 +209,15 @@ const Features = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#integration">
+          <a href="#eco-system">
             <div
               className={
-                locationHash.includes("integration")
+                locationHash.includes("eco")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
             >
-              Integration
+              Eco-system
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -929,96 +929,47 @@ const Features = () => {
             </div>
           </div>
         </div>
-        <div className="page-content-block" id="integration">
+        <div className="page-content-block" id="eco-system">
           <div className="page-content-inner">
-            <div className="page-content-title">Integration</div>
+            <div className="page-content-title">Eco-system</div>
             <div className="page-content-text">
-              Given the fact that 3Dpass is an <Link to="https://github.com/3dpass">open source</Link> and non-profit
-              project, meaning anyone can add to development, there is an
-              eco-system scheme (exposed down below) representing general
-              functional elements:
-            </div>
-            <Link to="https://github.com/3Dpass/3DP" className="link-title">
-              3Dpass NODE
-            </Link>
-            <div className="page-content-text">
-              <Link to="/features#ledger">The Ledger of Unique Things</Link> Layer 1 blockchain Node
-              implementation. Based on <Link to="https://substrate.io/">Substrate</Link> framework.
-            </div>
-            <Link to="https://github.com/3Dpass/pass3d" className="link-title">
-              Pass3d Toolkit
-            </Link>
-            <div className="page-content-text">
-              Object recognition algorithms integration (<Link to="/grid2d">Grid2D</Link> and others) This
-              toolkit consists of stable recognition algorithms used for
-              identification of objects (3D objects and others, <Link to="/proof-of-scan#object">learn more {">>"}</Link> ). Since the
-              recognition technology is what the digital transformation process
-              of any object is beginning from, and the result of which would
-              always be its <Link to="/features#3drecognition-hash-id">HASH ID</Link>, it implies every application, integrated
-              into 3Dpass eco-system, to have <Link to="/pass3d">Pass3d</Link> toolkit implemented.
-            </div>
-            <Link to="/features#scanproof" className="link-title">
-              Proof of Scan protocol
-            </Link>
-            <div className="page-content-text">
-              The consensus logic, using <Link to="/pass3d">Pass3d</Link> recognition toolkit, that allows
-              network participants to agree upon the state of the blockchain.
-              Hybrid: PoW + PoA GRANDPA deterministic finality , Algorithm:{" "}
-              <Link to="/grid2d">Grid2D</Link>.
-            </div>
-            <Link to="https://wallet.3dpass.org/" className="link-title">
-              3Dpass Web 3.0 wallet
-            </Link>
-            <div className="page-content-text">
-              Desktop users and IoT labs integration
-            </div>
-            <Link
-              to="https://github.com/3Dpass/threedpass"
-              className="link-title"
-            >
-              Mobile Wallet
-            </Link>
-            <div className="page-content-text">
-              Smartphone and tablets users integration, object recognition and
-              its tokenization
-            </div>
-            <Link
-              to="https://substrate.io/developers/smart-contracts/"
-              className="link-title"
-            >
-              Smart contracts toolkit
-            </Link>
-            <div className="page-content-text">
-              <Link to="https://substrate.io/">Substrate</Link> smart contract tools using <Link to="https://paritytech.github.io/ink-docs/">ink</Link>, a <Link to="https://www.rust-lang.org/">Rust</Link>-based embedded
-              domain specific language (<Link to="https://wiki.haskell.org/Embedded_domain_specific_language">eDSL</Link>) for writing <Link to="https://webassembly.org/">WebAssembly</Link> smart
-              contracts. Learn more about <Link to="https://paritytech.github.io/ink-docs/ink-vs-solidity">how it compares to Solidity</Link>. As well,
-              it allows unmodified EVM code to be executed on 3Dpass blockchain.
-              Some special Substrate features are designed to closely emulate
-              the functionality of executing contracts on the Ethereum mainnet
-              within the 3Dpass network.
-            </div>
-            <Link to="https://ipfs.io/" className="link-title">
-              IPFS storage
-            </Link>
-            <div className="page-content-text">
-              Decentralized storage for assets
-            </div>
-            <Link to="#" className="link-title">
-              RPC
-            </Link>
-            <div className="page-content-text">
-              Remote Procedure Call provides some capabilities that allow
-              blockchain users to interact with the network. The NODE provides
-              HTTP and WebSocket RPC servers. Follow{" "}
-              <Link to="https://github.com/3Dpass/3DP/wiki/Set-up-WSS-for-Remote-Connections">
-                these
-              </Link>{" "}
-              guidelines set up the wss API endpoint.
-            </div>
+              The Ledger of Things eco-system provides a revolutionaly toolkit for the tokenization of objects and its 
+              transformation into Real World Assets (RWA) presented as either <Link to="#3dprc-2-assets">share-tokens</Link> {" "}
+              or <Link to="#3dprc-2-assets">non-fungible</Link> assets. 
+              Once transformed, there is a viriety of options available for the asset owner on how to proceed 
+              with their plan, including but not limited to: transfers, trading, ICO, dApp creation/integration, smart-contracts,
+              cross-chain teleport, etc. 
+              </div>
+              <ul className="page-content-text">
+                <li>
+              <Link to="https://github.com/3Dpass/3DP" className="link-title">Node</Link>{" "}
+              - The implemetation of The Ledger of Things Node
+                </li>
+                <li>
+                <Link to="#3dprc-2" className="link-title">3DPRC-2</Link>{" "}
+                - revolutionary tokinization standard proposed by 3Dpass
+                </li>
+                <li>
+                <Link to="https://swap.3dpscan.io" className="link-title">DEX</Link>{" "}
+                - embedded DEX module
+                </li>
+                <li>
+                  dApps - <Link to="#smart-contracts">smart-contracts</Link> module and runtime development
+                </li>
+                <li>
+                 Cross-chain bridge - to teleport the assets over to the external blockchains
+                </li>
+                <li>
+                 Stablecoins - on-chain or bridged (over the cross-chain bridge)
+                </li>
+                <li>
+                 Launchpads - to welcome start-ups into The Ledger of Things eco-system
+                </li>
+              </ul>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/eco_system1.png"
+              src="/images/lot_eco-system_moon.png"
               alt="img"
             />
           </div>
