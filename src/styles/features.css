@@ -256,6 +256,10 @@
   height: 64px;
 }
 
+.node-line {
+  height: 152px;
+}
+
 .scanproof-line {
   height: 129px;
 }

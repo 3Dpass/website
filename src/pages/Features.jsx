@@ -951,7 +951,10 @@ const Features = () => {
                 </li>
                 <li>
                 <Link to="https://swap.3dpscan.io" className="link-title">DEX</Link>{" "}
-                - embedded DEX module
+                - embedded DEX module to trade share-tokens
+                </li>
+                <li>
+                 Marketplace - to swap non-fungible backed assets
                 </li>
                 <li>
                   dApps - <Link to="#smart-contracts">smart-contracts</Link> module and runtime development
@@ -969,7 +972,7 @@ const Features = () => {
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/lot_eco-system_moon.png"
+              src="/images/lot_eco-system_moon_1.png"
               alt="img"
             />
           </div>

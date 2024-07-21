@@ -121,12 +121,24 @@ const Mainnet = () => {
             >
               Mining SOLO Linux or MacOS
               <div className="page-nav-circle"></div>
-              <div className="page-nav-line object-line"></div>
+              <div className="page-nav-line node-line"></div>
             </div>
           </a>
           <a href="#simple_node">
             <div className="page-nav-inside">
               Setting up Node
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#keys">
+            <div className="page-nav-inside">
+              Setting up Keys
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#run">
+            <div className="page-nav-inside">
+              Running the Node
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -1148,6 +1160,12 @@ cd 3DP
 docker compose rm -f
                     `}
             </pre>
+            <div className="page-content-text">
+              Track your performance on the Mining Leaders dash board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+            </div>
+            <div className="page-content-text">
+              Compare your machine configuraton to the other ones presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="linux-mac">
@@ -1176,6 +1194,9 @@ cd 3DP
               <i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, put the binary 
               into the <i>`~/3DP/target/release/poscan-consensus`</i> and make it executable with the `<code>cmod a+x poscan-consensus</code>` command.
             </div>
+            <div className="page-content-subtitle" id="keys">
+              Set up your keys
+            </div>
             <div className="page-content-text">
               3. Generate a bunch of keys for your account and import them into keystore. Create new account, if needed.
               There is a <Link to="#script">script</Link> in place to set it up automatically. An alternative option is to 
@@ -1183,6 +1204,9 @@ cd 3DP
             </div>
             <div className="page-content-text" id="script">
               USING THE SCRIPT
+            </div>
+            <div className="page-content-text" id="new-account">
+              <strong>New account</strong>
             </div>
             <div className="page-content-text">
               3.1. Generate new account and import all of your keys <i>(Mining key, GRANDPA key and ImOnline key)</i> at once with the <i>keygen.sh</i> script. 
@@ -1193,6 +1217,9 @@ cd 3DP
 sh keygen.sh
                     `}
             </pre>
+            <div className="page-content-text">
+            <strong>Existing account</strong>
+            </div>
             <div className="page-content-text">
               3.2. Have you already had an account, use the <i>keygen_seed.sh</i> script
               to generate the keys out of your Secret Seed phrase and import them all at once.
@@ -1368,6 +1395,12 @@ bun miner.js --host 127.0.0.1 --port 9933
             />
             <div className="page-content-text">
               There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, which might be leveraged as an option, either.
+            </div>
+            <div className="page-content-text">
+              Track your performance on the Mining Leaders dash board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+            </div>
+            <div className="page-content-text">
+              Compare your machine configuraton to the other ones presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
             </div>
           </div>
         </div>
