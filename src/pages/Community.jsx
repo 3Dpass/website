@@ -151,13 +151,9 @@ const Community = () => {
                 Being naturally organized and still cultivating this community driven spirit, 3Dpass is here to encourage developers from all aroud the globe to upgrade the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> open source toolkit with new fascinating recognition algorithms and make it even more useful for human civilization.
                 Learn more about the <Link to="http://localhost:3000/proof-of-scan#object">algorithm requirements</Link>.
               </div>
-            <div className="page-content-text">
-              Feel free to implement or suggest new algorithm for any category above and jump right
-              in <Link to="/coin#distribution-contribution">3DPass contribution rewards program</Link>
-            </div>
               <div className="page-content-text">
-                <Link to="/coin">3DPass Coin</Link> (P3D) is a native utility token, operating on The Ledger of Things, 
-                which serves to incentivise community members to maintain the network infrastructure. 
+                <Link to="/coin">3DPass Coin</Link> (P3D) is a native utility token, operating within The Ledger of Things, 
+                which serves as an incentive factor for the community members maintaining its infrastructure. 
                 Such aspects as: Storage fee, Gas fee, The object authentication fee, Transaction fee, 
                 The validator collaterals, Penalties -  are all being counted in P3D.
             </div>

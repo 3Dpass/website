@@ -218,7 +218,7 @@ const ProofOfScan = () => {
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/the_ledger_of_things_structure.png"
+              src="/images/p2p_network_structure.png"
               alt="img"
             />
           </div>
@@ -229,19 +229,25 @@ const ProofOfScan = () => {
               The object Categories and Recognition Algorithms
             </div>
             <div className="page-content-text">
-              It's not a secret that conventional NFTs and smart contracts are
-              useless, due to the lack of identity. They are just "hanging up in
-              the air" not being tethered to anything we use in life. That's why
-              leveraging object recognition algorithms is such an important part
-              of 3DPass consensus. It just makes dApp's logic able to
-              dinstinguish original ones from fakes, assuming that an asset's
-              owner defines the border of their property rights themself. Thus,
-              the border is always determined by math calculations.
+              It's widely acknowledged that conventional NFTs and smart contracts lack real-world identity, 
+              often existing without tangible connections to everyday use. This limitation underscores 
+              the significance of integrating object recognition algorithms within the 3DPass consensus 
+              framework. By doing so, decentralized application (dApp) logic gains the ability to differentiate 
+              between genuine assets and counterfeits.
             </div>
             <div className="page-content-text">
-              We encourage people to develop new recognition algorithms, which could be
-              implemented into <Link to="https://github.com/3Dpass/pass3d">pass3d recognition toolkit</Link> 
-              and to make it even more powerful.
+              In this context, the owner of an asset defines the boundaries of their property rights, which
+              are consistently enforced through mathematical calculations. This approach ensures that the authenticity 
+              and ownership of digital assets are securely established and maintained within blockchain environments.
+            </div>
+            <div className="page-content-text">
+              We actively encourage individuals to innovate and develop new recognition algorithms that can 
+              be integrated into the <Link to="https://github.com/3Dpass/pass3d">pass3d recognition toolkit</Link> {" "}
+              recognition toolkit, enhancing its capabilities and overall 
+              effectiveness. By expanding the toolkit with new algorithms, we aim to empower users with 
+              advanced tools for object recognition across various applications and industries. 
+              This collaborative effort fosters innovation and drives the evolution of 3DPass technology 
+              towards greater functionality and utility in the digital landscape.
             </div>
             <div className="page-content-subtitle">
               New recognition alrorithm requirements:
@@ -252,23 +258,22 @@ const ProofOfScan = () => {
               within a noise of scanning.
             </div>
             <div className="page-content-text">
-              We don’t have any feedback to compare and calculate a single 100%
-              reliable hash out of each scan (object snapshot) automatically, since the blockchain environment
-              doesn't provide any trustworthy backend. Working independenlty, the
-              algorithm logic has to be flexible enough to adjust the
-              definition level of processing to the resolution of scanning.
+              In the blockchain environment, where a trustworthy backend is lacking, there is no feedback mechanism 
+              to automatically calculate a single, 100% reliable HASH ID from each scan or object snapshot.
+              Therefore, algorithms must operate independently and be adaptable enough to adjust their 
+              processing definition level according to the scanning resolution.
             </div>
             <div className="page-content-text">
-            This is apparent, that it does not make any sense to compare objects by its {" "}
-            <Link to="/features#3drecognition-hash-id">HASH ID</Link>, 
-            provided they got processed with different recognition algorithms/parameters. However, 
-            HASH IDs need to be compared in order to guarantee for users the absence of copies on 
-            the blockchain data base.
+              It's clear that comparing HASH IDs between objects processed with different recognition 
+              algorithms or parameters is not meaningful. However, it is essential to compare HASH IDs 
+              to ensure the absence of duplicates in the blockchain database.
             </div>
             <div className="page-content-text">
-            By means of categorization of the object types, we are setting up some “standard” algorithms 
-            (presets) to be available for use within each category. And every preset defines the level of 
-            precision, at which the object is going to be recognized.
+            To address these challenges, we categorize object types and establish "standard" algorithms 
+            (presets) within each category. Each preset defines the level of precision required for 
+            recognizing objects within that category. This approach ensures that objects are accurately 
+            identified and distinguished according to their specific characteristics, despite variations 
+            in scanning conditions or algorithms used.
             </div>
             <div className="page-content-text">
               Initial list of categories is presented as follows:

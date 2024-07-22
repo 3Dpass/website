@@ -389,7 +389,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             {" "} For example, if 1000000 share tokens was issued (100% of the objects share), and 200000 of them was transferred, therefore 20% of the object ownership rights was transferred.  
             </div>
             <div className="page-content-text">
-              1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polka wallet</Link> 
+              1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka wallet</Link> 
               {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>)
               and create a fungible token tethered to the object. Thre MaxSupply value defined by the object property cannot be exceeded.
             </div>
@@ -399,7 +399,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-             <div className="page-content-text">
+             <div className="page-content-text" id="set-metadata">
               2. Set up metadata for the asset created
               {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#7-extrinsic-poscanassetssetmetadata">poscanAssets pallet API</Link>)
             </div>
@@ -409,7 +409,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">
+            <div className="page-content-text" id="mint">
               3. Mint your share token, which stands for transferrable property rights to the object.
               {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#8-extrinsic-poscanasstsmint">poscanAssets pallet API</Link>)
               {" "} Thee token MaxSupply cannot be exceeded.
@@ -484,7 +484,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
                 There is no limitaions to the language dApp is written in is being applied, as well.
               </div>
             <div className="page-content-subtitle" id="poscan-assets-fungible">
-              Using poscanAssets for dealing with regular fungible assets:
+              Using `poscanAssets` module to deal with regular fungible assets:
             </div>
             <div className="page-content-text">
               The <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> embedded module 
@@ -500,7 +500,25 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <li><i>Set the Asset Team:</i> Sets up the Issuer, Admin and Freezer of the asset</li>
             </ul>
             <div className="page-content-text">
-              All the methods of the Assets module are available via the <Link to="https://polkadot.js.org/docs/api/">polkadot JS API</Link>. The Assets <Link to="https://polkascan.github.io/py-substrate-metadata-docs/statemint/assets/">API metadata</Link> description. 
+               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka wallet</Link> {" "}
+               and create your asset with `create`. (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>){" "}
+               Make sure the <i>`objDetails`</i> option is skipped: 
+            </div>
+            <img
+              className="page-img"
+              src="/images/create_fungible.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+              2. Once created, follow these methodes to <Link to="#set-metadata">Set metadata</Link> and <Link to="#mint">Mint</Link>.
+            </div>
+            <div className="page-content-text">
+              3. In order to send tokens from one account to another use the <Link to="#3dprc2-transfers">transfer</Link> method.
+            </div>
+            <div className="page-content-text">
+              All the methods of the poscanAssets module are available via the <Link to="https://polkadot.js.org/docs/api/">polkadot JS API</Link>. 
+              The Assets <Link to="https://polkascan.github.io/py-substrate-metadata-docs/statemint/assets/">API metadata</Link> description. 
             </div>
             <div className="page-content-subtitle" id="conventional-non-fungible-assets">
               Conventional non-fungible assets

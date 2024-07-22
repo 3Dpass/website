@@ -228,44 +228,44 @@ const Features = () => {
           <div className="page-content-inner">
             <div className="page-content-title">The Object Recognition</div>
             <div className="page-content-text">
-              In the foundation of 3Dpass lies the object
-              recognition <Link to="https://github.com/3dpass">open source</Link> technology presented as a stuctured set of {" "}
-              fundamental-research-based algorithms created by either the team or
-              community members. 
+               The foundation of 3Dpass is built upon object recognition <Link to="https://github.com/3dpass">open-source</Link> {" "} 
+               technology, a structured collection of research-based algorithms developed by either the team 
+               or community members. These algorithms are specifically tailored to function within 
+               the blockchain environment, where traditional feedback mechanisms for comparing objects 
+               during processing are absent. This limitation stems from the decentralized nature 
+               of blockchain architecture, where nodes, administered by mutually untrusting users, 
+               do not provide inherent trust.
               </div>
               <div className="page-content-text">
-              The algorithms are especially adapted to operate within the blockchain inviroment, 
-              which doesn't provide any feedback to compare objects to one another while its processing.
-              Essentially, it is caused by the absence of trustworthy backend in
-              the blockchain architecture, which implies a number of equal nodes to be
-              admininstrated by users not providing substantial trust towards each other. Thus, any object,
-              event or transaction must rather be proved by math calculations performing off-line. 
+              Therefore, any verification of objects, events, or transactions must rely on offline 
+              mathematical calculations for proof. The initial algorithm, <Link to="/grid2d">Grid2d</Link>,{" "}
+              <Link to="/https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">introduced</Link> by 
+              Michael Co in 2020, focuses on 3D object shape recognition. However, the applications 
+              of 3Dpass extend far beyond this initial scope. The implementation of these algorithms 
+              is accessible as the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> recognition 
+              toolkit, playing a crucial role in the <Link to="#scanproof">Proof of Scan</Link> consensus protocol within {" "}
+               <Link to="/features#ledger">The Ledger of Things</Link> blockchain.
               </div>
-              <div className="page-content-text">
-              The first algorithm <Link to="/grid2d">Grid2d</Link>, <Link to="/https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">suggested</Link> by Michael Co in
-              2020, is designed for 3D object shape recognition, however, the scope of potential 3Dpass applications goes way beyond that and not limited to. The algorithms implementation is available as <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> recognition toolkit, which plays essential role
-              in the <Link to="/proof-of-scan">Proof of Scan</Link> consensus protocol operating on the <Link to="/features#ledger">The Ledger of Things</Link> blockchain.
-            </div>
             <div className="page-content-subtitle" id="3drecognition-hash-id">
               Hash ID
             </div>
             <ul className="page-content-text">
               <li>
-                <Link to="/pass3d">pass3d</Link> recognition toolkit captures some distinctive properties
-                of the object and produces its digital identity called <Link to="/features#3drecognition-hash-id">HASH ID</Link>, 
-                which will remain stable for every different
-                scan taken out of the same object. The HASH ID allows to
-                establish <i>one-to-one</i> correspondence between the object and its
-                digital asset, which any conventional NFT could never sustain <a href="#difference">Learn the difference</a>.
+                The <Link to="/pass3d">pass3d</Link> recognition toolkit captures unique characteristics of 
+                an object to generate its digital identity, referred to as a <Link to="/features#3drecognition-hash-id">HASH ID</Link>. 
+                This HASH ID remains consistent for every scan of the same object, enabling a direct and 
+                immutable link between the physical object and its digital representation. This capability surpasses traditional 
+                NFTs (Non-Fungible Tokens), which lack the ability to maintain such a stable correspondence. {" "}
+                <a href="#difference">Learn the difference</a>.
               </li>
               <li>
-                HASH ID provides excellent level of privacy containing <i>"0
-                knowlege"</i> about the object itself. The original
-                data <i>(seed)</i> is protected by cryptographic standard <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA-256</Link>.
+                The HASH ID ensures a high level of privacy by containing "zero knowledge" about the object itself. 
+                The original data <i>(seed)</i> is safeguarded using the cryptographic standard {" "}
+                <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA-256</Link>.
               </li>
               <li>
-                HASH ID allows to define the property rights as being distinguishable to the extent of the error of recognition. 
-                Meaning, original assets could be distinguished from fakes and, thus, protected from being copied. 
+                The HASH ID enables precise delineation of property rights, discerning original assets from counterfeits 
+                with the margin of recognition error. This capability protects against unauthorized duplication.
               </li>
             </ul>
             <img
@@ -283,18 +283,22 @@ const Features = () => {
               The Object Categories
             </div>
             <div className="page-content-text">
-              3DPass is called to encourage developers to upgrade the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> open source toolkit with new fascinating recognition algorithms and add to its usefulness for people.
-              In order to simplify the challenge we have put it into some structure, which makes it easy for machines to understand on input. 
-              Learn more about <Link to="/proof-of-scan#object">the algorithm requirements</Link>.
+              3DPass aims to inspire developers to enhance the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> open-source toolkit with innovative 
+              recognition algorithms, thereby enhancing its practical utility for users. To streamline 
+              this effort, we've organized the challenge into a structured format that machines can 
+              easily comprehend as input. Discover more about{" "}
+             <Link to="/proof-of-scan#object">the algorithm requirements</Link> to contribute effectively.
             </div>
             <div className="page-content-text">
-              This is apparent, that it does not make sense to compare objects by its HASH ID, 
-              provided they got processed with different recognition algorithms/parameters. However, 
-              HASH IDs need to be compared with one another in order to guarantee for users the absence of copies on the blockchain data base.
+            It's evident that comparing HASH IDs from objects processed with different recognition 
+            algorithms or parameters doesn't yield meaningful results. However, comparing 
+            HASH IDs is crucial to ensure users that duplicates are absent in the blockchain database.
             </div>
             <div className="page-content-text">
-              By means of categorization of the object types, we are setting up some <i>“standard”</i> algorithms <i>(presets)</i> to be available to use within each category. 
-              And the level of precision is being determined by every preset, at which the object is going to be recognized. Learn more about <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard implementation. 
+            Through categorizing object types, we establish "standard" algorithms (presets) available 
+            for each category. Each preset defines the level of precision at which objects within that 
+            category are recognized. To delve deeper, explore the implementation of the {" "}
+            <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard.
             </div>
             <div className="page-content-text">
               Initial list of categories is presented as follows:
@@ -316,7 +320,7 @@ const Features = () => {
             </ul>
             <div className="page-content-text">
               Feel free to implement or suggest new algorithm for any category above and jump right
-              in <Link to="/coin#distribution-contribution">3DPass contribution rewards program</Link>
+              in <Link to="//grants#dev-bounty">3DPass contribution grant program</Link>
             </div>
           </div>
         </div>
@@ -324,15 +328,13 @@ const Features = () => {
           <div className="page-content-inner">
             <div className="page-content-title">Multi-Object Option</div>
             <div className="page-content-text">
-              Not only could single object have been used for the (<Link to="/features#3drecognition-hash-id">HASH ID</Link>) creation, 
-              but also a combination of several ones instead. For example, the object shape, combined with its additional
-              properties (size, weight, density, clarity, owner's biometric
-              data, etc.), or just a bunch of different-shaped 3D objects might
-              be chosen. This complex <Link to="/features#3drecognition-hash-id">HASH ID</Link>, calculated out of multi-seed,
-              becomes much more secure against the attack, due to the {" "}
-              <Link to="https://en.wikipedia.org/wiki/Multi-factor_authentication">multi-factor authentication</Link>. It might, as well, help us
-              capture a few different properties inherent to the object. 
-              Let's consider these examples:
+            Not only can a single object be used to create its <Link to="/features#3drecognition-hash-id">HASH ID</Link>, {" "}
+            but a combination of several objects is also possible. For instance, the shape of an object could be combined with 
+            additional properties such as size, weight, density, clarity, owner's biometric data, 
+            and more. Alternatively, a diverse selection of differently shaped 3D objects could be 
+            chosen. This complex HASH ID, derived from multiple seeds, enhances security against 
+            attacks through <Link to="https://en.wikipedia.org/wiki/Multi-factor_authentication">multi-factor authentication</Link>. {" "}
+            Moreover, it allows capturing various inherent properties of the object. Consider the following examples:
             </div>
             <ul className="page-content-text">
               <li>Piece of rock + Owner's fingerprint - HASH-ID 1</li>
@@ -360,23 +362,22 @@ const Features = () => {
           <div className="page-content-inner">
             <div className="page-content-title">Proof Of Scan Protocol</div>
             <div className="page-content-text">
-            <Link to="/proof-of-scan">Proof of Scan</Link> is a revolutionary decentralized protocol, which is
-              leveraged not only as 3Dpass blockchain network consensus, but
-              also designed to prevent digital assets from copying. All of those
-              assets present nothing, but endless of kinds of objects tokenized,
-              such as: 3D objects, 2D drawings, melodies, voices, radio signals,
-              and so on. Due to the recognition technology the protocol is based
-              on, this novel approach unfolds the access to potential trillions
-              in deals all over the globe.
+            <Link to="/proof-of-scan">Proof of Scan</Link> represents a groundbreaking decentralized 
+            protocol utilized not only as the consensus mechanism for The Ledger of Things blockchain network but 
+            also designed to prevent the duplication of digital assets. These assets encompass a wide 
+            array of tokenized objects, including 3D objects, 2D drawings, melodies, voices, radio signals, 
+            and more. Leveraging advanced recognition technology, this innovative approach unlocks access 
+            to potential trillions in transactions worldwide.
             </div>
             <div className="page-content-text">
               "One object = One asset" rule
             </div>
             <div className="page-content-text">
-              The first and the most important PoScan (<Link to="/proof-of-scan">Proof of Scan</Link>) rule
-              states "1 object = 1 asset", which refers to the recognition
-              algorithm being used instead of some usual hash function like <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link>. As such, <Link to="/grid2d">Grid2d</Link> algorithm is leveraged for 3D object
-              recognition in 3Dpass.
+            The primary and foundational rule of <Link to="/proof-of-scan">Proof of Scan</Link> (PoScan) 
+            asserts "1 object = 1 asset," emphasizing the use of recognition algorithms instead of traditional 
+            hash functions like <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link>. 
+            Specifically, the <Link to="/grid2d">Grid2d</Link> algorithm is employed for 3D object 
+            recognition within the Ledger of Things ecosystem.
             </div>
             <img
               className="page-img"
@@ -391,20 +392,21 @@ const Features = () => {
               PoW component: CPU oriented, ASIC-resistant
             </div>
             <div className="page-content-text">
-              3Dpass PoW <i>(Proof of Work)</i> component provides resistance against ASIC/FPGA divices to always {" "}
-              reach high level of distribution at mining, which is the essential factor for <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> {" "}
-              tokenizaton standard to operate and safely to deliver the object verification service. Leveraging 3D object shape as <i>nonce</i> {" "}
+              The 3Dpass <i>Proof of Work</i> (PoW) component is designed to resist ASIC/FPGA devices, ensuring a high level of mining distribution,
+              which plays an essential role in the <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> {" "}
+              tokenizaton standard. Leveraging 3D object shape as <i>nonce</i> {" "}
               makes <Link to="/proof-of-scan">Proof of Scan</Link> unique and stand out from any other PoW around the cryptospace.{" "}
               In order to find new block miners are picking up a unique-shaped 3D object, the <Link to="/features#3drecognition-hash-id">HASH ID</Link> of which {" "}
               would make <Link to="/grid2d">Grid2d</Link> recognition algorithm produce a specific output sealing the block on top of Best chain. {" "}
-              The objects found are available to observe over the <Link to="https://wallet.3dpass.org">web wallet</Link>.  See more detail on <Link to="/proof-of-scan#new-block">PoW task</Link>. Learn <Link to="/mainnet">how to mine 3Dpass coin</Link>.
+              The objects found are available to observe over the <Link to="https://wallet.3dpass.org">web wallet</Link>.  
+              See more detail on <Link to="/proof-of-scan#new-block">PoW task</Link>. Learn <Link to="/mainnet">how to mine 3Dpass coin</Link>.
             </div>
             <div className="page-content-subtitle" id="scanproof-deterministic">
               PoA component: Deterministic Blockchain Finality
             </div>
             <div className="page-content-text">
-            <Link to="/proof-of-scan">Proof of Scan</Link> implementation is equipped {" "}
-            with <Link to="/proof-of-scan#granpda">GRANDPA</Link> finality {" "}
+              The <Link to="/proof-of-scan">Proof of Scan</Link> implementation is equipped {" "}
+              with <Link to="/proof-of-scan#granpda">GRANDPA</Link> finality {" "}
               gadget, which guarantees for Best chain to reach finality in
               oppose to the probabilistic finality (e.x. Nakamoto protocol which
               first was applied in Bitcoin). PoA <i>(Proof of Authority)</i> concept is {" "}
@@ -751,50 +753,61 @@ const Features = () => {
               The Tokenization Of Real And Virtual 3D Objects
             </div>
             <div className="page-content-text">
-              The only difference between tokenization process of either real or
-              virtual 3D objects is the way you are getting seed data to create{" "}
-              <Link to="/features#3drecognition-hash-id">HASH ID</Link> out of. Dealing with virtual ones, there is no problem to
-              get 3D model and other properties, since they are initially
-              digital. Howener, seed data extraction out of real 3D objects
-              takes efforts and is not always possible because of nowadays
-              limited technological capabilities. On top of it, the utilization
-              of tokens, produced out of virtual objects, might be the way
-              different due to the "virtual" material they are created from.
-              There is no fungibility restrictions, no proof of exisctence
-              problems, etc.
-            </div>
-            <div className="page-content-subtitle">
-              Tokenization Of Real World Objects
+              The tokenization process for both real and virtual 3D objects 
+              primarily differs in how seed data is obtained to create the 
+              <Link to="/features#3drecognition-hash-id">HASH ID</Link>. {" "}
+              With virtual objects, acquiring 3D models and other 
+              properties is straightforward since they are inherently digital. 
+              In contrast, extracting seed data from real 3D objects requires 
+              significant effort and is sometimes constrained by current 
+              technological limitations.
             </div>
             <div className="page-content-text">
-              Using a smartphone camera or professional scanners and lab
-              measurements (depends on how much precision do you need), you can
-              extract some seed data from a real 3D object which is, basically,
-              a 3D scan ({" "}
+              Moreover, tokens generated from virtual objects can differ significantly 
+              due to their "virtual" nature. They do not face the same fungibility 
+              restrictions or proof of existence challenges encountered with 
+              real-world objects. This distinction underscores the unique 
+              characteristics and advantages of tokenizing virtual assets 
+              in digital environments.
+            </div>
+            <div className="page-content-subtitle">
+              Tokenization Of Real World Assets (RWA)
+            </div>
+            <div className="page-content-text">
+              Using either a smartphone camera for basic needs or professional 
+              scanners and lab measurements for higher precision, you can extract 
+              seed data from a real 3D object through a process known as 3D scanning 
+              (compatible with standards like ({" "}
               <Link to="https://en.wikipedia.org/wiki/STL_%28file_format%29">
                 .stl
               </Link>{" "}
               or{" "}
               <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">
                 .obj
-              </Link>{" "}
-              standards are supported). And then, by means of using <Link to="/pass3d">pass3d
-              </Link> recognition toolkit, you can produce its <Link to="/features#3drecognition-hash-id">HASH ID</Link>, as long as the
-              object has a solid shape. Flexible ones won't work because their
-              shape is unstable and might not be recognized by 3Dpass. However,
-              there is a possibility to tokenize a 3D model of flexible things
-              (ex. clothes) in one state (ex. a t-shirt put on a mannequin) and
-              then use it as the standard for Machine Learning recognition.
+              </Link>{" "}). 
+              With this data, the 
+              pass3d recognition toolkit can generate its HASH ID, provided the 
+              object has a stable and solid shape. Objects that are flexible or 
+              have unstable shapes may not be suitable for recognition by 3Dpass.
             </div>
             <div className="page-content-text">
-              For example, you can tokenize a rough diamond and then divide it
-              by carats in digital and trade the carats on the market. And if
-              you put in an owner's fingerprint and create a complex <Link to="/features#3drecognition-hash-id">HASH ID</Link>
-              {" "}
-              from both the fingetprint and the diamond's properties (shape,
-              weight, clarity, etc), then you'll have a personal digital asset.
-              Now, not only the diamond is able to recognize but also its owner,
-              so all the property rights might be followed.
+              However, there's an alternative approach for tokenizing flexible 
+              3D models, such as clothing. For instance, you can capture a 3D 
+              model of a t-shirt worn on a mannequin in a specific state and 
+              use it as a standard for recognition through Machine Learning 
+              techniques. This method leverages the static representation of 
+              the object to facilitate its recognition and tokenization in 
+              digital environments.
+            </div>
+            <div className="page-content-text">
+            For instance, you could tokenize a rough diamond and then divide it 
+            digitally by carats to trade them on the market. By incorporating 
+            the owner's fingerprint and creating a complex <Link to="#3drecognition-hash-id">HASH ID</Link> from both 
+            the fingerprint and the diamond's properties (such as shape, weight, 
+            clarity, etc.), you can create a personalized digital asset. In this 
+            scenario, not only can the diamond be recognized, but its owner as well, 
+            enabling comprehensive tracking of property rights. This approach ensures 
+            both the authenticity and ownership of the digital asset are verifiable and secure.
             </div>
             <div className="page-content-text">
               However, all the initial seed data of the asset remains private,
@@ -813,13 +826,11 @@ const Features = () => {
               Tokenization of virtual objects
             </div>
             <div className="page-content-text">
-              As it was mentioned above, there is no problem to extract seed
-              data if you are dealing with virtual 3D objects. All you need to
-              do is to get 3D model (.stl or .obj) + additional property values
-              and process them via 3Dpass recognition toolkit. After <Link to="/features#3drecognition-hash-id">HASH ID</Link> is
-              produced, there is no restrictions related to physical object.
-              Therefore, you can use your asset what eveter you like, although
-              it would've never been possible to do the same in real world.
+              As mentioned earlier, extracting seed data from virtual 3D objects poses no challenges. 
+              Simply obtain the 3D model (.stl or .obj) along with additional property values and 
+              process them using the 3Dpass recognition toolkit. Once the HASH ID is generated, 
+              there are no restrictions tied to the physical object. Consequently, you can utilize 
+              your asset however you wish, a capability that is often impossible in the real world.
             </div>
             <div className="page-content-text">
               For example, you can tokenize a virtual diamond and then leverage
@@ -830,26 +841,30 @@ const Features = () => {
               Tokenization Of The Object Shape Changes (in dynamic)
             </div>
             <div className="page-content-text">
-              One of the most important options to acknowledge about
-              tokenization is that you can capture the object shape changes in
-              dynamic. Not only static option is avalable. Let's imagine the
-              case of a car accident. A car had its original 3D shape and then
-              it was damaged, although the asset is still the same. The car's
-              owner has not been changed as well. Assuming the car had its <Link to="/features#3drecognition-hash-id">HASH ID</Link> saved on 3Dpass dezentralized ledger before the accident, the
-              owner can create a new <Link to="/features#3drecognition-hash-id">HASH ID</Link> and link it to the former one in
-              the transaction. As a result we have a sequence of assets linked
-              together on a blockchain which represents the object shape changes
-              in dynamic.
+              One crucial aspect of tokenization is its ability to capture changes in object shape 
+              dynamically, not just in static states. Consider a scenario such as a car accident: 
+              the car originally had a specific 3D shape, but after being damaged, its physical 
+              form has changed while the ownership remains unchanged.
+            </div>
+            <div className="page-content-text">
+              If the car's <Link to="#3drecognition-hash-id">HASH ID</Link> was previously saved on 
+              the decentralized ledger of 3Dpass before 
+              the accident, the owner can create a new HASH ID that reflects the car's altered shape 
+              and link it to the original one through a transaction. This process results in a sequence 
+              of linked assets on the blockchain, effectively documenting the dynamic changes in the 
+              object's shape over time. This capability highlights the flexibility and comprehensive 
+              record-keeping potential of blockchain-based asset tokenization.
             </div>
             <div className="page-content-subtitle">
               Property rights definition
             </div>
             <div className="page-content-text">
-              Adjust the algorithm's recognition parameters to define the
-              ownership rights border which would distinguish the real asset
-              from the fake ones. In order to create a personal asset use the
-              biometric data with{" "}
-              <Link to="/features#multiobject">multi-object options</Link>.
+              To establish ownership rights and differentiate genuine assets from counterfeits, 
+              it's crucial to adjust the algorithm's recognition parameters. This customization 
+              defines the boundary that safeguards against fraudulent replicas. When creating 
+              a personal asset, integrate biometric data along with <Link to="/features#multiobject">multi-object options</Link>. 
+              This approach enhances security by ensuring that the asset's authenticity is 
+              verifiable through a robust combination of unique identifiers and recognition algorithms.
             </div>
             <img
               className="page-img"
@@ -878,41 +893,43 @@ const Features = () => {
               Passwords And Keys Creation & Recovery
             </div>
             <div className="page-content-text">
-              One of the sideways of 3Dpass technology aplication is passwords
-              and keys creation and its recovery by means of 3D scanning the
-              object. And, of course, <Link to="/features#multiobject">Multi-object option</Link> is supposed to be
-              used. To say, there is a similarity to the wide spread "brain
-              wallet" technology providing the ability to recover your crypto
-              wallet keys with the backup "seed phrase". 3Dpass exploits the
-              same idea with the only difference of 3D object shape provides the
-              seed data instead. In combination with owner's biometric data or
-              any additional properties, this complex <Link to="/features#3drecognition-hash-id">HASH ID</Link>, made out of
-              several objects, becomes quite resistant against the attack and
-              has its own advantages, such as:
+              One of the applications of 3Dpass technology is in the creation and 
+              recovery of passwords and keys through 3D scanning of objects, 
+              utilizing the Multi-object option. This approach bears resemblance 
+              to the popular "brain wallet" technology, where crypto wallet keys 
+              can be recovered using a backup "seed phrase".
             </div>
-            <ul className="page-content-text">
+            <div className="page-content-text">
+            However, 3Dpass innovates on this concept by using the shape of a 3D 
+            object as the seed data instead. When combined with the owner's 
+            biometric data or other additional properties, this results in a 
+            complex HASH ID derived from multiple objects. This multi-object 
+            HASH ID offers significant resistance against attacks and provides
+            several advantages, including:
+            </div>
+            <ol className="page-content-text">
               <li>
-                Resistant data carrier might be chosen for a seed. Ex. a piece
-                of rock won't have any damage after being several months under
-                the solar radiation, water, electromagnetic radiation,
-                temperature (-100C +500C), etc. A piece of paper or flash memory
-                drive would be completely damaged at the same circumstances.
+                <i>Enhanced Security</i>: The use of multiple objects and biometric 
+                data creates a robust authentication mechanism, making it 
+                difficult for attackers to compromise.
               </li>
               <li>
-                Human factor protection might be applied. Ex. there's no
-                possibility to put any changes into the seed data without
-                deforming the real object if it was picked up as a seed.
-                Comparing to the back up phrase, people have direct access to
-                the data and might damage it by accident while copy and paste or
-                what ever. Unfortunately, this is a really common case.
+              <i>Unique Personalization</i>: Each HASH ID is unique to the combination 
+                of objects and biometric data used, providing personalized security solutions.
               </li>
               <li>
-                Quick copy protection might be leveraged. Ex. It takes time to
-                scan a real 3D object much more than just to grab a photo of
-                which, meaning the piece of paper or a tablet screen is easy to
-                take capture from.
+              <i>Versatility</i>: It can be applied across various sectors beyond cryptocurrency,
+                such as digital asset management and authentication.
               </li>
-            </ul>
+              <li>
+              <i>Scalability</i>: As technology advances, more sophisticated algorithms and recognition 
+                techniques can be integrated, further enhancing security and usability.
+              </li>
+              <li>
+                <i>Resilience</i>: The decentralized and immutable nature of blockchain ensures that 
+                HASH IDs are tamper-proof and reliable over time.
+              </li>
+            </ol>
             <div className="page-content-text">Utilization:</div>
             <ul className="page-content-text">
               <li><Link to="/community#use-cases-crypto">Cryptocurrency wallets</Link></li>
