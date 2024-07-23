@@ -33,9 +33,6 @@ const Footer = () => {
             <a href="/features#3drecognition">
               <div className="footer-item">The Object Recognition</div>
             </a>
-            <a href="/features#multiobject">
-              <div className="footer-item">Multi-Object Option</div>
-            </a>
             <a href="/features#scanproof">
               <div className="footer-item">Proof of Scan Protocol</div>
             </a>
@@ -48,17 +45,11 @@ const Footer = () => {
             <a href="/features#smartcontracts">
               <div className="footer-item">Smart Contracts</div>
             </a>
-            <a href="/fungible-tokens-minting">
-              <div className="footer-item">Fungible Tokens Minting</div>
+            <a href="/features#fungibleassets">
+              <div className="footer-item">Fungible Assets</div>
             </a>
             <a href="/features#dex">
               <div className="footer-item">Embedded DEX</div>
-            </a>
-            <a href="/pass3d">
-              <div className="footer-item">Pass3d toolkit</div>
-            </a>
-            <a href="/grid2d">
-              <div className="footer-item">Grid2d Algo</div>
             </a>
             <a href="/forkless-upgrade">
               <div className="footer-item">Forkless Upgrade</div>
@@ -71,11 +62,14 @@ const Footer = () => {
             <a href="/community#about-us">
               <div className="footer-item">About Us</div>
             </a>
-            <a href="/community#our-team">
-              <div className="footer-item">Our Team</div>
+            <a href="/community#eco-system">
+              <div className="footer-item">Eco-system</div>
+            </a>
+            <a href="/community#representatives">
+              <div className="footer-item">Representatives</div>
             </a>
             <a href="/community#governance">
-              <div className="footer-item">Governance</div>
+              <div className="footer-item">Open Governance</div>
             </a>
             <a href="/community#resources">
               <div className="footer-item">Resources</div>
@@ -89,7 +83,10 @@ const Footer = () => {
           </div>
           <div className="footer-four-parts">
             <a href="/coin">
-              <div className="footer-parts-title">3DPass Coin</div>
+              <div className="footer-parts-title">3Dpass Coin</div>
+              </a>
+            <a href="/coin#P3D">
+              <div className="footer-item">P3D</div>
             </a>
             <a href="/coin#white-papper">
               <div className="footer-item">White Paper</div>
@@ -121,27 +118,24 @@ const Footer = () => {
               <div className="footer-item">Mobile Wallet</div>
             </a>
             <a href="https://3dpscan.io">
-              <div className="footer-item">Block Explorer 1</div>
-            </a>
-            <a href="https://explorer.3dpassmining.info">
-              <div className="footer-item">Block Explorer 2</div>
+              <div className="footer-item">Block Explorer</div>
             </a>
             <a href="https://swap.3dpscan.io">
               <div className="footer-item">3DPass DEX UI</div>
             </a>
             <a href="https://telemetry.3dpscan.io">
-              <div className="footer-item">Telemetry Server</div>
+              <div className="footer-item">Network Telemetry</div>
             </a>
-            <a href="/mainnet#mining-pool">
+            <a href="/mainnet">
               <div className="footer-item">Mining Guidelines</div>
             </a>
             <a href="/mainnet#validator">
               <div className="footer-item">Validator Setup</div>
             </a>
-            <a href="/mainnet#tokenization">
-            <div className="footer-item">The Object Tokenization</div>
+            <a href="/assets">
+            <div className="footer-item">Assets</div>
             </a>   
-            <a href="/mainnet#tokenization">
+            <a href="/mainnet#chain">
             <div className="footer-item">On-chain Identity</div>
             </a>
             <a href="https://github.com/3Dpass/3DP/wiki">

@@ -134,6 +134,129 @@ const Assets = () => {
                <Link to="/assets#smart-contracts">Smart contract module</Link> using <Link to="https://use.ink/">ink</Link> embedded domain specific language.
                </li>
             </ol>
+            <div className="page-content-subtitle">
+              The Tokenization Of Real And Virtual 3D Objects
+            </div>
+            <div className="page-content-text">
+              The tokenization process for both real and virtual 3D objects 
+              primarily differs in how seed data is obtained to create the {" "}
+              <Link to="/features#3drecognition-hash-id">HASH ID</Link>. {" "}
+              With virtual objects, acquiring 3D models and other 
+              properties is straightforward since they are inherently digital. 
+              In contrast, extracting seed data from real 3D objects requires 
+              significant effort and is sometimes constrained by current 
+              technological limitations.
+            </div>
+            <div className="page-content-text">
+              Moreover, tokens generated from virtual objects can differ significantly 
+              due to their "virtual" nature. They do not face the same fungibility 
+              restrictions or proof of existence challenges encountered with 
+              real-world objects. This distinction underscores the unique 
+              characteristics and advantages of tokenizing virtual assets 
+              in digital environments.
+            </div>
+            <div className="page-content-subtitle">
+              The Tokenization Of Real World Assets (RWA)
+            </div>
+            <div className="page-content-text">
+              Using either a smartphone camera for basic needs or professional 
+              scanners and lab measurements for higher precision, you can extract 
+              seed data from a real 3D object through a process known as 3D scanning 
+              (compatible with standards like ({" "}
+              <Link to="https://en.wikipedia.org/wiki/STL_%28file_format%29">
+                .stl
+              </Link>{" "}
+              or{" "}
+              <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">
+                .obj
+              </Link>{" "}). 
+              With this data, the 
+              pass3d recognition toolkit can generate its HASH ID, provided the 
+              object has a stable and solid shape. Objects that are flexible or 
+              have unstable shapes may not be suitable for recognition by 3Dpass.
+            </div>
+            <div className="page-content-text">
+              However, there's an alternative approach for tokenizing flexible 
+              3D models, such as clothing. For instance, you can capture a 3D 
+              model of a t-shirt worn on a mannequin in a specific state and 
+              use it as a standard for recognition through Machine Learning 
+              techniques. This method leverages the static representation of 
+              the object to facilitate its recognition and tokenization in 
+              digital environments.
+            </div>
+            <div className="page-content-text">
+            For instance, you could tokenize a rough diamond and then divide it 
+            digitally by carats to trade them on the market. By incorporating 
+            the owner's fingerprint and creating a complex <Link to="/features#3drecognition-hash-id">HASH ID</Link> from both 
+            the fingerprint and the diamond's properties (such as shape, weight, 
+            clarity, etc.), you can create a personalized digital asset. In this 
+            scenario, not only can the diamond be recognized, but its owner as well, 
+            enabling comprehensive tracking of property rights. This approach ensures 
+            both the authenticity and ownership of the digital asset are verifiable and secure.
+            </div>
+            <div className="page-content-text">
+              However, all the initial seed data of the asset remains private,
+              unless the owner would reveal it themself (in the case described
+              above it's original data of both fingerprint and the diamond shape
+              + its additional properties). It's "hidden behind the <Link to="/features#3drecognition-hash-id">HASH ID</Link>"
+              which is suppose to be public since it's strong enough to stand
+              against the attack attempting to reconstruct the seed data. At
+              least, the <Link to="/features#3drecognition-hash-id">HASH ID</Link> is protected by{" "}
+              <Link to="https://en.wikipedia.org/wiki/Multi-factor_authentication">
+                multi-factor authentication
+              </Link>
+              :
+            </div>
+            <div className="page-content-subtitle">
+              The Tokenization of virtual objects
+            </div>
+            <div className="page-content-text">
+              As mentioned earlier, extracting seed data from virtual 3D objects poses no challenges. 
+              Simply obtain the 3D model (.stl or .obj) along with additional property values and 
+              process them using the 3Dpass recognition toolkit. Once the HASH ID is generated, 
+              there are no restrictions tied to the physical object. Consequently, you can utilize 
+              your asset however you wish, a capability that is often impossible in the real world.
+            </div>
+            <div className="page-content-text">
+              For example, you can tokenize a virtual diamond and then leverage
+              it as a fungible token or you can get it melted within the virtual
+              space such as: metaverse, augmented reality, gaming, etc.
+            </div>
+            <div className="page-content-subtitle">
+              The Tokenization Of The Object Shape Changes (in dynamic)
+            </div>
+            <div className="page-content-text">
+              One crucial aspect of tokenization is its ability to capture changes in object shape 
+              dynamically, not just in static states. Consider a scenario such as a car accident: 
+              the car originally had a specific 3D shape, but after being damaged, its physical 
+              form has changed while the ownership remains unchanged.
+            </div>
+            <div className="page-content-text">
+              If the car's <Link to="/features#3drecognition-hash-id">HASH ID</Link> was previously saved on 
+              the decentralized ledger of 3Dpass before 
+              the accident, the owner can create a new HASH ID that reflects the car's altered shape 
+              and link it to the original one through a transaction. This process results in a sequence 
+              of linked assets on the blockchain, effectively documenting the dynamic changes in the 
+              object's shape over time. This capability highlights the flexibility and comprehensive 
+              record-keeping potential of blockchain-based asset tokenization.
+            </div>
+            <div className="page-content-subtitle">
+              Property rights definition
+            </div>
+            <div className="page-content-text">
+              To establish ownership rights and differentiate genuine assets from counterfeits, 
+              it's crucial to adjust the algorithm's recognition parameters. This customization 
+              defines the boundary that safeguards against fraudulent replicas. When creating 
+              a personal asset, integrate biometric data along with <Link to="/features#multiobject">multi-object options</Link>. 
+              This approach enhances security by ensuring that the asset's authenticity is 
+              verifiable through a robust combination of unique identifiers and recognition algorithms.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/3Dpass_ledger.png"
+              alt="img"
+            />
           </div>
         </div>
         <div className="page-content-block" id="3dprc-2">
@@ -150,10 +273,15 @@ const Assets = () => {
                 It depends on the tokenization strategy that the object could be tokenized into either non-fungible or fungible backed asset 
                 (the tokenization of the object share: <strong><i>%</i>; <i>Weight</i>; <i>Square</i>; <i>Length</i>; <i>Volume</i></strong>, etc).
                 The object is being stored on The Ledger of Things decentralized storage, if approved by the object authentication protocol.
-                Learn more by whatcing  <Link to="/features#3dprc-2-overview">3DPRC-2 explainer video</Link> or enjoy 
-                {" "} <Link tp="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">3DPRC-2 poScan API</Link>. 
-                Full <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2 standard description</Link>.
+                Explore more detail by whatcing the 3DPRC-2 video explainer. {" "}
+                Enjoy the <Link tp="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">3DPRC-2 poScan API</Link>. 
+                Follow full <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2 standard description</Link>.
             </div>
+            <video
+              src="/images/3DPRC-2.mp4"
+              className="page-video"
+              controls
+            ></video>
           </div>
         </div>
         <div className="page-content-block" id="object-authentication">

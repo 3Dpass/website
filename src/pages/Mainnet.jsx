@@ -332,7 +332,7 @@ const Mainnet = () => {
             <div className="one-subheader">GitHub</div>
           </a>
           <a href="https://www.3dpassmining.info">
-            <div className="one-subheader">Mining leaders</div>
+            <div className="one-subheader">Mining Dash Board</div>
           </a>
           <a href="/assets">
             <div className="one-subheader">Assets</div>

@@ -34,10 +34,22 @@ const Community = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#our-team">
+          <a href="#eco-system">
             <div
               className={
-                locationHash.includes("our-team")
+                locationHash.includes("eco-system")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Eco-system
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#representatives">
+            <div
+              className={
+                locationHash.includes("representatives")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
@@ -164,13 +176,64 @@ const Community = () => {
             ></video>
           </div>
         </div>
-        <div className="page-content-block" id="our-team">
+        <div className="page-content-block" id="eco-system">
+          <div className="page-content-inner">
+            <div className="page-content-title">Eco-system</div>
+            <div className="page-content-text">
+              The Ledger of Things eco-system provides a revolutionaly toolkit for the tokenization of objects and its 
+              transformation into Real World Assets (RWA) presented as either <Link to="#3dprc-2-assets">share-tokens</Link> {" "}
+              or <Link to="#3dprc-2-assets">non-fungible</Link> assets. 
+              Once transformed, there is a viriety of options available for the asset owner on how to proceed 
+              with their plan, including but not limited to: transfers, trading, ICO, dApp creation/integration, smart-contracts,
+              cross-chain teleport, etc. 
+              </div>
+              <ul className="page-content-text">
+                <li>
+              <Link to="https://github.com/3Dpass/3DP" className="link-title">Node</Link>{" "}
+              - The implemetation of The Ledger of Things Node
+                </li>
+                <li>
+                <Link to="/features#3dprc-2" className="link-title">3DPRC-2</Link>{" "}
+                - revolutionary tokinization standard proposed by 3Dpass
+                </li>
+                <li>
+                <Link to="https://swap.3dpscan.io" className="link-title">DEX</Link>{" "}
+                - embedded DEX module to trade share-tokens
+                </li>
+                <li>
+                 Marketplace - to swap non-fungible backed assets
+                </li>
+                <li>
+                  dApps - <Link to="/features#smart-contracts">smart-contracts</Link> module and runtime development
+                </li>
+                <li>
+                 Cross-chain bridge - to teleport the assets over to the external blockchains
+                </li>
+                <li>
+                 Stablecoins - on-chain or bridged (over the cross-chain bridge)
+                </li>
+                <li>
+                 Launchpads - to welcome start-ups into The Ledger of Things eco-system
+                </li>
+              </ul>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/lot_eco-system_moon_1.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Follow our progress on <Link to="/coin#2024">Roadmap</Link> and join the <Link to="/grants">Contribution Grant Program</Link> to speed it up. 
+            </div>
+          </div>
+        </div>
+        <div className="page-content-block" id="representatives">
           <div className="page-content-inner">
             <div className="page-content-title">Representatives</div>
             <UserCard
               name="PaulS"
               title="Founder"
-              description="16+ years experience"
+              description="16+ years experience in the field"
               image="/images/anon.jpg"
             />
             <UserCard
@@ -200,6 +263,12 @@ const Community = () => {
               name="A Mo"
               title="Community Representative"
               description="Europe, Discord: A_Mo#2060"
+              image="/images/anon.jpg"
+            />
+             <UserCard
+              name="breukmeister"
+              title="Community Representative"
+              description="Europe, Discord: breukmeister"
               image="/images/anon.jpg"
             />
           </div>
@@ -441,7 +510,8 @@ const Community = () => {
             <div className="page-content-text">
             <ul className="page-content-text">
               <li><Link to="https://github.com/3Dpass/3DP/releases">The Node latest release</Link></li>
-              <li><Link to="https://github.com/xchainw/p3d-db/releases">Latest blockchain db snapshot (by community)</Link></li>
+              <li>Latest blockchian db snapshots <i>(by community)</i>: <Link to="https://github.com/xchainw/p3d-db/releases">Repo 1</Link>, {" "}
+              <Link to="https://github.com/Snezhnaya-Fatui/p3d-mainnet-db">Repo 2</Link></li> 
               <li><Link to="/mainnet">Mainnet guidelines</Link></li>
             </ul>
             </div>

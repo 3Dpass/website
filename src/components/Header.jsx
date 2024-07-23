@@ -94,7 +94,18 @@ const Header = () => {
                   : "header-nav"
               }
             >
-              3Dpass Coin
+              P3D
+            </div>
+          </Link>
+          <Link to="/assets">
+            <div
+              className={
+                location.indexOf("assets") > -1
+                  ? "header-nav active"
+                  : "header-nav"
+              }
+            >
+              Assets
             </div>
           </Link>
           <Link to="/mainnet">
