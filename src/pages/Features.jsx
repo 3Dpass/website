@@ -181,7 +181,7 @@ const Features = () => {
                   : "one-page-nav"
               }
             >
-              Embedded DEX
+              DEX (Decentralized Exchange)
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -696,10 +696,12 @@ const Features = () => {
         </div>
         <div className="page-content-block" id="dex">
           <div className="page-content-inner">
-          <div className="page-content-title">Embedded DEX module</div>
+          <div className="page-content-title">Embedded DEX (Decentralized Exchange) module</div>
            <div className="page-content-text">
-            The <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> Substrate module representing a full featured decentralized exchange, based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> protocol rules, integrated into The Ledger of Things runtime.  
-            Enjoy the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX API</Link> on Github, create Liquidity Pools and trade the assets issued on The Ledger of Things.
+            A custom version of the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> {" "}
+            module, which represents a full featured decentralized exchange based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> {" "}
+            protocol rules and integrated into The Ledger of Things runtime. Enjoy the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX API</Link> {" "}
+            on Github, create Liquidity Pools and trade the assets issued on The Ledger of Things.
            </div>
            <ul className="page-content-text">
             <li>

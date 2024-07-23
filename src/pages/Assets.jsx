@@ -31,6 +31,19 @@ const Assets = () => {
             >
               General
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line assets-general-line"></div>
+            </div>
+          </a>
+          <a href="#tools">
+            <div className="page-nav-inside">
+              Tools and components
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#rwa">
+            <div className="page-nav-inside">
+              Real World Assets (RWA)
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#3dprc-2">
@@ -113,28 +126,55 @@ const Assets = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#dex">
+            <div
+              className={
+                locationHash.includes("dex")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              DEX (Decentralized Exchange)
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="page-content">
         <div className="page-content-block first-page-block" id="general">
           <div className="page-content-inner">
             <div className="page-content-title">General</div>
+            <div className="page-content-subtitle" id="tools">
+              Tools and components
+            </div>
             <div className="page-content-text">
-              The Ledger of Things assets hub provides dApp developers with the following tools:
+              The Ledger of Things assets hub provides dApp developers with the following capabilities:
             </div>
             <ol className="page-content-text">
                <li>
-                <Link to="/assets#3dprc-2">3DPRC-2 standard</Link> - is a revolutionary tool for the tokenization of objects providing the object authentication/copy protection (based on recognition technology) as well as the  
+                <Link to="/assets#3dprc-2" className="link-title">3DPRC-2 standard</Link> - is a revolutionary tool for the tokenization of objects providing the object authentication/copy protection (based on recognition technology) as well as the  
                 on-chain storage. The object could be tokenized into either non-fungible or fungible backed asset (the tokenization of the object share). 
                </li>
                <li>
-                <Link to="/assets#poscan-assets-fungible">poscanAssets</Link> is an embedded universal module for dealing with either regular fungible assets or backed assets used in 3DPRC-2 standard.
+                <Link to="/assets#poscan-assets-fungible" className="link-title">poscanAssets</Link> is an embedded universal module for dealing with either regular fungible assets or backed assets used in 3DPRC-2 standard.
                </li>
                <li>
-               <Link to="/assets#smart-contracts">Smart contract module</Link> using <Link to="https://use.ink/">ink</Link> embedded domain specific language.
+               <Link to="/assets#smart-contracts" className="link-title">Smart contract module</Link> using <Link to="https://use.ink/">ink</Link> embedded domain specific language.
+               </li>
+               <li>
+               <Link to="https://swap.3dpscan.io" className="link-title">DEX (Decentralized Exchange)</Link>{" "}
+               - embedded DEX module, based on Uniswap v2 rules, to trade the assets without a middleman. 
+               The implementaion of the DEX is a custom version of the <i>`assetConversion`</i> trait available 
+               through its <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">API</Link>. 
                </li>
             </ol>
-            <div className="page-content-subtitle">
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/the_tokenization_of_the_object_share.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="rwa">
               The Tokenization Of Real And Virtual 3D Objects
             </div>
             <div className="page-content-text">
@@ -292,6 +332,18 @@ const Assets = () => {
             </div>
             <div className="page-content-subtitle" id="put-object">
               Submit new object on The Ledger of Things
+            </div>
+            <div className="page-content-text">
+              <strong>Using MOBILE WALLET:</strong>
+            </div>
+            <a className="message-text" href="/mobile-wallet#download">
+            <div className="page-lead-content">
+              Mobile Wallet
+                <div className="page-lead-button">Download</div>
+            </div>
+            </a>
+            <div className="page-content-text">
+              <strong>Using WEB WALLET or API:</strong>
             </div>
             <div className="page-content-text">
              1. 3D model in <i>.obj</i> format could be submitted:
@@ -460,6 +512,18 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             {" "} because of indivisibility of the min unit tethered to the object. 
             </div>
             <div className="page-content-text">
+              <strong>Using MOBILE WALLET:</strong>
+            </div>
+            <a className="message-text" href="/mobile-wallet#download">
+            <div className="page-lead-content">
+              Mobile Wallet
+                <div className="page-lead-button">Download</div>
+            </div>
+            </a>
+            <div className="page-content-text">
+              <strong>Using WEB WALLET or API:</strong>
+            </div>
+            <div className="page-content-text">
               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polka wallet</Link> 
               {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>)
             </div>
@@ -517,6 +581,18 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             {" "} For example, if 1000000 share tokens was issued (100% of the objects share), and 200000 of them was transferred, therefore 20% of the object ownership rights was transferred.  
             </div>
             <div className="page-content-text">
+              <strong>Using MOBILE WALLET:</strong>
+            </div>
+            <a className="message-text" href="/mobile-wallet#download">
+            <div className="page-lead-content">
+              Mobile Wallet
+                <div className="page-lead-button">Download</div>
+            </div>
+            </a>
+            <div className="page-content-text">
+              <strong>Using WEB WALLET or API:</strong>
+            </div>
+            <div className="page-content-text">
               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka wallet</Link> 
               {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>)
               and create a fungible token tethered to the object. Thre MaxSupply value defined by the object property cannot be exceeded.
@@ -560,6 +636,18 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
                 Irrespective to whether there is a non fungible asset or share tokens to transfer, the same method of the poscanAssets module is supposed to be used.
                 {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#9-extrinsic-poscanassetstransfer">poscanAssets pallet API</Link>)
                 </div>
+                <div className="page-content-text">
+              <strong>Using MOBILE WALLET:</strong>
+            </div>
+            <a className="message-text" href="/mobile-wallet#download">
+            <div className="page-lead-content">
+              Mobile Wallet
+                <div className="page-lead-button">Download</div>
+            </div>
+            </a>
+            <div className="page-content-text">
+              <strong>Using WEB WALLET or API:</strong>
+            </div>
                 <img
               className="page-img"
               src="/images/transfer_assets.png"
@@ -628,6 +716,18 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <li><i>Set the Asset Team:</i> Sets up the Issuer, Admin and Freezer of the asset</li>
             </ul>
             <div className="page-content-text">
+              <strong>Using MOBILE WALLET:</strong>
+            </div>
+            <a className="message-text" href="/mobile-wallet#download">
+            <div className="page-lead-content">
+              Mobile Wallet
+                <div className="page-lead-button">Download</div>
+            </div>
+            </a>
+            <div className="page-content-text">
+              <strong>Using WEB WALLET or API:</strong>
+            </div>
+            <div className="page-content-text">
                1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka wallet</Link> {" "}
                and create your asset with `create`. (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>){" "}
                Make sure the <i>`objDetails`</i> option is skipped: 
@@ -690,6 +790,37 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
                 Visit <Link to="https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes">Substrate forum</Link> to get answeres to related quiestions.
               </li>
             </ul>
+          </div>
+        </div>
+        <div className="page-content-block" id="dex">
+          <div className="page-content-inner">
+            <div className="page-content-title">DEX (Decentralized Exchange)</div>
+            <Link className="message-text" to="https://swap.3dpscan.io">
+            <div className="page-lead-content">
+                 Swap your tokens
+                <div className="page-lead-button">Swap</div>
+            </div>
+            </Link>
+            <div className="page-content-text">
+            A custom version of the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> {" "}
+            module, which represents a full featured decentralized exchange based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> {" "}
+            protocol rules and integrated into The Ledger of Things runtime. Enjoy the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX API</Link> {" "}
+            on Github, create Liquidity Pools and trade the assets issued on The Ledger of Things.
+           </div>
+           <ul className="page-content-text">
+            <li>
+            <Link to="https://swap.3dpscan.io">3DPass swap DEX User Interface</Link>
+            </li>
+            <li>
+            <Link to="https://github.com/3Dpass/swap">DEX UI GitHub link</Link>
+            </li>
+            </ul>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/the_ledger_of_things_dex.png"
+              alt="img"
+            />
           </div>
         </div>
       </div>
