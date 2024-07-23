@@ -54,17 +54,30 @@ const MobileWallet = () => {
             >
               The object tokenization
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line tokenization-mobile-line"></div>
             </div>
           </a>
-          <a href="#creation">
+          <a href="#put_object">
+            <div className="page-nav-inside">
+              Put the Object on blockchian
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#share-token">
+            <div className="page-nav-inside">
+              Create Share-token
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#fungible">
             <div
               className={
-                locationHash.includes("creation")
+                locationHash.includes("fungible")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
             >
-              3D-object-wallet creation and recovery
+              Fungible asset creation
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -77,6 +90,31 @@ const MobileWallet = () => {
               }
             >
               Light wallet functions
+              <div className="page-nav-circle"></div>
+              <div className="page-nav-line transfer-mobile-line"></div>
+            </div>
+          </a>
+          <a href="#p3d-transfer">
+            <div className="page-nav-inside">
+              P3D transfer
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#assets-transfer">
+            <div className="page-nav-inside">
+              Assets transfer
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#creation">
+            <div
+              className={
+                locationHash.includes("creation")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              3D-object-wallet creation and recovery
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -215,6 +253,104 @@ const MobileWallet = () => {
               src="/images/rotation_bytes_settings.png"
               alt="img"
             />
+            <div className="page-content-subtitle" id="share-token">
+              Create the object Share-token
+            </div>
+            <div className="page-content-text">
+              Open the wallet and proceed with creation of new asset.  
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/create_an_asset_mobile.png"
+              alt="img"
+            />
+             <div className="page-content-text">
+              Specify the Asset parameters and create the asset. You'll need some P3D to cover transaction fee.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/create_share-token_mobile.png"
+              alt="img"
+            />
+          </div>
+        </div>
+        <div className="page-content-block" id="fungible">
+          <div className="page-content-inner">
+            <div className="page-content-title">Regular Fungible Asset creation</div>
+            <div className="page-content-text">
+             The mobile wallet is capable of creation on regular fungible assets managed by is owner's account. 
+            </div>
+            <div className="page-content-subtitle">
+              Create new Asset
+            </div>
+            <div className="page-content-text">
+              Open the wallet and proceed with new asset creation. 
+              The proceess won't take longer than a few minutes to succeed in. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/create_an_asset_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Specify the asset parameters and sign on transaction. You'll need some P3D to cover transaction fee.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/create_regular_fungible_asset_mobile.png"
+              alt="img"
+            />
+          </div>
+        </div>
+        <div className="page-content-block" id="light">
+          <div className="page-content-inner">
+            <div className="page-content-title">Light Wallet Functions</div>
+            <div className="page-content-subtitle" id="rpc">
+              RPC API endpoint connection
+            </div>
+            <div className="page-content-text">
+              "The Ledger of Things" mobile light client is designed to help you
+              enjoy P3D/assets transfers safely and have your balanses on the
+              smartphone. Connect the wallet to any WSS RPC/API endpoint
+              available to fetch some information or make a transfer.
+            </div>
+            <div className="page-content-text">
+              Mainnet public RPC/API endpoint is: <strong>wss://rpc.3dpscan.io</strong>
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/accounts1.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="p3d-transfer">
+              P3D transfer
+            </div>
+            <div className="page-content-text">
+              Transfer your P3D in one click. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/p3d_transfer_mobile.png"
+              alt="img"
+            />
+              <div className="page-content-subtitle" id="assets-transfer">
+              Assets transfer
+            </div>
+            <div className="page-content-text">
+              Transfer your asset in one click. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/assets_transfer_mobile.png"
+              alt="img"
+            />
           </div>
         </div>
         <div className="page-content-block" id="creation">
@@ -236,27 +372,6 @@ const MobileWallet = () => {
               className="page-img"
               style={{ marginBottom: "20px" }}
               src="/images/3d-object-wallet1.png"
-              alt="img"
-            />
-          </div>
-        </div>
-        <div className="page-content-block" id="light">
-          <div className="page-content-inner">
-            <div className="page-content-title">Light Wallet Functions</div>
-            <div className="page-content-text">
-              "The Ledger of Things" mobile light client is designed to help you
-              enjoy P3D transfers safely and have your balanses on the
-              smartphone. Connect the wallet to any WSS RPC/API endpoint
-              available to fetch some information or make a transfer.
-            </div>
-            <div className="page-content-text">
-              Mainnet public RPC/API endpoints are: wss://rpc.3dpscan.io;
-              wss://rpc2.3dpass.org.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "20px" }}
-              src="/images/accounts1.png"
               alt="img"
             />
           </div>

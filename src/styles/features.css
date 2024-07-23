@@ -256,6 +256,14 @@
   height: 64px;
 }
 
+.tokenization-mobile-line {
+  height: 84px;
+}
+
+.transfer-mobile-line {
+  height: 64px;
+}
+
 .node-line {
   height: 152px;
 }
