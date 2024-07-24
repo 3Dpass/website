@@ -164,7 +164,18 @@ const Header = () => {
                     : "right-menu-nav"
                 }
               >
-                3DPass Coin
+                P3D
+              </div>
+            </Link>
+            <Link to="/assets">
+              <div
+                className={
+                  location.indexOf("assets") > -1
+                    ? "right-menu-nav active"
+                    : "right-menu-nav"
+                }
+              >
+                Assets
               </div>
             </Link>
             <Link to="/mainnet">
@@ -178,11 +189,22 @@ const Header = () => {
                 Mainnet
               </div>
             </Link>
+            <Link to="/grants">
+              <div
+                className={
+                  location.indexOf("grants") > -1
+                    ? "right-menu-nav active"
+                    : "right-menu-nav"
+                }
+              >
+                Grant program
+              </div>
+            </Link>
           </div>
         </div>
         <div className="header-right-navs">
-          <Link to="/mainnet">
-            <Button type="button" label="Join The Mainnet" />
+          <Link to="/assets">
+            <Button type="button" label="Create Your Asset" />
           </Link>
         </div>
       </div>

@@ -230,6 +230,11 @@ const Community = () => {
         <div className="page-content-block" id="representatives">
           <div className="page-content-inner">
             <div className="page-content-title">Representatives</div>
+            <div className="page-content-text">
+              Representatives are the most akwnowledged community members willing to represent 3Dpass all around the globe. 
+              There is no employment practice taking place around 3Dpass, but the contribution only. Explore the {" "} 
+              <Link to="/grants">Contribution Grant program</Link> to dive into detail.
+            </div>
             <UserCard
               name="PaulS"
               title="Founder"
@@ -324,6 +329,17 @@ const Community = () => {
         <div className="page-content-block" id="resources">
           <div className="page-content-inner full-m-w">
             <div className="page-content-title">Resources</div>
+            <div className="page-content-text">
+              <strong><i>Disclaimer!</i></strong> All the resources below are managed by community 
+              members and there might be many others untracked. The resources represent independent 
+              groups and channels about 3Dpass by its creators. Due to decentralized nature of the 
+              project there is <strong>NO OFFICIAL SOURCE OF INFORMATION</strong> taking place around 
+              the system, and the most reliable source of data is the blockchain data base containing 
+              all transaction history including the <Link to="#governance">Open Governance</Link>{" "}
+              and <Link to="/governance#democracy">Referendum</Link> vote. Be careful choosing which 
+              source to trust and make sure the information is referenced to either the blockchain db 
+              or the source codes for proof! 
+            </div>
             <div className="url-block">
               <div className="url-block-title">Forums</div>
               <ul className="page-content-text">
@@ -378,7 +394,10 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title">Market cap</div>
               <ul className="page-content-text">
-              <Link to="https://www.coingecko.com/en/coins/3dpass">
+                <Link to="https://coinmarketcap.com/currencies/3dpass/">
+                  <li>CoinMarketCap</li>
+                </Link>
+                <Link to="https://www.coingecko.com/en/coins/3dpass">
                   <li>CoinGecko</li>
                 </Link>
                 <Link to="https://coinpaprika.com/coin/p3d-3dpass-coin/">
@@ -424,10 +443,10 @@ const Community = () => {
               <div className="url-block-title">Social Media</div>
               <ul className="page-content-text">
                 <Link to="https://twitter.com/3Dpass_official">
-                  <li>X (the team, major news only)</li>
+                  <li>X [Genesis] (major dev news only)</li>
                 </Link>
                 <Link to="https://x.com/3dpass_open_gov">
-                  <li>X (the open governance news, community)</li>
+                  <li>X (The Open Gov news)</li>
                 </Link>
                 <Link to="https://twitter.com/3DPassTR">
                   <li>X (community)</li>
@@ -450,25 +469,25 @@ const Community = () => {
               <div className="url-block-title url-empty-title"></div>
               <ul className="page-content-text">
                 <Link to="https://t.me./threedpass_updates">
-                  <li>Telegram channel</li>
+                  <li>Tg channel [updates]</li>
                 </Link>
                 <Link to="https://t.me/pass3d">
-                  <li>Telegram chat</li>
+                  <li>Tg group [Genesis]</li>
                 </Link>
                 <Link to="https://t.me/p3dtrading">
-                  <li>Unofficial Price & Trading TG group</li>
+                  <li>Tg group [Price & Trading]</li>
                 </Link>
                 <Link to="https://t.me/pass3dESP">
-                  <li>Spanish speaking TG group</li>
+                  <li>Tg group [Spanish]</li>
                 </Link>
                 <Link to="https://t.me/ger3dpass">
-                  <li>German speaking TG group</li>
+                  <li>Tg group [German]</li>
                 </Link>
                 <Link to="https://t.me/p3dtr">
-                  <li>Turkish speaking TG group</li>
+                  <li>Tg group [Turkish]</li>
                 </Link>
                 <Link to="https://t.me/p3dpassru">
-                  <li>Russian speaking TG group</li>
+                  <li>Tg group [Russian]</li>
                 </Link>
               </ul>
             </div>
@@ -476,16 +495,16 @@ const Community = () => {
               <div className="url-block-title">Source Codes</div>
               <ul className="page-content-text">
                 <Link to="https://github.com/3Dpass/">
-                  <li>3Dpass GitHub</li>
+                  <li>3Dpass GitHub [Genesis]</li>
                 </Link>
                 <Link to="https://github.com/easy-3dp">
-                  <li>Non official Node and miner (easy-3dp)</li>
+                  <li>Eeasy-3dp Node</li>
                 </Link>
                 <Link to="https://github.com/3DP-The-AllFather/unofficial-3dp-miner">
-                  <li>3DP-The-AllFather unofficial miner CPU/GPU</li>
+                  <li>3DP-The-AllFather miner</li>
                 </Link>
                 <Link to="https://github.com/seineken/unofficial-3dp-miner/">
-                  <li>Seineken's unofficial miner CPU/GPU "HiveOS integration"</li>
+                  <li>Seineken's miner "HiveOS integration"</li>
                 </Link>
               </ul>
             </div>
@@ -493,10 +512,10 @@ const Community = () => {
               <div className="url-block-title url-empty-title"></div>
               <ul className="page-content-text">
                 <Link to="https://github.com/WlinkNET/Prometheus/tree/main">
-                  <li>Prometheus and Graphana for 3Dpass</li>
+                  <li>Prometheus and Graphana by WlinkNet</li>
                 </Link>
                 <Link to="https://github.com/Caldera-Trade/3dp-registrar/">
-                  <li>Registrar bot from Caldera</li>
+                  <li>Idenity Registrar bot by Caldera</li>
                 </Link>
               </ul>
             </div>
