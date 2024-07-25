@@ -20,26 +20,26 @@ const Features = () => {
       <div className="page-left-menu">
         <div className="page-title">Features</div>
         <div className="page-nav-content">
-          <a href="#3drecognition">
+          <a href="#recognition">
             <div
               className={
-                locationHash.includes("3drecognition")
+                locationHash.includes("recognition")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
             >
-              The Object Recognition
+              Recognition technology
               <div className="page-nav-circle"></div>
               <div className="page-nav-line object-line"></div>
             </div>
           </a>
-          <a href="#3drecognition-hash-id">
+          <a href="#recognition-hash-id">
             <div className="page-nav-inside">
               Hash ID
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#object-categories">
+          <a href="#recognition-object-categories">
             <div className="page-nav-inside">
               The Object Categories
               <div className="inside-nav-circle"></div>
@@ -82,7 +82,7 @@ const Features = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#network-structure">
+          <a href="#scanproof-network-structure">
             <div className="page-nav-inside">
               P2P network structure
               <div className="inside-nav-circle"></div>
@@ -200,9 +200,9 @@ const Features = () => {
         </div>
       </div>
       <div className="page-content">
-        <div className="page-content-block first-page-block" id="3drecognition">
+        <div className="page-content-block first-page-block" id="recognition">
           <div className="page-content-inner">
-            <div className="page-content-title">The Object Recognition</div>
+            <div className="page-content-title">Recognition technology</div>
             <div className="page-content-text">
                The foundation of 3Dpass is built upon object recognition <Link to="https://github.com/3dpass">open-source</Link> {" "} 
                technology, a structured collection of research-based algorithms developed by either the founders 
@@ -222,7 +222,7 @@ const Features = () => {
               toolkit, playing a crucial role in the <Link to="#scanproof">Proof of Scan</Link> consensus protocol within {" "}
                <Link to="/features#ledger">The Ledger of Things</Link> blockchain.
               </div>
-            <div className="page-content-subtitle" id="3drecognition-hash-id">
+            <div className="page-content-subtitle" id="recognition-hash-id">
               Hash ID
             </div>
             <ul className="page-content-text">
@@ -255,7 +255,7 @@ const Features = () => {
                 <div className="page-lead-button">Download</div>
             </div>
             </a>
-            <div className="page-content-subtitle" id="object-categories">
+            <div className="page-content-subtitle" id="recognition-object-categories">
               The Object Categories
             </div>
             <div className="page-content-text">
@@ -405,7 +405,7 @@ const Features = () => {
             </div>
             <div
               className="page-content-subtitle"
-              id="network-structure"
+              id="scanproof-network-structure"
             >
               P2P network structure
             </div>

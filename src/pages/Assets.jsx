@@ -34,13 +34,13 @@ const Assets = () => {
               <div className="page-nav-line assets-general-line"></div>
             </div>
           </a>
-          <a href="#tools">
+          <a href="#general-tools">
             <div className="page-nav-inside">
               Tools and components
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#rwa">
+          <a href="#general-rwa">
             <div className="page-nav-inside">
               Real World Assets (RWA)
               <div className="inside-nav-circle"></div>
@@ -59,31 +59,25 @@ const Assets = () => {
               <div className="page-nav-line assets-line"></div>
             </div>
           </a>
-          <a href="#object-authentication">
+          <a href="#3dprc-2-object-authentication">
             <div className="page-nav-inside">
               The object authentication
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#3dprc2-non-fungible">
+          <a href="#3dprc-2-non-fungible">
             <div className="page-nav-inside">
               The tokenization into non-fungible asset
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#3dprc2-fungible">
+          <a href="#3dprc-2-fungible">
             <div className="page-nav-inside">
               The tokenization of the object share (fungible)
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#3dprc2-transfers">
-            <div className="page-nav-inside">
-              Transfers
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#3dprc2-asset-management">
+          <a href="#3dprc-2-asset-management">
             <div className="page-nav-inside">
               Asset management
               <div className="inside-nav-circle"></div>
@@ -92,7 +86,7 @@ const Assets = () => {
           <a href="#conventional-assets">
             <div
               className={
-                locationHash.includes("conventional-assets")
+                locationHash.includes("conventional")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
@@ -126,6 +120,18 @@ const Assets = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#transfers">
+            <div
+              className={
+                locationHash.includes("transfers")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Assets transfers
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
           <a href="#dex">
             <div
               className={
@@ -144,7 +150,7 @@ const Assets = () => {
         <div className="page-content-block first-page-block" id="general">
           <div className="page-content-inner">
             <div className="page-content-title">General</div>
-            <div className="page-content-subtitle" id="tools">
+            <div className="page-content-subtitle" id="general-tools">
               Tools and components
             </div>
             <div className="page-content-text">
@@ -152,11 +158,13 @@ const Assets = () => {
             </div>
             <ol className="page-content-text">
                <li>
-                <Link to="/assets#3dprc-2" className="link-title">3DPRC-2 standard</Link> - is a revolutionary tool for the tokenization of objects providing the object authentication/copy protection (based on recognition technology) as well as the  
+                <Link to="#3dprc-2" className="link-title">3DPRC-2 standard</Link> - is a revolutionary tool for the tokenization of objects providing the object authentication/copy protection (based on recognition technology) as well as the  
                 on-chain storage. The object could be tokenized into either non-fungible or fungible backed asset (the tokenization of the object share). 
                </li>
                <li>
-                <Link to="/assets#poscan-assets-fungible" className="link-title">poscanAssets</Link> is an embedded universal module for dealing with either regular fungible assets or backed assets used in 3DPRC-2 standard.
+                `poscanAssets` is an embedded universal module for dealing with either {" "}
+                <Link to="#conventional-poscan-assets-fungible">regular fungible assets</Link> {" "}
+                or <Link to="#3dprc-2-fungible">backed share-tokens</Link> used in 3DPRC-2 standard.
                </li>
                <li>
                <Link to="/assets#smart-contracts" className="link-title">Smart contract module</Link> using <Link to="https://use.ink/">ink</Link> embedded domain specific language.
@@ -174,7 +182,7 @@ const Assets = () => {
               src="/images/the_tokenization_of_the_object_share.png"
               alt="img"
             />
-            <div className="page-content-subtitle" id="rwa">
+            <div className="page-content-subtitle" id="general-rwa">
               The Tokenization Of Real And Virtual 3D Objects
             </div>
             <div className="page-content-text">
@@ -324,13 +332,13 @@ const Assets = () => {
             ></video>
           </div>
         </div>
-        <div className="page-content-block" id="object-authentication">
+        <div className="page-content-block" id="3dprc-2-object-authentication">
           <div className="page-content-inner">
             <div className="page-content-title">Put the object on chain through the authentication protocol</div>
                 <div className="page-content-text">
               The user objects can be tokenized in accordance to <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> standard rules. 
             </div>
-            <div className="page-content-subtitle" id="put-object">
+            <div className="page-content-subtitle" id="3dprc-2-put-object">
               Submit new object on The Ledger of Things
             </div>
             <div className="page-content-text">
@@ -494,7 +502,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
           </div>
           </div>
         </div>
-        <div className="page-content-block" id="3dprc2-non-fungible">
+        <div className="page-content-block" id="3dprc-2-non-fungible">
           <div className="page-content-inner">
             <div className="page-content-title">Getting the object tokenized into non-fungible asset</div>
             <div className="page-content-text">
@@ -558,7 +566,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             </div>
           </div>
         </div>
-        <div className="page-content-block" id="3dprc2-fungible">
+        <div className="page-content-block" id="3dprc-2-fungible">
           <div className="page-content-inner">
             <div className="page-content-title">The tokenizaton of the object share</div>
             <div className="page-content-text">
@@ -629,34 +637,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             </div>
           </div>
         </div>
-        <div className="page-content-block" id="3dprc2-transfers">
-          <div className="page-content-inner">
-            <div className="page-content-title">Backed asset transfers</div>
-            <div className="page-content-text">
-                Irrespective to whether there is a non fungible asset or share tokens to transfer, the same method of the poscanAssets module is supposed to be used.
-                {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#9-extrinsic-poscanassetstransfer">poscanAssets pallet API</Link>)
-                </div>
-                <div className="page-content-text">
-              <strong>Using MOBILE WALLET:</strong>
-            </div>
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-                <div className="page-lead-button">Download</div>
-            </div>
-            </a>
-            <div className="page-content-text">
-              <strong>Using WEB WALLET or API:</strong>
-            </div>
-                <img
-              className="page-img"
-              src="/images/transfer_assets.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-          </div>
-        </div>
-        <div className="page-content-block" id="3dprc2-asset-management">
+        <div className="page-content-block" id="3dprc-2-asset-management">
           <div className="page-content-inner">
             <div className="page-content-title">Backed asset management</div>
             <div className="page-content-text">
@@ -790,6 +771,33 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
                 Visit <Link to="https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes">Substrate forum</Link> to get answeres to related quiestions.
               </li>
             </ul>
+          </div>
+        </div>
+        <div className="page-content-block" id="transfers">
+          <div className="page-content-inner">
+            <div className="page-content-title">Asset transfers</div>
+            <div className="page-content-text">
+                Irrespective to whether there is a non fungible asset or share tokens to transfer, the same method of the poscanAssets module is supposed to be used.
+                {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#9-extrinsic-poscanassetstransfer">poscanAssets pallet API</Link>)
+                </div>
+                <div className="page-content-text">
+              <strong>Using MOBILE WALLET:</strong>
+            </div>
+            <a className="message-text" href="/mobile-wallet#download">
+            <div className="page-lead-content">
+              Mobile Wallet
+                <div className="page-lead-button">Download</div>
+            </div>
+            </a>
+            <div className="page-content-text">
+              <strong>Using WEB WALLET or API:</strong>
+            </div>
+                <img
+              className="page-img"
+              src="/images/transfer_assets.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
           </div>
         </div>
         <div className="page-content-block" id="dex">

@@ -281,11 +281,11 @@
 }
 
 .assets-line {
-  height: 234px;
+  height: 192px;
 }
 
 .fungibleassets-line {
-  height: 84px;
+  height: 64px;
 }
 
 .usecase-line {
@@ -454,7 +454,7 @@ iframe {
 }
 
 .roadmap-line {
-  height: 106px;
+  height: 152px;
 }
 
 .sub-header-holder {

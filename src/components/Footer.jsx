@@ -31,7 +31,7 @@ const Footer = () => {
               <div className="footer-parts-title">Features</div>
             </a>
             <a href="/features#3drecognition">
-              <div className="footer-item">The Object Recognition</div>
+              <div className="footer-item">Recognition technology</div>
             </a>
             <a href="/features#scanproof">
               <div className="footer-item">Proof of Scan Protocol</div>

@@ -76,34 +76,40 @@ ETH SIGNATURE
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#road-map">
+          <a href="#roadmap">
             <div
               className={
-                locationHash.includes("road-map")
+                locationHash.includes("roadmap")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
             >
-              Road Map
+              Roadmap
               <div className="page-nav-circle"></div>
               <div className="page-nav-line roadmap-line"></div>
             </div>
           </a>
-          <a href="#2022">
+          <a href="#roadmap-2022">
             <div className="page-nav-inside">
               2022
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#2023">
+          <a href="#roadmap-2023">
             <div className="page-nav-inside">
               2023
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#2024">
+          <a href="#roadmap-2024">
             <div className="page-nav-inside">
               2024
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#roadmap-2025">
+            <div className="page-nav-inside">
+              2025
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -255,14 +261,14 @@ ETH SIGNATURE
             </Link>
           </div>
         </div>
-        <div className="page-content-block" id="road-map">
+        <div className="page-content-block" id="roadmap">
           <div className="page-content-inner">
             <div className="page-content-title">Road Map</div>
-            <div className="page-content-subtitle" id="2019">2019</div>
+            <div className="page-content-subtitle" id="roadmap-2019">2019</div>
             <div className="page-content-text road-map-text">
               The idea of 3DPass
             </div>
-            <div className="page-content-subtitle" id="2020">2020</div>
+            <div className="page-content-subtitle" id="roadmap-2020">2020</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Forming development team
             </div>
@@ -279,7 +285,7 @@ ETH SIGNATURE
                 publication
               </Link>
             </div>
-            <div className="page-content-subtitle"id="2021">2021</div>
+            <div className="page-content-subtitle"id="roadmap-2021">2021</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - <Link to="/grid2d">Grid2D</Link> implementation as <Link to="/pass3d">Pass3d</Link> recognition tool
             </div>
@@ -292,7 +298,7 @@ ETH SIGNATURE
             <div className="page-content-text road-map-text">
               Q4 - <Link to="/white-paper">White Paper</Link>
             </div>
-            <div className="page-content-subtitle" id="2022">2022</div>
+            <div className="page-content-subtitle" id="roadmap-2022">2022</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Testnet launch
             </div>
@@ -333,7 +339,7 @@ ETH SIGNATURE
               </li>
               <li>Governance elections (shifted to 2023)</li>
             </ul>
-            <div className="page-content-subtitle" id="2023">2023</div>
+            <div className="page-content-subtitle" id="roadmap-2023">2023</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Mining issues
             </div>
@@ -376,7 +382,7 @@ ETH SIGNATURE
               <li>CEX: Tier1 exchange listing (<i>listed on <Link to="https://www.mexc.com/exchange/P3D_USDT">MEXC</Link></i>)</li>
               <li>Foundation: forming up (postponed by the community discussion)</li>
             </ul>
-            <div className="page-content-subtitle" id="2024">2024</div>
+            <div className="page-content-subtitle" id="roadmap-2024">2024</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Release (stability & security)
             </div>
@@ -428,9 +434,18 @@ ETH SIGNATURE
                 <li>Recognition toolkit: additional recognition algorithm implementation</li>
                 <li>Promotion target: dApps developers</li>
               </ul>
-            <div className="page-content-subtitle">GitHub version</div>
-            <div className="page-content-text road-map-text">
-              <Link to="https://github.com/3Dpass/roadmap/tree/main/roadmap2023">Follow the GitHub</Link>
+            <div className="page-content-subtitle" id="roadmap-2025">2025 (Forming up)</div>
+            <div className="page-content-text road-map-text mb0">
+              Q1 - Release (stability & security)
+            </div>
+            <div className="page-content-text road-map-text mb0">
+              Q2 - Launchpad release
+            </div>
+            <div className="page-content-text road-map-text mb0">
+              Q3 - Cases & Integrations
+            </div>
+            <div className="page-content-text road-map-text mb0">
+              Q4 - Cases & Integrations
             </div>
           </div>
         </div>

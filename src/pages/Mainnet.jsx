@@ -124,25 +124,25 @@ const Mainnet = () => {
               <div className="page-nav-line node-line"></div>
             </div>
           </a>
-          <a href="#simple_node">
+          <a href="#linux-mac-simple_node">
             <div className="page-nav-inside">
               Setting up Node
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#keys">
+          <a href="#linux-mac-keys">
             <div className="page-nav-inside">
               Setting up Keys
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#run">
+          <a href="#linux-mac-run">
             <div className="page-nav-inside">
               Running the Node
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#mining_solo">
+          <a href="#linux-mac-mining_solo">
             <div className="page-nav-inside">
               Setting up Miner
               <div className="inside-nav-circle"></div>
@@ -1173,7 +1173,7 @@ docker compose rm -f
             <div className="page-content-title">
               How to start mining on Linux or MAC OS
             </div>
-            <div className="page-content-subtitle" id="simple_node">
+            <div className="page-content-subtitle" id="linux-mac-simple_node">
               Set up full Node
             </div>
             <div className="page-content-text">
@@ -1194,18 +1194,18 @@ cd 3DP
               <i>Notice!</i> If downloading the pre-built <i>`poscan-consensus`</i> was of your choice, put the binary 
               into the <i>`~/3DP/target/release/poscan-consensus`</i> and make it executable with the `<code>cmod a+x poscan-consensus</code>` command.
             </div>
-            <div className="page-content-subtitle" id="keys">
+            <div className="page-content-subtitle" id="linux-mac-keys">
               Set up your keys
             </div>
             <div className="page-content-text">
               3. Generate a bunch of keys for your account and import them into keystore. Create new account, if needed.
-              There is a <Link to="#script">script</Link> in place to set it up automatically. An alternative option is to 
-              proceed with the <Link to="#manual">manual set up</Link>. Once your keyset is ready, <Link to="#run">start your node</Link> . 
+              There is a <Link to="#linux-mac-script">script</Link> in place to set it up automatically. An alternative option is to 
+              proceed with the <Link to="#linux-mac-manual">manual set up</Link>. Once your keyset is ready, <Link to="#linux-mac-run">start your node</Link> . 
             </div>
-            <div className="page-content-text" id="script">
+            <div className="page-content-text" id="linux-mac-script">
               USING THE SCRIPT
             </div>
-            <div className="page-content-text" id="new-account">
+            <div className="page-content-text" id="linux-mac-new-account">
               <strong>New account</strong>
             </div>
             <div className="page-content-text">
@@ -1242,7 +1242,7 @@ MEMO_SEED="PUT YOUR MEMO SEED HERE"
 sh keygen_seed.sh
                     `}
             </pre>
-            <div className="page-content-text" id="manual">
+            <div className="page-content-text" id="linux-mac-manual">
               MANUAL KEYS SET UP 
             </div>
             <div className="page-content-text">
@@ -1272,7 +1272,7 @@ Public key: 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e S
 ./target/release/poscan-consensus import-mining-key 'your secret seed phrase' --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json
                     `}
             </pre>
-            <div className="page-content-text" id="grandpa_key">
+            <div className="page-content-text" id="linux-mac-grandpa_key">
               3.3.3. Derive the key ('ed25519' type) for GRANDPA finalizaton from your seed phrase (THE SEED PHRASE FROM YOUR MINING ACCOUNT MUST BE USED):
             </div>
             <pre className="main-pre">
@@ -1311,7 +1311,7 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
 ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
-            <div className="page-content-text" id="run">
+            <div className="page-content-text" id="linux-mac-run">
               4. Start the Node with the following:
             </div>
             <pre className="main-pre">
@@ -1330,7 +1330,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
               Make sure you have the external port <i>`30333`</i> open for incoming
               connections and forwarded to your server's local LAN IP. Check your Node on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
-            <div className="page-content-text" id="sync">
+            <div className="page-content-text" id="linux-mac-sync">
               5. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
               It must be <i>"on idle"</i> for the mining process to start.
             </div>
@@ -1361,11 +1361,11 @@ ls ~/3dp-chain/chains/3dpass/keystore
 rm -rf ~/3dp-chain/chains/3dpass/db
                     `}
             </pre>
-            <div className="page-content-subtitle" id="mining_solo">
+            <div className="page-content-subtitle" id="linux-mac-mining_solo">
               Start mining
             </div>
             <div className="page-content-text">
-             Make sure you have <Link to="/mainnet#simple_node">full Node</Link> set up and proceed with the following steps:
+             Make sure you have <Link to="#linux-mac-simple_node">full Node</Link> set up and proceed with the following steps:
               </div>
             <div className="page-content-text">1. Install <Link to="https://bun.sh/">Bun</Link></div>
             <div className="page-content-text">2. Install miner:</div>
@@ -1591,7 +1591,7 @@ bun miner.js --host 127.0.0.1 --port 9933
               Setting up procedure:
             </div>
             <div className="page-content-text">
-              1. Set up a full Node in accordance to this <Link to="/mainnet#linux-mac">tutorial</Link> {" "} 
+              1. Set up a full Node in accordance to this <Link to="#linux-mac">tutorial</Link> {" "} 
               and list to the project directory:
             </div>
             <pre className="main-pre">
@@ -1612,7 +1612,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
             GRANDPA key and ImOnline key</i>. The whole bunch of keys must have 
             been derived from the same Secret Seed phrase (account is <Link to="#addresses">defined</Link> by your Secret Seed phrase).
             It is recommended that you generate the whole bunch of keys with this {" "}
-            <Link to="#script">script</Link> to avoid potential mistakes. 
+            <Link to="#linux-mac-script">script</Link> to avoid potential mistakes. 
             </div>
             <img
               className="page-img"
@@ -1622,7 +1622,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
             />
             <div className="page-content-text">
              You might, as well, have created both <i>Mining key</i> and <i>GRANDPA key</i> {" "}
-             <Link to="manual">manually</Link> and then use this command to add <i>ImOnline key</i> to your keystore:
+             <Link to="linux-mac-manual">manually</Link> and then use this command to add <i>ImOnline key</i> to your keystore:
             </div>
             <pre className="main-pre">
               {`
@@ -1630,16 +1630,16 @@ ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
             <div className="page-content-text">
-              <code>--suri</code> is the Secret seed (hex) from your <Link to="#grandpa_key">GRANDPA key</Link>.
+              <code>--suri</code> is the Secret seed (hex) from your <Link to="#linux-mac-grandpa_key">GRANDPA key</Link>.
             </div>
             <div className="page-content-text">
-              3. Run the Node with <Link to="/mainnet#run">this</Link> command and get it <Link to="#sync">synced</Link> with the network.
+              3. Run the Node with <Link to="#linux-mac-run">this</Link> command and get it <Link to="#linux-mac-sync">synced</Link> with the network.
             </div>
             <div className="page-content-text">
               4. Connect <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/chainstate">Polka js wallet</Link> to the Node in local 
               (RPC API endpoint for your local server is ws://127.0.0.1.:9944).
             </div>
-            <div className="page-content-text" id="lock-check">
+            <div className="page-content-text" id="validator-lock-check">
               5. Lock up your funds to a certain block number in the future.
               There is no way to unlock until it's expired.
             </div>
