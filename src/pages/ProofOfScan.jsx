@@ -187,7 +187,7 @@ const ProofOfScan = () => {
             <div className="page-content-text">
             The Ledger of Things is Layer 1 blockchain and decentralized storage providing its instruments and tools 
             for the tokenizaton of objects. The <Link to="https://github.com/3Dpass/3DP">Nodes</Link> are equipped with 
-            recognition toolkit and will prevent assets form beeing copied, even if its file was slightly changed 
+            recognition toolkit and will prevent assets form being copied, even if its file was slightly changed 
             (ex. with one dot, pixel or one byte). At minimum, it allows to establish and track 1:1 correspondence between 
             the object and its digital asset. At max - to develop endless of useful smart contracts and dApps operating within 
             the eco-system and exploiting the <Link to="/features#3drecognition-hash-id">HASH ID</Link> feature as an idea 
@@ -197,9 +197,9 @@ const ProofOfScan = () => {
               <li>
                 "Proof of Scan" consensus protocol is a hybrid <i>PoW (Proof of Work) + PoA (Proof of Authority)</i>, where PoW aspect is based on 
                 recognition technology and ASIC-resistant, as well. PoA part is ensured by {" "}
-                <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA</Link> deterministic blockchian 
+                <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA</Link> deterministic blockchain 
                 finality protocol leveraged by the most reliable nodes on the network called <Link to="/mainnet#validator">Validators</Link> {" "}
-                operating under SLA conditions (selecton mechanism is similar to Proof of Stake).
+                operating under SLA conditions (selection mechanism is similar to Proof of Stake).
               </li>
              <li>
               <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard is part of the network consensus,
@@ -303,8 +303,8 @@ const ProofOfScan = () => {
             <ul className="page-content-text">
               <li>
               Every recognition algorithm to add must provide “0 knowledge proof” about the object, so that the 
-              network can verify and agree upon its authenticity. <Link to="/proof-of-scan#3dprc-2"></Link> 3DPRC-2 object authentication protocol as well as  
-              <Link to="/grid2d">Grid2d</Link> recognnition algorithm could be used as a reference.
+              network can verify and agree upon its authenticity. <Link to="/proof-of-scan#3dprc-2"></Link> 3DPRC-2 object authentication protocol as well as {" "}  
+              <Link to="/grid2d">Grid2d</Link> recognition algorithm could be used as a reference.
               </li>
               <li>
               Every recognition algorithm must be open-source and free from license restrictions, which could have caused
@@ -320,7 +320,7 @@ const ProofOfScan = () => {
               </li>
             </ul>
             <div className="page-content-text">
-              Feel free to implement or suggest new algotishms and jump right
+              Feel free to implement or propose new algorithms and jump right
               in <Link to="/coin#distribution-contribution">3DPass contribution rewards program</Link>
             </div>
           </div>
@@ -580,8 +580,8 @@ Select top 10 hashes
             <div className="page-content-text">
             1. In order to prove 3D object exists at the beginning of the mining loop the bock author 
             first must get 3D object scanned with no rotation angle <i>(μ = 0)</i> resulting as Grid2d {" "}
-            output 1 (top 10 hashes). The second component is <i>time_hash</i>, which must be added into the 
-            block header and will impact the <i>pre_hash</i> , as well.
+            output 1 (top 10 hashes). The second component is <i>time_hash</i>, which must timestamp upon the 
+            block header and impact the <i>pre_hash</i> , as well.
             </div>
             <img
               className="page-img"
@@ -604,7 +604,7 @@ Select top 10 hashes
             <div className="page-content-text">
              3. It wasn’t until having the object scanned with zero angle the target rotation angle <i>(μ = x)</i> could be calculated.{" "} 
              The same as usual the block author would be challenged with picking up some 3D object shape and get it scanned{" "} 
-             with the target rotation angle <i>(μ = x)</i> until the pre_hash meets the current difficulty number.
+             with the target rotation angle <i>(μ = x)</i> until the <i>pre_hash</i> makes the <i>double_hash</i> meet current difficulty number or above.
             </div>
             <img
               className="page-img"
@@ -696,7 +696,7 @@ Select top 10 hashes
             <div className="page-content-text">
               Randomness is one of the most important parts of the consensus.
               It’s leveraged by miners picking up some random 3D objects of
-              unqie shape being as much unpredictable as it’s possible. There
+              unique shape being as much unpredictable as it’s possible. There
               are two different ways for miners to get 3D object's model. The
               first one is to get a real world object scanned by 3D scanner,
               which would be unpredictable enough, although it takes a lot of
@@ -705,9 +705,9 @@ Select top 10 hashes
               and, due to that fact, they would tend to create quite
               similar-shaped 3D models. Of course, the same or very
               similar-shaped object will be rejected by the recognition
-              algorithm (depending on the set of parameteres applied, <Link to="/grid2d">Grid2D</Link> {" "}
-              will recognize the obgect with certain error). Statistically it
-              would accomulate additional difficulty to generate a new uniqe
+              algorithm (depending on the set of parameters applied, <Link to="/grid2d">Grid2D</Link> {" "}
+              will recognize the object with certain error). Statistically it
+              would accumulate additional difficulty to generate a new unique
               shape, which have yet not existed on the blockchain. The more
               blocks are mined the more difficult to find 3D model for the next
               one.
@@ -756,7 +756,7 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               recognition algorithm generating HASH ID for each as an output. 
               The Node has selected Best chain by the time. So, miners will always 
               pick up current Best block (the topest block in Best chain) as the parent to 
-              construct new one on top. They will join the competition simultaneuosly, 
+              construct new one on top. They will join the competition simultaneously, 
               handling 3D objects form the queue in hope to find the one, 
               which makes grid2d produce correct HASH ID used as <i>nonce</i>. 
             </div>
@@ -767,14 +767,14 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               alt="img"
             />
             <div className="page-content-text">
-              Blcok author will try sealing the object HASH ID on top of the parent block
+              Block author will try sealing the object HASH ID on top of the parent block
               hash in the blockchain <Link to="https://en.wikipedia.org/wiki/Merkle_tree">Merkle tree</Link>, 
               following the <Link to="#pow-task">PoW task</Link> exactly. 
               If all required proofs are gathered and meet the rules, the new block 
               proposer will be created → executed → signed with the block author signature and 
-              broadcasted out throught the Node peers. <Link to="#block-execution">Block execution</Link> means the execution of
+              broadcasted out through the Node peers. <Link to="#block-execution">Block execution</Link> means the execution of
               of all the runtime calls/extrinsics and logic of its upgradable modules operating within 
-              The Ledger of Things, including but not limited to: translactions, 
+              The Ledger of Things, including but not limited to: transactions, 
               smart-contracts, <Link to="#3dprc-2">3DPRC-2</Link> tokenizaton logic, etc. 
             </div>
             <img
@@ -787,9 +787,9 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               There is a block verification procedure implemented on the block import 
               of each Node (peer), which will repeat the <Link to="#pow-task">PoW task</Link> {" "}
               independently and check on the proofs required. Having at least one check 
-              unpassed will result with the block rejection by the peer, due to the invalid block header.
-              Every runtime module operating will check their proofs diring the <Link to="#block-execution">block execution</Link> {" "}
-              in accordance of its logic. The block will also be rejected by runtime if the pfoofs are 
+              not passed will result with the block rejection by the peer, due to the invalid block header.
+              Every runtime module operating will check their proofs during the <Link to="#block-execution">block execution</Link> {" "}
+              in accordance of its logic. The block will also be rejected by runtime if the proofs are 
               not delivered or incorrect. 
             </div>
             <img
@@ -804,9 +804,9 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
           <div className="page-content-inner">
             <div className="page-content-title">Tie Break Competition</div>
             <div className="page-content-text">
-              The block proposer, if verified, participates in Tie Break competition among the 
+              The block proposer, if verified, participates in Tie Break competition against the 
               other block authors attempting to construct the block on top of the longest chain, 
-              which they believe to be Best chain. This logic is quite commmonly used in relation 
+              which they believe to be Best chain. This logic is quite commonly used in relation 
               to PoW approach. The block proposed earlier wins. The block time is determined by {" "}
               the <i>time_hash</i> being part of block header {" "}
               (follow the <Link to="#block-structure">block structure</Link>) required for the {" "}
@@ -831,16 +831,16 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
               network. Current Best chain rule is the longest chain wins.
             </div>
             <div className="page-content-text">
-             The blockchain will stick with the rules of probabalistic finality and 
+             The blockchain will stick with the rules of probabilistic finality and 
              might be reorganized during the block authors competition, until Best chain 
-             is deternmined by the second layer of authorities (Validators) leveraging {" "}
+             is determined by the second layer of authorities (Validators) leveraging {" "}
              <Link to="#grandpa">GRANDPA deterministic finality protocol</Link>. {" "}
-              Best cahin, once finalized, can never be reorganized. Block authors are not allowed
+              Best chain, once finalized, can never be reorganized. Block authors are not allowed
               to construct new block outside of the finalized chain, because of the GRANDPA proofs being
               part of block header.
             </div>
             <div className="page-content-text">
-              Validators will be monitoring over the blockchian being constructed by the block 
+              Validators will be monitoring over the blockchain being constructed by the block 
               authors and chasing new blocks to finalize. They will vote upon Best chain and, 
               once consensus is reached, Best chain reaches finality with new blocks include. 
             </div>
@@ -961,7 +961,7 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             <div className="page-content-text">
               There is a session of 120 blocks length, within which the current
               validator set is always stable. It can not be changed with new
-              in/outcomers until the session is expired. If any validator left
+              in/out comers until the session is expired. If any validator left
               the set, in order to come back the selection
               threshold is required to pass again.
             </div>
@@ -989,7 +989,7 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             <div className="page-content-text">
               <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> (3Dpass Request for Comments), proposed by PaulS in September 2023, is a standard 
               p2p protocol for the tokenization of the user objects operating within “The Ledger of Things”.
-              This is the most useful part of the "Proof of Scan" consensus, which opens the capabibility 
+              This is the most useful part of the "Proof of Scan" consensus, which opens the capability 
               for the network to provide its decentralized service to customers.
             </div>
             <div className="page-content-subtitle">
@@ -1063,7 +1063,7 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
                 </li>
                 <li>
                 the object HASH ID (top10 hashes from the <Link to="/grid2d">Grid2d</Link> recognition algorithm 
-                output; preset: <code> -a grid2d_v3a -s 12 -g 8 -d 10</code>; 
+                output; preset: <code> -a grid2d_v3a -s 12 -g 8 -d 10</code>; {" "}
                  <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> recognition toolkit is being used as 
                 the implementation of Grid2d):
                 <pre className="main-pre">

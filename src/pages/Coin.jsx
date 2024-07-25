@@ -217,7 +217,7 @@ ETH SIGNATURE
               download
             >
               <div className="page-lead-content">
-                3DPRC-2 tokenization standard
+                The Ledger of Things White Paper
                 <div className="page-lead-button">PDF</div>
               </div>
             </Link>
