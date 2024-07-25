@@ -228,7 +228,7 @@ const Features = () => {
             <ul className="page-content-text">
               <li>
                 The <Link to="/pass3d">pass3d</Link> recognition toolkit captures unique characteristics of 
-                an object to generate its digital identity, referred to as a <Link to="/features#3drecognition-hash-id">HASH ID</Link>. 
+                an object to generate its digital identity, referred to as a <Link to="/features#recognition-hash-id">HASH ID</Link>. 
                 This HASH ID remains consistent for every scan of the same object, enabling a direct and 
                 immutable link between the physical object and its digital representation. This capability surpasses traditional 
                 NFTs (Non-Fungible Tokens), which lack the ability to maintain such a stable correspondence. {" "}
@@ -304,7 +304,7 @@ const Features = () => {
           <div className="page-content-inner">
             <div className="page-content-title">Multi-Object Option</div>
             <div className="page-content-text">
-            Not only can a single object be used to create its <Link to="/features#3drecognition-hash-id">HASH ID</Link>, {" "}
+            Not only can a single object be used to create its <Link to="/features#recognition-hash-id">HASH ID</Link>, {" "}
             but a combination of several objects is also possible. For instance, the shape of an object could be combined with 
             additional properties such as size, weight, density, clarity, owner's biometric data, 
             and more. Alternatively, a diverse selection of differently shaped 3D objects could be 
@@ -372,7 +372,7 @@ const Features = () => {
               which plays an essential role in the <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> {" "}
               tokenizaton standard. Leveraging 3D object shape as <i>nonce</i> {" "}
               makes <Link to="/proof-of-scan">Proof of Scan</Link> unique and stand out from any other PoW around the cryptospace.{" "}
-              In order to find new block miners are picking up a unique-shaped 3D object, the <Link to="/features#3drecognition-hash-id">HASH ID</Link> of which {" "}
+              In order to find new block miners are picking up a unique-shaped 3D object, the <Link to="/features#recognition-hash-id">HASH ID</Link> of which {" "}
               would make <Link to="/grid2d">Grid2d</Link> recognition algorithm produce a specific output sealing the block on top of Best chain. {" "}
               The objects found are available to observe over the <Link to="https://wallet.3dpass.org">web wallet</Link>.  
               See more detail on <Link to="/proof-of-scan#new-block">PoW task</Link>. Learn <Link to="/mainnet">how to mine 3Dpass coin</Link>.
@@ -382,7 +382,7 @@ const Features = () => {
             </div>
             <div className="page-content-text">
               The <Link to="/proof-of-scan">Proof of Scan</Link> implementation is equipped {" "}
-              with <Link to="/proof-of-scan#granpda">GRANDPA</Link> finality {" "}
+              with <Link to="/proof-of-scan#grandpa">GRANDPA</Link> finality {" "}
               gadget, which guarantees for Best chain to reach finality in
               oppose to the probabilistic finality (e.x. Nakamoto protocol which
               first was applied in Bitcoin). PoA <i>(Proof of Authority)</i> concept is {" "}
@@ -432,7 +432,7 @@ const Features = () => {
             recognition toolkit and will prevent assets form beeing copied, even if its file was slightly changed 
             (ex. with one dot, pixel or one byte). At minimum, it allows to establish and track 1:1 correspondence between 
             the object and its digital asset. At max - to develop endless of useful smart contracts and dApps operating within 
-            the eco-system and exploiting the <Link to="/features#3drecognition-hash-id">HASH ID</Link> feature as an idea 
+            the eco-system and exploiting the <Link to="/features#recognition-hash-id">HASH ID</Link> feature as an idea 
             of authentication of real world assets (or virtual objects) all across the Internet.
             </div>
             <img
@@ -607,7 +607,7 @@ const Features = () => {
             For example, if the object weight is 1000 gram, then the "MaxSupply=1000" limit will be set up for the token created (you won't be able to issue more than 1000 minimum indivisible units). 
             While transferring tokens, the object share ownership is being transferred accordingly.
             </div>
-            <Link className="message-text" to="/assets#3dprc2-fungible">
+            <Link className="message-text" to="/assets#3dprc-2-fungible">
             <div className="page-lead-content">
                Get the object share tokenized
                 <div className="page-lead-button">Tokenize</div>
@@ -618,7 +618,7 @@ const Features = () => {
             If chosen, the "MaxSupply = 1" limit will be applied to the token created. Whereas "1" is the minimum indivisible unit of The Ledger of Things. 
             By means of transferring this unit, the ownership of the entire object is being transferred.
             </div>
-            <Link className="message-text" to="/assets#3dprc2-non-fungible">
+            <Link className="message-text" to="/assets#3dprc-2-non-fungible">
             <div className="page-lead-content">
                Turn the object into non-fungible asset
                 <div className="page-lead-button">Tokenize</div>
@@ -662,7 +662,7 @@ const Features = () => {
               <Link to="https://use.ink/ink-vs-solidity/">
                 how could that be compared to Solidity
               </Link>
-              . Follow the <Link to="/fungible-tokens-minting">guiudelines</Link> to run your smart contract on 3Dpsass.
+              . Follow the <Link to="/assets#smart-contracts">guiudelines</Link> to run your smart contract on 3Dpsass.
             </div>
             <div className="page-content-text">
               Coming soon! EVM emulator pallet, which allows for unmodified EVM

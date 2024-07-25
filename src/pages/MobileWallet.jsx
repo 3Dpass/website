@@ -57,13 +57,13 @@ const MobileWallet = () => {
               <div className="page-nav-line tokenization-mobile-line"></div>
             </div>
           </a>
-          <a href="#put_object">
+          <a href="#tokenization-put_object">
             <div className="page-nav-inside">
               Put the Object on blockchian
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#share-token">
+          <a href="#tokenization-share-token">
             <div className="page-nav-inside">
               Create Share-token
               <div className="inside-nav-circle"></div>
@@ -94,13 +94,19 @@ const MobileWallet = () => {
               <div className="page-nav-line transfer-mobile-line"></div>
             </div>
           </a>
-          <a href="#p3d-transfer">
+          <a href="#light-rpc">
+            <div className="page-nav-inside">
+              RPC API endpoint
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#light-p3d-transfer">
             <div className="page-nav-inside">
               P3D transfer
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#assets-transfer">
+          <a href="#light-assets-transfer">
             <div className="page-nav-inside">
               Assets transfer
               <div className="inside-nav-circle"></div>
@@ -206,7 +212,7 @@ const MobileWallet = () => {
              The object tokenization procedure is being carried out in accordance to <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> standard.
              3D models in  <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file"><i>.obj</i></Link> format only.
             </div>
-            <div className="page-content-subtitle" id="put_object">
+            <div className="page-content-subtitle" id="tokenization-put_object">
               Put the object on the blockchain
             </div>
             <div className="page-content-text">
@@ -253,7 +259,7 @@ const MobileWallet = () => {
               src="/images/rotation_bytes_settings.png"
               alt="img"
             />
-            <div className="page-content-subtitle" id="share-token">
+            <div className="page-content-subtitle" id="tokenization-share-token">
               Create the object Share-token
             </div>
             <div className="page-content-text">
@@ -309,7 +315,7 @@ const MobileWallet = () => {
         <div className="page-content-block" id="light">
           <div className="page-content-inner">
             <div className="page-content-title">Light Wallet Functions</div>
-            <div className="page-content-subtitle" id="rpc">
+            <div className="page-content-subtitle" id="light-rpc">
               RPC API endpoint connection
             </div>
             <div className="page-content-text">
@@ -327,7 +333,7 @@ const MobileWallet = () => {
               src="/images/accounts1.png"
               alt="img"
             />
-            <div className="page-content-subtitle" id="p3d-transfer">
+            <div className="page-content-subtitle" id="light-p3d-transfer">
               P3D transfer
             </div>
             <div className="page-content-text">
@@ -339,7 +345,7 @@ const MobileWallet = () => {
               src="/images/p3d_transfer_mobile.png"
               alt="img"
             />
-              <div className="page-content-subtitle" id="assets-transfer">
+              <div className="page-content-subtitle" id="light-assets-transfer">
               Assets transfer
             </div>
             <div className="page-content-text">

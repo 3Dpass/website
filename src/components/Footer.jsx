@@ -36,7 +36,7 @@ const Footer = () => {
             <a href="/features#scanproof">
               <div className="footer-item">Proof of Scan Protocol</div>
             </a>
-            <a href="/features#scanproof-3dprc-2">
+            <a href="features#3dprc-2">
               <div className="footer-item">3DPRC-2 standard</div>
             </a>
             <a href="/features#ledger">
@@ -97,8 +97,8 @@ const Footer = () => {
             <a href="/proof-of-scan">
               <div className="footer-item">Pitch Deck Slides</div>
             </a>
-            <a href="/coin#road-map">
-              <div className="footer-item">Road Map</div>
+            <a href="/coin#roadmap-2024">
+              <div className="footer-item">Roadmap</div>
             </a>
             <a href="/coin#specification">
               <div className="footer-item">Specification</div>

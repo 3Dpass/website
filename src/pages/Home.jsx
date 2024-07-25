@@ -62,7 +62,7 @@ const Home = () => {
             Layer 1 blockchain platform for the tokenization of objects
           </div>
           <div className="home-button-holder">
-          <Link to="/features#scanproof-3dprc-2">
+          <Link to="/features#3dprc-2">
               <Button type="button" label="3DPRC-2 standard" />
             </Link>
             <Link to="/features#smartcontracts">
