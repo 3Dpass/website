@@ -817,10 +817,11 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
            </div>
            <ul className="page-content-text">
             <li>
-            <Link to="https://swap.3dpscan.io">3DPass swap DEX User Interface</Link>
+            Use the <Link to="https://swap.3dpscan.io">DEX User Interface</Link> to either swap your tokens or 
+            add liquidity. Create new liquidity pool if needed. 
             </li>
             <li>
-            <Link to="https://github.com/3Dpass/swap">DEX UI GitHub link</Link>
+            Make Pull Request into the <Link to="https://github.com/3Dpass/swap">GitHub</Link> to add your token's logo. 
             </li>
             </ul>
             <img

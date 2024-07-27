@@ -911,8 +911,8 @@ electorate - the total number of tokens issued in the network
             <div className="page-content-text">
               The Technical Committee (TC) is composed of the teams that have
               successfully implemented or specified 3Dpass runtime. Teams are
-              added or removed from the TC via a simple majority vote of the
-              Council.
+              added or removed from the TC by a collective decision of both 
+              simple majority of the Council vote + Referendum vote.
             </div>
             <div className="page-content-text">
               The purpose of the TC is to safeguard against malicious referenda,

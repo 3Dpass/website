@@ -215,7 +215,7 @@ const Features = () => {
               <div className="page-content-text">
               Therefore, any verification of objects, events, or transactions must rely on offline 
               mathematical calculations for proof. The initial algorithm, <Link to="/grid2d">Grid2d</Link>,{" "}
-              <Link to="/https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">introduced</Link> by 
+              <Link to="https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">introduced</Link> by 
               Michael Co in 2020, focuses on 3D object shape recognition. However, the applications 
               of 3Dpass extend far beyond this initial scope. The implementation of these algorithms 
               is accessible as the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> recognition 

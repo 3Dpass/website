@@ -21,14 +21,16 @@ const Home = () => {
       description:
       "3DPass enables anyone to utilize a 3D object as seed data for creating passwords or keys. When combined with the owner's biometric data or other additional properties, this <a href='/features#multiobject'>multi-object Hash ID</a> offers a zero-knowledge proof of the object's authenticity. This unique identifier can be subsequently retrieved through scanning. For further details, <a href='/features#passwords'>explore more >></a> about this innovative capability.",
     },
-    {
-      title: "Metaverse, Gaming, Added reality, IoT, Robotics, AI",
-      description:
-      "3DPass offers machines the capability to assign a sustainable unique identity called <a href='/features#3drecognition-hash-id'>HASH_ID</a> to each real or virtual object, whether in physical reality or on the Internet. This identity allows not only tokenizing the object in a static state but also tracking its dynamics. This involves capturing a sequence of HASH IDs for the object in different states, times, and places, all linked together on the blockchain.",
-    },
   ]);
 
   const [news, setNews] = useState([
+    {
+      title: "The twitter account has been renamed!",
+      description:
+      "For the sake of the project decentralization the twitter account has been renamed into @3Dpass_genesis as the very first one created around the Ledger of Things eco-system.",
+      date: "June 27, 2024",
+      link: "https://twitter.com/3Dpass_genesis"
+    },
     {
       title: "The migration to PoW v2 is completed!",
       description:
@@ -42,13 +44,6 @@ const Home = () => {
       "PoW v2 component, which is CPU oriented and providing ASIC/FPGA resistance features, is now available on Github for mainnet. This is a major upgrade, which is mandatory for every node on the network.",
       date: "June 28, 2024",
       link: "https://github.com/3Dpass/3DP/releases/tag/v24"
-    },
-    {
-      title: "The mobile wallet v2.15.0 release!",
-      description:
-      "Now you can make mint and transfer of either 3DPRC-2 share tokens or regular fungible assets via the mobile wallet. The update is available on Github and Google Play.",
-      date: "May 26, 2024",
-      link: "https://github.com/3Dpass/threedpass/releases/tag/v.2.15.0"
     },
   ]);
 

@@ -442,8 +442,8 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title">Social Media</div>
               <ul className="page-content-text">
-                <Link to="https://twitter.com/3Dpass_official">
-                  <li>X [Genesis] (major dev news only)</li>
+                <Link to="https://twitter.com/3Dpass_genesis">
+                  <li>X [Genesis] (major news only)</li>
                 </Link>
                 <Link to="https://x.com/3dpass_open_gov">
                   <li>X (The Open Gov news)</li>

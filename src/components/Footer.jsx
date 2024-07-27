@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <Button type="button" label="Subscribe" />
           <div className="icon-social-holder">
-            <a href="https://twitter.com/3Dpass_official"><div className="social-icon twitter"></div></a>
+            <a href="https://twitter.com/3Dpass_genesis"><div className="social-icon twitter"></div></a>
             <a href="https://github.com/3dpass"><div className="social-icon github"></div></a>
             <a href="https://discord.gg/u24WkXcwug"><div className="social-icon discord"></div></a>
             <a href="https://t.me/pass3d"><div className="social-icon telegram"></div></a>

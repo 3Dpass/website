@@ -1248,7 +1248,7 @@ sh keygen_seed.sh
             <div className="page-content-text">
               3.3. If leveraging the script doesn't fit, the manual procedure will be as follows: 
             </div>
-            <div className="page-content-text">
+            <div className="page-content-text" id="linux-mac-mining-account">
               3.3.1. Generate your mining account (standard account, 'sr25519' type):
             </div>
             <pre className="main-pre">
@@ -1319,16 +1319,44 @@ ls ~/3dp-chain/chains/3dpass/keystore
 ./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
                     `}
             </pre>
-            <div className="page-content-text">
-              `--author` is your Public key from mining account (the one you have
-              generated as mining key, in the example above it is
-              0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e)
-              `--threads` is the number of threads you're about to use for mining
-              (`--threads 2` means, you are going to leverage 2 threads for mining)
-            </div>
+            <ul className="page-content-text">
+              <li>
+              <i>`--base-path ~/3dp-chain/`</i> is the path to where the blockchain db 
+              and keystore are located (you can modify it, if needed).
+              </li>
+              <li>
+              <i>`--author`</i> is your Public key (hex) or Address from the mining account
+              (In the example above:
+              0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e or 
+              d1GtBxnPwRZVez7VsQ9H7MskPn34H59RddrR9yXqhgDYsqC3t)
+              </li>
+             <li>
+              <i>`--chain mainnetSpecRaw.json`</i> is the Ledger of Things mainnet chain specificaion 
+              file mandatory for the Node to identify itself as part of the network and 
+              get a list of bootnodes (initial peers).
+             </li>
+             <li>
+              <i>`--name MyNodeName`</i> is the Node name (you can name your Node as you wish)
+             </li>
+             <li>
+              <i>`--validator`</i> is a mandatory parameter enabling the block finalization (PoA)
+             </li>
+             <li>
+              <i>`--telemetry-url`</i> is the telemetry server URL (<i>"wss://submit.telemetry.3dpscan.io/submit 1"</i> will 
+              share expanded data to the server)
+             </li>
+             <li>
+               <i>--threads</i> is a number of threads allocated for mining
+             </li>
+             <li>
+             <i>--no-mdns</i> enables the external mode (if not used, the node will create a DNS server for the local 
+             the nodes to find each other within the Ethernet, which is consuming additional resources)
+             </li>
+            </ul>
             <div className="page-content-text">
               Make sure you have the external port <i>`30333`</i> open for incoming
-              connections and forwarded to your server's local LAN IP. Check your Node on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
+              connections and forwarded to your server's local LAN IP. Check your Node 
+              on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
             </div>
             <div className="page-content-text" id="linux-mac-sync">
               5. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
@@ -1481,15 +1509,17 @@ bun miner.js --host 127.0.0.1 --port 9933
         </div>
         <div className="page-content-block" id="validator">
           <div className="page-content-inner">
-            <div className="page-content-title">Validator (PoS) Set up</div>
+            <div className="page-content-title">Validator (PoA) Set up</div>
             <div className="page-content-subtitle" id="validator-general">
               General
             </div>
             <div className="page-content-text">
-              Validators are the most reliable authorities eligible to vote for the
+              <i>PoA (Proof of Authority)</i> Validators are the most reliable authorities eligible to vote for the 
               Best chain finalization as well as to participate in the user object verification process specified in  {" "}
               <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link>  {" "}
-              tokenization standard. Rewards are getting distributed in equal among the current validator set members.
+              tokenization standard. In opose to nPoS concept the Validators in The Ledger of Things
+               obtain equal voting power, irrespective to the amount of stake they locked for collateral.  
+               And, therefore, rewards are getting distributed in equal among the current validator set members.
             </div>
             <div className="page-content-text">Rewards:</div>
             <ul className="page-content-text">
