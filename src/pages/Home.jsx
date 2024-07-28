@@ -25,11 +25,11 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
-      title: "The twitter account has been renamed!",
+      title: "The founders' twitter account has been renamed!",
       description:
-      "For the sake of the project decentralization the twitter account has been renamed into @3Dpass_genesis as the very first one created around the Ledger of Things eco-system.",
+      "For the sake of the project decentralization the twitter account has been renamed into @3Dpass_genesis. Pick up whatever channel you trust from the list of communinty recources. Beware, every channel are self-responsible for the information they provide.",
       date: "June 27, 2024",
-      link: "https://twitter.com/3Dpass_genesis"
+      link: "/community#resources"
     },
     {
       title: "The migration to PoW v2 is completed!",

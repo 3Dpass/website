@@ -333,7 +333,7 @@ const Community = () => {
               <strong><i>Disclaimer!</i></strong> All the resources below are managed by community 
               members and there might be many others untracked. The resources represent independent 
               groups and channels about 3Dpass by its creators. Due to decentralized nature of the 
-              project there is <strong>NO OFFICIAL SOURCE OF INFORMATION</strong> taking place around 
+              project there is <strong>NO PRIMARY CHANNEL</strong> taking place around 
               the system, and the most reliable source of data is the blockchain data base containing 
               all transaction history including the <Link to="#governance">Open Governance</Link>{" "}
               and <Link to="/governance#democracy">Referendum</Link> vote. Be careful choosing which 
