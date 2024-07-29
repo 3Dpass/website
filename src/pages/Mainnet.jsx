@@ -1090,6 +1090,13 @@ environment:
                     `}
             </pre>
             <div className="page-content-text">
+              <strong>-- IMPORTANT: <i>1 Node = 1 VOTE</i> rule is operating!</strong>
+            </div>
+            <div className="page-content-text">
+             You should never use the same keyset on different machines. 
+             Setting up a unique account for each Node running is mandatory.
+            </div>
+            <div className="page-content-text">
               7. Run the Node and Miner.{" "}
               Check your node on the telemetry <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.{" "}
               
@@ -1196,6 +1203,16 @@ cd 3DP
             </div>
             <div className="page-content-subtitle" id="linux-mac-keys">
               Set up your keys
+            </div>
+            <div className="page-content-text">
+              <strong>IMPORTANT: <i>1 Node = 1 VOTE</i> rule is operating!</strong>
+            </div>
+            <div className="page-content-text">
+             You should never use the same keyset on different machines. 
+             Setting up a unique account for each Node running is mandatory.
+            </div>
+            <div className="page-content-text">
+             ---
             </div>
             <div className="page-content-text">
               3. Generate a bunch of keys for your account and import them into keystore. Create new account, if needed.
