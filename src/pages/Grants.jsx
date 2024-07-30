@@ -83,6 +83,18 @@ const Grants = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#eco-system-support-bounty">
+            <div
+              className={
+                locationHash.includes("eco-system-support")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Eco-system support
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="page-content">
@@ -215,7 +227,7 @@ const Grants = () => {
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the issue with the Counsilors. 
+                and discuss the task with the Counsilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
@@ -303,7 +315,7 @@ const Grants = () => {
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the issue with the Counsilors. 
+                and discuss the matter with the Counsilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
@@ -372,7 +384,7 @@ const Grants = () => {
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the issue with the Counsilors. 
+                and discuss the matter with the Counsilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
@@ -387,6 +399,83 @@ const Grants = () => {
             <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
             <div className="page-lead-content">
                Integration Bounty
+                <div className="page-lead-button">Apply</div>
+            </div>
+            </a>
+          </div>
+        </div>
+        <div className="page-content-block" id="eco-system-support-bounty">
+          <div className="page-content-inner">
+            <div className="page-content-title">
+              Eco-system support bounty program
+            </div>
+            <div className="page-content-text">
+              Having either <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
+              repository or some job done is required to consider on the application. Proposals might be previously discussed with the 
+              Councilors and community over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
+            </div>
+            <div className="page-content-subtitle">
+              To be rewarded:
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Block explorers (ex. <Link to="https://3dpscan.io">3Dpscan.io</Link>)
+              </li>
+              <li>
+                Mining dash boards (ex. <Link to="https://3dpassmining.info">3dpassmining.info</Link>)
+              </li>
+              <li>
+                DEX maintenance (ex. <Link to="https://swap.3dpscan.io">swap.3dpscan.io</Link>)
+              </li>
+              <li>
+                Open Governance apps and channels
+              </li>
+              <li>
+                Cross-chain bridges
+              </li>
+              <li>
+                Web3 wallet maintenance and hositng
+              </li>
+              <li>
+                Mobile wallet maintenance
+              </li>
+              <li>
+                Other dApps and scripts involved in the operations
+              </li>
+              <li>
+                Useful community resources and groups
+              </li>
+            </ul>
+            <div className="page-content-subtitle">
+              How to apply:
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Submit your Pull Request into the <Link to="https://github.com/3dpass">GitHub</Link>{"  "}
+                or get some useful job done that would require additional resources (time, money, etc) to 
+                maintain your service/app. 
+              </li>
+              <li>
+                Get both of your accounts GitHub account and Discord account 
+                verified as <Link to="/mainnet#chain-kyc">"Reasonable"</Link>.
+              </li>
+              <li>
+                Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
+                and discuss the matter with the Counsilors. 
+              </li>
+              <li>
+                Submit your bounty over the {" "}
+                 <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
+                and specify the link to your Pull Request/proof of work in the Bounty description. 
+              </li>
+              <li>
+                Wait for the Council vote outcome. If approved, your application will be assigned a the curator, 
+                who is to check on the Pull Request and approve the payout.
+              </li>
+            </ul>
+            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <div className="page-lead-content">
+               Eco-system Bounty
                 <div className="page-lead-button">Apply</div>
             </div>
             </a>
