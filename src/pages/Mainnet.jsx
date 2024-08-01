@@ -1205,14 +1205,9 @@ cd 3DP
               Set up your keys
             </div>
             <div className="page-content-text">
-              <strong>IMPORTANT: <i>1 Node = 1 VOTE</i> rule is operating!</strong>
-            </div>
-            <div className="page-content-text">
-             You should never use the same keyset on different machines. 
-             Setting up a unique account for each Node running is mandatory.
-            </div>
-            <div className="page-content-text">
-             ---
+              -- IMPORTANT: <i>1 Node = 1 VOTE</i> rule is operating! <br />
+              You should never use the same keyset on different machines. 
+              Setting up a unique account for each Node running is mandatory.
             </div>
             <div className="page-content-text">
               3. Generate a bunch of keys for your account and import them into keystore. Create new account, if needed.
@@ -1338,36 +1333,38 @@ ls ~/3dp-chain/chains/3dpass/keystore
             </pre>
             <ul className="page-content-text">
               <li>
-              <i>`--base-path ~/3dp-chain/`</i> is the path to where the blockchain db 
+              <strong><i>`--base-path ~/3dp-chain/`</i></strong>  - is the path to where the blockchain db 
               and keystore are located (you can modify it, if needed).
               </li>
               <li>
-              <i>`--author`</i> is your Public key (hex) or Address from the mining account
+              <strong><i>`--author`</i></strong> - is your Public key (hex) or Address from the mining account
               (In the example above:
               0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e or 
               d1GtBxnPwRZVez7VsQ9H7MskPn34H59RddrR9yXqhgDYsqC3t)
               </li>
              <li>
-              <i>`--chain mainnetSpecRaw.json`</i> is the Ledger of Things mainnet chain specificaion 
+             <strong><i>`--chain mainnetSpecRaw.json`</i></strong> - is the Ledger of Things mainnet chain specificaion 
               file mandatory for the Node to identify itself as part of the network and 
               get a list of bootnodes (initial peers).
              </li>
              <li>
-              <i>`--name MyNodeName`</i> is the Node name (you can name your Node as you wish)
+             <strong><i>`--name MyNodeName`</i></strong> - is the Node name (you can name your Node as you wish)
              </li>
              <li>
-              <i>`--validator`</i> is a mandatory parameter enabling the block finalization (PoA)
+             <strong><i>`--validator`</i></strong> - enables the block finality verification (PoA), mandatory for every node
              </li>
              <li>
-              <i>`--telemetry-url`</i> is the telemetry server URL (<i>"wss://submit.telemetry.3dpscan.io/submit 1"</i> will 
+             <strong><i>`--telemetry-url`</i></strong> - is the telemetry server URL (<i>"wss://submit.telemetry.3dpscan.io/submit 1"</i> will 
               share expanded data to the server)
              </li>
              <li>
-               <i>--threads</i> is a number of threads allocated for mining
+             <strong><i>`--threads`</i></strong> - is a number of threads allocated for mining
              </li>
              <li>
-             <i>--no-mdns</i> enables the external mode (if not used, the node will create a DNS server for the local 
-             the nodes to find each other within the Ethernet, which is consuming additional resources)
+             <strong><i>`--no-mdns`</i></strong> - disables the local DNS mode useful for Ethernet connections only 
+              (If not include, a local DNS server will be created for Nodes to sync with each other over the Ethernet. 
+              Do not use this flag, if you need to arrange a local subnet under your NAT. In the case, make sure a unique 
+              account is set for each of the Nodes on the subnet. Do not use the same account for several nodes. 1 Node = 1 account)
              </li>
             </ul>
             <div className="page-content-text">

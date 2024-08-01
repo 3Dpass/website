@@ -740,8 +740,8 @@ ETH SIGNATURE
                 <i> 1. Come up with some useful agenda to The Ledger of Things → 2. Head in and implement your plan to add some value → 3. Capitalize on the project value.</i>
               </div>
               <div className="page-content-text">
-                The contribution aspect should never be skipped in the formula. P3D is a pure unility token, {" "}
-                and the best way to impact on its value is to add to its use. Additional options would be:
+                The contribution aspect should never be skipped in the formula. P3D is a pure utility token, {" "}
+                and the best way to impact on its value is to add to its utilization. Additional options would be:
               </div>
               <ul className="page-content-text">
                 <li>Joining the <Link to="/community#governance">Council</Link> to balance decisions by vote</li>
