@@ -1090,11 +1090,8 @@ environment:
                     `}
             </pre>
             <div className="page-content-text">
-              <strong>-- IMPORTANT: <i>1 Node = 1 VOTE</i> rule is operating!</strong>
-            </div>
-            <div className="page-content-text">
-             You should never use the same keyset on different machines. 
-             Setting up a unique account for each Node running is mandatory.
+              If you are an admin of multiple nodes, make sure to set 
+              up a unique account for each one (1 Node = 1 Account).
             </div>
             <div className="page-content-text">
               7. Run the Node and Miner.{" "}
@@ -1140,23 +1137,68 @@ docker compose up
               <li>Restart the node and miner</li>
             </ul>
             <div className="page-content-subtitle">
-              Additional options
+              Additional castomization (optional)
             </div>
             <div className="page-content-text">
-              You might as well, customize the Node name in the
-               the <i>~/3DP/docker/node.sh</i> file. All you need to do is
-              to edit the `--name MY_NODE_NAME` parameter:
+              You might as well, customize the Node running command parameters in the
+               the <i>~/3DP/docker/node.sh</i> script:
             </div>
             <pre className="main-pre">
               {`
 #!/bin/bash
+# importing mining key
 ./p3d import-mining-key "$MEMO_SEED" --base-path /var/chain --chain mainnetSpecRaw.json
+
+# deriving GRANDPA key 
 GRANDPA_KEY="$(./p3d key inspect --scheme Ed25519 "$MEMO_SEED" | sed -n 's/.*Secret seed://p')"
+
+# inserting GRANDPA key
 ./p3d key insert --base-path /var/chain --chain mainnetSpecRaw.json --scheme Ed25519 --key-type gran --suri $GRANDPA_KEY
+
+# inserting ImOnline key
+./p3d key insert --scheme Sr25519 --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --key-type imon --suri $GRANDPA_KEY
+
+# running the Node
 ./p3d --chain mainnetSpecRaw.json --unsafe-ws-external --unsafe-rpc-external --rpc-cors=all --no-mdns \
-  --validator --base-path /var/chain --author "$ADDRESS" --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --name MY_NODE_NAME
+--validator --base-path /var/chain --author "$ADDRESS" --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --name MY_NODE_NAME
                     `}
             </pre>
+            <div className="page-content-text">
+              Running command parameters:
+            </div>
+            <ul className="page-content-text">
+              <li>
+              <strong><i>`--base-path`</i></strong>  - is the path to where the blockchain db 
+              and keystore are located.
+              </li>
+              <li>
+              <strong><i>`--author`</i></strong> - is the Address from your mining account
+              </li>
+             <li>
+             <strong><i>`--chain mainnetSpecRaw.json`</i></strong> - is the Ledger of Things mainnet chain specificaion 
+              file mandatory for the Node to identify itself as part of the network and 
+              get a list of bootnodes (initial peers).
+             </li>
+             <li>
+             <strong><i>`--name`</i></strong> - is the Node name (you can name your Node as you wish)
+             </li>
+             <li>
+             <strong><i>`--validator`</i></strong> - enables the block finality verification (PoA), mandatory for every Node
+             </li>
+             <li>
+             <strong><i>`--telemetry-url`</i></strong> - is the telemetry server URL (<i>"wss://submit.telemetry.3dpscan.io/submit 1"</i> will 
+              share expanded data to the server)
+             </li>
+             <li>
+             <strong><i>`--threads`</i></strong> - is a number of threads allocated for mining
+             </li>
+             <li>
+             <strong><i>`--no-mdns`</i></strong> - disables the local DNS mode useful for Ethernet connections only 
+              (If not include, a local DNS server will be created for Nodes to sync with each other over the Ethernet. 
+              Do not use this flag, if you need to arrange a local subnet under your NAT. In the case, make sure a unique 
+              account is set for each of the Nodes on the subnet. Do not use the same account for multiple nodes. 1 Node = 1 Account)
+             </li>
+            </ul>
             <div className="page-content-text">
               In order to purge the blockchain DB and your keys on the keystore use this
               command:
@@ -1205,14 +1247,16 @@ cd 3DP
               Set up your keys
             </div>
             <div className="page-content-text">
-              -- IMPORTANT: <i>1 Node = 1 VOTE</i> rule is operating! <br />
-              You should never use the same keyset on different machines. 
-              Setting up a unique account for each Node running is mandatory.
-            </div>
+              3. Generate a bunch of keys for your account and import them into 
+              keystore (<i>`~/3dp-chain/chains/3dpass/keystore`</i>). Create new account, 
+              if needed. If you are an admin of multiple nodes, make sure to set 
+              up a unique account for each one (1 Node = 1 Account).
+              </div>
             <div className="page-content-text">
-              3. Generate a bunch of keys for your account and import them into keystore. Create new account, if needed.
-              There is a <Link to="#linux-mac-script">script</Link> in place to set it up automatically. An alternative option is to 
-              proceed with the <Link to="#linux-mac-manual">manual set up</Link>. Once your keyset is ready, <Link to="#linux-mac-run">start your node</Link> . 
+              There is a <Link to="#linux-mac-script">script</Link> in place 
+              to set up your keys automatically. An alternative option is to 
+              proceed with the <Link to="#linux-mac-manual">manual set up</Link>. {" "}
+              Once your keyset is ready, <Link to="#linux-mac-run">start your Node</Link>. 
             </div>
             <div className="page-content-text" id="linux-mac-script">
               USING THE SCRIPT
