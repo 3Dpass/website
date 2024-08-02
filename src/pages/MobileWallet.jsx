@@ -100,6 +100,12 @@ const MobileWallet = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#light-account">
+            <div className="page-nav-inside">
+              Accounts
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#light-p3d-transfer">
             <div className="page-nav-inside">
               P3D transfer
@@ -109,6 +115,12 @@ const MobileWallet = () => {
           <a href="#light-assets-transfer">
             <div className="page-nav-inside">
               Assets transfer
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#light-p3d-assets-recieve">
+            <div className="page-nav-inside">
+              How to receive
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -333,6 +345,21 @@ const MobileWallet = () => {
               src="/images/accounts1.png"
               alt="img"
             />
+            <div className="page-content-subtitle" id="light-account">
+              Accounts Create/Import
+            </div>
+            <div className="page-content-text">
+              3Dpass wallet allows for multiple accounts management. You can either 
+              create new account or import the existing one from `seed`. Once imported, 
+              select which one to use. Kepp your seed and pasword in a safe plece! 
+              There's no way to recover, if forgotten or lost.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/account_mobile.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="light-p3d-transfer">
               P3D transfer
             </div>
@@ -342,7 +369,7 @@ const MobileWallet = () => {
             <img
               className="page-img"
               style={{ marginBottom: "20px" }}
-              src="/images/p3d_transfer_mobile.png"
+              src="/images/p3d_transfer_mobile_.png"
               alt="img"
             />
               <div className="page-content-subtitle" id="light-assets-transfer">
@@ -355,6 +382,19 @@ const MobileWallet = () => {
               className="page-img"
               style={{ marginBottom: "20px" }}
               src="/images/assets_transfer_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="light-p3d-assets-recieve">
+              Receiving P3D and Assets
+            </div>
+            <div className="page-content-text">
+              Share your address to receive P3D and Assets. 
+              You can either scan QR code or copy & paste the addess to share. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/p3d_assets_receive_mobile.png"
               alt="img"
             />
           </div>
