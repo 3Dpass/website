@@ -1156,7 +1156,7 @@ GRANDPA_KEY="$(./p3d key inspect --scheme Ed25519 "$MEMO_SEED" | sed -n 's/.*Sec
 ./p3d key insert --base-path /var/chain --chain mainnetSpecRaw.json --scheme Ed25519 --key-type gran --suri $GRANDPA_KEY
 
 # inserting ImOnline key
-./p3d key insert --scheme Sr25519 --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --key-type imon --suri $GRANDPA_KEY
+./p3d key insert --scheme Sr25519 --base-path /var/chain --chain mainnetSpecRaw.json --key-type imon --suri $GRANDPA_KEY
 
 # running the Node
 ./p3d --chain mainnetSpecRaw.json --unsafe-ws-external --unsafe-rpc-external --rpc-cors=all --no-mdns \
@@ -1347,7 +1347,7 @@ Secret seed: 0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3 
 Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 SS58 Address: d1HqrBYq9qsTbBb4tQtnt9sLgh9UsS7XJbgQgr5Cb4CxH2xAd
                     `}
             </pre>
-            <div className="page-content-text">
+            <div className="page-content-text" id="linux-mac-inserting-grandpa-key">
               3.3.4. Insert the GRANDPA key into the keystore:
             </div>
             <pre className="main-pre">
@@ -1359,14 +1359,32 @@ Account ID: 0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1 S
               `--suri` is your Secret seed `hex`` from GRANDPA key (in the example above:
               0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3)
             </div>
+            <div className="page-content-text" id="linux-mac-inserting-imonline-key">
+              3.3.5. Insert the ImOnline key into the keystore:
+            </div>
+            <pre className="main-pre">
+              {`
+./target/release/poscan-consensus key insert --scheme Sr25519 --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --key-type imon --suri 0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3
+                    `}
+            </pre>
             <div className="page-content-text">
-              Make sure both of your keys are in the keystore:
+              <code>--suri</code> is the Secret seed (hex) from your GRANDPA key (in the example above:
+                0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3)
+            </div>
+            <div className="page-content-text" id="linux-mac-keystore-check">
+              3.3.6. Make sure you have the whole bunch of keys <i>(Mining key, GRANDPA key and ImOnline key)</i> in the keystore:
             </div>
             <pre className="main-pre">
               {`
 ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
+            <img
+              className="page-img"
+              src="/images/keystore1.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-text" id="linux-mac-run">
               4. Start the Node with the following:
             </div>
@@ -1646,7 +1664,7 @@ bun miner.js --host 127.0.0.1 --port 9933
                 Minimum lock period is 43200 blocks (~ 1 month)
               </li>
             </ul>
-            <div className="page-content-subtitle">Set up fee</div>
+            <div className="page-content-subtitle" id="validator-setup-fee">Set up fee</div>
             <ul className="page-content-text">
               <li>
                 10 000 P3D one-time payment to Treasury account <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
@@ -1679,8 +1697,8 @@ bun miner.js --host 127.0.0.1 --port 9933
               Setting up procedure:
             </div>
             <div className="page-content-text">
-              1. Set up a full Node in accordance to this <Link to="#linux-mac">tutorial</Link> {" "} 
-              and list to the project directory:
+              1. Set up full Node in accordance with this <Link to="#linux-mac-simple_node">tutorial</Link>. {" "} 
+              Make sure to have <Link to="#linux-mac-keys">set up keys</Link> and then list to the project directory:
             </div>
             <pre className="main-pre">
               {`
@@ -1688,7 +1706,7 @@ cd 3DP
                     `}
             </pre>
             <div className="page-content-text">
-              2. Make sure you have all the keys required in your keystore <i>~/3dp-chain/chains/3dpass/keystore</i>:
+              2. Check on the <i>keystore</i> and verify the whole bunch of keys required:
               </div>
             <pre className="main-pre">
               {`
@@ -1696,11 +1714,9 @@ ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
             <div className="page-content-text">
-            There supposed to be three keys in there, such as: <i>Mining key, 
-            GRANDPA key and ImOnline key</i>. The whole bunch of keys must have 
-            been derived from the same Secret Seed phrase (account is <Link to="#addresses">defined</Link> by your Secret Seed phrase).
-            It is recommended that you generate the whole bunch of keys with this {" "}
-            <Link to="#linux-mac-script">script</Link> to avoid potential mistakes. 
+              There supposed to be three keys in the folder (the <i>Mining key, 
+              GRANDPA key and ImOnline key</i>). Check the if all of the keys meet
+              the required format: 
             </div>
             <img
               className="page-img"
@@ -1709,26 +1725,17 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-             You might, as well, have created both <i>Mining key</i> and <i>GRANDPA key</i> {" "}
-             <Link to="linux-mac-manual">manually</Link> and then use this command to add <i>ImOnline key</i> to your keystore:
-            </div>
-            <pre className="main-pre">
-              {`
-./target/release/poscan-consensus key insert --scheme Sr25519 --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --key-type imon --suri 0x4934fa3a959af00a0caccf2be77d82f4cbf2154c3c7bebc021f2c1573f44fbb3
-                    `}
-            </pre>
-            <div className="page-content-text">
-              <code>--suri</code> is the Secret seed (hex) from your <Link to="#linux-mac-grandpa_key">GRANDPA key</Link>.
+              In case of any missformat or absence or some spare keys found, it is recommnded 
+              you wipe out the entire content from the <i>keystore</i> and set up keys 
+              properly from scratch. Having incorrect keyset in the folder might lead up to 
+              severe punishments when Node comes into operation.
             </div>
             <div className="page-content-text">
               3. Run the Node with <Link to="#linux-mac-run">this</Link> command and get it <Link to="#linux-mac-sync">synced</Link> with the network.
             </div>
-            <div className="page-content-text">
-              4. Connect <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/chainstate">Polka js wallet</Link> to the Node in local 
-              (RPC API endpoint for your local server is ws://127.0.0.1.:9944).
-            </div>
             <div className="page-content-text" id="validator-lock-check">
-              5. Lock up your funds to a certain block number in the future.
+              4. Open the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka js wallet</Link> {" "}
+              and lock up your funds to a certain block number in the future.
               There is no way to unlock until it's expired.
             </div>
             <ul className="page-content-text">
@@ -1755,8 +1762,31 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              6. Join the <Link to="https://discord.gg/u24WkXcwug">Discord</Link> and apply for validator to the Council. Make the set up payment during the application process. The application goes through the <Link to="/governance#council"></Link> Council vote. 
+              5. Join the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.
+              Set up On-chain Identity and get <i>"Reasonable"</i> level of confidence in accordance 
+              with <Link to="#chain-kyc">this procedure</Link> to prove you are the actual
+              owner of the Validator's account.
             </div>
+            <div className="page-content-text">
+              6. Make your application for Validator and join the validator set:
+            </div>
+            <ul className="page-content-text">
+               <li>
+               Apply for Validator over the {" "}
+               <Link to="https://discord.com/channels/932377852521881659/1259112470795124867">OPENGOVERNANCE</Link> {" "}
+               discord channel.
+               </li>
+               <li>
+               Pay off the <Link to="#validator-setup-fee">Set up fee</Link> to Treasury 
+               and attach the transaction link to the application.
+               </li>
+               <li>
+               The application goes through the <Link to="/governance#council"></Link> Council vote. 
+               One of the actual councilors will pick up your application and submit the motion to the Council.
+               Track the motion via the Polka js wallet - {" "}
+              <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/council/motions">#council/motions</Link>. 
+               </li>
+            </ul>
             {/*<div className="page-content-text">
               5. Add your mining address into the Validator set:
             </div>
@@ -1767,8 +1797,8 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />*/}
             <div className="page-content-text">
-              Once approved, make sure you can see your mining address in the
-              validatorSet:
+              Once passed, verify your mining address in the
+              validatorSet → Validators() list:
             </div>
             <img
               className="page-img"
@@ -1777,17 +1807,39 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              7. Do rotateKeys and get "proof Bytes":
+              7. Generate the session key by calling out the Node via the 
+              RPC API with the <i>"author_rotateKeys"</i> method and get a `proof` of your keys:
             </div>
-            <img
-              className="page-img"
-              src="/images/rotate_keys1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
+            <pre className="main-pre">
+              {`
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys"}' http://localhost:9933/
+              `}
+            </pre>
             <div className="page-content-text">
-              8. Use your GRANDPA Public key (hex), Mining public key (hex) and
-              the proof Bytes to set up session keys:
+             This command returns a JSON-formatted result containting the `proof` of 
+             your keys for the `session` module in the hex fromat (<strong><i>"0x..."</i></strong>):
+            </div>
+            <pre className="main-pre">
+              {`
+{
+"jsonrpc":"2.0",
+"result":"0x3dd251b3b713793d39da31efbf2013766fd47730f69bcc18949dffac04d2b9076a907e83c40a0d0af459bc7a49354ff16f9b88edc66eb46cabed4a7f27efv30f",
+"id":1
+}
+              `}
+              </pre>
+              <ul className="page-content-text">
+                <li>
+                 In the example above the `proof` is <i>0x3dd251b3b713793d39da31efbf2013766fd47730f69bcc18949dffac04d2b9076a907e83c40a0d0af459bc7a49354ff16f9b88edc66eb46cabed4a7f27efv30f</i>
+                </li>
+                <li>
+                <i>Note!</i> New session key will be added into the keystore (<i>~/3dp-chain/chains/3dpass/keystore</i>) {" "}
+                every time the <i>"author_rotateKeys"</i> method is executed.
+                </li>
+              </ul>
+            <div className="page-content-text">
+              8. Use your <i>GRANDPA Public key</i> (hex), <i>Mining public key</i> (hex) and
+              the <i>`proof`</i> of your keys (hex) to set up the session keys for your Validator:
             </div>
             <img
               className="page-img"
@@ -1818,7 +1870,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              11. Would you like to highlight your node with the "dot" on the <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
+              11. Would you like to highlight your Node with the "dot" on the <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
             </div>
             <pre className="main-pre">
               {`
@@ -1832,10 +1884,9 @@ ls ~/3dp-chain/chains/3dpass/keystore
                     `}
             </pre>
             <div className="page-content-text">
-              12. Check if your node is not being exposed on the missing list.
-              If your node is unable to vofe for some reason (incorrect setup
-              keys, firewall, server responce longer than 333 ms, etc.) it's
-              going to show up as missing, like this:
+              12. Check if your Node is not being exposed on the missing list.
+              In case the Validator is unable to vofe for some reason its GRANDPA addreess
+              is going to be showed up as missing, like this:
             </div>
             <img
               className="page-img"
@@ -1843,6 +1894,26 @@ ls ~/3dp-chain/chains/3dpass/keystore
               alt="img"
               style={{ marginBottom: "20px" }}
             />
+            <div className="page-content-text">
+              The most common reasons for the Validator to permanently show up missng are: 
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Incorrect key setup (check your keys and session set up)
+              </li>
+              <li>
+                Firewall restrictions (check your NAT rules and make sure there's no global 
+                firewall restriction taking place on the Internet provider's side)
+              </li>
+              <li>
+                It takes longer than 333 ms to get through to the server 
+                (Make sure your Node is accessible from anywhere in the world. 
+                Ping on the Node IP and make sure it gets back in 333 ms or faster) 
+              </li>
+              <li>
+                The Node is out of sinc (Make sure the Node is up to date with the Best block)
+              </li>
+            </ul>
             <div className="page-content-subtitle" id="validator-rejoin">
               Rejoining the validator set
             </div>
