@@ -175,7 +175,7 @@ const MobileWallet = () => {
             <ul className="page-content-text">
               <li>
                 Pick up 3D models in <i><Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</Link></i> format up to 100 Kb. 
-                (Feel free to download this <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection">precious stones collection</Link> for testing purposes) 
+                (Feel free to download this <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection">precious stones collection</Link> for the testing purpose) 
               <img
               className="page-img"
               style={{ marginBottom: "20px" }}
@@ -185,18 +185,21 @@ const MobileWallet = () => {
               </li>
               <li>
                 Get the models processed one by one and save its snapshots, until the
-                {" "} HASH ID is matched <i>(the object is recognized)</i>. Otherwise, the object is considered to be unique. 
+                {" "} HASH IDs match <i>(the object is recognized)</i>. Otherwise, 
+                the object is considered to be unique. 
                 
-                <img
+              <img
               className="page-img"
               style={{ marginBottom: "20px" }}
               src="/images/object_recognized.png"
               alt="img"
-            />
+              />
               </li>
               <li>
-                If the object tokenization is your primary goal, just keep processing its alternative scans/models, until
-                at least one stable hash is found <i>(the HASH ID is created)</i>. Make sure the stable hash is included into the HASH ID, before you put it on the blockchain.
+                Keep processing on new scans/models of the object, until
+                the stable hash is found <i>(the HASH ID is created)</i>. 
+                Make sure the stable hash is included into the HASH ID, 
+                before you put it on the blockchain.
                 <img
               className="page-img"
               style={{ marginBottom: "20px" }}
@@ -205,8 +208,8 @@ const MobileWallet = () => {
             />
               </li>
               <li>
-                Using the same scanning settings is mandatory for every object processed. 
-                The <i>Rotation bytes</i> must be set at the same value, as well. "None" (no rotation) is recomended. 
+                Do not change scanning settings during the proccessing. 
+                Setting up <i>Rotation bytes</i> at "None" (no rotation) is recommended for most of the cases.
                 <img
               className="page-img"
               style={{ marginBottom: "20px" }}

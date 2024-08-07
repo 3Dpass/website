@@ -107,8 +107,21 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              Mining SOLO With Docker (any system)
+              Mining with Docker (any OS)
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line docker-line"></div>
+            </div>
+          </a>
+          <a href="#docker-node-setup">
+            <div className="page-nav-inside">
+              Setting up Node and Miner
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#docker-node-customization">
+            <div className="page-nav-inside">
+              Node custimization
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#linux-mac">
@@ -311,13 +324,10 @@ const Mainnet = () => {
             <div className="one-subheader">3DPass Swap DEX</div>
           </a>
           <a href="https://3dpscan.io">
-            <div className="one-subheader">Block Explorer 1</div>
-          </a>
-          <a href="https://explorer.3dpassmining.info">
-            <div className="one-subheader">Block Explorer 2</div>
+            <div className="one-subheader">Block Explorer</div>
           </a>
           <a href="https://explorer-api.3dpscan.io/graphql/">
-            <div className="one-subheader">Block Explorer API</div>
+            <div className="one-subheader">Blockchain graphgl API</div>
           </a>
           <a href="https://discord.gg/u24WkXcwug">
             <div className="one-subheader">Discord</div>
@@ -997,7 +1007,7 @@ cargo build --release
               How to start mining with Docker (Windows; Linux; Mac OS; Android, any
               system)
             </div>
-            <div className="page-content-text">
+            <div className="page-content-text" id="docker-node-setup">
               Run both Node and Miner in one command on <i>Windows,
               Linux, Mac OS, Android</i> and all the systems supported by Docker.
             </div>
@@ -1136,12 +1146,12 @@ docker compose up
               <li>Replace the existing `db` folder with the one you just downloaded</li>
               <li>Restart the node and miner</li>
             </ul>
-            <div className="page-content-subtitle">
-              Additional castomization (optional)
+            <div className="page-content-subtitle" id="docker-node-customization">
+              Additional customization (optional)
             </div>
             <div className="page-content-text">
-              You might as well, customize the Node running command parameters in the
-               the <i>~/3DP/docker/node.sh</i> script:
+              You might, as well, customize the Node running command parameters by means of 
+              putting your modifications into the <i>node.sh</i> script (<i>~/3DP/docker/node.sh</i>):
             </div>
             <pre className="main-pre">
               {`

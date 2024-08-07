@@ -264,6 +264,10 @@
   height: 196px;
 }
 
+.docker-line {
+  height: 84px;
+}
+
 .node-line {
   height: 152px;
 }
