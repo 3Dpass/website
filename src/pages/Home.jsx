@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The Node v27 has been released!",
+      description:
+      "The Node v27 provides additional stability for the mining loop as well as the block import component. Recommended for every Node on the network.",
+      date: "Aug 7, 2024",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v27"
+    },
+    {
       title: "The founders' twitter account has been renamed!",
       description:
       "For the sake of the project decentralization the twitter account has been renamed into @3Dpass_genesis. Pick up whatever channel you trust from the list of communinty recources. Beware, every channel are self-responsible for the information they provide.",
@@ -42,13 +49,6 @@ const Home = () => {
       "The mainnet has been upgraded online switching to the PoW v2 at the block height of 948592. A patch for the mining loop is available on GitHub!",
       date: "July 4, 2024",
       link: "https://github.com/3Dpass/3DP/releases/tag/v25"
-    },
-    {
-      title: "The Node v24 PoW v2 ASIC/FPGA resistant is available on GitHub!",
-      description:
-      "PoW v2 component, which is CPU oriented and providing ASIC/FPGA resistance features, is now available on Github for mainnet. This is a major upgrade, which is mandatory for every node on the network.",
-      date: "June 28, 2024",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v24"
     },
   ]);
 

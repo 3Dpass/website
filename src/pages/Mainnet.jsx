@@ -161,6 +161,12 @@ const Mainnet = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#linux-mac-miner-adjustment">
+            <div className="page-nav-inside">
+              Miner adjustment
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#wallet">
             <div
               className={
@@ -1133,6 +1139,13 @@ docker compose up
               alt="img"
               style={{ marginBottom: "20px" }}
             />
+            <ul className="page-content-text">
+              <li>
+                <i>~3DP/miner.js</i> (3D model generator) will be used for mining. Follow {" "}
+                <Link to="#linux-mac-miner-adjustment">these guidelines</Link> to make 
+                your adjustments that would fit in the server capabilities (optional).
+              </li>
+            </ul>
             <div className="page-content-text">
              8.1. There is an option to speed up syncing process by starting the Node with the 
              latest blockchian `db`snapshots provided by the community members for newcomers:
@@ -1219,12 +1232,16 @@ cd 3DP
 docker compose rm -f
                     `}
             </pre>
-            <div className="page-content-text">
-              Track your performance on the Mining Leaders dash board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
-            </div>
-            <div className="page-content-text">
-              Compare your machine configuraton to the other ones presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
-            </div>
+            <ul className="page-content-text">
+              <li>
+                Track your performance on the Mining Leaders dash 
+                board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+              </li>
+              <li>
+              Compare your machine configuraton to the other ones 
+              presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="page-content-block" id="linux-mac">
@@ -1507,15 +1524,73 @@ bun miner.js --host 127.0.0.1 --port 9933
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">
-              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, which might be leveraged as an option, either.
+            <ul className="page-content-text">
+              <li>
+                There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, 
+                which might be leveraged as an option
+              </li>
+              <li>
+                Track your performance on the Mining Leaders dash 
+                board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+              </li>
+              <li>
+              Compare your machine configuraton to the other ones 
+              presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
+              </li>
+            </ul>
+            <div className="page-content-subtitle" id="linux-mac-miner-adjustment">
+              Miner parameters adjustment (optional)
             </div>
             <div className="page-content-text">
-              Track your performance on the Mining Leaders dash board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+              <strong>- Embedded miner (~3DP/miner.js)</strong>
             </div>
             <div className="page-content-text">
-              Compare your machine configuraton to the other ones presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
+              In order to adjust the miner (3D object generator) velocity to your server 
+              capabilities of handling the models generated you can either expand or reduce
+              its <Link to="https://github.com/3Dpass/3DP/blob/1c696ee89ce4acc3274209aab8bc7ec597bfc4f5/miner.js#L17">default settings</Link>. 
+              Modify the limits in the <strong><i>miner.js</i></strong> to reach desired performance:
             </div>
+            <pre className="main-pre">
+              {`
+const MIN_INTERVAL = 100;
+const MAX_INTERVAL = 10000;
+const ADJUSTMENT_PERCENT = 10;
+                    `}
+            </pre>
+            <ul className="page-content-text">
+              <li>
+                <code>MIN_INTERVAL</code> is the maximum speed limit in ms (100 ms by default). 
+                Reduce the interval to encrease your max hashrate. It will be reached when your Node 
+                is capable of handling the objects faster (ex. setting up 10 ms will require for the Node to be 
+                capable of getting the objects processed at the hashrate of 1 hash/10 ms).
+              </li>
+              <li>
+                <code>MAX_INTERVAL</code> is the mininmum speed limit in ms (10000 ms by default).
+                Expand the interval to slow down your minimum hashrate. It will be reached when 
+                the Node is busy or syncing (ex. setting up 100000 ms will allow for miner 
+                to slow down on idle to the bottom of 1 hash/100000 ms hashrate).
+              </li>
+              <li>
+                <code>ADJUSTMENT_PERCENT</code> is the pace (acceleration speed in %) at which the 
+                miner velocity will adjust itself (10% is set up by default). 
+                Speeding up the pace will make miner adjust even more rapidly (ex. setting 
+                up the adjustment pace at 50% will let miner reach full range in 2 steps).
+              </li>
+            </ul>
+            <div className="page-content-text">
+              <strong>- Alternative miner</strong>
+            </div>
+            <div className="page-content-text">
+              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link> {" "}
+              providing the only option for adjustment. You can only set up a flat hashrate 
+              limit value with the <code>--interval</code> parameter (ex. setting up 10 ms will require for the Node to be 
+              capable of getting the objects processed at the hashrate of 1 hash/10 ms). The running command will be as follows:
+            </div>
+            <pre className="main-pre">
+              {`
+yarn miner --interval 100 --host 127.0.0.1 --port 9933
+              `}
+            </pre>
           </div>
         </div>
         <div className="page-content-block" id="wallet">
@@ -1867,11 +1942,25 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              9. Wait for ~240 blocks (2 sessions) to pass
+              Verify that both of your keys Mining pub key and GRANDPA pub key 
+              are set up to the session with the <i>`session_nextKeys`</i> method:
+            </div>
+            <img
+              className="page-img"
+              src="/images/session_next_keys.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+              9. Wait for ~240 blocks (2 sessions) to pass. Your Validator will 
+              be queued to the actual Grandpa Authorities one session after it's gotten into 
+              the <i>nextKeys</i> list (in ~120 blocks). Optionally, you may verify it with 
+              the <i>`session_queuedKeys`</i> method. It is going to take one more session 
+              (120 blocks) for your validator to enact as a legitimate GRANDPA Authority. 
             </div>
             <div className="page-content-text">
-              10. Make sure, that you can see your GRANDPA SS58 Address in the
-              Grandpa Authorities:
+              10. Once having 2 sessions passed (~240 blocks have passed), make sure that you can 
+              see your GRANDPA SS58 Address on the Grandpa Authorities list:
             </div>
             <img
               className="page-img"
@@ -1894,9 +1983,13 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
                     `}
             </pre>
             <div className="page-content-text">
-              12. Check if your Node is not being exposed on the missing list.
-              In case the Validator is unable to vofe for some reason its GRANDPA addreess
-              is going to be showed up as missing, like this:
+              12. Make sure your Node is participating in the GRANDPA voting rounds. Check if its GRANDPA address is not being exposed 
+              on the missing list <strong>permanently</strong>. Call out the <code>roundState</code> method for several times (3-10 times) 
+              and watch over the missing list changes. The voting rounds rotate fairly rapidly (333 ms per round), 
+              so you always fetch incomplete data which is in the state of change. Sometimes your Validator might 
+              be found missing, which is normal. In the case of having your Validator unable to vofe for some 
+              reason its GRANDPA address is going to be showed up missing permanently. The problem is every time 
+              you call out the <i>roundRtate</i> it is still there:
             </div>
             <img
               className="page-img"
@@ -2399,21 +2492,18 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
             <div className="page-content-text">Solution</div>
             <ul className="page-content-text">
               <li>
-                Make sure incoming connections are allowed and external port
-                30333 is open for your node.
+                First of all, keep running the Node for a couple of hours. 
+                It's not always the case that it starts syncing instantaneously, 
+                which is a normal behaviour.
+              </li>
+              <li>
+                Make sure incoming connections are allowed, and the external port
+                30333 is open.
               </li>
               <li>
                 If you are behind the NAT or router, it's recomended that you
-                set up a static internal IP and forward external port 30333 to
-                your machine
-              </li>
-              <li>
-                Sometimes, it might get tricky to establish the first p2p
-                connection between nodes behind NAT. Try leveraging some
-                different Internet provider or direct connection from data
-                center, etc. That might really help. If you have your computer
-                connected via router, then turn it off for 10-15 min and then
-                try again.
+                set up a static LAN IP and forward external port 30333 to
+                your machine.
               </li>
             </ul>
             <div className="page-content-subtitle">
@@ -2427,7 +2517,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
             </div>
             <ul className="page-content-text">
               <li>
-                It's recommended that you upgrade the hardware and the Internet
+                It's recommended that you upgrade the hardware and check on the Internet
                 connection speed.
               </li>
               <li>
@@ -2437,72 +2527,23 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
               </li>
             </ul>
             <div className="page-content-subtitle">
-              Error: Service(Other("Unable to mine: fetch pair from author
-              failed"))
+              "Ran out of free WASM instances"
             </div>
+            <img
+              className="page-img"
+              src="/images/ran_out_of_free_wasm_instances.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-text">
-              Set up your keys for mining and for Grandpa as it's described in
-              the guidelines. If you are running the Node manually, make sure if
-              there are two keys in the keystore:
-              ~/3dp-chain/chains/3dp/keystore
-            </div>
-            <div className="page-content-subtitle">
-              "Expected prunning mode: constrained"
-            </div>
-            <div className="page-content-text">
-              Remove your blockchain db as it's described <Link to="/testnet">above</Link> and start the
-              node again.
-            </div>
-            <div className="page-content-subtitle">
-              Cannot unlock my old mining rewards
-            </div>
-            <div className="page-content-text">
-              The <Link to="https://polkadot.js.org/apps/#/chainstate">chain state</Link> on the blockchain storage for the Rewards pallet
-              provides there is no locks for the address you have requested,
-              despite the fact that a certain amount of P3D is still locked in.
-              Ex. you can see some funds locked, while observing your account
-              over the <Link to="https://3dpscan.io">block explorer</Link>. The chain state output would look like
-              this:
+              Expand the number of WASM instances for your Node by means of this 
+              parameter <code>--max-runtime-instanses 256</code> (8 is set up by default). 
             </div>
             <pre className="main-pre">
               {`
-[
-[ d1EssjuwKKqe4HRFejUTtT5BXAQVnUEMw2ddKkxC1fsxvt9Sn
-]
-{}
-]
-                    `}
+./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --author <MINING ADDRESS> --threads 2 --no-mdns --max-runtime-instanses 256
+              `}
             </pre>
-            <div className="page-content-text">Solution</div>
-            <div className="page-content-text">
-              1. Check the chain storage for the Rewards pallet to figure it out
-              whether or not the output looks like in the example above.
-            </div>
-            <img
-              className="page-img"
-              src="/images/chainstorage_rewards1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text" id="cant-unlock">
-              2. If so, proceed the following steps:
-            </div>
-            <ul className="page-content-text">
-              <li>Execute Unlock funds mined via the <Link to="https://wallet.3dpass.org/">web wallet</Link></li>
-              <li>
-                Lock 1 Cramb (0.000000000001 P3D) with the Rewards pallet like
-                this
-              </li>
-            </ul>
-            <img
-              className="page-img"
-              src="/images/lock1cramb1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              Make sure you have your funds unlocked.
-            </div>
           </div>
         </div>
       </div>
