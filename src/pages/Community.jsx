@@ -46,18 +46,6 @@ const Community = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#representatives">
-            <div
-              className={
-                locationHash.includes("representatives")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Representatives
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
           <a href="#governance">
             <div
               className={
@@ -70,6 +58,18 @@ const Community = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#representatives">
+            <div
+              className={
+                locationHash.includes("representatives")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Representatives
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
           <a href="#resources">
             <div
               className={
@@ -78,7 +78,7 @@ const Community = () => {
                   : "one-page-nav"
               }
             >
-              Resources
+              Community Resources
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -227,6 +227,60 @@ const Community = () => {
             </div>
           </div>
         </div>
+        <div className="page-content-block" id="governance">
+          <div className="page-content-inner">
+            <Link className="message-text" to="/governance"><div className="page-content-title">Open Governance</div></Link>
+            <div className="page-content-text">
+              3DPass leverages a sophisticated self governance mechanism, which
+              allows for it to evolve gracefully overtime at the ultimate behest of
+              its assembled stakeholders. The stated goal is to ensure that the
+              majority of the stake can always command the network.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/3dpass_society.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              3DPass decentralised governance system is comprised of three main
+              components:
+            </div>
+            <ol className="page-content-text">
+              <li>
+                <Link to="/governance#council">Council</Link> - An approval-voted, elected executive "government" to
+                manage parameters, admin and spending proposals.
+              </li>
+              <li>
+              <Link to="/governance#technical">Technical Committee</Link> - A technocratic committee to manage the
+                {" "} <Link to="/forkless-upgrade">forkless online upgrade</Link>{" "}
+                timelines.
+              </li>
+              <li>
+              <Link to="/governance#democracy">Referenda</Link> - A general voting system for everything else which
+                rewarded long-term stakeholders with increased influence.
+              </li>
+            </ol>
+            <div className="page-content-text">
+              The network brings together various novel mechanisms, including an
+              amorphous state-transition function stored on-chain and defined in
+              a platform-neutral intermediate language (i.e. <Link to="/forkless-upgrade#wasm">WebAssembly</Link>) and
+              several on-chain voting mechanisms such as referenda with adaptive
+              super-majority thresholds and batch approval voting. All changes
+              to the protocol must be agreed upon by stake-weighted referenda.
+            </div>
+            <div className="page-content-text">
+              There is a <Link to="/governance#treasury">Treasury</Link> pot controled by the Council, which adds to
+              transparency, especially, when it comes to the budget spendings
+              and grants. The funds held in the Treasury can be spent by making
+              a spending proposal that, if approved by the Council, will enter a
+              waiting period before distribution.
+            </div>
+            <div className="page-content-text">
+              Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
+            </div>
+          </div>
+        </div>
         <div className="page-content-block" id="representatives">
           <div className="page-content-inner">
             <div className="page-content-title">Representatives</div>
@@ -278,57 +332,9 @@ const Community = () => {
             />
           </div>
         </div>
-        <div className="page-content-block" id="governance">
-          <div className="page-content-inner">
-            <Link className="message-text" to="/governance"><div className="page-content-title">Governance</div></Link>
-            <div className="page-content-text">
-              3DPass leverages a sophisticated self governance mechanism, which
-              allows it to evolve gracefully overtime at the ultimate behest of
-              its assembled stakeholders. The stated goal is to ensure that the
-              majority of the stake can always command the network.
-            </div>
-            <div className="page-content-text">
-              3DPass decentralised governance system is comprised of three main
-              components:
-            </div>
-            <ol className="page-content-text">
-              <li>
-                <Link to="/governance#council">Council</Link> - An approval-voted, elected executive "government" to
-                manage parameters, admin and spending proposals.
-              </li>
-              <li>
-              <Link to="/governance#technical">Technical Committee</Link> - A technocratic committee to manage the
-                {" "} <Link to="/forkless-upgrade">forkless online upgrade</Link>{" "}
-                timelines.
-              </li>
-              <li>
-              <Link to="/governance#democracy">Referenda</Link> - A general voting system for everything else which
-                rewarded long-term stakeholders with increased influence.
-              </li>
-            </ol>
-            <div className="page-content-text">
-              The network brings together various novel mechanisms, including an
-              amorphous state-transition function stored on-chain and defined in
-              a platform-neutral intermediate language (i.e. <Link to="/forkless-upgrade#wasm">WebAssembly</Link>) and
-              several on-chain voting mechanisms such as referenda with adaptive
-              super-majority thresholds and batch approval voting. All changes
-              to the protocol must be agreed upon by stake-weighted referenda.
-            </div>
-            <div className="page-content-text">
-              There is a <Link to="/governance#treasury">Treasury</Link> pot controled by the Council, which adds to
-              transparency, especially, when it comes to the budget spendings
-              and grants. The funds held in the Treasury can be spent by making
-              a spending proposal that, if approved by the Council, will enter a
-              waiting period before distribution.
-            </div>
-            <div className="page-content-text">
-              Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
-            </div>
-          </div>
-        </div>
         <div className="page-content-block" id="resources">
           <div className="page-content-inner full-m-w">
-            <div className="page-content-title">Resources</div>
+            <div className="page-content-title">Community Resources</div>
             <div className="page-content-text">
               <strong><i>Disclaimer!</i></strong> All the resources below are managed by community 
               members and there might be many others untracked. The resources represent independent 

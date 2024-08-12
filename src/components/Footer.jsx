@@ -31,13 +31,13 @@ const Footer = () => {
               <div className="footer-parts-title">Features</div>
             </a>
             <a href="/features#3drecognition">
-              <div className="footer-item">Recognition technology</div>
+              <div className="footer-item">Recognition Technology</div>
             </a>
             <a href="/features#scanproof">
-              <div className="footer-item">Proof of Scan Protocol</div>
+              <div className="footer-item">Proof of Scan Consensus</div>
             </a>
             <a href="features#3dprc-2">
-              <div className="footer-item">3DPRC-2 standard</div>
+              <div className="footer-item">3DPRC-2 Standard</div>
             </a>
             <a href="/features#ledger">
               <div className="footer-item">The Ledger of Things</div>
@@ -65,11 +65,11 @@ const Footer = () => {
             <a href="/community#eco-system">
               <div className="footer-item">Eco-system</div>
             </a>
-            <a href="/community#representatives">
-              <div className="footer-item">Representatives</div>
-            </a>
             <a href="/community#governance">
               <div className="footer-item">Open Governance</div>
+            </a>
+            <a href="/community#representatives">
+              <div className="footer-item">Representatives</div>
             </a>
             <a href="/community#resources">
               <div className="footer-item">Resources</div>

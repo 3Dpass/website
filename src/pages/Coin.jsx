@@ -158,7 +158,7 @@ ETH SIGNATURE
           </a>
           <a href="#distribution-rules">
             <div className="page-nav-inside">
-              Mining Rules
+              Mining Rules (PoW)
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -170,7 +170,7 @@ ETH SIGNATURE
           </a>
           <a href="#distribution-validation">
             <div className="page-nav-inside">
-              Validation Service Fee
+              Validation Fee (PoA)
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -409,7 +409,7 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> is being estimated</i>)</li>
               <li>DEX: Cross-chain bridge over to Ethereum (<i> is being researched</i>)</li>
-              <li>Mobile wallet: Embedded DEX UI integration (<i><Link to="https://github.com/3Dpass/threedpass">in the process</Link></i>)</li>
+              <li>Mobile wallet: Embedded DEX UI integration (<i><Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.16.0">Released v2.16.0</Link></i>)</li>
               <li>A stablecoin bridging/issuance (<i> is being researched</i>)</li>
               <li>Web wallet: Asset/NFT marketplace UI implementation</li>
               <li>Administrative: Governance server and UI</li>
@@ -748,7 +748,7 @@ ETH SIGNATURE
                 <li>Participating in the <Link to="/grants"> Contribution Grant Program</Link> to ask communinty support for your project</li>
               </ul>
               <div className="page-content-subtitle" id="distribution-rules">
-                P3D mining rules (PoW ASIC-resistant, CPU oriented protocol)
+                P3D mining rules (PoW ASIC-resistant, CPU-oriented protocol)
               </div>
               <div className="page-content-text">
                 According to the <Link to="/coin#white-papper">White Paper</Link> there are some mining rules every
@@ -761,7 +761,7 @@ ETH SIGNATURE
               <div className="page-content-text">
                 Miners are puting their efforts to pick up some specific 3D object shape corresponding the
                 rules govern whether or not new block will be rewarded by the
-                network. Mining share is 50% of total block rewards (the rest 50% is being distributed among the Validators PoS)
+                network. Mining share is 50% of total block rewards (the rest 50% is being distributed among the Validators PoA)
                 P3D emission curve rules are:
               </div>
               <ul className="page-content-text">
@@ -793,11 +793,11 @@ ETH SIGNATURE
                 className="page-content-subtitle"
                 id="distribution-validation"
               >
-                Validation service fee (PoS)
+                Validation service fee (PoA)
               </div>
               <div className="page-content-text">
                 Validators represent the most reliable set of the network {" "}
-                authoritiess eligible to vote for Best chain finalizatiion as well {" "}
+                authorities eligible to vote for Best chain finalizatiion as well {" "}
                 as to participate in the user object verification process specified in  {" "}
                 <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard. {" "}
                 Current validator set gets rewarded by the network 50% of total block rewards (the rest 50% goes to the block author). {" "}

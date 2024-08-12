@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The mobile wallet v2.16.0 DEX implementation!",
+      description:
+      "The DEX module UI has been implemented into the mobile wallet! Download new version and make nice swaps without a middleman!",
+      date: "Aug 8, 2024",
+      link: "https://play.google.com/store/apps/details?id=com.threedpass.wallet"
+    },
+    {
       title: "The Node v27 has been released!",
       description:
       "The Node v27 provides additional stability for the mining loop as well as the block import component. Recommended for every Node on the network.",
@@ -42,13 +49,6 @@ const Home = () => {
       "For the sake of the project decentralization the twitter account has been renamed into @3Dpass_genesis. Pick up whatever channel you trust from the list of communinty recources. Beware, every channel are self-responsible for the information they provide.",
       date: "June 27, 2024",
       link: "/community#resources"
-    },
-    {
-      title: "The migration to PoW v2 is completed!",
-      description:
-      "The mainnet has been upgraded online switching to the PoW v2 at the block height of 948592. A patch for the mining loop is available on GitHub!",
-      date: "July 4, 2024",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v25"
     },
   ]);
 
