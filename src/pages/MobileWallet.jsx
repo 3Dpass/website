@@ -81,6 +81,31 @@ const MobileWallet = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#dex">
+            <div
+              className={
+                locationHash.includes("dex")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Swap/DEX
+              <div className="page-nav-circle"></div>
+              <div className="page-nav-line dex-mobile-line"></div>
+            </div>
+          </a>
+          <a href="#dex-liquidity-pools">
+            <div className="page-nav-inside">
+              Liquidity pools
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#dex-swap">
+            <div className="page-nav-inside">
+              Token swap
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#light">
             <div
               className={
@@ -323,6 +348,68 @@ const MobileWallet = () => {
               className="page-img"
               style={{ marginBottom: "20px" }}
               src="/images/create_regular_fungible_asset_mobile.png"
+              alt="img"
+            />
+          </div>
+        </div>
+        <div className="page-content-block" id="dex">
+          <div className="page-content-inner">
+            <div className="page-content-title">Swap/Decentralized exchange UI</div>
+            <div className="page-content-text">
+             The mobile wallet is integrated with the on-chain {" "}
+             <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">AssetConversion</Link> {" "}
+             module, which is based on Uniswap v2 protocol rules, to trade the assets seamlessly and without a middleman.
+            </div>
+            <div className="page-content-subtitle" id="dex-liquidity-pools">
+              Liquidity pools (LP)
+            </div>
+            <div className="page-content-text">
+              In traditional finance, liquidity is provided by buyers and sellers of an asset. 
+              In contrast, DeFi relies on liquidity pools to function. A major component of a 
+              liquidity pool are automated market makers (AMMs). An AMM is a protocol that uses 
+              liquidity pools to allow digital assets to be traded in an automated way rather 
+              than through a traditional market of buyers and sellers.
+            </div>
+            <div className="page-content-text">
+              Liquidity pools are designed to incentivize users of different crypto platforms, 
+              called liquidity providers (LPs). After a certain amount of time, LPs are rewarded 
+              with a fraction of fees and incentives, equivalent to the amount of liquidity they 
+              supplied, called liquidity provider tokens (LPTs). 
+            </div>
+            <div className="page-content-text">
+              In order to trade your token (ex.TEST), a Liquidity Pool must first be created 
+              (ex. TEST/P3D). Once created, anyone can become LP and add liquidity to the pool. 
+              Rewards can be withdrawn after time by the Liquidity Provider (LP):
+            </div>
+            <ol className="page-content-text">
+              <li>
+                Create Liquidity Pool for your token (LP types: <i>Token-Token</i>; <i>Token-Native</i>)
+              </li>
+              <li>
+                Deposit liquidity in Tokens or Native currency (P3D)
+              </li>
+              <li>
+                Withdraw the rewards after time (once available)
+              </li>
+            </ol>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/DEX_mobile_pools.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="dex-swap">
+              Token swap
+            </div>
+            <div className="page-content-text">
+              Pick up any direction available and make a swap. Swap price will be 
+              calcualted automatically by the automated market makers (AMMs), depending 
+              on the portions of liquidity provided. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/3dpass_dex_swap.png"
               alt="img"
             />
           </div>

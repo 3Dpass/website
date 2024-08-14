@@ -260,6 +260,10 @@
   height: 84px;
 }
 
+.dex-mobile-line {
+  height: 64px;
+}
+
 .transfer-mobile-line {
   height: 196px;
 }
@@ -293,7 +297,7 @@
 }
 
 .usecase-line {
-  height: 145px;
+  height: 208px;
 }
 
 .full-m-w {

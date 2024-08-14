@@ -107,6 +107,12 @@ const Community = () => {
               <div className="page-nav-line usecase-line"></div>
             </div>
           </a>
+          <a href="#use-cases-ideas">
+            <div className="page-nav-inside">
+              Tokenize your ideas and earn
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#use-cases-diamonds">
             <div className="page-nav-inside">
               Diamonds and presious stones
@@ -587,6 +593,66 @@ const Community = () => {
         <div className="page-content-block" id="use-cases">
           <div className="page-content-inner">
             <div className="page-content-title">Use Cases</div>
+            <div className="page-content-subtitle" id="use-cases-ideas">
+              Tokenize your ideas and earn!
+            </div>
+            <div className="page-content-text">
+              Jump right into this <i>play-to-earn</i> economic game for everyone, which allows 
+              to tokenize your ideas into its share-tokens and make an ICO. Educate yourself playing
+              and get a chance to earn P3D on ICOs of your creative ideas reflecting in our hearts and minds
+              as outstanding pieces of art or just sharp and full of sense of humor and creativity items.
+            </div>
+            <div className="page-content-text">
+            <strong>The more extraordinary and beautiful ideas you can imagine, the more you can earn!</strong>
+            </div>
+            <ol className="page-content-text">
+              <li>
+              <strong>All you need to do is to express your idea in words</strong> (could be something like: <i>"a funny cow"</i> or <i>"an airplain that 
+              looks like a banana"</i> or <i>"a piggy wheel automobile"</i> or anything that you might consider to be smart 
+              or funny or worthwile to create). Create anything you'd like and make it into a low-poly 3D model (<i>.obj</i> format)
+              with the AI text-to-3Dmodel generator! <Link to="https://meshy.ai">https://meshy.ai</Link> or similar tools could be used, for instance.
+              </li>
+              <li>
+                Get your model tokenized into its share tokens via the <Link to="/mobile-wallet#tokenization">mobile wallet</Link>. {" "}
+                Just put your model on blockchain (pick up its "Share" for the tokenization) and, once approved, create and mint its 
+                share-tokens (Max supply is limited to 100%).
+              </li>
+              <li>
+                Trade your share-token on DEX without a middleman via the <Link to="/mobile-wallet#dex-liquidity-pools">mobile wallet {" "}
+                </Link> or <Link to="https://swap.3dpscan.io">Web3 swap UI</Link>. 
+                Get your idea share-token listed on DEX yourself (no listing fee) and enjoy community support!
+              </li>
+            </ol>
+            <Link
+              className="a-none"
+              to="/tokenize_ideas_and_earn.pdf"
+              target="blank"
+              download
+            >
+              <div className="page-lead-content">
+                Download the tips: "How-To"
+                <div className="page-lead-button">PDF</div>
+              </div>
+            </Link>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/tokenize_ideas_and_earn.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              If you are an artist or 3D-sculptor or NFT creator, an alternative option of 3D modeling for you could be:  
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Using 3D modeling tools and editors
+              </li>
+              <li>
+               Getting real world objects scanned with your smartphone camera or professional 3D-scanner and then making
+               the model simplified into a low-poly <i>.obj </i> {" "}
+               (ex. with <Link to="https://lowpoly3d.xyz/">https://lowpoly3d.xyz/</Link> or <Link to="https://www.meshlab.net">Meshlab</Link>)
+              </li>
+            </ul>
             <div className="page-content-subtitle" id="use-cases-diamonds">
               Diamonds and presious stones tokenization
             </div>

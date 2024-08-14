@@ -30,18 +30,18 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "Get your ideas tokenized and earn! (Use-case)",
+      description:
+      "A play-to-earn economic game for everyone has been launched all across the LoT eco-system, which allows for and easy creation of low-poly 3D models out of personal ideas and its momentarily capitalizaion through ICOs as the share-tokens. The game is leveraging an AI `text-to-3Dmodel` generator.",
+      date: "Aug 14, 2024",
+      link: "/community#use-cases-ideas"
+    },
+    {
       title: "The mobile wallet v2.16.0 DEX implementation!",
       description:
       "The DEX module UI has been implemented into the mobile wallet! Download new version and make nice swaps without a middleman!",
       date: "Aug 8, 2024",
       link: "https://play.google.com/store/apps/details?id=com.threedpass.wallet"
-    },
-    {
-      title: "The Node v27 has been released!",
-      description:
-      "The Node v27 provides additional stability for the mining loop as well as the block import component. Recommended for every Node on the network.",
-      date: "Aug 7, 2024",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v27"
     },
     {
       title: "The founders' twitter account has been renamed!",

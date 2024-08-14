@@ -719,7 +719,13 @@ const Features = () => {
             />
             <Link className="message-text" to="https://swap.3dpscan.io">
             <div className="page-lead-content">
-                 Swap your tokens
+                 Swap via the Web3 UI
+                <div className="page-lead-button">Swap</div>
+            </div>
+            </Link>
+            <Link className="message-text" to="/mobile-wallet#dex">
+            <div className="page-lead-content">
+                 Swap via the Mobile wallet
                 <div className="page-lead-button">Swap</div>
             </div>
             </Link>

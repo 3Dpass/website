@@ -805,7 +805,13 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             <div className="page-content-title">DEX (Decentralized Exchange)</div>
             <Link className="message-text" to="https://swap.3dpscan.io">
             <div className="page-lead-content">
-                 Swap your tokens
+                 Swap via the Web3 UI
+                <div className="page-lead-button">Swap</div>
+            </div>
+            </Link>
+            <Link className="message-text" to="/mobile-wallet#dex">
+            <div className="page-lead-content">
+                 Swap via the Mobile wallet
                 <div className="page-lead-button">Swap</div>
             </div>
             </Link>
@@ -817,8 +823,9 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
            </div>
            <ul className="page-content-text">
             <li>
-            Use the <Link to="https://swap.3dpscan.io">DEX User Interface</Link> to either swap your tokens or 
-            add liquidity. Create new liquidity pool if needed. 
+            Either can you leverage the <Link to="https://swap.3dpscan.io">WEB3 DEX UI</Link> or 
+            the <Link to="/mobile-wallet#dex">Mobile Wallet</Link> to swap tokens. You can also become 
+            Liqidity Provoder and earn rewards in tokens.
             </li>
             <li>
             Make Pull Request into the <Link to="https://github.com/3Dpass/swap">GitHub</Link> to add your token's logo. 
