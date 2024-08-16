@@ -65,7 +65,19 @@ const MobileWallet = () => {
           </a>
           <a href="#tokenization-share-token">
             <div className="page-nav-inside">
-              Create Share-token
+              Create Share-asset
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#tokenization-metadata">
+            <div className="page-nav-inside">
+              Set up metadata
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#tokenization-mint">
+            <div className="page-nav-inside">
+              Mint tokens
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -300,7 +312,7 @@ const MobileWallet = () => {
               alt="img"
             />
             <div className="page-content-subtitle" id="tokenization-share-token">
-              Create the object Share-token
+              Create the object Share-asset
             </div>
             <div className="page-content-text">
               Open the wallet and proceed with creation of new asset.  
@@ -318,6 +330,39 @@ const MobileWallet = () => {
               className="page-img"
               style={{ marginBottom: "20px" }}
               src="/images/create_share-token_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="tokenization-metadata">
+              Set up the Asset metadata
+            </div>
+            <div className="page-content-text">
+              Pick up the asset you have previously created and set up its metadata.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/assets_set_up_metadata_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Set up the <strong>Asset name</strong>, <strong>Symbols</strong> and <strong>Decimals</strong> as follows:
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/assets_metadata_description.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="tokenization-mint">
+              Mint tokens
+            </div>
+            <div className="page-content-text">
+              Mint some certain amount of tokens for the asset you have created earlier.  
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/assets_mint_mobile.png"
               alt="img"
             />
           </div>
@@ -350,6 +395,10 @@ const MobileWallet = () => {
               src="/images/create_regular_fungible_asset_mobile.png"
               alt="img"
             />
+             <div className="page-content-text">
+              Once created, you can set up <Link to="#tokenization-metadata">metadata </Link> {" "}
+              and <Link to="#tokenization-mint">mint</Link> some certain amount of tokens. 
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="dex">

@@ -77,6 +77,9 @@ const Home = () => {
             <Link to="https://swap.3dpscan.io">
               <Button type="button" label="3DPass Swap DEX" />
             </Link>
+            <Link to="/community#use-cases-ideas">
+              <Button type="button" label="Play-to-Earn" />
+            </Link>
           </div>
         </div>
       </div>
