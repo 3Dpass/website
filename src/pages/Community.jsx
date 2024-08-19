@@ -357,7 +357,7 @@ const Community = () => {
               </li>
             </ul>
             <div className="page-content-subtitle" id="use-cases-lego">
-              LEGO models open marketplace for architectors and individuals
+              LEGO models open marketplace for architects and individuals
             </div>
             <ol className="page-content-text">
               <li>
@@ -405,11 +405,11 @@ const Community = () => {
              <strong>Description:</strong>
             </div>
             <div className="page-content-text">
-              LEGO models privately designed by individual architechtors and players represent a 
-              million dollars market where users are sharing their best models with each 
-              other and are able to sell, trade and make ICOs. Whereas, the model ownership is
-              assigned to its creator and the bricks owpenrship, the models are built out of,
-              are refered to a brand (LEGO and analogs).
+            LEGO models privately designed by individual architects and players represent 
+            a million-dollar market where users are sharing their best models with each 
+            other and are able to sell, trade and make ICOs. Whereas, the model ownership 
+            is assigned to its creator and the bricks ownership, the models are built out of, 
+            are referred to a brand (LEGO and its analogs).
             </div>
             <img
               className="page-img"
@@ -420,7 +420,7 @@ const Community = () => {
             <div className="page-content-text">
               Each and every model or brick belongs both real and virtual worlds simultaneously and has its 
               unique characteristics (3D shape, color, etc.), which make them a value. 
-              The most wothwhile property in the context is the low-poly 3D shape, which is 
+              The most worthwhile property in the context is the low-poly 3D shape, which is 
               distinguishable by <Link to="/grid2d">grid2d</Link> recognition algorithm operating 
               within the Ledger of Things and thus can be tokenized into a backed {" "}
               <Link to="/mobile-wallet#tokenization-share-token">share-asset</Link> {" "}
@@ -442,21 +442,21 @@ const Community = () => {
                <strong>Virtual-to-Real</strong> path:  Both bricks and models are printable on 3D printers.
               </li>
               <li>
-                Unique value proposition for LEGO and analogs: The tokenization of bricks and its copy protection,
+                Unique value proposition for LEGO and its analogs: The tokenization of bricks and its copy protection,
                 no listing fees, no bureaucracy.
               </li>
               <li>
-                Unique value proposition for architectors and designers: The tokenization 
-                of models and its copy protection as well as monetization/trade/ICO seamleasly 
-                without a middleman within the LoT Defi eco-system.
+                Unique value proposition for architects and designers: The tokenization 
+                of models and its copy protection as well as monetization/trade/ICO seamlessly 
+                without a middleman within the LoT DeFi eco-system.
               </li>
               <li>
                 Unique value proposition for players: The access to endless of models to 
                 build, interoperability, no logistics cost.
               </li>
               <li>
-                No commercial relationship and competitorship: The Ledger of Things is an 
-                open-source platform that is owned by everyone in the world, which privides 
+                No commercial relationship and competition: The Ledger of Things is an 
+                open-source platform that is owned by everyone in the world, which provides 
                 no competition towards the private business sector in relation to any 
                 commercial organization all across the globe.
               </li>
