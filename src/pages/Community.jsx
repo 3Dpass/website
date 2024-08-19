@@ -58,6 +58,49 @@ const Community = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+           <a href="#use-cases">
+            <div
+              className={
+                locationHash.includes("use-cases")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Use Cases
+              <div className="page-nav-circle"></div>
+              <div className="page-nav-line usecase-line"></div>
+            </div>
+          </a>
+          <a href="#use-cases-ideas">
+            <div className="page-nav-inside">
+              Play-to-Earn game
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#use-cases-lego">
+            <div className="page-nav-inside">
+              LEGO open marketplace
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#use-cases-diamonds">
+            <div className="page-nav-inside">
+              Diamonds and presious stones
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#use-cases-gaming">
+            <div className="page-nav-inside">
+              Gaming, Virtual Reality, Metaverse
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#use-cases-crypto">
+            <div className="page-nav-inside">
+              Cryptocurrency wallets
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#representatives">
             <div
               className={
@@ -92,43 +135,6 @@ const Community = () => {
             >
               Download
               <div className="page-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#use-cases">
-            <div
-              className={
-                locationHash.includes("use-cases")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Use Cases
-              <div className="page-nav-circle"></div>
-              <div className="page-nav-line usecase-line"></div>
-            </div>
-          </a>
-          <a href="#use-cases-ideas">
-            <div className="page-nav-inside">
-              Tokenize your ideas and earn
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#use-cases-diamonds">
-            <div className="page-nav-inside">
-              Diamonds and presious stones
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#use-cases-gaming">
-            <div className="page-nav-inside">
-              Gaming, Virtual Reality, Metaverse
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#use-cases-crypto">
-            <div className="page-nav-inside">
-              Cryptocurrency wallets
-              <div className="inside-nav-circle"></div>
             </div>
           </a>
         </div>
@@ -285,6 +291,203 @@ const Community = () => {
             <div className="page-content-text">
               Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
             </div>
+          </div>
+        </div>
+        <div className="page-content-block" id="use-cases">
+          <div className="page-content-inner">
+            <div className="page-content-title">Use Cases</div>
+            <div className="page-content-subtitle" id="use-cases-ideas">
+              Tokenize your ideas and earn!
+            </div>
+            <div className="page-content-text">
+              Jump right into this <i>play-to-earn</i> economic game for everyone, which allows 
+              to tokenize your ideas into its share-tokens and make an ICO. Educate yourself playing
+              and get a chance to earn P3D on ICOs of your creative ideas reflecting in our hearts and minds
+              as outstanding pieces of art or just sharp and full of sense of humor and creativity items.
+            </div>
+            <div className="page-content-text">
+            <strong>The more extraordinary and beautiful ideas you can imagine, the more you can earn!</strong>
+            </div>
+            <ol className="page-content-text">
+              <li>
+              <strong>All you need to do is to express your idea in words</strong> (could be something like: <i>"a funny cow"</i> or <i>"an airplain that 
+              looks like a banana"</i> or <i>"a piggy wheel automobile"</i> or anything that you might consider to be smart 
+              or funny or worthwile to create). Create anything you'd like and make it into a low-poly 3D model (<i>.obj</i> format)
+              with the AI text-to-3Dmodel generator! <Link to="https://meshy.ai">https://meshy.ai</Link> or similar tools could be used, for instance.
+              </li>
+              <li>
+                Get your model tokenized into its share tokens via the <Link to="/mobile-wallet#tokenization">mobile wallet</Link>. {" "}
+                Just put your model on blockchain (pick up its "Share" for the tokenization) and, once approved, create and mint its 
+                share-tokens (Max supply is limited to 100%).
+              </li>
+              <li>
+                Trade your share-token on DEX without a middleman via the <Link to="/mobile-wallet#dex-liquidity-pools">mobile wallet {" "}
+                </Link> or <Link to="https://swap.3dpscan.io">Web3 swap UI</Link>. 
+                Get your idea share-token listed on DEX yourself (no listing fee) and enjoy community support!
+              </li>
+            </ol>
+            <Link
+              className="a-none"
+              to="/tokenize_ideas_and_earn.pdf"
+              target="blank"
+              download
+            >
+              <div className="page-lead-content">
+                Download the tips: "How-To"
+                <div className="page-lead-button">PDF</div>
+              </div>
+            </Link>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/tokenize_ideas_and_earn.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              If you are an artist or 3D-sculptor or NFT creator, an alternative option of 3D modeling for you could be:  
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Using 3D modeling tools and editors
+              </li>
+              <li>
+               Getting real world objects scanned with your smartphone camera or professional 3D-scanner and then making
+               the model simplified into a low-poly <i>.obj </i> {" "}
+               (ex. with <Link to="https://lowpoly3d.xyz/">https://lowpoly3d.xyz/</Link> or <Link to="https://www.meshlab.net">Meshlab</Link>)
+              </li>
+            </ul>
+            <div className="page-content-subtitle" id="use-cases-lego">
+              LEGO models open marketplace for architectors and individuals
+            </div>
+            <ol className="page-content-text">
+              <li>
+                <Link to="/mobile-wallet#tokenization-put_object">Put your LEGO model on blockchain</Link> (copy protection will be enabled). 
+              </li>
+              <li>
+                Tokenize your model into a <Link to="/mobile-wallet#tokenization-share-token">share-asset</Link> {" "}
+                or non-fungible asset via the mobile wallet. {" "}
+                <Link to="/mobile-wallet#tokenization-metadata">Set up metadata</Link> {" "}
+                and <Link to="/mobile-wallet#tokenization-mint">mint</Link> share-tokens.
+              </li>
+              <li>
+                <Link to="/mobile-wallet#dex-liquidity-pools"> List your asset on DEX</Link> seamlessly 
+                and without a middleman (no listing fee, no request forms, no bureaucracy etc.)
+              </li>
+              <li>
+                <Link to="/mobile-wallet#dex-swap">Swap</Link> your asset or make ICOs without 
+                a middleman, buy and sell worrldwide freely. 
+              </li>
+            </ol>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/LoT_lego_mobile_put_on_blockchain.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+               Example:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Object tokenized: <strong>#21</strong>; 
+               <Link to="https://3dpscan.io/object/21">Lego brick 2x2</Link>.
+              </li>
+              <li>
+               Asset: share-asset: <strong>L2X2</strong>; decimals: 2, 
+               Max supply: 1000000.00 L2X2; Total supply: 1000000.00 L2X2.
+              </li>
+              <li>
+               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/L2X2</Link>; {" "}
+               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/L2X2</Link>
+              </li>
+            </ul>
+            <div className="page-content-text">
+             <strong>Description:</strong>
+            </div>
+            <div className="page-content-text">
+              LEGO models privately designed by individual architechtors and players represent a 
+              million dollars market where users are sharing their best models with each 
+              other and are able to sell, trade and make ICOs. Whereas, the model ownership is
+              assigned to its creator and the bricks owpenrship, the models are built out of,
+              are refered to a brand (LEGO and analogs).
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/lego_bricks_3d.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Each and every model or brick belongs both real and virtual worlds simultaneously and has its 
+              unique characteristics (3D shape, color, etc.), which make them a value. 
+              The most wothwhile property in the context is the low-poly 3D shape, which is 
+              distinguishable by <Link to="/grid2d">grid2d</Link> recognition algorithm operating 
+              within the Ledger of Things and thus can be tokenized into a backed {" "}
+              <Link to="/mobile-wallet#tokenization-share-token">share-asset</Link> {" "}
+              (collective public ownership) or a single non-fungible asset in accordance 
+              with <Link to="/features#3dprc-2">3DPRC-2</Link> standard.
+              </div>  
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/lego_piggy.png"
+              alt="img"
+            />
+            <ul className="page-content-text">
+              <li>
+               <strong>Real-to-Virtual</strong> path: Both bricks and models are scannable by 
+               means of smartphone camera or proffessional 3D scanning devices.
+              </li>
+              <li>
+               <strong>Virtual-to-Real</strong> path:  Both bricks and models are printable on 3D printers.
+              </li>
+              <li>
+                Unique value proposition for LEGO and analogs: The tokenization of bricks and its copy protection,
+                no listing fees, no bureaucracy.
+              </li>
+              <li>
+                Unique value proposition for architectors and designers: The tokenization 
+                of models and its copy protection as well as monetization/trade/ICO seamleasly 
+                without a middleman within the LoT Defi eco-system.
+              </li>
+              <li>
+                Unique value proposition for players: The access to endless of models to 
+                build, interoperability, no logistics cost.
+              </li>
+              <li>
+                No commercial relationship and competitorship: The Ledger of Things is an 
+                open-source platform that is owned by everyone in the world, which privides 
+                no competition towards the private business sector in relation to any 
+                commercial organization all across the globe.
+              </li>
+            </ul>
+            <div className="page-content-subtitle" id="use-cases-diamonds">
+              Diamonds and presious stones tokenization
+            </div>
+            <iframe
+              src="https://www.youtube.com/embed/Yxc-nJj7qeQ"
+              className="page-video"
+              controls
+              title="diamonds"
+            ></iframe>
+            <div className="page-content-subtitle" id="use-cases-gaming">
+              Tokenization of items for Gaming, Virtual reality, Metaverse
+            </div>
+            <iframe
+              src="https://www.youtube.com/embed/O6c3ZOB0Glg"
+              className="page-video"
+              controls
+              title="diamonds"
+            ></iframe>
+            <div className="page-content-subtitle" id="use-cases-crypto">
+              Real world objects as cryptocurrency wallets
+            </div>
+            <iframe
+              src="https://www.youtube.com/embed/YAl2R_DefQE"
+              className="page-video"
+              controls
+              title="diamonds"
+            ></iframe>
           </div>
         </div>
         <div className="page-content-block" id="representatives">
@@ -588,98 +791,6 @@ const Community = () => {
                 <Link to="https://github.com/3Dpass/">Github</Link>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="page-content-block" id="use-cases">
-          <div className="page-content-inner">
-            <div className="page-content-title">Use Cases</div>
-            <div className="page-content-subtitle" id="use-cases-ideas">
-              Tokenize your ideas and earn!
-            </div>
-            <div className="page-content-text">
-              Jump right into this <i>play-to-earn</i> economic game for everyone, which allows 
-              to tokenize your ideas into its share-tokens and make an ICO. Educate yourself playing
-              and get a chance to earn P3D on ICOs of your creative ideas reflecting in our hearts and minds
-              as outstanding pieces of art or just sharp and full of sense of humor and creativity items.
-            </div>
-            <div className="page-content-text">
-            <strong>The more extraordinary and beautiful ideas you can imagine, the more you can earn!</strong>
-            </div>
-            <ol className="page-content-text">
-              <li>
-              <strong>All you need to do is to express your idea in words</strong> (could be something like: <i>"a funny cow"</i> or <i>"an airplain that 
-              looks like a banana"</i> or <i>"a piggy wheel automobile"</i> or anything that you might consider to be smart 
-              or funny or worthwile to create). Create anything you'd like and make it into a low-poly 3D model (<i>.obj</i> format)
-              with the AI text-to-3Dmodel generator! <Link to="https://meshy.ai">https://meshy.ai</Link> or similar tools could be used, for instance.
-              </li>
-              <li>
-                Get your model tokenized into its share tokens via the <Link to="/mobile-wallet#tokenization">mobile wallet</Link>. {" "}
-                Just put your model on blockchain (pick up its "Share" for the tokenization) and, once approved, create and mint its 
-                share-tokens (Max supply is limited to 100%).
-              </li>
-              <li>
-                Trade your share-token on DEX without a middleman via the <Link to="/mobile-wallet#dex-liquidity-pools">mobile wallet {" "}
-                </Link> or <Link to="https://swap.3dpscan.io">Web3 swap UI</Link>. 
-                Get your idea share-token listed on DEX yourself (no listing fee) and enjoy community support!
-              </li>
-            </ol>
-            <Link
-              className="a-none"
-              to="/tokenize_ideas_and_earn.pdf"
-              target="blank"
-              download
-            >
-              <div className="page-lead-content">
-                Download the tips: "How-To"
-                <div className="page-lead-button">PDF</div>
-              </div>
-            </Link>
-            <img
-              className="page-img"
-              style={{ marginBottom: "50px" }}
-              src="/images/tokenize_ideas_and_earn.png"
-              alt="img"
-            />
-            <div className="page-content-text">
-              If you are an artist or 3D-sculptor or NFT creator, an alternative option of 3D modeling for you could be:  
-            </div>
-            <ul className="page-content-text">
-              <li>
-               Using 3D modeling tools and editors
-              </li>
-              <li>
-               Getting real world objects scanned with your smartphone camera or professional 3D-scanner and then making
-               the model simplified into a low-poly <i>.obj </i> {" "}
-               (ex. with <Link to="https://lowpoly3d.xyz/">https://lowpoly3d.xyz/</Link> or <Link to="https://www.meshlab.net">Meshlab</Link>)
-              </li>
-            </ul>
-            <div className="page-content-subtitle" id="use-cases-diamonds">
-              Diamonds and presious stones tokenization
-            </div>
-            <iframe
-              src="https://www.youtube.com/embed/Yxc-nJj7qeQ"
-              className="page-video"
-              controls
-              title="diamonds"
-            ></iframe>
-            <div className="page-content-subtitle" id="use-cases-gaming">
-              Tokenization of items for Gaming, Virtual reality, Metaverse
-            </div>
-            <iframe
-              src="https://www.youtube.com/embed/O6c3ZOB0Glg"
-              className="page-video"
-              controls
-              title="diamonds"
-            ></iframe>
-            <div className="page-content-subtitle" id="use-cases-crypto">
-              Real world objects as cryptocurrency wallets
-            </div>
-            <iframe
-              src="https://www.youtube.com/embed/YAl2R_DefQE"
-              className="page-video"
-              controls
-              title="diamonds"
-            ></iframe>
           </div>
         </div>
       </div>
