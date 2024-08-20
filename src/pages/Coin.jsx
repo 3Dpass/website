@@ -410,20 +410,32 @@ ETH SIGNATURE
               <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> is being estimated</i>)</li>
               <li>DEX: Cross-chain bridge over to Ethereum (<i> is being researched</i>)</li>
               <li>Mobile wallet: Embedded DEX UI integration (<i><Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.16.0">Released v2.16.0</Link></i>)</li>
-              <li>A stablecoin bridging/issuance (<i> is being researched</i>)</li>
+              <li>Getting USDT bridged down over to the LoT eco-system (<i>research is done, estimating</i>)</li>
               <li>Web wallet: Asset/NFT marketplace UI implementation</li>
               <li>Administrative: Governance server and UI</li>
               <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
-              <li>Promotion target: Assets issuance and the embedded DEX usage (<i>the plan is being formed up</i>)</li>
+              <li>Promotion target: Assets issuance and the embedded DEX usage (<Link to="/community#use-cases-ideas">"Get your ideas tokenized and earn!"</Link> - a <i>play-to-earn</i> game for everyone)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
               Q3 - dApps integration/business cases implementation
             </div>
             <ul className="page-content-text">
-              <li>Utilization: A business case implementation ( is being researched)</li>
+              <li>Utilization: A business case implementation (<Link to="/community#use-cases-lego">LEGO models marketplace</Link>, check out <Link to="https://swap.3dpscan.io/pools">Liquidity Pools</Link> on DEX)</li>
+              <li>Mobile wallet: Atomic swap integration (<i> in the process</i>)</li>
+              <li>Mobile wallet: tokenized 3D models preview (<i> in the process</i>)</li>
               <li>Utilization: AI assistant</li>
-              <li>Decentralization: Taking out Sudo (replacement sudo key with the democratic <Link to="/governance#technical">Techinical Committee</Link>)</li>
-              <li>Public commons: Start importing and processing</li>
+              <li>Decentralization: Taking out Sudo (<i> is being estimated</i>)</li>
+              <ul className="page-content-text">
+                <li>Treasury & Bounties: Security limits implementation</li>
+                <li>Council: Security audit and limits implementation</li>
+                <li>Techincal Committee: Security audit and procedures implementation</li>
+                <li>Techincal Committee: Community engagement public verification, github commits for  the last quarter must be inspected {" "}
+                <i>(sudo cannot be taken out safely without proven community engagement with the project development)</i>.</li>
+                <li>Sudo taking out procedure: formalization</li>
+                <li>Sudo taking out procedure: testing on testnet</li>
+                <li>Sudo taking out procedure: execution</li>
+              </ul>
+              <li>Public commons: Start importing and processing (<i>in the prrocess</i>)</li>
               <li>Promotion target: Assets issuance and the embedded DEX usage</li>
             </ul>
             <div className="page-content-text road-map-text ">
