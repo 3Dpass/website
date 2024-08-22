@@ -46,6 +46,12 @@ const Assets = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#general-use-cases">
+            <div className="page-nav-inside">
+              Use-cases
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#3dprc-2">
             <div
               className={
@@ -299,6 +305,20 @@ const Assets = () => {
               This approach enhances security by ensuring that the asset's authenticity is 
               verifiable through a robust combination of unique identifiers and recognition algorithms.
             </div>
+              <div className="page-content-subtitle" id="general-use-cases">
+              Use-cases:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               <Link to="/community#use-cases-ideas">3D Art</Link>
+              </li>
+              <li>
+              <Link to="/community#use-cases-lego">Pre-manufactured models</Link>
+              </li>
+              <li>
+              <Link to="/community#use-cases-jewelry">3D printable items</Link>
+              </li>
+            </ul>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}

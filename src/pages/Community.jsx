@@ -46,18 +46,6 @@ const Community = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
-          <a href="#governance">
-            <div
-              className={
-                locationHash.includes("governance")
-                  ? "one-page-nav active"
-                  : "one-page-nav"
-              }
-            >
-              Open Governance
-              <div className="page-nav-circle"></div>
-            </div>
-          </a>
            <a href="#use-cases">
             <div
               className={
@@ -83,9 +71,15 @@ const Community = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#use-cases-jewelry">
+            <div className="page-nav-inside">
+              3D Jewelry marketplace
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#use-cases-diamonds">
             <div className="page-nav-inside">
-              Diamonds and presious stones
+              Presious stones
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -99,6 +93,18 @@ const Community = () => {
             <div className="page-nav-inside">
               Cryptocurrency wallets
               <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#governance">
+            <div
+              className={
+                locationHash.includes("governance")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Open Governance
+              <div className="page-nav-circle"></div>
             </div>
           </a>
           <a href="#representatives">
@@ -239,60 +245,6 @@ const Community = () => {
             </div>
           </div>
         </div>
-        <div className="page-content-block" id="governance">
-          <div className="page-content-inner">
-            <Link className="message-text" to="/governance"><div className="page-content-title">Open Governance</div></Link>
-            <div className="page-content-text">
-              3DPass leverages a sophisticated self governance mechanism, which
-              allows for it to evolve gracefully overtime at the ultimate behest of
-              its assembled stakeholders. The stated goal is to ensure that the
-              majority of the stake can always command the network.
-            </div>
-            <img
-              className="page-img"
-              style={{ marginBottom: "50px" }}
-              src="/images/3dpass_society.png"
-              alt="img"
-            />
-            <div className="page-content-text">
-              3DPass decentralised governance system is comprised of three main
-              components:
-            </div>
-            <ol className="page-content-text">
-              <li>
-                <Link to="/governance#council">Council</Link> - An approval-voted, elected executive "government" to
-                manage parameters, admin and spending proposals.
-              </li>
-              <li>
-              <Link to="/governance#technical">Technical Committee</Link> - A technocratic committee to manage the
-                {" "} <Link to="/forkless-upgrade">forkless online upgrade</Link>{" "}
-                timelines.
-              </li>
-              <li>
-              <Link to="/governance#democracy">Referenda</Link> - A general voting system for everything else which
-                rewarded long-term stakeholders with increased influence.
-              </li>
-            </ol>
-            <div className="page-content-text">
-              The network brings together various novel mechanisms, including an
-              amorphous state-transition function stored on-chain and defined in
-              a platform-neutral intermediate language (i.e. <Link to="/forkless-upgrade#wasm">WebAssembly</Link>) and
-              several on-chain voting mechanisms such as referenda with adaptive
-              super-majority thresholds and batch approval voting. All changes
-              to the protocol must be agreed upon by stake-weighted referenda.
-            </div>
-            <div className="page-content-text">
-              There is a <Link to="/governance#treasury">Treasury</Link> pot controled by the Council, which adds to
-              transparency, especially, when it comes to the budget spendings
-              and grants. The funds held in the Treasury can be spent by making
-              a spending proposal that, if approved by the Council, will enter a
-              waiting period before distribution.
-            </div>
-            <div className="page-content-text">
-              Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
-            </div>
-          </div>
-        </div>
         <div className="page-content-block" id="use-cases">
           <div className="page-content-inner">
             <div className="page-content-title">Use Cases</div>
@@ -389,7 +341,7 @@ const Community = () => {
             </div>
             <ul className="page-content-text">
               <li>
-               Object tokenized: <strong>#21</strong>; 
+               Object tokenized: <strong>#21</strong>; {" "}
                <Link to="https://3dpscan.io/object/21">Lego brick 2x2</Link>.
               </li>
               <li>
@@ -461,8 +413,121 @@ const Community = () => {
                 commercial organization all across the globe.
               </li>
             </ul>
+            <div className="page-content-text">
+              This case goes far beyond the LEGO models and applicable to any 
+              pre-manufactured model which is printable, scannable and consisting of 
+              solid components (like LEGO bricks, they must not be flexible/easy to damage).
+            </div>
+            <div className="page-content-subtitle" id="use-cases-jewelry">
+              3D Jewelry open marketplace for designers and and individuals
+            </div>
+            <ol className="page-content-text">
+              <li>
+                <Link to="/mobile-wallet#tokenization-put_object">Put your jewelry item on blockchain</Link> (copy protection will be enabled). 
+              </li>
+              <li>
+                Tokenize your item into a <Link to="/mobile-wallet#tokenization-share-token">share-asset</Link> {" "}
+                or non-fungible asset via the mobile wallet. {" "}
+                <Link to="/mobile-wallet#tokenization-metadata">Set up metadata</Link> {" "}
+                and <Link to="/mobile-wallet#tokenization-mint">mint</Link> share-tokens.
+              </li>
+              <li>
+                <Link to="/mobile-wallet#dex-liquidity-pools"> List your asset on DEX</Link> seamlessly 
+                and without a middleman (no listing fee, no request forms, no bureaucracy etc.)
+              </li>
+              <li>
+                <Link to="/mobile-wallet#dex-swap">Swap</Link> your asset or make ICOs without 
+                a middleman, buy and sell worrldwide freely. 
+              </li>
+            </ol>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/LoT_jewelry_mobile_put_on_blockchain.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+               Example:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Object tokenized: <strong>#27</strong>; {" "}
+               <Link to="https://3dpscan.io/object/27">Ring 3D</Link>.
+              </li>
+              <li>
+               Asset: share-asset: <strong>RING</strong>; decimals: 2, 
+               Max supply: 1000000.00 RING; Total supply: 1000000.00 RING.
+              </li>
+              <li>
+               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/RING</Link>; {" "}
+               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/RING</Link>
+              </li>
+            </ul>
+            <div className="page-content-text">
+             <strong>Description:</strong>
+            </div>
+            <div className="page-content-text">
+            Jewelry items, privately designed by individual designers and proffesional jewelers, represent 
+            a billion-dollar market where users are creating, trading and making ICOs.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/jewelry_3d_modeling.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Each and every item belongs both real and virtual worlds simultaneously and has its 
+              unique characteristics (3D shape, color, etc.), which make them a value. 
+              The most worthwhile property in the context is the low-poly 3D shape, which is 
+              distinguishable by <Link to="/grid2d">grid2d</Link> recognition algorithm operating 
+              within the Ledger of Things and thus can be tokenized into a backed {" "}
+              <Link to="/mobile-wallet#tokenization-share-token">share-asset</Link> {" "}
+              (collective public ownership) or a single non-fungible asset in accordance 
+              with <Link to="/features#3dprc-2">3DPRC-2</Link> standard.
+              </div>  
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/3d_ring.png"
+              alt="img"
+            />
+            <ul className="page-content-text">
+              <li>
+               <strong>Real-to-Virtual</strong> path: Jwelry items are scannable by 
+               means of smartphone camera or proffessional 3D scanning devices.
+              </li>
+              <li>
+               <strong>Virtual-to-Real</strong> path:  3D jewelry items are printable on 3D printers.
+              </li>
+              <li>
+                Unique value proposition for designers: The tokenization 
+                of models and its copy protection as well as monetization/trade/ICO seamlessly 
+                without a middleman within the LoT DeFi eco-system.
+              </li>
+              <li>
+                Unique value proposition for individuals: The access to endless of items to 
+                purchase, interoperability, no logistics cost.
+              </li>
+              <li>
+                No commercial relationship and competition: The Ledger of Things is an 
+                open-source platform that is owned by everyone in the world, which provides 
+                no competition towards the private business sector in relation to any 
+                commercial organization all across the globe.
+              </li>
+            </ul>
+            <div className="page-content-text">
+              This case goes far beyond 3D printable jewelry items and applicable to any 
+              solid-shaped model which is printable, scannable and sustainable enough in 
+              terms of its 3D shape.
+            </div>
             <div className="page-content-subtitle" id="use-cases-diamonds">
-              Diamonds and presious stones tokenization
+              The tokenization of precious stones
+            </div>
+            <div className="page-content-text">
+              Current safe haven for investors is limited to gold and silver, 
+              and it's not enough for growing population and preservaton of its assets.
+              The tokenization of large precoius stones will add liquidity and reduce volatility.
             </div>
             <iframe
               src="https://www.youtube.com/embed/Yxc-nJj7qeQ"
@@ -488,6 +553,60 @@ const Community = () => {
               controls
               title="diamonds"
             ></iframe>
+          </div>
+        </div>
+        <div className="page-content-block" id="governance">
+          <div className="page-content-inner">
+            <Link className="message-text" to="/governance"><div className="page-content-title">Open Governance</div></Link>
+            <div className="page-content-text">
+              3DPass leverages a sophisticated self governance mechanism, which
+              allows for it to evolve gracefully overtime at the ultimate behest of
+              its assembled stakeholders. The stated goal is to ensure that the
+              majority of the stake can always command the network.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/3dpass_society.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              3DPass decentralised governance system is comprised of three main
+              components:
+            </div>
+            <ol className="page-content-text">
+              <li>
+                <Link to="/governance#council">Council</Link> - An approval-voted, elected executive "government" to
+                manage parameters, admin and spending proposals.
+              </li>
+              <li>
+              <Link to="/governance#technical">Technical Committee</Link> - A technocratic committee to manage the
+                {" "} <Link to="/forkless-upgrade">forkless online upgrade</Link>{" "}
+                timelines.
+              </li>
+              <li>
+              <Link to="/governance#democracy">Referenda</Link> - A general voting system for everything else which
+                rewarded long-term stakeholders with increased influence.
+              </li>
+            </ol>
+            <div className="page-content-text">
+              The network brings together various novel mechanisms, including an
+              amorphous state-transition function stored on-chain and defined in
+              a platform-neutral intermediate language (i.e. <Link to="/forkless-upgrade#wasm">WebAssembly</Link>) and
+              several on-chain voting mechanisms such as referenda with adaptive
+              super-majority thresholds and batch approval voting. All changes
+              to the protocol must be agreed upon by stake-weighted referenda.
+            </div>
+            <div className="page-content-text">
+              There is a <Link to="/governance#treasury">Treasury</Link> pot controled by the Council, which adds to
+              transparency, especially, when it comes to the budget spendings
+              and grants. The funds held in the Treasury can be spent by making
+              a spending proposal that, if approved by the Council, will enter a
+              waiting period before distribution.
+            </div>
+            <div className="page-content-text">
+              Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="representatives">
