@@ -256,6 +256,10 @@
   height: 109px;
 }
 
+.ledger-line {
+  height: 169px;
+}
+
 .tokenization-mobile-line {
   height: 172px;
 }

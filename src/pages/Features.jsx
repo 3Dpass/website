@@ -39,9 +39,9 @@ const Features = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#recognition-hash-id-example">
+          <a href="#recognition-hash-id-case">
             <div className="page-nav-inside">
-              Example in use
+              Case to study
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -104,6 +104,31 @@ const Features = () => {
             >
               The Ledger of Things
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line ledger-line"></div>
+            </div>
+          </a>
+          <a href="#ledger-why-L1">
+            <div className="page-nav-inside">
+              Why L1?
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#ledger-why-1node-1vote">
+            <div className="page-nav-inside">
+              Why 1 Node = 1 Vote?
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#ledger-why-deterministic-blockchain-finality">
+            <div className="page-nav-inside">
+              Why deterministic blockchain finality?
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#ledger-useful-links">
+            <div className="page-nav-inside">
+              Useful links
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#3dprc-2">
@@ -261,8 +286,8 @@ const Features = () => {
                 <div className="page-lead-button">Download</div>
             </div>
             </a>
-            <div className="page-content-subtitle" id="recognition-hash-id-example">
-              HASH ID example in use
+            <div className="page-content-subtitle" id="recognition-hash-id-case">
+              HASH ID case to study
             </div>
             <div className="page-content-text">
               Here is <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection/red_beryl">a bunch of scans (3D models)</Link> {" "}
@@ -322,7 +347,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             </pre>
               </li>
               <li>
-                Six of these hashes are sustainable enough to match with the rest of 
+                Six of these hashes are sustainable enough to match the rest of 
                 the scans and will correspond to each and every of the same-shaped 3D model, including {" "}
                 <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection/red_beryl">the ones we have initially taken</Link>:
                 <ol>
@@ -563,21 +588,21 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             the eco-system and exploiting the <Link to="/features#recognition-hash-id">HASH ID</Link> feature as an idea 
             of authentication of real world assets (or virtual objects) all across the Internet.
             </div>
-            <div className="page-content-subtitle" id="why-L1">
+            <div className="page-content-subtitle" id="ledger-why-L1">
               Why L1? 
             </div>
             <div className="page-content-text">
               The reason for the LoT to be L1 is because it doesn't seem
               to be feasible for a blockchain to fulfill the <Link to="/features#scanproof"><i>"1 object = 1 asset"</i></Link> {" "}
-              promise, unless it is L1 and providing deterministic blockchain finality. Every Node must be responsible for its judgements 
-              on the user objects/assets authenticity as much as for every block on the blockchain itself.
-              And, therefore, it must be equipped with identical copy of the recognition toolkit <strong>being leveraged as part of 
-              the consensus protocol</strong> for both new block construction/verification and the user objects
-              HASH ID creation/verification. Assuming such specific requirements, it never would be possible to have
+              promise, unless it is L1 and providing <Link to="/features#scanproof-deterministic">deterministic blockchain finality</Link>. 
+              Every Node must be responsible for its judgements on the user objects/assets authenticity as much as for every block 
+              on the blockchain itself. And, therefore, it must be equipped with identical copy of the recognition toolkit 
+              <strong>being leveraged as part of the consensus protocol</strong> for both new block construction/verification 
+              and the user objects HASH ID creation/verification. Assuming such specific requirements, it would never be possible to have
               developed it as L2 solution based on any existing blockchain (there's no existing L1 blockchain based on recognition, 
               except for the LoT).    
             </div>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="ledger-why-1node-1vote">
               Why "1 Node = 1 Vote"? 
             </div>
             <div className="page-content-text">
@@ -589,13 +614,33 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               mining pool running is restricted by means of the consensus logic (explore the {" "}
               <Link to="/proof-of-scan#new-block">proof of context</Link> extension for further detail).
             </div>
+            <div className="page-content-subtitle" id="ledger-why-deterministic-blockchain-finality">
+              Why deterministic blockchain finality? 
+            </div>
+            <div className="page-content-text">
+              <Link to="/features#scanproof-deterministic">Deterministic blockchain finality</Link>, leveraged in The Ledger of Things, 
+              guarantees the preservation of the users assets, put on the blockchian, and its affiliation with 
+              <strong>Best chain</strong> forever. Once having new block finalized, the assets came with the block will always be 
+              available for any useful movement, including but not limited to: transfer, swap, trade, smart contract logic, and so forth.
+            </div>
+            <div className="page-content-text">
+              <i>Compare!</i> Old conventional probabilistic approach <i>(e.x. <Link to="https://bitcoin.org/bitcoin.pdf">Nakamoto protocol</Link> {" "}
+              first applied to Bitcoin or <Link to="https://ethereum.org/en/roadmap/single-slot-finality/">single slot finality SSF</Link> in modern Ethereum)</i> {" "}
+              provides no guarantees that Best chain ever constructed cannot be reorganized at any blockchain hight. Although it is unlikely to happen, 
+              the probability for Best chain to reorganize from genesis to the current Best block is always there for such networks as Bitcoin, Ethereum 
+              and its forks. This is not a theory that we are witnessing such unpleasant occasions from time to time. Once being excluded from Best chain,
+              all the assets attached to the block become unable to move (transfer, swap, trade, smart contract logic, and so forth). They kind of disappear 
+              for its owner losing control over his assets with no hope for return. 
+            </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
               src="/images/the_tokenization_of_the_object_share.png"
               alt="img"
             />
-            <div className="page-content-text">Useful Links: </div>
+            <div className="page-content-subtitle" id="ledger-useful-links">
+              Useful Links: 
+            </div>
             <ul className="page-content-text">
               <li>
                 <Link to="/proof-of-scan">Proof of Scan</Link> consensus protocol description
