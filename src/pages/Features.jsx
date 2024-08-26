@@ -300,7 +300,7 @@ const Features = () => {
 admin@admin red_beryl % md5 red_beryl.obj
 MD5 (red_beryl.obj) = ae1dab2b07d70b3152f9a263df386e36
 
-admin@admin % md5 red_beryl_0.obj
+admin@admin red_beryl % md5 red_beryl_0.obj
 MD5 (red_beryl_0.obj) = 5d8cf4c74de983d3bfdb5c5cb840c82b
 
 admin@admin red_beryl % md5 red_beryl_1.obj
@@ -592,15 +592,16 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               Why L1? 
             </div>
             <div className="page-content-text">
-              The reason for the LoT to be L1 is because it doesn't seem
-              to be feasible for a blockchain to fulfill the <Link to="/features#scanproof"><i>"1 object = 1 asset"</i></Link> {" "}
+              The reason for the LoT to be Layer1 is because it doesn't seem
+              to be feasible for a blockchain to fulfill this <Link to="/features#scanproof">"1 object = 1 asset"</Link> {" "}
               promise, unless it is L1 and providing <Link to="/features#scanproof-deterministic">deterministic blockchain finality</Link>. 
               Every Node must be responsible for its judgements on the user objects/assets authenticity as much as for every block 
-              on the blockchain itself. And, therefore, it must be equipped with identical copy of the recognition toolkit 
-              <strong>being leveraged as part of the consensus protocol</strong> for both new block construction/verification 
-              and the user objects HASH ID creation/verification. Assuming such specific requirements, it would never be possible to have
-              developed it as L2 solution based on any existing blockchain (there's no existing L1 blockchain based on recognition, 
-              except for the LoT).    
+              on the blockchain itself. And, therefore, it must be equipped with a logically identical copy of the recognition toolkit {" "}
+              <Link to="https://github.com/3Dpass/p3d">p3d</Link>  {" "}
+              being leveraged as part of the <Link to="#scanproof">consensus protocol</Link> in relation to both new block construction/verification 
+              and the user objects <Link to="#recognition-hash-id">HASH ID</Link> creation/verification aspects. Assuming such specific requirements, 
+              it would never be possible to have developed it as L2 solution based on any existing blockchain (there's no existing 
+              L1 blockchain based on recognition, except for the LoT).    
             </div>
             <div className="page-content-subtitle" id="ledger-why-1node-1vote">
               Why "1 Node = 1 Vote"? 
@@ -608,8 +609,8 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <div className="page-content-text">
               The user object verification procedure, leveraged in the <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> standard, 
               is not considered trustworthy, unless the block production (both mining and block finalization aspects) are distributed 
-              enough to provide and safely deliver the asset copy protection promise. Thus, neither of Nodes can share responsibility
-              with less reliable entities connected to it like it happens in the classic mining pool situation (it can only construct 
+              enough to provide and safely deliver the asset copy protection promise. Thus, neither of the Nodes has to share responsibility
+              with less reliable entities connected to it like it happens in the classic mining pool situation (every Node must only construct 
               blocks by itself thoughout the whole process). So, any classic 
               mining pool running is restricted by means of the consensus logic (explore the {" "}
               <Link to="/proof-of-scan#new-block">proof of context</Link> extension for further detail).
@@ -619,7 +620,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             </div>
             <div className="page-content-text">
               <Link to="/features#scanproof-deterministic">Deterministic blockchain finality</Link>, leveraged in The Ledger of Things, 
-              guarantees the preservation of the users assets, put on the blockchian, and its affiliation with 
+              guarantees the preservation of the users assets, put on the blockchian, and its affiliation with {" "}
               <strong>Best chain</strong> forever. Once having new block finalized, the assets came with the block will always be 
               available for any useful movement, including but not limited to: transfer, swap, trade, smart contract logic, and so forth.
             </div>
