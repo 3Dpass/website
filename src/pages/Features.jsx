@@ -39,6 +39,12 @@ const Features = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#recognition-hash-id-example">
+            <div className="page-nav-inside">
+              Example in use
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#recognition-object-categories">
             <div className="page-nav-inside">
               The Object Categories
@@ -246,7 +252,7 @@ const Features = () => {
             </ul>
             <img
               className="page-img"
-              src="/images/slide2_phone1.png"
+              src="/images/red_beryl_stable_hashes_mobile.png"
               alt="img"
             />
             <a className="message-text" href="/mobile-wallet#download">
@@ -255,6 +261,128 @@ const Features = () => {
                 <div className="page-lead-button">Download</div>
             </div>
             </a>
+            <div className="page-content-subtitle" id="recognition-hash-id-example">
+              HASH ID example in use
+            </div>
+            <div className="page-content-text">
+              Here is <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection/red_beryl">a bunch of scans (3D models)</Link> {" "}
+              of a single object available on github. Despite they are named differently, only two of the five files are 100% identical (<i>red_beryl_0.obj</i> and <i>red_beryl_2.obj</i> are identical),
+              and the content of the rest three ones provide substantial differences. Let's take <Link to="https://en.wikipedia.org/wiki/MD5">MD5</Link> hash out of each file to prove 
+              (<i>the same MD5 output will be provided, as long as the content is identical</i>): 
+            </div>
+            <pre className="main-pre">
+              {`
+admin@admin red_beryl % md5 red_beryl.obj
+MD5 (red_beryl.obj) = ae1dab2b07d70b3152f9a263df386e36
+
+admin@admin % md5 red_beryl_0.obj
+MD5 (red_beryl_0.obj) = 5d8cf4c74de983d3bfdb5c5cb840c82b
+
+admin@admin red_beryl % md5 red_beryl_1.obj
+MD5 (red_beryl_1.obj) = 2b0356c717fc815dcf9f25e0ad9c92d9
+
+admin@admin red_beryl % md5 red_beryl_2.obj
+MD5 (red_beryl_2.obj) = 5d8cf4c74de983d3bfdb5c5cb840c82b
+
+admin@admin red_beryl % md5 red_beryl_3.obj
+MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
+              `}
+            </pre>
+            <div className="page-content-text">
+              That is correct to mention here, that we would have gotten the same output, if we did try to make classic NFT 
+              out of the object (<i>ex. if Ethereum was used</i>). Given the fact that the only one single object was expected to get 
+              tokenized, we would have to be dealing with infinite number of possible copy-cat assets on the blockchain.
+               The situation gets totally out of control, unless we have created this sustainable identity {" "}
+              (<Link to="/features#recognition-hash-id">HASH ID</Link>) and put it on the blockchain,
+               in accordance with <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> rules instead of {" "}
+              <Link to="https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/">ERC-1155</Link>. 
+            </div>
+            <div className="page-content-text">
+              Now we have created the HASH ID and got the object tokenized with the <Link to="/mobile-wallet"> mobile wallet</Link>:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Observe the tokenized object on the block explorer:  <Link to="https://3dpscan.io/object/18"><strong>#18; red_beryl_3.obj</strong></Link>
+              </li>
+              <li>
+               The object HASH ID is:
+              <pre className="main-pre">
+              {`
+  "0x415ce4550fac634f39c2299a89f8fcb86b2be07957fb35619fb467fb536529f5",
+  "0xebc8f8865e9358554f8bb458298b5c3dff9ef8ebdd5c290eeec8cff46d89ac6e",
+  "0x42aba075476e0c6bc7d5793d0d061a155df4010871710c9118f6d7c431753cc5",
+  "0x8ea5a0755577c5ef20198dcc672b7f4dc93bfb24e9dccdc186fa2cdefbf41939",
+  "0xe33aec85b363b93f27ebae8587685acbbfa9349255d0f7da5a479d1ffbf5bdaa",
+  "0x38d3bc43667ea7699360c7a58504cd1557c0098713fd4b41d7e0a98e4d185b5c",
+  "0xee8173c9c4b6c9d9c77532a156b6f5c79a457edfd39d55cd4d668a55933466ad",
+  "0xba444388bca6ffee15f54ece5d5dfe2f576756e795fe8f1e8e80220eedead74c",
+  "0x36a366d65a7734ce39fcf68af8c46e9b85cdef559b41891a94963904dc7cc296",
+  "0x6d2ba24b888ce96a6d492020ff2f5b0c109bd062fb65743fa55e327e3c3a0c71"
+              `}
+            </pre>
+              </li>
+              <li>
+                Six of these hashes are sustainable enough to match with the rest of 
+                the scans and will correspond to each and every of the same-shaped 3D model, including {" "}
+                <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection/red_beryl">the ones we have initially taken</Link>:
+                <ol>
+                 <li>
+                 <i>red_beryl.obj</i>
+                 </li>
+                 <li>
+                 <i>red_beryl_0.obj</i>
+                 </li>
+                 <li>
+                 <i>red_beryl_1.obj</i>
+                 </li>
+                 <li>
+                 <i>red_beryl_2.obj</i>
+                 </li>
+                 <li>
+                 <i>red_beryl_3.obj</i>
+                 </li>
+                </ol> 
+              </li>
+              <li>
+                So, all of those 3D models are recognized as a single one within <Link to="/features#ledger">The Ledger of Things</Link>. 
+                The situation is under control. We have established this <i>one-to-one</i> correspondence between the object 
+                and its digital asset, irrespective to how many different scans (files) we have been provided with. 
+                No copy-cat is allowed onto the LoT blockchain database any further:
+                 <img
+                  className="page-img"
+                  src="/images/red_beryl_stable_hashes_mobile.png"
+                  alt="img"
+                 />
+              </li>
+              <li>
+                Having the intellectual property rights protected, 
+                we can now make a step forward by issuing backed share-tokens and start trading 
+                them on DEX freely (the share-tokens are linked to the object properties): 
+                <ul>
+                <li>
+                    Share-asset id: #18
+                  </li>
+                  <li>
+                    Share-asset symbols: REDB
+                  </li>
+                  <li>
+                    Decimals: 2
+                  </li>
+                  <li>
+                    Max supply: 100.000000 REDB
+                  </li>
+                  <li>
+                    Total issued supply: 100.000000 REDB
+                  </li>
+                  <li>
+                   Listed on DEX: Yes ( <Link to="https://swap.3dpscan.io/">Swap P3D/REDB</Link> ) 
+                  </li>
+                  <li>
+                   Liquidity Pool: Yes ( <Link to="https://swap.3dpscan.io/pools">LP P3D/REDB</Link> ) 
+                  </li>
+                </ul>
+              </li>
+            </ul>
             <div className="page-content-subtitle" id="recognition-object-categories">
               The Object Categories
             </div>
@@ -424,7 +552,7 @@ const Features = () => {
         <div className="page-content-block" id="ledger">
           <div className="page-content-inner">
             <div className="page-content-title">
-              The Ledger Of Things
+              The Ledger Of Things (LoT)
             </div>
             <div className="page-content-text">
             The Ledger of Things is Layer 1 blockchain and decentralized storage providing its instruments and tools 
@@ -434,6 +562,32 @@ const Features = () => {
             the object and its digital asset. At max - to develop endless of useful smart contracts and dApps operating within 
             the eco-system and exploiting the <Link to="/features#recognition-hash-id">HASH ID</Link> feature as an idea 
             of authentication of real world assets (or virtual objects) all across the Internet.
+            </div>
+            <div className="page-content-subtitle" id="why-L1">
+              Why L1? 
+            </div>
+            <div className="page-content-text">
+              The reason for the LoT to be L1 is because it doesn't seem
+              to be feasible for a blockchain to fulfill the <Link to="/features#scanproof"><i>"1 object = 1 asset"</i></Link> {" "}
+              promise, unless it is L1 and providing deterministic blockchain finality. Every Node must be responsible for its judgements 
+              on the user objects/assets authenticity as much as for every block on the blockchain itself.
+              And, therefore, it must be equipped with identical copy of the recognition toolkit <strong>being leveraged as part of 
+              the consensus protocol</strong> for both new block construction/verification and the user objects
+              HASH ID creation/verification. Assuming such specific requirements, it never would be possible to have
+              developed it as L2 solution based on any existing blockchain (there's no existing L1 blockchain based on recognition, 
+              except for the LoT).    
+            </div>
+            <div className="page-content-subtitle">
+              Why "1 Node = 1 Vote"? 
+            </div>
+            <div className="page-content-text">
+              The user object verification procedure, leveraged in the <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> standard, 
+              is not considered trustworthy, unless the block production (both mining and block finalization aspects) are distributed 
+              enough to provide and safely deliver the asset copy protection promise. Thus, neither of Nodes can share responsibility
+              with less reliable entities connected to it like it happens in the classic mining pool situation (it can only construct 
+              blocks by itself thoughout the whole process). So, any classic 
+              mining pool running is restricted by means of the consensus logic (explore the {" "}
+              <Link to="/proof-of-scan#new-block">proof of context</Link> extension for further detail).
             </div>
             <img
               className="page-img"
