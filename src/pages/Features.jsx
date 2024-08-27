@@ -125,6 +125,12 @@ const Features = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#ledger-why-open-gov">
+            <div className="page-nav-inside">
+              Why Open Gov?
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#ledger-useful-links">
             <div className="page-nav-inside">
               Useful links
@@ -518,7 +524,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               className="page-content-subtitle"
               id="scanproof-block-production"
             >
-              PoW component: CPU oriented, ASIC-resistant
+              PoW component: CPU-oriented, ASIC-resistant
             </div>
             <div className="page-content-text">
               The 3Dpass <i>Proof of Work</i> (PoW) component is designed to resist ASIC/FPGA devices, ensuring a high level of mining distribution,
@@ -588,6 +594,12 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             the eco-system and exploiting the <Link to="/features#recognition-hash-id">HASH ID</Link> feature as an idea 
             of authentication of real world assets (or virtual objects) all across the Internet.
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/the_tokenization_of_the_object_share.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="ledger-why-L1">
               Why L1? 
             </div>
@@ -624,6 +636,12 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               <strong>Best chain</strong> forever. Once having new block finalized, the assets came with the block will always be 
               available for any useful movement, including but not limited to: transfer, swap, trade, smart contract logic, and so forth.
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/deterministic_blockchain_finality.png"
+              alt="img"
+            />
             <div className="page-content-text">
               <i>Compare!</i> Old conventional probabilistic approach <i>(e.x. <Link to="https://bitcoin.org/bitcoin.pdf">Nakamoto protocol</Link> {" "}
               first applied to Bitcoin or <Link to="https://ethereum.org/en/roadmap/single-slot-finality/">single slot finality SSF</Link> in modern Ethereum)</i> {" "}
@@ -636,9 +654,22 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/the_tokenization_of_the_object_share.png"
+              src="/images/probabilistic_blockchain_finality.png"
               alt="img"
             />
+             <div className="page-content-subtitle" id="ledger-why-open-gov">
+              Why Open Governance?
+            </div>
+            <div className="page-content-text">
+              The Ledger of Things is a tool as well as an innovative community driven project in the first place.
+              Every tool needs to evolve, especially, when it comes to operating within such a competitive 
+              environment as the blockchain field. Decentralized <Link to="/community#governance">Open Governance</Link> {" "}
+              system, combined with the <Link to="/forkless-upgrade">forkless upgrade</Link> feature, provide additional 
+              agility at development and proper balance at decision making with ultimate level of transparency.
+              Not only doesn't it affect decentralization aspect due to its openness towards every community member, 
+              but it also helps the LoT mitigate risks and address potential challenges efficiently (by means 
+              of vote).
+            </div>
             <div className="page-content-subtitle" id="ledger-useful-links">
               Useful Links: 
             </div>
