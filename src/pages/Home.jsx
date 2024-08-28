@@ -12,7 +12,7 @@ import News from "../components/News";
 const Home = () => {
   const [faqs, setFaqs] = useState([
     {
-      title: "Non-fungible assets, Insurance, Banking, E-commerce",
+      title: "Real World Assets (RWA), Insurance, Banking, E-commerce",
       description:
         "3DPass opens the gateway for the cryptocurrency market to potental trillions in deals all over the globe. Now you can <a href='/features#tokenization'>transform real and virtual objects into recognizable digital assets</a> and leverage them within useful smart contracts and dApps, having full control over its copies. The <a href='/features#recognition'>recognition</a> of object shape <a href='/features#multiobject'>combined with its additional properties</a> (size, weight, density, clarity, owner's biometric data, etc.), allows to produce this unique sustainable identity called <a href='/features#recognition-hash-id'>Hash ID</a>, which makes 3DPass <a href='/features#difference'>revolutionary different</a> to any existential blockchain. Because of the <a href='/proof-of-scan'>Proof of Scan</a> decentralized protocol providing the object authentication, you can use your object as NFT or mint some private backed currency the unit of which would be a quantum (1 token = gramm, kilogramm, square meter, etc.). <a href='/community#use-cases'>Learn about use cases >></a>",
     },
@@ -24,13 +24,20 @@ const Home = () => {
     {
       title: "Metaverse, Gaminig, AI, IoT",
       description:
-      "3DPass unfolds this capability of tracing the objects in dynamic (in the state of change), which is an essential component for `game-to-earn`, VR/AR and IoT projects providing the asset ownership to its users.",
+      "3DPass unfolds this capability of tracing the objects in dynamic (in the state of change), which is an essential component for `play-to-earn` , VR/AR and IoT projects providing the asset ownership to its users. Check out a  <a href='/community#use-cases-ideas'>play-to-eran case</a>.",
     },
   ]);
 
   const [news, setNews] = useState([
     {
-      title: "Get your ideas tokenized and earn! (Use-case)",
+      title: "LEGO models open marketplace!",
+      description:
+      "LEGO models and other premanufactured printable items open marketplace for architects and individuals came into operation all accross the the Ledger fo Things eco-system!",
+      date: "Aug 20, 2024",
+      link: "/community#use-cases-lego"
+    },
+    {
+      title: "Get your ideas tokenized and earn!",
       description:
       "A play-to-earn economic game for everyone has been launched all across the LoT eco-system, which allows for and easy creation of low-poly 3D models out of personal ideas and its momentarily capitalizaion through ICOs as the share-tokens. The game is leveraging an AI `text-to-3Dmodel` generator.",
       date: "Aug 14, 2024",
@@ -42,13 +49,6 @@ const Home = () => {
       "The DEX module UI has been implemented into the mobile wallet! Download new version and make nice swaps without a middleman!",
       date: "Aug 8, 2024",
       link: "https://play.google.com/store/apps/details?id=com.threedpass.wallet"
-    },
-    {
-      title: "The founders' twitter account has been renamed!",
-      description:
-      "For the sake of the project decentralization the twitter account has been renamed into @3Dpass_genesis. Pick up whatever channel you trust from the list of communinty recources. Beware, every channel are self-responsible for the information they provide.",
-      date: "June 27, 2024",
-      link: "/community#resources"
     },
   ]);
 
@@ -79,6 +79,9 @@ const Home = () => {
             </Link>
             <Link to="/community#use-cases-ideas">
               <Button type="button" label="Play-to-Earn" />
+            </Link>
+            <Link to="/community#use-cases-lego">
+              <Button type="button" label="Marketplace" />
             </Link>
           </div>
         </div>

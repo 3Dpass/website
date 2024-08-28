@@ -259,6 +259,11 @@ const Features = () => {
               toolkit, playing a crucial role in the <Link to="#scanproof">Proof of Scan</Link> consensus protocol within {" "}
                <Link to="/features#ledger">The Ledger of Things</Link> blockchain.
               </div>
+              <img
+              className="page-img"
+              src="/images/object_characteristics.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="recognition-hash-id">
               Hash ID
             </div>
@@ -479,7 +484,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/multiseed1.png"
+              src="/images/multihash_id.png"
               alt="img"
             />
             <div className="page-content-text">In the example above:</div>
@@ -504,7 +509,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             and more. Leveraging advanced recognition technology, this innovative approach unlocks access 
             to potential trillions in transactions worldwide.
             </div>
-            <div className="page-content-text">
+            <div className="page-content-subtitle">
               "One object = One asset" rule
             </div>
             <div className="page-content-text">
@@ -517,7 +522,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/oneobject_oneasset1.png"
+              src="/images/piggy_hash_id.png"
               alt="img"
             />
             <div
@@ -555,11 +560,11 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/best_chain_structure.png"
+              src="/images/best_chain_rule_dark.png"
               alt="img"
             />
             <div className="page-content-text">
-              Follow <Link to="/proof-of-scan">full protocol description</Link>{" "}
+              Follow the <Link to="/proof-of-scan">protocol description</Link>{" "}
                or the <Link to="/coin#white-papper">White paper</Link> to dive into detail.
             </div>
             <div
@@ -575,7 +580,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/p2p_network_structure.png"
+              src="/images/lot_network_structure_dark.png"
               alt="img"
             />
           </div>
@@ -621,8 +626,25 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <div className="page-content-text">
               The user object verification procedure, leveraged in the <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> standard, 
               is not considered trustworthy, unless the block production (both mining and block finalization aspects) are distributed 
-              enough to provide and safely deliver the asset copy protection promise. Thus, neither of the Nodes has to share responsibility
-              with less reliable entities connected to it like it happens in the classic mining pool situation (every Node must only construct 
+              enough to provide and safely deliver the asset copy protection service. 
+            </div>
+            <div className="page-content-text">
+              On top of the distribution aspect every Node must be responsible for its judgements on the user assets authenticity as much as for every block 
+              on the blockchain itself (judgements go into the block header). And, therefore, it must be equipped with a logically identical copy of the recognition toolkit {" "}
+              <Link to="https://github.com/3Dpass/p3d">p3d</Link> being leveraged as part of the <Link to="#scanproof">consensus protocol</Link> {" "}
+              in relation to both new block construction/verification and the user objects <Link to="#recognition-hash-id">HASH ID</Link> {" "}
+              creation/verification components. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/including_3DPRC-2_judgement.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              Thus, neither of the Nodes has to share responsibility
+              with less reliable entities connected to it like it happens in the classic 
+              mining pool situation (every Node must only construct 
               blocks by itself thoughout the whole process). So, any classic 
               mining pool running is restricted by means of the consensus logic (explore the {" "}
               <Link to="/proof-of-scan#new-block">proof of context</Link> extension for further detail).
@@ -639,7 +661,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/deterministic_blockchain_finality.png"
+              src="/images/deterministic_blockchain_finality_.png"
               alt="img"
             />
             <div className="page-content-text">
