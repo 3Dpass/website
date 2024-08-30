@@ -676,7 +676,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/probabilistic_blockchain_finality.png"
+              src="/images/probabilistic_blockchain_finality_.png"
               alt="img"
             />
              <div className="page-content-subtitle" id="ledger-why-open-gov">
