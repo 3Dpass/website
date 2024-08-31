@@ -189,13 +189,13 @@ ETH SIGNATURE
             <div className="page-content-text">
               <strong>P3D</strong> is a native utility token operating within <Link to="/proof-of-scan#p2p">The Ledger of Things</Link>{" "}
               to facilitate on its use and encourage the efforts of the network maintainers (Block authors and Vaildators) {" "}
-              providing resources and equippment for <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> {" "}
-              tokenizaion standard to operate.  
+              providing resources and equipment for <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> {" "}
+              tokenization standard to operate.  
             </div>
             <div className="page-content-text">
               The smallest indivisible unit of account in 3Dpass is Crumb. 1 P3D is equal to <i>1e12</i> Crumb, {" "}
-              which is defined be the network genesis spec <Link to="https://raw.githubusercontent.com/3Dpass/3DP/main/mainnetSpecRaw.json">mainnetSpecRaw.json</Link>.
-              Explore the <Link to="#specification">network specificaton</Link> for more detail. 
+              which is defined by the network genesis spec <Link to="https://raw.githubusercontent.com/3Dpass/3DP/main/mainnetSpecRaw.json">mainnetSpecRaw.json</Link>.
+              Explore the <Link to="#specification">network specification</Link> for more detail. 
             </div>
             <ul className="page-content-text">
               <li>

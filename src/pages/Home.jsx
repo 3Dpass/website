@@ -83,6 +83,9 @@ const Home = () => {
             <Link to="/community#use-cases-lego">
               <Button type="button" label="Marketplace" />
             </Link>
+            <Link to="https://3dpscan.io">
+              <Button type="button" label="Block Explorer" />
+            </Link>
           </div>
         </div>
       </div>
