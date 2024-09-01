@@ -51,6 +51,12 @@ const Features = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
+          <a href="#recognition-ai-assistant">
+            <div className="page-nav-inside">
+              AI assistant
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
           <a href="#multiobject">
             <div
               className={
@@ -462,6 +468,27 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               Feel free to implement or suggest new algorithm for any category above and jump right
               in <Link to="//grants#dev-bounty">3DPass contribution grant program</Link>
             </div>
+            <div className="page-content-subtitle" id="recognition-ai-assistant">
+              AI Assistant
+            </div>
+            <div className="page-content-text">
+            3Dpass Artificial Intelligence (AI) assistant feature is an extension to the recognition toolkit, which will 
+            provide additional balance by getting every object on the LoT tagged with a human 
+            impression about it. The impression is an answer to the question “What does the 
+            object look like/sound/feel like?”, which is extremely worthwhile, especially, 
+            when it comes to dealing with any piece of art.
+            </div>
+            <div className="page-content-text">
+            Deterministic recognition algorithms (ex. <Link to="/grid2d">Grid2d</Link>) are useful at handling of certain 
+            kinds of objects like precious stones, where measurement accuracy prevails over 
+            human perception. For instance, cut diamonds are indistinguishable amongst 
+            each other with the naked eye. 
+            </div>
+            <img
+              className="page-img"
+              src="/images/impression_accuracy_balance.png"
+              alt="img"
+            />
           </div>
         </div>
         <div className="page-content-block" id="multiobject">
