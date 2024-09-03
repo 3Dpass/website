@@ -285,12 +285,12 @@ const MobileWallet = () => {
             <ul className="page-content-text">
               <li><i>"Non-fungible"</i> - if chosen, it means that the object can be tokenized into a non-fungible token</li>
               <li><i>"Share"</i> - if chosen, the object is permitted to be tokenized as the share tokens, Max Supply of which will be equal to 100% of the object share.</li>
-              <li><i>"Weight"</i> - if chosen, the object is allowed to be tokenized into its weight tokens (gramms, kilogramms, carats, ounces, etc.), and Max supply will be equal to the total weight.</li>
+              <li><i>"Weight"</i> - if chosen, the object is allowed to be tokenized into its weight tokens (grams, kilograms, carats, ounces, etc.), and Max supply will be equal to the total weight.</li>
             </ul>
             <img
               className="page-img"
               style={{ marginBottom: "20px" }}
-              src="/images/put_object_properties_mobile.png"
+              src="/images/the_object_properties_tokenization_mobile.png"
               alt="img"
             />
              <div className="page-content-text">
