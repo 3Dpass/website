@@ -63,7 +63,7 @@ const Footer = () => {
               <div className="footer-item">About Us</div>
             </a>
             <a href="/community#eco-system">
-              <div className="footer-item">Eco-system</div>
+              <div className="footer-item">Ecosystem</div>
             </a>
             <a href="/community#governance">
               <div className="footer-item">Open Governance</div>

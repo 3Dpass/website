@@ -30,25 +30,25 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The mobile wallet v2.17.0!",
+      description:
+      "The mobile wallet v2.17.0 allows for and easy tokenization of such characteristics of RWA like weight, square, volume, lenght, etc.!",
+      date: "Sep 3, 2024",
+      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"
+    },
+    {
       title: "LEGO models open marketplace!",
       description:
-      "LEGO models and other premanufactured printable items open marketplace for architects and individuals came into operation all accross the the Ledger fo Things eco-system!",
+      "LEGO models and other premanufactured printable items open marketplace for architects and individuals came into operation all accross the the Ledger fo Things ecosystem!",
       date: "Aug 20, 2024",
       link: "/community#use-cases-lego"
     },
     {
       title: "Get your ideas tokenized and earn!",
       description:
-      "A play-to-earn economic game for everyone has been launched all across the LoT eco-system, which allows for and easy creation of low-poly 3D models out of personal ideas and its momentarily capitalizaion through ICOs as the share-tokens. The game is leveraging an AI `text-to-3Dmodel` generator.",
+      "A play-to-earn economic game for everyone has been launched all across the LoT ecosystem, which allows for and easy creation of low-poly 3D models out of personal ideas and its momentarily capitalizaion through ICOs as the share-tokens. The game is leveraging an AI `text-to-3Dmodel` generator.",
       date: "Aug 14, 2024",
       link: "/community#use-cases-ideas"
-    },
-    {
-      title: "The mobile wallet v2.16.0 DEX implementation!",
-      description:
-      "The DEX module UI has been implemented into the mobile wallet! Download new version and make nice swaps without a middleman!",
-      date: "Aug 8, 2024",
-      link: "https://play.google.com/store/apps/details?id=com.threedpass.wallet"
     },
   ]);
 

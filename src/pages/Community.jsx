@@ -42,7 +42,7 @@ const Community = () => {
                   : "one-page-nav"
               }
             >
-              Eco-system
+              Ecosystem
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -196,9 +196,9 @@ const Community = () => {
         </div>
         <div className="page-content-block" id="eco-system">
           <div className="page-content-inner">
-            <div className="page-content-title">Eco-system</div>
+            <div className="page-content-title">Ecosystem</div>
             <div className="page-content-text">
-              The Ledger of Things eco-system provides a revolutionaly toolkit for the tokenization of objects and its 
+              The Ledger of Things ecosystem provides a revolutionaly toolkit for the tokenization of objects and its 
               transformation into Real World Assets (RWA) presented as either <Link to="#3dprc-2-assets">share-tokens</Link> {" "}
               or <Link to="#3dprc-2-assets">non-fungible</Link> assets. 
               Once transformed, there is a viriety of options available for the asset owner on how to proceed 
@@ -231,7 +231,7 @@ const Community = () => {
                  Stablecoins - on-chain or bridged (over the cross-chain bridge)
                 </li>
                 <li>
-                 Launchpads - to welcome start-ups into The Ledger of Things eco-system
+                 Launchpads - to welcome start-ups into The Ledger of Things ecosystem
                 </li>
               </ul>
             <img
@@ -400,7 +400,7 @@ const Community = () => {
               <li>
                 Unique value proposition for architects and designers: The tokenization 
                 of models and its copy protection as well as monetization/trade/ICO seamlessly 
-                without a middleman within the LoT DeFi eco-system.
+                without a middleman within the LoT DeFi ecosystem.
               </li>
               <li>
                 Unique value proposition for players: The access to endless of models to 
@@ -503,7 +503,7 @@ const Community = () => {
               <li>
                 Unique value proposition for designers: The tokenization 
                 of models and its copy protection as well as monetization/trade/ICO seamlessly 
-                without a middleman within the LoT DeFi eco-system.
+                without a middleman within the LoT DeFi ecosystem.
               </li>
               <li>
                 Unique value proposition for individuals: The access to endless of items to 
