@@ -79,7 +79,7 @@ const Community = () => {
           </a>
           <a href="#use-cases-diamonds">
             <div className="page-nav-inside">
-              Presious stones
+              Precious stones
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -327,7 +327,7 @@ const Community = () => {
               </li>
               <li>
                 <Link to="/mobile-wallet#dex-swap">Swap</Link> your asset or make ICOs without 
-                a middleman, buy and sell worrldwide freely. 
+                a middleman, buy and sell worldwide freely. 
               </li>
             </ol>
             <img
@@ -525,16 +525,133 @@ const Community = () => {
               The tokenization of precious stones
             </div>
             <div className="page-content-text">
-              Current safe haven for investors is limited to gold and silver, 
-              and it's not enough for growing population and preservaton of its assets.
-              The tokenization of large precoius stones will add liquidity and reduce volatility.
+              <strong>Get your gem tokenized before and after getting cut to turn it into a liquid digital asset:</strong>
             </div>
-            <iframe
-              src="https://www.youtube.com/embed/Yxc-nJj7qeQ"
-              className="page-video"
-              controls
-              title="diamonds"
-            ></iframe>
+            <ol className="page-content-text">
+              <li>
+                Visit a gemological lab to get your gem 3D scanned and properly measured. 
+              </li>
+              <li>
+                <Link to="/mobile-wallet#tokenization-put_object">Put a 3D model of the gem on blockchain</Link>. 
+                Additionally, specify the values for each unique characteristic available, such as: weight, clarity, 
+                hardness, etc. (copy protection will be enabled). 
+              </li>
+              <li>
+                Tokenize your model into a <Link to="/mobile-wallet#tokenization-share-token">share-asset</Link> {" "}
+                or non-fungible asset via the mobile wallet. {" "}
+                <Link to="/mobile-wallet#tokenization-metadata">Set up metadata</Link> {" "}
+                and <Link to="/mobile-wallet#tokenization-mint">mint</Link> share-tokens.
+                Either, you can pick up share or weight or any other characteristic for the tokenization. 
+                For instance, pick up the "weight" to tokenize your gem into its digital carats. Token Max supply
+                is limited to its property value <i>(if the gem weight is <strong>1.2348866</strong> Carat, the max supply limit 
+                is <strong>12348866</strong> in min indivisible units)</i>. No one can overissue this limit, 
+                including the asset owners.
+              </li>
+              <li>
+                <Link to="/mobile-wallet#dex-liquidity-pools"> List your share asset on DEX</Link> seamlessly 
+                and without a middleman (no listing fee, no request forms, no bureaucracy etc.)
+              </li>
+              <li>
+                <Link to="/mobile-wallet#dex-swap">Swap</Link> your asset or make ICOs without 
+                a middleman, buy and sell worldwide freely. 
+              </li>
+            </ol>
+            <div className="page-content-text">
+              <strong>Before getting cut:</strong>
+            </div>
+            <img
+              className="page-img"
+              src="/images/the_object_properties_tokenization_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+               Example:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Object tokenized: <strong>#29</strong>; {" "}
+               <Link to="https://3dpscan.io/object/29">3D crystal</Link>.
+              </li>
+              <li>
+               Asset: weight-asset: <strong>DCRT</strong>; decimals: 7, 
+               Max supply: 2.2387666 DCRT; Total supply: 2.2387666 DCRT.
+              </li>
+              <li>
+               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/DCRT</Link>; {" "}
+               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/DCRT</Link>
+              </li>
+            </ul>
+            <div className="page-content-text">
+              <strong>After getting cut:</strong>
+            </div>
+            <img
+              className="page-img"
+              src="/images/diamond_cut_properties_tokenization_mobile.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+               Example:
+            </div>
+            <ul className="page-content-text">
+              <li>
+               Object tokenized: <strong>#27</strong>; {" "}
+               <Link to="https://3dpscan.io/object/27">3D diamond cut</Link>.
+              </li>
+              <li>
+               Asset: share-asset: <strong>DIA</strong>; decimals: 6, 
+               Max supply: 10.000000 DIA; Total supply: 10.000000 DIA.
+              </li>
+              <li>
+               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/DIA</Link>; {" "}
+               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/DIA</Link>
+              </li>
+            </ul>
+            <div className="page-content-text">
+              <strong>Large precious stones:</strong>
+            </div>
+            <div className="page-content-text">
+              Current safe haven for investors is limited to gold and silver, 
+              and it's not enough for growing population and preservation of its assets.
+              The tokenization of large precious stones will add liquidity and reduce volatility.
+            </div>
+            <div className="page-content-text">
+             <strong>Mining industry dilemma:</strong>
+            </div>
+            <div className="page-content-text">
+              The amount of information about end-user price that most precious stones 
+              can provide once excavated is relatively small, compared to after getting cut, which means 
+              certain risk to take for mining companies from all across the globe. It cost them 
+              time and money that they have to spend on exploration of new deposits, 
+              but no one knows how things play out in terms of total profit/loss.
+            </div>
+            <div className="page-content-text">
+              Investors, however, are willing to take on risk, provided the level of transparency is appropriate.
+              Getting unique characteristics of a stone captured and having them at recognizable with {" "}
+              <Link to="/features#recognition-hash-id">HASH ID</Link> {" "}
+              can provide such an excellent level of definition that might fit in public 
+              expectations.
+            </div>
+            <div className="page-content-text">
+              Although, it doesn't exclude this requirement of having a third-party storage in place to
+              guarantee the assets physical safety as well as - gemological lab for measurements, it allows to 
+              identify the asset on the blockchain by several aspects, as such: 3D shape, weight, clarity, 
+              density, hardness.
+            </div>
+            <img
+              className="page-img"
+              src="/images/object_characteristics.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+             <strong>Solution:</strong>
+            </div>
+            <div className="page-content-text">
+              One of the innovative solutions would be getting gems tokenized before and after cut.
+              Mining companies would use rough diamonds ICO as a leverage for mitigation 
+              risks as well as for crowdfunding purposes (ex. to raise some funds for exploration).
+              And the cut diamonds, when tokenized, are representing this liquid end-user gem market
+              with clear track record from mining to the counter.
+            </div>
             <div className="page-content-subtitle" id="use-cases-gaming">
               Tokenization of items for Gaming, Virtual reality, Metaverse
             </div>
