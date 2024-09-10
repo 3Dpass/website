@@ -422,8 +422,8 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li>Utilization: A business case implementation (<Link to="/community#use-cases-lego">LEGO models marketplace</Link>, check out <Link to="https://swap.3dpscan.io/pools">Liquidity Pools</Link> on DEX)</li>
               <li>Mobile wallet: Atomic swap integration (<i> in the process</i>)</li>
-              <li>Mobile wallet: tokenized 3D models preview (<i> in the process</i>)</li>
-              <li>Utilization: AI assistant</li>
+              <li>Mobile wallet: tokenized 3D models preview ( <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"><i>Released v2.17.0</i></Link>)</li>
+              <li>Utilization: AI assistant (<i>in the process</i>)</li>
               <li>Decentralization: Taking out Sudo (<i> is being estimated</i>)</li>
               <ul className="page-content-text">
                 <li>Treasury & Bounties: Security limits implementation</li>
