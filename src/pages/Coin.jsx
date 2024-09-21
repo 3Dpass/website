@@ -407,11 +407,11 @@ ETH SIGNATURE
               Q2 - Assets marketplace & cross-chain
             </div>
             <ul className="page-content-text">
-              <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> is being estimated</i>)</li>
-              <li>DEX: Cross-chain bridge over to Ethereum (<i> is being researched</i>)</li>
+              <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> in the process</i>)</li>
+              <li>DEX: Cross-chain bridge over to Ethereum (<i> is being estimated</i>)</li>
               <li>Mobile wallet: Embedded DEX UI integration (<i><Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.16.0">Released v2.16.0</Link></i>)</li>
               <li>Getting USDT bridged down over to the LoT eco-system (<i>research is done, estimating</i>)</li>
-              <li>Web wallet: Asset/NFT marketplace UI implementation</li>
+              <li>Web wallet: Asset/NFT marketplace UI implementation (<i> in the process</i>)</li>
               <li>Administrative: Governance server and UI</li>
               <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
               <li>Promotion target: Assets issuance and the embedded DEX usage (<Link to="/community#use-cases-ideas">"Get your ideas tokenized and earn!"</Link> - a <i>play-to-earn</i> game for everyone)</li>
