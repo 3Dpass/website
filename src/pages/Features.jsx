@@ -468,6 +468,11 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               Feel free to implement or suggest new algorithm for any category above and jump right
               in <Link to="//grants#dev-bounty">3DPass contribution grant program</Link>
             </div>
+            <img
+              className="page-img"
+              src="/images/object_categories.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="recognition-ai-assistant">
               AI Assistant
             </div>

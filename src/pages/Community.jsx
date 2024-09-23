@@ -152,7 +152,7 @@ const Community = () => {
             <div className="page-content-text">
                 "The Ledger of Things" is a revolutionary <Link to="https://github.com/3dpass">open source</Link> Layer 1 blockchain platform for the tokenization of objects.
                 Current list of the object categories is presented as follows:
-              </div>
+            </div>
             <ul className="page-content-text">
               <li>3D objects</li>
               <li>2D drawings</li>
@@ -162,6 +162,12 @@ const Community = () => {
               <li>Movements</li>
               <li>Texts</li>
             </ul>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/the_lot_categories.png"
+              alt="img"
+            />
               <div className="page-content-text">
                 <Link to="/proof-of-scan">Proof of Scan</Link> is a decentralized protocol, which is based on recognition technology. Every object, transformed by 3DPass, obtains its own unique and sustainable identity
                 called <Link to="/features#3drecognition-hash-id">HASH ID</Link> the object could be recognized by. 
@@ -306,6 +312,23 @@ const Community = () => {
                Getting real world objects scanned with your smartphone camera or professional 3D-scanner and then making
                the model simplified into a low-poly <i>.obj </i> {" "}
                (ex. with <Link to="https://lowpoly3d.xyz/">https://lowpoly3d.xyz/</Link> or <Link to="https://www.meshlab.net">Meshlab</Link>)
+              </li>
+            </ul>
+            <div className="page-content-text">
+               A "funny cow" tokenized example:
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Object tokenized: <strong>#16</strong>; {" "}
+               <Link to="https://3dpscan.io/object/16">A funny cow</Link>.
+              </li>
+              <li>
+               Asset: share-asset: <strong>COW</strong>; decimals: 2, 
+               Max supply: 1000000.00 COW; Total supply: 1000000.00 COW.
+              </li>
+              <li>
+               Listed on DEX: Swap the cow shares: <Link to="https://swap.3dpscan.io/">P3D/COW</Link>; {" "}
+               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/COW</Link>
               </li>
             </ul>
             <div className="page-content-subtitle" id="use-cases-lego">
