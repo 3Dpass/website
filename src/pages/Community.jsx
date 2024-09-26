@@ -32,6 +32,37 @@ const Community = () => {
             >
               About Us
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line aboutus-line"></div>
+            </div>
+          </a>
+          <a href="#about-us-challenge">
+            <div className="page-nav-inside">
+              Challenge
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#about-us-existing-alternatives">
+            <div className="page-nav-inside">
+              Exisitng Alternatives
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#about-us-high-level-concept">
+            <div className="page-nav-inside">
+              High-level Concept
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#about-us-solution">
+            <div className="page-nav-inside">
+              Solution
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#about-us-unique-value-proposition">
+            <div className="page-nav-inside">
+              Uniquie Value Proposition
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#eco-system">
@@ -149,9 +180,60 @@ const Community = () => {
         <div className="page-content-block first-page-block" id="about-us">
           <div className="page-content-inner">
             <div className="page-content-title">About Us</div>
+            <div className="page-content-subtitle" id="about-us-challenge">
+              Challenge
+            </div>
             <div className="page-content-text">
-                "The Ledger of Things" is a revolutionary <Link to="https://github.com/3dpass">open source</Link> Layer 1 blockchain platform for the tokenization of objects.
-                Current list of the object categories is presented as follows:
+              People do not trust the information about Real World Assets (RWA) posted on the 
+              Internet, due to the lack of identity. It is not enough for them to make p2p 
+              deals without a middleman.
+            </div>
+            <div className="page-content-subtitle" id="about-us-existing-alternatives">
+              Existing Alternatives
+            </div>
+            <div className="page-content-text">
+              People create such metadata as: pictures, texts, videos, 3D models, and so 
+              forth to describe the objects. In order to identify they always need to leverage 
+              their imagination and intelligence, which both have limited capacity and no standard for.
+            </div>
+            <div className="page-content-text">
+              The outcome are anonymous users being the only accountable for the RWAs authenticity. Everyone is 
+              allowed to create millions of copy-cat assets with no mechanism in place preventing it to happen.
+              Since, no responsibility is taken by anyone, no safe environment is actually provided to someone.
+            </div>
+            <div className="page-content-subtitle" id="about-us-high-level-concept">
+              High-level Concept
+            </div>
+            <div className="page-content-text">
+              3Dpass is like what Bitcoin meant for digital money, but for RWAs.
+            </div>
+            <div className="page-content-text">
+              It was in 2009 that Satoshi Nakamoto presented his p2p protocol, which was designed to shift 
+              responsibility for Bitcoin currency units authentication from each and every user of the monetary 
+              system to a decentralized network of trustless entities. Which created this safe environment, 
+              where the level of trust towards the system is much greater than to one another. That is what
+              Bitcoin revolution was all about. 
+            </div>
+            <div className="page-content-text">
+              The <Link to="/proof-of-scan">Proof of Scan</Link> recognition-based p2p protocol, combined 
+              with <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> token standard, are designed to shift 
+              responsibility for the user RWAs authenticity to a decentralized network of trustless entities.
+              That is what 3DPass revolution is all about.
+            </div>
+            <div className="page-content-subtitle" id="about-us-solution">
+              Solution
+            </div>
+            <div className="page-content-text">
+              <Link to="/features#3drecognition-hash-id">HASH ID</Link> is an object identity sustainable 
+              enough to authenticate the object by its unique characteristics.
+            </div>
+            <div className="page-content-text">
+               <Link to="/features#ledger">The Ledger of Things (LoT)</Link> is 
+               an <Link to="https://github.com/3dpass">open source</Link> L1 decentralized blockchain 
+               platform for the tokenization of objects and its transformation 
+               into digital assets (RWA), which is capable of taking ultimate responsibility for the assets 
+               authenticity and thus providing sufficient level of trust for everyone. Current list 
+               of the object categories is presented as follows:
             </div>
             <ul className="page-content-text">
               <li>3D objects</li>
@@ -169,22 +251,29 @@ const Community = () => {
               alt="img"
             />
               <div className="page-content-text">
-                <Link to="/proof-of-scan">Proof of Scan</Link> is a decentralized protocol, which is based on recognition technology. Every object, transformed by 3DPass, obtains its own unique and sustainable identity
-                called <Link to="/features#3drecognition-hash-id">HASH ID</Link> the object could be recognized by. 
-                This will prevent the copying of digital assets and thus open a door for the entire blockchain space to potentially trillions in deals all over the globe.
+                <Link to="/proof-of-scan">Proof of Scan</Link> is a decentralized p2p protocol, which is based on recognition 
+                technology and preventing the assets from being copied. This will shift responsibility for the digital 
+                assets authenticity towards the p2p network as a whole and thus open a door for the entire blockchain 
+                space to potentially trillions in deals all over the globe.
               </div>
               <div className="page-content-text">
-                <Link to="/grid2d">Grid2d</Link> is the first 3D shape recognition algorithm, <Link to="https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">suggested</Link> by Michael Co in 2020, which is
+                <Link to="/grid2d">Grid2d</Link> is the first 3D shape recognition 
+                algorithm, <Link to="https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">suggested</Link> by Michael Co in 2020, which is
                 implemented now as <Link to="/pass3d">pass3d</Link> recognition toolkit. Grid2d is utilized as the hash function for
                 the <Link to="/proof-of-scan">Proof of Scan</Link> protocol.
               </div>
               <div className="page-content-text">
-                <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments) is a standard p2p protocol for the tokenization of the User objects operating within “The Ledger of Things”,
-                by which the most useful aspect of the "Proof of Scan" consensus is getting uncovered. 3DPRC-2 provides decentralized <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">PoScan API</Link> available for customers. 
+                <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments) is a novel token 
+                standard protocol operating within the Ledger of Things (LoT) and providing the asset owner with 
+                useful <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API methods</Link> for 
+                the object digital transformation and its tokenization into
+                either a <i>Share-asset</i> or <i>Non-fungible</i> asset accordingly.
               </div>
               <div className="page-content-text">
                 The scope of potential 3Dpass applications goes way beyond 3D object recognition and not limited to.
-                Being naturally organized and still cultivating this community driven spirit, 3Dpass is here to encourage developers from all aroud the globe to upgrade the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> open source toolkit with new fascinating recognition algorithms and make it even more useful for human civilization.
+                Being naturally organized and still cultivating this community driven spirit, 3Dpass is here to encourage developers 
+                from all around the globe to upgrade the <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> open source 
+                toolkit with new fascinating recognition algorithms and make it even more useful for human civilization.
                 Learn more about the <Link to="http://localhost:3000/proof-of-scan#object">algorithm requirements</Link>.
               </div>
               <div className="page-content-text">
@@ -198,6 +287,25 @@ const Community = () => {
               className="page-video"
               controls
             ></video>
+              <div className="page-content-subtitle" id="about-us-unique-value-proposition">
+              Unique Value Proposition
+            </div>
+            <ul className="page-content-text">
+              <li>
+               People can trust the information about the Real World Assets (RWA) put on the 
+               Ledger of Things like they do trust Bitcoin for money.
+              </li>
+              <li>
+               People can create endless of dApps to deal with RWAs within this trustworthy environment.
+              </li>
+              <li>
+               People can move and trade their assets freely all over the LoT ecosystem.
+              </li>
+              <li>
+               People can teleport their assets over the cross-chain capabilities amongst
+               different blockchain platforms all around the crypto space.
+              </li>
+            </ul>
           </div>
         </div>
         <div className="page-content-block" id="eco-system">
