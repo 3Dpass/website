@@ -188,6 +188,12 @@ const Community = () => {
               Internet, due to the lack of identity. It is not enough for them to make p2p 
               deals without a middleman.
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/no_trusted_content.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="about-us-existing-alternatives">
               Existing Alternatives
             </div>
@@ -196,16 +202,28 @@ const Community = () => {
               forth to describe the objects. In order to identify they always need to leverage 
               their imagination and intelligence, which both have limited capacity and no standard for.
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/data_distortion.png"
+              alt="img"
+            />
             <div className="page-content-text">
               The outcome are anonymous users being the only accountable for the RWAs authenticity. Everyone is 
               allowed to create millions of copy-cat assets with no mechanism in place preventing it to happen.
-              Since, no responsibility is taken by anyone, no safe environment is actually provided to someone.
+              Since, no responsibility is taken by anybody, no safe environment is actually provided to somebody.
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/irresponsible_blockchain.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="about-us-high-level-concept">
               High-level Concept
             </div>
             <div className="page-content-text">
-              3Dpass is like what Bitcoin meant for digital money, but for RWAs.
+             <i>"3Dpass is like what Bitcoin meant for digital money, but for RWAs."</i>
             </div>
             <div className="page-content-text">
               It was in 2009 that Satoshi Nakamoto presented his p2p protocol, which was designed to shift 
@@ -214,12 +232,24 @@ const Community = () => {
               where the level of trust towards the system is much greater than to one another. That is what
               Bitcoin revolution was all about. 
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/responsibility_shift.png"
+              alt="img"
+            />
             <div className="page-content-text">
-              The <Link to="/proof-of-scan">Proof of Scan</Link> recognition-based p2p protocol, combined 
-              with <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> token standard, are designed to shift 
+              The <Link to="/features#scanproof">Proof of Scan</Link> recognition-based p2p protocol, combined 
+              with <Link to="/features#3dprc-2">3DPRC-2</Link> token standard, are designed to shift 
               responsibility for the user RWAs authenticity to a decentralized network of trustless entities.
               That is what 3DPass revolution is all about.
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/rwa_authenticity_responsibility_shift.png"
+              alt="img"
+            />
             <div className="page-content-subtitle" id="about-us-solution">
               Solution
             </div>
@@ -251,7 +281,7 @@ const Community = () => {
               alt="img"
             />
               <div className="page-content-text">
-                <Link to="/proof-of-scan">Proof of Scan</Link> is a decentralized p2p protocol, which is based on recognition 
+                <Link to="/features#scanproof">Proof of Scan</Link> is a decentralized p2p protocol, which is based on recognition 
                 technology and preventing the assets from being copied. This will shift responsibility for the digital 
                 assets authenticity towards the p2p network as a whole and thus open a door for the entire blockchain 
                 space to potentially trillions in deals all over the globe.
@@ -260,7 +290,7 @@ const Community = () => {
                 <Link to="/grid2d">Grid2d</Link> is the first 3D shape recognition 
                 algorithm, <Link to="https://michael25651209.medium.com/how-to-calculate-a-hash-of-3d-object-1e0e3669322d">suggested</Link> by Michael Co in 2020, which is
                 implemented now as <Link to="/pass3d">pass3d</Link> recognition toolkit. Grid2d is utilized as the hash function for
-                the <Link to="/proof-of-scan">Proof of Scan</Link> protocol.
+                the <Link to="/features#scanproof">Proof of Scan</Link> protocol.
               </div>
               <div className="page-content-text">
                 <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments) is a novel token 
@@ -313,8 +343,8 @@ const Community = () => {
             <div className="page-content-title">Ecosystem</div>
             <div className="page-content-text">
               The Ledger of Things ecosystem provides a revolutionaly toolkit for the tokenization of objects and its 
-              transformation into Real World Assets (RWA) presented as either <Link to="#3dprc-2-assets">share-tokens</Link> {" "}
-              or <Link to="#3dprc-2-assets">non-fungible</Link> assets. 
+              transformation into Real World Assets (RWA) presented as either <Link to="/assets#3dprc-2-fungible">share-tokens</Link> {" "}
+              or <Link to="/assets#3dprc-2-non-fungible">non-fungible</Link> assets. 
               Once transformed, there is a viriety of options available for the asset owner on how to proceed 
               with their plan, including but not limited to: transfers, trading, ICO, dApp creation/integration, smart-contracts,
               cross-chain teleport, etc. 
@@ -329,7 +359,7 @@ const Community = () => {
                 - revolutionary tokinization standard proposed by 3Dpass
                 </li>
                 <li>
-                <Link to="https://swap.3dpscan.io" className="link-title">DEX</Link>{" "}
+                <Link to="/features#dex" className="link-title">DEX</Link>{" "}
                 - embedded DEX module to trade share-tokens
                 </li>
                 <li>
