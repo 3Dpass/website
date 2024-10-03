@@ -48,7 +48,7 @@ const Assets = () => {
           </a>
           <a href="#general-use-cases">
             <div className="page-nav-inside">
-              Use-cases
+              Use cases
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -185,14 +185,14 @@ const Assets = () => {
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/the_tokenization_of_the_object_share.png"
+              src="/images/rpc_api_modules.png"
               alt="img"
             />
             <div className="page-content-subtitle" id="general-rwa">
-              The Tokenization Of Real And Virtual 3D Objects
+              Digital Transformation overview
             </div>
             <div className="page-content-text">
-              The tokenization process for both real and virtual 3D objects 
+              Digital Transformation process for both real and virtual 3D objects 
               primarily differs in how seed data is obtained to create the {" "}
               <Link to="/features#3drecognition-hash-id">HASH ID</Link>. {" "}
               With virtual objects, acquiring 3D models and other 
@@ -210,7 +210,7 @@ const Assets = () => {
               in digital environments.
             </div>
             <div className="page-content-subtitle">
-              The Tokenization Of Real World Assets (RWA)
+               Digital Transformation Of Real World Assets (RWA)
             </div>
             <div className="page-content-text">
               Using either a smartphone camera for basic needs or professional 
@@ -262,7 +262,7 @@ const Assets = () => {
               :
             </div>
             <div className="page-content-subtitle">
-              The Tokenization of virtual objects
+              Digital Transformation of virtual objects
             </div>
             <div className="page-content-text">
               As mentioned earlier, extracting seed data from virtual 3D objects poses no challenges. 
@@ -306,11 +306,11 @@ const Assets = () => {
               verifiable through a robust combination of unique identifiers and recognition algorithms.
             </div>
               <div className="page-content-subtitle" id="general-use-cases">
-              Use-cases:
+              Use case examples:
             </div>
             <ul className="page-content-text">
               <li>
-               <Link to="/community#use-cases-ideas">3D Art</Link>
+               <Link to="/community#use-cases-ideas">Play-to-Earn game</Link>
               </li>
               <li>
               <Link to="/community#use-cases-lego">Pre-manufactured models</Link>
@@ -318,13 +318,10 @@ const Assets = () => {
               <li>
               <Link to="/community#use-cases-jewelry">3D printable items</Link>
               </li>
+              <li>
+              <Link to="/community#use-cases-diamonds">Precious stones</Link>
+              </li>
             </ul>
-            <img
-              className="page-img"
-              style={{ marginBottom: "50px" }}
-              src="/images/3Dpass_ledger.png"
-              alt="img"
-            />
           </div>
         </div>
         <div className="page-content-block" id="3dprc-2">

@@ -65,16 +65,29 @@ const Community = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#eco-system">
+          <a href="#ecosystem">
             <div
               className={
-                locationHash.includes("eco-system")
+                locationHash.includes("ecosystem")
                   ? "one-page-nav active"
                   : "one-page-nav"
               }
             >
               Ecosystem
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line ecosystem-line"></div>
+            </div>
+          </a>
+          <a href="#ecosystem-overview">
+            <div className="page-nav-inside">
+              Overview
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#ecosystem-community-structure">
+            <div className="page-nav-inside">
+              Community structure
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
            <a href="#use-cases">
@@ -338,9 +351,10 @@ const Community = () => {
             </ul>
           </div>
         </div>
-        <div className="page-content-block" id="eco-system">
+        <div className="page-content-block" id="ecosystem">
           <div className="page-content-inner">
             <div className="page-content-title">Ecosystem</div>
+            <div className="page-content-subtitle" id="ecosystem-overview">Overview</div>
             <div className="page-content-text">
               The Ledger of Things ecosystem provides a revolutionaly toolkit for the tokenization of objects and its 
               transformation into Real World Assets (RWA) presented as either <Link to="/assets#3dprc-2-fungible">share-tokens</Link> {" "}
@@ -387,6 +401,36 @@ const Community = () => {
             <div className="page-content-text">
               Follow our progress on <Link to="/coin#2024">Roadmap</Link> and join the <Link to="/grants">Contribution Grant Program</Link> to speed it up. 
             </div>
+            <div className="page-content-subtitle" id="ecosystem-community-structure">Community structure</div>
+            <div className="page-content-text">
+              3Dpass is a community driven project offering its valuable proposal 
+              to different groups and individuals all across the globe: 
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Miners: 50% of block rewards, 50% of the user object authentication fee in 3DPRC-2. <Link to="/mainnet#docker">Start mining</Link>
+              </li>
+              <li>
+                Validators: 50% of block rewards, 50% of the user object authentication fee in 3DPRC-2. <Link to="/mainnet#validator">Become Validator</Link>
+              </li>
+              <li>
+                Contributors: Join the <Link to="/grants">Contribution Grant Program</Link>.
+              </li>
+              <li>
+                Users: Leverage unique <Link to="/assets#general-tools">instruments and tools</Link> within 
+                the Ledger of Things DeFi ecosystem available through 
+                the <Link to="/mobile-wallet">Mobile wallet</Link>, {" "}
+                <Link to="https://wallet.3dpass.org">Web3 wallet</Link> or {" "}
+                <Link to="https://github.com/3Dpass/3DP/wiki">RPC API</Link> provided
+                by the decentralizaed modules running on the LoT blockchain. 
+              </li>
+            </ul>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/3dpass_community_structure.png"
+              alt="img"
+            />
           </div>
         </div>
         <div className="page-content-block" id="use-cases">
