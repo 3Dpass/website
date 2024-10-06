@@ -34,15 +34,39 @@ const Assets = () => {
               <div className="page-nav-line assets-general-line"></div>
             </div>
           </a>
-          <a href="#general-tools">
+          <a href="#general-digital-transformation">
             <div className="page-nav-inside">
-              Tools and components
+              Digital Transformation
               <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#general-rwa">
             <div className="page-nav-inside">
               Real World Assets (RWA)
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#general-algorithmic-error">
+            <div className="page-nav-inside">
+              Algorithmic error (quality)
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#general-human-perception-error">
+            <div className="page-nav-inside">
+              Human perception error
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#general-process-overview">
+            <div className="page-nav-inside">
+              The process overview
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#general-tools">
+            <div className="page-nav-inside">
+              Tools and components
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -156,6 +180,243 @@ const Assets = () => {
         <div className="page-content-block first-page-block" id="general">
           <div className="page-content-inner">
             <div className="page-content-title">General</div>
+            <div className="page-content-subtitle" id="general-digital-transformation">
+              Digital Transformation
+            </div>
+            <div className="page-content-text">
+              The Digital Transformation process comes down to capturing the unique characteristics 
+              of an object and making them into a sustainable digital
+              identity known as the <Link to="/features#3drecognition-hash-id">HASH ID</Link>,{" "}
+              which the object will able to be recognized by and distinguished from others 
+              all around the Internet.
+            </div>
+            <div className="page-content-text">
+              Depending on whether the object is real or virtual, the process
+              primarily differs in how seed data is obtained to produce the {" "}
+              <Link to="/features#3drecognition-hash-id">HASH ID</Link>. Once created, however, 
+              it becomes independent of the environment as being defined rather by 
+              mathematical equations, than the environmental distortion. And the object itself
+              could be reproduced in as many replications we need, and within any environment modern
+              technologies are capable of.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/piggy_hash_id.png"
+              alt="img"
+            />
+            <div className="page-content-subtitle" id="general-rwa">
+              Dealing with Real World Assets (RWA)
+            </div>
+            <div className="page-content-text">
+              The <Link to="/features#3drecognition-hash-id">HASH ID</Link> serves as a definitive digital 
+              identity for the object, validated by mathematical 
+              principles. In contrast, the replications or models are relative, heavily influenced by their 
+              surrounding environment. Recognition algorithms and methods operating within that environment 
+              connect the <Link to="/features#3drecognition-hash-id">HASH ID</Link> and the object replicas, 
+              introducing a degree of error. The extent of this error 
+              is contingent upon the specific direction of the transformation, outlined as follows:
+            </div>
+            <ol className="page-content-text">
+              <li>
+                The <strong>Virtual-to-Real path</strong> (often referred to as manufacturing or 3D printing), 
+                which might be characterized as having the origin in virtual realm as an idea or project. 
+                The modeling process is carried out by the original creator, resulting in a digital format, 
+                such as a 3D model or 2D drawing, etc. This digital representation allows for a straightforward 
+                acquisition of the object's 3D shape and other unique characteristics, enabling recognition 
+                algorithms to effectively generate the <Link to="/features#3drecognition-hash-id">HASH ID</Link>.
+                <br/><br/>
+                <img
+                 className="page-img"
+                 style={{ marginBottom: "50px" }}
+                 src="/images/piggy_virtual_to_real_recognnition_error.png"
+                 alt="img"
+                />
+              </li>
+              <li>
+                The <strong>Real-to-Virtual path</strong> (commonly referred to as scanning) 
+                begins with an original physical replication of the object. Similar to virtual 
+                objects, it undergoes a modeling process (such as 3D scanning, photo-to-model, 
+                or video-to-model) to create a digital representation that is as accurate 
+                as current technologies allow. The digital model generated by the scanning 
+                device serves as the seed input for the recognition algorithms handling 
+                the error of scanning and producing 
+                the <Link to="/features#3drecognition-hash-id">HASH ID</Link>.
+                <br/><br/>
+                <img
+                 className="page-img"
+                 style={{ marginBottom: "50px" }}
+                 src="/images/piggy_real_to_virtual_recognition_error.png"
+                 alt="img"
+                />
+              </li>
+            </ol>
+            <div className="page-content-subtitle" id="general-algorithmic-error">
+              Algorithmic error of recognition (quality)
+            </div>
+            <div className="page-content-text">
+              Both recognition algorithms and manufacturing technologies provide certain level of accuracy
+              the replications could be produced with. The quality of the model is determined by the level 
+              of error relative to the absolute characteristics captured in 
+              the <Link to="/features#3drecognition-hash-id">HASH ID</Link>, which remains 
+              independent of the environment and serves as the standard. 
+            </div>
+            <div className="page-content-text">
+               3Dpass offers several quality standards for objects, each containing a set of 
+               parameters applied to every submission by users. This allows for the comparison 
+               of HASH IDs, as they are processed by the same algorithm using the same set of 
+               parameters. Users simply need to select a quality standard for object authentication, 
+               such as <i>"Low Quality"</i> or <i>"High Quality"</i>.
+            </div>
+              <img
+               className="page-img"
+               style={{ marginBottom: "50px" }}
+               src="/images/piggy_algorithmic_error_of_recognition.png"
+               alt="img"
+              />
+            <div className="page-content-subtitle" id="general-human-perception-error">
+              Human perception error (seed data distortion)
+            </div>
+            <div className="page-content-text">
+              "Have you noticed that the Piggy on the left has no tail? Could that really 
+              prevent you from recognizing it?" – Of course, not. 
+            </div>
+              <img
+                className="page-img"
+                style={{ marginBottom: "50px" }}
+                src="/images/piggy_human_error_of_recognition_no_tail.png"
+                alt="img"
+              />
+              <div className="page-content-text">
+               Even though it may have a different shape, it is still 
+               recognized as the "LEGO Piggy" by the human eye. In 3DPass this challenge 
+               is met by leveraging the experimental {" "}
+               <Link to="/features#recognition-ai-assistant">"AI impressions"</Link> feature, 
+               which aims to provide an additional standard to enhance 
+               the <Link to="/features#3drecognition-hash-id">HASH ID</Link>. 
+            </div>
+            <div className="page-content-text">
+              The Open AI assistant operating at each Node <i>(1 Node = 1 AI instance)</i> is 
+              queried with a set of standard questions, expecting consistent answers. 
+              These standard answers can be represented by a formula like this:
+            </div>
+            <pre className="main-pre">
+              {`
+{lego} {pig} {standing} {firmly}
+                    `}
+            </pre>
+            <ol className="page-content-text">
+              <li>
+               “What category does this object belong to?” – `Lego`
+              </li>
+              <li>
+                "What does the object look like?" – `Pig`
+              </li>
+              <li>
+                "What is the object doing?" –  `Standing`
+              </li>
+            </ol>
+            <div className="page-content-text">
+              The analysis conducted upon submission enables the network to identify and classify the object. 
+              It may be categorized as a piece of art—where measurement accuracy is less critical than human 
+              perception—or as a product (natural or artificial), such as a diamond or a machinery part, 
+              where precision is paramount. If the object is identified as a public common asset or a well-known 
+              private asset, property rights restrictions will be applied accordingly.
+            </div>
+            <div className="page-content-text">
+             The formula is designed to be sustainable enough to be hashed and verified by network peers.
+            </div>
+            <div className="page-content-subtitle" id="general-process-overview">
+              The process overview
+            </div>
+            <div className="page-content-text">
+              This brief overview on the tokenizaton process will help in better understanding 
+              of what is goin on "under the hood" when the object is submitted to The Ledger of Things 
+              and how this could be compared to existing alternatives.
+            </div>
+            <ol className="page-content-text">
+              <li>
+               <strong>HASH ID creation</strong>
+               <br />
+                By the time the object is prepared to be <Link to="/assets#3dprc-2-object-authentication">submitted</Link> {" "}
+                (via the Mobile wallet, web3 wallet or the <i>`poScan`</i> RPC API) its {" "}
+                <Link to="/features#recognition-hash-id">HASH ID</Link> is actually created by the app 
+                leveraging recognition technology in the background and offline. 
+                Explore this <Link to="/features#recognition-hash-id-case">case to study</Link> to compare it 
+                with conventional hashing methods used in alternative standards
+                (ex. <Link to="https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/">ERC-1155</Link>).
+                Scroll up to learn how the <Link to="#general-algorithmic-error">recognition algorithmic error</Link> and 
+                the <Link to="#general-human-perception-error">human perception error</Link> challenges are 
+                addressed in the standard.
+              </li> 
+              <br />  
+              <li>
+               <strong>The object authentication</strong>
+               <br />
+                Once <Link to="/assets#3dprc-2-object-authentication">submitted</Link> the object and its {" "}
+                <Link to="/features#recognition-hash-id">HASH ID</Link>{" "}
+                are put on the blockchain storage and subjected to a sophisticated authentication process 
+                in accordance with <Link to="#3dprc-2">3DPRC-2</Link> standard protocol rules.
+                If approved, the  <Link to="/assets#general-digital-transformation">Digital Transformation</Link> {" "}
+                is deemed complete, and responsibility for the object's authenticity is assumed by
+                by <Link to="features#ledger">The Ledger of Things</Link>. Explore the 
+                3Dpass <Link to="/community#about-us-high-level-concept">high-level concept</Link> to 
+                understand why this shift in responsibility is so crucial—something that none 
+                of the <Link to="/community#about-us-existing-alternatives">existing alternatives</Link> can achieve.
+                <img
+                 className="page-img"
+                 style={{ marginBottom: "50px" }}
+                 src="/images/rwa_authenticity_responsibility_shift.png"
+                 alt="img"
+                />
+              </li> 
+              <li>
+               <strong>The asset and its metadata creation</strong>
+               <br />
+               Depending on the object's unique characteristics and the selections made in the previous 
+               step, either a <Link to="/assets#3dprc-2-non-fungible">Non-fungible</Link> asset 
+               or a <Link to="/assets#3dprc-2-fungible">Share-asset</Link> may be created. Due 
+               to the <Link to="/features#scanproof">"1 object = 1 asset"</Link> rule, only 
+               one asset can be authorized for each object. This asset will always be linked 
+               to one of the object's properties (such as share percentage, weight, area, volume, etc.), 
+               ensuring that it can never be tokenized more than once.
+              </li>
+              <br />
+              <li>
+               <strong>The asset tokens minting</strong>
+              <br />
+               Tokens may be minted in a limited quantity, ensuring that the Total Supply does not 
+               exceed the values associated with the object's properties (such as share, weight, volume, etc.). 
+               For example, the Total Supply of any share-asset (expressed as a percentage) is capped at 
+               100% (meaning you cannot mint 120% in tokens). It is permissible to mint less than the 
+               maximum limit (the value of the object property) in multiple phases. For instance, you 
+               could mint 30% in one phase and then an additional 20% in a subsequent phase. Any shares 
+               that have not yet been minted remain with the initial owner (the author) who submitted the object. 
+              </li>
+              <br />
+              <li>
+               <strong>Lising on DEX</strong>
+              <br />
+               The process of listing on the <Link to="/assets#dex">DEX</Link> is relatively straightforward 
+               and involves creating a Liquidity Pool (LP) for the asset and providing 
+               liquidity in tokens. Once liquidity is provided, the asset 
+               becomes available for swapping. This entire process can be accessed 
+               through the <Link to="/mobile-wallet#dex">Mobile Wallet</Link>, 
+               the <Link to="https://swap.3dpscan.io">web3 DEX UI</Link>, or 
+               the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX RPC API</Link>.
+              </li>
+              <br />
+              <li>
+               <strong>The asset management</strong>
+              <br />
+               Once share tokens are minted and distributed, they cannot be burned by the decision of a 
+               single account, as is the case in some alternative 
+               platforms (e.g., <Link to="https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/">ERC-1155</Link>). Instead, 
+               the asset is managed collectively by the actual token holders, following 
+               the principle of collective ownership similar to a DAO (Decentralized Autonomous Organization). 
+               In contrast, a non-fungible asset is managed by a single holder (the actual owner) by design.
+              </li>
+            </ol>
             <div className="page-content-subtitle" id="general-tools">
               Tools and components
             </div>
@@ -182,129 +443,18 @@ const Assets = () => {
                through its <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">API</Link>. 
                </li>
             </ol>
+            <div className="page-content-text">
+              The Ledger of Things runtime has its module structure, of which every module represents 
+              a decentralized application available through its RPC API. The API is either accessible
+              in local (by means of interaction with the Node running on a local server) or via public 
+              RPC API endponts provided by community members. 
+            </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
               src="/images/rpc_api_modules.png"
               alt="img"
             />
-            <div className="page-content-subtitle" id="general-rwa">
-              Digital Transformation overview
-            </div>
-            <div className="page-content-text">
-              Digital Transformation process for both real and virtual 3D objects 
-              primarily differs in how seed data is obtained to create the {" "}
-              <Link to="/features#3drecognition-hash-id">HASH ID</Link>. {" "}
-              With virtual objects, acquiring 3D models and other 
-              properties is straightforward since they are inherently digital. 
-              In contrast, extracting seed data from real 3D objects requires 
-              significant effort and is sometimes constrained by current 
-              technological limitations.
-            </div>
-            <div className="page-content-text">
-              Moreover, tokens generated from virtual objects can differ significantly 
-              due to their "virtual" nature. They do not face the same fungibility 
-              restrictions or proof of existence challenges encountered with 
-              real-world objects. This distinction underscores the unique 
-              characteristics and advantages of tokenizing virtual assets 
-              in digital environments.
-            </div>
-            <div className="page-content-subtitle">
-               Digital Transformation Of Real World Assets (RWA)
-            </div>
-            <div className="page-content-text">
-              Using either a smartphone camera for basic needs or professional 
-              scanners and lab measurements for higher precision, you can extract 
-              seed data from a real 3D object through a process known as 3D scanning 
-              (compatible with standards like ({" "}
-              <Link to="https://en.wikipedia.org/wiki/STL_%28file_format%29">
-                .stl
-              </Link>{" "}
-              or{" "}
-              <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">
-                .obj
-              </Link>{" "}). 
-              With this data, the 
-              pass3d recognition toolkit can generate its HASH ID, provided the 
-              object has a stable and solid shape. Objects that are flexible or 
-              have unstable shapes may not be suitable for recognition by 3Dpass.
-            </div>
-            <div className="page-content-text">
-              However, there's an alternative approach for tokenizing flexible 
-              3D models, such as clothing. For instance, you can capture a 3D 
-              model of a t-shirt worn on a mannequin in a specific state and 
-              use it as a standard for recognition through Machine Learning 
-              techniques. This method leverages the static representation of 
-              the object to facilitate its recognition and tokenization in 
-              digital environments.
-            </div>
-            <div className="page-content-text">
-            For instance, you could tokenize a rough diamond and then divide it 
-            digitally by carats to trade them on the market. By incorporating 
-            the owner's fingerprint and creating a complex <Link to="/features#3drecognition-hash-id">HASH ID</Link> from both 
-            the fingerprint and the diamond's properties (such as shape, weight, 
-            clarity, etc.), you can create a personalized digital asset. In this 
-            scenario, not only can the diamond be recognized, but its owner as well, 
-            enabling comprehensive tracking of property rights. This approach ensures 
-            both the authenticity and ownership of the digital asset are verifiable and secure.
-            </div>
-            <div className="page-content-text">
-              However, all the initial seed data of the asset remains private,
-              unless the owner would reveal it themself (in the case described
-              above it's original data of both fingerprint and the diamond shape
-              + its additional properties). It's "hidden behind the <Link to="/features#3drecognition-hash-id">HASH ID</Link>"
-              which is suppose to be public since it's strong enough to stand
-              against the attack attempting to reconstruct the seed data. At
-              least, the <Link to="/features#3drecognition-hash-id">HASH ID</Link> is protected by{" "}
-              <Link to="https://en.wikipedia.org/wiki/Multi-factor_authentication">
-                multi-factor authentication
-              </Link>
-              :
-            </div>
-            <div className="page-content-subtitle">
-              Digital Transformation of virtual objects
-            </div>
-            <div className="page-content-text">
-              As mentioned earlier, extracting seed data from virtual 3D objects poses no challenges. 
-              Simply obtain the 3D model (.stl or .obj) along with additional property values and 
-              process them using the 3Dpass recognition toolkit. Once the HASH ID is generated, 
-              there are no restrictions tied to the physical object. Consequently, you can utilize 
-              your asset however you wish, a capability that is often impossible in the real world.
-            </div>
-            <div className="page-content-text">
-              For example, you can tokenize a virtual diamond and then leverage
-              it as a fungible token or you can get it melted within the virtual
-              space such as: metaverse, augmented reality, gaming, etc.
-            </div>
-            <div className="page-content-subtitle">
-              The Tokenization Of The Object Shape Changes (in dynamic)
-            </div>
-            <div className="page-content-text">
-              One crucial aspect of tokenization is its ability to capture changes in object shape 
-              dynamically, not just in static states. Consider a scenario such as a car accident: 
-              the car originally had a specific 3D shape, but after being damaged, its physical 
-              form has changed while the ownership remains unchanged.
-            </div>
-            <div className="page-content-text">
-              If the car's <Link to="/features#3drecognition-hash-id">HASH ID</Link> was previously saved on 
-              the decentralized ledger of 3Dpass before 
-              the accident, the owner can create a new HASH ID that reflects the car's altered shape 
-              and link it to the original one through a transaction. This process results in a sequence 
-              of linked assets on the blockchain, effectively documenting the dynamic changes in the 
-              object's shape over time. This capability highlights the flexibility and comprehensive 
-              record-keeping potential of blockchain-based asset tokenization.
-            </div>
-            <div className="page-content-subtitle">
-              Property rights definition
-            </div>
-            <div className="page-content-text">
-              To establish ownership rights and differentiate genuine assets from counterfeits, 
-              it's crucial to adjust the algorithm's recognition parameters. This customization 
-              defines the boundary that safeguards against fraudulent replicas. When creating 
-              a personal asset, integrate biometric data along with <Link to="/features#multiobject">multi-object options</Link>. 
-              This approach enhances security by ensuring that the asset's authenticity is 
-              verifiable through a robust combination of unique identifiers and recognition algorithms.
-            </div>
               <div className="page-content-subtitle" id="general-use-cases">
               Use case examples:
             </div>

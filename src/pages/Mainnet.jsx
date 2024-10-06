@@ -2284,14 +2284,25 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
               which can be utilized for the construction of various types of
               keys. Whatever the key type was used, there is always a
               possibility to validate the standard account by its public key.
-              Standard account ID is a public key in hex format like this
-              0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1.
+              Standard account ID is a public key in hex format like this:
             </div>
+            <pre className="main-pre">
+              {`
+0x23dad301fa6165b70bf538ca3be304ad418232c76814b38223c57d69bf2b28d1
+                    `}
+            </pre>
             <div className="page-content-text">
               For example, you have got your Master account defined by the
-              mnemonic seed phrase like this one debris minor crater swear crane
-              whale clever into now tone grid proud), and at least two different
-              types of keys can be generated from out out of, such as:
+              mnemonic seed phrase like this one:
+            </div>
+            <pre className="main-pre">
+              {`
+debris minor crater swear crane whale clever into now tone grid proud
+                    `}
+            </pre>
+            <div className="page-content-text">
+             And there are at least two different types of keys that can be generated 
+             from out of the phrase, such as:
             </div>
             <ul className="page-content-text">
               <li>

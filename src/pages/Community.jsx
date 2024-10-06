@@ -245,6 +245,10 @@ const Community = () => {
               where the level of trust towards the system is much greater than to one another. That is what
               Bitcoin revolution was all about. 
             </div>
+            <div className="page-content-text">
+             <i>"The root problem with conventional currency is all the trust that's required 
+              to make it work."  - Satoshi Nakamoto</i>
+            </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}

@@ -763,8 +763,9 @@ ETH SIGNATURE
                 P3D mining rules (PoW ASIC-resistant, CPU-oriented protocol)
               </div>
               <div className="page-content-text">
-                According to the <Link to="/coin#white-papper">White Paper</Link> there are some mining rules every
-                miner have to follow in order to get rewarded by the network for
+                According to the <Link to="/coin#white-papper">White Paper</Link> there is a bunch 
+                of <Link to="/proof-of-scan#new-block">mining rules</Link> every
+                miner has to follow in order to get rewarded by the network for
                 each new block production.
               </div>
               <div className="page-content-subtitle" id="distribution-rewards">
@@ -778,12 +779,11 @@ ETH SIGNATURE
               </div>
               <ul className="page-content-text">
                 <li>
-                  Starting from the block going after the genesis, mining
-                  rewards amount is established as 500 3DP per block;
+                  Starting from the block going after the genesis, the block authorship
+                  rewards is set up at 500 P3D per block;
                 </li>
                 <li>
-                  Every 243000 blocks, simultaneously to the difficulty step up
-                  occasion, the amount of mining reward gets diminished dividing
+                  Every 243000 blocks the rewards amount gets diminished dividing
                   by 1.2.
                 </li>
               </ul>
