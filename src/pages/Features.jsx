@@ -549,12 +549,13 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             asserts "1 object = 1 asset," emphasizing the use of recognition algorithms instead of traditional 
             hash functions like <Link to="https://en.wikipedia.org/wiki/SHA-2">SHA256</Link>. 
             Specifically, the <Link to="/grid2d">Grid2d</Link> algorithm is employed for 3D object 
-            recognition within the Ledger of Things ecosystem.
+            recognition within the Ledger of Things ecosystem, which is capable of sustaining <i>"many-to-many"</i> {" "}
+            kind of connections amongst multiple replications all across real an virtual spaces. 
             </div>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/piggy_hash_id.png"
+              src="/images/piggy_hash_id_multy_to_multy.png"
               alt="img"
             />
             <div
