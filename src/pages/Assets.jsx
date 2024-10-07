@@ -190,7 +190,13 @@ const Assets = () => {
               which the object will able to be recognized by and distinguished from others 
               all around the Internet.
             </div>
-            <div className="page-content-text">
+            <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/piggy_hash_id.png"
+              alt="img"
+            />
+            <div className="page-content-text" id="general-hashid-many-to-many">
               Depending on whether the object is real or virtual, the process
               primarily differs in how seed data is obtained to produce the {" "}
               <Link to="/features#3drecognition-hash-id">HASH ID</Link>. Once created, however, 
@@ -202,9 +208,16 @@ const Assets = () => {
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/piggy_hash_id.png"
+              src="/images/piggy_hash_id_multy_to_multy.png"
               alt="img"
             />
+            <div className="page-content-text">
+              Explore this <Link to="/features#recognition-hash-id-case">case to study</Link> to compare 
+              this <i>many-to-many</i> standard identity with conventional hashing methods used in alternative platforms.
+              Scroll down to learn how the <Link to="#general-algorithmic-error">recognition algorithmic error</Link> and 
+              the <Link to="#general-human-perception-error">human perception error</Link> challenges are both
+              addressed in the standard.
+             </div>
             <div className="page-content-subtitle" id="general-rwa">
               Dealing with Real World Assets (RWA)
             </div>
