@@ -135,7 +135,7 @@ const Community = () => {
           </a>
           <a href="#use-cases-crypto">
             <div className="page-nav-inside">
-              Cryptocurrency wallets
+              Access Control
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -862,23 +862,124 @@ const Community = () => {
               with clear track record from mining to the counter.
             </div>
             <div className="page-content-subtitle" id="use-cases-gaming">
-              Tokenization of items for Gaming, Virtual reality, Metaverse
+              Gaming, Virtual reality, Metaverse
             </div>
-            <iframe
-              src="https://www.youtube.com/embed/O6c3ZOB0Glg"
-              className="page-video"
-              controls
-              title="diamonds"
-            ></iframe>
+            <div className="page-content-text">
+              In traditional gaming, in-game assets are held on centralized servers 
+              managed by game developers or publishers. Players invest significant 
+              time and money to acquire these assets, yet they don’t genuinely own 
+              them. Game companies can modify, delete, or restrict access to these 
+              items at any time, often without player consent.
+            </div>
+            <div className="page-content-text">
+              Blockchain technology revolutionizes this by decentralizing asset ownership. 
+              When in-game assets are tokenized on the blockchain, they transform into digital 
+              assets that are fully owned by the player. These assets are recorded on The Ledger of Things, 
+              meaning no single entity has control over them. As a result, developers cannot 
+              alter or confiscate these assets, granting players true ownership. This represents a 
+              significant shift in NFT game development, prioritizing player empowerment 
+              through unique in-game tokens.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/nft_game.png"
+              alt="img"
+            />
+            <div className="page-content-text">
+              For instance, if a player obtains a rare sword in a blockchain-based game, 
+              that sword is represented as a <Link to="/assets#3dprc-2-non-fungible">Non-fungible Token (NFT)</Link> {" "}
+              or <Link to="/assets#3dprc-2-fungible">Share-Token</Link> on The Ledger of Things. 
+              The player retains complete ownership of the sword and can trade or sell it—even 
+              outside the game—without requiring permission from the developer.
+            </div>
             <div className="page-content-subtitle" id="use-cases-crypto">
-              Real world objects as cryptocurrency wallets
+              Access Control
             </div>
-            <iframe
-              src="https://www.youtube.com/embed/YAl2R_DefQE"
-              className="page-video"
-              controls
-              title="diamonds"
-            ></iframe>
+            <div className="page-content-text" id="use-cases-seed">
+              <strong>The object's identity as secret seed</strong>
+            </div>
+            <div className="page-content-text">
+              RWA-based crypto accounts leveraging the <Link to="/features#recognition-hash-id">HASH ID</Link> {" "} 
+              as seed data for its recovery provide a solid solution 
+              for <Link to="/features#multiobject">multi-factor authentication</Link>, which is 
+              a cricital component in every Access Control system. The best example of it would be the {" "} 
+              <Link to="/mobile-wallet#creation">3D-object-wallet</Link>, where 3D shape unique characteristics
+              are <Link to="/assets#general-digital-transformation">transformed</Link> with recognition technnology
+              and used as secret seed instead of a mnemonic phrase.
+            </div>
+            <div className="page-content-text">
+              Examples:
+            </div>
+            <ul className="page-content-text">
+              <li>
+              <strong>Access to the wallet funds (for smart contracts and dApps)</strong>: Imagine a blockchain game 
+              offering a jackpot to someone who found a virtual object of specific shape. Once the object is found, 
+              the <Link to="/mobile-wallet#creation">3D-object-wallet</Link> is going to be created providing 
+              the access to the winner (or to the system). If either public acknowledgement or copy protection is required, 
+              the object might be disclosed afterwards and passed throught 
+              the <Link to="/assets#3dprc-2-object-authentication">3DPRC-2 authentication protocol</Link> to 
+              get as much confirmations from the network as needed.
+              <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/object_wallet.png"
+              alt="img"
+              />
+              </li>
+              <li>
+              <strong>Transaction trigger (for smart contracts and dApps)</strong>: Once the valid object is presented 
+              and the wallet is generated it might be triggering additional logic, as such: opening doors, vaults, gates, etc. 
+              by signing a specific transaction from the account.
+              <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/transaction_trigger.png"
+              alt="img"
+              />
+              </li>
+            </ul>
+            <div className="page-content-text" id="use-cases-identity">
+              <strong>Personal public on-chain identity for Web3</strong>
+            </div>
+            <div className="page-content-text">
+              As the contemporary Internet faces <Link to="/community#about-us-challenge">challenges</Link> posed 
+              by artificial intelligence, bots, 
+              and various anonymous entities, the significance of a personal digital public 
+              identity is increasingly paramount. The proliferation of misinformation and fake 
+              identities has rendered it nearly impossible to ascertain trustworthiness online.
+            </div>
+            <div className="page-content-text">
+              Current alternative solutions offered by corporations, governmental entities, and 
+              blockchain platforms often lack transparency regarding personal data. These solutions 
+              frequently provide an inadequate representation of an individual’s identity through a 
+              convoluted series of processes, despite the widespread availability of personal data 
+              shared by individuals themselves. Commonly disseminated information includes selfie images, 
+              videos, and even 3D representations, which reveal distinct human attributes such as facial 
+              features and iris characteristics. This raises the question of whether it would be prudent 
+              to utilize this data for automated and public verification of sources.
+            </div>
+            <div className="page-content-text">
+              It is important to recognize that certain types of personal data are inherently more 
+              sensitive than others. For example, fingerprints are typically less commonly shared publicly. 
+              Nevertheless, relying solely on fingerprints to safeguard access to one's digital identity 
+              is insufficient. A multifactor approach is essential to ensure an adequate level of security.
+            </div>
+            <div className="page-content-text">
+              The 3Dpass <Link to="/mainnet#chain"></Link> on-chain identity decentralized module facilitates 
+              the linking of an object-wallet, 
+              generated from private biometric data, to a public HASH ID derived from a face or iris scan. 
+              This integration enhances security and simplifies verification processes on the blockchain.
+              Following <Link to="/assets#general-digital-transformation"></Link> transformation, the 
+              public data becomes a non-fungible backed asset, safeguarded 
+              against duplication through the <Link to="/features#3dprc-2">3DPRC-2</Link> standard. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/personal_public_identity_1.png"
+              alt="img"
+              />
           </div>
         </div>
         <div className="page-content-block" id="governance">
@@ -945,20 +1046,20 @@ const Community = () => {
             </div>
             <UserCard
               name="PaulS"
-              title="Founder"
-              description="16+ years experience in the field"
+              title="Product and strategy"
+              description="founder"
               image="/images/anon.jpg"
             />
             <UserCard
               name="Michael Co"
-              title="CORE developer and co-founder"
-              description="10+ years experience"
+              title="Core developer"
+              description="co-founder"
               image="/images/anon.jpg"
             />
             <UserCard
               name="Mikhail"
-              title="Front-end developer and co-founder"
-              description="10+ years experience"
+              title="Front-end & AI Developer"
+              description="co-founder"
               image="/images/anon.jpg"
             />
             <UserCard name="L3odr0id" 
@@ -974,7 +1075,7 @@ const Community = () => {
             />
             <UserCard
               name="A Mo"
-              title="Community Representative"
+              title="Business Development Lead"
               description="Europe, Discord: A_Mo#2060"
               image="/images/anon.jpg"
             />

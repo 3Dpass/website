@@ -1063,7 +1063,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <div className="page-content-text">Utilization:</div>
             <ul className="page-content-text">
               <li><Link to="/community#use-cases-crypto">Cryptocurrency wallets</Link></li>
-              <li>Access control systems</li>
+              <li><Link to="/community#use-cases-identity"></Link>Access control systems</li>
               <li>Backups data encryption</li>
               <li>Keys and passwords from internet accounts</li>
               <li>Multi-factor authenticaton</li>
