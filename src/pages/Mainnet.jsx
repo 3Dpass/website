@@ -1724,7 +1724,7 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               </li>
               <li>Internet trafic: No limits</li>
               <li>Performance imporing new blocks: up to 10 sec per block</li>
-              <li>Performance handling the user objects: up to 20 sec per object</li>
+              <li>Performance handling the user objects: up to 30 sec per object</li>
               <li>On-chain identity level of confidence: <Link to="#chain-general">Reasonable</Link></li>
             </ul>
             <div className="page-content-subtitle" id="validator-threshold">
@@ -1853,44 +1853,43 @@ ls ~/3dp-chain/chains/3dpass/keystore
               owner of the Validator's account.
             </div>
             <div className="page-content-text">
-              6. Make your application for Validator and join the validator set:
+              6. Join the validator set:
             </div>
-            <ul className="page-content-text">
-               <li>
-               Apply for Validator over the {" "}
-               <Link to="https://discord.com/channels/932377852521881659/1259112470795124867">OPENGOVERNANCE</Link> {" "}
-               discord channel.
-               </li>
-               <li>
-               Pay off the <Link to="#validator-setup-fee">Set up fee</Link> to Treasury 
-               and attach the transaction link to the application.
-               </li>
-               <li>
-               The application goes through the <Link to="/governance#council"></Link> Council vote. 
-               One of the actual councilors will pick up your application and submit the motion to the Council.
-               Track the motion via the Polka js wallet - {" "}
-              <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/council/motions">#council/motions</Link>. 
-               </li>
+              <ul className="page-content-text">
+                <li>
+                  Use the <i>`addValidatorSelf`</i> method to submit your validator-candidate to the queue.
+                  The <Link to="/mainnet#validator-setup-fee">set up fee</Link> will be charged from your account. 
+                  <img
+                  className="page-img"
+                  src="/images/add_validator_self.png"
+                  alt="img"
+                  style={{ marginBottom: "20px", marginTop: "20px" }}
+                  />
+                </li>
+                <li id="validator-candidate-queue">
+                 The queue will let one candidate per session (120 blocks) into the set one by one.
+                 Check your validator-candidate in the <i>`candidates`</i> list and wait for the queue to 
+                 insert it into the validator set.
+                 <img
+                  className="page-img"
+                  src="/images/validator_candidates.png"
+                  alt="img"
+                  style={{ marginBottom: "20px", marginTop: "20px" }}
+                  />
+                </li>
+                <li>
+                It depends on the current number of candidates in the queue 
+                how long will it take for your turn to head in.
+                Verify your mining address in the
+                <i>`validatorSet → Validators()`</i> list:
+                 <img
+                 className="page-img"
+                 src="/images/set_validators1.png"
+                 alt="img"
+                 style={{ marginBottom: "20px", marginTop: "20px" }}
+                 />
+                </li>
             </ul>
-            {/*<div className="page-content-text">
-              5. Add your mining address into the Validator set:
-            </div>
-            <img
-              className="page-img"
-              src="/images/add_to_validator1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />*/}
-            <div className="page-content-text">
-              Once passed, verify your mining address in the
-              validatorSet → Validators() list:
-            </div>
-            <img
-              className="page-img"
-              src="/images/set_validators1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
             <div className="page-content-text">
               7. Generate the session key by calling out the Node via the 
               RPC API with the <i>"author_rotateKeys"</i> method and get a `proof` of your keys:
@@ -1900,8 +1899,20 @@ ls ~/3dp-chain/chains/3dpass/keystore
 curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "author_rotateKeys"}' http://localhost:9933/
               `}
             </pre>
+            <ul className="page-content-text">
+              <li>
+                Grant your Node the permission to use unsafe RPC methods by adding the following flags 
+                into the <Link to="/mainnet#linux-mac-run">running command</Link>: {" "}
+                <code>--rpc-cors all --unsafe-ws-external --unsafe-rpc-external --rpc-methods=unsafe</code> 
+              </li>
+              <li>
+               <i>Note!</i> Remove the flags from the <Link to="/mainnet#linux-mac-run">running command</Link> after the execution 
+                of the <i>"author_rotateKeys"</i>. It is not recommended (for security reasons) 
+                that validators have these methods open.
+              </li>
+            </ul>
             <div className="page-content-text">
-             This command returns a JSON-formatted result containting the `proof` of 
+             The <i>"author_rotateKeys"</i> returns a JSON-formatted result containting the `proof` of 
              your keys for the `session` module in the hex fromat (<strong><i>"0x..."</i></strong>):
             </div>
             <pre className="main-pre">
@@ -2021,15 +2032,17 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               Rejoining the validator set
             </div>
             <div className="page-content-text">
-              There is a "comeback window" validator can rejoin
-              after getting ruled out witout a necessity to pay the set up fee.
+              There is a "comeback window" to let validators rejoin the set
+              free of charge. No <Link to="/mainnet#validator-setup-fee">set up fee</Link> {" "}
+              will be charged throughout the period.
             </div>
             <ul className="page-content-text">
-              <li>Ban period: 3 hours, since heading off the validator set</li>
-              <li>Comeback window: 1 week, since the ban period got expired</li>
+              <li>Ban period: 3 hours since heading off the validator set</li>
+              <li>Comeback window: 1 week since the ban period got expired</li>
             </ul>
             <div className="page-content-text">
-              Use rejoinValidator method to get the validator back on track:
+              Use the <i>`rejoinValidator`</i> method to submit your validator back to
+              the <Link to="/mainnet#validator-candidate-queue">queue</Link>.
             </div>
             <img
               className="page-img"
@@ -2048,7 +2061,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               Refill you account if it's needed.
             </div>
             <div className="page-content-text">
-              Check the actual lock state with validatorSet - validatorLock:
+              Check the actual lock state with <i>`validatorSet - validatorLock`</i>:
             </div>
             <img
               className="page-img"
@@ -2058,7 +2071,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
             />
             <div className="page-content-text">
               Check the state at wich the lock was submitted initially with
-              ValidatorSet - enterDeposit:
+              <i>`ValidatorSet - enterDeposit`</i>:
             </div>
             <img
               className="page-img"
@@ -2082,7 +2095,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               And then call out the <i>"unlock funds"</i>.
             </div>
             <div className="page-content-text">
-              Unlock funds with validatorSet - unlock:
+              Unlock funds with <i>`validatorSet - unlock`</i>:
             </div>
             <img
               className="page-img"

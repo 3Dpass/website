@@ -904,7 +904,7 @@ const Community = () => {
               as seed data for its recovery provide a solid solution 
               for <Link to="/features#multiobject">multi-factor authentication</Link>, which is 
               a cricital component in every Access Control system. The best example of it would be the {" "} 
-              <Link to="/mobile-wallet#creation">3D-object-wallet</Link>, where 3D shape unique characteristics
+              <Link to="/mobile-wallet#creation">3D Object Wallet</Link>, where 3D shape unique characteristics
               are <Link to="/assets#general-digital-transformation">transformed</Link> with recognition technnology
               and used as secret seed instead of a mnemonic phrase.
             </div>
@@ -915,7 +915,7 @@ const Community = () => {
               <li>
               <strong>Access to the wallet funds (for smart contracts and dApps)</strong>: Imagine a blockchain game 
               offering a jackpot to someone who found a virtual object of specific shape. Once the object is found, 
-              the <Link to="/mobile-wallet#creation">3D-object-wallet</Link> is going to be created providing 
+              the <Link to="/mobile-wallet#creation">3D Object Wallet</Link> is going to be created providing 
               the access to the winner (or to the system). If either public acknowledgement or copy protection is required, 
               the object might be disclosed afterwards and passed throught 
               the <Link to="/assets#3dprc-2-object-authentication">3DPRC-2 authentication protocol</Link> to 
@@ -1046,19 +1046,19 @@ const Community = () => {
             </div>
             <UserCard
               name="PaulS"
-              title="Product and strategy"
+              title="Product and Strategy"
               description="founder"
               image="/images/anon.jpg"
             />
             <UserCard
               name="Michael Co"
-              title="Core developer"
+              title="Core Developer"
               description="co-founder"
               image="/images/anon.jpg"
             />
             <UserCard
               name="Mikhail"
-              title="Front-end & AI Developer"
+              title="Front-end and AI Developer"
               description="co-founder"
               image="/images/anon.jpg"
             />
@@ -1075,8 +1075,8 @@ const Community = () => {
             />
             <UserCard
               name="A Mo"
-              title="Business Development Lead"
-              description="Europe, Discord: A_Mo#2060"
+              title="Business Development and Community Representative"
+              description="Discord: A_Mo#2060"
               image="/images/anon.jpg"
             />
              <UserCard

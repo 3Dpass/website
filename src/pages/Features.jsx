@@ -224,7 +224,7 @@ const Features = () => {
                   : "one-page-nav"
               }
             >
-              DEX (Decentralized Exchange)
+              DEX Module
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -236,7 +236,19 @@ const Features = () => {
                   : "one-page-nav"
               }
             >
-              Password and Keys Creation
+              Object Wallet
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#identity">
+            <div
+              className={
+                locationHash.includes("identity")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              On-chain Identity
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -982,7 +994,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
         </div>
         <div className="page-content-block" id="dex">
           <div className="page-content-inner">
-          <div className="page-content-title">Embedded DEX (Decentralized Exchange) module</div>
+          <div className="page-content-title">Decentralized Exchange (DEX) Module</div>
            <div className="page-content-text">
             A custom version of the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> {" "}
             module, which represents a full featured decentralized exchange based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> {" "}
@@ -1020,24 +1032,24 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
         <div className="page-content-block" id="passwords">
           <div className="page-content-inner">
             <div className="page-content-title">
-              Passwords And Keys Creation & Recovery
+              Object Wallet
             </div>
             <div className="page-content-text">
               One of the applications of 3Dpass technology is in the creation and 
-              recovery of passwords and keys through 3D scanning of objects, 
-              utilizing the Multi-object option. This approach bears resemblance 
-              to the popular "brain wallet" technology, where crypto wallet keys 
-              can be recovered using a backup "seed phrase".
+              recovery of passwords and keys through scanning of objects. 
+              This approach bears resemblance to the popular "brain wallet" technology, 
+              where crypto wallet keys can be recovered using a backup mnemonic "seed phrase".
             </div>
             <div className="page-content-text">
-            However, 3Dpass innovates on this concept by using the shape of a 3D 
-            object as the seed data instead. When combined with the owner's 
-            biometric data or other additional properties, this results in a 
-            complex HASH ID derived from multiple objects. This multi-object 
-            HASH ID offers significant resistance against attacks and provides
-            several advantages, including:
+              However, 3Dpass innovates on this concept by using the object unique 
+              characteristics (ex. 3D shape) as the seed data instead. 
+              When combined with the owner's biometric data or other additional 
+              properties, this results in a complex HASH ID derived from multiple objects. 
+              This <Link to="/features#multiobject">multi-object HASH ID</Link> offers 
+              significant resistance against attacks and provides
+              several advantages, including:
             </div>
-            <ol className="page-content-text">
+            <ul className="page-content-text">
               <li>
                 <i>Enhanced Security</i>: The use of multiple objects and biometric 
                 data creates a robust authentication mechanism, making it 
@@ -1059,21 +1071,58 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
                 <i>Resilience</i>: The decentralized and immutable nature of blockchain ensures that 
                 HASH IDs are tamper-proof and reliable over time.
               </li>
-            </ol>
-            <div className="page-content-text">Utilization:</div>
-            <ul className="page-content-text">
-              <li><Link to="/community#use-cases-crypto">Cryptocurrency wallets</Link></li>
-              <li><Link to="/community#use-cases-identity"></Link>Access control systems</li>
-              <li>Backups data encryption</li>
-              <li>Keys and passwords from internet accounts</li>
-              <li>Multi-factor authenticaton</li>
             </ul>
             <div className="page-content-text">
-              Use either <Link to="/mobile-wallet">3Dpass mobile wallet</Link> or{" "}
-              <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> CLI tool
-              for Linux to generate your password out of 3D object. The mobile
-              wallet is equiped with the feature of <Link to="/mobile-wallet#creation">3D-object-wallet creation</Link>.
+              Explore some <Link to="/community#use-cases-crypto">use cases</Link> with object wallets. 
             </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/object_wallet.png"
+              alt="img"
+              />
+            <Link className="message-text" to="/mainnet#chain-kyc">
+            <div className="page-lead-content">
+                 Create your 3D object wallet
+                <div className="page-lead-button">Create</div>
+            </div>
+            </Link>
+          </div>
+        </div>
+        <div className="page-content-block" id="identity">
+          <div className="page-content-inner">
+            <div className="page-content-title">
+              On-chain Identity
+            </div>
+            <div className="page-content-text">
+              3DPass has implemented 
+              Substrate <Link to="https://github.com/paritytech/substrate/tree/master/frame/identity">Identity pallet</Link>, 
+              which allows to assign a certain level of confidence to any account (network
+              address) verified by a registrar. It is assumed, that the
+              registrar is trusted enough to verify some contact information
+              assocoated with the user's address (Twitter, Google, Discord,
+              Telegram, etc) and provide their on-chain judgement. Registrar's
+              can not only promote in level but also demote the account that
+              were found malicious. The registrar judgement can only be changed
+              by <Link to="/governance#democracy">Referenda</Link>. Registrars can either 
+              be elected by <Link to="/governance#democracy">Referenda</Link> or
+              assigned by means of <Link to="/governance#council">Council</Link> voting.
+            </div>
+            <div className="page-content-text">
+              Explore some <Link to="/community#use-cases-identity">use cases</Link> with the On-chain Identity. 
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/personal_public_identity_1.png"
+              alt="img"
+            />
+            <Link className="message-text" to="/mainnet#chain-kyc">
+            <div className="page-lead-content">
+                 Create your On-chain Identity
+                <div className="page-lead-button">Create</div>
+            </div>
+            </Link>
           </div>
         </div>
       </div>

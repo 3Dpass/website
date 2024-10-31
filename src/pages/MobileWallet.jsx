@@ -169,7 +169,7 @@ const MobileWallet = () => {
                   : "one-page-nav"
               }
             >
-              3D-object-wallet creation and recovery
+              3D Object Wallet
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -541,7 +541,7 @@ const MobileWallet = () => {
         <div className="page-content-block" id="creation">
           <div className="page-content-inner">
             <div className="page-content-title">
-              3D-Object-Wallet Creation and Recovery
+              3D Object Wallet Creation and Recovery
             </div>
             <div className="page-content-text">
               3DPass mobile app allows for creation of crypto wallet
