@@ -91,7 +91,7 @@ const Grants = () => {
                   : "one-page-nav"
               }
             >
-              Eco-system support
+              Ecosystem support
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -115,7 +115,7 @@ const Grants = () => {
               There is a Grant contribution program operating around The Ledger of Things, 
               which is established and managed by 3Dpass {" "}
               <Link to="/community#governance">Open Governance</Link>{" "}
-              to encounrage community efforts on development of the eco-system. 
+              to encounrage community efforts on development of the ecosystem. 
             </div>
             <div className="page-content-text">
               The program offers a variety of bounty options for contributors, as long 
@@ -169,19 +169,19 @@ const Grants = () => {
                 Submit your Pull Request into the <Link to="https://github.com/3dpass">GitHub</Link>
               </li>
               <li>
-                Get both of your accounts GitHub account and Discord account 
+                Set up on-chain identity and get your P3D account 
                 verified as <Link to="/mainnet#chain-kyc">"Reasonable"</Link>.
               </li>
               <li>
-                Join <Link to="http://localhost:3000/governance#council">Discord</Link> and discuss the issue with the Counsilors. 
+                Join <Link to="http://localhost:3000/governance#council">Discord</Link> and discuss the issue with the Councilors. 
               </li>
               <li>
                 Submit your bounty over the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned a the curator, 
-                who is to check on the Pull Request and approve the payout.
+                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
+                who is to make revew on the Pull Request and sign on the payout.
               </li>
             </ul>
             <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
@@ -222,12 +222,12 @@ const Grants = () => {
                 Submit your Pull Request into the <Link to="https://github.com/3dpass">GitHub</Link>
               </li>
               <li>
-                Get both of your accounts GitHub account and Discord account 
+                Set up on-chain identity and get your P3D account 
                 verified as <Link to="/mainnet#chain-kyc">"Reasonable"</Link>.
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the task with the Counsilors. 
+                and discuss the task with the Councilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
@@ -235,8 +235,8 @@ const Grants = () => {
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned a the curator, 
-                who is to check on the Pull Request and approve the payout.
+                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
+                who is to make revew on the Pull Request and sign on the payout.
               </li>
             </ul>
             <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
@@ -256,7 +256,7 @@ const Grants = () => {
               Should be rewarded:
             </div>
             <div className="page-content-text">
-               The only activities that could help The Ledger of Things eco-system 
+               The only activities that could help The Ledger of Things ecosystem 
                to maintain and develop itself might have a chance to get rewarded.
             </div>
             <div className="page-content-text">
@@ -307,23 +307,20 @@ const Grants = () => {
             </div>
             <ul className="page-content-text">
               <li>
-                Submit your Pull Request into the <Link to="https://github.com/3dpass">GitHub</Link>
-              </li>
-              <li>
-                Get your both of your accounts SM account (the job was done with) and the Discord account
+                Set up on-chain identity and get your P3D account 
                 verified as <Link to="/mainnet#chain-kyc">"Reasonable"</Link>.
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the matter with the Counsilors. 
+                and discuss the matter with the Councilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
                  <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
-                and specify the link to your posts in the Bounty description as as proof of work. 
+                and specify the link to your posts in the Bounty description as proof of work. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned a the curator, 
+                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
                 who is to check on the posts and approve the payout.
               </li>
             </ul>
@@ -384,7 +381,7 @@ const Grants = () => {
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the matter with the Counsilors. 
+                and discuss the matter with the Councilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
@@ -392,8 +389,8 @@ const Grants = () => {
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned a the curator, 
-                who is to check on the Pull Request and approve the payout.
+                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
+                who is to check on proof of work and sign on the payout.
               </li>
             </ul>
             <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
@@ -407,7 +404,7 @@ const Grants = () => {
         <div className="page-content-block" id="eco-system-support-bounty">
           <div className="page-content-inner">
             <div className="page-content-title">
-              Eco-system support bounty program
+              Ecosystem support bounty program
             </div>
             <div className="page-content-text">
               Having either <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
@@ -461,7 +458,7 @@ const Grants = () => {
               </li>
               <li>
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> {" "}
-                and discuss the matter with the Counsilors. 
+                and discuss the matter with the Councilors. 
               </li>
               <li>
                 Submit your bounty over the {" "}
@@ -469,13 +466,13 @@ const Grants = () => {
                 and specify the link to your Pull Request/proof of work in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned a the curator, 
-                who is to check on the Pull Request and approve the payout.
+                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
+                who is to revew on the Pull Request and sign on the payout.
               </li>
             </ul>
             <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
             <div className="page-lead-content">
-               Eco-system Bounty
+               Ecosystem Bounty
                 <div className="page-lead-button">Apply</div>
             </div>
             </a>
