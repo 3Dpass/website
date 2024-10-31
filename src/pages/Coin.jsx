@@ -398,7 +398,7 @@ ETH SIGNATURE
               <li>3DPRC-2: Grid2D_v3a multithreading optimization (<Link to="https://github.com/3Dpass/p3d/pull/4"><i>Pull Request is reviewed</i></Link>)</li>
               <li>Core: Equivocation handler improvements: <Link to="https://github.com/3Dpass/3DP/releases/tag/v22">Node v22 release</Link></li>
               <li>PoW component: FPGA resistance feature: <Link to="https://github.com/3Dpass/3DP/releases/tag/v24">Node v24 release</Link></li>
-              <li>Validator set (stability & security): additional checks on validators joining (<i> is being tested</i>)</li>
+              <li>Validator set (stability & security): additional checks on validators joining (done: <Link to="https://github.com/3Dpass/3DP/releases/tag/v28">Node v28 release</Link>)</li>
               <li>Validator set (stability & security): check if the validator is providing judgements during the session (<i> is being tested</i>)</li>
               <li>Validator set (stability & security): the validator performance test on 3DPRC-2 (done: covered by <Link to="https://github.com/3Dpass/3DP/releases/tag/v24">Node v24 release</Link>)</li>
               <li>Forkless upgrade: online upgrade public verification procedure: <i>Done</i></li>
