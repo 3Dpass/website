@@ -30,17 +30,17 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The Node v28 has been released!",
+      description:
+      "The Node v28 has been released online providing the self joinning option for validators! The user object weight limit has been expanded to 1Mb for 3DPRC-2 standard!",
+      date: "Oct 30, 2024",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v28"
+    },
+    {
       title: "The mobile wallet v2.17.1!",
       description:
       "The mobile wallet v2.17.1 enables tokenized objects preview in connection with bounded assets!",
       date: "Sep 30, 2024",
-      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"
-    },
-    {
-      title: "The mobile wallet v2.17.0!",
-      description:
-      "The mobile wallet v2.17.0 allows for and easy tokenization of such characteristics of RWA like weight, square, volume, lenght, etc.!",
-      date: "Sep 3, 2024",
       link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"
     },
     {
