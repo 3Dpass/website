@@ -19,12 +19,12 @@ const Home = () => {
     {
       title: "Digital identity, recoverable crypto wallets, 2FA",
       description:
-      "3DPass enables anyone to utilize a 3D object as seed data for creating passwords or keys. When combined with the owner's biometric data or other additional properties, this <a href='/features#multiobject'>multi-object Hash ID</a> offers a zero-knowledge proof of the object's authenticity. This unique identifier can be subsequently retrieved through scanning. For further details, <a href='/features#passwords'>explore more >></a> about this innovative capability.",
+        "3DPass enables anyone to utilize a 3D object as seed data for creating passwords or keys. When combined with the owner's biometric data or other additional properties, this <a href='/features#multiobject'>multi-object Hash ID</a> offers a zero-knowledge proof of the object's authenticity. This unique identifier can be subsequently retrieved through scanning. For further details, <a href='/features#passwords'>explore more >></a> about this innovative capability.",
     },
     {
       title: "Metaverse, Gaminig, AI, IoT",
       description:
-      "3DPass unfolds this capability of tracing the objects in dynamic (in the state of change), which is an essential component for `play-to-earn` , VR/AR and IoT projects providing the asset ownership to its users. Check out a  <a href='/community#use-cases-ideas'>play-to-eran case</a>.",
+        "3DPass unfolds this capability of tracing the objects in dynamic (in the state of change), which is an essential component for `play-to-earn` , VR/AR and IoT projects providing the asset ownership to its users. Check out a  <a href='/community#use-cases-ideas'>play-to-eran case</a>.",
     },
   ]);
 
@@ -32,25 +32,30 @@ const Home = () => {
     {
       title: "The Node v28 has been released!",
       description:
-      "The Node v28 has been released online providing the self joinning option for validators! The user object weight limit has been expanded to 1Mb for 3DPRC-2 standard!",
+        "The Node v28 has been released online providing the self joinning option for validators! The user object weight limit has been expanded to 1Mb for 3DPRC-2 standard!",
       date: "Oct 30, 2024",
       link: "https://github.com/3Dpass/3DP/releases/tag/v28"
     },
     {
       title: "The mobile wallet v2.17.1!",
       description:
-      "The mobile wallet v2.17.1 enables tokenized objects preview in connection with bounded assets!",
+        "The mobile wallet v2.17.1 enables tokenized objects preview in connection with bounded assets!",
       date: "Sep 30, 2024",
       link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"
     },
     {
       title: "LEGO models open marketplace!",
       description:
-      "LEGO models and other premanufactured printable items open marketplace for architects and individuals came into operation all accross the the Ledger fo Things ecosystem!",
+        "LEGO models and other premanufactured printable items open marketplace for architects and individuals came into operation all accross the the Ledger fo Things ecosystem!",
       date: "Aug 20, 2024",
       link: "/community#use-cases-lego"
     },
   ]);
+  const [activeIndex, setActiveIndex] = useState(null);
+
+  const handleToggle = (index) => {
+    setActiveIndex(index === activeIndex ? null : index);
+  };
 
   return (
     <React.Fragment>
@@ -62,7 +67,7 @@ const Home = () => {
             Layer 1 blockchain platform for the tokenization of objects
           </div>
           <div className="home-button-holder">
-          <Link to="/features#3dprc-2">
+            <Link to="/features#3dprc-2">
               <Button type="button" label="3DPRC-2 standard" />
             </Link>
             <Link to="/features#smartcontracts">
@@ -93,9 +98,9 @@ const Home = () => {
         <div className="home-left-title">The Ledger Of Things</div>
         <div className="home-left-description">
           Layer 1 blockchain, <Link to="/features#scanproof" className="message-text">Proof of Scan</Link> is a revolutionary protocol preventing digital assets
-          from being copied (<i> PoW ASIC-resistant and CPU oriented, object recognition-based + PoS</i>), <Link to="/grid2d" className="message-text">Grid2d</Link> recognition algorithm, <Link to="/features#scanproof-deterministic" className="message-text">deterministic</Link>  blockchain finality, 
-          3Dpass Coin: <Link to="/mainnet" className="message-text">mineable</Link>,  <Link to="/proof-of-scan#3dprc-2" className="message-text">3DPRC-2</Link> tokenization standard, Decentralized <Link to="/governance#general" className="message-text">Open Governance</Link>,{" "} 
-          <Link to="/proof-of-scan#forkless-upgrade" className="message-text">Forkless upgrade</Link>, On-chain Identity, <Link to="/features#smartcontracts" className="message-text">Smart Contracts</Link>. 
+          from being copied (<i> PoW ASIC-resistant and CPU oriented, object recognition-based + PoS</i>), <Link to="/grid2d" className="message-text">Grid2d</Link> recognition algorithm, <Link to="/features#scanproof-deterministic" className="message-text">deterministic</Link>  blockchain finality,
+          3Dpass Coin: <Link to="/mainnet" className="message-text">mineable</Link>,  <Link to="/proof-of-scan#3dprc-2" className="message-text">3DPRC-2</Link> tokenization standard, Decentralized <Link to="/governance#general" className="message-text">Open Governance</Link>,{" "}
+          <Link to="/proof-of-scan#forkless-upgrade" className="message-text">Forkless upgrade</Link>, On-chain Identity, <Link to="/features#smartcontracts" className="message-text">Smart Contracts</Link>.
         </div>
         <div className="home-items-content">
           <HomeItem
@@ -176,15 +181,15 @@ const Home = () => {
         <div className="home-one-content third-home-content inner-content">
           <div className="home-centered-title">3Dpass For Industries</div>
           <div className="home-faq-holder">
-            {faqs.map((item, i) => {
-              return (
-                <Faq
-                  key={i}
-                  title={item.title}
-                  description={item.description}
-                />
-              );
-            })}
+            {faqs.map((item, i) => (
+              <Faq
+                key={i}
+                title={item.title}
+                description={item.description}
+                isOpen={i === activeIndex}
+                onToggle={() => handleToggle(i)}
+              />
+            ))}
           </div>
           <div className="home-centered-title">Latest News</div>
           <div className="home-news-holder">
@@ -223,10 +228,10 @@ const Home = () => {
         <div className="home-partners-title">Marketcap</div>
         <div className="partners-icons-holder">
           <div className="partners-icons-holder">
-          <a href="https://coinmarketcap.com/currencies/3dpass/">
+            <a href="https://coinmarketcap.com/currencies/3dpass/">
               <div className="partners-icon coinmarketcap"></div>
             </a>
-          <a href="https://www.coingecko.com/en/coins/3dpass">
+            <a href="https://www.coingecko.com/en/coins/3dpass">
               <div className="partners-icon coingecko"></div>
             </a>
             <a href="https://coinpaprika.com/coin/p3d-3dpass-coin/">

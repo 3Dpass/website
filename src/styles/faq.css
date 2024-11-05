@@ -3,7 +3,7 @@
 
   width: 100%;
 
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 
   text-align: center;
 }
@@ -60,8 +60,7 @@
 
   width: 100%;
   max-width: 1100px;
-
-  padding: 30px;
+  /* padding: 30px; */
 
   background: #333333;
 
@@ -73,6 +72,20 @@
   color: #ffffff;
 
   border-radius: 0px 0px 12px 12px;
+
+
+  overflow: hidden;
+  transition: height 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  opacity: 0;
+  padding: 0;
+  /* Start with no padding */
+
+}
+
+.faq-description.open {
+  opacity: 1;
+  padding: 30px 30px;
+  /* Add padding only when open */
 }
 
 .faq-description a {
@@ -81,6 +94,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
   .faq-title,
   .faq-description {
     font-size: 14px;
