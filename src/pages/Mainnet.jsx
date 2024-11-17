@@ -1723,8 +1723,8 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
                 Firewall: No restrictions
               </li>
               <li>Internet trafic: No limits</li>
-              <li>Performance imporing new blocks: up to 10 sec per block</li>
-              <li>Performance handling the user objects: up to 30 sec per object</li>
+              <li>Performance at importing new blocks: up to 10 sec per block</li>
+              <li>Performance at handling the user objects: up to 30 sec per object</li>
               <li>On-chain identity level of confidence: <Link to="#chain-general">Reasonable</Link></li>
             </ul>
             <div className="page-content-subtitle" id="validator-threshold">
