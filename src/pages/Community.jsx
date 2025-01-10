@@ -1130,6 +1130,9 @@ const Community = () => {
                 <Link to="http://explorer.3dpassmining.info">
                   <li>Web Block Explorer 2</li>
                 </Link>
+                <Link to="https://talisman.xyz">
+                  <li>Talisman muli-chain wallet</li>
+                </Link>
               </ul>
             </div>
             <div className="url-block">

@@ -30,25 +30,25 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "P3D is now supported on Talisman multi-chain wallet!",
+      description:
+        "The Talisman wallet developers have announced P3D transfers support since the v2.3.2!",
+      date: "Jan 09, 2025",
+      link: "https://talisman.xyz"
+    },
+    {
+      title: "The mobile wallet v2.17.3!",
+      description:
+        "The mobile wallet v2.17.3 enhances the tokenized objects preview in connection with bounded assets!",
+      date: "Nov 24, 2024",
+      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.3"
+    },
+    {
       title: "The Node v28 has been released!",
       description:
         "The Node v28 has been released online providing the self joinning option for validators! The user object weight limit has been expanded to 1Mb for 3DPRC-2 standard!",
       date: "Oct 30, 2024",
       link: "https://github.com/3Dpass/3DP/releases/tag/v28"
-    },
-    {
-      title: "The mobile wallet v2.17.1!",
-      description:
-        "The mobile wallet v2.17.1 enables tokenized objects preview in connection with bounded assets!",
-      date: "Sep 30, 2024",
-      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"
-    },
-    {
-      title: "LEGO models open marketplace!",
-      description:
-        "LEGO models and other premanufactured printable items open marketplace for architects and individuals came into operation all accross the the Ledger fo Things ecosystem!",
-      date: "Aug 20, 2024",
-      link: "/community#use-cases-lego"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
