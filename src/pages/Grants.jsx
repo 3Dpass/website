@@ -176,15 +176,15 @@ const Grants = () => {
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> and discuss the issue with the Councilors. 
               </li>
               <li>
-                Submit your bounty over the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
+                Submit your bounty over the <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
+                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. If approved, your application will be assigned with the curator, 
                 who is to make revew on the Pull Request and sign on the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
             <div className="page-lead-content">
                Bug Bounty
                 <div className="page-lead-button">Apply</div>
@@ -231,15 +231,15 @@ const Grants = () => {
               </li>
               <li>
                 Submit your bounty over the {" "}
-                 <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
+                 <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
-                who is to make revew on the Pull Request and sign on the payout.
+                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
+                If approved, your application will be assigned with the curator, who is to make revew on the Pull Request and sign on the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
             <div className="page-lead-content">
                Dev Bounty
                 <div className="page-lead-button">Apply</div>
@@ -316,15 +316,16 @@ const Grants = () => {
               </li>
               <li>
                 Submit your bounty over the {" "}
-                 <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
+                 <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your posts in the Bounty description as proof of work. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
+                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
+                If approved, your application will be assigned with the curator, 
                 who is to check on the posts and approve the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
             <div className="page-lead-content">
                Marketing Bounty
                 <div className="page-lead-button">Apply</div>
@@ -385,15 +386,16 @@ const Grants = () => {
               </li>
               <li>
                 Submit your bounty over the {" "}
-                 <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
+                 <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
-                who is to check on proof of work and sign on the payout.
+                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
+                If approved, your application will be assigned with the curator, 
+                who is to check on the posts and approve the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
             <div className="page-lead-content">
                Integration Bounty
                 <div className="page-lead-button">Apply</div>
@@ -462,15 +464,16 @@ const Grants = () => {
               </li>
               <li>
                 Submit your bounty over the {" "}
-                 <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">Pokadot.js wallet</Link> {" "}
+                 <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request/proof of work in the Bounty description. 
               </li>
               <li>
-                Wait for the Council vote outcome. If approved, your application will be assigned with the curator, 
-                who is to revew on the Pull Request and sign on the payout.
+                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
+                If approved, your application will be assigned with the curator, 
+                who is to check on the posts and approve the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/bounties">
+            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
             <div className="page-lead-content">
                Ecosystem Bounty
                 <div className="page-lead-button">Apply</div>
