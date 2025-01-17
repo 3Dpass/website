@@ -89,12 +89,6 @@ ETH SIGNATURE
               <div className="page-nav-line roadmap-line"></div>
             </div>
           </a>
-          <a href="#roadmap-2022">
-            <div className="page-nav-inside">
-              2022
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
           <a href="#roadmap-2023">
             <div className="page-nav-inside">
               2023
@@ -110,6 +104,12 @@ ETH SIGNATURE
           <a href="#roadmap-2025">
             <div className="page-nav-inside">
               2025
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#roadmap-2026">
+            <div className="page-nav-inside">
+              2026
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -394,12 +394,12 @@ ETH SIGNATURE
               <li>Web: Embedded DEX UI: <Link to="https://swap.3dpascan.io">https://swap.3dpascan.io</Link> released</li>
               <li>Mobile wallet: <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> UI integration (Putting objects on the blockchain - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"><i>done</i></Link>; Backed tokens issuace - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.15.0"><i>done</i></Link>)</li>
               <li>Core: Atomic swap for assets (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v11">released</Link></i>)</li>
-              <li>3DPRC-2: Assets management (<i> in the process</i>)</li>
+              <li>3DPRC-2: Assets management (<i> shifted to 2025</i>)</li>
               <li>3DPRC-2: Grid2D_v3a multithreading optimization (<Link to="https://github.com/3Dpass/p3d/pull/4"><i>Pull Request is reviewed</i></Link>)</li>
               <li>Core: Equivocation handler improvements: <Link to="https://github.com/3Dpass/3DP/releases/tag/v22">Node v22 release</Link></li>
               <li>PoW component: FPGA resistance feature: <Link to="https://github.com/3Dpass/3DP/releases/tag/v24">Node v24 release</Link></li>
               <li>Validator set (stability & security): additional checks on validators joining (done: <Link to="https://github.com/3Dpass/3DP/releases/tag/v28">Node v28 release</Link>)</li>
-              <li>Validator set (stability & security): check if the validator is providing judgements during the session (<i> is being tested</i>)</li>
+              <li>Validator set (stability & security): check if the validator is providing judgements during the session (<i> shifted to 2025</i>)</li>
               <li>Validator set (stability & security): the validator performance test on 3DPRC-2 (done: covered by <Link to="https://github.com/3Dpass/3DP/releases/tag/v24">Node v24 release</Link>)</li>
               <li>Forkless upgrade: online upgrade public verification procedure: <i>Done</i></li>
             </ul>
@@ -407,13 +407,13 @@ ETH SIGNATURE
               Q2 - Assets marketplace & cross-chain
             </div>
             <ul className="page-content-text">
-              <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> in the process</i>)</li>
-              <li>DEX: Cross-chain bridge over to Ethereum (<i> is being estimated</i>)</li>
+              <li>Core: EVM (Ethereum Virtual Machine) emulator trait (<i> shifted t0 2025</i>)</li>
+              <li>DEX: Cross-chain bridge over to Ethereum (<i> shifted to 2025</i>)</li>
               <li>Mobile wallet: Embedded DEX UI integration (<i><Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.16.0">Released v2.16.0</Link></i>)</li>
-              <li>Getting USDT bridged down over to the LoT eco-system (<i>research is done, estimating</i>)</li>
-              <li>Web wallet: Asset/NFT marketplace UI implementation (<i> in the process</i>)</li>
-              <li>Administrative: Governance server and UI</li>
-              <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
+              <li>Getting USDT bridged down over to the LoT eco-system (<i>shifted to 2025</i>)</li>
+              <li>Web wallet: Asset/NFT marketplace UI implementation (<i> shifted to 2025</i>)</li>
+              <li>Administrative: Governance server and UI (<i> shifted to 2025</i>)</li>
+              <li>Web wallet: 3DPRC-2 UI integration (<i> shifted to 2025</i>)</li>
               <li>Promotion target: Assets issuance and the embedded DEX usage (<Link to="/community#use-cases-ideas">"Get your ideas tokenized and earn!"</Link> - a <i>play-to-earn</i> game for everyone)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
@@ -421,10 +421,10 @@ ETH SIGNATURE
             </div>
             <ul className="page-content-text">
               <li>Utilization: A business case implementation (<Link to="/community#use-cases-lego">LEGO models marketplace</Link>, check out <Link to="https://swap.3dpscan.io/pools">Liquidity Pools</Link> on DEX)</li>
-              <li>Mobile wallet: Atomic swap integration (<i> in the process</i>)</li>
+              <li>Mobile wallet: Atomic swap integration (<i> shifted to 2025</i>)</li>
               <li>Mobile wallet: tokenized 3D models preview ( <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"><i>Released v2.17.0</i></Link>)</li>
-              <li>Utilization: AI assistant (<i>in the process</i>)</li>
-              <li>Decentralization: Taking out Sudo (<i> is being estimated</i>)</li>
+              <li>Utilization: AI assistant (<i>shifted to 2025</i>)</li>
+              <li>Decentralization: Taking out Sudo (<i> shifted to 2025</i>)</li>
               <ul className="page-content-text">
                 <li>Treasury & Bounties: Security limits implementation</li>
                 <li>Council: Security audit and limits implementation</li>
@@ -435,23 +435,98 @@ ETH SIGNATURE
                 <li>Sudo taking out procedure: testing on testnet</li>
                 <li>Sudo taking out procedure: execution</li>
               </ul>
-              <li>Public commons: Start importing and processing (<i>in the prrocess</i>)</li>
+              <li>Public commons: Start importing and processing (<i>shiftted to 2025</i>)</li>
               <li>Promotion target: Assets issuance and the embedded DEX usage</li>
             </ul>
             <div className="page-content-text road-map-text ">
               Q4 - New recognition algorithm
             </div>
               <ul className="page-content-text">
-                <li>3DPass Foundation: forming up</li>
-                <li>Recognition toolkit: additional recognition algorithm implementation</li>
+                <li>3DPass Foundation: forming up (<i>shiftted to 2025</i>)</li>
+                <li>Recognition toolkit: additional recognition algorithm implementation (will be released within the "AI human impression feature")</li>
                 <li>Promotion target: dApps developers</li>
               </ul>
             <div className="page-content-subtitle" id="roadmap-2025">2025 (Forming up)</div>
             <div className="page-content-text road-map-text mb0">
-              Q1 - Release (stability & security)
+              Q1 - Release (EVM & cross-chain)
+            </div>
+            <ul className="page-content-text">
+            <li>Core: EVM emulator trait (<i>The <Link to="https://github.com/polkadot-evm/frontier">"Frontier"</Link> is being integrated, lead by Michael Co and PaulS</i>):</li>
+            <ul className="page-content-text">
+              <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime</li>
+              <li>Testnet version & Public testings</li>
+              <li>Mainnet release</li>
+              <li>Docs and guidelines</li>
+            </ul>
+            <li>DEX: Cross-chain bridge over to Ethereum:</li>
+            <ul className="page-content-text">
+              <li>Testing different EVM-based bridges' smart-contracts on testnet</li>
+              <li>Launching the contract and infrastructure</li>
+              <li>Runtime internal integraton between EVM and 3DPRC-2 (<i>poScan</i>, <i>poscanAssets</i>, <i>poscanAssetsConversion</i>) methods</li>
+              <li>Testing "wrapped" USDT within the LoT eco-system</li>
+              <li>Docs and guidelines</li>
+            </ul>
+            <li>Web wallet: Governance UI (<i> in the process: <Link to="https://wallet.3dpass.org/governance/bounties">Gov UI</Link></i>)</li>
+            <ul className="page-content-text">
+               <li>Bounties & Treasury</li>
+               <li>Council (members, motions)</li>
+               <li>Democracy & Referenda</li>
+              </ul>
+            <li>Blockchain explorer: Assets support (<i> is being estimated, lead by WlinkNet</i>)</li>
+              <ul className="page-content-text">
+               <li>Assets transfers</li>
+               <li>Assets metadata</li>
+               <li>Asset-to-Object linking</li>
+              </ul>
+              <li>Public commons: Start importing and processing (<i>in the process, lead by A_Mo</i>)</li>
+              <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
+            </ul>
+            <div className="page-content-text road-map-text mb0">
+              Q2 - AI human impression feature & 2D recognition
+            </div>
+            <ul className="page-content-text">
+             <li>3DPRC-2: (<i>in the process, lead by PaulS and Mikhail</i>):</li>
+             <ul className="page-content-text">
+               <li><Link to="/assets#general-human-perception-error">AI human impressions</Link> feature</li>
+               <li>2D recognition (based on machine vision)</li>
+              </ul>
+             <li>Mobile wallet: Atomic swap integration (<i> in the process, lead by L3odr0id</i>)</li>
+             <li>Mobile wallet: all Substrate chains support (<i> lead by L3odr0id</i>)</li>
+             <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
+             <li>Web wallet: all Substrate chains support</li>
+             <li>Launchpad: Web UI</li>
+             <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
+            </ul>
+            <div className="page-content-text road-map-text mb0">
+              Q3 - Decentralization
+            </div>
+            <ul className="page-content-text">
+            <li>3DPRC-2: Assets management</li>
+            <li>Decentralization: Taking out Sudo (<i> is being estimated, lead by PaulS</i>)</li>
+              <ul className="page-content-text">
+                <li>Treasury & Bounties: Security limits implementation</li>
+                <li>Council: Security audit and limits implementation</li>
+                <li>Techincal Committee: Security audit and procedures implementation</li>
+                <li>Techincal Committee: Community engagement public verification, github commits for the last quarter must be inspected</li>
+                <li>Sudo taking out procedure: formalization</li>
+                <li>Sudo taking out procedure: testing on testnet</li>
+                <li>Sudo taking out procedure: execution</li>
+              </ul>
+              <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
+            </ul>
+            <div className="page-content-text road-map-text mb0">
+              Q4 - Cases & Integrations
+            </div>
+              <ul className="page-content-text">
+              <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
+              <li>Core: migration to the newest Substrate version</li>
+              </ul>
+            <div className="page-content-subtitle" id="roadmap-2026">2026 (Discussion)</div>
+            <div className="page-content-text road-map-text mb0">
+              Q1 - Cases & Integrations
             </div>
             <div className="page-content-text road-map-text mb0">
-              Q2 - Launchpad release
+              Q2 - Cases & Integrations
             </div>
             <div className="page-content-text road-map-text mb0">
               Q3 - Cases & Integrations
