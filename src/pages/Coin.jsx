@@ -453,8 +453,8 @@ ETH SIGNATURE
             <ul className="page-content-text">
             <li>Core: EVM emulator trait (<i>The <Link to="https://github.com/polkadot-evm/frontier">"Frontier"</Link> is being integrated, lead by Michael Co and PaulS</i>):</li>
             <ul className="page-content-text">
-              <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime</li>
-              <li>Testnet version & Public testings</li>
+              <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime (<Link to="https://github.com/3Dpass/3DP/tree/test"><i>Done</i></Link>)</li>
+              <li>Testnet version & Public testings (<i>In the process</i>)</li>
               <li>Mainnet release</li>
               <li>Docs and guidelines</li>
             </ul>
@@ -466,17 +466,21 @@ ETH SIGNATURE
               <li>Testing "wrapped" USDT within the LoT eco-system</li>
               <li>Docs and guidelines</li>
             </ul>
-            <li>Web wallet: Governance UI (<i> in the process: <Link to="https://wallet.3dpass.org/governance/bounties">Gov UI</Link></i>)</li>
+            <li>Web wallet:</li>
             <ul className="page-content-text">
-               <li>Bounties & Treasury</li>
-               <li>Council (members, motions)</li>
-               <li>Democracy & Referenda</li>
+               <li>Governance UI: Bounties (<Link to="https://wallet.3dpass.org/governance/bounties"><i>Done</i></Link>)</li>
+               <li>Governance UI: Treasury</li>
+               <li>Governance UI: Council (members, motions) (<Link to="https://wallet.3dpass.org/governance/members"><i>In the process</i></Link>)</li>
+               <li>Governance UI: Democracy & Referenda</li>
+               <li>Assets: Asstet balnces (<Link to="https://wallet.3dpass.org"><i>Done</i></Link>)</li>
+               <li>Assets: Asstet transfers (<i>in the process</i>)</li>
               </ul>
-            <li>Blockchain explorer: Assets support (<i> is being estimated, lead by WlinkNet</i>)</li>
+            <li>Blockchain explorer: Assets support (<i>lead by WlinkNet</i>)</li>
               <ul className="page-content-text">
-               <li>Assets transfers</li>
-               <li>Assets metadata</li>
-               <li>Asset-to-Object linking</li>
+               <li>Assets transfers (<Link to="https://3dpscan.io/account/d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f"><i>Done</i></Link> )</li>
+               <li>Assets metadata (<Link to="https://3dpscan.io/assets"><i>Done</i></Link> )</li>
+               <li>Asset-to-Object linking (<Link to="https://3dpscan.io/assets"><i>Done</i></Link> )</li>
+               <li>Bounties ( <Link to="https://3dpscan.io/bountie"><i>Done</i></Link> )</li>
               </ul>
               <li>Public commons: Start importing and processing (<i>in the process, lead by A_Mo</i>)</li>
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>

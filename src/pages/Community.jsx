@@ -509,8 +509,7 @@ const Community = () => {
                <Link to="https://3dpscan.io/object/16">A funny cow</Link>.
               </li>
               <li>
-               Asset: share-asset: <strong>COW</strong>; decimals: 2, 
-               Max supply: 1000000.00 COW; Total supply: 1000000.00 COW.
+               AssetId: <strong>#16</strong>; <Link to="https://3dpscan.io/assetdetails/16"><strong>COW</strong></Link>;
               </li>
               <li>
                Listed on DEX: Swap the cow shares: <Link to="https://swap.3dpscan.io/">P3D/COW</Link>; {" "}
@@ -554,8 +553,7 @@ const Community = () => {
                <Link to="https://3dpscan.io/object/21">Lego brick 2x2</Link>.
               </li>
               <li>
-               Asset: share-asset: <strong>L2X2</strong>; decimals: 2, 
-               Max supply: 1000000.00 L2X2; Total supply: 1000000.00 L2X2.
+               AssetId: <strong>#21</strong>; <Link to="https://3dpscan.io/assetdetails/21"><strong>L2X2</strong></Link>;
               </li>
               <li>
                Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/L2X2</Link>; {" "}
@@ -664,8 +662,7 @@ const Community = () => {
                <Link to="https://3dpscan.io/object/27">Ring 3D</Link>.
               </li>
               <li>
-               Asset: share-asset: <strong>RING</strong>; decimals: 2, 
-               Max supply: 1000000.00 RING; Total supply: 1000000.00 RING.
+               AssetId: <strong>#27</strong>; <Link to="https://3dpscan.io/assetdetails/27"><strong>RING</strong></Link>;
               </li>
               <li>
                Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/RING</Link>; {" "}
@@ -782,8 +779,7 @@ const Community = () => {
                <Link to="https://3dpscan.io/object/29">3D crystal</Link>.
               </li>
               <li>
-               Asset: weight-asset: <strong>DCRT</strong>; decimals: 7, 
-               Max supply: 2.2387666 DCRT; Total supply: 2.2387666 DCRT.
+               AssetId: <strong>#29</strong>; <Link to="https://3dpscan.io/assetdetails/29"><strong>DCRT</strong></Link>;
               </li>
               <li>
                Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/DCRT</Link>; {" "}
@@ -807,8 +803,7 @@ const Community = () => {
                <Link to="https://3dpscan.io/object/27">3D diamond cut</Link>.
               </li>
               <li>
-               Asset: share-asset: <strong>DIA</strong>; decimals: 6, 
-               Max supply: 10.000000 DIA; Total supply: 10.000000 DIA.
+               AssetId: <strong>#27</strong>; <Link to="https://3dpscan.io/assetdetails/27"><strong>DIA</strong></Link>;
               </li>
               <li>
                Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/DIA</Link>; {" "}

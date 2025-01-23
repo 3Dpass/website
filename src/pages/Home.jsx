@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "3DPRC-2 tokens are supported on the blockchain explorer 3dpscan.io!",
+      description:
+        "The blockchain explorer 3dpscan.io has implemented full 3DPRC-2 tokens support: transfers, metadata, backed objects!",
+      date: "Jan 23, 2025",
+      link: "https://3dpscan.io/assets"
+    },
+    {
       title: "P3D is now supported on Talisman multi-chain wallet!",
       description:
         "The Talisman wallet developers have announced P3D transfers support since the v2.3.2!",
@@ -42,13 +49,6 @@ const Home = () => {
         "The mobile wallet v2.17.3 enhances the tokenized objects preview in connection with bounded assets!",
       date: "Nov 24, 2024",
       link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.3"
-    },
-    {
-      title: "The Node v28 has been released!",
-      description:
-        "The Node v28 has been released online providing the self joinning option for validators! The user object weight limit has been expanded to 1Mb for 3DPRC-2 standard!",
-      date: "Oct 30, 2024",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v28"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
