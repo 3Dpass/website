@@ -472,8 +472,8 @@ ETH SIGNATURE
                <li>Governance UI: Treasury</li>
                <li>Governance UI: Council (members, motions) (<Link to="https://wallet.3dpass.org/governance/members"><i>In the process</i></Link>)</li>
                <li>Governance UI: Democracy & Referenda</li>
-               <li>Assets: Asstet balnces (<Link to="https://wallet.3dpass.org"><i>Done</i></Link>)</li>
-               <li>Assets: Asstet transfers (<i>in the process</i>)</li>
+               <li>Assets: Asstet balances (<Link to="https://wallet.3dpass.org"><i>Done</i></Link>)</li>
+               <li>Assets: Asstet transfers (<Link to="https://wallet.3dpass.org"><i>Done</i></Link>)</li>
               </ul>
             <li>Blockchain explorer: Assets support (<i>lead by WlinkNet</i>)</li>
               <ul className="page-content-text">

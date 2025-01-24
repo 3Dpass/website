@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "3DPRC-2 tokens are supported on the web wallet!",
+      description:
+        "3DPRC-2 tokens transfers feature has been implemented into the web wallet!",
+      date: "Jan 24, 2025",
+      link: "https://wallet.3dpass.org"
+    },
+    {
       title: "3DPRC-2 tokens are supported on the blockchain explorer 3dpscan.io!",
       description:
         "The blockchain explorer 3dpscan.io has implemented full 3DPRC-2 tokens support: transfers, metadata, backed objects!",
@@ -42,13 +49,6 @@ const Home = () => {
         "The Talisman wallet developers have announced P3D transfers support since the v2.3.2!",
       date: "Jan 09, 2025",
       link: "https://talisman.xyz"
-    },
-    {
-      title: "The mobile wallet v2.17.3!",
-      description:
-        "The mobile wallet v2.17.3 enhances the tokenized objects preview in connection with bounded assets!",
-      date: "Nov 24, 2024",
-      link: "https://github.com/3Dpass/threedpass/releases/tag/v2.17.3"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);

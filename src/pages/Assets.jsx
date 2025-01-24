@@ -956,28 +956,42 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
         <div className="page-content-block" id="transfers">
           <div className="page-content-inner">
             <div className="page-content-title">Asset transfers</div>
-            <div className="page-content-text">
-                Irrespective to whether there is a non fungible asset or share tokens to transfer, the same method of the poscanAssets module is supposed to be used.
-                {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#9-extrinsic-poscanassetstransfer">poscanAssets pallet API</Link>)
-                </div>
                 <div className="page-content-text">
               <strong>Using MOBILE WALLET:</strong>
             </div>
             <a className="message-text" href="/mobile-wallet#download">
             <div className="page-lead-content">
               Mobile Wallet
-                <div className="page-lead-button">Download</div>
+            <div className="page-lead-button">Download</div>
             </div>
             </a>
             <div className="page-content-text">
-              <strong>Using WEB WALLET or API:</strong>
+              <strong>Using the WEB WALLET:</strong>
             </div>
-                <img
+            <ul className="page-content-text">
+              <li>
+                Open the <Link to="https://wallet.3dpass.org">web3 wallet</Link>
+              </li>
+              <li>
+                Follow the <Link to="/mainnet#wallet">guidelines</Link> to set up the web browser extention and inject your P3D account. 
+              </li>
+              <li>
+                Transfer tokens (<i>some P3D is required to cover the transaction fee</i>): 
+              </li>
+            </ul>
+            <img
               className="page-img"
-              src="/images/transfer_assets.png"
+              src="/images/send_cow.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
+            <div className="page-content-text">
+              <strong>Using `poscanAssets` module API:</strong>
+            </div>
+            <div className="page-content-text">
+                Irrespective to whether there is a regular non fungible asset or share token to transfer, the 'poscanAssets.Transfer' method is supposed to be used.
+                {" "} Explore the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#9-extrinsic-poscanassetstransfer">poscanAssets API</Link>.
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="dex">
