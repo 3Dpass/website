@@ -454,7 +454,7 @@ ETH SIGNATURE
             <li>Core: EVM emulator trait (<i>The <Link to="https://github.com/polkadot-evm/frontier">"Frontier"</Link> is being integrated, lead by Michael Co and PaulS</i>):</li>
             <ul className="page-content-text">
               <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime (<Link to="https://github.com/3Dpass/3DP/tree/test"><i>Done</i></Link>)</li>
-              <li>Testnet version & Public testings (<i>In the process</i>)</li>
+              <li>Testnet version  (<i>Done</i>) & Public testings (<i>In the process</i>)</li>
               <li>Mainnet release</li>
               <li>Docs and guidelines</li>
             </ul>

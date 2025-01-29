@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "The EVM emulator feature is launched on testnet!",
+      description:
+        "The EVM compatibility layer has been integrated into the Node, which is now available for public review and testing over the `test` branch!",
+      date: "Jan 28, 2025",
+      link: "https://github.com/3Dpass/3DP/tree/test"
+    },
+    {
       title: "3DPRC-2 tokens are supported on the web wallet!",
       description:
         "3DPRC-2 tokens transfers feature has been implemented into the web wallet!",
@@ -42,13 +49,6 @@ const Home = () => {
         "The blockchain explorer 3dpscan.io has implemented full 3DPRC-2 tokens support: transfers, metadata, backed objects!",
       date: "Jan 23, 2025",
       link: "https://3dpscan.io/assets"
-    },
-    {
-      title: "P3D is now supported on Talisman multi-chain wallet!",
-      description:
-        "The Talisman wallet developers have announced P3D transfers support since the v2.3.2!",
-      date: "Jan 09, 2025",
-      link: "https://talisman.xyz"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
