@@ -1029,6 +1029,12 @@ const Community = () => {
             <div className="page-content-text">
               Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
             </div>
+            <a className="message-text" href="https://wallet.3dpass.org/governance/">
+            <div className="page-lead-content">
+              Governance online
+                <div className="page-lead-button">follow</div>
+            </div>
+            </a>
           </div>
         </div>
         <div className="page-content-block" id="representatives">
