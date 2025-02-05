@@ -213,9 +213,9 @@ const Home = () => {
       <div className="home-one-content inner-content">
         <div className="home-partners-title">Exchange</div>
         <div className="partners-icons-holder">
-          <a href="https://xeggex.com/market/P3D_USDT">
-            <div className="partners-icon xegex"></div>
-          </a>
+          {/*<a href="https://xeggex.com/market/P3D_USDT">
+            <div className="partners-icon xegex"></div>/>
+          </a>*/}
           <a href="https://www.mexc.com/exchange/P3D_USDT">
             <div className="partners-icon mexc"></div>
           </a>
