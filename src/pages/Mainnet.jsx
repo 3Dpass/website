@@ -327,13 +327,13 @@ const Mainnet = () => {
             <div className="one-subheader">Mobile Wallet</div>
           </a>
           <a href="https://swap.3dpscan.io">
-            <div className="one-subheader">3DPass Swap DEX</div>
+            <div className="one-subheader">Tokens Swap (DEX) UI</div>
           </a>
           <a href="https://3dpscan.io">
-            <div className="one-subheader">Block Explorer</div>
+            <div className="one-subheader">Blockchain Explorer</div>
           </a>
           <a href="https://explorer-api.3dpscan.io/graphql/">
-            <div className="one-subheader">Blockchain graphgl API</div>
+            <div className="one-subheader">Blockchain data graphgl API</div>
           </a>
           <a href="https://discord.gg/u24WkXcwug">
             <div className="one-subheader">Discord</div>

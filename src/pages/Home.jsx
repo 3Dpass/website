@@ -211,20 +211,6 @@ const Home = () => {
         </div>
       </div>
       <div className="home-one-content inner-content">
-        <div className="home-partners-title">Exchange</div>
-        <div className="partners-icons-holder">
-          {/*<a href="https://xeggex.com/market/P3D_USDT">
-            <div className="partners-icon xegex"></div>/>
-          </a>*/}
-          <a href="https://www.mexc.com/exchange/P3D_USDT">
-            <div className="partners-icon mexc"></div>
-          </a>
-          <a href="https://www.coinex.com/en/exchange/p3d-usdt">
-            <div className="partners-icon coinex"></div>
-          </a>
-        </div>
-      </div>
-      <div className="home-one-content inner-content">
         <div className="home-partners-title">Marketcap</div>
         <div className="partners-icons-holder">
           <div className="partners-icons-holder">

@@ -9,20 +9,20 @@ const Footer = () => {
       <div className="inner-content">
         <div className="footer-left-content">
           <div className="footer-logo"></div>
-          <div className="footer-input-title">Subscribe to our newsletter</div>
+          {/*<div className="footer-input-title">Subscribe to our newsletter</div>
           <div className="footer-input-subtitle">
             Get latest news and updates on 3DPass
           </div>
           <div className="footer-input-holder">
             <MainInput type="email" placeholder="Enter your email address" />
           </div>
-          <Button type="button" label="Subscribe" />
+          <Button type="button" label="Subscribe" />*/}
           <div className="icon-social-holder">
             <a href="https://twitter.com/3Dpass_genesis"><div className="social-icon twitter"></div></a>
             <a href="https://github.com/3dpass"><div className="social-icon github"></div></a>
             <a href="https://discord.gg/u24WkXcwug"><div className="social-icon discord"></div></a>
             <a href="https://t.me/pass3d"><div className="social-icon telegram"></div></a>
-            <a href="https://instagram.com/3dpass_org"><div className="social-icon instagram"></div></a>
+            {/*<a href="https://instagram.com/3dpass_org"><div className="social-icon instagram"></div></a>*/}
           </div>
         </div>
         <div className="footer-right-content">

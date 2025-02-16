@@ -1065,14 +1065,8 @@ const Community = () => {
             />
             <UserCard name="L3odr0id" 
               title="Mobile Developer" 
-              description="3+ years experience"
+              description="contributor"
               image="/images/anon.jpg"
-            />
-            <UserCard
-              name="Andrew Coleman"
-              title="Partner relations"
-              description="USA"
-              image="/images/andrew_coleman.png"
             />
             <UserCard
               name="A Mo"
