@@ -454,7 +454,11 @@ ETH SIGNATURE
             <li>Core: EVM emulator trait (<i>The <Link to="https://github.com/polkadot-evm/frontier">"Frontier"</Link> is being integrated, lead by Michael Co and PaulS</i>):</li>
             <ul className="page-content-text">
               <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime (<Link to="https://github.com/3Dpass/3DP/tree/test"><i>Done</i></Link>)</li>
-              <li>Testnet version  (<i>Done</i>) & Public testings (<i>In the process</i>)</li>
+              <li>Testnet version deployment (<Link to="https://telemetry.3dpscan.io/#list/0xbec4a0ea6abbb20189179b4f6a23793cc6a7f1f88d94258d934ec25c5adbb15d"><i>Done</i></Link>) </li>
+              <li>The consensus aspect testing/improvements ( <Link to="https://github.com/3Dpass/3DP/commit/ee16179837619ee0ed467f7efa694603cf0fc298"><i>Done</i></Link>)</li>
+              <li>Transactions and runtime modules testing/tuning (<i>in the process</i>)</li>
+              <li>ERC-20 smart contracts testing (<i>in the process</i>)</li>
+              <li>Preparing the migration version</li>
               <li>Mainnet release</li>
               <li>Docs and guidelines</li>
             </ul>
@@ -462,7 +466,6 @@ ETH SIGNATURE
             <ul className="page-content-text">
               <li>Testing different EVM-based bridges' smart-contracts on testnet</li>
               <li>Launching the contract and infrastructure</li>
-              <li>Runtime internal integraton between EVM and 3DPRC-2 (<i>poScan</i>, <i>poscanAssets</i>, <i>poscanAssetsConversion</i>) methods</li>
               <li>Testing "wrapped" USDT within the LoT eco-system</li>
               <li>Docs and guidelines</li>
             </ul>
