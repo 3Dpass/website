@@ -456,8 +456,10 @@ ETH SIGNATURE
               <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime (<Link to="https://github.com/3Dpass/3DP/tree/test"><i>Done</i></Link>)</li>
               <li>Testnet version deployment (<Link to="https://telemetry.3dpscan.io/#list/0xbec4a0ea6abbb20189179b4f6a23793cc6a7f1f88d94258d934ec25c5adbb15d"><i>Done</i></Link>) </li>
               <li>The consensus aspect testing/improvements ( <Link to="https://github.com/3Dpass/3DP/commit/ee16179837619ee0ed467f7efa694603cf0fc298"><i>Done</i></Link>)</li>
-              <li>Transactions and runtime modules testing/tuning (<i>in the process</i>)</li>
-              <li>ERC-20 smart contracts testing (<i>in the process</i>)</li>
+              <li>Configuring EVM with precompiles and cross-platform integration (<i>In the process</i>)</li>
+              <li>ERC-20 smart contracts testing (<i>Done</i>)</li>
+              <li>Node - Metamask wallet interacton testing (<i>Done</i>)</li>
+              <li>P3Dt native - P3Dt EVM ERC-20 (mapped) transactions testing (<i>Done</i>)</li>
               <li>Preparing the migration version</li>
               <li>Mainnet release</li>
               <li>Docs and guidelines</li>

@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "EVM cross-platform transactions are tested!",
+      description:
+        "P3Dt native - P3Dt ERC20 (mapped) cross-platform transfers are proved successful on testnet!",
+      date: "Mar 05, 2025",
+      link: "https://github.com/3Dpass/3DP/tree/test"
+    },
+    {
       title: "The EVM emulator feature is launched on testnet!",
       description:
         "The EVM compatibility layer has been integrated into the Node, which is now available for public review and testing over the `test` branch!",
@@ -42,13 +49,6 @@ const Home = () => {
         "3DPRC-2 tokens transfers feature has been implemented into the web wallet!",
       date: "Jan 24, 2025",
       link: "https://wallet.3dpass.org"
-    },
-    {
-      title: "3DPRC-2 tokens are supported on the blockchain explorer 3dpscan.io!",
-      description:
-        "The blockchain explorer 3dpscan.io has implemented full 3DPRC-2 tokens support: transfers, metadata, backed objects!",
-      date: "Jan 23, 2025",
-      link: "https://3dpscan.io/assets"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
