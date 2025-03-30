@@ -472,11 +472,15 @@ const MobileWallet = () => {
             <div className="page-content-text">
               "The Ledger of Things" mobile light client is designed to help you
               enjoy P3D/assets transfers safely and have your balanses on the
-              smartphone. Connect the wallet to any WSS RPC/API endpoint
+              smartphone. Connect the wallet to any WSS RPC API endpoint
               available to fetch some information or make a transfer.
             </div>
             <div className="page-content-text">
-              Mainnet public RPC/API endpoint is: <strong>wss://rpc.3dpscan.io</strong>
+              Mainnet public RPC API endpoints are: 
+              <ul className="page-content-text">
+                <li>wss://rpc.3dpass.org</li>
+                <li>wss://rpc.3dpscan.io - <i>via the 3dpscan.io blockchain explorer</i></li>
+              </ul>
             </div>
             <img
               className="page-img"

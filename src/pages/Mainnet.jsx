@@ -1612,9 +1612,10 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">Mainnet API Endpoints</div>
+            <div className="page-content-text">Mainnet API endpoints</div>
             <ul className="page-content-text">
-              <li>wss://rpc.3dpscan.io</li>
+              <li>wss://rpc.3dpass.org</li>
+              <li>wss://rpc.3dpscan.io - via the 3dpscan.io blockchain explorer</li>
               <li>ws://127.0.0.1:9944 - local Node</li>
             </ul>
             <img

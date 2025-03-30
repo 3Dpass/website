@@ -456,19 +456,20 @@ ETH SIGNATURE
               <li>Adaptiing Frontier's pallets and EVM RPC methods to work within the LoT runtime (<Link to="https://github.com/3Dpass/3DP/tree/test"><i>Done</i></Link>)</li>
               <li>Testnet version deployment (<Link to="https://telemetry.3dpscan.io/#list/0xbec4a0ea6abbb20189179b4f6a23793cc6a7f1f88d94258d934ec25c5adbb15d"><i>Done</i></Link>) </li>
               <li>The consensus aspect testing/improvements ( <Link to="https://github.com/3Dpass/3DP/commit/ee16179837619ee0ed467f7efa694603cf0fc298"><i>Done</i></Link>)</li>
-              <li>Configuring EVM with precompiles and cross-platform integration (<i>In the process</i>)</li>
-              <li>ERC-20 smart contracts testing (<i>Done</i>)</li>
-              <li>Node - Metamask wallet interacton testing (<i>Done</i>)</li>
-              <li>P3Dt native - P3Dt EVM ERC-20 (mapped) transactions testing (<i>Done</i>)</li>
-              <li>Preparing the migration version</li>
-              <li>Mainnet release</li>
-              <li>Docs and guidelines</li>
+              <li>Configuring EVM with essential precompiles (<Link to="https://github.com/3Dpass/3DP/tree/test/pallets/evm/precompile"><i>Done</i></Link>)</li>
+              <li>Environment: Node - Remix - Metamask interacton test (<i>Done</i>)</li>
+              <li>P3Dt native (balances pallet) - EVM P3D ERC-20 (precompile) interaction implementation (<Link to="https://github.com/3Dpass/3DP/tree/test/precompiles/balances-erc20"><i>Done</i></Link>)</li>
+              <li>Solidity smart contracts deployment test (<i>Done</i>)</li>
+              <li>Local assets: poscanAssets module - EVM assets-erc20 (precompile) integration (<Link to="https://github.com/3Dpass/3DP/tree/test/precompiles/assets-erc20"><i>Done</i></Link>)</li>
+              <li>Docs and guidelines (<i>In the process</i>)</li>
             </ul>
             <li>DEX: Cross-chain bridge over to Ethereum:</li>
             <ul className="page-content-text">
-              <li>Testing different EVM-based bridges' smart-contracts on testnet</li>
-              <li>Launching the contract and infrastructure</li>
-              <li>Testing "wrapped" USDT within the LoT eco-system</li>
+              <li>Testing different EVM-based bridges' smart-contracts on testnet (<i>In the process</i>)</li>
+              <li>Launching the Counterstake bridge contracts and its infrastructure (<i>In the process</i>)</li>
+              <li>Testing "wrapped" USDT within the LoT eco-system (<i>In the process</i>)</li>
+              <li>Preparing the migration version (<i>In the process</i>)</li>
+              <li>Mainnet release</li>
               <li>Docs and guidelines</li>
             </ul>
             <li>Web wallet:</li>
@@ -486,6 +487,7 @@ ETH SIGNATURE
                <li>Assets metadata (<Link to="https://3dpscan.io/assets"><i>Done</i></Link> )</li>
                <li>Asset-to-Object linking (<Link to="https://3dpscan.io/assets"><i>Done</i></Link> )</li>
                <li>Bounties ( <Link to="https://3dpscan.io/bountie"><i>Done</i></Link> )</li>
+               <li>Codes revierw ( <Link to="https://github.com/3Dpass/3dpscan"><i>Done</i></Link> )</li>
               </ul>
               <li>Public commons: Start importing and processing (<i>in the process, lead by A_Mo</i>)</li>
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
@@ -506,6 +508,7 @@ ETH SIGNATURE
              <li>Launchpad: Web UI</li>
              <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
             </ul>
+            
             <div className="page-content-text road-map-text mb0">
               Q3 - Decentralization
             </div>

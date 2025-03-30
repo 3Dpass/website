@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "Counterstake bridge smart contracts are being tested on testnet!",
+      description:
+        "The assetss-erc20 interface and precompile have been deployed on testnet, which allows for wrapped local assets to be accessible through the EVM.",
+      date: "Mar 29, 2025",
+      link: "https://github.com/3Dpass/3DP/tree/test"
+    },
+    {
       title: "EVM cross-platform transactions are tested!",
       description:
         "P3Dt native - P3Dt ERC20 (mapped) cross-platform transfers are proved successful on testnet!",
@@ -42,13 +49,6 @@ const Home = () => {
         "The EVM compatibility layer has been integrated into the Node, which is now available for public review and testing over the `test` branch!",
       date: "Jan 28, 2025",
       link: "https://github.com/3Dpass/3DP/tree/test"
-    },
-    {
-      title: "3DPRC-2 tokens are supported on the web wallet!",
-      description:
-        "3DPRC-2 tokens transfers feature has been implemented into the web wallet!",
-      date: "Jan 24, 2025",
-      link: "https://wallet.3dpass.org"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
