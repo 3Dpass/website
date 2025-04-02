@@ -415,7 +415,7 @@ const Assets = () => {
                liquidity in tokens. Once liquidity is provided, the asset 
                becomes available for swapping. This entire process can be accessed 
                through the <Link to="/mobile-wallet#dex">Mobile Wallet</Link>, 
-               the <Link to="https://swap.3dpscan.io">web3 DEX UI</Link>, or 
+               the <Link to="https://3dpswap.online">web3 DEX UI</Link>, or 
                the <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">DEX RPC API</Link>.
               </li>
               <br />
@@ -450,7 +450,7 @@ const Assets = () => {
                <Link to="/assets#smart-contracts" className="link-title">Smart contract module</Link> using <Link to="https://use.ink/">ink</Link> embedded domain specific language.
                </li>
                <li>
-               <Link to="https://swap.3dpscan.io" className="link-title">DEX (Decentralized Exchange)</Link>{" "}
+               <Link to="https://3dpswap.online" className="link-title">DEX (Decentralized Exchange)</Link>{" "}
                - embedded DEX module, based on Uniswap v2 rules, to trade the assets without a middleman. 
                The implementaion of the DEX is a custom version of the <i>`assetConversion`</i> trait available 
                through its <Link to="https://github.com/3Dpass/3DP/wiki/DEX-module-API">API</Link>. 
@@ -781,7 +781,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <strong>Using WEB WALLET or API:</strong>
             </div>
             <div className="page-content-text">
-              1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka wallet</Link> 
+              1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> 
               {" "} (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>)
               and create a fungible token tethered to the object. Thre MaxSupply value defined by the object property cannot be exceeded.
             </div>
@@ -889,7 +889,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <strong>Using WEB WALLET or API:</strong>
             </div>
             <div className="page-content-text">
-               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka wallet</Link> {" "}
+               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> {" "}
                and create your asset with `create`. (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>){" "}
                Make sure the <i>`objDetails`</i> option is skipped: 
             </div>
@@ -997,7 +997,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
         <div className="page-content-block" id="dex">
           <div className="page-content-inner">
             <div className="page-content-title">DEX (Decentralized Exchange)</div>
-            <Link className="message-text" to="https://swap.3dpscan.io">
+            <Link className="message-text" to="https://3dpswap.online">
             <div className="page-lead-content">
                  Swap via the Web3 UI
                 <div className="page-lead-button">Swap</div>
@@ -1017,7 +1017,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
            </div>
            <ul className="page-content-text">
             <li>
-            Either can you leverage the <Link to="https://swap.3dpscan.io">WEB3 DEX UI</Link> or 
+            Either can you leverage the <Link to="https://3dpswap.online">WEB3 DEX UI</Link> or 
             the <Link to="/mobile-wallet#dex">Mobile Wallet</Link> to swap tokens. You can also become 
             Liqidity Provoder and earn rewards in tokens.
             </li>

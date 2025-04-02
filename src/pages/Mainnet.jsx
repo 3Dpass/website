@@ -321,19 +321,16 @@ const Mainnet = () => {
             <div className="one-subheader">Mainnet Telemetry</div>
           </a>
           <a href="https://wallet.3dpass.org/">
-            <div className="one-subheader">Web Wallet</div>
+            <div className="one-subheader">Web3 Wallet</div>
           </a>
           <a href="/mobile-wallet">
             <div className="one-subheader">Mobile Wallet</div>
           </a>
-          <a href="https://swap.3dpscan.io">
-            <div className="one-subheader">Tokens Swap (DEX) UI</div>
+          <a href="https://3dpswap.online">
+            <div className="one-subheader">3dpswap DEX UI</div>
           </a>
           <a href="https://3dpscan.io">
             <div className="one-subheader">Blockchain Explorer</div>
-          </a>
-          <a href="https://explorer-api.3dpscan.io/graphql/">
-            <div className="one-subheader">Blockchain data graphgl API</div>
           </a>
           <a href="https://discord.gg/u24WkXcwug">
             <div className="one-subheader">Discord</div>
@@ -348,7 +345,7 @@ const Mainnet = () => {
             <div className="one-subheader">GitHub</div>
           </a>
           <a href="https://www.3dpassmining.info">
-            <div className="one-subheader">Mining Dash Board</div>
+            <div className="one-subheader">Mining Leader Board</div>
           </a>
           <a href="/assets">
             <div className="one-subheader">Assets</div>
@@ -1596,15 +1593,22 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
         <div className="page-content-block" id="wallet">
           <div className="page-content-inner">
             <div className="page-content-title">
-              How to use 3Dpass web wallet
+              How to use 3Dpass Web3 wallet
             </div>
             <div className="page-content-text">
-              <Link to="https://wallet.3dpass.org/">3DPass browser wallet</Link> is a Java Script page interacting with the
-              blockchain network directly from your browser. Once being
-              downloaded it might be connected either to the remote API endpoint
-              available or to the local node running on your computer. By means
-              of changing endpoints you can easily switch among different
-              networks. Go to Settings to switch the endpoint:
+              <Link to="https://wallet.3dpass.org/">3DPass non-custodial web3 browser wallet</Link> is a Java Script page interacting with the
+              blockchain network directly from your browser. Once
+              downloaded, it might be connected to either one of the remote RPC API endpoints
+              available or a local Node running on your computer.
+            </div>
+            <div className="page-content-text">
+              <i>Disclaimer!</i> - All the public endpoints 
+              are maintained by the community members who can set up their own privacy 
+              rules for incoming connections and data collection.
+              
+            </div>
+            <div className="page-content-text"> 
+              Navigate to "Settings" to switch your current endpoint:
             </div>
             <img
               className="page-img"
@@ -1612,11 +1616,16 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">Mainnet API endpoints</div>
+            <div className="page-content-text">Mainnet public API endpoints:</div>
             <ul className="page-content-text">
-              <li>wss://rpc.3dpass.org</li>
-              <li>wss://rpc.3dpscan.io - via the 3dpscan.io blockchain explorer</li>
-              <li>ws://127.0.0.1:9944 - local Node</li>
+              <li>wss://rpc.3dpass.org - via the team</li>
+              <li>wss://rpc2.3dpass.org - via Breukmeister</li>
+              <li>wss://rpc3.3dpass.org</li>
+              <li>wss://rpc.p3d.top - via Lzmz</li>
+            </ul>
+            <div className="page-content-text">Local Node:</div>
+            <ul className="page-content-text">
+              <li>ws://127.0.0.1:9944 - via local Node running on your computer</li>
             </ul>
             <img
               className="page-img"
@@ -1820,7 +1829,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
               3. Run the Node with <Link to="#linux-mac-run">this</Link> command and get it <Link to="#linux-mac-sync">synced</Link> with the network.
             </div>
             <div className="page-content-text" id="validator-lock-check">
-              4. Open the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpscan.io#/extrinsics">Polka js wallet</Link> {" "}
+              4. Open the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka js wallet</Link> {" "}
               and lock up your funds to a certain block number in the future.
               There is no way to unlock until it's expired.
             </div>

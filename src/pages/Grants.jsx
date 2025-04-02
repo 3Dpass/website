@@ -282,7 +282,7 @@ const Grants = () => {
                <li>
                  Users:<br />
                  <i> - "Get your assets tokenized with the <Link to="/mobile-wallet">mobile wallet</Link> - 
-                 mint share tokens and trade them on DEX: <Link to="https://swap.3dpscan.io">https://swap.3dpscan.io</Link> "</i>
+                 mint share tokens and trade them on DEX: <Link to="https://3dpswap.online">https://3dpswap.online</Link> "</i>
                </li>
                <li>
                  Investors:<br /> 
@@ -424,7 +424,7 @@ const Grants = () => {
                 Mining dash boards (ex. <Link to="https://3dpassmining.info">3dpassmining.info</Link>)
               </li>
               <li>
-                DEX maintenance (ex. <Link to="https://swap.3dpscan.io">swap.3dpscan.io</Link>)
+                DEX maintenance (ex. <Link to="https://3dpswap.online">https://3dpswap.online</Link>)
               </li>
               <li>
                 Open Governance apps and channels

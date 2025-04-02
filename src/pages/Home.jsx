@@ -79,14 +79,8 @@ const Home = () => {
             <Link to="/mobile-wallet">
               <Button type="button" label="Mobile wallet" />
             </Link>
-            <Link to="https://swap.3dpscan.io">
-              <Button type="button" label="3DPass Swap DEX" />
-            </Link>
-            <Link to="/community#use-cases-ideas">
-              <Button type="button" label="Play-to-Earn" />
-            </Link>
-            <Link to="/community#use-cases-lego">
-              <Button type="button" label="Marketplace" />
+            <Link to="https://3dpswap.online">
+              <Button type="button" label="3dpswap DEX UI" />
             </Link>
             <Link to="https://3dpscan.io">
               <Button type="button" label="Block Explorer" />

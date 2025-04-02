@@ -391,7 +391,7 @@ ETH SIGNATURE
               <li>PoA component (stability & security): <Link to="https://github.com/3Dpass/3DP/releases/tag/v12"> Node v12 release</Link></li>
               <li>PoW component (3D objects consistency check): <Link to="https://github.com/3Dpass/3DP/releases/tag/v19"> Node v19 release</Link></li>
               <li>CEX listing: <Link to="https://www.coinex.com/en/exchange/p3d-usdt">CoinEx</Link> listed</li>
-              <li>Web: Embedded DEX UI: <Link to="https://swap.3dpascan.io">https://swap.3dpascan.io</Link> released</li>
+              <li>Web: Embedded DEX UI: <Link to="https://3dpswap.online">https://3dpswap.online</Link> released</li>
               <li>Mobile wallet: <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> UI integration (Putting objects on the blockchain - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.13.0"><i>done</i></Link>; Backed tokens issuace - <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.15.0"><i>done</i></Link>)</li>
               <li>Core: Atomic swap for assets (<i><Link to="https://github.com/3Dpass/3DP/releases/tag/v11">released</Link></i>)</li>
               <li>3DPRC-2: Assets management (<i> shifted to 2025</i>)</li>
@@ -420,7 +420,7 @@ ETH SIGNATURE
               Q3 - dApps integration/business cases implementation
             </div>
             <ul className="page-content-text">
-              <li>Utilization: A business case implementation (<Link to="/community#use-cases-lego">LEGO models marketplace</Link>, check out <Link to="https://swap.3dpscan.io/pools">Liquidity Pools</Link> on DEX)</li>
+              <li>Utilization: A business case implementation (<Link to="/community#use-cases-lego">LEGO models marketplace</Link>, check out <Link to="https://3dpswap.online/pools">Liquidity Pools</Link> on DEX)</li>
               <li>Mobile wallet: Atomic swap integration (<i> shifted to 2025</i>)</li>
               <li>Mobile wallet: tokenized 3D models preview ( <Link to="https://github.com/3Dpass/threedpass/releases/tag/v2.17.0"><i>Released v2.17.0</i></Link>)</li>
               <li>Utilization: AI assistant (<i>shifted to 2025</i>)</li>

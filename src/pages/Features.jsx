@@ -429,10 +429,10 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
                     Total issued supply: 100.000000 REDB
                   </li>
                   <li>
-                   Listed on DEX: Yes ( <Link to="https://swap.3dpscan.io/">Swap P3D/REDB</Link> ) 
+                   Listed on DEX: Yes ( <Link to="https://3dpswap.online">Swap P3D/REDB</Link> ) 
                   </li>
                   <li>
-                   Liquidity Pool: Yes ( <Link to="https://swap.3dpscan.io/pools">LP P3D/REDB</Link> ) 
+                   Liquidity Pool: Yes ( <Link to="https://3dpswap.online/pools">LP P3D/REDB</Link> ) 
                   </li>
                 </ul>
               </li>
@@ -699,7 +699,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             </div>
             <div className="page-content-text">
               <Link to="/features#scanproof-deterministic">Deterministic blockchain finality</Link>, leveraged in The Ledger of Things, 
-              guarantees the preservation of the users assets, put on the blockchian, and its affiliation with {" "}
+              guarantees the preservation of the users assets, put on the blockchain, and its affiliation with {" "}
               <strong>Best chain</strong> forever. Once having new block finalized, the assets came with the block will always be 
               available for any useful movement, including but not limited to: transfer, swap, trade, smart contract logic, and so forth.
             </div>
@@ -769,7 +769,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               <li>
                 <Link to="https://wallet.3dpass.org/">3Dpass Web3 wallet</Link>{" "}
                 |{" "}
-                <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org&types=eNqrVnJMTs4vzSvxzEvLV7JC5oVnlmS4lCbmBKWmOYPElHSUHFNSilKLi5HUpQBFffLzs0sLgvNLi5JT0aTCUzPTM0qAgqXGRkq1AEo%2FJWY%3D">
+                <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org">
                   polkadot js wallet
                 </Link>
               </li>
@@ -1003,10 +1003,10 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
            </div>
            <ul className="page-content-text">
             <li>
-            <Link to="https://swap.3dpscan.io">3DPass swap DEX User Interface</Link>
+            <Link to="https://3dpswap.online">3DPswap DEX User Interface</Link>
             </li>
             <li>
-            <Link to="https://github.com/3Dpass/swap">DEX UI GitHub link</Link>
+            <Link to="https://github.com/3Dpass/swap">3DPswap DEX UI GitHub</Link>
             </li>
             </ul>
             <img
@@ -1015,7 +1015,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               src="/images/the_ledger_of_things_dex.png"
               alt="img"
             />
-            <Link className="message-text" to="https://swap.3dpscan.io">
+            <Link className="message-text" to="https://3dpswap.online">
             <div className="page-lead-content">
                  Swap via the Web3 UI
                 <div className="page-lead-button">Swap</div>

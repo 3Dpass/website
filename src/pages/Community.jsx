@@ -466,7 +466,7 @@ const Community = () => {
               </li>
               <li>
                 Trade your share-token on DEX without a middleman via the <Link to="/mobile-wallet#dex-liquidity-pools">mobile wallet {" "}
-                </Link> or <Link to="https://swap.3dpscan.io">Web3 swap UI</Link>. 
+                </Link> or <Link to="https://3dpswap.online">3DPswap Web3 UI</Link>. 
                 Get your idea share-token listed on DEX yourself (no listing fee) and enjoy community support!
               </li>
             </ol>
@@ -512,8 +512,8 @@ const Community = () => {
                AssetId: <strong>#16</strong>; <Link to="https://3dpscan.io/assetdetails/16"><strong>COW</strong></Link>;
               </li>
               <li>
-               Listed on DEX: Swap the cow shares: <Link to="https://swap.3dpscan.io/">P3D/COW</Link>; {" "}
-               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/COW</Link>
+               Listed on DEX: Swap the cow shares: <Link to="https://3dpswap.online">P3D/COW</Link>; {" "}
+               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/COW</Link>
               </li>
             </ul>
             <div className="page-content-subtitle" id="use-cases-lego">
@@ -556,8 +556,8 @@ const Community = () => {
                AssetId: <strong>#21</strong>; <Link to="https://3dpscan.io/assetdetails/21"><strong>L2X2</strong></Link>;
               </li>
               <li>
-               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/L2X2</Link>; {" "}
-               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/L2X2</Link>
+               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/L2X2</Link>; {" "}
+               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/L2X2</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -665,8 +665,8 @@ const Community = () => {
                AssetId: <strong>#27</strong>; <Link to="https://3dpscan.io/assetdetails/27"><strong>RING</strong></Link>;
               </li>
               <li>
-               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/RING</Link>; {" "}
-               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/RING</Link>
+               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/RING</Link>; {" "}
+               Liquidity Pool: <Link to="https://3dpswap.online"> P3D/RING</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -782,8 +782,8 @@ const Community = () => {
                AssetId: <strong>#29</strong>; <Link to="https://3dpscan.io/assetdetails/29"><strong>DCRT</strong></Link>;
               </li>
               <li>
-               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/DCRT</Link>; {" "}
-               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/DCRT</Link>
+               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/DCRT</Link>; {" "}
+               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/DCRT</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -806,8 +806,8 @@ const Community = () => {
                AssetId: <strong>#27</strong>; <Link to="https://3dpscan.io/assetdetails/27"><strong>DIA</strong></Link>;
               </li>
               <li>
-               Listed on DEX: Swap: <Link to="https://swap.3dpscan.io/">P3D/DIA</Link>; {" "}
-               Liquidity Pool: <Link to="https://swap.3dpscan.io/pools"> P3D/DIA</Link>
+               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/DIA</Link>; {" "}
+               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/DIA</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -1120,10 +1120,10 @@ const Community = () => {
                   <li>Mobile wallet</li>
                 </Link>
                 <Link to="https://3dpscan.io">
-                  <li>Web Block Explorer 1</li>
+                  <li>Blockchain Explorer 1</li>
                 </Link>
                 <Link to="http://explorer.3dpassmining.info">
-                  <li>Web Block Explorer 2</li>
+                  <li>Blockchain Explorer 2</li>
                 </Link>
                 <Link to="https://talisman.xyz">
                   <li>Talisman muli-chain wallet</li>
@@ -1139,7 +1139,7 @@ const Community = () => {
                 <Link to="https://explorer-api.3dpscan.io/graphql/">
                   <li>Block Explorer API graphql</li>
                 </Link>
-                <Link to="https://polkadot.js.org/apps/?rpc=wss%253A%252F%252Frpc.3dpscan.io">
+                <Link to="https://polkadot.js.org/apps/?rpc=wss%253A%252F%252Frpc.3dpass.org">
                   <li>Polkadot js wallet</li>
                 </Link>
                 <Link to="https://novawallet.io">
@@ -1193,8 +1193,8 @@ const Community = () => {
                 <Link to="https://www.coinex.com/en/exchange/p3d-usdt">
                   <li>Coinex P3D/USDT</li>
                 </Link>
-                <Link to="https://swap.3dpscan.io">
-                  <li>3DPass swap DEX</li>
+                <Link to="https://3dpswap.online">
+                  <li>3DPswap DEX</li>
                 </Link>
               </ul>
             </div>
