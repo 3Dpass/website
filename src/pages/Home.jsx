@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
+      title: "New blockchain explorer has come into operation!",
+      description:
+        "Brand new open source blockchain explorer has come into operation and is available via 3dpscan.xyz. Github: https://github.com/3Dpass/explorer",
+      date: "Apr 28, 2025",
+      link: "https://3dpscan.xyz"
+    },
+    {
       title: "Counterstake bridge smart contracts are being tested on testnet!",
       description:
         "The assetss-erc20 interface and precompile have been deployed on testnet, which allows for wrapped local assets to be accessible through the EVM.",
@@ -41,13 +48,6 @@ const Home = () => {
       description:
         "P3Dt native - P3Dt ERC20 (mapped) cross-platform transfers are proved successful on testnet!",
       date: "Mar 05, 2025",
-      link: "https://github.com/3Dpass/3DP/tree/test"
-    },
-    {
-      title: "The EVM emulator feature is launched on testnet!",
-      description:
-        "The EVM compatibility layer has been integrated into the Node, which is now available for public review and testing over the `test` branch!",
-      date: "Jan 28, 2025",
       link: "https://github.com/3Dpass/3DP/tree/test"
     },
   ]);
@@ -82,7 +82,7 @@ const Home = () => {
             <Link to="https://3dpswap.online">
               <Button type="button" label="3dpswap DEX UI" />
             </Link>
-            <Link to="https://3dpscan.io">
+            <Link to="https://3dpscan.xyz">
               <Button type="button" label="Block Explorer" />
             </Link>
           </div>

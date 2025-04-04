@@ -117,7 +117,7 @@ const Footer = () => {
             <a href="/mobile-wallet">
               <div className="footer-item">Mobile Wallet</div>
             </a>
-            <a href="https://3dpscan.io">
+            <a href="https://3dpscan.xyz">
               <div className="footer-item">Block Explorer</div>
             </a>
             <a href="https://3dpswap.online">

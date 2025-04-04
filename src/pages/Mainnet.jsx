@@ -329,7 +329,7 @@ const Mainnet = () => {
           <a href="https://3dpswap.online">
             <div className="one-subheader">3dpswap DEX UI</div>
           </a>
-          <a href="https://3dpscan.io">
+          <a href="https://3dpscan.xyz">
             <div className="one-subheader">Blockchain Explorer</div>
           </a>
           <a href="https://discord.gg/u24WkXcwug">
@@ -2165,19 +2165,19 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
             <ul className="page-content-text">
               <li>
                 3DPASS REGISTRAR:{" "}
-                <Link to="https://3dpscan.io/account/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link> | fee: 20 P3D
+                <Link to="https://3dpscan.xyz/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link> | fee: 20 P3D
                 | regIndex: 0
               </li>
               <li>
-                CALDERATRADE: <Link to="https://3dpscan.io/account/d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF">d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF</Link>
+                CALDERATRADE: <Link to="https://3dpscan.xyz/#/accounts/d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF">d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF</Link>
                 | fee: 20 P3D | regIndex: 1
               </li>
               <li>
-                REB0RN-DEDI-1: <Link to="https://3dpscan.io/account/d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz">d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz</Link>
+                REB0RN-DEDI-1: <Link to="https://3dpscan.xyz/#/accounts/d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz">d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz</Link>
                 | fee: 20 P3D | regIndex: 2
               </li>
               <li>
-                WLINK-NETWORK: <Link to="https://3dpscan.io/account/d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f">d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f</Link>
+                WLINK-NETWORK: <Link to="https://3dpscan.xyz/#/accounts/d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f">d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f</Link>
                 | fee: 20 P3D | regIndex: 3
               </li>
             </ul>

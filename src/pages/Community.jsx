@@ -1119,11 +1119,8 @@ const Community = () => {
                 <Link to="/mobile-wallet">
                   <li>Mobile wallet</li>
                 </Link>
-                <Link to="https://3dpscan.io">
-                  <li>Blockchain Explorer 1</li>
-                </Link>
-                <Link to="http://explorer.3dpassmining.info">
-                  <li>Blockchain Explorer 2</li>
+                <Link to="https://3dpscan.xyz">
+                  <li>Explorer</li>
                 </Link>
                 <Link to="https://talisman.xyz">
                   <li>Talisman muli-chain wallet</li>
@@ -1135,9 +1132,6 @@ const Community = () => {
               <ul className="page-content-text">
                 <Link to="https://telemetry.3dpscan.io">
                   <li>Telemetry server</li>
-                </Link>
-                <Link to="https://explorer-api.3dpscan.io/graphql/">
-                  <li>Block Explorer API graphql</li>
                 </Link>
                 <Link to="https://polkadot.js.org/apps/?rpc=wss%253A%252F%252Frpc.3dpass.org">
                   <li>Polkadot js wallet</li>

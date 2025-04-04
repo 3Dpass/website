@@ -570,7 +570,7 @@ ETH SIGNATURE
                 Network name
               </div>
               <div className="page-table-right page-table-content">
-                The Ledger of Things
+                3dpass - The Ledger of Things
               </div>
               <div className="page-table-left page-table-info">Blockchain</div>
               <div className="page-table-right page-table-content">
@@ -600,7 +600,7 @@ ETH SIGNATURE
               </div>
               <div className="page-table-left page-table-info">Consensus</div>
               <div className="page-table-right page-table-content">
-              <Link to="/proof-of-scan">Proof of Scan</Link> (Hybryd PoW + PoA GRANDPA deterministic finality),
+              <Link to="/proof-of-scan">Proof of Scan</Link> (Hybryd PoW + PoA GRANDPA deterministic blockchain finality),
                 Algorithm: <Link to="/grid2d">Grid2D</Link> (based on recognition)
               </div>
               <div className="page-table-left page-table-info">
@@ -636,11 +636,12 @@ ETH SIGNATURE
                 </Link>
               </div>
               <div className="page-table-left page-table-info">
-                API/RPC endpoint
+                API/RPC endpoints
               </div>
               <div className="page-table-right page-table-content">
-                wss://rpc.3dpass.org; wss://rpc.3dpscan.io; via caldera:
-                wss://rpc.caldera.network
+              <Link to="https://github.com/3Dpass/rpc-list"> 
+                  https://github.com/3Dpass/rpc-list 
+              </Link>
               </div>
               <div className="page-table-left page-table-info">Web3 wallet</div>
               <div className="page-table-right page-table-content">
@@ -656,18 +657,10 @@ ETH SIGNATURE
                   Android
                 </Link>
               </div>
-              <div className="page-table-left page-table-info">Block Explorer</div>
+              <div className="page-table-left page-table-info">Blockchain Explorer</div>
               <div className="page-table-right page-table-content">
-                <Link to="https://3dpscan.io">
-                  https://3dpscan.io
-                </Link>
-              </div>
-              <div className="page-table-left page-table-info">
-                Explorer API
-              </div>
-              <div className="page-table-right page-table-content">
-                <Link to="https://explorer-api.3dpscan.io/graphql/">
-                  https://explorer-api.3dpscan.io/graphql/
+                <Link to="https://3dpscan.xyz">
+                  https://3dpscan.xyz
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Telemetry</div>
@@ -731,8 +724,8 @@ ETH SIGNATURE
               <Link to="https://www.coingecko.com/en/coins/3dpass">
                   CoinGecko
                 </Link>
-                ; <Link to="https://www.livecoinwatch.com/price/3DPassCoin-P3D">
-                  Livecoinwatch
+                ; <Link to="https://coinmarketcap.com/currencies/3dpass/">
+                  CoinMarketCap
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Licence</div>
@@ -751,7 +744,7 @@ ETH SIGNATURE
               </div>
               <div className="page-table-left page-table-info">Forkless upgrade</div>
               <div className="page-table-right page-table-content">
-                <Link to="/forkless-upgrade">Yes</Link> (based on WASM)
+                <Link to="/forkless-upgrade">Yes</Link> (WASM-based runtime)
               </div>
             </div>
           </div>
@@ -775,15 +768,15 @@ ETH SIGNATURE
                   The team share - 101 000 000 P3D (10.1% of total supply), issued
                   in genesis block. Vesting schedule: 30 000 000 P3D locked until the block #905700; 30 000 000 P3D locked until the block #1431300; 30 000 000 P3D locked until the block #1956900:
                   <ol>
-                    <li><Link to="https://3dpscan.io/account/d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ">d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP">d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB">d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE">d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ">d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx">d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF">d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp">d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp</Link></li>
-                    <li><Link to="https://3dpscan.io/account/d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp">d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ">d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP">d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB">d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE">d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ">d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx">d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF">d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp">d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp</Link></li>
+                    <li><Link to="https://3dpscan.xyz/#/accounts/d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp">d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp</Link></li>
                   </ol>
                 </li>
                 <li>
@@ -791,14 +784,14 @@ ETH SIGNATURE
                   issued in genesis block. The budget is being spent through the Treasury account
                   controlled by the <Link to="/governance">Governance</Link>
                   <ul>
-                  <li><Link to="https://3dpscan.io/account/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>
+                  <li><Link to="https://3dpscan.xyz/#/accounts/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>
                   </ul>
                 </li>
                 <li id="contribution-budget">
                   Contribution budget: 60 000 000 P3D (6% of total supply),
-                  issued in genesis block. The budget is transferred to and being spent through the <Link to="https://3dpscan.io/account/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">Treasury account</Link> controlled by the <Link to="/governance">Governance</Link>
+                  issued in genesis block. The budget is transferred to and being spent through the <Link to="https://3dpscan.xyz/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">Treasury account</Link> controlled by the <Link to="/governance">Governance</Link>
                   <ul>
-                  <li>Initial address the budget was issued with: <Link to="https://3dpscan.io/account/d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf">d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf</Link></li>
+                  <li>Initial address the budget was issued with: <Link to="https://3dpscan.xyz/#/accounts/d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf">d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf</Link></li>
                   </ul>
                 </li>
               </ul>
