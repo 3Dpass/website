@@ -2119,43 +2119,43 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
           <div className="page-content-inner">
             <div className="page-content-title">On-chain Identity</div>
             <div className="page-content-text">
-              3DPass has implemented Substrate <Link to="https://github.com/paritytech/substrate/tree/master/frame/identity">Identity pallet</Link>, which allows to
-              assign a certain level of confidence to any account (network
+              The Ledger of Things has implemented Substrate <Link to="https://github.com/paritytech/substrate/tree/master/frame/identity">Identity module</Link>, which allows to
+              assign a certain level of confidence to any account (P3D
               address) verified by a registrar. It is assumed, that the
               registrar is trusted enough to verify some contact information
-              assocoated with the user's address (Twitter, Google, Discord,
-              Telegram, etc) and provide their on-chain judgement. Registrar's
+              associated with the user's address (Twitter, Google, Discord,
+              Telegram, etc) and judge on it. Registrars
               can not only promote in level but also demote the account that
-              were found malicious. The registrar judgement can only be changed
+              is found malicious. The registrar judgement can only be changed
               by <Link to="/governance#democracy">Referenda</Link>. Registrars can either be elected by <Link to="/governance#democracy">Referenda</Link> or
-              assigned by means of <Link to="/governance#council">Council</Link> voting.
+              assigned by means of the <Link to="/governance#council">Council</Link> vote.
             </div>
             <div className="page-content-subtitle" id="chain-general">
-              Judgements
+              Levels of confidence
             </div>
             <ul className="page-content-text">
-              <li>Unknown: The default value, no judgement made yet.</li>
+              <li><i>Unknown</i>: The default value, no judgement made yet.</li>
               <li>
-                Reasonable: The data appears to be reasonable, but no in-depth
+                <i>Reasonable</i>: The data appears to be reasonable, but no in-depth
                 checks. Both P3D account private key and additional account
                 (Discord, Telegram, Google, etc) ownership must be proved.
               </li>
               <li>
-                Known Good: The registrar has certified that the information is
+                <i>Known Good</i>: The registrar has certified that the information is
                 correct (this step involves verification of state issued
                 identity documents, and at the moment no account has known good
                 identity, with the exception of registrars).
               </li>
               <li>
-                Out of Date: The information used to be good, but is now out of
+                <i>Out of Date</i>: The information used to be good, but is now out of
                 date.
               </li>
               <li>
-                Low Quality: The information is low quality or imprecise, but
+                <i>Low Quality</i>: The information is low quality or imprecise, but
                 can be fixed with an update.
               </li>
               <li>
-                Erroneous: The information is erroneous and may indicate
+                <i>Erroneous</i>: The information is erroneous and may indicate
                 malicious intent.
               </li>
             </ul>
@@ -2163,23 +2163,8 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               Registrars
             </div>
             <ul className="page-content-text">
-              <li>
-                3DPASS REGISTRAR:{" "}
-                <Link to="https://3dpscan.xyz/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link> | fee: 20 P3D
-                | regIndex: 0
-              </li>
-              <li>
-                CALDERATRADE: <Link to="https://3dpscan.xyz/#/accounts/d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF">d1J1WymQy1aVqstxWdY7wE6V1RNFtHkK68g3KKW1Sc3rUmBVF</Link>
-                | fee: 20 P3D | regIndex: 1
-              </li>
-              <li>
-                REB0RN-DEDI-1: <Link to="https://3dpscan.xyz/#/accounts/d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz">d1Feb4mTdnp3snZUmuBGPjmK9p8vJ6DmqJFt4ScxVe4oUWNJz</Link>
-                | fee: 20 P3D | regIndex: 2
-              </li>
-              <li>
-                WLINK-NETWORK: <Link to="https://3dpscan.xyz/#/accounts/d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f">d1H1j9SGoMcJge45CNS81ey4GhMN8jqjte1fbNMgUSBW6Zv4f</Link>
-                | fee: 20 P3D | regIndex: 3
-              </li>
+              <li><Link to="https://3dpscan.xyz/#/identities/registrars">Current registrars</Link></li>
+              <li><Link to="https://3dpscan.xyz/#/identities">Identities history data</Link></li>
             </ul>
             <div className="page-content-subtitle" id="chain-kyc">
               KYC procedure: Reasonable
@@ -2271,16 +2256,35 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
               How to verify Reasonable account
             </div>
             <div className="page-content-text">
-              It's easy to verify any reasonable account by asking its owner to
-              sign an arbitrary message and provide the signature for the
-              verification. Verify the message and the signature by means of the
-              <Link to="https://wallet.3dpass.org/">wallet</Link>.
+              It's easy to verify a reasonable account by asking its owner to
+              sign an arbitrary message with their P3D account and provide the signature for the
+              verification. Verify the message and the signature with the <Link to="https://wallet.3dpass.org/">wallet</Link>.
             </div>
             <div className="page-content-text">
-              For example, let's verify the Identity of 3DPASS REGISTRAR's
-              account <Link to="https://3dpscan.io/account/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link>. Assume,
-              you have received this "Hello" message from @3dpass1 over Twitter:
+              For example, let's verify the Identity profile for 3DPASS REGISTRAR's
+              account <Link to="https://3dpscan.xyz/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h?tab=identity&page=1">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link>: 
             </div>
+            <ol className="page-content-text">
+              <li>
+              Assume, you are having a conversation over email with someone using the partnership@3dpass.org address and
+              introducing themselves as 3DPASS REGISTRAR.
+              </li>
+              <li>
+              You have already verified the email address associated with 3DPASS REGISTRAR's <Link to="https://3dpscan.xyz/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h?tab=identity&page=1">identity 
+              profile</Link>, which proved to be correct.
+              </li>
+             <li> 
+              You asked them to prove P3D address ownersinp by signing an arbitrary message with 
+              the Registrar's P3D address: d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h.
+             </li>
+             <li>
+              They agreed and sent this signed <i>"Hello it's me"</i> message back. 
+             </li>
+             <li>
+             All you need to do now is to verify the message and signature with the <Link to="https://wallet.3dpass.org/">wallet</Link>. 
+             Just copy the message and paste it into the Sign&Verify input, like so: 
+             </li>
+            </ol>
             <div className="page-content-text" id="check-signature">Valid signature (verified):</div>
             <img
               className="page-img"

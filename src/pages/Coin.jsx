@@ -496,6 +496,11 @@ ETH SIGNATURE
               Q2 - AI human impression feature & 2D recognition
             </div>
             <ul className="page-content-text">
+            <li>Essential netwok infrastructure optimization: (<i>lead by Mikhail</i>):</li>
+            <ul className="page-content-text">
+               <li>New open source blockchain explorer  (<i>Done</i>: <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)</li>
+               <li>Archive Nodes and RPC API endpoints (<i>Done</i>: <Link to="https://github.com/3Dpass/rpc-list">The endpoint providers list</Link>)</li>
+              </ul>
              <li>3DPRC-2: (<i>in the process, lead by PaulS and Mikhail</i>):</li>
              <ul className="page-content-text">
                <li><Link to="/assets#general-human-perception-error">AI human impressions</Link> feature</li>

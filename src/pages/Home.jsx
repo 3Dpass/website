@@ -80,10 +80,19 @@ const Home = () => {
               <Button type="button" label="Mobile wallet" />
             </Link>
             <Link to="https://3dpswap.online">
-              <Button type="button" label="3dpswap DEX UI" />
+              <Button type="button" label="3dpswap DEX" />
             </Link>
             <Link to="https://3dpscan.xyz">
               <Button type="button" label="Block Explorer" />
+            </Link>
+            <Link to="/mainnet#linux-mac">
+              <Button type="button" label="Miners" />
+            </Link>
+            <Link to="/mainnet#validator">
+              <Button type="button" label="Validators" />
+            </Link>
+            <Link to="/mainnet#chain">
+              <Button type="button" label="On-chain Identity" />
             </Link>
           </div>
         </div>
