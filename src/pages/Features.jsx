@@ -41,7 +41,7 @@ const Features = () => {
           </a>
           <a href="#recognition-hash-id-case">
             <div className="page-nav-inside">
-              Case to study
+              Case study
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -134,12 +134,6 @@ const Features = () => {
           <a href="#ledger-why-open-gov">
             <div className="page-nav-inside">
               Why Open Gov?
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
-          <a href="#ledger-useful-links">
-            <div className="page-nav-inside">
-              Useful links
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -309,14 +303,8 @@ const Features = () => {
               src="/images/red_beryl_stable_hashes_mobile.png"
               alt="img"
             />
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-                <div className="page-lead-button">Download</div>
-            </div>
-            </a>
             <div className="page-content-subtitle" id="recognition-hash-id-case">
-              HASH ID case to study
+              HASH ID case study
             </div>
             <div className="page-content-text">
               Here is <Link to="https://github.com/3Dpass/threedpass/tree/main/objects_to_scan/preciouss_stones_collection/red_beryl">a bunch of scans (3D models)</Link> {" "}
@@ -737,75 +725,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               but it also helps the LoT mitigate risks and address potential challenges efficiently (by means 
               of vote).
             </div>
-            <div className="page-content-subtitle" id="ledger-useful-links">
-              Useful Links: 
-            </div>
-            <ul className="page-content-text">
-              <li>
-                <Link to="/proof-of-scan">Proof of Scan</Link> consensus protocol description
-              </li>
-              <li>
-                <Link to="https://github.com/3Dpass/3DP">The Ledger of Things NODE</Link>
-              </li>
-              <li>
-                <Link to="https://github.com/3Dpass/3DP/wiki">Development Wiki</Link>
-              </li>
-              <li>
-                <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">3DPRC-2 tokenization API</Link>
-              </li>
-              <li>
-                <Link to="https://telemetry.3dpscan.io/">
-                  Network telemetry server
-                </Link>
-              </li>
-              <li>
-                <Link to="https://3dpscan.io/">Block explorer</Link>
-              </li>
-              <li>
-                <Link to="https://explorer-api.3dpscan.io/graphql/">
-                  Block data graphql API
-                </Link>
-              </li>
-              <li>
-                <Link to="https://wallet.3dpass.org/">3Dpass Web3 wallet</Link>{" "}
-                |{" "}
-                <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org">
-                  polkadot js wallet
-                </Link>
-              </li>
-              <li>
-                <Link to="/mainnet#mining-pool">How to start mining</Link>
-              </li>
-              <li>
-                <Link to="/mainnet#validator">How to become Validator</Link>
-              </li>
-              <li>
-                <Link to="/features#smartcontracts">Smart contracts</Link> trait
-                leveraging <Link to="https://use.ink/">ink</Link>, a Rust-based
-                embedded domain specific language (eDSL) for writing WebAssembly
-                smart contracts.
-              </li>
-              <li>
-                <Link to="/governance">Governance</Link> and{" "}
-                <Link to="/forkless-upgrade">forkless upgrade</Link>,{" "}
-                <Link to="/mainnet#chain">On-chain Identity</Link>
-              </li>
-              <li>
-                <Link to="https://substrate.io">Substrate</Link>-based and
-                scalable solution: IPFS storage,{" "}
-                <Link to="/features#smartcontracts">Smart contracts</Link>, etc.
-                Learn more about{" "}
-                <Link to="/features#integration">
-                  3Dpass network NODE integration.
-                </Link>
-              </li>
-            </ul>
-            <a className="message-text" href="/mainnet">
-            <div className="page-lead-content">
-              Mainnet
-                <div className="page-lead-button">Join the Network</div>
-            </div>
-            </a>
           </div>
         </div>
         <div className="page-content-block" id="3dprc-2">
@@ -833,12 +752,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               className="page-video"
               controls
             ></video>
-            <Link className="message-text" to="/assets#object-authentication">
-            <div className="page-lead-content">
-               Put your object on The Ledger of Things
-                <div className="page-lead-button">Put the object</div>
-            </div>
-            </Link>
             <div className="page-content-subtitle" id="3dprc-2-implementation">
               3DPRC-2 implementation:
             </div>
@@ -905,23 +818,11 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             For example, if the object weight is 1000 gram, then the "MaxSupply=1000" limit will be set up for the token created (you won't be able to issue more than 1000 minimum indivisible units). 
             While transferring tokens, the object share ownership is being transferred accordingly.
             </div>
-            <Link className="message-text" to="/assets#3dprc-2-fungible">
-            <div className="page-lead-content">
-               Get the object share tokenized
-                <div className="page-lead-button">Tokenize</div>
-            </div>
-            </Link>
             <div className="page-content-text">
             3DPRC-2 allows to tokenize every single object into the Non-Fungible asset.
             If chosen, the "MaxSupply = 1" limit will be applied to the token created. Whereas "1" is the minimum indivisible unit of The Ledger of Things. 
             By means of transferring this unit, the ownership of the entire object is being transferred.
             </div>
-            <Link className="message-text" to="/assets#3dprc-2-non-fungible">
-            <div className="page-lead-content">
-               Turn the object into non-fungible asset
-                <div className="page-lead-button">Tokenize</div>
-            </div>
-            </Link>
             <div className="page-content-subtitle" id="3dprc-2-asset-management">
               Collective asset management
             </div>
@@ -937,12 +838,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               "The Ledger of Things" is equipped with the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> module
               providing some useful methods for dealing with simple fungible assets without a necessity to run a smart contract.
             </div>
-            <Link className="message-text" to="/assets#conventional-fungible-assets">
-            <div className="page-lead-content">
-              Regular fungible asset
-                <div className="page-lead-button">Create</div>
-            </div>
-            </Link>
           </div>
         </div>
         <div className="page-content-block" id="smartcontracts">
@@ -968,12 +863,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               to closely emulate the functionality of executing contracts on the
               Ethereum mainnet within 3Dpass network.
             </div>
-            <Link className="message-text" to="/assets#smart-contracts">
-            <div className="page-lead-content">
-              Smart contract
-                <div className="page-lead-button">Run</div>
-            </div>
-            </Link>
           </div>
         </div>
         <div className="page-content-block" id="atomicswap">
@@ -1015,18 +904,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               src="/images/the_ledger_of_things_dex.png"
               alt="img"
             />
-            <Link className="message-text" to="https://3dpswap.online">
-            <div className="page-lead-content">
-                 Swap via the Web3 UI
-                <div className="page-lead-button">Swap</div>
-            </div>
-            </Link>
-            <Link className="message-text" to="/mobile-wallet#dex">
-            <div className="page-lead-content">
-                 Swap via the Mobile wallet
-                <div className="page-lead-button">Swap</div>
-            </div>
-            </Link>
           </div>
         </div>
         <div className="page-content-block" id="passwords">
@@ -1081,12 +958,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               src="/images/object_wallet.png"
               alt="img"
               />
-            <Link className="message-text" to="/mainnet#chain-kyc">
-            <div className="page-lead-content">
-                 Create your 3D object wallet
-                <div className="page-lead-button">Create</div>
-            </div>
-            </Link>
           </div>
         </div>
         <div className="page-content-block" id="identity">
@@ -1117,12 +988,6 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               src="/images/personal_public_identity_1.png"
               alt="img"
             />
-            <Link className="message-text" to="/mainnet#chain-kyc">
-            <div className="page-lead-content">
-                 Create your On-chain Identity
-                <div className="page-lead-button">Create</div>
-            </div>
-            </Link>
           </div>
         </div>
       </div>

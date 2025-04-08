@@ -216,49 +216,34 @@ ETH SIGNATURE
         <div className="page-content-block" id="white-papper">
           <div className="page-content-inner">
           <div className="page-content-title">White Paper</div>
-            <Link
-              className="a-none"
-              to="/3DPass_white_paper.pdf"
-              target="blank"
-              download
-            >
-              <div className="page-lead-content">
-                The Ledger of Things White Paper
-                <div className="page-lead-button">PDF</div>
-              </div>
+           <div className="page-content-text">
+              Download (<i>.pdf</i>): {" "}
+            <Link to="/3DPass_white_paper.pdf">
+              The Ledger of Things White Paper
             </Link>
+           </div>
           </div>
         </div>
         <div className="page-content-block" id="3DPRC-2">
           <div className="page-content-inner">
             <div className="page-content-title">3DPRC-2</div>
-            <Link
-              className="a-none"
-              to="/3DPRC-2_v2.pdf"
-              target="blank"
-              download
-            >
-              <div className="page-lead-content">
-                3DPRC-2 tokenization standard
-                <div className="page-lead-button">PDF</div>
-              </div>
-            </Link>
+            <div className="page-content-text">
+              Download (<i>.pdf</i>): {" "}
+             <Link to="/3DPRC-2_v2.pdf">
+               3DPRC-2 tokenization standard (Request for Comments)
+             </Link>
+           </div>
           </div>
         </div>
         <div className="page-content-block" id="pitch-dech">
           <div className="page-content-inner">
             <div className="page-content-title">Pitch Deck Slides</div>
-            <Link
-              className="a-none"
-              to="/3Dpass_pitch_deck.pdf"
-              target="blank"
-              download
-            >
-              <div className="page-lead-content">
+              <div className="page-content-text">
+                Download (<i>.pdf</i>): {" "}
+                <Link to="/3Dpass_pitch_deck.pdf">
                 Pitch Deck Slides
-                <div className="page-lead-button">PDF</div>
-              </div>
-            </Link>
+                </Link>
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="roadmap">

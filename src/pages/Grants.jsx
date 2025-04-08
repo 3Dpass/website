@@ -184,12 +184,6 @@ const Grants = () => {
                 who is to make revew on the Pull Request and sign on the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
-            <div className="page-lead-content">
-               Bug Bounty
-                <div className="page-lead-button">Apply</div>
-            </div>
-            </a>
           </div>
         </div>
         <div className="page-content-block" id="dev-bounty">
@@ -239,12 +233,6 @@ const Grants = () => {
                 If approved, your application will be assigned with the curator, who is to make revew on the Pull Request and sign on the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
-            <div className="page-lead-content">
-               Dev Bounty
-                <div className="page-lead-button">Apply</div>
-            </div>
-            </a>
           </div>
         </div>
         <div className="page-content-block" id="marketing-bounty">
@@ -325,12 +313,6 @@ const Grants = () => {
                 who is to check on the posts and approve the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
-            <div className="page-lead-content">
-               Marketing Bounty
-                <div className="page-lead-button">Apply</div>
-            </div>
-            </a>
           </div>
         </div>
         <div className="page-content-block" id="integrations-bounty">
@@ -395,12 +377,6 @@ const Grants = () => {
                 who is to check on the posts and approve the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
-            <div className="page-lead-content">
-               Integration Bounty
-                <div className="page-lead-button">Apply</div>
-            </div>
-            </a>
           </div>
         </div>
         <div className="page-content-block" id="eco-system-support-bounty">
@@ -418,13 +394,13 @@ const Grants = () => {
             </div>
             <ul className="page-content-text">
               <li>
-                Block explorers (ex. <Link to="https://3dpscan.io">3Dpscan.io</Link>)
+                Block explorers (e.g. <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)
               </li>
               <li>
-                Mining dash boards (ex. <Link to="https://3dpassmining.info">3dpassmining.info</Link>)
+                Mining leader boards (e.g. <Link to="https://3dpassmining.info">3dpassmining.info</Link>)
               </li>
               <li>
-                DEX maintenance (ex. <Link to="https://3dpswap.online">https://3dpswap.online</Link>)
+                DEX maintenance (e.g. <Link to="https://3dpswap.online">https://3dpswap.online</Link>)
               </li>
               <li>
                 Open Governance apps and channels
@@ -473,12 +449,6 @@ const Grants = () => {
                 who is to check on the posts and approve the payout.
               </li>
             </ul>
-            <a className="message-text" href="https://wallet.3dpass.org/governance/bounties">
-            <div className="page-lead-content">
-               Ecosystem Bounty
-                <div className="page-lead-button">Apply</div>
-            </div>
-            </a>
           </div>
         </div>
       </div>

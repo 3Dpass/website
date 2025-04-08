@@ -521,23 +521,25 @@ const Assets = () => {
             <div className="page-content-subtitle" id="3dprc-2-put-object">
               Submit new object on The Ledger of Things
             </div>
-            <div className="page-content-text">
-              <strong>Using MOBILE WALLET:</strong>
+            <ul className="page-content-text">
+              <li>
+                <strong>Using the mobile wallet:</strong> {" "}
+                <Link to="/mobile-wallet#download">
+                 Download the mobile wallet
+                </Link>
+               </li>
+               <li>
+               <strong>Using Web3 wallet or API:</strong> (<i>follow the tips below</i>)
+               </li>
+              </ul>
+              <div className="page-content-text">
+              USING WEB3 WALLET OR API:
             </div>
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-                <div className="page-lead-button">Download</div>
-            </div>
-            </a>
             <div className="page-content-text">
-              <strong>Using WEB WALLET or API:</strong>
-            </div>
-            <div className="page-content-text">
-             1. 3D model in <i>.obj</i> format could be submitted:
+             1. 3D model in <i>.obj</i> format is supposed to be submitted:
             </div>
             <ul className="page-content-text">
-              <li>Max file size: 150 kB</li>
+              <li>Max file size: 1 MB</li>
               <li>Authentication fee: 1000 P3D (will be paid to miners and validators for their job)</li>
             </ul>
             <div className="page-content-text">
@@ -699,17 +701,19 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             {" "} For Non fungible assets the <strong>MaxSupply</strong> will be restricted to 1 mininmum indivisible unit in the system. While transfering this token, the property rights to the object are being transferred entirely, 
             {" "} because of indivisibility of the min unit tethered to the object. 
             </div>
-            <div className="page-content-text">
-              <strong>Using MOBILE WALLET:</strong>
-            </div>
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-                <div className="page-lead-button">Download</div>
-            </div>
-            </a>
-            <div className="page-content-text">
-              <strong>Using WEB WALLET or API:</strong>
+            <ul className="page-content-text">
+              <li>
+                <strong>Using the mobile wallet:</strong> {" "}
+                <Link to="/mobile-wallet#download">
+                 Download the mobile wallet
+                </Link>
+               </li>
+               <li>
+               <strong>Using Web3 wallet or API:</strong> (<i>follow the tips below</i>)
+               </li>
+              </ul>
+              <div className="page-content-text">
+              USING WEB3 WALLET OR API:
             </div>
             <div className="page-content-text">
               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polka wallet</Link> 
@@ -768,17 +772,19 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             {" "} For the object <strong>Share</strong> the <strong>MaxSupply</strong> will be restricted to 1000000 mininmum indivisible units. While transfering any amout of the share tokens, the property rights to the object are being transferred accordingly. 
             {" "} For example, if 1000000 share tokens was issued (100% of the objects share), and 200000 of them was transferred, therefore 20% of the object ownership rights was transferred.  
             </div>
-            <div className="page-content-text">
-              <strong>Using MOBILE WALLET:</strong>
-            </div>
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-                <div className="page-lead-button">Download</div>
-            </div>
-            </a>
-            <div className="page-content-text">
-              <strong>Using WEB WALLET or API:</strong>
+            <ul className="page-content-text">
+              <li>
+                <strong>Using the mobile wallet:</strong> {" "}
+                <Link to="/mobile-wallet#download">
+                 Download the mobile wallet
+                </Link>
+               </li>
+               <li>
+               <strong>Using Web3 wallet or API:</strong> (<i>follow the tips below</i>)
+               </li>
+              </ul>
+              <div className="page-content-text">
+              USING WEB3 WALLET OR API:
             </div>
             <div className="page-content-text">
               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> 
@@ -876,17 +882,19 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <li><i>Asset Freeze:</i> Disalows the asset transfers from a given account</li>
               <li><i>Set the Asset Team:</i> Sets up the Issuer, Admin and Freezer of the asset</li>
             </ul>
-            <div className="page-content-text">
-              <strong>Using MOBILE WALLET:</strong>
-            </div>
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-                <div className="page-lead-button">Download</div>
-            </div>
-            </a>
-            <div className="page-content-text">
-              <strong>Using WEB WALLET or API:</strong>
+            <ul className="page-content-text">
+              <li>
+                <strong>Using the mobile wallet:</strong> {" "}
+                <Link to="/mobile-wallet#download">
+                 Download the mobile wallet
+                </Link>
+               </li>
+               <li>
+               <strong>Using Web3 wallet or API:</strong> (<i>follow the tips below</i>)
+               </li>
+              </ul>
+              <div className="page-content-text">
+              USING WEB3 WALLET OR API:
             </div>
             <div className="page-content-text">
                1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> {" "}
@@ -956,17 +964,19 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
         <div className="page-content-block" id="transfers">
           <div className="page-content-inner">
             <div className="page-content-title">Asset transfers</div>
-                <div className="page-content-text">
-              <strong>Using MOBILE WALLET:</strong>
-            </div>
-            <a className="message-text" href="/mobile-wallet#download">
-            <div className="page-lead-content">
-              Mobile Wallet
-            <div className="page-lead-button">Download</div>
-            </div>
-            </a>
-            <div className="page-content-text">
-              <strong>Using the WEB WALLET:</strong>
+            <ul className="page-content-text">
+              <li>
+                <strong>Using the mobile wallet:</strong> {" "}
+                <Link to="/mobile-wallet#download">
+                 Download the mobile wallet
+                </Link>
+               </li>
+               <li>
+               <strong>Using Web3 wallet or API:</strong> (<i>follow the tips below</i>)
+               </li>
+              </ul>
+              <div className="page-content-text">
+              USING WEB3 WALLET OR API:
             </div>
             <ul className="page-content-text">
               <li>
@@ -997,18 +1007,6 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
         <div className="page-content-block" id="dex">
           <div className="page-content-inner">
             <div className="page-content-title">DEX (Decentralized Exchange)</div>
-            <Link className="message-text" to="https://3dpswap.online">
-            <div className="page-lead-content">
-                 Swap via the Web3 UI
-                <div className="page-lead-button">Swap</div>
-            </div>
-            </Link>
-            <Link className="message-text" to="/mobile-wallet#dex">
-            <div className="page-lead-content">
-                 Swap via the Mobile wallet
-                <div className="page-lead-button">Swap</div>
-            </div>
-            </Link>
             <div className="page-content-text">
             A custom version of the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> {" "}
             module, which represents a full featured decentralized exchange based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> {" "}
@@ -1017,12 +1015,17 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
            </div>
            <ul className="page-content-text">
             <li>
-            Either can you leverage the <Link to="https://3dpswap.online">WEB3 DEX UI</Link> or 
-            the <Link to="/mobile-wallet#dex">Mobile Wallet</Link> to swap tokens. You can also become 
-            Liqidity Provoder and earn rewards in tokens.
+            No fees
             </li>
             <li>
-            Make Pull Request into the <Link to="https://github.com/3Dpass/swap">GitHub</Link> to add your token's logo. 
+            Both the <Link to="https://3dpswap.online">WEB3 DEX UI</Link> and 
+            the <Link to="/mobile-wallet#dex">Mobile Wallet</Link> can be used for swap. 
+            </li>
+            <li>
+            You can also become Liqidity Provider and earn rewards in tokens.
+            </li>
+            <li>
+            Submit a Pull Request into the <Link to="https://github.com/3Dpass/swap">GitHub</Link> to add your token's logo. 
             </li>
             </ul>
             <img

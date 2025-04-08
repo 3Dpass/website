@@ -179,18 +179,23 @@ const MobileWallet = () => {
         <div className="page-content-block first-page-block" id="download">
           <div className="page-content-inner">
             <div className="page-content-title">Download</div>
-            <div className="page-lead-content">
-              Android
-              <Link to="https://play.google.com/store/apps/details?id=com.threedpass.wallet">
-                <div className="page-lead-button">Play Store</div>
-              </Link>
-            </div>
-            <div className="page-lead-content">
-              GitHub
-              <Link to="https://github.com/3Dpass/threedpass/releases">
-                <div className="page-lead-button">Download</div>
-              </Link>
-            </div>
+              <ul className="page-content-text">
+                <li>
+                  Android: {" "}
+                  <Link to="https://play.google.com/store/apps/details?id=com.threedpass.wallet">
+                  Download from Play Store
+                  </Link>
+              </li>
+              <li>
+                  GitHub: {" "}
+                  <Link to="https://github.com/3Dpass/threedpass/release">
+                  Download from GitHub
+                  </Link>
+              </li>
+              <li>
+                  iOS: Current mobile wallet is iOS compatible but not available on the AppStore. 
+              </li>
+            </ul>
           </div>
         </div>
         <div className="page-content-block" id="recognition">
