@@ -280,6 +280,22 @@
   height: 198px;
 }
 
+.webwallet-line {
+  height: 63px;
+}
+
+.vested-line {
+  height: 128px;
+}
+
+.addresses-line {
+  height: 168px;
+}
+
+.troubleshooting-line {
+  height: 152px;
+}
+
 .scanproof-line {
   height: 129px;
 }

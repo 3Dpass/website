@@ -177,6 +177,19 @@ const Mainnet = () => {
             >
               How To Use The Web Wallet
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line webwallet-line"></div>
+            </div>
+          </a>
+          <a href="#rpc-api-endpoints">
+            <div className="page-nav-inside">
+              RPC API endpoints
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-create-new-address">
+            <div className="page-nav-inside">
+              How to create new address
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#unlock">
@@ -187,8 +200,27 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              How To Unlock Funds Mined
+              Vested Block Rewards
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line vested-line"></div>
+            </div>
+          </a>
+          <a href="#vesting-shedule">
+            <div className="page-nav-inside">
+              Vesting schedule
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-unlock-block-rewards">
+            <div className="page-nav-inside">
+              How to unlock block rewards
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-check-pending-locks">
+            <div className="page-nav-inside">
+              How to check pending locks
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#validator">
@@ -299,6 +331,31 @@ const Mainnet = () => {
             >
               Addresses and Keys
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line addresses-line"></div>
+            </div>
+          </a>
+          <a href="#generating-keys">
+            <div className="page-nav-inside">
+              Generating keys
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#inspecting-addresses-and-keys">
+            <div className="page-nav-inside">
+              Inspecting addresses and keys
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#inspecting-seed-phrase">
+            <div className="page-nav-inside">
+              Inspecting seed phrase
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#inspecting-private-key">
+            <div className="page-nav-inside">
+              Inspecting private-key
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#troubleshooting">
@@ -311,6 +368,31 @@ const Mainnet = () => {
             >
               Troubleshooting
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line troubleshooting-line"></div>
+            </div>
+          </a>
+          <a href="#no-peers">
+            <div className="page-nav-inside">
+              No peers
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#node-got-stuck">
+            <div className="page-nav-inside">
+              Node got stuck
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#falling-behind">
+            <div className="page-nav-inside">
+              Node is falling behind
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#ran-out-of-free-wasm-instances">
+            <div className="page-nav-inside">
+             Ran out of free WASM instances
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
         </div>
@@ -1601,6 +1683,7 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               downloaded, it might be connected to either one of the remote RPC API endpoints
               available or a local Node running on your computer.
             </div>
+            <div className="page-content-subtitle" id="rpc-api-endpoints">RPC API endpoints</div>
             <div className="page-content-text">
               <i>Disclaimer!</i> - All the public endpoints 
               are maintained by the community members who can set up their own privacy 
@@ -1608,7 +1691,7 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               
             </div>
             <div className="page-content-text"> 
-              Navigate to "Settings" to switch your current endpoint:
+              Navigate "Settings" to switch your current endpoint:
             </div>
             <img
               className="page-img"
@@ -1618,10 +1701,14 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
             />
             <div className="page-content-text">Mainnet public API endpoints:</div>
             <ul className="page-content-text">
-              <li>wss://rpc.3dpass.org - via the team</li>
-              <li>wss://rpc2.3dpass.org - via Breukmeister</li>
-              <li>wss://rpc3.3dpass.org</li>
-              <li>wss://rpc.p3d.top - via Lzmz</li>
+              <li>
+                The current RPC API providers list is available over this {" "}
+                <Link to="https://github.com/3Dpass/rpc-list/blob/main/list.txt">GitHub repo</Link>
+              </li>
+              <li>
+                Due to the project's decentralized nature this repo cannot embrace the ultimate list of the 
+                endpoints operating, providing just short number of well tested ones.
+              </li>
             </ul>
             <div className="page-content-text">Local Node:</div>
             <ul className="page-content-text">
@@ -1633,7 +1720,7 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="how-to-create-new-address">
               How to create new address:
             </div>
             <div className="page-content-text">
@@ -1657,24 +1744,72 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
         </div>
         <div className="page-content-block" id="unlock">
           <div className="page-content-inner">
-            <div className="page-content-title">How to unlock funds mined</div>
+            <div className="page-content-title">Vested block rewards</div>
             <div className="page-content-text">
-              Funds mined are getting unlocked partially by 10% each 10 days. In
-              order to unlock funds available sign unlock transaction:
+              There is the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/rewards">Rewards</Link> module operating within
+              the Ledger of Things runtime which is responsible for the block rewards. Block reward is split between the block author (miner) and 
+              validators 50/50. Both mining and validating rewards are put on vesting schedule, which allows for its gradual unlock over time. 
+            </div>
+            <div className="page-content-subtitle" id="vesting-shedule">Vesitng schedule</div>
+            <div className="page-content-text">
+              The funds mined are getting available to unlock in accordance with the vesting 
+              schedule:
+            </div>
+            <ul className="page-content-text">
+              <li>by 10% every ~10 days (in blocks)</li>
+            </ul>
+            <div className="page-content-subtitle" id="how-to-unlock-block-rewards">How to unlock</div>
+            <div className="page-content-text">
+              
+              It is required to claim the available amount of funds by signing the <i>Unlock</i> transaction with 
+              the block author's address. 
             </div>
             <ul className="page-content-text">
               <li>Open the <Link to="https://wallet.3dpass.org/">web wallet</Link></li>
-              <li>Choose "Unlock funds mined":</li>
+              <li>Choose "Unlock"</li>
+              <li>Sign the transaction with the block author's address</li>
             </ul>
             <img
               className="page-img"
-              src="/images/unlock_mined1.png"
+              src="/images/unlock_mined_2.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              If you still have some issues, despite the fact that the lock
-              period has expired, check <Link to="/mainnet#cant-unlock">this case</Link> for troubleshooting
+              <i>Notice!</i> All the funds available by the time are going to be unlocked immediately, 
+              as long as the following conditions are met in relation to the mining address:
+            </div> 
+            <ol className="page-content-text">
+              <li>The lock period has expired (the block height it is scheduled for is in the past)</li>
+              <li>There is at least one lock record scheduled for the future</li>
+            </ol>
+            <div className="page-content-text">
+              e.g. If you have had a long period of inactivity (3 months or longer) since you mined your coins, 
+              and there is a buch of funds in the wallet still locked, because you have forgotten to do "Unlock" in time.
+              Although, you have your old locks expired long ago, yet there is no lock records scheduled for the future.
+              If that is the case, all you need to do to get your funds unlocked is to mine 1 block to set a lock 
+              record for the future and then do "Unlock".  
+            </div>
+            <div className="page-content-subtitle" id="how-to-check-pending-locks">How to check pending locks</div>
+            <div className="page-content-text">
+              The lock records are set and managed by the <i>Rewards</i> module for both miners and validators.
+              Open the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/chainstate">Polka js wallet</Link> {" "}
+              and navigate <i>Chain state</i>. Use the  <i>rewards - rewardLocks</i> method to fetch the lock records:
+              <pre className="main-pre">
+1451520: 130,229,305,874,880<br />
+1452960: 130,402,944,728,280<br />
+1454400: 130,370,814,614,280<br />
+1455840: 130,174,707,588,480<br />
+1457280: 130,174,707,588,480<br />
+1458720: 114,955,805,218,480
+              </pre>
+              <ul className="page-content-text">
+                <li>
+                 The record format:<br />
+                [block height]: [the amount in Crumbs locked]<br />
+                e.g. 130,229,305,874,880 = 130.229,305,874,880 P3D
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -2338,7 +2473,7 @@ debris minor crater swear crane whale clever into now tone grid proud
               </li>
               <li>ed25519 (Edwards) - used for GRANDPA finalization</li>
             </ul>
-            <div className="page-content-subtitle">Generating keys</div>
+            <div className="page-content-subtitle" id="generating-keys">Generating keys</div>
             <div className="page-content-text">
               Use key generate command to generate a random regular account and
               the key pair:
@@ -2360,7 +2495,7 @@ Account ID: 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99bc99df795e11b804c5ebb2c96b10 P
 SS58 Address: d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek
                     `}
             </pre>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="inspecting-addresses-and-keys">
               Inspecting addresses and keys
             </div>
             <div className="page-content-text">
@@ -2409,7 +2544,7 @@ Invalid phrase/URI given
 Network ID/Version: 71 Public key (hex): 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99bc99df795e11b804c5ebb2c96b10 Account ID: 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99bc99df795e11b804c5ebb2c96b10 Public key (SS58): d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek SS58 Address: d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek
                     `}
             </pre>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="inspecting-seed-phrase">
               Inspecting a seed phrase
             </div>
             <div className="page-content-text">
@@ -2430,7 +2565,7 @@ Network ID/Version: 71 Public key (hex): 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99b
 Secret phrase: debris minor crater swear crane whale clever into now tone grid proud Network ID: 71 Secret seed: 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9a Public key (hex): 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Account ID: 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Public key (SS58): d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS SS58 Address: d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS
                     `}
             </pre>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="inspecting-private-key">
               Inspecting a private key
             </div>
             <div className="page-content-text">
@@ -2472,7 +2607,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
         <div className="page-content-block" id="troubleshooting">
           <div className="page-content-inner">
             <div className="page-content-title">Troubleshooting</div>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="no-peers">
               The Node has no peers
             </div>
             <img
@@ -2513,7 +2648,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                 Learn more about the bootnodes on the project <Link to="https://github.com/3Dpass/3DP/wiki/Setting-up-bootnode">Wiki</Link>.
               </li>
             </ul>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="node-got-stuck">
               Node got stuck at the certain heght or it won't start syncing
             </div>
             <div className="page-content-text">
@@ -2544,7 +2679,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                 your machine.
               </li>
             </ul>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="falling-behind">
               The node is always falling behind and wouldn't catch
               up with the chain
             </div>
@@ -2564,7 +2699,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                 folder <i>~/3dp-chain/chains/3dpass/db</i> with the new one.
               </li>
             </ul>
-            <div className="page-content-subtitle">
+            <div className="page-content-subtitle" id="ran-out-of-free-wasm-instances">
               "Ran out of free WASM instances"
             </div>
             <img
