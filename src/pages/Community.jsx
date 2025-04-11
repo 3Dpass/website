@@ -1130,7 +1130,7 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title url-empty-title"></div>
               <ul className="page-content-text">
-                <Link to="https://telemetry.3dpscan.io">
+                <Link to="https://3dpass.network">
                   <li>Telemetry server</li>
                 </Link>
                 <Link to="https://polkadot.js.org/apps/?rpc=wss%253A%252F%252Frpc.3dpass.org">

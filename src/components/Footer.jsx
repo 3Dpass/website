@@ -123,7 +123,7 @@ const Footer = () => {
             <a href="https://3dpswap.online">
               <div className="footer-item">3DPswap DEX UI</div>
             </a>
-            <a href="https://telemetry.3dpscan.io">
+            <a href="https://3dpass.network">
               <div className="footer-item">Network Telemetry</div>
             </a>
             <a href="/mainnet">

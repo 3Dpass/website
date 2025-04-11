@@ -399,7 +399,7 @@ const Mainnet = () => {
       </div>
       <div className="page-content">
         <div className="sub-header-holder">
-          <a href="https://telemetry.3dpscan.io/">
+          <a href="https://3dpass.network/">
             <div className="one-subheader">Mainnet Telemetry</div>
           </a>
           <a href="https://wallet.3dpass.org/">
@@ -801,7 +801,7 @@ pool_rate >= 2*limit`}
             <pre className="main-pre">
               ./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain
               mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url
-              "wss://submit.telemetry.3dpass.org/submit 0" --author 0x...
+              "wss://submit.3dpass.network/submit 0" --author 0x...
               --threads 2 --no-mdns --rpc-cors all --unsafe-ws-external
               --unsafe-rpc-external --rpc-port 9933
             </pre>
@@ -1190,7 +1190,7 @@ environment:
             </div>
             <div className="page-content-text">
               7. Run the Node and Miner.{" "}
-              Check your node on the telemetry <Link to="https://telemetry.3dpscan.io/#/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">list</Link>.{" "}
+              Check your node on the telemetry <Link to="https://3dpass.network">list</Link>.{" "}
               
               </div>
               <div className="page-content-text">
@@ -1262,7 +1262,7 @@ GRANDPA_KEY="$(./p3d key inspect --scheme Ed25519 "$MEMO_SEED" | sed -n 's/.*Sec
 
 # running the Node
 ./p3d --chain mainnetSpecRaw.json --unsafe-ws-external --unsafe-rpc-external --rpc-cors=all --no-mdns \
---validator --base-path /var/chain --author "$ADDRESS" --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --name MY_NODE_NAME
+--validator --base-path /var/chain --author "$ADDRESS" --telemetry-url "wss://submit.3dpass.network/submit 0" --name MY_NODE_NAME
                     `}
             </pre>
             <div className="page-content-text">
@@ -1288,7 +1288,7 @@ GRANDPA_KEY="$(./p3d key inspect --scheme Ed25519 "$MEMO_SEED" | sed -n 's/.*Sec
              <strong><i>`--validator`</i></strong> - enables the block finality verification (PoA), mandatory for every Node
              </li>
              <li>
-             <strong><i>`--telemetry-url`</i></strong> - is the telemetry server URL (<i>"wss://submit.telemetry.3dpscan.io/submit 1"</i> will 
+             <strong><i>`--telemetry-url`</i></strong> - is the telemetry server URL (<i>"wss://submit.3dpass.network/submit 1"</i> will 
               share expanded data to the server)
              </li>
              <li>
@@ -1318,7 +1318,7 @@ docker compose rm -f
               </li>
               <li>
               Compare your machine configuraton to the other ones 
-              presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
+              presented on the network <Link to="https://3dpass.network">https://3dpass.network</Link>
               </li>
             </ul>
           </div>
@@ -1496,7 +1496,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
             </div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
+./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.3dpass.network/submit 0" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
                     `}
             </pre>
             <ul className="page-content-text">
@@ -1522,7 +1522,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
              <strong><i>`--validator`</i></strong> - enables the block finality verification (PoA), mandatory for every node
              </li>
              <li>
-             <strong><i>`--telemetry-url`</i></strong> - is the telemetry server URL (<i>"wss://submit.telemetry.3dpscan.io/submit 1"</i> will 
+             <strong><i>`--telemetry-url`</i></strong> - is the telemetry server URL (<i>"wss://submit.3dpass.network/submit 1"</i> will 
               share expanded data to the server)
              </li>
              <li>
@@ -1538,7 +1538,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
             <div className="page-content-text">
               Make sure you have the external port <i>`30333`</i> open for incoming
               connections and forwarded to your server's local LAN IP. Check your Node 
-              on the telemetry server <Link to="https://telemetry.3dpscan.io/">list</Link>
+              on the telemetry server <Link to="https://3dpass.network">list</Link>
             </div>
             <div className="page-content-text" id="linux-mac-sync">
               5. Wait until the Node gets synced. Make sure it is up to date with the network. {" "}
@@ -1614,7 +1614,7 @@ bun miner.js --host 127.0.0.1 --port 9933
               </li>
               <li>
               Compare your machine configuraton to the other ones 
-              presented on the network <Link to="https://telemetry.3dpscan.io/#stats/0x6c5894837ad89b6d92b114a2fb3eafa8fe3d26a54848e3447015442cd6ef4e66">https://telemetry.3dpscan.io</Link>
+              presented on the network <Link to="https://3dpass.network">https://3dpass.network</Link>
               </li>
             </ul>
             <div className="page-content-subtitle" id="linux-mac-miner-adjustment">
@@ -2128,17 +2128,17 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              11. Would you like to highlight your Node with the "dot" on the <Link to="https://telemetry.3dpscan.io/">telemetry list</Link>, use this flag with the running comand:
+              11. Would you like to highlight your Node with the "dot" on the <Link to="https://3dpass.netwokrk/">telemetry list</Link>, use this flag with the running comand:
             </div>
             <pre className="main-pre">
               {`
---telemetry-url "wss://submit.telemetry.3dpscan.io/submit 1"
+--telemetry-url "wss://submit.3dpass.network/submit 1"
                     `}
             </pre>
             <div className="page-content-text">like this:</div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 1" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
+./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.3dpass.network/submit 1" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
                     `}
             </pre>
             <div className="page-content-text">
@@ -2717,7 +2717,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
             </div>
             <pre className="main-pre">
               {`
-./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.telemetry.3dpscan.io/submit 0" --author <MINING ADDRESS> --threads 2 --no-mdns --max-runtime-instanses 256
+./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.3dpass.network/submit 0" --author <MINING ADDRESS> --threads 2 --no-mdns --max-runtime-instanses 256
               `}
             </pre>
           </div>
