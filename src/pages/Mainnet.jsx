@@ -1727,9 +1727,12 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               1. Install the polkadot.js <Link to="https://polkadot.js.org/extension/">web browser extension</Link>.
             </div>
             <div className="page-content-text">
-              2. Generate new address for 3dpass - The Ledger of Things network. Keep your seed phrase in a safe
-              place. There is no any possible ways to recover if it's lost. You
-              can also import your address from the seed phrase if you already have one. 
+              2. Pick up the <i>"3dpass - The Ledger of Things"</i> network to create new address for.
+               Keep your seed phrase in a safe place (there is no possible way to recover). You
+              can also import your address from the seed phrase, if you have already had one. 
+              Once the account is generated and a password set up, you will be provided with an
+              additional backup <i>.json </i> file encrypted with your password and containing 
+              your private key. 
             </div>
             <img
               className="page-img"
@@ -1738,7 +1741,8 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              3. Open <Link to="https://wallet.3dpass.org/">3DPass wallet</Link> in your web browser and provide polkadot extension with the access for the account to be injected into the wallet.  
+              3. Open the <Link to="https://wallet.3dpass.org/">3DPass wallet</Link> in your web browser 
+              and allow the Polkadot extension to access your account, so that it can inject it into the wallet. 
             </div>
           </div>
         </div>
@@ -1780,15 +1784,14 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               as long as the following conditions are met in relation to the mining address:
             </div> 
             <ol className="page-content-text">
-              <li>The lock period has expired (the block height it is scheduled for is in the past)</li>
-              <li>There is at least one lock record scheduled for the future</li>
+              <li>The lock period has expired</li>
+              <li>There is at least one lock record in place scheduled for the future</li>
             </ol>
             <div className="page-content-text">
-              e.g. If you have had a long period of inactivity (3 months or longer) since you mined your coins, 
-              and there is a buch of funds in the wallet still locked, because you have forgotten to do "Unlock" in time.
-              Although, you have your old locks expired long ago, yet there is no lock records scheduled for the future.
-              If that is the case, all you need to do to get your funds unlocked is to mine 1 block to set a lock 
-              record for the future and then do "Unlock".  
+              e.g. If you have experienced a long period of inactivity (3 months or longer) since you mined your coins, 
+              and there is a bunch of funds in the wallet still locked, because you have forgotten to do <i>Unlock</i> in time.
+              Although, you have all of your locks expired long ago, yet there is no lock records scheduled for the future.
+              In the case, all you need to do is to mine 1 block (to set up a lock record for the future) and then do <i>Unlock</i>.
             </div>
             <div className="page-content-subtitle" id="how-to-check-pending-locks">How to check pending locks</div>
             <div className="page-content-text">
