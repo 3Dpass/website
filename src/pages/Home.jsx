@@ -30,10 +30,17 @@ const Home = () => {
 
   const [news, setNews] = useState([
     {
-      title: "New blockchain explorer has come into operation!",
+      title: "New telemetry server came into operation!",
       description:
-        "Brand new open source blockchain explorer has come into operation and is available via 3dpscan.xyz. Github: https://github.com/3Dpass/explorer",
-      date: "Apr 28, 2025",
+        "The telemetry server is now available via https://3dpass.network",
+      date: "Apr 11, 2025",
+      link: "https://3dpass.network"
+    },
+    {
+      title: "New blockchain explorer came into operation!",
+      description:
+        "Brand new open source blockchain explorer came into operation and is available via https://3dpscan.xyz",
+      date: "Apr 08, 2025",
       link: "https://3dpscan.xyz"
     },
     {
@@ -41,13 +48,6 @@ const Home = () => {
       description:
         "The assetss-erc20 interface and precompile have been deployed on testnet, which allows for wrapped local assets to be accessible through the EVM.",
       date: "Mar 29, 2025",
-      link: "https://github.com/3Dpass/3DP/tree/test"
-    },
-    {
-      title: "EVM cross-platform transactions are tested!",
-      description:
-        "P3Dt native - P3Dt ERC20 (mapped) cross-platform transfers are proved successful on testnet!",
-      date: "Mar 05, 2025",
       link: "https://github.com/3Dpass/3DP/tree/test"
     },
   ]);

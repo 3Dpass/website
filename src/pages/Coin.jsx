@@ -164,7 +164,7 @@ ETH SIGNATURE
           </a>
           <a href="#distribution-rewards">
             <div className="page-nav-inside">
-              Mining Rewards and Emission
+              Block Rewards and Emission
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -232,7 +232,20 @@ ETH SIGNATURE
              <Link to="/3DPRC-2_v2.pdf">
                3DPRC-2 tokenization standard (Request for Comments)
              </Link>
-           </div>
+             </div>
+             <div className="page-content-subtitle" id="economy-model">
+                The economy model
+              </div>
+              <div className="page-content-text">
+              The 3DPRC2 tokenization standard exploits the {" "}
+              <Link to="/features#scanproof">Proof of Scan</Link> protocol for users' objects authentication. 
+              Both <Link to="/coin#distribution-rules">block authors</Link> (miners) and  {" "}
+              <Link to="/coin#distribution-validation">validators</Link> participate in the two-steps verification 
+              process which allows for the network to come to an agreement upon the 
+              object authenticity in a trustless way. There is the object authentication fee that must be 
+              covered by users regardless of whether or not the object is ultimately approved. 
+              The fee is spit 50/50 between the block authors and validators. 
+             </div>
           </div>
         </div>
         <div className="page-content-block" id="pitch-dech">
@@ -448,13 +461,20 @@ ETH SIGNATURE
               <li>Local assets: poscanAssets module - EVM assets-erc20 (precompile) integration (<Link to="https://github.com/3Dpass/3DP/tree/test/precompiles/assets-erc20"><i>Done</i></Link>)</li>
               <li>Docs and guidelines (<i>In the process</i>)</li>
             </ul>
-            <li>DEX: Cross-chain bridge over to Ethereum:</li>
+            <li>DEX: Two-ways cross-chain bridge with Ethereum:</li>
             <ul className="page-content-text">
-              <li>Testing different EVM-based bridges' smart-contracts on testnet (<i>In the process</i>)</li>
-              <li>Launching the Counterstake bridge contracts and its infrastructure (<i>In the process</i>)</li>
-              <li>Testing "wrapped" USDT within the LoT eco-system (<i>In the process</i>)</li>
+              <li>Testing different EVM-based bridges' smart-contracts on testnet (<i>Done</i>)</li>
+              <li>Launching the Counterstake bridge contracts and its infrastructure:</li>
+                <ul className="page-content-text">
+                  <li>Testing the Counterstake <Link to="https://github.com/byteball/counterstake-bridge/tree/master/evm/contracts">contracts</Link> on testnet (<i>Done</i>)</li>
+                  <li>Adding 3dpass mainnet to the <Link to="https://github.com/byteball/counterstake-bridge?tab=readme-ov-file"></Link> Counterstake whatchdog bot (<i>In the process</i>)</li>
+                  <li>Deploy the Counterstake bridge contracts to Ethereum (<i>In the process</i>)</li>
+                  <li>Setting up USDT import and export on both sides: LoT and Ethereum</li>
+                  <li>Running the Counterstake <Link to="https://github.com/byteball/counterstake-bridge">watchdog bots</Link></li>
+                </ul>
               <li>Preparing the migration version (<i>In the process</i>)</li>
-              <li>Mainnet release</li>
+              <li>Mainnet EVM release</li>
+              <li>Testing "wrapped" USDT within the LoT eco-system</li>
               <li>Docs and guidelines</li>
             </ul>
             <li>Web wallet:</li>
@@ -485,6 +505,7 @@ ETH SIGNATURE
             <ul className="page-content-text">
                <li>New open source blockchain explorer  (<i>Done</i>: <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)</li>
                <li>Archive Nodes and RPC API endpoints (<i>Done</i>: <Link to="https://github.com/3Dpass/rpc-list">The endpoint providers list</Link>)</li>
+               <li>New telemetry server (<i>Done</i>: <Link to="https://3dpass.network">3dpass.network</Link>)</li>
               </ul>
              <li>3DPRC-2: (<i>in the process, lead by PaulS and Mikhail</i>):</li>
              <ul className="page-content-text">
@@ -655,8 +676,8 @@ ETH SIGNATURE
               </div>
               <div className="page-table-left page-table-info">Telemetry</div>
               <div className="page-table-right page-table-content">
-                <Link to="https://telemetry.3dpscan.io">
-                  https://telemetry.3dpscan.io
+                <Link to="https://3dpass.neetwork">
+                  https://3dpass.network
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Mining</div>
@@ -833,37 +854,46 @@ ETH SIGNATURE
                 P3D mining rules (PoW ASIC-resistant, CPU-oriented protocol)
               </div>
               <div className="page-content-text">
-                According to the <Link to="/coin#white-papper">White Paper</Link> there is a bunch 
-                of <Link to="/proof-of-scan#new-block">mining rules</Link> every
-                miner has to follow in order to get rewarded by the network for
-                each new block production.
-              </div>
+                According to the <Link to="/coin#white-papper">White Paper</Link>, there is a bunch 
+                of <Link to="/proof-of-scan#new-block">block production rules</Link> every
+                miner has to follow in order to get rewarded by the network. While solving the PoW task, 
+                miners put their efforts on picking up a specific 3D object shape used as <i>nonce</i> {" "}
+                and then participate in <Link to="/proof-of-scan#break">Tie Break Competition</Link>. 
+                However, block authors are not fully responsible for the blockchain finalization. 
+                Instead, Best chain is getting finalized by the Validator set to ensure its {" "} 
+                <Link to="/features#ledger-why-deterministic-blockchain-finality">deterministic finality</Link>.
+                Explore the <Link to="/features#scanproof">Proof of Scan</Link> protocol {" "}
+                as well as <Link to="/features#ledger">The Ledger of Things</Link> p2p network to 
+                dive into detail.
+                </div>
               <div className="page-content-subtitle" id="distribution-rewards">
-                Mining rewards and emission
+                Block rewards and emission
               </div>
               <div className="page-content-text">
-                Miners are puting their efforts to pick up some specific 3D object shape corresponding the
-                rules govern whether or not new block will be rewarded by the
-                network. Mining share is 50% of total block rewards (the rest 50% is being distributed among the Validators PoA)
-                P3D emission curve rules are:
+                Mining share is totaling 50% of block rewards, and the rest 50% is being distributed 
+                among the <Link to="/coin#distribution-validation">Validators</Link>.
+              </div>
+              <div className="page-content-text">
+                <strong>Emission curve:</strong>
               </div>
               <ul className="page-content-text">
                 <li>
-                  Starting from the block going after the genesis, the block authorship
-                  rewards is set up at 500 P3D per block;
+                  Starting from the block going after the genesis, the block
+                  reward is set up at 500 P3D per block;
                 </li>
                 <li>
-                  Every 243000 blocks the rewards amount gets diminished dividing
-                  by 1.2.
+                  Every 243000 blocks the reward amount gets diminished dividing
+                  by 1.2;
+                </li>
+                <li>
+                  Follow the emission curve implementation on the {" "}
+                  <Link to="https://github.com/3Dpass/3DP/blob/9986ce55e517c61f425ecec3b6267b2ea1f93b1a/runtime/src/lib.rs#L431">Github</Link>. 
                 </li>
               </ul>
               <div className="page-content-text">
-                Given the fact that the network speed is 1 block per 60 sec, {" "}
-                thus each step of 243000 blocks would approximately take about {" "}
-                169 days. Check on current mining rewards and distribution over {" "}
-                the <Link to="http://3dpassmining.info">3dpassmining.info</Link> and {" "}
-                the <Link to="https://telemetry.3dpscan.io/">network telemetry</Link>. {" "}
-                Follow the <Link to="/mainnet">mining guidelines</Link> to join competition.
+                Block target time is set at 60 sec, {" "}
+                therefore, each 243000 blocks step will approximately take about {" "}
+                169 days to pass.
               </div>
               <img
                 className="page-img"
@@ -871,6 +901,12 @@ ETH SIGNATURE
                 src="/images/emission1.png"
                 alt="img"
               />
+              <div className="page-content-text">
+                Stay up to date with the current block rewards distribution over {" "}
+                the  Mining Leaderborad <Link to="http://3dpassmining.info">3dpassmining.info</Link> {" "}
+                or via the open source blockchain explorer <Link to="https://3dpscan.xyz/">3dpscan.xyz</Link>. {" "}
+                Follow the <Link to="/mainnet">mining guidelines</Link> to join the competition.
+              </div>
               <div
                 className="page-content-subtitle"
                 id="distribution-validation"
@@ -878,13 +914,16 @@ ETH SIGNATURE
                 Validation service fee (PoA)
               </div>
               <div className="page-content-text">
-                Validators represent the most reliable set of the network {" "}
-                authorities eligible to vote for Best chain finalizatiion as well {" "}
-                as to participate in the user object verification process specified in  {" "}
-                <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> tokenization standard. {" "}
-                Current validator set gets rewarded by the network 50% of total block rewards (the rest 50% goes to the block author). {" "}
-                The user objects processing rewards: 50% of the object verification fee (paid by user). {" "}
-                Rewards are getting distributed in equal among the current validator set members.  <Link to="/mainnet#validator">How to become Validator</Link>
+                <Link to="/mainnet#validator-general">Validators </Link>represent a set of the most 
+                reliable Nodes (authorities) eligible to vote for Best chain finalization in accordance 
+                with the GRANDPA <Link to="/features#scanproof-deterministic">deterministic finality</Link> {" "}
+                protocol rules. The validator set is open to join for any Node that meets the {" "}
+                <Link to="/mainnet#validator-requirements">SLA</Link> requirements. Current members are 
+                automatically selected and managed by the validator set module, which exploits {" "}
+                the <Link to="/mainnet#validator-threshold">collateral-based</Link> mechanism to 
+                prevent the protocol rules violations. Validators share is 50% of total block 
+                rewards, which is distributed among the current set members equally. Follow this {" "}
+                <Link to="/mainnet#validator">tutorial</Link> to set up Validator.
               </div>
               <div
                 className="page-content-subtitle"
