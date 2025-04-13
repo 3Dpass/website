@@ -621,7 +621,7 @@ ETH SIGNATURE
                 0.000000000001 P3D
               </div>
               <div className="page-table-left page-table-info">
-                Coin Decimals
+                Decimals
               </div>
               <div className="page-table-right page-table-content">12</div>
               <div className="page-table-left page-table-info">
@@ -639,6 +639,12 @@ ETH SIGNATURE
               </div>
               <div className="page-table-right page-table-content">
                 120 blocks, <Link to="/mainnet#validator">how to become Validator</Link>
+              </div>
+              <div className="page-table-left page-table-info">
+                Emission curve
+              </div>
+              <div className="page-table-right page-table-content">
+                Follow the <Link to="https://github.com/3Dpass/3DP/blob/9986ce55e517c61f425ecec3b6267b2ea1f93b1a/runtime/src/lib.rs#L431">GitHub</Link> link.
               </div>
               <div className="page-table-left page-table-info">GitHub</div>
               <div className="page-table-right page-table-content">
@@ -724,12 +730,6 @@ ETH SIGNATURE
               <div className="page-table-right page-table-content">
                 <a href="#road-map">Road map page</a>
               </div>
-              <div className="page-table-left page-table-info">
-                Official Website
-              </div>
-              <div className="page-table-right page-table-content">
-                <Link to="/">https://3dpass.org/</Link>
-              </div>
               <div className="page-table-left page-table-info">Marketcap</div>
               <div className="page-table-right page-table-content">
               <Link to="https://www.coingecko.com/en/coins/3dpass">
@@ -737,12 +737,6 @@ ETH SIGNATURE
                 </Link>
                 ; <Link to="https://coinmarketcap.com/currencies/3dpass/">
                   CoinMarketCap
-                </Link>
-              </div>
-              <div className="page-table-left page-table-info">Licence</div>
-              <div className="page-table-right page-table-content">
-                <Link to="https://github.com/3Dpass/3DP/blob/main/LICENSE">
-                  GPL-3.0 license
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Fork</div>
