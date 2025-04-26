@@ -216,22 +216,22 @@ ETH SIGNATURE
         <div className="page-content-block" id="white-papper">
           <div className="page-content-inner">
           <div className="page-content-title">White Paper</div>
-           <div className="page-content-text">
+          <div className="page-content-text">
               Download (<i>.pdf</i>): {" "}
-            <Link to="/3DPass_white_paper.pdf">
+             <a href="/3DPass_white_paper.pdf" target="_blank" rel="noopener noreferrer">
               The Ledger of Things White Paper
-            </Link>
-           </div>
+             </a>
+         </div>
           </div>
         </div>
         <div className="page-content-block" id="3DPRC-2">
           <div className="page-content-inner">
             <div className="page-content-title">3DPRC-2</div>
             <div className="page-content-text">
-              Download (<i>.pdf</i>): {" "}
-             <Link to="/3DPRC-2_v2.pdf">
+               Download (<i>.pdf</i>): {" "}
+               <a href="/3DPRC-2_v2.pdf" target="_blank" rel="noopener noreferrer">
                3DPRC-2 tokenization standard (Request for Comments)
-             </Link>
+               </a>
              </div>
              <div className="page-content-subtitle" id="economy-model">
                 The economy model
@@ -252,10 +252,10 @@ ETH SIGNATURE
           <div className="page-content-inner">
             <div className="page-content-title">Pitch Deck Slides</div>
               <div className="page-content-text">
-                Download (<i>.pdf</i>): {" "}
-                <Link to="/3Dpass_pitch_deck.pdf">
-                Pitch Deck Slides
-                </Link>
+                 Download (<i>.pdf</i>): {" "}
+                 <a href="/3Dpass_pitch_deck.pdf" target="_blank" rel="noopener noreferrer">
+                 Pitch Deck Slides
+                 </a>
             </div>
           </div>
         </div>

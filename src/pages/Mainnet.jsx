@@ -1948,7 +1948,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
             </pre>
             <div className="page-content-text">
               There supposed to be three keys in the folder (the <i>Mining key, 
-              GRANDPA key and ImOnline key</i>). Check the if all of the keys meet
+              GRANDPA key and ImOnline key</i>). Check if all of the keys meet
               the required format: 
             </div>
             <img

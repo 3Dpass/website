@@ -196,6 +196,9 @@ const MobileWallet = () => {
                   iOS: Current mobile wallet is iOS compatible but not available on the AppStore. 
               </li>
             </ul>
+            <div className="page-content-text">
+              <i>Disclaimer: This is an open source free software. Use it at your own risk. </i>
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="recognition">

@@ -1027,14 +1027,15 @@ const Community = () => {
               waiting period before distribution.
             </div>
             <div className="page-content-text">
-              Follow the <Link to="/governance">detailed description</Link> of the Open Governance to learn about full process.  
+              Follow the <Link to="/governance">detailed description</Link> to explore the underlying logic.  
             </div>
-            <a className="message-text" href="https://wallet.3dpass.org/governance/">
-            <div className="page-lead-content">
-              Governance online
-                <div className="page-lead-button">follow</div>
+            <div className="page-content-text">
+              Track the {" "} 
+              <a href="https://wallet.3dpass.org/governance/">
+              Council motions
+              </a> {" "} 
+              online.
             </div>
-            </a>
           </div>
         </div>
         <div className="page-content-block" id="representatives">
@@ -1289,6 +1290,9 @@ const Community = () => {
               <Link to="https://github.com/Snezhnaya-Fatui/p3d-mainnet-db">Repo 2</Link></li> 
               <li><Link to="/mainnet">Mainnet guidelines</Link></li>
             </ul>
+            </div>
+            <div className="page-content-text">
+              <i>Disclaimer: This is an open source free p2p software. Use it at your own risk. </i>
             </div>
             <div className="page-table">
               <div className="page-table-header">
