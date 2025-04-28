@@ -1179,14 +1179,11 @@ const Community = () => {
               <Link to="https://www.mexc.com/exchange/P3D_USDT">
                   <li>MEXC P3D/USDT</li>
                 </Link>
-                <Link to="https://xeggex.com/market/P3D_USDT">
-                  <li>Xeggex P3D/USDT</li>
-                </Link>
-                <Link to="https://xeggex.com/market/P3D_BTC">
-                  <li>Xeggex P3D/BTC</li>
-                </Link>
                 <Link to="https://www.coinex.com/en/exchange/p3d-usdt">
                   <li>Coinex P3D/USDT</li>
+                </Link>
+                <Link to="https://nonkyc.io/market/P3D_USDT">
+                  <li>NonKYC P3D/USDT</li>
                 </Link>
                 <Link to="https://3dpswap.online">
                   <li>3DPswap DEX</li>
@@ -1202,20 +1199,17 @@ const Community = () => {
                 <Link to="https://x.com/3dpass_open_gov">
                   <li>X (The Open Gov news)</li>
                 </Link>
+                <Link to="https://x.com/3DpassCommunity">
+                  <li>X 3dpassCommunity</li>
+                </Link>
                 <Link to="https://twitter.com/3DPassTR">
-                  <li>X (community)</li>
+                  <li>X 3dpassTR</li>
                 </Link>
                 <Link to="https://twitter.com/3DPassArmy">
-                  <li>X (community)</li>
-                </Link>
-                <Link to="https://www.youtube.com/channel/UCYkrRxTgAQYwzFqRuQPOZ4w">
-                  <li>Youtube</li>
-                </Link>
-                <Link to="https://www.instagram.com/3dpass_org/">
-                  <li>Instagram</li>
+                  <li>X 3Dpass Army</li>
                 </Link>
                 <Link to="https://discord.com/invite/u24WkXcwug">
-                  <li>Discord</li>
+                  <li>Discord [Genesis]</li>
                 </Link>
               </ul>
             </div>
@@ -1253,12 +1247,6 @@ const Community = () => {
               <ul className="page-content-text">
                 <Link to="https://github.com/3Dpass/">
                   <li>3Dpass GitHub [Genesis]</li>
-                </Link>
-                <Link to="https://github.com/easy-3dp">
-                  <li>Eeasy-3dp Node</li>
-                </Link>
-                <Link to="https://github.com/3DP-The-AllFather/unofficial-3dp-miner">
-                  <li>3DP-The-AllFather miner</li>
                 </Link>
                 <Link to="https://github.com/seineken/unofficial-3dp-miner/">
                   <li>Seineken's miner "HiveOS integration"</li>
