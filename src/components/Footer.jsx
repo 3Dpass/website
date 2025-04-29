@@ -138,8 +138,8 @@ const Footer = () => {
             <a href="/mainnet#chain">
             <div className="footer-item">On-chain Identity</div>
             </a>
-            <a href="https://github.com/3Dpass/3DP/wiki">
-              <div className="footer-item">Development Docs</div>
+            <a href="https://deepwiki.com/3Dpass/3DP">
+              <div className="footer-item">Dev Wiki</div>
             </a>          
           </div>
         </div>

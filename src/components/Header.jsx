@@ -117,7 +117,6 @@ const Header = () => {
               Mainnet
             </div>
           </Link>
-
           <div
             className="hamburger-menu"
             onClick={() => setOpenMenu(!openMenu)}
@@ -198,11 +197,22 @@ const Header = () => {
                 Grant program
               </div>
             </Link>
+            <Link to="https://deepwiki.com/3Dpass/3DP">
+              <div
+                className={
+                  location.indexOf("wiki") > -1
+                    ? "right-menu-nav active"
+                    : "right-menu-nav"
+                }
+              >
+                Dev Wiki
+              </div>
+            </Link>
           </div>
         </div>
         <div className="header-right-navs">
-          <Link to="/assets">
-            <Button type="button" label="Create Your Asset" />
+          <Link to="https://deepwiki.com/3Dpass/3DP">
+            <Button type="button" label="Dev Wiki" />
           </Link>
         </div>
       </div>
