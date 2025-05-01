@@ -176,7 +176,7 @@ ETH SIGNATURE
           </a>
           <a href="#distribution-transaction">
             <div className="page-nav-inside">
-              Transaction Fee
+              Transaction Fees
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -923,14 +923,34 @@ ETH SIGNATURE
                 className="page-content-subtitle"
                 id="distribution-transaction"
               >
-                Transaction fee
+                Transaction fees
               </div>
               <div className="page-content-text">
-                3Dpass leverages its transaction fee mechanism in the way the most blockchain networks do. New transaction might be
-                attached to a block by its author (miner) while in construction. The block author is willing to either accept or reject, dependidng on both the transaction weight and transaction fee proposed by its sender. Minimum transaction fee
-                to propose is 1 Crumb/byte (0.000000000001 P3D/byte).
-                weight.
-              </div>
+                The Ledger of Things follows conventional Substrate approach which is referred to as the dynamic fees.  
+                The fees are split into two components:
+               </div>
+               <ol className="page-content-text">
+                 <li>Base fees: These are burned (removed from circulation to avoid potential abuse form block authors)</li>
+                 <li>Tips to increase transaction priority: These are paid from senders to block authors (miners)</li>
+               </ol>
+               <div className="page-content-text">
+                This distribution mechanism is implemented in the {" "}
+                <Link to="https://github.com/3Dpass/3DP/blob/main/runtime/src/lib.rs#L343"><i>DealWithFees</i></Link> structure in the runtime, 
+                which handles the unbalanced amounts from transaction fees.
+               </div>
+               <div className="page-content-text">
+                The base transaction fee itself consists of two parts:
+               </div>
+               <ul className="page-content-text">
+                <li>Length fee (starts at 0.0000000000001 P3D): A fee proportional to the transaction's size in bytes</li>
+                <li>Weight fee (starts at 0.001 P3D): A fee calculated based on the computational complexity (weight) of the transaction</li>
+               </ul>
+               <div className="page-content-text">
+                The <Link to="https://github.com/3Dpass/3DP/blob/1fd597e02e7ac86891c35c721123198ea1b8ebc7/runtime/src/lib.rs#L358"><i>TransactionByteFee</i></Link> {" "}
+                parameter defines how much is charged per byte of transaction data,
+                while the <Link to="https://github.com/3Dpass/3DP/blob/1fd597e02e7ac86891c35c721123198ea1b8ebc7/runtime/src/lib.rs#L368"><i>WeightToFee</i></Link> {" "}
+                conversion determines how computational complexity translates to fees.
+               </div>
             </div>
           </div>
       </div>

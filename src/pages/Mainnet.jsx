@@ -420,8 +420,8 @@ const Mainnet = () => {
           <a href="https://t.me/pass3d">
             <div className="one-subheader">Telegram</div>
           </a>
-          <a href="https://github.com/3Dpass/3DP/wiki">
-            <div className="one-subheader">Dev Wiki</div>
+          <a href="https://deepwiki.com/3Dpass/3DP">
+            <div className="one-subheader">AI Dev deepWiki</div>
           </a>
           <a href="https://github.com/3Dpass">
             <div className="one-subheader">GitHub</div>
