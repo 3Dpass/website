@@ -1199,9 +1199,6 @@ const Community = () => {
                 <Link to="https://x.com/3dpass_open_gov">
                   <li>X (The Open Gov news)</li>
                 </Link>
-                <Link to="https://x.com/3DpassCommunity">
-                  <li>X 3dpassCommunity</li>
-                </Link>
                 <Link to="https://twitter.com/3DPassTR">
                   <li>X 3dpassTR</li>
                 </Link>
@@ -1221,9 +1218,6 @@ const Community = () => {
                 </Link>
                 <Link to="https://t.me/pass3d">
                   <li>Tg group [Genesis]</li>
-                </Link>
-                <Link to="https://t.me/P3Dpass">
-                  <li>Tg group [Community]</li>
                 </Link>
                 <Link to="https://t.me/p3dtrading">
                   <li>Tg group [Price & Trading]</li>
