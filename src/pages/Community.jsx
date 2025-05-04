@@ -1208,12 +1208,6 @@ const Community = () => {
                 <Link to="https://x.com/3DPassCommunity">
                   <li>X 3dpassCommunity</li>
                 </Link>
-                <Link to="https://twitter.com/3DPassTR">
-                  <li>X 3dpassTR</li>
-                </Link>
-                <Link to="https://twitter.com/3DPassArmy">
-                  <li>X 3Dpass Army</li>
-                </Link>
                 <Link to="https://discord.com/invite/u24WkXcwug">
                   <li>Discord [Genesis]</li>
                 </Link>
@@ -1239,18 +1233,6 @@ const Community = () => {
                 </Link>
                 <Link to="https://t.me/p3dtrading">
                   <li>Tg group [Price & Trading]</li>
-                </Link>
-                <Link to="https://t.me/pass3dESP">
-                  <li>Tg group [Spanish]</li>
-                </Link>
-                <Link to="https://t.me/ger3dpass">
-                  <li>Tg group [German]</li>
-                </Link>
-                <Link to="https://t.me/p3dtr">
-                  <li>Tg group [Turkish]</li>
-                </Link>
-                <Link to="https://t.me/p3dpassru">
-                  <li>Tg group [Russian]</li>
                 </Link>
               </ul>
             </div>
