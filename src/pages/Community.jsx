@@ -1199,6 +1199,15 @@ const Community = () => {
                 <Link to="https://x.com/3dpass_open_gov">
                   <li>X (The Open Gov news)</li>
                 </Link>
+                {/* Hereby, I confirm that I am the owner of this group and taking fullresponsibility for its content as well as the activities. 
+                This is 100%% my own initiative.
+
+                My accounts: 
+                d1GKrrR55vQP73WfAuQ6U9eipRz8QeNHgz9amhX3owa1v8Hjo
+                d1DqgaXyQzwyDH4VfX1tppYFwDQkLHSwGxdwkYExJWErKmSAV*/}
+                <Link to="https://x.com/3DPassCommunity">
+                  <li>X 3dpassCommunity</li>
+                </Link>
                 <Link to="https://twitter.com/3DPassTR">
                   <li>X 3dpassTR</li>
                 </Link>
@@ -1218,6 +1227,15 @@ const Community = () => {
                 </Link>
                 <Link to="https://t.me/pass3d">
                   <li>Tg group [Genesis]</li>
+                </Link>
+                {/* Hereby, I confirm that I am the owner of this group and taking fullresponsibility for its content as well as the activities. 
+                This is 100%% my own initiative.
+
+                My accounts: 
+                d1GKrrR55vQP73WfAuQ6U9eipRz8QeNHgz9amhX3owa1v8Hjo
+                d1DqgaXyQzwyDH4VfX1tppYFwDQkLHSwGxdwkYExJWErKmSAV*/}
+                <Link to="https://t.me/P3Dpass">
+                  <li>Tg group 3dpassCommunity</li>
                 </Link>
                 <Link to="https://t.me/p3dtrading">
                   <li>Tg group [Price & Trading]</li>
