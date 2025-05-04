@@ -1087,7 +1087,7 @@ const Community = () => {
           <div className="page-content-inner full-m-w">
             <div className="page-content-title">Community Resources</div>
             <div className="page-content-text">
-              <strong><i>Disclaimer!</i></strong> All the resources below are managed by community 
+              <strong><i>Responsibility Disclaimer!</i></strong> All the resources below are managed by community 
               members and there might be many others untracked. The resources represent independent 
               groups and channels about 3Dpass by its creators. Due to decentralized nature of the 
               project there is <strong>NO PRIMARY CHANNEL</strong> taking place around 
@@ -1095,7 +1095,15 @@ const Community = () => {
               all transaction history including the <Link to="#governance">Open Governance</Link>{" "}
               and <Link to="/governance#democracy">Referendum</Link> vote. Be careful choosing which 
               source to trust and make sure the information is referenced to either the blockchain db 
-              or the source codes for proof! 
+              or the source codes for proof!
+            </div>
+            <div className="page-content-text">
+              The administration of the website is not responsible for
+              the content as well as the actions performed by the owners of the resources.
+              If you are the owner of a web site/channel/group, operating within the LoT ecosystem, you can add your resource
+              by making Pull Request into the <Link to="https://github.com/3Dpass/website">website</Link> github repo. {" "}
+              <Link to="/mainnet#chain-kyc">Reasonable</Link> level of confidence is required in relation with both the 
+              recource link and the owner's github.
             </div>
             <div className="url-block">
               <div className="url-block-title">Forums</div>
