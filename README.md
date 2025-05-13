@@ -26,3 +26,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
+
+--
+
+Copyright (c) 2025 3Dpass
+
+This is an open source free software. Use it at your own risk. 
+Although, 3dpass community members have put their best efforts to keep it up to date, yet
+the content of the website may partly be inaccurate or deprecated. Submit Pull Request into the 
+repo to update invalid information.  
