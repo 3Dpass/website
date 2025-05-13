@@ -23,6 +23,21 @@ const Footer = () => {
             <a href="https://discord.gg/u24WkXcwug"><div className="social-icon discord"></div></a>
             <a href="https://t.me/pass3d"><div className="social-icon telegram"></div></a>
             {/*<a href="https://instagram.com/3dpass_org"><div className="social-icon instagram"></div></a>*/}
+            <div className="footer-left-title">Donate:</div>
+            <div className="footer-text-left">
+               d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA <br /><br />
+            </div>
+               <div className="footer-left-subtitle">Responsibility Disclaimer:</div>
+               <div className="footer-text-left">
+                This website is an open source free software maintained 
+                by 3dpass community members and providing some useful 
+                information about  The Ledger of Things (LoT) decentralized 
+                ecosystem, which might be partly inacurate, deprecated or invalid. 
+                Suggest your corrections by making a Pull Request into the repo: 
+             <a href="https://github.com/3Dpass/website">
+              <div className="footer-item-left">The Website GitHub link</div>
+             </a>
+            </div>
           </div>
         </div>
         <div className="footer-right-content">

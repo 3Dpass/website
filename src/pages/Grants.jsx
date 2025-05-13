@@ -176,7 +176,7 @@ const Grants = () => {
                 Join <Link to="http://localhost:3000/governance#council">Discord</Link> and discuss the issue with the Councilors. 
               </li>
               <li>
-                Submit your bounty over the <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
+                Submit your bounty proposal over the <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
@@ -224,7 +224,7 @@ const Grants = () => {
                 and discuss the task with the Councilors. 
               </li>
               <li>
-                Submit your bounty over the {" "}
+                Submit your bounty proposal over the {" "}
                  <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
@@ -303,7 +303,7 @@ const Grants = () => {
                 and discuss the matter with the Councilors. 
               </li>
               <li>
-                Submit your bounty over the {" "}
+                Submit your bounty proposal over the {" "}
                  <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your posts in the Bounty description as proof of work. 
               </li>
@@ -321,8 +321,9 @@ const Grants = () => {
               Integration bounty program
             </div>
             <div className="page-content-text">
-              Having <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
-              repository is required to consider on the application. Proposals might be previously discussed with the 
+              Having <i>Pull Request</i> submitted into either the <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
+              or any other <strong>Open Source</strong> repository is required to consider on the application. 
+              Proposals might be previously discussed with the 
               Councilors and community over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
             </div>
             <div className="page-content-subtitle">
@@ -356,7 +357,7 @@ const Grants = () => {
             </div>
             <ul className="page-content-text">
               <li>
-                Submit your Pull Request into the <Link to="https://github.com/3dpass">GitHub</Link>
+                Submit your Pull Request into the 3dpass <Link to="https://github.com/3dpass">GitHub</Link> repo or any other <strong>Open Source</strong> repo. 
               </li>
               <li>
                 Get both of your accounts GitHub account and Discord account 
@@ -367,7 +368,7 @@ const Grants = () => {
                 and discuss the matter with the Councilors. 
               </li>
               <li>
-                Submit your bounty over the {" "}
+                Submit your bounty proposal over the {" "}
                  <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
@@ -385,14 +386,17 @@ const Grants = () => {
               Ecosystem support bounty program
             </div>
             <div className="page-content-text">
-              Having either <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
-              repository or some job done is required to consider on the application. Proposals might be previously discussed with the 
-              Councilors and community over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
+              Having either <i>Pull Request</i> submitted into the <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
+              repository or some useful work done is required to consider on the application. Proposals might be previously discussed with the 
+              Councilors and other community members over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
             </div>
             <div className="page-content-subtitle">
               To be rewarded:
             </div>
             <ul className="page-content-text">
+              <li>
+                Information web sites (e.g. <Link to="https://3dpass.org">3dpass.org</Link>)
+              </li>
               <li>
                 Block explorers (e.g. <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)
               </li>
@@ -409,13 +413,13 @@ const Grants = () => {
                 Cross-chain bridges
               </li>
               <li>
-                Web3 wallet maintenance and hositng
+                Web3 wallets maintenance and hositng (e.g. <Link to="https://wallet.3dpass.org">https://wallet.3dpass.org</Link>)
               </li>
               <li>
-                Mobile wallet maintenance
+                Mobile wallets maintenance (e.g. <Link to="/mobile-wallet">3dpass mobile wallet</Link>)
               </li>
               <li>
-                Other dApps and scripts involved in the operations
+                Other dApps and scripts
               </li>
               <li>
                 Useful community resources and groups
@@ -427,7 +431,7 @@ const Grants = () => {
             <ul className="page-content-text">
               <li>
                 Submit your Pull Request into the <Link to="https://github.com/3dpass">GitHub</Link>{"  "}
-                or get some useful job done that would require additional resources (time, money, etc) to 
+                or get some useful work done that would require additional resources (time, money, etc) to 
                 maintain your service/app. 
               </li>
               <li>
@@ -439,7 +443,7 @@ const Grants = () => {
                 and discuss the matter with the Councilors. 
               </li>
               <li>
-                Submit your bounty over the {" "}
+                Submit your bounty proposal over the {" "}
                  <Link to="https://wallet.3dpass.org/governance/bounties">web3 wallet</Link> {" "}
                 and specify the link to your Pull Request/proof of work in the Bounty description. 
               </li>
