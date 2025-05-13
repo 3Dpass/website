@@ -598,7 +598,7 @@ electorate - the total number of tokens issued in the network
             <div className="page-content-subtitle" id="how-to-fetch-referendum-result">How to fetch a Referendum result</div>
             <div className="page-content-text">
               In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
-              "Developer - Chain state" and call out the method <code>Democracy - referenduminfoOf(u32)</code>. The result would look like this:
+              "Developer - Chain state" and call out the <i>Democracy - referenduminfoOf(u32)</i> method. The result would look like this:
             </div>
             <pre className="main-pre">
             {`
@@ -616,17 +616,19 @@ electorate - the total number of tokens issued in the network
             />  
           <div className="page-content-subtitle" id="how-to-get-voting-history">How to get the voting history</div>
           <div className="page-content-text">
-               Follow this <Link to="https://3dpscan.io/events/1">link</Link> and filter the events by the Event module "Democracy" as follows:
+               Explore events on the <Link to="https://3dpscan.xyz/#/events">blockchain explorer</Link> and set up a filter 
+               for either the "Democracy" or "Referenda" seecton as follows:
           </div>
           <img
               className="page-img"
-              src="/images/event_module-democracy.png"
+              src="/images/events_democracy_section.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
           <div className="page-content-subtitle" id="how-to-get-detailed-voting-data">How to get detailed voting data</div>
           <div className="page-content-text">
-          In order to fetch some detailed information (votes, locked P3Ds, conviction multiplier, delegations) use the method <code>Chain state - Democracy - votingOf(AccountId32: PalletDemocracyVoteVoting)</code>:
+          In order to fetch the detailed data currently involved in the voting process - votes, locked P3Ds, conviction multiplier, delegations -  call out the {" "}
+           <i>Chain state - Democracy - votingOf(AccountId32: PalletDemocracyVoteVoting)</i> method:
           </div>
           <img
               className="page-img"
@@ -771,11 +773,11 @@ electorate - the total number of tokens issued in the network
             to be explicit in their votes or have their vote counted for whatever is voted on by the prime.
             </div>
             <div className="page-content-subtitle" id="how-to-fetch-elections-data">
-              How to fetch the actual elections data
+              How to fetch the actual Council election data
             </div>
             <div className="page-content-text">
             In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
-              "Developer - Chain state" and call out the method <code>phragmenElection - voting(AccountId32)</code>.
+              "Developer - Chain state" and call out the method <i>phragmenElection - voting(AccountId32)</i>.
             </div>
             <img
               className="page-img"
