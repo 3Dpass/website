@@ -1,7 +1,5 @@
 import "../styles/features.css";
-
 import React, { useEffect } from "react";
-
 import { Link, useLocation } from "react-router-dom";
 
 const Testnet = () => {
@@ -291,14 +289,14 @@ rm -rf ~/3dp-chain/chains/3dpass-test/db
             </div>
             <pre className="main-pre">
               {`
-cd C:\Users\YourUserNameHere\Desktop\
-`}
+cd <your folder location>
+             `}
             </pre>
             <div className="page-content-text">Install llvm with choco</div>
             <pre className="main-pre">
               {`
 choco install llvm
-`}
+             `}
             </pre>
             <div className="page-content-text">
               Configure Rust with the following:
@@ -309,7 +307,7 @@ rustup install nightly-2022-06-17
 rustup default nightly-2022-06-17
 rustup toolchain install nightly-2022-06-17
 rustup target add wasm32-unknown-unknown --toolchain nightly-2022-06-17-x86_64-pc-windows-msvc
-`}
+             `}
             </pre>
             <div className="page-content-text">
               Clone the node from the repo:
@@ -317,7 +315,7 @@ rustup target add wasm32-unknown-unknown --toolchain nightly-2022-06-17-x86_64-p
             <pre className="main-pre">
               {`
 git clone https://github.com/3Dpass/3DP.git
-`}
+             `}
             </pre>
             <div className="page-content-text">
               Build the node with the command:
@@ -327,7 +325,7 @@ git clone https://github.com/3Dpass/3DP.git
 cd 3DP
 git checkout test
 cargo build --release
-`}
+             `}
             </pre>
             <div className="page-content-text">
               Set up your keys for mining and Grandpa finalization and run the
@@ -337,19 +335,19 @@ cargo build --release
             <pre className="main-pre">
               {`
 npm install --global yarn
-`}
+             `}
             </pre>
             <div className="page-content-text">Configure miner:</div>
             <pre className="main-pre">
               {`
 yarn
-`}
+             `}
             </pre>
             <div className="page-content-text">Run miner:</div>
             <pre className="main-pre">
               {`
 yarn miner --interval 100
-`}
+             `}
             </pre>
             <div className="page-content-text">
               --interval is the amount of time in miliseconds between the last

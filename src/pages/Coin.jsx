@@ -5,14 +5,6 @@ import React, { useEffect } from "react";
 
 const Coin = () => {
   const locationHash = useLocation().hash;
-  const preText = `-- Start message --
-ETH ADDRESS
-P3D ADDRESS
--- End message --
-            
--- Start ETH wallet signature --
-ETH SIGNATURE
--- End ETH wallet signature --`;
 
   useEffect(() => {
     if (locationHash) {

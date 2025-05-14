@@ -10,7 +10,7 @@ import { Link } from "react-router-dom";
 import News from "../components/News";
 
 const Home = () => {
-  const [faqs, setFaqs] = useState([
+  const [faqs] = useState([
     {
       title: "Real World Assets (RWA), Insurance, Banking, E-commerce",
       description:
@@ -28,7 +28,7 @@ const Home = () => {
     },
   ]);
 
-  const [news, setNews] = useState([
+  const [news] = useState([
     {
       title: "New telemetry server came into operation!",
       description:
