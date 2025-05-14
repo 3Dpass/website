@@ -989,7 +989,7 @@ const Community = () => {
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}
-              src="/images/3dpass_society.png"
+              src="/images/3dpass_society_1.png"
               alt="img"
             />
             <div className="page-content-text">
