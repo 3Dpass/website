@@ -214,7 +214,7 @@ const Home = () => {
         </div>
       </div>
       <div className="home-one-content inner-content">
-        <div className="home-partners-title">Marketcap</div>
+        <div className="home-partners-title">MarketCap</div>
         <div className="partners-icons-holder">
           <div className="partners-icons-holder">
             <a href="https://coinmarketcap.com/currencies/3dpass/">
@@ -223,7 +223,7 @@ const Home = () => {
             <a href="https://www.coingecko.com/en/coins/3dpass">
               <div className="partners-icon coingecko"></div>
             </a>
-            <a href="https://coinpaprika.com/coin/p3d-3dpass-coin/">
+            {/*<a href="https://coinpaprika.com/coin/p3d-3dpass-coin/">
               <div className="partners-icon coin-paprika"></div>
             </a>
             <a href="https://www.livecoinwatch.com/price/3DPassCoin-P3D">
@@ -231,7 +231,7 @@ const Home = () => {
             </a>
             <a href="https://coincodex.com/crypto/3dpass/">
               <div className="partners-icon coin-codex"></div>
-            </a>
+            </a>*/}
           </div>
         </div>
       </div>

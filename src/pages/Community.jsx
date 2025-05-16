@@ -1114,9 +1114,6 @@ const Community = () => {
                 <Link to="https://3dpass.medium.com/">
                   <li>Medium</li>
                 </Link>
-                <Link to="https://www.reddit.com/r/3DPass_live">
-                  <li>Reddit</li>
-                </Link>
               </ul>
             </div>
             <div className="url-block">
