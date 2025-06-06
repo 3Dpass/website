@@ -1145,8 +1145,11 @@ const Community = () => {
                 <Link to="https://novawallet.io">
                   <li>Nova wallet</li>
                 </Link>
+                  <Link to="https://miner.p3d.top">
+                  <li>Mining & Validator dashboard</li>
+                </Link>
                 <Link to="https://www.3dpassmining.info/">
-                  <li>Mining dash board</li>
+                  <li>Mining Leaderboard</li>
                 </Link>
               </ul>
             </div>

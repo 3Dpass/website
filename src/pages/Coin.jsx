@@ -203,6 +203,12 @@ const Coin = () => {
                 P3D: 1.000000000000
               </li>
             </ul>
+            <div className="page-content-subtitle">EVM</div>
+            <div className="page-content-text">
+              There is an EVM compatibility layer operating on LoT, in which P3D is presented as P3D token 
+              callable at the contract 0x0000000000000000000000000000000000000802. P3D has 18 decimals places in EVM.
+              It doesn not affect total supply.
+            </div>
           </div>
         </div>
         <div className="page-content-block" id="white-papper">
@@ -464,10 +470,10 @@ const Coin = () => {
                   <li>Setting up USDT import and export on both sides: LoT and Ethereum</li>
                   <li>Running the Counterstake <Link to="https://github.com/byteball/counterstake-bridge">watchdog bots</Link></li>
                 </ul>
-              <li>Preparing the migration version (<i>In the process</i>)</li>
-              <li>Mainnet EVM release</li>
+              <li>Preparing the migration version (<i>Done</i>)</li>
+              <li>Mainnet EVM release - Done (<Link to="https://github.com/3Dpass/3DP/releases/tag/v31">Node v31</Link> )</li>
               <li>Testing "wrapped" USDT within the LoT eco-system</li>
-              <li>Docs and guidelines</li>
+              <li>Docs and guidelines (<i>in the process</i>)</li>
             </ul>
             <li>Web wallet:</li>
             <ul className="page-content-text">
@@ -498,6 +504,7 @@ const Coin = () => {
                <li>New open source blockchain explorer  (<i>Done</i>: <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)</li>
                <li>Archive Nodes and RPC API endpoints (<i>Done</i>: <Link to="https://github.com/3Dpass/rpc-list">The endpoint providers list</Link>)</li>
                <li>New telemetry server (<i>Done</i>: <Link to="https://3dpass.network">3dpass.network</Link>)</li>
+               <li>Mining & Validator dashboard (<Link to="https://github.com/3Dpass/mining-leaderboard"><i>Done</i></Link>)</li>
               </ul>
              <li>3DPRC-2: (<i>in the process, lead by PaulS and Mikhail</i>):</li>
              <ul className="page-content-text">
@@ -615,7 +622,13 @@ const Coin = () => {
               <div className="page-table-left page-table-info">
                 Decimals
               </div>
-              <div className="page-table-right page-table-content">12</div>
+              <div className="page-table-right page-table-content">Native runtime: 12; EVM: 18
+              </div>
+               <div className="page-table-left page-table-info">
+                EVM Contract
+              </div>
+              <div className="page-table-right page-table-content">P3D contract on EVM: 0x0000000000000000000000000000000000000802
+              </div>
               <div className="page-table-left page-table-info">
                 Total supply
               </div>

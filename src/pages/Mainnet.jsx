@@ -175,20 +175,20 @@ const Mainnet = () => {
                   : "one-page-nav"
               }
             >
-              How To Use The Web Wallet
+              Web3 Wallets
               <div className="page-nav-circle"></div>
               <div className="page-nav-line webwallet-line"></div>
             </div>
           </a>
-          <a href="#rpc-api-endpoints">
+          <a href="#3dpass-wallet">
             <div className="page-nav-inside">
-              RPC API endpoints
+              3Dpass wallet
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#how-to-create-new-address">
+          <a href="#metamask">
             <div className="page-nav-inside">
-              How to create new address
+              Metamask
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -426,8 +426,8 @@ const Mainnet = () => {
           <a href="https://github.com/3Dpass">
             <div className="one-subheader">GitHub</div>
           </a>
-          <a href="https://www.3dpassmining.info">
-            <div className="one-subheader">Mining Leader Board</div>
+          <a href="https://miner.p3d.top">
+            <div className="one-subheader">Mining & Validator dashboard</div>
           </a>
           <a href="/assets">
             <div className="one-subheader">Assets</div>
@@ -1313,8 +1313,8 @@ docker compose rm -f
             </pre>
             <ul className="page-content-text">
               <li>
-                Track your performance on the Mining Leaders dash 
-                board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+                Track your performance on the Mining Leaderboard: {" "} 
+                <Link to="https://miner.p3d.top">https://miner.p3d.top</Link>
               </li>
               <li>
               Compare your machine configuraton to the other ones 
@@ -1609,8 +1609,8 @@ bun miner.js --host 127.0.0.1 --port 9933
                 which might be leveraged as an option
               </li>
               <li>
-                Track your performance on the Mining Leaders dash 
-                board <Link to="https://3dpassmining.info">https://3dpassmining.info</Link>
+                Track your performance on the Mining Leaderboard {" "}
+                <Link to="https://miner.p3d.top">https://miner.p3d.top</Link>
               </li>
               <li>
               Compare your machine configuraton to the other ones 
@@ -1675,7 +1675,10 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
         <div className="page-content-block" id="wallet">
           <div className="page-content-inner">
             <div className="page-content-title">
-              How to use 3Dpass Web3 wallet
+              How to use Web3 wallets
+            </div>
+            <div className="page-content-subtitle" id="3dpass-wallet">
+              3Dpass wallet
             </div>
             <div className="page-content-text">
               <Link to="https://wallet.3dpass.org/">3DPass non-custodial web3 browser wallet</Link> is a Java Script page interacting with the
@@ -1744,6 +1747,58 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               3. Open the <Link to="https://wallet.3dpass.org/">3DPass wallet</Link> in your web browser 
               and allow the Polkadot extension to access your account, so that it can inject it into the wallet. 
             </div>
+            <div className="page-content-subtitle" id="metamask">
+              Metamask
+            </div>
+            <ol className="page-content-text">
+              <li>Connect Metamask to The Ledger of Things using the following credentials. 
+              Add a custom network, if necessary.
+                 <pre className="main-pre">
+{`
+Name: 3dpass - The Ledger of Things
+Chain id: 1333
+RPC: https://rpc-http.3dpass.org
+`}
+
+                 </pre>
+                 <img
+                  className="page-img"
+                  src="/images/metamask_add_custom-chain-min.png"
+                  alt="img"
+                  style={{ marginBottom: "20px" }}
+                />
+                </li>
+                <li>
+                  Top up P3D balance on EVM to cover gas fee and transaction fee:
+                </li>
+                <ul>
+                <li>Convert your ETH address (H160) to the LoT mainnet address 
+                  (H256) with this 
+                  {" "}<Link to="https://hoonsubin.github.io/evm-substrate-address-converter/">converter</Link>.
+                  {" "} Use LoT mainnet `prefix: 71`: <br/>
+                  0xc6006fea43ccce14f9432f8e6b9403113c935cc1 → 
+                  d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS.
+                  </li>
+                  <li>
+                    Use the LoT mainnet converted address (d1..) to recieve P3D from any native mainnet account (d1..). 
+                  </li>
+                  <li>
+                    Use your ETH address to recieve P3D from any account within EVM (e.g. from a Metamask user). 
+                  </li>
+                </ul>
+                <li>
+                  P3D contract on EVM: 0x0000000000000000000000000000000000000802
+                </li>
+                <li>
+                  Interaction with assets: <br />
+                  Contract address format: <strong>`0xFBFBFBFA + assetID (in hex)`</strong>,  <br />
+                  where the `assetID` 
+                  is the asset index in `poscanAssets` runtime module.
+                  e.g. the <Link to="https://3dpscan.xyz/#/assets/16">COW</Link> token's assetID is `16`. 
+                  The hex value of `16` is `10` . So, the H160 address to 
+                  interact with COW is going to be as follows: 0xFBFBFBFA00000000000000000000000000000010
+                </li>
+              </ol>
           </div>
         </div>
         <div className="page-content-block" id="unlock">

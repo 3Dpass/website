@@ -843,6 +843,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
         <div className="page-content-block" id="smartcontracts">
           <div className="page-content-inner">
             <div className="page-content-title">Smart Contracts</div>
+            <div className="page-content-subtitle">Ink</div>
             <div className="page-content-text">
               Substrate Smart contract trait using <Link to="https://use.ink/">ink</Link>, a <Link to="https://www.rust-lang.org/">Rust</Link>-based embedded
               domain specific language (
@@ -855,13 +856,21 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               <Link to="https://use.ink/ink-vs-solidity/">
                 how could that be compared to Solidity
               </Link>
-              . Follow the <Link to="/assets#smart-contracts">guiudelines</Link> to run your smart contract on 3Dpsass.
+                {" "} Follow these <Link to="/assets#smart-contracts-ink">guiudelines</Link> to run your Ink smart contract on LoT.
             </div>
+            <div className="page-content-subtitle">Solidity</div>
             <div className="page-content-text">
-              Coming soon! EVM emulator pallet, which allows for unmodified EVM
-              code to be executed on 3Dpass blockchain. This feature is designed
+              The Ledger of Things (LoT) is equipped with the {" "}
+              <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm">EVM pallet</Link>, 
+              which allows for unmodified <Link to="https://soliditylang.org">Solidity</Link> {" "}
+              code to be executed on the LoT blockchain. This feature is designed
               to closely emulate the functionality of executing contracts on the
-              Ethereum mainnet within 3Dpass network.
+              Ethereum mainnet within LoT. In addition to {" "}
+              <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm/precompile">standard precompiled contracts</Link> {" "}
+              there is a bunch of custom precompiles that serve as cross-platform interfaces
+              between native substrate-based runtime and the EVM. 
+              Follow these <Link to="/assets#smart-contracts-solidity">guiudelines</Link> 
+              {" "} to run your Solidity smart contract on LoT.  
             </div>
           </div>
         </div>

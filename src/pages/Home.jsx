@@ -29,26 +29,26 @@ const Home = () => {
   ]);
 
   const [news] = useState([
+        {
+      title: "Mainnet runtime has been upgraded!",
+      description:
+        "The Ledger of Things EVM compatibilty layer has come into operation at the block height of #1,422,643, providing its cross-platform features for everyone.",
+      date: "June 04, 2025",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v31"
+    },
+    {
+      title: "EVM compatibility layer has been released!",
+      description:
+        "Node v31 represents both Substrate and EVM compatible hybrid, which allows to execute Solidity code seamlessly on LoT.",
+      date: "June 1, 2025",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v31"
+    },
     {
       title: "New telemetry server came into operation!",
       description:
         "The telemetry server is now available via https://3dpass.network",
       date: "Apr 11, 2025",
       link: "https://3dpass.network"
-    },
-    {
-      title: "New blockchain explorer came into operation!",
-      description:
-        "Brand new open source blockchain explorer came into operation and is available via https://3dpscan.xyz",
-      date: "Apr 08, 2025",
-      link: "https://3dpscan.xyz"
-    },
-    {
-      title: "Counterstake bridge smart contracts are being tested on testnet!",
-      description:
-        "The assetss-erc20 interface and precompile have been deployed on testnet, which allows for wrapped local assets to be accessible through the EVM.",
-      date: "Mar 29, 2025",
-      link: "https://github.com/3Dpass/3DP/tree/test"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);

@@ -148,6 +148,43 @@ const Assets = () => {
             >
               Smart contracts
               <div className="page-nav-circle"></div>
+              <div className="page-nav-line smartcontracts-line"></div>
+            </div>
+          </a>
+          <a href="#smart-contracts-ink">
+            <div className="page-nav-inside">
+              Ink eDSL
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#smart-contracts-solidity">
+            <div className="page-nav-inside">
+              Solidity eDSL
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#smart-contracts-solidity-connect-metamask">
+            <div className="page-nav-inside">
+              Metamask
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#smart-contracts-solidity-deploy">
+            <div className="page-nav-inside">
+              Solidity contract deployment
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#smart-contracts-solidity-p3d">
+            <div className="page-nav-inside">
+              P3D interaction
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#smart-contracts-solidity-assets">
+            <div className="page-nav-inside">
+              Assets interaction
+              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#transfers">
@@ -934,15 +971,23 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
           <div className="page-content-inner">
             <div className="page-content-title">Smart contracts</div>
             <div className="page-content-text">
-              3DPass is supporting Substrate smart contract trait using <Link to="https://use.ink/">ink</Link>, a
+              Both <Link to="https://use.ink/">Ink</Link> 
+              {" "} and {" "} 
+              <Link to="https://soliditylang.org/">Solidity</Link> code can be executed 
+              within the Ledger of Things blockchain.
+            </div>
+            <div className="page-content-subtitle" id="smart-contracts-ink">
+              Ink
+            </div>
+            <div className="page-content-text">
+              Substrate smart contract trait using <Link to="https://use.ink/">ink</Link>, a
               {" "} <Link to="https://www.rust-lang.org/">Rust</Link>-based embedded domain specific language (<Link to="https://wiki.haskell.org/Embedded_domain_specific_language">eDSL</Link>) for writing
               {" "} <Link to="https://webassembly.org/">WebAssembly</Link> smart contracts. Learn more about <Link to="https://use.ink/ink-vs-solidity/">how it compares to Solidity</Link>.
             </div>
-            <div className="page-content-subtitle">Guidelines</div>
             <ol className="page-content-text">
               <li>Build and run <Link to="https://github.com/3Dpass/3DP">3DPass node</Link></li>
               <li>
-                Follow <Link to="https://use.ink/">ink</Link> docs and set up the environment (<Link to="https://github.com/paritytech/cargo-contract">Cargo contract cli</Link>
+                Follow <Link to="https://use.ink/">ink</Link> docs and set up the environment (<Link to="https://github.com/paritytech/cargo-contract">Cargo contract cli</Link> {" "}
                 is required)
               </li>
               <li>Connect <Link to="https://contracts-ui.substrate.io/">contracts-ui</Link> to 3DPass node in local</li>
@@ -953,13 +998,246 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <li>Upload the contract via contracts-ui</li>
               <li>Interact with your contract via its API</li>
             </ol>
-            <div className="page-content-subtitle">Useful links:</div>
+            <div className="page-content-text">
+                Visit <Link to="https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes">Substrate forum</Link> to get answeres to related quiestions.
+            </div>
+          </div>
+          <div className="page-content-subtitle" id="smart-contracts-solidity">
+              Solidity
+          </div>
+           <div className="page-content-text">
+              The Ledger of Things (LoT) is equipped with the {" "}
+              <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm">EVM pallet</Link>, 
+              which allows for unmodified <Link to="https://soliditylang.org">Solidity</Link> {" "}
+              code to be executed on its blockchain. This feature is designed
+              to closely emulate the functionality of executing contracts on the
+              Ethereum mainnet within LoT. In addition to {" "}
+              <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm/precompile">standard precompiled contracts</Link> {" "}
+              there is a bunch of custom precompiles that serve as cross-platform interfaces
+              between native substrate-based runtime and the EVM, such as:   
+            </div>
             <ul className="page-content-text">
               <li>
-                Visit <Link to="https://substrate.stackexchange.com/questions/tagged/ink?tab=Votes">Substrate forum</Link> to get answeres to related quiestions.
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/balances-erc20">balances-erc20</Link> - Native token P3D interaction  
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/assets-erc20">assets-erc20</Link> - Assets interaction  
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/batch">batch</Link> - Utils module interaction
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/proxy">proxy</Link> - Proxy module interaction 
               </li>
             </ul>
-          </div>
+            <div className="page-content-text">
+              In this guide we are going to use  
+              {" "} "<Link to="https://metamask.io/">Metamask</Link> + 
+              {" "}<Link to="https://remix.ethereum.org">Remix</Link>" to either 
+              deploy smart contracts on LoT or run the precompiles for P3D and local Assets interaction. 
+            </div>
+            <div className="page-content-subtitle" id="smart-contracts-solidity-connect-metamask">
+              Metamask:
+            </div>
+            
+            <ol className="page-content-text">
+              <li>Connect Metamask to The Ledger of Things using the following credentials. 
+              Add a custom network, if necessary.
+                 <pre className="main-pre">
+{`
+Name: 3dpass - The Ledger of Things
+Chain id: 1333
+RPC: https://rpc-http.3dpass.org
+`}
+
+                 </pre>
+                 <img
+                  className="page-img"
+                  src="/images/metamask_add_custom-chain-min.png"
+                  alt="img"
+                  style={{ marginBottom: "20px" }}
+                />
+                </li>
+                <li>
+                  Top up P3D balance on EVM to cover gas fee and transaction fee:
+                </li>
+                <ul>
+                <li>Convert your ETH address (H160) to the LoT mainnet address 
+                  (H256) with this 
+                  {" "}<Link to="https://hoonsubin.github.io/evm-substrate-address-converter/">converter</Link>.
+                  {" "} Use LoT mainnet `prefix: 71`: <br/>
+                  0xc6006fea43ccce14f9432f8e6b9403113c935cc1 → 
+                  d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS.
+                  </li>
+                  <li>
+                    Use the LoT mainnet converted address (d1..) to recieve P3D from any native mainnet account (d1..). 
+                  </li>
+                  <li>
+                    Use your ETH address to recieve P3D from any account within EVM (e.g. from a Metamask user). 
+                  </li>
+                </ul>
+              </ol>
+                <div className="page-content-subtitle" id="smart-contracts-solidity-deploy">
+                  Smart Contract Deployment:
+                </div>
+                 <ol className="page-content-text">
+              <li>Open 
+                {" "}<Link to="https://remix.ethereum.org">Remix</Link>
+              </li>
+              <li>
+                Create a contract (we are going to use this simple <i>"Hello world"</i> contract in the example below):
+                <ul>
+                  <li>
+                    Create new file: <strong>HelloWorld.sol</strong>
+                  </li>
+                  <li>
+                Copy and paste this example:
+                <pre className="main-pre">
+{`
+// SPDX-License-Identifier: MIT
+pragma solidity 0.8.13;
+contract HelloWorld {
+    function sayHelloWorld() public pure returns (string memory) {
+        return "Hello World";
+    }
+}
+`}
+                 </pre>
+                 </li>
+            </ul>
+              </li>
+              <li>
+                Compile the contract - To avoid potential compilation issues in Remix, 
+                always make sure the pragma solidity version in your contract 
+                matches the selected compiler version in Remix.
+                 <img
+                  className="page-img"
+                  src="/images/smart_contract_compile.png"
+                  alt="img"
+                  style={{ marginBottom: "20px" }}
+                />
+              </li>
+              <li>
+                Deploy the contract - Make sure it is connected 
+                to Metamask as <i>"injected provider"</i>
+                Once deployed, a contract will 
+                exist at an address on the LoT blockchain.
+                <img
+                  className="page-img"
+                  src="/images/hello_world_deploy_confirmation-min.png"
+                  alt="img"
+                 style={{ marginBottom: "20px" }}
+                />
+              </li>
+              <li>
+                Interact with the smart contract -
+                The `sayHelloWorld` 
+                is a public function that returns the string “Hello World”.
+                <img
+                  className="page-img"
+                  src="/images/hello_world_interaction-min.png"
+                  alt="img"
+                 style={{ marginBottom: "20px" }}
+                />
+              </li>
+            </ol>  
+            <div className="page-content-subtitle" id="smart-contracts-solidity-p3d">
+              P3D native token interaction
+            </div>  
+            <div className="page-content-text">
+              In The Ledger of Things (LoT) blockchain P3D is callable from Solidity 
+              through the custom 
+              {" "}<Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/balances-erc20">balances-erc20</Link> 
+              {" "} precompile. Although, P3D is not issued in EVM, the precompile will provide the assess 
+              to the native LoT runtime, as if it were an ERC20 token. The contract must be run at 
+              the precompile addreess.
+            </div> 
+            <ol className="page-content-text">
+              <li>P3D ERC20 precompile address: 0x0000000000000000000000000000000000000802</li>
+              <li>Open <Link to="https://remix.ethereum.org">Remix</Link> and make 
+              sure it is <Link to="#smart-contracts-connect-metamask">connected</Link> to Metamask.</li>
+              <li>Create new file: <strong>IERC20.sol</strong></li>
+              <li>Copy and paste the content of the <Link to="https://github.com/3Dpass/3DP/blob/main/precompiles/balances-erc20/ERC20.sol">IERC20.sol</Link>
+                {" "} from the github
+                </li>
+                <li>Compile the contract (follow the <Link to="#smart-contracts-deploy">deployment procedure</Link> in general)</li>
+                <li>Run the smart contract at the P3D precompile address (you don't need to deploy the contract)
+                  and interact with its standard methods.
+                  <img
+                  className="page-img"
+                  src="/images/balances-erc20_precompile_interaction.png"
+                  alt="img"
+                  style={{ marginBottom: "20px" }}
+                />
+                </li>
+            </ol>
+            <div className="page-content-subtitle" id="smart-contracts-solidity-assets">
+              Local Assets interaction
+            </div>  
+            <div className="page-content-text">
+              In The Ledger of Things (LoT) blockchain local assets are callable from Solidity 
+              through the custom 
+              {" "}<Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/assets-erc20">assets-erc20</Link> 
+              {" "} precompile. Despite the assets are not issued in EVM, the precompile will provide the assess 
+              to the native LoT runtime, as if they were ERC20 tokens. 
+            </div> 
+            <div className="page-content-text">
+              <strong>AssetID → ERC20 Contract address translation</strong> <br/>
+              In order to interact with a local asset, 
+              one must first be created with the `poscanAssets` module either as a
+              {" "}<Link to="#3dprc-2-fungible">3DPRC2</Link> share token or
+              {" "}<Link to="#3dprc-2-fungible">fungible asset</Link>. Once created, 
+              the asset is being assigned with its unique identifier - the <strong>`assetID`</strong>, 
+              which is a decimal value. We are going to take the 
+              {" "}<Link to="https://3dpscan.xyz/#/assets/16">COW</Link> token (assetID: 16) as an example. 
+            </div>
+            <ul className="page-content-text">
+              <li>The asset precompile contract address format is <strong>`0xFBFBFBFA + assetID (in hex)`</strong>
+                  <br /> (where the `0xFBFBFBFA` is a custom prefix for local assets)
+             </li>
+             <li>Let's create the address for COW token:</li>
+             <ul>
+              <li>Let's convert the assetID: 16 (decimal) → 10 (hex)
+                {" "} <br />
+                (e.g. with this <Link to="https://www.rapidtables.com/convert/number/decimal-to-hex.html">Converter</Link> or any appropriate one)
+              </li>
+              <li>
+                Let's form up the address: 0xFBFBFBFA00000000000000000000000000000010
+              </li>
+             </ul>
+            </ul>
+            <div className="page-content-text">
+              <strong> Running the asset precompile:</strong>
+            </div>
+            <ol className="page-content-text">
+              <li>The ERC20 precompile address for COW: 0xFBFBFBFA00000000000000000000000000000010</li>
+              <li>Open <Link to="https://remix.ethereum.org">Remix</Link> and make 
+              sure it is <Link to="#smart-contracts-connect-metamask">connected</Link> to Metamask.</li>
+              <li>Create new file: <strong>IERC20.sol</strong></li>
+              <li>Copy and paste the content of the <Link to="https://github.com/3Dpass/3DP/blob/main/precompiles/assets-erc20/ERC20.sol">IERC20.sol</Link>
+                {" "} from the github
+                </li>
+                <li>Compile the contract (follow the <Link to="#smart-contracts-deploy">deployment procedure</Link> in general)</li>
+                <li>Run the smart contract at the COW precompile address (you don't need to deploy the contract)
+                  and interact with its standard methods.
+                  <img
+                    className="page-img"
+                    src="/images/asset-erc20_precompile_interaction.png"
+                    alt="img"
+                    style={{ marginBottom: "20px" }}
+                  />
+                </li>
+                <li>In order to call out `mint`, `burn`, `freeze`, `setMetadata` and other admin functions run the 
+                   {" "}<Link to="https://github.com/3Dpass/3DP/blob/main/precompiles/assets-erc20/LocalAsset.sol">LocalAsset.sol</Link> 
+                   {" "} at the same contract address.
+                  <img
+                    className="page-img"
+                    src="/images/local-asseterrc20-admin_functions.png"
+                    alt="img"
+                    style={{ marginBottom: "20px" }}
+                  />
+                </li>
+            </ol>
         </div>
         <div className="page-content-block" id="transfers">
           <div className="page-content-inner">
