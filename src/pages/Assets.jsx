@@ -107,12 +107,6 @@ const Assets = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#3dprc-2-asset-management">
-            <div className="page-nav-inside">
-              Asset management
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
           <a href="#conventional-assets">
             <div
               className={
@@ -135,6 +129,25 @@ const Assets = () => {
           <a href="#conventional-non-fungible-assets">
             <div className="page-nav-inside">
               Non-fungible assets
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#assets-management">
+            <div
+              className={
+                locationHash.includes("assets-management")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              Assets management
+              <div className="page-nav-circle"></div>
+              <div className="page-nav-line assets-management-line"></div>
+            </div>
+          </a>
+          <a href="#assets-management-delegating">
+            <div className="page-nav-inside">
+              Delegating roles
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -821,7 +834,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
                </li>
               </ul>
               <div className="page-content-text">
-              USING WEB3 WALLET OR API:
+              Using `poscanAssets` RPC API:
             </div>
             <div className="page-content-text">
               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> 
@@ -860,55 +873,37 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             </div>
           </div>
         </div>
-        <div className="page-content-block" id="3dprc-2-asset-management">
-          <div className="page-content-inner">
-            <div className="page-content-title">Backed asset management</div>
-            <div className="page-content-text">
-                Coming soon!
-
-                </div>
-          </div>
-        </div>
         <div className="page-content-block" id="conventional-assets">
           <div className="page-content-inner">
             <div className="page-content-title">
               Conventional assets
             </div>
-            <div className="page-content-subtitle" id="conventional-fungible-assets">
-              Regular fungible assets
-            </div>
             <div className="page-content-text">
-              The Ledger of Things is equipped with two different modules to deal with simple fungible assets, such as: </div>
-              
+              The Ledger of Things supports two different approaches to deal with conventional fungible and non-fungible assets, such as: 
+            </div>
               <ol className="page-content-text">
                 <li>
-                <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> embedded module
+                <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> embedded module, 
+                which is also accessible from Solidity through the EVM compatibility layer. Explore how to  <Link to="/assets#smart-contracts-solidity-assets">interact with assets from Solidity</Link>. 
                 </li>
                 <li>
                 Substrate <Link to="https://github.com/paritytech/substrate/tree/master/frame/contracts">Smart contracts</Link> module using <Link to="https://use.ink/">ink</Link>, a
               {" "} <Link to="https://www.rust-lang.org/">Rust</Link>-based embedded domain specific language (<Link to="https://wiki.haskell.org/Embedded_domain_specific_language">eDSL</Link>) for writing
-              {" "} <Link to="https://webassembly.org/">WebAssembly</Link> smart contracts. Learn more about <Link to="https://use.ink/ink-vs-solidity/">how could it be compared to Solidity</Link>
+              {" "} <Link to="https://webassembly.org/">WebAssembly</Link> smart contracts.
                 </li>
               </ol>
               <div className="page-content-text">
-                The main difference between these two approaches is the smart contract logic could be totally separated from the Ledger of Things 
-                {" "} <Link to="https://github.com/3Dpass/3DP">Node</Link> logic the contract is running on. 
-                So, any potential changes in the Ledger of Things Node logic will not affect the smart contract operating. However, the <i>GAS fee</i> 
-                {" "} is supposed to be paid, and the <i>limitations</i> of <Link to="https://use.ink/">ink</Link> must be taken by the asset owner/developer.
+                The main difference between these two approaches is the smart contract logic is autonomous and, therefore, totally separated from the Ledger of Things 
+                {" "} <Link to="https://github.com/3Dpass/3DP">Node</Link> providing the environment. 
+                So, any potential changes in the Ledger of Things Node logic will not affect the smart contract operating. However, such aspects as <i>GAS fee</i> 
+                {" "} as well as the <i>limitations</i> of <Link to="https://use.ink/">ink</Link> must be taken iinto account by the asset owner/developer.
               </div>
-              <div className="page-content-text">
-                The implication for the utilization of <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> module is having the 
-                asset owner engagement at such level, which would be enough to agree with the general vision of 3Dpass as well as with any potential 
-                changes applied onto the next versions of The Ledger of Things <Link to="https://github.com/3Dpass/3DP">Node</Link>.
-                Good news is using <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> is always <i>GAS free</i>. 
-                There is no limitaions to the language dApp is written in is being applied, as well.
-              </div>
-            <div className="page-content-subtitle" id="poscan-assets-fungible">
-              Using `poscanAssets` module to deal with regular fungible assets:
+            <div className="page-content-subtitle" id="conventional-fungible-assets">
+              Regular fungible assets via `poscanAssets`
             </div>
             <div className="page-content-text">
               The <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan-assets">poscanAssets</Link> embedded module 
-              provides some useful methods for dealing with simple fungible assets without a necessity to run a smart contract:
+              provides its RPC API methods for dealing with simple fungible assets without a necessity to run a smart contract:
             </div>
             <ul className="page-content-text">
               <li><i>Asset Issuance:</i> New asset creation, the total supply of which will belong to the issuer account</li>
@@ -919,41 +914,46 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <li><i>Asset Freeze:</i> Disalows the asset transfers from a given account</li>
               <li><i>Set the Asset Team:</i> Sets up the Issuer, Admin and Freezer of the asset</li>
             </ul>
+            <div className="page-content-text">
+              <strong>Current implementations are:</strong>
+            </div>
             <ul className="page-content-text">
               <li>
-                <strong>Using the mobile wallet:</strong> {" "}
+                Using the mobile wallet: {" "}
                 <Link to="/mobile-wallet#download">
                  Download the mobile wallet
                 </Link>
                </li>
                <li>
-               <strong>Using Web3 wallet or API:</strong> (<i>follow the tips below</i>)
+                 Using the <Link to="https://wallet.3dpass.org">Web3 wallet</Link>
+               </li>
+               <li>
+                Using `poscanAssets` RPC API: (<i>follow the tips below</i>)
                </li>
               </ul>
               <div className="page-content-text">
-              USING WEB3 WALLET OR API:
+               Using `poscanAssets` RPC API:
             </div>
-            <div className="page-content-text">
-               1. Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> {" "}
+            <ol className="page-content-text">
+              <li>
+               Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link> {" "}
                and create your asset with `create`. (This method is also available via the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API#6-extrinsic-poscanassetscreate">poscanAssets pallet API</Link>){" "}
                Make sure the <i>`objDetails`</i> option is skipped: 
-            </div>
-            <img
-              className="page-img"
-              src="/images/create_fungible.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              2. Once created, follow these methodes to <Link to="#set-metadata">Set metadata</Link> and <Link to="#mint">Mint</Link>.
-            </div>
-            <div className="page-content-text">
-              3. In order to send tokens from one account to another use the <Link to="#3dprc2-transfers">transfer</Link> method.
-            </div>
-            <div className="page-content-text">
-              All the methods of the poscanAssets module are available via the <Link to="https://polkadot.js.org/docs/api/">polkadot JS API</Link>. 
-              The Assets <Link to="https://polkascan.github.io/py-substrate-metadata-docs/statemint/assets/">API metadata</Link> description. 
-            </div>
+              <img
+                className="page-img"
+                src="/images/create_fungible.png"
+                alt="img"
+                style={{ marginBottom: "20px" }}
+             />
+              </li>
+              <li>
+                 Once created, follow these methodes to <Link to="#set-metadata">Set metadata</Link> and <Link to="#mint">Mint</Link>.
+              </li>
+              <li>
+                 Next you can <Link to="/assets/#transfers">transfer</Link> assets, <Link to="/assets/#dex">exchange</Link> assets 
+                 or <Link to="/assets/#smart-contracts-solidity-assets">interact with the assets from Solidity smart contracts</Link>.
+              </li>
+            </ol>
             <div className="page-content-subtitle" id="conventional-non-fungible-assets">
               Conventional non-fungible assets
             </div>
@@ -966,6 +966,55 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
              {" "} <Link tp="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">3DPRC-2 poScan API</Link>.
             </div>
           </div>
+        </div>
+        
+        <div className="page-content-block" id="assets-management">
+          <div className="page-content-inner">
+           <div className="page-content-title">
+              Assets Management
+           </div>
+           <div className="page-content-text">
+             There are two options available for assets management in LoT, such as:
+           </div>
+           <ol className="page-content-text">
+            <li>
+              Delegating to an autonomous logic  (<Link to="/assets#smart-contracts">Smart Contract</Link>)
+            </li>
+            <li>
+              Manual management
+            </li>
+           </ol>
+          <div className="page-content-text">
+            In both scenarious setting up the asset team is necessary. The team is commprised
+            of a bunch management accounts: <strong>`Issuer`</strong>, <strong>`Admin`</strong> and <strong>`Freezer`</strong>, 
+            of which each one is responsible for certain management function in regard to the asset.
+          </div>
+           <div className="page-content-subtitle" id="assets-management-delegating">
+            Delegating responsibilities
+           </div>
+           <div className="page-content-text">
+             Every <Link to="/assets#smart-contracts">smart contract</Link>, once deployed, can be run at its unique address, 
+             which might be assigned as either: 
+           </div>
+           <ul className="page-content-text">
+            <li><strong>`Issuer`</strong> - assign this role to an account responsible for tokens minting/burning,</li>
+            <li><strong>`Admin`</strong> - assign this role to an account responsible for token's metadata and accounts,</li>
+            <li><strong>`Freezer`</strong> - assign this role to an account responsible for tokens freezing</li>
+           </ul>
+           <div className="page-content-text">
+             For manual management just use any address for each role.
+           </div>
+           <ol className="page-content-text">
+            <li>Open <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka wallet</Link></li>
+            <li>Use the `poscanAssets` - `setTeam` method to delegate responsibilities:</li>
+           </ol>
+           <img
+              className="page-img"
+              style={{ marginBottom: "50px" }}
+              src="/images/poscan_assets_set_team.png"
+              alt="img"
+            />
+         </div>
         </div>
         <div className="page-content-block" id="smart-contracts">
           <div className="page-content-inner">
@@ -992,7 +1041,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               </li>
               <li>Connect <Link to="https://contracts-ui.substrate.io/">contracts-ui</Link> to 3DPass node in local</li>
               <li>
-                Create your own contract or use some <Link to="https://github.com/paritytech/ink/tree/master/examples">examples</Link> (ERC-20, ERC-721,
+                Create your own contract or use some <Link to="https://github.com/use-ink/ink-examples">examples</Link> (ERC-20, ERC-721,
                 etc)
               </li>
               <li>Upload the contract via contracts-ui</li>
@@ -1254,7 +1303,7 @@ contract HelloWorld {
                </li>
               </ul>
               <div className="page-content-text">
-              USING WEB3 WALLET OR API:
+              Using Web3 wallet:
             </div>
             <ul className="page-content-text">
               <li>
@@ -1274,7 +1323,7 @@ contract HelloWorld {
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              <strong>Using `poscanAssets` module API:</strong>
+              <strong>Using `poscanAssets` module RPC API:</strong>
             </div>
             <div className="page-content-text">
                 Irrespective to whether there is a regular non fungible asset or share token to transfer, the 'poscanAssets.Transfer' method is supposed to be used.

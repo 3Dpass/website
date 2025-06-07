@@ -309,7 +309,11 @@
 }
 
 .assets-line {
-  height: 192px;
+  height: 128px;
+}
+
+.assets-management-line {
+  height: 22px;
 }
 
 .fungibleassets-line {

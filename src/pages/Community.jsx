@@ -384,7 +384,7 @@ const Community = () => {
                  Marketplace - to swap non-fungible backed assets
                 </li>
                 <li>
-                  dApps - <Link to="/features#smart-contracts">smart-contracts</Link> module and runtime development
+                  dApps - <Link to="/features#smartcontracts">smart-contracts</Link> module and runtime development
                 </li>
                 <li>
                  Cross-chain bridge - to teleport the assets over to the external blockchains
