@@ -334,7 +334,7 @@ const Mainnet = () => {
               <div className="page-nav-line addresses-line"></div>
             </div>
           </a>
-          <a href="#generating-keys">
+          <a href="#generating-addresses-and-keys">
             <div className="page-nav-inside">
               Generating keys
               <div className="inside-nav-circle"></div>
@@ -346,15 +346,21 @@ const Mainnet = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#inspecting-seed-phrase">
+          <a href="#addresses-inspecting-seed-phrase">
             <div className="page-nav-inside">
               Inspecting seed phrase
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#inspecting-private-key">
+          <a href="#addresses-inspecting-private-key">
             <div className="page-nav-inside">
               Inspecting private-key
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#addresses-and-keys-evm">
+            <div className="page-nav-inside">
+              EVM accounts
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -371,25 +377,25 @@ const Mainnet = () => {
               <div className="page-nav-line troubleshooting-line"></div>
             </div>
           </a>
-          <a href="#no-peers">
+          <a href="#troubleshooting-no-peers">
             <div className="page-nav-inside">
               No peers
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#node-got-stuck">
+          <a href="#troubleshooting-node-got-stuck">
             <div className="page-nav-inside">
               Node got stuck
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#falling-behind">
+          <a href="#troubleshooting-falling-behind">
             <div className="page-nav-inside">
               Node is falling behind
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#ran-out-of-free-wasm-instances">
+          <a href="#troubleshooting-ran-out-of-free-wasm-instances">
             <div className="page-nav-inside">
              Ran out of free WASM instances
               <div className="inside-nav-circle"></div>
@@ -1798,6 +1804,11 @@ RPC: https://rpc-http.3dpass.org
                   The hex value of `16` is `10` . So, the H160 address to 
                   interact with COW is going to be as follows: 0xFBFBFBFA00000000000000000000000000000010
                 </li>
+                <li>
+                  Explore how to interact with P3D and assets from Solidity 
+                  throuh the EVM 
+                  {" "} <Link to="/assets#smart-contracts-solidity">custom precompiled smart contracts</Link>.  
+                </li>
               </ol>
           </div>
         </div>
@@ -2013,39 +2024,25 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              In case of any missformat or absence or some spare keys found, it is recommnded 
-              you wipe out the entire content from the <i>keystore</i> and set up keys 
-              properly from scratch. Having incorrect keyset in the folder might lead up to 
-              severe punishments when Node comes into operation.
-            </div>
-            <div className="page-content-text">
               3. Run the Node with <Link to="#linux-mac-run">this</Link> command and get it <Link to="#linux-mac-sync">synced</Link> with the network.
             </div>
             <div className="page-content-text" id="validator-lock-check">
-              4. Open the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka js wallet</Link> {" "}
-              and lock up your funds to a certain block number in the future.
-              There is no way to unlock until it's expired.
+              4. Install the <Link to="https://polkadot.js.org/extension/">Polka js web browser extension</Link> {" "}
+              for signing transactions, then open the Validator dashborad:
+              <ul>
+                <li>Hosted: <Link to="https://miner.p3d.top">https://miner.p3d.top</Link></li>
+                <li>Hosted: <Link to="https://mining.3dpscan.xyz">https://mining.3dpscan.xyz</Link></li>
+                <li>Local: build and run it from
+                  {" "} <Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link></li>
+              </ul>
+              <div className="page-content-text">
+                Lock your funds for collateral:
+              </div>
             </div>
-            <ul className="page-content-text">
-              <li>
-                Amount <i>u128</i> (in min units): +12 zeros at the tail e.x. 400 000
-                P3D becomes 400 000 000 000 000 000
-              </li>
-              <li>
-                Minimum lock time: 1 month (+ 43200 blocks ahead the current
-                best block)
-              </li>
-              <li>
-                Auto <i>re-lock</i> option (period): a period in blocks your
-                funds are going to be re-locked over and over automatically. For example, if
-                chosen 45000 blocks, when expired the funds are going to be re-locked for
-                the next 45000 blocks over and over again, until you <Link to="#validator-exit">exit</Link> {" "}
-                the loop manually. Skip this option if you want to control your locks manually.
-              </li>
-            </ul>
+
             <img
               className="page-img"
-              src="/images/auto_relock1.png"
+              src="/images/validator_lock_for_collateral.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -2060,42 +2057,32 @@ ls ~/3dp-chain/chains/3dpass/keystore
             </div>
               <ul className="page-content-text">
                 <li>
-                  Use the <i>`addValidatorSelf`</i> method to submit your validator-candidate to the queue.
-                  The <Link to="/mainnet#validator-setup-fee">set up fee</Link> will be charged from your account. 
+                  Submit your validator-candidate to the queue:
                   <img
                   className="page-img"
-                  src="/images/add_validator_self.png"
+                  src="/images/validator_join.png"
                   alt="img"
                   style={{ marginBottom: "20px", marginTop: "20px" }}
                   />
                 </li>
                 <li id="validator-candidate-queue">
-                 The queue will let one candidate per session (120 blocks) into the set one by one.
-                 Check your validator-candidate in the <i>`candidates`</i> list and wait for the queue to 
-                 insert it into the validator set.
-                 <img
+                 Check your validator-candidate in the <i>`Candidates`</i> and wait for the queue to 
+                 insert it into the validator set. The queue will let one candidate per 
+                 session (120 blocks) in.
+                </li>
+                <li>
+                  Verify your Validator in the "Inactive" list.
+                  <img
                   className="page-img"
-                  src="/images/validator_candidates.png"
+                  src="/images/validator_in_the_set.png"
                   alt="img"
                   style={{ marginBottom: "20px", marginTop: "20px" }}
                   />
                 </li>
-                <li>
-                It depends on the current number of candidates in the queue 
-                how long will it take for your turn to head in.
-                Verify your mining address in the
-                <i>`validatorSet → Validators()`</i> list:
-                 <img
-                 className="page-img"
-                 src="/images/set_validators1.png"
-                 alt="img"
-                 style={{ marginBottom: "20px", marginTop: "20px" }}
-                 />
-                </li>
             </ul>
             <div className="page-content-text">
-              7. Generate the session key by calling out the Node via the 
-              RPC API with the <i>"author_rotateKeys"</i> method and get a `proof` of your keys:
+              7. Call out the Node (must be running) 
+              with the <i>"author_rotateKeys"</i> method and get a `proof` of the keys ownership:
             </div>
             <pre className="main-pre">
               {`
@@ -2116,7 +2103,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
             </ul>
             <div className="page-content-text">
              The <i>"author_rotateKeys"</i> returns a JSON-formatted result containting the `proof` of 
-             your keys for the `session` module in the hex fromat (<strong><i>"0x..."</i></strong>):
+             your keys for the `session` module in the hex fromat (<strong><i>"0x3dd251b3b71379..."</i></strong>):
             </div>
             <pre className="main-pre">
               {`
@@ -2129,61 +2116,41 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               </pre>
               <ul className="page-content-text">
                 <li>
-                 In the example above the `proof` is <i>0x3dd251b3b713793d39da31efbf2013766fd47730f69bcc18949dffac04d2b9076a907e83c40a0d0af459bc7a49354ff16f9b88edc66eb46cabed4a7f27efv30f</i>
-                </li>
-                <li>
                 <i>Note!</i> New session key will be added into the keystore (<i>~/3dp-chain/chains/3dpass/keystore</i>) {" "}
                 every time the <i>"author_rotateKeys"</i> method is executed.
                 </li>
               </ul>
             <div className="page-content-text">
               8. Use your <i>GRANDPA Public key</i> (hex), <i>Mining public key</i> (hex) and
-              the <i>`proof`</i> of your keys (hex) to set up the session keys for your Validator:
+              the <i>`proof`</i> to set up the session keys for your Validator:
             </div>
             <img
               className="page-img"
-              src="/images/set_keys_proof1.png"
+              src="/images/validator_set_keys.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+
+            <div className="page-content-text">
+              Verify that your keys are set to be queued for the next session:
+            </div>
+            <img
+              className="page-img"
+              src="/images/validator_next_keys_verify.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              GRANDPA Public key (hex) is:
-            </div>
-            <img
+              9. Wait for ~240 blocks (2 sessions) to engage in GRANDPA voting:
+              <img
               className="page-img"
-              src="/images/grandpa_pub1.png"
+              src="/images/validator_active.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">
-              Verify that both of your keys Mining pub key and GRANDPA pub key 
-              are set up to the session with the <i>`session_nextKeys`</i> method:
-            </div>
-            <img
-              className="page-img"
-              src="/images/session_next_keys.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              9. Wait for ~240 blocks (2 sessions) to pass. Your Validator will 
-              be queued to the actual Grandpa Authorities one session after it's gotten into 
-              the <i>nextKeys</i> list (in ~120 blocks). Optionally, you may verify it with 
-              the <i>`session_queuedKeys`</i> method. It is going to take one more session 
-              (120 blocks) for your validator to enact as a legitimate GRANDPA Authority. 
             </div>
             <div className="page-content-text">
-              10. Once having 2 sessions passed (~240 blocks have passed), make sure that you can 
-              see your GRANDPA SS58 Address on the Grandpa Authorities list:
-            </div>
-            <img
-              className="page-img"
-              src="/images/grandpa_auth1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              11. Would you like to highlight your Node with the "dot" on the <Link to="https://3dpass.netwokrk/">telemetry list</Link>, use this flag with the running comand:
+              10. Would you like to highlight your Node with the "dot" on the <Link to="https://3dpass.netwokrk/">telemetry list</Link>, use this flag with the running comand:
             </div>
             <pre className="main-pre">
               {`
@@ -2196,41 +2163,6 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 ./target/release/poscan-consensus --base-path ~/3dp-chain/ --chain mainnetSpecRaw.json --name MyNodeName --validator --telemetry-url "wss://submit.3dpass.network/submit 1" --author 0xccc201f5b3e7036c5ea534096d75befbda68a9b285025csd7105bc4726f02f7e --threads 2 --no-mdns
                     `}
             </pre>
-            <div className="page-content-text">
-              12. Make sure your Node is participating in the GRANDPA voting rounds. Check if its GRANDPA address is not being exposed 
-              on the missing list <strong>permanently</strong>. Call out the <code>roundState</code> method for several times (3-10 times) 
-              and watch over the missing list changes. The voting rounds rotate fairly rapidly (333 ms per round), 
-              so you always fetch incomplete data which is in the state of change. Sometimes your Validator might 
-              be found missing, which is normal. In the case of having your Validator unable to vofe for some 
-              reason its GRANDPA address is going to be showed up missing permanently. The problem is every time 
-              you call out the <i>roundRtate</i> it is still there:
-            </div>
-            <img
-              className="page-img"
-              src="/images/missing1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              The most common reasons for the Validator to permanently show up missng are: 
-            </div>
-            <ul className="page-content-text">
-              <li>
-                Incorrect key setup (check your keys and session set up)
-              </li>
-              <li>
-                Firewall restrictions (check your NAT rules and make sure there's no global 
-                firewall restriction taking place on the Internet provider's side)
-              </li>
-              <li>
-                It takes longer than 333 ms to get through to the server 
-                (Make sure your Node is accessible from anywhere in the world. 
-                Ping on the Node IP and make sure it gets back in 333 ms or faster) 
-              </li>
-              <li>
-                The Node is out of sinc (Make sure the Node is up to date with the Best block)
-              </li>
-            </ul>
             <div className="page-content-subtitle" id="validator-rejoin">
               Rejoining the validator set
             </div>
@@ -2243,42 +2175,23 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               <li>Ban period: 3 hours since heading off the validator set</li>
               <li>Comeback window: 1 week since the ban period got expired</li>
             </ul>
-            <div className="page-content-text">
-              Use the <i>`rejoinValidator`</i> method to submit your validator back to
-              the <Link to="/mainnet#validator-candidate-queue">queue</Link>.
-            </div>
             <img
               className="page-img"
-              src="/images/rejoin1.png"
+              src="/images/validator_rejoin.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-subtitle" id="validator-locks">
-              How to check my locks
+            <div className="page-content-subtitle" id="validator-pay-penalties">
+              Dealing with penalties
             </div>
             <div className="page-content-text">
               If a Validator was rulled out the validator set and the punishment
               took place, it's likely that its account was slashed for
-              penalties. In order to rejoin the new actual lock must be
-              submitted. Use the standard guidelines <Link to="/mainnet#lock-check">above</Link> to set up new lock.
-              Refill you account if it's needed.
-            </div>
-            <div className="page-content-text">
-              Check the actual lock state with <i>`validatorSet - validatorLock`</i>:
+              penalties. Pay off all the penalites before rejoining. 
             </div>
             <img
               className="page-img"
-              src="/images/locks-check1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-              Check the state at wich the lock was submitted initially with
-              <i>`ValidatorSet - enterDeposit`</i>:
-            </div>
-            <img
-              className="page-img"
-              src="/images/lock_history1.png"
+              src="/images/validator_pay_penalties.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -2286,23 +2199,20 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               Legitimate exit
             </div>
             <div className="page-content-text">
-              There is a legitimate way for Validators to exit without getting
+              There is a legitimate way for Validators to exit without
               penalties, which is to wait until the lock period has expired
-              and call out the <i>"unlock funds"</i>.
+              and call out the <i>"Unlock"</i>.
             </div>
             <div className="page-content-text">
               In case the auto <i>re-lock</i> option is being used,
               placing new lock is required to exit the loop. Just set up a
               new lock without auto <i>re-lock</i> option <i>(min lock period is + 43200 
               blocks ahead the current best block)</i> and wait, till it has expired.
-              And then call out the <i>"unlock funds"</i>.
-            </div>
-            <div className="page-content-text">
-              Unlock funds with <i>`validatorSet - unlock`</i>:
+              And then call out the <i>"Unlock"</i>.
             </div>
             <img
               className="page-img"
-              src="/images/validator_unlock1.png"
+              src="/images/validator_unlock_collateral.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -2500,11 +2410,11 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
           <div className="page-content-inner">
             <div className="page-content-title">Addresses and Keys</div>
             <div className="page-content-text">
-              Master account in 3DPass is defined by a mnemonic seed phrase
-              which can be utilized for the construction of various types of
-              keys. Whatever the key type was used, there is always a
+              Master account in The Ledger of Things (LoT) is defined by a mnemonic seed phrase
+              which can be utilized for construction of various types of
+              keys. Whatever the key type is, there is always a
               possibility to validate the standard account by its public key.
-              Standard account ID is a public key in hex format like this:
+              The `account ID` is a public key in hex format like this:
             </div>
             <pre className="main-pre">
               {`
@@ -2512,8 +2422,7 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
                     `}
             </pre>
             <div className="page-content-text">
-              For example, you have got your Master account defined by the
-              mnemonic seed phrase like this one:
+              Mnemonic seed phrase example:
             </div>
             <pre className="main-pre">
               {`
@@ -2521,8 +2430,8 @@ debris minor crater swear crane whale clever into now tone grid proud
                     `}
             </pre>
             <div className="page-content-text">
-             And there are at least two different types of keys that can be generated 
-             from out of the phrase, such as:
+             There are at least two different types of keys that can be derived 
+             from the phrase, such as:
             </div>
             <ul className="page-content-text">
               <li>
@@ -2531,9 +2440,21 @@ debris minor crater swear crane whale clever into now tone grid proud
               </li>
               <li>ed25519 (Edwards) - used for GRANDPA finalization</li>
             </ul>
-            <div className="page-content-subtitle" id="generating-keys">Generating keys</div>
+            <div className="page-content-text"> 
+              Follow the detailed
+             {" "}<Link to="https://github.com/3Dpass/3DP/wiki/Addresses-and-keys">description</Link> 
+             {" "}on Addresses and Keys.
+            </div>
+            <div className="page-content-subtitle" id="generating-addresses-and-keys">Generating keys</div>
             <div className="page-content-text">
-              Use key generate command to generate a random regular account and
+             In this guide we are going to use the <Link to="https://github.com/3Dpass/3DP">Node</Link>
+             {" "} to generate and inspect keys. 
+            </div>
+             <div className="page-content-text">
+              1. Build the Node or download the <Link to="https://github.com/3Dpass/3DP/releases">latest</Link> release.
+            </div>
+            <div className="page-content-text">
+              2. Use the `key generate` command to generate a random regular account and
               the key pair:
             </div>
             <pre className="main-pre">
@@ -2542,7 +2463,7 @@ debris minor crater swear crane whale clever into now tone grid proud
                     `}
             </pre>
             <div className="page-content-text">
-              The output would be like this:
+              The output would look like this:
             </div>
             <pre className="main-pre">
               {`
@@ -2557,12 +2478,12 @@ SS58 Address: d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek
               Inspecting addresses and keys
             </div>
             <div className="page-content-text">
-              Use key inspect command to display the the account details. Seed
+              Use the <i>key inspect</i> command to display the the account details. Either, Seed
               phrase, private key (hex), address or public key (hex) can be
               inspected.
             </div>
             <div className="page-content-text">
-              Inspecting public key by the network address
+              1. Inspecting public key by the network address
             </div>
             <pre className="main-pre">
               {`
@@ -2570,7 +2491,7 @@ SS58 Address: d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek
                     `}
             </pre>
             <div className="page-content-text">
-              The output would be like this if given address is valid:
+              The output would look like this, as long as the address is valid:
             </div>
             <pre className="main-pre">
               {`
@@ -2586,24 +2507,24 @@ Invalid phrase/URI given
                     `}
             </pre>
             <div className="page-content-text">
-              Inspecting a network address by its public key
+              2. Inspecting a network address by its public key
             </div>
             <div className="page-content-text">
-              In this case --public flag has to be used
+              In the case the <i>--public</i> flag has to be used
             </div>
             <pre className="main-pre">
               {`
 ./target/release/poscan-consensus key inspect --public 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99bc99df795e11b804c5ebb2c96b10
                     `}
             </pre>
-            <div className="page-content-text">This output is expected:</div>
+            <div className="page-content-text">This output is:</div>
             <pre className="main-pre">
               {`
 Network ID/Version: 71 Public key (hex): 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99bc99df795e11b804c5ebb2c96b10 Account ID: 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99bc99df795e11b804c5ebb2c96b10 Public key (SS58): d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek SS58 Address: d1CbAtpwbLAtLA6FXnDdR8FzwjqU9kKMYVWUzucaRvWzShEek
                     `}
             </pre>
-            <div className="page-content-subtitle" id="inspecting-seed-phrase">
-              Inspecting a seed phrase
+            <div className="page-content-subtitle" id="addresses-inspecting-seed-phrase">
+              3. Inspecting a seed phrase
             </div>
             <div className="page-content-text">
               By means of inspecting a seed phrase you can derive both types of
@@ -2616,15 +2537,15 @@ Network ID/Version: 71 Public key (hex): 0x0ed64e59d2d9c1c828a41a0f3cac53d92f99b
                     `}
             </pre>
             <div className="page-content-text">
-              The output would as follows:
+              The output would be as follows:
             </div>
             <pre className="main-pre">
               {`
 Secret phrase: debris minor crater swear crane whale clever into now tone grid proud Network ID: 71 Secret seed: 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9a Public key (hex): 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Account ID: 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Public key (SS58): d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS SS58 Address: d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS
                     `}
             </pre>
-            <div className="page-content-subtitle" id="inspecting-private-key">
-              Inspecting a private key
+            <div className="page-content-subtitle" id="addresses-inspecting-private-key">
+              4. Inspecting a private key
             </div>
             <div className="page-content-text">
               while inspectin a private key(hex) the sr25519 is set up by
@@ -2645,7 +2566,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                     `}
             </pre>
             <div className="page-content-text">
-              If the type ed25519 is specified, like this:
+              If the `ed25519` type is specified:
             </div>
             <pre className="main-pre">
               {`
@@ -2653,19 +2574,76 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                     `}
             </pre>
             <div className="page-content-text">
-              We are going to get the result:
+              The result will be as follows::
             </div>
             <pre className="main-pre">
               {`
 Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9a is account: Network ID: 71 Secret seed: 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9a Public key (hex): 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Account ID: 0x6bfcaf1780f0c9f11ee93366c7cf0f24b0a77675966589c82398236da32024d3 Public key (SS58): d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS SS58 Address: d1EhJkMSTJQDgnkyet8kaB4QppPzYBX1XJWETKF8C2fv1ruxS
                     `}
             </pre>
+            <div className="page-content-subtitle" id="addresses-and-keys-evm">
+              EVM cross-platform accounts
+            </div>
+            <div className="page-content-text">
+              There is the EVM compatibility layer operating on The Ledger of Things (LoT)
+              to ensure <Link to="/assets#smart-contracts-solidity">Solidity smart contracts</Link> 
+              {" "}seamless execution.
+              The EVM accounts are standard `H160` addresses, while the native accounts are 
+              using the `H256` format. There is an conversion
+              logic in place to to map the native `H256` to `H160` and vice versa.
+            </div>
+            <ol className="page-content-text">
+              <li> <strong>`H256` to `H160` mapping:</strong> <br />
+               The logic is stragtforward, the account is converted by cutting 20 bytes 
+               from the tail of the <Link to="/mainnet#addresses">public key</Link>: 
+               <pre className="main-pre">
+                {`
+0xc6006fea43ccce14f9432f8e6b9403113c935cc17160cd438af2e7a02624124c
+
+SS58: d1GjLAyfV83DefL1z1HpJwuXxWJhD3PHUArFgaZsKn321pUK4
+                `}
+               </pre>
+               mapps to:
+               <pre className="main-pre">
+                {`
+0xc6006fea43ccce14f9432f8e6b9403113c935cc1
+                `}
+               </pre>
+                 This approach provides full contoll for the original 
+                 public key owner while accessing both systems: Native runtime and EVM. 
+              </li>
+              <li>
+                  <strong>`H160` to `H256` mapping:</strong> <br />
+                  Due to the lack of data (we lack 20 bytes to construct a longer `H256` key), 
+                  the mapping logic involves additional `blake2b` proxy hashing. Follow the implementation of 
+                  this <Link to="https://hoonsubin.github.io/evm-substrate-address-converter/">Converter</Link>.
+                  {" "} And the same `H160` address: 
+                  <pre className="main-pre">
+                {`
+0xc6006fea43ccce14f9432f8e6b9403113c935cc1
+                `}
+                </pre>
+                  mapps to a different native account:
+                <pre className="main-pre">
+                                {`
+0xceb75620b9f3bc3a039b8e78efed58fa3c7422d18c97f1fd44abf3f2499d0760
+
+SS58: d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS
+
+                `}
+                </pre>
+                The mapped account is a system address, which allows to recieve funds and execute transactions 
+                on behalf of the `H160` one within the native runtime.
+                However, the address owner doesn't have access to the mapped `H256` 
+                address private key, and thus can interact with EVM logic only. 
+              </li>
+            </ol>
           </div>
         </div>
         <div className="page-content-block" id="troubleshooting">
           <div className="page-content-inner">
             <div className="page-content-title">Troubleshooting</div>
-            <div className="page-content-subtitle" id="no-peers">
+            <div className="page-content-subtitle" id="troubleshooting-no-peers">
               The Node has no peers
             </div>
             <img
@@ -2706,7 +2684,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                 Learn more about the bootnodes on the project <Link to="https://github.com/3Dpass/3DP/wiki/Setting-up-bootnode">Wiki</Link>.
               </li>
             </ul>
-            <div className="page-content-subtitle" id="node-got-stuck">
+            <div className="page-content-subtitle" id="troubleshooting-node-got-stuck">
               Node got stuck at the certain heght or it won't start syncing
             </div>
             <div className="page-content-text">
@@ -2737,7 +2715,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                 your machine.
               </li>
             </ul>
-            <div className="page-content-subtitle" id="falling-behind">
+            <div className="page-content-subtitle" id="troubleshooting-falling-behind">
               The node is always falling behind and wouldn't catch
               up with the chain
             </div>
@@ -2757,7 +2735,7 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
                 folder <i>~/3dp-chain/chains/3dpass/db</i> with the new one.
               </li>
             </ul>
-            <div className="page-content-subtitle" id="ran-out-of-free-wasm-instances">
+            <div className="page-content-subtitle" id="troubleshooting-ran-out-of-free-wasm-instances">
               "Ran out of free WASM instances"
             </div>
             <img
