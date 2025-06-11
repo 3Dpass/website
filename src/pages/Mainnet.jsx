@@ -272,9 +272,9 @@ const Mainnet = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#validator-locks">
+          <a href="#validator-pay-penalties">
             <div className="page-nav-inside">
-              How to Check My Locks
+              Dealing with penalties
               <div className="inside-nav-circle"></div>
             </div>
           </a>
