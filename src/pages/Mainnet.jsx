@@ -1826,22 +1826,38 @@ RPC: https://rpc-http.3dpass.org
               schedule:
             </div>
             <ul className="page-content-text">
-              <li>by 10% every ~10 days (in blocks)</li>
+              <li>by 10% over ~10 days (in blocks)</li>
             </ul>
             <div className="page-content-subtitle" id="how-to-unlock-block-rewards">How to unlock</div>
             <div className="page-content-text">
-              
               It is required to claim the available amount of funds by signing the <i>Unlock</i> transaction with 
               the block author's address. 
+            </div>
+            <div className="page-content-text">
+              <strong>Option 1 - Using the web wallet:</strong>
             </div>
             <ul className="page-content-text">
               <li>Open the <Link to="https://wallet.3dpass.org/">web wallet</Link></li>
               <li>Choose "Unlock"</li>
-              <li>Sign the transaction with the block author's address</li>
+              <li>Sign the transaction with the block author's/validator's address</li>
             </ul>
             <img
               className="page-img"
               src="/images/unlock_mined_2.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+            <div className="page-content-text">
+              <strong>Option 2 - Using the mining and validator dashboard: </strong> 
+            </div>
+            <ul className="page-content-text">
+              <li>Open the dashboard via <Link to="https://miner.p3d.top">miner.p3d.top</Link> or <Link to="https://mining.3dpscan.xyz">mining.3dpscan.xyz</Link></li>
+              <li>Navigate "Claim vasted rewards"</li>
+              <li>Sign the transaction with the block author's/validator's address</li>
+            </ul>
+            <img
+              className="page-img"
+              src="/images/vesting_shchedule.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
@@ -1859,7 +1875,7 @@ RPC: https://rpc-http.3dpass.org
               Although, you have all of your locks expired long ago, yet there is no lock records scheduled for the future.
               In the case, all you need to do is to mine 1 block (to set up a lock record for the future) and then do <i>Unlock</i>.
             </div>
-            <div className="page-content-subtitle" id="how-to-check-pending-locks">How to check pending locks</div>
+            <div className="page-content-subtitle" id="how-to-check-pending-locks">An alternative method to check pending locks</div>
             <div className="page-content-text">
               The lock records are set and managed by the <i>Rewards</i> module for both miners and validators.
               Open the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/chainstate">Polka js wallet</Link> {" "}
