@@ -1113,7 +1113,7 @@ RPC: https://rpc-http.3dpass.org
                 <ul>
                 <li>Convert your ETH address (H160) to the LoT mainnet address 
                   (H256) with this 
-                  {" "}<Link to="https://hoonsubin.github.io/evm-substrate-address-converter/">converter</Link>.
+                  {" "}<Link to="https://converter.3dpass.org">converter</Link>.
                   {" "} Use LoT mainnet `prefix: 71`: <br/>
                   0xc6006fea43ccce14f9432f8e6b9403113c935cc1 → 
                   d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS.

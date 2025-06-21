@@ -401,7 +401,7 @@ const Grants = () => {
                 Block explorers (e.g. <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)
               </li>
               <li>
-                Mining leader boards (e.g. <Link to="https://3dpassmining.info">3dpassmining.info</Link>)
+                Mining leader boards (e.g. <Link to="https://miner.p3d.top">miner.p3d.top</Link>)
               </li>
               <li>
                 DEX maintenance (e.g. <Link to="https://3dpswap.online">https://3dpswap.online</Link>)

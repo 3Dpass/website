@@ -441,6 +441,9 @@ const Mainnet = () => {
           <a href="/assets/#smart-contracts">
             <div className="one-subheader">Smart Contracts</div>
           </a>
+          <a href="https://converter.3dpass.org">
+            <div className="one-subheader">EVM Address converter</div>
+          </a>
         </div>
         <div className="page-content-block first-page-block" id="requirements">
           <div className="page-content-inner">
@@ -1778,38 +1781,56 @@ RPC: https://rpc-http.3dpass.org
                   Top up P3D balance on EVM to cover gas fee and transaction fee:
                 </li>
                 <ul>
-                <li>Convert your ETH address (H160) to the LoT mainnet address 
-                  (H256) with this 
-                  {" "}<Link to="https://hoonsubin.github.io/evm-substrate-address-converter/">converter</Link>.
-                  {" "} Use LoT mainnet `prefix: 71`: <br/>
-                  0xc6006fea43ccce14f9432f8e6b9403113c935cc1 → 
-                  d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS.
+                <li>Convert your ETH (EVM) address to the LoT mainnet one with this converter:
+                  {" "}<Link to="https://converter.3dpass.org">https://converter.3dpass.org</Link> :
+               <img
+                  className="page-img"
+                  src="/images/evm-3dpass_converter.png"
+                  alt="img"
+                  style={{ marginBottom: "20px" }}
+                />                
                   </li>
                   <li>
-                    Use the LoT mainnet converted address (d1..) to recieve P3D from any native mainnet account (d1..). 
+                    Use the converted address <i>(d1..)</i> to recieve P3D from any 
+                    native mainnet account <i>(d1..)</i>. 
                   </li>
                   <li>
-                    Use your ETH address to recieve P3D from any account within EVM (e.g. from a Metamask user). 
+                    Use your ETH (EVM) address to recieve P3D from any Metamask users. 
                   </li>
                 </ul>
                 <li>
-                  P3D contract on EVM: 0x0000000000000000000000000000000000000802
+                <pre className="main-pre">
+                 {`
+P3D contract on EVM:
+0x0000000000000000000000000000000000000802
+                `}
+                 </pre>
                 </li>
                 <li>
-                  Interaction with assets: <br />
-                  Contract address format: <strong>`0xFBFBFBFA + assetID (in hex)`</strong>,  <br />
-                  where the `assetID` 
-                  is the asset index in `poscanAssets` runtime module.
+                  Contract address format for Assets: 
+                  <pre className="main-pre">
+                 {`
+0xFBFBFBFA + assetID (in hex)
+                `}
+                 </pre>
+                  - `0xFBFBFBFA` is a constant prefix
+                  - `assetID` is the asset index in `poscanAssets` runtime module. <br />
                   e.g. the <Link to="https://3dpscan.xyz/#/assets/16">COW</Link> token's assetID is `16`. 
-                  The hex value of `16` is `10` . So, the H160 address to 
-                  interact with COW is going to be as follows: 0xFBFBFBFA00000000000000000000000000000010
+                  The hex value of `16` is `10` . So, the EVM address to 
+                  interact with COW is: 
+                <pre className="main-pre">
+                 {`
+COW contract on EVM:
+0xFBFBFBFA00000000000000000000000000000010
+                `}
+                  </pre>
                 </li>
-                <li>
+              </ol>
+               <div className="page-content-text">
                   Explore how to interact with P3D and assets from Solidity 
                   throuh the EVM 
                   {" "} <Link to="/assets#smart-contracts-solidity">custom precompiled smart contracts</Link>.  
-                </li>
-              </ol>
+               </div>
           </div>
         </div>
         <div className="page-content-block" id="unlock">
@@ -2247,34 +2268,34 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               can not only promote in level but also demote the account that
               is found malicious. The registrar judgement can only be changed
               by <Link to="/governance#democracy">Referenda</Link>. Registrars can either be elected by <Link to="/governance#democracy">Referenda</Link> or
-              assigned by means of the <Link to="/governance#council">Council</Link> vote.
+              assigned by the <Link to="/governance#council">Council</Link> vote.
             </div>
             <div className="page-content-subtitle" id="chain-general">
               Levels of confidence
             </div>
             <ul className="page-content-text">
-              <li><i>Unknown</i>: The default value, no judgement made yet.</li>
+              <li><i>"Unknown"</i> - The default value, no judgement made yet.</li>
               <li>
-                <i>Reasonable</i>: The data appears to be reasonable, but no in-depth
+                <i>"Reasonable"</i> - The data appears to be reasonable, but no in-depth
                 checks. Both P3D account private key and additional account
                 (Discord, Telegram, Google, etc) ownership must be proved.
               </li>
               <li>
-                <i>Known Good</i>: The registrar has certified that the information is
+                <i>"Known Good"</i> - The registrar has certified that the information is
                 correct (this step involves verification of state issued
                 identity documents, and at the moment no account has known good
                 identity, with the exception of registrars).
               </li>
               <li>
-                <i>Out of Date</i>: The information used to be good, but is now out of
+                <i>"Out of Date"</i> - The information used to be good, but is now out of
                 date.
               </li>
               <li>
-                <i>Low Quality</i>: The information is low quality or imprecise, but
+                <i>"Low Quality"</i> - The information is low quality or imprecise, but
                 can be fixed with an update.
               </li>
               <li>
-                <i>Erroneous</i>: The information is erroneous and may indicate
+                <i>"Erroneous"</i> - The information is erroneous and may indicate
                 malicious intent.
               </li>
             </ul>
@@ -2285,6 +2306,43 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               <li><Link to="https://3dpscan.xyz/#/identities/registrars">Current registrars</Link></li>
               <li><Link to="https://3dpscan.xyz/#/identities">Identities history data</Link></li>
             </ul>
+             <div className="page-content-text">
+              <strong>How to become Registrar:</strong><br />
+                 Every professional KYC/AML organization is welcome 
+                 to be Regiistrar within the Ledger of Things ecosystem. Please join the
+                 {" "} <Link to="https://discord.gg/u24WkXcwug">Discord</Link> 
+                 {" "}<strong>governance</strong> channel 
+                 and ask current Councilors to add your company to the Registrars list. 
+                 They will initiate a motion which will let you operate, if successful.                
+             </div>
+            <div className="page-content-text">
+              <strong>Identity decentralized module RPC API:</strong> <br />
+               There is an <Link to="https://github.com/3Dpass/3DP/wiki/Identity-module-RPC-API">RPC API</Link>, {" "}
+               through which the Idenity module can be interacted with by both users and registrars.
+            </div>
+             <div className="page-content-text">
+              <strong>Registrar user interface:</strong>
+             </div>
+             <div className="page-content-text">
+                1. Using the <Link to="https://wallet.3dpass.org">web wallet</Link>, {" "}
+                a registrar, once approved by the council, can either set up the service fee or handle current 
+                requests submitted by users. 
+             </div>
+              <img
+              className="page-img"
+              src="/images/registrar_set_fee.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+              />
+            <div className="page-content-text">
+              2. Providing judgements:
+            </div>
+            <img
+              className="page-img"
+              src="/images/judgement_requests.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
             <div className="page-content-subtitle" id="chain-kyc">
               KYC procedure: Reasonable
             </div>
@@ -2601,57 +2659,47 @@ Secret Key URI 0x3026a7ee1b5014b72287681c68e55b7eca44d11fcfb86254f1efec21845abf9
               EVM cross-platform accounts
             </div>
             <div className="page-content-text">
-              There is the EVM compatibility layer operating on The Ledger of Things (LoT)
-              to ensure <Link to="/assets#smart-contracts-solidity">Solidity smart contracts</Link> 
-              {" "}seamless execution.
-              The EVM accounts are standard `H160` addresses, while the native accounts are 
-              using the `H256` format. There is an conversion
+              There is an EVM compatibility layer operating within The Ledger of Things (LoT) 
+              to ensure <Link to="/assets#smart-contracts-solidity">Solidity smart contracts</Link> {" "} 
+              seamless execution. The EVM accounts 
+              are standard H160 addresses (20 bytes), while the native accounts are 
+              using the H256 format (32 bytes). There is a conversion
               logic in place to to map the native `H256` to `H160` and vice versa.
             </div>
             <ol className="page-content-text">
               <li> <strong>`H256` to `H160` mapping:</strong> <br />
-               The logic is stragtforward, the account is converted by cutting 20 bytes 
-               from the tail of the <Link to="/mainnet#addresses">public key</Link>: 
+               The logic is stragtforward, the account is converted by cutting 20 bytes off 
+               the <Link to="/mainnet#addresses">public key</Link>: 
                <pre className="main-pre">
                 {`
-0xc6006fea43ccce14f9432f8e6b9403113c935cc17160cd438af2e7a02624124c
-
+Native H256: 0xc6006fea43ccce14f9432f8e6b9403113c935cc17160cd438af2e7a02624124c
 SS58: d1GjLAyfV83DefL1z1HpJwuXxWJhD3PHUArFgaZsKn321pUK4
+
+Maps to EVM H160: 0xc6006fea43ccce14f9432f8e6b9403113c935cc1
                 `}
                </pre>
-               mapps to:
-               <pre className="main-pre">
-                {`
-0xc6006fea43ccce14f9432f8e6b9403113c935cc1
-                `}
-               </pre>
-                 This approach provides full contoll for the original 
-                 public key owner while accessing both systems: Native runtime and EVM. 
+                This approach ensures that the original public key owner maintains full control
+                while accessing both systems: Native runtime and EVM.
               </li>
               <li>
                   <strong>`H160` to `H256` mapping:</strong> <br />
                   Due to the lack of data (we lack 20 bytes to construct a longer `H256` key), 
                   the mapping logic involves additional `blake2b` proxy hashing. Follow the implementation of 
-                  this <Link to="https://hoonsubin.github.io/evm-substrate-address-converter/">Converter</Link>.
+                  this <Link to="https://github.com/3Dpass/3dpass-evm-address-converter">Converter</Link>.
                   {" "} And the same `H160` address: 
                   <pre className="main-pre">
                 {`
-0xc6006fea43ccce14f9432f8e6b9403113c935cc1
-                `}
-                </pre>
-                  mapps to a different native account:
-                <pre className="main-pre">
-                                {`
-0xceb75620b9f3bc3a039b8e78efed58fa3c7422d18c97f1fd44abf3f2499d0760
+EVM H160: 0xc6006fea43ccce14f9432f8e6b9403113c935cc1
 
+Maps to Native H256: 0xceb75620b9f3bc3a039b8e78efed58fa3c7422d18c97f1fd44abf3f2499d0760
 SS58: d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS
 
                 `}
                 </pre>
-                The mapped account is a system address, which allows to recieve funds and execute transactions 
-                on behalf of the `H160` one within the native runtime.
-                However, the address owner doesn't have access to the mapped `H256` 
-                address private key, and thus can interact with EVM logic only. 
+                 The mapped native account is a system address that allows for receiving funds and executing 
+                 transactions on behalf of the `H160`` address within the native runtime. However, the EVM address 
+                 owner doesn't have access to the mapped `H256` address private key and can only interact 
+                 with EVM logic.
               </li>
             </ol>
           </div>

@@ -505,6 +505,7 @@ const Coin = () => {
                <li>Archive Nodes and RPC API endpoints (<i>Done</i>: <Link to="https://github.com/3Dpass/rpc-list">The endpoint providers list</Link>)</li>
                <li>New telemetry server (<i>Done</i>: <Link to="https://3dpass.network">3dpass.network</Link>)</li>
                <li>Mining & Validator dashboard (<Link to="https://github.com/3Dpass/mining-leaderboard"><i>Done</i></Link>)</li>
+               <li>3Dpass to EVM address converter (<Link to="https://github.com/3Dpass/3dpass-evm-address-converter"><i>Done</i></Link>)</li>
               </ul>
              <li>3DPRC-2: (<i>in the process, lead by PaulS and Mikhail</i>):</li>
              <ul className="page-content-text">
