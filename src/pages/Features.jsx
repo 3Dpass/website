@@ -246,6 +246,18 @@ const Features = () => {
               <div className="page-nav-circle"></div>
             </div>
           </a>
+          <a href="#evm">
+            <div
+              className={
+                locationHash.includes("evm")
+                  ? "one-page-nav active"
+                  : "one-page-nav"
+              }
+            >
+              EVM
+              <div className="page-nav-circle"></div>
+            </div>
+          </a>
         </div>
       </div>
       <div className="page-content">
@@ -869,7 +881,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm/precompile">standard precompiled contracts</Link> {" "}
               there is a bunch of custom precompiles that serve as cross-platform interfaces
               between native substrate-based runtime and the EVM. 
-              Follow these <Link to="/assets#smart-contracts-solidity">guiudelines</Link> 
+              Follow these <Link to="/assets#smart-contracts-solidity">guidelines</Link> 
               {" "} to run your Solidity smart contract on LoT.  
             </div>
           </div>
@@ -995,6 +1007,47 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               className="page-img"
               style={{ marginBottom: "20px" }}
               src="/images/personal_public_identity_1.png"
+              alt="img"
+            />
+          </div>
+        </div>
+                <div className="page-content-block" id="evm">
+          <div className="page-content-inner">
+            <div className="page-content-title">
+              EVM compatibility layer
+            </div>
+            <div className="page-content-text">
+              The Ledger of Things (LoT) is equipped with a custom version 
+              of the EVM compatibility L2 reffered to as
+              {" "}<Link to="https://github.com/polkadot-evm/frontier">Frontier</Link>.
+              {" "}In addition to {" "}
+              <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm/precompile">standard precompiled contracts</Link> {" "}
+              there is a bunch of <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles">custom precompiles</Link> that serve as cross-platform interfaces
+              between native substrate-based runtime and the EVM. 
+            </div>
+            <div className="page-content-text">
+             One of the main components of the L2 is the
+             {" "}<Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm">EVM module</Link>, 
+             {" "} which allows for unmodified <Link to="https://soliditylang.org">Solidity</Link> 
+             {" "} code to be executed on the LoT blockchain seamlessly. This feature is designed
+              to closely emulate the functionality of executing contracts on the
+              Ethereum mainnet within LoT. 
+            </div>
+            <div className="page-content-text">
+              Follow these <Link to="/assets#smart-contracts-solidity">guidelines</Link> 
+              {" "} to either run your Solidity smart contract on LoT or 
+              {" "}<Link to="/mainnet#metamask">connect to Metamask</Link> and enjoy 
+              cross-platform transfers of P3D and Assets to EVM and back.
+            </div>
+            <div className="page-content-text">
+              Explore "EVM to LoT" address cross-platform mapping logic by 
+              reading through the following <Link to="/mainnet#addresses-and-keys-evm">documentation</Link>.
+              Use this simple <Link to="https://converter.3dpass.org">converter</Link> as a reference.
+            </div>
+            <img
+              className="page-img"
+              style={{ marginBottom: "20px" }}
+              src="/images/address_mapping.png"
               alt="img"
             />
           </div>

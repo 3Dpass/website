@@ -1778,26 +1778,43 @@ RPC: https://rpc-http.3dpass.org
                 />
                 </li>
                 <li>
-                  Top up P3D balance on EVM to cover gas fee and transaction fee:
-                </li>
-                <ul>
-                <li>Convert your ETH (EVM) address to the LoT mainnet one with this converter:
-                  {" "}<Link to="https://converter.3dpass.org">https://converter.3dpass.org</Link> :
-               <img
+                  Send P3D or Assets to any EVM account,
+                  using the <Link to="https://wallet.3dpass.org/">3DPass wallet</Link>
+                  {" "} (to be received on Metamask):
+                  <img
                   className="page-img"
-                  src="/images/evm-3dpass_converter.png"
+                  src="/images/send_to_EVM.png"
                   alt="img"
                   style={{ marginBottom: "20px" }}
-                />                
-                  </li>
+                />   
+                 </li>
+                 <li>
+                  Receive funds from any EVM account (e.g. from Metamask), using the "EVM withdraw" option:
+                  <ul>
                   <li>
-                    Use the converted address <i>(d1..)</i> to recieve P3D from any 
-                    native mainnet account <i>(d1..)</i>. 
+                    Open the <Link to="https://wallet.3dpass.org/">3DPass wallet</Link>,
+                    {" "} navigate "EVM withdraw" and pick up your EVM address:
                   </li>
-                  <li>
-                    Use your ETH (EVM) address to recieve P3D from any Metamask users. 
-                  </li>
-                </ul>
+                  <img
+                  className="page-img"
+                  src="/images/EVM_withdraw.png"
+                  alt="img"
+                  style={{ marginBottom: "20px" }}
+                /> 
+                <li>
+                  Transfer P3D or Assets from Metamask to the EVM account. 
+                </li>
+                <li>
+                  Submit the "EVM withdraw" transaction to withdraw 
+                  P3D from EVM (required for P3D only). 
+                </li>
+                 </ul> 
+                 </li> 
+                 <li>
+                  You can also leverage this
+                  {" "}<Link to="https://converter.3dpass.org">converter</Link>
+                  {" "} for manual address conversion, if necessary.
+                </li>              
                 <li>
                 <pre className="main-pre">
                  {`

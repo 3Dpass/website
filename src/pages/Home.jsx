@@ -94,6 +94,9 @@ const Home = () => {
             <Link to="/mainnet#chain">
               <Button type="button" label="On-chain Identity" />
             </Link>
+            <Link to="/features#evm">
+              <Button type="button" label="EVM" />
+            </Link>
           </div>
         </div>
       </div>
