@@ -302,7 +302,7 @@ const ProofOfScan = () => {
             </div>
             <ul className="page-content-text">
               <li>
-              Every recognition algorithm to add must provide “0 knowledge proof” about the object, so that the 
+              Every recognition algorithm to add must provide "0 knowledge proof" about the object, so that the 
               network can verify and agree upon its authenticity. <Link to="/proof-of-scan#3dprc-2"></Link> 3DPRC-2 object authentication protocol as well as {" "}  
               <Link to="/grid2d">Grid2d</Link> recognition algorithm could be used as a reference.
               </li>
@@ -332,7 +332,7 @@ const ProofOfScan = () => {
               3DPass never collects or transmits any 3D object data processed by
               the recognition toolkit, unless the user decides to store it on the
               blockchain in open. The recognition algorithm uses RAM only,
-              running on user’s local device without any Internet connection
+              running on user's local device without any Internet connection
               involved. It is assumed that users are responsible for the
               security of their own devices that are running 3Dpass. For
               example, if anyone had a 3D scan of any private physical asset,
@@ -400,7 +400,7 @@ const ProofOfScan = () => {
               </li>
               <li>
                 Whether or not the same-shaped object is actually existing on
-                the network. If it is, obviously, we’re dealing with one of its
+                the network. If it is, obviously, we're dealing with one of its
                 3D models (duplicates), which must be rejected;
               </li>
               <li>
@@ -569,7 +569,7 @@ Select top 10 hashes
                to equalize the mining velocity of CPU and GPU to one another
               </li>
               <li>
-               Leveraging full blockchain db is required, because of the “proof of context” {" "}
+               Leveraging full blockchain db is required, because of the "proof of context" {" "}
                extension ensuring the dynamic usage of memory in the mining loop, which helps {" "}
                3DPass resist against FPGA devices sensitive to memory load speed.
               </li>
@@ -602,7 +602,7 @@ Select top 10 hashes
               alt="img"
             />
             <div className="page-content-text">
-             3. It wasn’t until having the object scanned with zero angle the target rotation angle <i>(μ = x)</i> could be calculated.{" "} 
+             3. It wasn't until having the object scanned with zero angle the target rotation angle <i>(μ = x)</i> could be calculated.{" "} 
              The same as usual the block author would be challenged with picking up some 3D object shape and get it scanned{" "} 
              with the target rotation angle <i>(μ = x)</i> until the <i>pre_hash</i> makes the <i>double_hash</i> meet current difficulty number or above.
             </div>
@@ -619,7 +619,7 @@ Select top 10 hashes
             Random 3D model in obj → Grid2d (3D model μ = 0) output → Random X (Grid2d μ = 0) blake2b hash → rotation_bytes x = 4 bytes out of pre_hash + 4 bytes out of RandomX (Grid2d μ = 0) blake2b hash → Grid2d (3D model μ = xo) output → <strong>Random X (Grid2d μ = x) blake2b hash</strong> 
             </div>
             <div className="page-content-text">
-              4. However, there will be an additional “proof of context” task to solve having {" "} 
+              4. However, there will be an additional "proof of context" task to solve having {" "} 
               the access to the full blockchain db is required for. Depending on the pre_hash {" "} 
               calculated, there is going to be a directed sequence of N pseudo randomly chosen {" "} 
               blocks to pick up (ex. <i>104786 → 476673 → 219964 → 891987 → 12897</i> ) and prove its {" "} 
@@ -685,7 +685,7 @@ Select top 10 hashes
               alt="img"
             />
             <div className="page-content-text">
-              These checks will ensure 3D object’s surface is simply connected and has sufficient {" "}
+              These checks will ensure 3D object's surface is simply connected and has sufficient {" "}
               volume to impact on the center of inertia of mass.
             </div>
           </div>
@@ -695,8 +695,8 @@ Select top 10 hashes
             <div className="page-content-title">Randomness</div>
             <div className="page-content-text">
               Randomness is one of the most important parts of the consensus.
-              It’s leveraged by miners picking up some random 3D objects of
-              unique shape being as much unpredictable as it’s possible. There
+              It's leveraged by miners picking up some random 3D objects of
+              unique shape being as much unpredictable as it's possible. There
               are two different ways for miners to get 3D object's model. The
               first one is to get a real world object scanned by 3D scanner,
               which would be unpredictable enough, although it takes a lot of
@@ -948,47 +948,47 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             <div className="page-content-title">Finality Gadget GRANDPA</div>
             <div className="page-content-text">
               3Dpass network implicates a deterministic finality protocol called
-              GRANDPA which guarantees blocks to reach finality in opposite to
-              probabilistic finality (e.x. Nakamoto protocol which first was
-              applied in Bitcoin). Pease refer to the <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA paper</Link> to read full
+              GRANDPA which guarantees blocks to reach finality in contrast to
+              probabilistic finality (e.g., Nakamoto protocol, which was first
+              applied in Bitcoin). Please refer to the <Link to="https://polkadot.network/blog/polkadot-consensus-part-2-grandpa/">GRANDPA paper</Link> to read the full
               description of the protocol.
             </div>
             <div className="page-content-text">
-              There is a set of the most reliable nodes on the network called Validator set, which members {" "}
+              There is a set of the most reliable nodes on the network called the Validator set, whose members {" "}
               are allowed to take the authority to vote for Best chain finality, as long as they meet the {" "}
               <Link to="/mainnet#validator-requirements">SLA conditions</Link>.
             </div>
             <div className="page-content-text">
-              There is a session of 120 blocks length, within which the current
-              validator set is always stable. It can not be changed with new
-              in/out comers until the session is expired. If any validator left
-              the set, in order to come back the selection
-              threshold is required to pass again.
+              There is a session of 120 blocks in length, within which the current
+              validator set is always stable. It cannot be changed with new
+              incoming or outgoing members until the session has expired. If any validator leaves
+              the set, in order to come back, the selection
+              threshold must be passed again.
             </div>
             <div className="page-content-text">
-              Given the fact that GRANDPA gadget in 3DPass is applied on top of
-              PoScan chain already built by the time and providing itself
+              Given the fact that the GRANDPA gadget in 3DPass is applied on top of
+              the PoScan chain already built by the time and providing itself
               conventional probabilistic finality, the finalization stall
               situation is a serious incident but might not be fatal. It does
-              not affect the block production as well as the chain moving
-              forward. In case the current validator set is occurred to be
-              incapable to vote, the next validator set takes their turn after
-              the session is expired and keeps up with the best block, voting
-              for all the chain non-finalized yet.
+              not affect block production or the chain moving
+              forward. In case the current validator set is found to be
+              incapable of voting, the next validator set takes their turn after
+              the session has expired and keeps up with the best block, voting
+              for all the chain not yet finalized.
             </div>
           </div>
         </div>
         <div className="page-content-block" id="3dprc-2">
           <div className="page-content-inner">
             <div className="page-content-title">
-              3DPRC-2 the user objects tokenization standard
+              3DPRC-2: The User Objects Tokenization Standard
             </div>
             <div className="page-content-subtitle">
               What is 3DPRC-2?
             </div>
             <div className="page-content-text">
               <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> (3Dpass Request for Comments), proposed by PaulS in September 2023, is a standard 
-              p2p protocol for the tokenization of the user objects operating within “The Ledger of Things”.
+              peer-to-peer protocol for the tokenization of user objects operating within "The Ledger of Things".
               This is the most useful part of the "Proof of Scan" consensus, which opens the capability 
               for the network to provide its decentralized service to customers.
             </div>
@@ -998,36 +998,36 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             <ul className="page-content-text">
               <li>
                 <strong>
-                  Advanced version of “Proof of Scan”
+                  Advanced version of "Proof of Scan"
                 </strong>
-                - The protocol is weaved into “The Ledger of Things” PoW component in a way to tackle the user 
-                objects authentication along with the ones being mined. The protocol ensures for users to get 
-                a complete service always resulting as either the object acceptance (the asset is allowed to 
-                be created) or its rejection (copy is found on the db). The network is responsible for the user 
-                object authentication as much as for any block on the blockchain irrespective to the actual 
+                - The protocol is woven into "The Ledger of Things" PoW component in a way to tackle user 
+                object authentication along with those being mined. The protocol ensures users get 
+                a complete service always resulting in either object acceptance (the asset is allowed to 
+                be created) or its rejection (copy is found in the database). The network is responsible for user 
+                object authentication as much as for any block on the blockchain, irrespective of the actual 
                 dollar value attached to
               </li>
               <li>
                 <strong>
-                  “0 knowledge proof”
+                  "0 knowledge proof"
                 </strong> 
-                - Every judgement provided by miners about the object authenticity is protected by a secret knowledge 
-                of its HASH ID being unavailable for them, until they get the object processed. Every proof is being 
+                - Every judgment provided by miners about the object authenticity is protected by a secret knowledge 
+                of its HASH ID being unavailable to them until they get the object processed. Every proof is 
                 verified by the majority of the network to make a final decision on whether to accept or reject the 
-                block containing the judgement
+                block containing the judgment
               </li>
               <li>
                 <strong>
                 <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/poscan">PoScan</Link> Substrate-based pallet 
                 (storage and <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API</Link>)
                 </strong> 
-                - The PoScan pallet is integrated into the network runtime providing the access to the network 
+                - The PoScan pallet is integrated into the network runtime, providing access to the network's 
                 decentralized storage by means of the object tokenization 
                 <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">API</Link>, which allows for:
                 <ul className="page-content-text">
                   <li>
-                    the user object authentication and its protection from being copied to the extent for the 
-                    recognition algorithm precision;
+                    the user object authentication and its protection from being copied to the extent of the 
+                    recognition algorithm's precision;
                   </li>
                   <li>
                     non-fungible digital asset creation;
@@ -1045,8 +1045,8 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             The User Object Authentication Protocol
             </div>
             <div className="page-content-text">
-            The protocol represents a sequence of actions performing by validators and miners 
-            actively participating in the network consensus at the time an object is being submitted by user.
+            The protocol represents a sequence of actions performed by validators and miners 
+            actively participating in the network consensus at the time an object is being submitted by a user.
             </div>
             <div className="page-content-text">
             <strong>
@@ -1054,15 +1054,15 @@ v 0.04743874818086624 0.7608485817909241 -0.07884219288825989\n
             </strong>
             </div>
             <div className="page-content-text">
-             While placing an order, 3dpass user provides the following:
+             While placing an order, a 3DPass user provides the following:
             </div>
               <ul className="page-content-text">
                 <li>
                   an object to tokenize: <code>rock.obj</code> (in this example we are going to take 
-                  3D model in <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</Link> format)
+                  a 3D model in <Link to="https://en.wikipedia.org/wiki/Wavefront_.obj_file">.obj</Link> format)
                 </li>
                 <li>
-                the object HASH ID (top10 hashes from the <Link to="/grid2d">Grid2d</Link> recognition algorithm 
+                the object HASH ID (top 10 hashes from the <Link to="/grid2d">Grid2d</Link> recognition algorithm 
                 output; preset: <code> -a grid2d_v3a -s 12 -g 8 -d 10</code>; {" "}
                  <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> recognition toolkit is being used as 
                 the implementation of Grid2d):
@@ -1078,32 +1078,32 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
 "833a2fc1f26ab9eb9bcc5b4e668f5d6bb91d6f87fb0798f99ce6bb4730dfc218"
 "abdedd28e03147d94e0d054d0bf24781bac01fdd81401cd3fb226b5a6e1a5371"
 "97c538a99641202385572df245d9cfb300f895a6c94e7caf074023a5ead1c62c"
-“db2453f53270c9003a63b4d643d9bcc991ad7630d70a0d1511781f74a7a00fee"
+"db2453f53270c9003a63b4d643d9bcc991ad7630d70a0d1511781f74a7a00fee"
 `}
             </pre>
                 </li>
                 <li>
-                Authentication fee P3D/Byte: Let’s take 100 P3D as an example. This fee will be distributed 
-                among the miners and validators taking part in the process (70 miners /30 validators). 
+                Authentication fee P3D/Byte: Let's take 100 P3D as an example. This fee will be distributed 
+                among the miners and validators taking part in the process (70 miners / 30 validators). 
                 The fee will be charged for each confirmation ordered (1 confirmation = 1 block). 
-                The fee can be set up by the <Link to="/governance#council">Council</Link> vote.
+                The fee can be set by the <Link to="/governance#council">Council</Link> vote.
                 </li>
                 <li>
                 Storage fee: P3D/Byte (regular network storage fee)
                 </li>
                 <li>
-                Number of confirmations: let’s take 6, for example. The more confirmations the user orders, 
-                the more reliable result He gets, especially, when it comes to the network potentially being 
-                attacked at the time. This is unlikely to happen, however, there is always a possibility for 
-                every blockchain network to get through this sort of experience. It is expected that the user 
+                Number of confirmations: let's take 6, for example. The more confirmations the user orders, 
+                the more reliable result they get, especially when it comes to the network potentially being 
+                attacked at the time. This is unlikely to happen; however, there is always a possibility for 
+                every blockchain network to go through this sort of experience. It is expected that the user 
                 is able to follow the gap between Best block and the Block finalized (normally the gap = 2 blocks) 
-                to estimate the network state, before submitting the order.
+                to estimate the network state before submitting the order.
                 </li>
               </ul>
               <div className="page-content-text">
-              There is a simple copy check on the object submit extrinsic (transaction). If there is a copycat on 
-              the blockchain discovered, the transaction will fail (learn more about <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> output to know how objects 
-              are supposed to be compared by its HASH IDs)
+              There is a simple copy check on the object submit extrinsic (transaction). If a copycat is 
+              discovered on the blockchain, the transaction will fail (learn more about <Link to="https://github.com/3Dpass/pass3d">pass3d</Link> output to know how objects 
+              are supposed to be compared by their HASH IDs)
               </div>
               <div className="page-content-text">
             <strong>
@@ -1111,10 +1111,10 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
             </strong>
             </div>
             <div className="page-content-text">
-            Once having the object submitted and fees paid, Validators (the most reliable nodes of 3Dpass network) 
-            from the current GRANDPA validator set start estimating how long would it take for the object to get 
-            processed by the network in average. They will try to process the object and, if successful, provide 
-            the time in milliseconds at which they managed to get it done like this:
+            Once having the object submitted and fees paid, Validators (the most reliable nodes of the 3DPass network) 
+            from the current GRANDPA validator set start estimating how long it would take for the object to get 
+            processed by the network on average. They will try to process the object and, if successful, provide 
+            the time in milliseconds at which they managed to get it done, like this:
             </div>
             <pre className="main-pre">
               {`
@@ -1128,13 +1128,13 @@ Validator 3 - 32 …
             </div>
             <div className="page-content-text">
             The validators will have to import the block containing the object and get it processed once again at 
-            the next step when miners have added their judgements. Assuming the block target time in 3dpass set up 
-            as 60 sec/block, there is a time frame limit of 10 seconds every validator must have finished processing within.
+            the next step when miners have added their judgments. Assuming the block target time in 3DPass is set up 
+            as 60 sec/block, there is a time frame limit of 10 seconds within which every validator must have finished processing.
             </div>
             <div className="page-content-text">
             In disregards to the reason why a given validator didn't manage the estimation in time (10 sec), its vote won't be 
-            taken. On top of that, every “weird” estimation result (vote) will be statistically ruled out and the average 
-            processing time - calculated. For, example:
+            taken. On top of that, every "weird" estimation result (vote) will be statistically ruled out and the average 
+            processing time calculated. For example:
             </div>
             <pre className="main-pre">
               {`
@@ -1147,9 +1147,9 @@ Validator 6 - 18 + …
 `}
             </pre>
             <div className="page-content-text">
-            The threshold for the object to pass is established at “2/3 +1” out of the actual number of validators in the set. 
+            The threshold for the object to pass is established at "2/3 +1" out of the actual number of validators in the set. 
             This is the same threshold ratio as the one being utilized for the GRANDPA finalization. The main requirement for this 
-            procedure to work correctly would be having “2/3+1” validators providing true data on the object processing.
+            procedure to work correctly would be having "2/3+1" validators providing true data on the object processing.
             </div>
             <div className="page-content-text">
             30% of the fee paid by the user will distributed among the validators-estimators in equal. Implying, there is about 
@@ -1184,7 +1184,7 @@ Validator 6 - 18 + …
       0x8047c7a4d2a75ce466c9510edb37ac1e98826ef383ab5d4c860b5010e42faa6e
       0x5001723ef6d85862733d25765f0700e381cc3a1f6d6b7dbb4efb8aeccc4615d4
       0xb8efd617a07099edcdbf2596d10787a6e16a4c59a5e36e46adedc1dd2424b8c9
-      0x10c8d4984cf840845a7d7785871c70790bf1c55e11a3da54a41d3f21be5a7ea7
+      0x10c8d4984cf840845a7d7785871c70790bf1c55e11a3da54a41d3f21be5a7ea7"
       0x833a2fc1f26ab9eb9bcc5b4e668f5d6bb91d6f87fb0798f99ce6bb4730dfc218
       0xabdedd28e03147d94e0d054d0bf24781bac01fdd81401cd3fb226b5a6e1a5371
       0x97c538a99641202385572df245d9cfb300f895a6c94e7caf074023a5ead1c62c
@@ -1215,7 +1215,7 @@ Validator 6 - 18 + …
             `}
            </pre>
            <div className="page-content-text">
-           The object will be considered "NotApproved", if it doesn’t pass the estimation within 3 blocks timeframe limit.
+           The object will be considered "NotApproved", if it doesn't pass the estimation within 3 blocks timeframe limit.
            </div>
            <div className="page-content-text">
             <strong>
@@ -1224,7 +1224,7 @@ Validator 6 - 18 + …
             </div>
             <div className="page-content-text">
             Once having the order status at "Estimated", the actual block author, who found new block, is getting privileged 
-            to provide the judgement “Approved” about the object. There is no option for miners to provide a negative 
+            to provide the judgement "Approved" about the object. There is no option for miners to provide a negative 
             judgement available.
             </div>
             <div className="page-content-text">
@@ -1256,7 +1256,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 11 -i r
             </pre>
             <div className="page-content-text">
             Miners know nothing about this 11th hash, until they get the object processed. This secret, called 
-            “0 knowledge proof”, will be leveraged by the network majority while importing the block.
+            "0 knowledge proof", will be leveraged by the network majority while importing the block.
             </div>
             <div className="page-content-text">
             It is totally up to the block author whether or not to trust this collective estimation result coming 
@@ -1272,7 +1272,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 11 -i r
             no confirmation will be gained for the object.
             </div>
             <div className="page-content-text">
-            If the block was accepted by the network majority, then “+1” confirmation the object gets. Now the next 
+            If the block was accepted by the network majority, then "+1" confirmation the object gets. Now the next 
             block author takes its turn, and the proof of work will be the 12th hash from the grid2d output:
             </div>
             <pre className="main-pre">
@@ -1319,7 +1319,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 16 -i m
 "10eac3abc33a75b16c1ca33aaf97db92542a452453265bf5c088dc33be750137" - 13th hash (proof of the third miner work)
 "fdbf00e59e8b4d7ae44950751694ebeb2bb6ac969e166d4500d9bfbd886d7523" - 14th hash (proof of the forth miner work)
 "2405d8048e0fead22be4aa4394104136e15c0ca578299068c2a9dbf3c7c68b59" - 15th hash (proof of the fifth miner work)
-“905f5f8032ff6c956422ac0560431820e2bfa47bb0cf58368fd49dbc1e23e48c" - 16th hash (proof of the sixth miner work)
+"905f5f8032ff6c956422ac0560431820e2bfa47bb0cf58368fd49dbc1e23e48c" - 16th hash (proof of the sixth miner work)
               `}
             </pre>
             <div className="page-content-text">
@@ -1359,7 +1359,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 16 -i m
       0x8047c7a4d2a75ce466c9510edb37ac1e98826ef383ab5d4c860b5010e42faa6e
       0x5001723ef6d85862733d25765f0700e381cc3a1f6d6b7dbb4efb8aeccc4615d4
       0xb8efd617a07099edcdbf2596d10787a6e16a4c59a5e36e46adedc1dd2424b8c9
-      0x10c8d4984cf840845a7d7785871c70790bf1c55e11a3da54a41d3f21be5a7ea7
+      0x10c8d4984cf840845a7d7785871c70790bf1c55e11a3da54a41d3f21be5a7ea7"
       0x833a2fc1f26ab9eb9bcc5b4e668f5d6bb91d6f87fb0798f99ce6bb4730dfc218
       0xabdedd28e03147d94e0d054d0bf24781bac01fdd81401cd3fb226b5a6e1a5371
       0x97c538a99641202385572df245d9cfb300f895a6c94e7caf074023a5ead1c62c

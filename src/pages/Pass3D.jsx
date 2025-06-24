@@ -19,7 +19,7 @@ const Pass3D = () => {
   return (
     <React.Fragment>
       <div className="page-left-menu">
-        <div className="page-title">Pass3d Recognition Tool</div>
+        <div className="page-title">Pass3D Recognition Tool</div>
         <div className="page-nav-content">
           <a href="#hash">
             <div
@@ -79,7 +79,7 @@ const Pass3D = () => {
               and <a href="/assets/pir2_obj.zip">pir2.obj</a>
             </div>
             <div className="page-content-text">
-              The output is a top10 hashes list inherent to the object shape
+              The output is a top 10 hashes list inherent to the object shape
             </div>
             <pre className="main-pre">
               {`
@@ -96,9 +96,9 @@ OPTIONS:
               The object shape is considered to be recognized if there is at
               least one hash-value match among two different processing results.
               We have to process two or more different 3D scans of the same
-              object and to compare the top10 results. We should use exactly the
+              object and compare the top 10 results. We should use exactly the
               same parameters every time. It's recommended to use the same
-              equipment, as well.
+              equipment as well.
             </div>
             <div className="page-content-text">
               For example, we have two different 3D scans pir1.obj and pir2.obj
@@ -156,15 +156,15 @@ Select top 10 hashes
             </div>
             <div className="page-content-text">
               If we had three or more different 3D scans of the object
-              processed, we could've picked up the most stable one Hash ID,
-              meaning it's definitelly existing among the top10 hashes of every
-              3D scan we have. The more scans you process the more likely the
-              best stable Hash ID you get. But practically it's enough to do 3-5
+              processed, we could've picked up the most stable Hash ID,
+              meaning it's definitely existing among the top 10 hashes of every
+              3D scan we have. The more scans you process, the more likely the
+              best stable Hash ID you get. But practically, it's enough to do 3-5
               scans to choose. Sometimes you have no choice because there is
-              only one hash is matched. If you have your 3D scanns in pretty
-              good quality and it's assuming that the next ones are goint to
-              have the similar, then you can pick up all of the hases matched.
-              In our example it would be a combitation of theese three hashes:
+              only one hash matched. If you have your 3D scans in pretty
+              good quality and it's assumed that the next ones are going to
+              have similar quality, then you can pick up all of the hashes matched.
+              In our example, it would be a combination of these three hashes:
             </div>
             <pre className="main-pre">
               {`
@@ -180,7 +180,7 @@ Select top 10 hashes
             <div className="page-content-title">Parameters Adjustment</div>
             <div className="page-content-text">
               These are two key parameters we need to adjust in order to create
-              the best possible Hash ID depending on 3D scans quality.
+              the best possible Hash ID depending on 3D scan quality.
             </div>
             <pre className="main-pre">
               {`
@@ -196,24 +196,23 @@ Select top 10 hashes
               recognition algorithm to the particular 3D scan quality. The
               higher scan quality we get, the higher number of cells in the row
               we can set up for the processing. According to the Grid2d
-              algorithm, by means of increasing number of cells, we are
+              algorithm, by increasing the number of cells, we are
               following a 3D scan cross-section contour more closely to the
-              actual curve. That means that more precisely we can recognize the
-              object shape. But, simultaneously, we're keeping less space for
+              actual curve. That means we can recognize the object shape more precisely. But, simultaneously, we're keeping less space for
               some error in the future. It's all about the balance between
               accuracy of the shape recognition and the ability to get the
               stable Hash ID.
             </div>
             <div className="page-content-text">
-              Low definition scanners, especially smartphone apps, gives us a
+              Low definition scanners, especially smartphone apps, give us a
               lot of error between two random scans taken from the same object.
-              But High definition and professional ones might roll out not much
-              than 3 micro meter error. So, it is recommended that we get
+              But high definition and professional ones might roll out not much
+              more than 3 micrometer error. So, it is recommended that we get
               several 3D scans made by the same equipment and then set the
-              number of cells as hight as possible, provided it still rolls out
+              number of cells as high as possible, provided it still rolls out
               successful recognition results. That is going to be the best set
-              up. It might takes some attempts to adjust the optimal (-g)
-              parameter’s value according to the scan quality.
+              up. It might take some attempts to adjust the optimal (-g)
+              parameter's value according to the scan quality.
             </div>
             <img
               className="page-img"
@@ -245,11 +244,11 @@ Select top 10 hashes
               from. If we have captured more unique distinctions from the object
               shape, it would give us higher hash strength. For example, if we
               had set up just one cross-section (-s=1), we would leverage only
-              one contour of the object which is really small amount of unique
-              data. And it’s definitely not enough to describe the entire object
-              shape. It’s like if we would try to describe the hole apple shape
-              having just one slice of it. So, if you’re interested in
-              recognition the entire object rather than a few slices of it, it’s
+              one contour of the object which is a really small amount of unique
+              data. And it's definitely not enough to describe the entire object
+              shape. It's like if we would try to describe the whole apple shape
+              having just one slice of it. So, if you're interested in
+              recognition the entire object rather than a few slices of it, it's
               recommended that you set up at least 100 cross-sections (-s=100).
             </div>
             <div className="page-content-text">Parameter -s=3 example:</div>

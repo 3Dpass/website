@@ -1286,8 +1286,8 @@ GRANDPA_KEY="$(./p3d key inspect --scheme Ed25519 "$MEMO_SEED" | sed -n 's/.*Sec
               <strong><i>`--author`</i></strong> - is the Address from your mining account
               </li>
              <li>
-             <strong><i>`--chain mainnetSpecRaw.json`</i></strong> - is the Ledger of Things mainnet chain specificaion 
-              file mandatory for the Node to identify itself as part of the network and 
+             <strong><i>`--chain mainnetSpecRaw.json`</i></strong> - is the Ledger of Things mainnet chain specification 
+              file, mandatory for the Node to identify itself as part of the network and 
               get a list of bootnodes (initial peers).
              </li>
              <li>
@@ -1520,8 +1520,8 @@ ls ~/3dp-chain/chains/3dpass/keystore
               d1GtBxnPwRZVez7VsQ9H7MskPn34H59RddrR9yXqhgDYsqC3t)
               </li>
              <li>
-             <strong><i>`--chain mainnetSpecRaw.json`</i></strong> - is the Ledger of Things mainnet chain specificaion 
-              file mandatory for the Node to identify itself as part of the network and 
+             <strong><i>`--chain mainnetSpecRaw.json`</i></strong> - is the Ledger of Things mainnet chain specification 
+              file, mandatory for the Node to identify itself as part of the network and 
               get a list of bootnodes (initial peers).
              </li>
              <li>
@@ -1560,8 +1560,8 @@ ls ~/3dp-chain/chains/3dpass/keystore
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-             5.1. There is an option to speed up syncing process by starting the node from the latest blockchian {" "}
-             `db` snapshot provided by the community members for newcomers:
+             5.1. There is an option to speed up syncing process by starting the node from the latest blockchain {" "}
+             `db` snapshot provided by community members for newcomers:
             </div>
             <ul className="page-content-text">
               <li>The blockchain db location: <i>~/3dp-chain/chains/3dpass/db</i></li>
@@ -1614,7 +1614,7 @@ bun miner.js --host 127.0.0.1 --port 9933
             />
             <ul className="page-content-text">
               <li>
-                There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link>, 
+                There is an <Link to="https://github.com/3Dpass/miner">alternative miner</Link>, 
                 which might be leveraged as an option
               </li>
               <li>
@@ -1622,7 +1622,7 @@ bun miner.js --host 127.0.0.1 --port 9933
                 <Link to="https://miner.p3d.top">https://miner.p3d.top</Link>
               </li>
               <li>
-              Compare your machine configuraton to the other ones 
+              Compare your machine configuration to the other ones 
               presented on the network <Link to="https://3dpass.network">https://3dpass.network</Link>
               </li>
             </ul>
@@ -1647,32 +1647,32 @@ const ADJUSTMENT_PERCENT = 10;
             </pre>
             <ul className="page-content-text">
               <li>
-                <code>MIN_INTERVAL</code> is the maximum speed limit in ms (100 ms by default). 
-                Reduce the interval to encrease your max hashrate. It will be reached when your Node 
-                is capable of handling the objects faster (ex. setting up 10 ms will require for the Node to be 
-                capable of getting the objects processed at the hashrate of 1 hash/10 ms).
+                <code>MIN_INTERVAL</code> is the minimum speed limit in ms (100 ms by default). 
+                Reduce the interval to increase your max hashrate. It will be reached when your Node 
+                is capable of handling the objects faster (e.g., setting up 10 ms will require the Node to be 
+                capable of processing objects at a hashrate of 1 hash/10 ms).
               </li>
               <li>
-                <code>MAX_INTERVAL</code> is the mininmum speed limit in ms (10000 ms by default).
+                <code>MAX_INTERVAL</code> is the maximum speed limit in ms (10000 ms by default).
                 Expand the interval to slow down your minimum hashrate. It will be reached when 
-                the Node is busy or syncing (ex. setting up 100000 ms will allow for miner 
+                the Node is busy or syncing (e.g., setting up 100000 ms will allow the miner 
                 to slow down on idle to the bottom of 1 hash/100000 ms hashrate).
               </li>
               <li>
                 <code>ADJUSTMENT_PERCENT</code> is the pace (acceleration speed in %) at which the 
-                miner velocity will adjust itself (10% is set up by default). 
-                Speeding up the pace will make miner adjust even more rapidly (ex. setting 
-                up the adjustment pace at 50% will let miner reach full range in 2 steps).
+                miner velocity will adjust itself (10% is set by default). 
+                Speeding up the pace will make the miner adjust even more rapidly (e.g., setting 
+                the adjustment pace at 50% will let the miner reach full range in 2 steps).
               </li>
             </ul>
             <div className="page-content-text">
               <strong>- Alternative miner</strong>
             </div>
             <div className="page-content-text">
-              There is an <Link to="https://github.com/3Dpass/miner">alternatinve miner</Link> {" "}
+              There is an <Link to="https://github.com/3Dpass/miner">alternative miner</Link> {" "}
               providing the only option for adjustment. You can only set up a flat hashrate 
-              limit value with the <code>--interval</code> parameter (ex. setting up 10 ms will require for the Node to be 
-              capable of getting the objects processed at the hashrate of 1 hash/10 ms). The running command will be as follows:
+              limit value with the <code>--interval</code> parameter (e.g., setting up 10 ms will require the Node to be 
+              capable of processing objects at a hashrate of 1 hash/10 ms). The running command will be as follows:
             </div>
             <pre className="main-pre">
               {`

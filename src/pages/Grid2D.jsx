@@ -55,7 +55,7 @@ const Grid2D = () => {
                   : "one-page-nav"
               }
             >
-              HASH ID Strenght
+              HASH ID Strength
               <div className="page-nav-circle"></div>
             </div>
           </a>
@@ -84,27 +84,27 @@ const Grid2D = () => {
             <div className="page-content-text">
               First of all, the hash calculated has to be reproducible i.e
               stable for different scans of the same object within a noise of
-              scanning. We don’t have any feedback to compare and get a single
+              scanning. We don't have any feedback to compare and get a single
               100% working hash from each one 3D scan automatically. So we need
               to get a sorted short list of hashes as a result to get user the
               opportunity picking up the most stable one. The hash ID will be
               considered stable if the hash value presents on the top of the
-              list every time new scan of the same object’s processed. The
+              list every time new scan of the same object's processed. The
               algorithm logic is flexible enough to adjust the definition level
-              of processing to the 3D scanning resolution and accuracy which
-              might differ depends on the scanning device.
+              of processing to the 3D scanning resolution and accuracy, which
+              might differ depending on the scanning device.
             </div>
             <div className="page-content-text">
-              The simplest way to get some unique characteristics from surface
+              The simplest way to get some unique characteristics from the surface
               of the object is to cut it into N slices and process each of them
               separately. The problem, therefore, now turns into 2D. By means of
-              combining results from N slices, it is getting possible to
+              combining results from N slices, it is possible to
               calculate the final hash.
             </div>
             <div className="page-content-subtitle">Standard Hardware</div>
             <ul className="page-content-text">
               <li>
-                The object must be simply connected (i.e without through holes)
+                The object must be simply connected (i.e., without through holes)
               </li>
               <li>The object must not have the regular form</li>
               <li>The colors and textures are ignored</li>
@@ -135,8 +135,8 @@ const Grid2D = () => {
               2. Cutting the object with N planes
             </div>
             <div className="page-content-text">
-              Let’s cut the object by N planes uniformly spaced alongside the OX
-              axis. Then either crosses of planes and object’s surface produce N
+              Let's cut the object by N planes uniformly spaced alongside the OX
+              axis. Then either crosses of planes and object's surface produce N
               contours.
             </div>
             <div className="page-content-text">
@@ -229,7 +229,7 @@ const Grid2D = () => {
             </div>
             <div className="page-content-text">
               Perform cartesian product of all the best polygons from each
-              slice. The product of two polygons means concatination of their
+              slice. The product of two polygons means concatenation of their
               points (coordinates of vertices).
             </div>
             <div className="page-content-text">For example, if:</div>
@@ -247,14 +247,14 @@ const Grid2D = () => {
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">
-              So, we’ve got the input data for sha256. The last step is trivial.
+              So, we've got the input data for sha256. The last step is trivial.
             </div>
             <div className="page-content-subtitle">
               5. sha256 hashes creation
             </div>
             <div className="page-content-text">
               The output of Grid2d algorithm is a list of hashes sorted by its
-              affinity to object’s surface.
+              affinity to object's surface.
             </div>
             <div className="page-content-text">
               <Link to="/pass3d">Learn some examples and how to use the algorithm in practice</Link>..
@@ -286,18 +286,18 @@ const Grid2D = () => {
               ID.
             </div>
             <div className="page-content-text">
-              If the object has a predictable shape it’s recommended to use{" "}
+              If the object has a predictable shape it's recommended to use{" "}
               <Link to="/features#multiobject">multi-object options</Link> as 2FA to get more uniqueness to it. For
               example, the ball has the most predictable shape of all shapes in
               the world. But if the biometric data was put in addition to, the
-              combination of “ball + biometric data” becomes very strong and non
+              combination of "ball + biometric data" becomes very strong and non
               predictable one. The same way it might be leveraged some different
               properties of the object like weight, clarity, density, etc.
             </div>
             <div className="page-content-text">
               Hash ID strength, as well, depends on 3D scanning resolution
               leveraged for taking scans from the object. If 3D scanning had
-              been performed by a High Definition scanner, 3D model would’ve
+              been performed by a High Definition scanner, 3D model would've
               followed the shape of the object surface quite close. And that
               quality allows for Grid2d to recognize lots of tiny little details
               that might differentiate the object from others. The higher
@@ -346,7 +346,7 @@ const Grid2D = () => {
               Besides 3D shape, any real world object has some unique additional
               properties which might help reliably to authenticate it by several
               sights. Most important of them are the measurable ones, such as:
-              weight, density, clarity, hardness, coloring, owner’s biometric
+              weight, density, clarity, hardness, coloring, owner's biometric
               data. And all of those properties can be revealed by lab
               measurements and scanning. Lab measurement equipment might
               represent smart devices (IoT) connected to 3DP network directly.

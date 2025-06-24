@@ -90,7 +90,7 @@ const Features = () => {
           </a>
           <a href="#scanproof-deterministic">
             <div className="page-nav-inside">
-            PoA deterministic blockchain finality
+              PoA deterministic blockchain finality
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -491,8 +491,8 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <div className="page-content-text">
             3Dpass Artificial Intelligence (AI) assistant feature is an extension to the recognition toolkit, which will 
             provide additional balance by getting every object on the LoT tagged with a human 
-            impression about it. The impression is an answer to the question “What does the 
-            object look like/sound/feel like?”, which is extremely worthwhile, especially, 
+            impression about it. The impression is an answer to the question "What does the 
+            object look like/sound/feel like?", which is extremely worthwhile, especially, 
             when it comes to dealing with any piece of art.
             </div>
             <div className="page-content-text">
@@ -750,7 +750,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             </div>
             <div className="page-content-text">
               <Link to="/proof-of-scan#3dprc-2">3DPRC-2</Link> (3Dpass Request for Comments), <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">proposed</Link> by PaulS in September 2023, 
-              is a standard p2p protocol for the tokenization of the user objects operating within “The Ledger of Things”. Its implementation represents
+              is a standard p2p protocol for the tokenization of the user objects operating within "The Ledger of Things". Its implementation represents
                one of the most useful aspects of "Proof of Scan" consensus, which opens the capability 
                for the network to provide the tokenization service to customer. 
             </div>
@@ -772,7 +772,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
                 <strong>
                   Advanced version of <Link to="/proof-of-scan">Proof of Scan</Link>
                 </strong>
-                - The protocol is weaved into “The Ledger of Things” PoW component in a way to tackle the user 
+                - The protocol is weaved into "The Ledger of Things" PoW component in a way to tackle the user 
                 objects authentication along with the ones being mined. The protocol ensures for users to get 
                 a complete service always resulting as either the object acceptance (the asset is allowed to 
                 be created) or its rejection (copy is found on the db). The network is responsible for the user 
@@ -781,7 +781,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
               </li>
               <li>
                 <strong>
-                  “0 knowledge proof”
+                  "0 knowledge proof"
                 </strong> 
                 - Every judgement provided by miners about the object authenticity is protected by a secret knowledge 
                 of its HASH ID being unavailable for them, until they get the object processed. Every proof is being 
@@ -1018,7 +1018,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             </div>
             <div className="page-content-text">
               The Ledger of Things (LoT) is equipped with a custom version 
-              of the EVM compatibility L2 reffered to as
+              of the EVM compatibility L2 referred to as
               {" "}<Link to="https://github.com/polkadot-evm/frontier">Frontier</Link>.
               {" "}In addition to {" "}
               <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/evm/precompile">standard precompiled contracts</Link> {" "}
@@ -1047,7 +1047,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
             <img
               className="page-img"
               style={{ marginBottom: "20px" }}
-              src="/images/address_mapping.png"
+              src="/images/EVM_compatibility.png"
               alt="img"
             />
           </div>

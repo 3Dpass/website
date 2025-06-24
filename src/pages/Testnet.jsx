@@ -117,13 +117,13 @@ const Testnet = () => {
             <div className="page-content-text">
               The most common way for a beginner to run a miner and validator is
               to leverage a cloud server running Linux. You may choose whatever
-              VPS provider that your prefer, and whatever operating system you
-              are comfortable with. The transactions weights in PoScan were
+              VPS provider you prefer, and whatever operating system you
+              are comfortable with. The transaction weights in PoScan were
               benchmarked on standard hardware. It is recommended that miners
               and validators run at least the standard hardware in order to
               ensure they are able to process all blocks in time. The following
-              are not minimum requirements but if you decide to run with less
-              than this beware that you might have performance issue.
+              are not minimum requirements, but if you decide to run with less
+              than this, beware that you might have performance issues.
             </div>
             <div className="page-content-subtitle">Standard Hardware</div>
             <ul className="page-content-text">
@@ -138,8 +138,8 @@ const Testnet = () => {
             </ul>
             <div className="page-content-text">
               The specs posted above are by no means the minimum specs that you
-              could use when running a validator, however you should be aware
-              that if you are using less you may ne​ed to toggle some extra
+              could use when running a validator; however, you should be aware
+              that if you are using less you may need to toggle some extra
               optimizations in order to be equal to other validators that are
               running the standard.
             </div>

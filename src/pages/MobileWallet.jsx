@@ -59,7 +59,7 @@ const MobileWallet = () => {
           </a>
           <a href="#tokenization-put_object">
             <div className="page-nav-inside">
-              Put the Object on blockchian
+              Put the Object on blockchain
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -205,9 +205,9 @@ const MobileWallet = () => {
           <div className="page-content-inner">
             <div className="page-content-title">3D Object Recognition</div>
             <div className="page-content-text">
-              This feature allows to recognize the object shape
-              by means of its 3D model processing, and thus orinal scans can be distinguished from fakes. <Link to="/pass3d">pass3d</Link> is an
-              implementation of <Link to="/grid2d">Grid2d</Link> algorithm, which is being utilized by the app.
+              This feature allows you to recognize the object shape
+              by means of its 3D model processing, and thus original scans can be distinguished from fakes. <Link to="/pass3d">pass3d</Link> is an
+              implementation of the <Link to="/grid2d">Grid2d</Link> algorithm, which is utilized by the app.
             </div>
             <video
               src="/images/3Dobject_original_fake_recognition.mp4"

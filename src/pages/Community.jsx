@@ -43,25 +43,23 @@ const Community = () => {
           </a>
           <a href="#about-us-existing-alternatives">
             <div className="page-nav-inside">
-              Exisitng Alternatives
+              Existing Alternatives
               <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#about-us-high-level-concept">
             <div className="page-nav-inside">
               High-level Concept
-              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#about-us-solution">
             <div className="page-nav-inside">
               Solution
-              <div className="inside-nav-circle"></div>
             </div>
           </a>
           <a href="#about-us-unique-value-proposition">
             <div className="page-nav-inside">
-              Uniquie Value Proposition
+              Unique Value Proposition
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -862,7 +860,7 @@ const Community = () => {
             <div className="page-content-text">
               In traditional gaming, in-game assets are held on centralized servers 
               managed by game developers or publishers. Players invest significant 
-              time and money to acquire these assets, yet they don’t genuinely own 
+              time and money to acquire these assets, yet they don't genuinely own 
               them. Game companies can modify, delete, or restrict access to these 
               items at any time, often without player consent.
             </div>
@@ -947,7 +945,7 @@ const Community = () => {
             <div className="page-content-text">
               Current alternative solutions offered by corporations, governmental entities, and 
               blockchain platforms often lack transparency regarding personal data. These solutions 
-              frequently provide an inadequate representation of an individual’s identity through a 
+              frequently provide an inadequate representation of an individual's identity through a 
               convoluted series of processes, despite the widespread availability of personal data 
               shared by individuals themselves. Commonly disseminated information includes selfie images, 
               videos, and even 3D representations, which reveal distinct human attributes such as facial 

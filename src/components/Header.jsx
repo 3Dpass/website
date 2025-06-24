@@ -51,7 +51,7 @@ const Header = () => {
   <div style={{width: "100%"}}>
       <a  href="/grants" className="message-text">
       <div className="message-text">
-      Hey dev, we need your contribution and support. We are creating something special here!
+      Hello developer, we need your contribution and support. We are building something special here!
       </div>
       </a>
   </div>

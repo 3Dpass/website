@@ -113,9 +113,9 @@ const Grants = () => {
             </div>
             <div className="page-content-text">
               There is a Grant contribution program operating around The Ledger of Things, 
-              which is established and managed by 3Dpass {" "}
+              which is established and managed by 3DPass {" "}
               <Link to="/community#governance">Open Governance</Link>{" "}
-              to encounrage community efforts on development of the ecosystem. 
+              to encourage community efforts in the development of the ecosystem. 
             </div>
             <div className="page-content-text">
               The program offers a variety of bounty options for contributors, as long 
@@ -134,7 +134,7 @@ const Grants = () => {
                 Having on-chain identity level of confidence at <Link to="/mainnet#chain-kyc">"Reasonable"</Link> is a must to get rewarded. 
               </li>
               <li>
-                The contribution must be useful in terms of the project develpment and alligned with its goals
+                The contribution must be useful in terms of project development and aligned with its goals,
                 categorized into the bounty programs, such as: <Link to="#bug-bounty">Bug bounty</Link>, {" "}
                 <Link to="#dev-bounty">Dev bounty</Link>,{" "} <Link to="#marketing-bounty">Marketing bounty</Link>, {" "}
                 <Link to="#integrations-bounty">Integration bounty</Link>.  
@@ -158,8 +158,8 @@ const Grants = () => {
             </ul>
             <div className="page-content-text">
               Having <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
-              repository is required to consider on the application. Sensitive issues could be discussed privatelly with the 
-              Councilors over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>, before its disclosure.  
+              repository is required to be considered for the application. Sensitive issues can be discussed privately with the 
+              Councilors over <Link to="https://discord.gg/u24WkXcwug">Discord</Link>, before disclosure.  
             </div>
             <div className="page-content-subtitle">
               How to apply:
@@ -180,8 +180,8 @@ const Grants = () => {
                 and specify the link to your Pull Request in the Bounty description. 
               </li>
               <li>
-                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. If approved, your application will be assigned with the curator, 
-                who is to make revew on the Pull Request and sign on the payout.
+                Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. If approved, your application will be assigned a curator, 
+                who will review the Pull Request and sign off on the payout.
               </li>
             </ul>
           </div>
@@ -191,8 +191,8 @@ const Grants = () => {
             <div className="page-content-title">Development bounty program</div>
             <div className="page-content-text">
               Having <i>Pull Request</i> submitted into <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
-              repository is required to consider on the application. Proposals might be previously discussed with the 
-              Councilors and community over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
+              repository is required to be considered for the application. Proposals may be previously discussed with the 
+              Councilors and community over <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
             </div>
             <div className="page-content-subtitle">
               Rewards:
@@ -230,7 +230,7 @@ const Grants = () => {
               </li>
               <li>
                 Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
-                If approved, your application will be assigned with the curator, who is to make revew on the Pull Request and sign on the payout.
+                If approved, your application will be assigned a curator, who will review the Pull Request and sign off on the payout.
               </li>
             </ul>
           </div>
@@ -275,7 +275,7 @@ const Grants = () => {
                <li>
                  Investors:<br /> 
                  <i>- "Come up with some useful agenda to The Ledger of Things, 
-                 join to implement your plan and add to the project value, capitalize on the vallue"</i>
+                 join to implement your plan and add to the project value, capitalize on the value"</i>
                </li>
                 <li>
                 Observers:<br />
@@ -309,8 +309,8 @@ const Grants = () => {
               </li>
               <li>
                 Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
-                If approved, your application will be assigned with the curator, 
-                who is to check on the posts and approve the payout.
+                If approved, your application will be assigned a curator, 
+                who will check on the posts and approve the payout.
               </li>
             </ul>
           </div>
@@ -322,9 +322,9 @@ const Grants = () => {
             </div>
             <div className="page-content-text">
               Having <i>Pull Request</i> submitted into either the <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
-              or any other <strong>Open Source</strong> repository is required to consider on the application. 
-              Proposals might be previously discussed with the 
-              Councilors and community over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
+              or any other <strong>Open Source</strong> repository is required to be considered for the application. 
+              Proposals may be previously discussed with the 
+              Councilors and community over <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
             </div>
             <div className="page-content-subtitle">
               To be rewarded:
@@ -374,8 +374,8 @@ const Grants = () => {
               </li>
               <li>
                 Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
-                If approved, your application will be assigned with the curator, 
-                who is to check on the posts and approve the payout.
+                If approved, your application will be assigned a curator, 
+                who will check on the posts and approve the payout.
               </li>
             </ul>
           </div>
@@ -387,8 +387,8 @@ const Grants = () => {
             </div>
             <div className="page-content-text">
               Having either <i>Pull Request</i> submitted into the <Link to="https://github.com/3dpass">3Dpass GitHub</Link>{" "}
-              repository or some useful work done is required to consider on the application. Proposals might be previously discussed with the 
-              Councilors and other community members over the <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
+              repository or some useful work done is required to be considered for the application. Proposals may be previously discussed with the 
+              Councilors and other community members over <Link to="https://discord.gg/u24WkXcwug">Discord</Link>.  
             </div>
             <div className="page-content-subtitle">
               To be rewarded:
@@ -449,8 +449,8 @@ const Grants = () => {
               </li>
               <li>
                 Follow the Council motion outcome down the <Link to="https://wallet.3dpass.org/governance/motions">link</Link>. {" "}
-                If approved, your application will be assigned with the curator, 
-                who is to check on the posts and approve the payout.
+                If approved, your application will be assigned a curator, 
+                who will check on the posts and approve the payout.
               </li>
             </ul>
           </div>

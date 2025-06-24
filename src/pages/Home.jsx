@@ -14,17 +14,17 @@ const Home = () => {
     {
       title: "Real World Assets (RWA), Insurance, Banking, E-commerce",
       description:
-        "3DPass opens the gateway for the cryptocurrency market to potental trillions in deals all over the globe. Now you can <a href='/features#tokenization'>transform real and virtual objects into recognizable digital assets</a> and leverage them within useful smart contracts and dApps, having full control over its copies. The <a href='/features#recognition'>recognition</a> of object shape <a href='/features#multiobject'>combined with its additional properties</a> (size, weight, density, clarity, owner's biometric data, etc.), allows to produce this unique sustainable identity called <a href='/features#recognition-hash-id'>Hash ID</a>, which makes 3DPass <a href='/features#difference'>revolutionary different</a> to any existential blockchain. Because of the <a href='/proof-of-scan'>Proof of Scan</a> decentralized protocol providing the object authentication, you can use your object as NFT or mint some private backed currency the unit of which would be a quantum (1 token = gramm, kilogramm, square meter, etc.). <a href='/community#use-cases'>Learn about use cases >></a>",
+        "3DPass opens the gateway for the cryptocurrency market to potential trillions in deals all over the globe. Now you can <a href='/features#tokenization'>transform real and virtual objects into recognizable digital assets</a> and leverage them within useful smart contracts and dApps, having full control over their copies. The <a href='/features#recognition'>recognition</a> of object shape <a href='/features#multiobject'>combined with its additional properties</a> (size, weight, density, clarity, owner's biometric data, etc.), allows you to produce this unique sustainable identity called <a href='/features#recognition-hash-id'>Hash ID</a>, which makes 3DPass <a href='/features#difference'>revolutionarily different</a> from any existing blockchain. Because of the <a href='/proof-of-scan'>Proof of Scan</a> decentralized protocol providing object authentication, you can use your object as an NFT or mint some private backed currency, the unit of which would be a quantum (1 token = gram, kilogram, square meter, etc.). <a href='/community#use-cases'>Learn about use cases >></a>",
     },
     {
       title: "Digital identity, recoverable crypto wallets, 2FA",
       description:
-        "3DPass enables anyone to utilize a 3D object as seed data for creating passwords or keys. When combined with the owner's biometric data or other additional properties, this <a href='/features#multiobject'>multi-object Hash ID</a> offers a zero-knowledge proof of the object's authenticity. This unique identifier can be subsequently retrieved through scanning. For further details, <a href='/features#passwords'>explore more >></a> about this innovative capability.",
+        "3DPass enables anyone to utilize a 3D object as seed data for creating passwords or keys. When combined with the owner's biometric data or other additional properties, this <a href='/features#multiobject'>multi-object Hash ID</a> offers a zero-knowledge proof of the object's authenticity. This unique identifier can subsequently be retrieved through scanning. For further details, <a href='/features#passwords'>explore more >></a> about this innovative capability.",
     },
     {
       title: "Metaverse, Gaminig, AI, IoT",
       description:
-        "3DPass unfolds this capability of tracing the objects in dynamic (in the state of change), which is an essential component for `play-to-earn` , VR/AR and IoT projects providing the asset ownership to its users. Check out a  <a href='/community#use-cases-ideas'>play-to-eran case</a>.",
+        "3DPass unfolds this capability of tracing objects in dynamic states (in the state of change), which is an essential component for `play-to-earn`, VR/AR, and IoT projects, providing asset ownership to its users. Check out a <a href='/community#use-cases-ideas'>play-to-earn case</a>.",
     },
   ]);
 
@@ -128,13 +128,13 @@ const Home = () => {
       </div>
       <div className="home-one-content inner-content">
         <div className="home-left-title">
-          Turn your Object Into the Digital Assest
+          Turn your Object Into a Digital Asset
         </div>
         <div className="home-objects-content">
           <a href="/features#recognition-hash-id">
             <HomeObjectItem
               icon={"diamond"}
-              title={"Create the <span>Hash ID</span> out of any object"}
+              title={"Create a <span>Hash ID</span> out of any object"}
             />
           </a>
           <div className="object-item-divider">

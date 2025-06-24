@@ -180,12 +180,12 @@ const Coin = () => {
             <div className="page-content-title">3Dpass coin (P3D)</div>
             <div className="page-content-text">
               <strong>P3D</strong> is a native utility token operating within <Link to="/proof-of-scan#p2p">The Ledger of Things</Link>{" "}
-              to facilitate on its use and encourage the efforts of the network maintainers (Block authors and Vaildators) {" "}
+              to facilitate its use and encourage the efforts of the network maintainers (Block authors and Validators) {" "}
               providing resources and equipment for <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> {" "}
               tokenization standard to operate.  
             </div>
             <div className="page-content-text">
-              The smallest indivisible unit of account in 3Dpass is Crumb. 1 P3D is equal to <i>1e12</i> Crumb, {" "}
+              The smallest indivisible unit of account in 3DPass is Crumb. 1 P3D is equal to <i>1e12</i> Crumb, {" "}
               which is defined by the network genesis spec <Link to="https://raw.githubusercontent.com/3Dpass/3DP/main/mainnetSpecRaw.json">mainnetSpecRaw.json</Link>.
               Explore the <Link to="#specification">network specification</Link> for more detail. 
             </div>
@@ -207,7 +207,7 @@ const Coin = () => {
             <div className="page-content-text">
               There is an EVM compatibility layer operating on LoT, in which P3D is presented as P3D token 
               callable at the contract 0x0000000000000000000000000000000000000802. P3D has 18 decimals places in EVM.
-              It doesn not affect total supply.
+              It does not affect total supply.
             </div>
           </div>
         </div>
@@ -242,7 +242,7 @@ const Coin = () => {
               process which allows for the network to come to an agreement upon the 
               object authenticity in a trustless way. There is the object authentication fee that must be 
               covered by users regardless of whether or not the object is ultimately approved. 
-              The fee is spit 50/50 between the block authors and validators. 
+              The fee is split 50/50 between the block authors and validators. 
              </div>
           </div>
         </div>

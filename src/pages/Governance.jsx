@@ -223,8 +223,8 @@ const Governance = () => {
               upon by stake-weighted referenda.
             </div>
             <div className="page-content-text">
-              The basement of the governance mechanism was inherited from
-              Substrate, Polkadot and Kusama. Follow <Link to="https://wiki.polkadot.network/docs/learn-governance">their original
+              The foundation of the governance mechanism was inherited from
+              Substrate, Polkadot, and Kusama. Follow <Link to="https://wiki.polkadot.network/docs/learn-governance">their original
               documentation</Link> as a reference.
             </div>
           </div>
@@ -283,10 +283,10 @@ const Governance = () => {
               proposal was approved, the changes being enacted.
             </div>
             <div className="page-content-text">
-              Referenda is considered baked if it is closed and tallied. Again,
+              Referenda are considered 'baked' if they are closed and tallied. Again,
               assuming the proposal was approved, it would be scheduled for
-              enactment. Referenda is considered unbaked if it is pending an
-              outcome, i.e. being voted on.
+              enactment. Referenda are considered 'unbaked' if they are pending an
+              outcome, i.e., being voted on.
             </div>
             <div className="page-content-text">
               For the first two ways that a referendum is launched, this is a
@@ -316,7 +316,7 @@ const Governance = () => {
             </div>
             <div className="page-content-text">
               There can be a maximum of 100 public proposals in the proposal
-              queue.
+              queue at any time.
             </div>
             <div className="page-content-subtitle">Council Referenda</div>
             <div className="page-content-text">
@@ -711,7 +711,7 @@ electorate - the total number of tokens issued in the network
               Council elections mechanism operates under <Link to="https://en.wikipedia.org/wiki/Phragmen%27s_voting_rules">Phragmén voting rules</Link>
               {" "}
               introduced by Edvard Phragmén in the 1890s, which is one of the
-              most common methods leveraging in Nominated Proof of Stake (nPoS).
+              most common methods leveraged in Nominated Proof of Stake (nPoS).
               Council terms last for one week.
             </div>
             <div className="page-content-text">
@@ -978,7 +978,7 @@ electorate - the total number of tokens issued in the network
               <li>
                 The Fellowship weights those with a higher rank more in the
                 aggregate opinion, however the weight should not be so high as
-                to make a small number of higher members’ opinions be
+                to make a small number of higher members' opinions be
                 insurmountable when compared to a coherent opinion coming from
                 lower-ranked membership.
               </li>

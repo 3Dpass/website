@@ -64,22 +64,22 @@ const ForklessUpgrade = () => {
           <div className="page-content-inner">
             <div className="page-content-title">General</div>
             <div className="page-content-text">
-              By means of using <Link to="https://webassembly.org/">Wasm</Link> in <Link to="https://substrate.io/">Substrate</Link>, the framework powering
+              By using <Link to="https://webassembly.org/">Wasm</Link> in <Link to="https://substrate.io/">Substrate</Link>, the framework powering
               3DPass, the chain is given the ability to upgrade its runtime
               logic without hard forking. Hard forking is a standard method of
-              upgrading a blockchain that is slow, inefficient, and error prone
-              due to the levels of offline coordination required, and thus, the
-              propensity to bundle many upgrades into one large-scale event. By
+              upgrading a blockchain that is slow, inefficient, and error-prone
+              due to the level of offline coordination required, and thus, the
+              tendency to bundle many upgrades into one large-scale event. By
               deploying Wasm on-chain and having nodes auto-enact the new logic
               at a certain block height, upgrades can be small, isolated, and
               very specific.
             </div>
             <div className="page-content-text">
               As a result of storing the Runtime as part of the state, the
-              Runtime code itself becomes state sensitive and calls to Runtime
-              can change the Runtime code itself. Therefore the 3DPass Host
+              Runtime code itself becomes state-sensitive and calls to Runtime
+              can change the Runtime code itself. Therefore, the 3DPass Host
               needs to always make sure it provides the Runtime corresponding to
-              the state in which the entrypoint has been called.
+              the state in which the entry point has been called.
             </div>
           </div>
         </div>
@@ -99,9 +99,9 @@ const ForklessUpgrade = () => {
           <div className="page-content-inner">
             <div className="page-content-title">Why WebAssembly (Wasm)?</div>
             <div className="page-content-text">
-            <Link to="https://webassembly.org/">WebAssembly</Link> is a platform agnostic binary format, meaning that it
+            <Link to="https://webassembly.org/">WebAssembly</Link> is a platform-agnostic binary format, meaning that it
               will run the same instructions across whatever machine it is
-              operating on. Blockchains need determinacy in order to have
+              operating on. Blockchains need determinism in order to have
               reliable state transition updates across all nodes in the
               peer-to-peer network without forcing every peer to run the same
               exact hardware. Wasm is a nice fit for reliability among the
