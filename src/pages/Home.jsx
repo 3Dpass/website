@@ -29,7 +29,14 @@ const Home = () => {
   ]);
 
   const [news] = useState([
-        {
+    {
+      title: "Introducing web3 interface for the tokenizaton of objects!",
+      description:
+        "Brand new Assets section provides a comprehensive set of tools for dealing with RWA and Assets: https://wallet.3dpass.org/assets",
+      date: "June 29, 2025",
+      link: "https://wallet.3dpass.org/assets"
+    },
+    {
       title: "Mainnet runtime has been upgraded!",
       description:
         "The Ledger of Things EVM compatibilty layer has come into operation at the block height of #1,422,643, providing its cross-platform features for everyone.",
@@ -42,13 +49,6 @@ const Home = () => {
         "Node v31 represents both Substrate and EVM compatible hybrid, which allows to execute Solidity code seamlessly on LoT.",
       date: "June 1, 2025",
       link: "https://github.com/3Dpass/3DP/releases/tag/v31"
-    },
-    {
-      title: "New telemetry server came into operation!",
-      description:
-        "The telemetry server is now available via https://3dpass.network",
-      date: "Apr 11, 2025",
-      link: "https://3dpass.network"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
