@@ -129,12 +129,6 @@ const Governance = () => {
               <div className="inside-nav-circle"></div>
             </div>
           </a>
-          <a href="#how-to-fetch-elections-data">
-            <div className="page-nav-inside">
-              How to fetch the elections data 
-              <div className="inside-nav-circle"></div>
-            </div>
-          </a>
           <a href="#how-to-vote">
             <div className="page-nav-inside">
               How to vote for a candidate
@@ -144,6 +138,12 @@ const Governance = () => {
           <a href="#how-to-submit-candidacy">
             <div className="page-nav-inside">
               How to submit a candidacy
+              <div className="inside-nav-circle"></div>
+            </div>
+          </a>
+          <a href="#how-to-unvote">
+            <div className="page-nav-inside">
+              How to unvote
               <div className="inside-nav-circle"></div>
             </div>
           </a>
@@ -772,53 +772,42 @@ electorate - the total number of tokens issued in the network
             by not voting and letting the others vote. With the existence of a prime member, it forces councillors 
             to be explicit in their votes or have their vote counted for whatever is voted on by the prime.
             </div>
-            <div className="page-content-subtitle" id="how-to-fetch-elections-data">
-              How to fetch the actual Council election data
-            </div>
-            <div className="page-content-text">
-            In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
-              "Developer - Chain state" and call out the method <i>phragmenElection - voting(AccountId32)</i>.
-            </div>
-            <img
-              className="page-img"
-              src="/images/council_elections_data.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-             You can also leverage other methods of the <code>phragmenElection</code> pallet to get some supplementary data available on the sorage (current members, runners up, candidates, etc).
-            </div>
             <div className="page-content-subtitle" id="how-to-vote">
               How to vote for a candidate
             </div>
             <div className="page-content-text">
-            In <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc2.3dpass.org#/chainstate">Polkadot js wallet</Link> go to 
-              "Governance - Council" and click on the "vote" button:
+            Open the <Link to="https://wallet.3dpass.org/governance/members">3dpass wallet</Link>, navigate "Members", 
+            use the "Vote" button to pick up candidates and submit a transaction.  
             </div>
             <img
               className="page-img"
-              src="/images/council_vote_1.png"
-              alt="img"
-              style={{ marginBottom: "20px" }}
-            />
-            <div className="page-content-text">
-            It is required to define both the voting value and the candidates you would like to support before you vote. A certain amount of funds will be locked. 
-            </div>
-            <img
-              className="page-img"
-              src="/images/council_vote_2.png"
+              src="/images/vote.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-subtitle" id="how-to-submit-candidacy">
-              How to submit a candidate
+              How to submit a candidacy
             </div>
             <div className="page-content-text">
-            Go to "Governance - Council" and use "Submit candidacy" button:
+            Open the <Link to="https://wallet.3dpass.org/governance/members">3dpass wallet</Link>, navigate "Members", 
+            use the "+ Candidacy" button to submit your candidacy to the Council. 
             </div>
             <img
               className="page-img"
-              src="/images/submit_candidacy.png"
+              src="/images/submit_candidacy-min.png"
+              alt="img"
+              style={{ marginBottom: "20px" }}
+            />
+             <div className="page-content-subtitle" id="how-to-unvote">
+              How to unvote
+            </div>
+            <div className="page-content-text">
+            Open the <Link to="https://wallet.3dpass.org/governance/members">3dpass wallet</Link>, navigate "Members", 
+            use the "+ Unvote All" button to remove all your votes from the Council. The stake will be unlocked.  
+            </div>
+            <img
+              className="page-img"
+              src="/images/unvote_all.png"
               alt="img"
               style={{ marginBottom: "20px" }}
             />
