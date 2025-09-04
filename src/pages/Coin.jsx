@@ -465,14 +465,15 @@ const Coin = () => {
               <li>Launching the Counterstake bridge contracts and its infrastructure:</li>
                 <ul className="page-content-text">
                   <li>Testing the Counterstake <Link to="https://github.com/byteball/counterstake-bridge/tree/master/evm/contracts">contracts</Link> on testnet (<i>Done</i>)</li>
-                  <li>Adding 3dpass mainnet to the <Link to="https://github.com/byteball/counterstake-bridge?tab=readme-ov-file"></Link> Counterstake whatchdog bot (<i>In the process</i>)</li>
+                  <li>LoT mainnet integration into the Counterstake whatchdog Node (<Link to="https://github.com/3Dpass/counterstake-bridge"><i>Done</i></Link>)</li>
+                  <li>Public testing stage (<i>In the process</i>)</li>
                   <li>Deploy the Counterstake bridge contracts to Ethereum (<i>In the process</i>)</li>
                   <li>Setting up USDT import and export on both sides: LoT and Ethereum</li>
-                  <li>Running the Counterstake <Link to="https://github.com/byteball/counterstake-bridge">watchdog bots</Link></li>
+                  <li>Running the Counterstake on maiinet</li>
                 </ul>
               <li>Preparing the migration version (<i>Done</i>)</li>
               <li>Mainnet EVM release - Done (<Link to="https://github.com/3Dpass/3DP/releases/tag/v31">Node v31</Link> )</li>
-              <li>Testing "wrapped" USDT within the LoT eco-system</li>
+              <li>Testing "wrapped" wUSDT within the LoT eco-system (<i>In the process</i>)</li>
               <li>Docs and guidelines (<i>in the process</i>)</li>
             </ul>
             <li>Web wallet:</li>

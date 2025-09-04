@@ -30,25 +30,25 @@ const Home = () => {
 
   const [news] = useState([
     {
+      title: "Mainnet Node v32 release!",
+      description:
+        "The Ledger of Things runtime has been upgraded at the block height of #1,551,228, delivering advanced 3DPRC2 methods and new EVM precompiles.",
+      date: "Sep 04, 2025",
+      link: "https://github.com/3Dpass/3DP/releases/tag/v32"
+    },
+    {
+      title: "Counterstake bridge public testings!",
+      description:
+        "Cross-platform version of the Counterstake bridge has been released, enabling its public testing stage.",
+      date: "Aug 14, 2025",
+      link: "https://github.com/3Dpass/counterstake-bridge"
+    },
+    {
       title: "Introducing web3 interface for the tokenizaton of objects!",
       description:
         "Brand new Assets section provides a comprehensive set of tools for dealing with RWA and Assets: https://wallet.3dpass.org/assets",
       date: "June 29, 2025",
       link: "https://wallet.3dpass.org/assets"
-    },
-    {
-      title: "Mainnet runtime has been upgraded!",
-      description:
-        "The Ledger of Things EVM compatibilty layer has come into operation at the block height of #1,422,643, providing its cross-platform features for everyone.",
-      date: "June 04, 2025",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v31"
-    },
-    {
-      title: "EVM compatibility layer has been released!",
-      description:
-        "Node v31 represents both Substrate and EVM compatible hybrid, which allows to execute Solidity code seamlessly on LoT.",
-      date: "June 1, 2025",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v31"
     },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);

@@ -378,7 +378,7 @@ yarn miner --interval 100
             />
             <div className="page-content-subtitle">API endpoints:</div>
             <ul className="page-content-text">
-              <li>wss://test-rpc.3dpass.org - testnet</li>
+              <li>wss://rpc-test.3dpass.org - testnet</li>
               <li>ws://127.0.0.1:9944 - local Node</li>
             </ul>
             <img
@@ -395,7 +395,7 @@ yarn miner --interval 100
             </div>
             <div className="page-content-text">
               Make sure that you are connected to the correct endpoint:
-              wss://test-rpc.3dpass.org or wss://test-rpc.3dpass.org as it's
+              wss://rpc-test.3dpass.org or wss://rpc-test.3dpass.org as it's
               shown above. Use "+" to generate new address. Keep your seed
               phrase in a safe place. There is no any possible ways to recover
               if it's lost. You can also import your address from the seed

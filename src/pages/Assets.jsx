@@ -1079,6 +1079,18 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
               <li>
                 <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/proxy">proxy</Link> - Proxy module interaction 
               </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/assets-conversion">assets-conversion</Link> - DEX module interaction 
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/identity">identity</Link> - Identity module interaction
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/poscan">poscan</Link> - poscan (3DPRC2) module interaction
+              </li>
+              <li>
+                <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/serial-numbers">serial-numbers</Link> - SerialNumbers module interaction
+              </li>
             </ul>
             <div className="page-content-text">
               In this guide we are going to use  
@@ -1335,6 +1347,7 @@ contract HelloWorld {
         <div className="page-content-block" id="dex">
           <div className="page-content-inner">
             <div className="page-content-title">DEX (Decentralized Exchange)</div>
+            <div className="page-content-subtitle" id="dex-general">General</div>
             <div className="page-content-text">
             A custom version of the <Link to="https://github.com/3Dpass/3DP/tree/main/pallets/asset-conversion">assetConversion</Link> {" "}
             module, which represents a full featured decentralized exchange based on <Link to="https://github.com/Uniswap/v2-core">Uniswap v2</Link> {" "}
@@ -1356,6 +1369,27 @@ contract HelloWorld {
             Submit a Pull Request into the <Link to="https://github.com/3Dpass/swap">GitHub</Link> to add your token's logo. 
             </li>
             </ul>
+            <div className="page-content-subtitle" id="dex-evm-interaction">EVM interaction</div>
+           <div className="page-content-text">
+            DEX <Link to="https://github.com/3Dpass/3DP/tree/main/precompiles/assets-conversion">Solidity interface</Link> represents a bunch of canonical Uniswap V2 
+            methods accessible from EVM at the following precompile address: 
+            <pre className="main-pre">
+              {`
+0x0000000000000000000000000000000000000902
+                    `}
+            </pre>
+           </div>
+           <ul className="page-content-text">
+            <li>
+             Run the <Link to="https://github.com/3Dpass/3DP/blob/main/precompiles/assets-conversion/Pairs.sol">Pairs.sol</Link> at the precompile address to fetch pairs data and create new one. 
+            </li>
+            <li>
+             Run the <Link to="https://github.com/3Dpass/3DP/blob/main/precompiles/assets-conversion/LiquidityProvider.sol">LiquidityProvider.sol</Link> at the precompile address to either add or remove liquidity. 
+            </li>
+            <li>
+             Run the <Link to="https://github.com/3Dpass/3DP/blob/main/precompiles/assets-conversion/Swap.sol">Swap.sol</Link> at the precompile address to swap tokens. 
+            </li>
+           </ul>
             <img
               className="page-img"
               style={{ marginBottom: "50px" }}

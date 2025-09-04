@@ -1,5 +1,4 @@
 import "../styles/features.css";
-
 import { Link, useLocation } from "react-router-dom";
 import React, { useEffect } from "react";
 
@@ -1899,20 +1898,6 @@ COW contract on EVM:
               alt="img"
               style={{ marginBottom: "20px" }}
             />
-            <div className="page-content-text">
-              <i>Notice!</i> All the funds available by the time are going to be unlocked immediately, 
-              as long as the following conditions are met in relation to the mining address:
-            </div> 
-            <ol className="page-content-text">
-              <li>The lock period has expired</li>
-              <li>There is at least one lock record in place scheduled for the future</li>
-            </ol>
-            <div className="page-content-text">
-              e.g. If you have experienced a long period of inactivity (3 months or longer) since you mined your coins, 
-              and there is a bunch of funds in the wallet still locked, because you have forgotten to do <i>Unlock</i> in time.
-              Although, you have all of your locks expired long ago, yet there is no lock records scheduled for the future.
-              In the case, all you need to do is to mine 1 block (to set up a lock record for the future) and then do <i>Unlock</i>.
-            </div>
             <div className="page-content-subtitle" id="how-to-check-pending-locks">An alternative method to check pending locks</div>
             <div className="page-content-text">
               The lock records are set and managed by the <i>Rewards</i> module for both miners and validators.
@@ -1933,6 +1918,25 @@ COW contract on EVM:
                 e.g. 130,229,305,874,880 = 130.229,305,874,880 P3D
                 </li>
               </ul>
+              <div className="page-content-text">
+              <i>Notice!</i> {" "}
+              If you have experienced a long period of mining inactivity in the past, 
+              and the vesting schedule has been expired, but there is a certain amount of funds in the wallet still locked. 
+              Proceed with the following in order to unlock the rest:
+            </div>
+            <ul className="page-content-text">
+              <li>
+                Call the <i>`rewards - overdue`</i> method first. 
+                Use the <Link to="https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Frpc.3dpass.org#/extrinsics">Polka js wallet</Link> {" "}
+                to submit the extrinsic 
+              </li>
+              <li>
+                Wait for three blocks to pass
+              </li>
+              <li>
+                Call the `unlock` as always
+              </li>
+            </ul>
             </div>
           </div>
         </div>
