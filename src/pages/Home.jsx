@@ -29,27 +29,27 @@ const Home = () => {
   ]);
 
   const [news] = useState([
+        {
+      title: "USDT <-> wUSDT bridge has been established between Ethereum and 3DPass blockchains!",
+      description:
+        "Bridge details: HOME NETWORK (Ethereum), Export Contract: 0x3a96AC42A... <-> FOREIGN NETWORK (3DPass), Import Contract: 0x00D5f00250...",
+      date: "Sep 19, 2025",
+      link: "https://github.com/3Dpass/counterstake-bridge?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"
+    },
+      {
+      title: "The Counterstake bridge core infrastructure has been deployed on mainnet!",
+      description:
+        "CounterstakeFactory: 0x1bB031c2Fc2..., AssistantFactory: 0x51D7976F5927244... Oracle: 0x237527b4F7bb0030...",
+      date: "Sep 13, 2025",
+      link: "https://github.com/3Dpass/bridge-frontend/tree/main/src/contracts/evm_substrate"
+    },
     {
       title: "Mainnet Node v32 release!",
       description:
         "The Ledger of Things runtime has been upgraded at the block height of #1,551,228, delivering advanced 3DPRC2 methods and new EVM precompiles.",
       date: "Sep 04, 2025",
       link: "https://github.com/3Dpass/3DP/releases/tag/v32"
-    },
-    {
-      title: "Counterstake bridge public testings!",
-      description:
-        "Cross-platform version of the Counterstake bridge has been released, enabling its public testing stage.",
-      date: "Aug 14, 2025",
-      link: "https://github.com/3Dpass/counterstake-bridge"
-    },
-    {
-      title: "Introducing web3 interface for the tokenizaton of objects!",
-      description:
-        "Brand new Assets section provides a comprehensive set of tools for dealing with RWA and Assets: https://wallet.3dpass.org/assets",
-      date: "June 29, 2025",
-      link: "https://wallet.3dpass.org/assets"
-    },
+    }
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
 

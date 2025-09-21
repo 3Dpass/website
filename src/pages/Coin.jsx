@@ -442,7 +442,7 @@ const Coin = () => {
                 <li>Recognition toolkit: additional recognition algorithm implementation (will be released within the "AI human impression feature")</li>
                 <li>Promotion target: dApps developers</li>
               </ul>
-            <div className="page-content-subtitle" id="roadmap-2025">2025 (Forming up)</div>
+            <div className="page-content-subtitle" id="roadmap-2025">2025</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Release (EVM & cross-chain)
             </div>
@@ -466,14 +466,16 @@ const Coin = () => {
                 <ul className="page-content-text">
                   <li>Testing the Counterstake <Link to="https://github.com/byteball/counterstake-bridge/tree/master/evm/contracts">contracts</Link> on testnet (<i>Done</i>)</li>
                   <li>LoT mainnet integration into the Counterstake whatchdog Node (<Link to="https://github.com/3Dpass/counterstake-bridge"><i>Done</i></Link>)</li>
-                  <li>Public testing stage (<i>In the process</i>)</li>
-                  <li>Deploy the Counterstake bridge contracts to Ethereum (<i>In the process</i>)</li>
-                  <li>Setting up USDT import and export on both sides: LoT and Ethereum</li>
-                  <li>Running the Counterstake on maiinet</li>
+                  <li>Counterstake cross-platform EVM contracts version <Link to="https://github.com/3Dpass/counterstake-bridge/tree/master/evm_substrate">v1.1-substrate</Link></li>
+                  <li>Public testing stage (<i>Done</i>)</li>
+                  <li>Deploy the Counterstake bridge contracts to 3dpass mainnet (<i>Done</i>)</li>
+                  <li>Setting up USDT Export and wUSDT Import on both ends: LoT and Ethereum (<Link to="https://github.com/3Dpass/counterstake-bridge?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"><i>Done</i></Link>)</li>
+                  <li>Running the Counterstake on maiinet (<i>Done</i>)</li>
                 </ul>
-              <li>Preparing the migration version (<i>Done</i>)</li>
+              <li>Preparing the Node migration version (<i>Done</i>)</li>
               <li>Mainnet EVM release - Done (<Link to="https://github.com/3Dpass/3DP/releases/tag/v31">Node v31</Link> )</li>
-              <li>Testing "wrapped" wUSDT within the LoT eco-system (<i>In the process</i>)</li>
+              <li>Testing "wrapped" wUSDT within the LoT eco-system (<i>Done</i>)</li>
+              <li>Web3 counterstake bridge UI (<Link to="https://github.com/3Dpass/bridge-frontendhttps://github.com/3Dpass/bridge-frontend">Done</Link>)</li>
               <li>Docs and guidelines (<i>in the process</i>)</li>
             </ul>
             <li>Web wallet:</li>
@@ -545,7 +547,7 @@ const Coin = () => {
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
               <li>Core: migration to the newest Substrate version</li>
               </ul>
-            <div className="page-content-subtitle" id="roadmap-2026">2026 (Discussion)</div>
+            <div className="page-content-subtitle" id="roadmap-2026">2026 (Forming up)</div>
             <div className="page-content-text road-map-text mb0">
               Q1 - Cases & Integrations
             </div>
