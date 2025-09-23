@@ -1073,12 +1073,14 @@ const Community = () => {
               description="Discord: A_Mo#2060"
               image="/images/anon.jpg"
             />
+            {/*
              <UserCard
               name="breukmeister"
               title="Community Representative"
               description="Europe, Discord: breukmeister"
               image="/images/anon.jpg"
             />
+            */}
           </div>
         </div>
         <div className="page-content-block" id="resources">

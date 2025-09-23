@@ -34,7 +34,7 @@ const Home = () => {
       description:
         "Bridge details: HOME NETWORK (Ethereum), Export Contract: 0x3a96AC42A... <-> FOREIGN NETWORK (3DPass), Import Contract: 0x00D5f00250...",
       date: "Sep 19, 2025",
-      link: "https://github.com/3Dpass/counterstake-bridge?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"
+      link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"
     },
       {
       title: "The Counterstake bridge core infrastructure has been deployed on mainnet!",
