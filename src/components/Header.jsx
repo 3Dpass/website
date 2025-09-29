@@ -1,7 +1,5 @@
 import "../styles/header.css";
-
 import { Link, useLocation } from "react-router-dom";
-
 import Button from "./Button";
 import { useState, useEffect } from "react";
 
@@ -38,105 +36,37 @@ const Header = () => {
         el.setAttribute("content", "3DPass mobile wallet, guideliones, download");
       } else if (location.includes("testnet")) {
         el.setAttribute("content", "3DPass - Testnet, canary network  | Layer 1 blockchain platform for the tokenization of objects, Proof of Scan protocol based on recognition, useful smart contracts and dApps");
+      } else if (location.includes("posts")) { // Dodaj dla Posts
+        el.setAttribute("content", "3DPass - Latest updates and insights from the 3Dpass team");
       } else {
         el.setAttribute("content", "3DPass - Layer 1 blockchain platform for the tokenization of objects, Proof of Scan protocol based on recognition, useful smart contracts and dApps");
       }
     }
   }, [location]);
 
-
   return (
     <div>
-    <div className="special-message">
-  <div style={{width: "100%"}}>
-      <a  href="/grants" className="message-text">
-      <div className="message-text">
-      Hello developer, we need your contribution and support. We are building something special here!
+      <div className="special-message">
+        <div style={{ width: "100%" }}>
+          <a href="/grants" className="message-text">
+            <div className="message-text">
+              Hello developer, we need your contribution and support. We are building something special here!
+            </div>
+          </a>
+        </div>
       </div>
-      </a>
-  </div>
-</div>
-    <header className="main-header">
-      <div className="inner-content">
-        <Link to="/">
-          <div className="logo"></div>
-        </Link>
-        <div className="header-navs">
-          <Link to="/features">
-            <div
-              className={
-                location.indexOf("features") > -1
-                  ? "header-nav active"
-                  : "header-nav"
-              }
-            >
-              Features
-            </div>
+      <header className="main-header">
+        <div className="inner-content">
+          <Link to="/">
+            <div className="logo"></div>
           </Link>
-          <Link to="/community">
-            <div
-              className={
-                location.indexOf("community") > -1
-                  ? "header-nav active"
-                  : "header-nav"
-              }
-            >
-              Community
-            </div>
-          </Link>
-          <Link to="/coin">
-            <div
-              className={
-                location.indexOf("coin") > -1
-                  ? "header-nav active"
-                  : "header-nav"
-              }
-            >
-              P3D
-            </div>
-          </Link>
-          <Link to="/assets">
-            <div
-              className={
-                location.indexOf("assets") > -1
-                  ? "header-nav active"
-                  : "header-nav"
-              }
-            >
-              Assets
-            </div>
-          </Link>
-          <Link to="/mainnet">
-            <div
-              className={
-                location.indexOf("mainnet") > -1
-                  ? "header-nav active"
-                  : "header-nav"
-              }
-            >
-              Mainnet
-            </div>
-          </Link>
-          <div
-            className="hamburger-menu"
-            onClick={() => setOpenMenu(!openMenu)}
-          ></div>
-
-          <div
-            className={openMenu ? "right-menu active" : "right-menu"}
-            onClick={() => setOpenMenu(!openMenu)}
-          >
-            <div className="logo-holdeer-right">
-              <Link to="/">
-                <div className="logo"></div>
-              </Link>
-            </div>
+          <div className="header-navs">
             <Link to="/features">
               <div
                 className={
                   location.indexOf("features") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
+                    ? "header-nav active"
+                    : "header-nav"
                 }
               >
                 Features
@@ -146,8 +76,8 @@ const Header = () => {
               <div
                 className={
                   location.indexOf("community") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
+                    ? "header-nav active"
+                    : "header-nav"
                 }
               >
                 Community
@@ -157,8 +87,8 @@ const Header = () => {
               <div
                 className={
                   location.indexOf("coin") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
+                    ? "header-nav active"
+                    : "header-nav"
                 }
               >
                 P3D
@@ -168,8 +98,8 @@ const Header = () => {
               <div
                 className={
                   location.indexOf("assets") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
+                    ? "header-nav active"
+                    : "header-nav"
                 }
               >
                 Assets
@@ -179,44 +109,134 @@ const Header = () => {
               <div
                 className={
                   location.indexOf("mainnet") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
+                    ? "header-nav active"
+                    : "header-nav"
                 }
               >
                 Mainnet
               </div>
             </Link>
-            <Link to="/grants">
+            <Link to="/posts"> {/* Dodaj link Posts */}
               <div
                 className={
-                  location.indexOf("grants") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
+                  location.indexOf("posts") > -1
+                    ? "header-nav active"
+                    : "header-nav"
                 }
               >
-                Grant program
+                Posts
               </div>
             </Link>
-            <Link to="https://deepwiki.com/3Dpass/3DP">
-              <div
-                className={
-                  location.indexOf("wiki") > -1
-                    ? "right-menu-nav active"
-                    : "right-menu-nav"
-                }
-              >
-                Dev Wiki
+            <div
+              className="hamburger-menu"
+              onClick={() => setOpenMenu(!openMenu)}
+            ></div>
+            <div
+              className={openMenu ? "right-menu active" : "right-menu"}
+              onClick={() => setOpenMenu(!openMenu)}
+            >
+              <div className="logo-holdeer-right">
+                <Link to="/">
+                  <div className="logo"></div>
+                </Link>
               </div>
+              <Link to="/features">
+                <div
+                  className={
+                    location.indexOf("features") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Features
+                </div>
+              </Link>
+              <Link to="/community">
+                <div
+                  className={
+                    location.indexOf("community") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Community
+                </div>
+              </Link>
+              <Link to="/coin">
+                <div
+                  className={
+                    location.indexOf("coin") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  P3D
+                </div>
+              </Link>
+              <Link to="/assets">
+                <div
+                  className={
+                    location.indexOf("assets") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Assets
+                </div>
+              </Link>
+              <Link to="/mainnet">
+                <div
+                  className={
+                    location.indexOf("mainnet") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Mainnet
+                </div>
+              </Link>
+              <Link to="/posts"> {/* Dodaj link Posts */}
+                <div
+                  className={
+                    location.indexOf("posts") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Posts
+                </div>
+              </Link>
+              <Link to="/grants">
+                <div
+                  className={
+                    location.indexOf("grants") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Grant program
+                </div>
+              </Link>
+              <Link to="https://deepwiki.com/3Dpass/3DP">
+                <div
+                  className={
+                    location.indexOf("wiki") > -1
+                      ? "right-menu-nav active"
+                      : "right-menu-nav"
+                  }
+                >
+                  Dev Wiki
+                </div>
+              </Link>
+            </div>
+          </div>
+          <div className="header-right-navs">
+            <Link to="https://deepwiki.com/3Dpass/3DP">
+              <Button type="button" label="Dev Wiki" />
             </Link>
           </div>
         </div>
-        <div className="header-right-navs">
-          <Link to="https://deepwiki.com/3Dpass/3DP">
-            <Button type="button" label="Dev Wiki" />
-          </Link>
-        </div>
-      </div>
-    </header>
+      </header>
     </div>
   );
 };
