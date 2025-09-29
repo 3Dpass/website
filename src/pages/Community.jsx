@@ -1081,6 +1081,12 @@ const Community = () => {
               image="/images/anon.jpg"
             />
             */}
+             <UserCard
+              name="FD"
+              title="Community Representative, Investor"
+              description="Telegram: @iayfd"
+              image="/images/anon.jpg"
+            />
           </div>
         </div>
         <div className="page-content-block" id="resources">
