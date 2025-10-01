@@ -36,7 +36,7 @@ const Header = () => {
         el.setAttribute("content", "3DPass mobile wallet, guideliones, download");
       } else if (location.includes("testnet")) {
         el.setAttribute("content", "3DPass - Testnet, canary network  | Layer 1 blockchain platform for the tokenization of objects, Proof of Scan protocol based on recognition, useful smart contracts and dApps");
-      } else if (location.includes("posts")) { // Dodaj dla Posts
+      } else if (location.includes("posts")) {
         el.setAttribute("content", "3DPass - Latest updates and insights from the 3Dpass team");
       } else {
         el.setAttribute("content", "3DPass - Layer 1 blockchain platform for the tokenization of objects, Proof of Scan protocol based on recognition, useful smart contracts and dApps");
@@ -116,17 +116,6 @@ const Header = () => {
                 Mainnet
               </div>
             </Link>
-            <Link to="/posts"> {/* Dodaj link Posts */}
-              <div
-                className={
-                  location.indexOf("posts") > -1
-                    ? "header-nav active"
-                    : "header-nav"
-                }
-              >
-                Posts
-              </div>
-            </Link>
             <div
               className="hamburger-menu"
               onClick={() => setOpenMenu(!openMenu)}
@@ -193,17 +182,6 @@ const Header = () => {
                   }
                 >
                   Mainnet
-                </div>
-              </Link>
-              <Link to="/posts"> {/* Dodaj link Posts */}
-                <div
-                  className={
-                    location.indexOf("posts") > -1
-                      ? "right-menu-nav active"
-                      : "right-menu-nav"
-                  }
-                >
-                  Posts
                 </div>
               </Link>
               <Link to="/grants">
