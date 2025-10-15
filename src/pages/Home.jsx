@@ -29,26 +29,26 @@ const Home = () => {
   ]);
 
   const [news] = useState([
-        {
+      {
+      title: "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX!",
+      description:
+         "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX! USDT <-> wUSDT in/out is ensured by the cross-chain trustless bridge.",
+      date: "Oct 15, 2025",
+      link: "https://3dpswap.online/pools"
+      },
+      {
       title: "USDT <-> wUSDT bridge has been established between Ethereum and 3DPass blockchains!",
       description:
         "Bridge details: HOME NETWORK (Ethereum), Export Contract: 0x3a96AC42A... <-> FOREIGN NETWORK (3DPass), Import Contract: 0x00D5f00250...",
       date: "Sep 19, 2025",
       link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"
-    },
+      },
       {
       title: "The Counterstake bridge core infrastructure has been deployed on mainnet!",
       description:
         "CounterstakeFactory: 0x1bB031c2Fc2..., AssistantFactory: 0x51D7976F5927244... Oracle: 0x237527b4F7bb0030...",
       date: "Sep 13, 2025",
       link: "https://github.com/3Dpass/bridge-frontend/tree/main/src/contracts/evm_substrate"
-    },
-    {
-      title: "Mainnet Node v32 release!",
-      description:
-        "The Ledger of Things runtime has been upgraded at the block height of #1,551,228, delivering advanced 3DPRC2 methods and new EVM precompiles.",
-      date: "Sep 04, 2025",
-      link: "https://github.com/3Dpass/3DP/releases/tag/v32"
     }
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
@@ -81,6 +81,9 @@ const Home = () => {
             </Link>
             <Link to="https://3dpswap.online">
               <Button type="button" label="3dpswap DEX" />
+            </Link>
+            <Link to="https://bridge.3dpswap.online">
+              <Button type="button" label="Cross-Chain Bridge" />
             </Link>
             <Link to="https://3dpscan.xyz">
               <Button type="button" label="Block Explorer" />

@@ -1190,17 +1190,14 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title">Exchanges</div>
               <ul className="page-content-text">
-              <Link to="https://www.mexc.com/exchange/P3D_USDT">
-                  <li>MEXC P3D/USDT</li>
-                </Link>
-                <Link to="https://www.coinex.com/en/exchange/p3d-usdt">
-                  <li>Coinex P3D/USDT</li>
-                </Link>
-                <Link to="https://nonkyc.io/market/P3D_USDT">
-                  <li>NonKYC P3D/USDT</li>
-                </Link>
                 <Link to="https://3dpswap.online">
                   <li>3DPswap DEX</li>
+                </Link>
+                <Link to="https://bridge.3dpswap.online">
+                  <li>Cross-Chain Bridge USDT Ethereum - wUSDT 3Dpass</li>
+                </Link>
+                <Link to="https://www.mexc.com/exchange/P3D_USDT">
+                  <li>MEXC P3D/USDT</li>
                 </Link>
               </ul>
             </div>

@@ -457,7 +457,7 @@ const Coin = () => {
               <li>P3Dt native (balances pallet) - EVM P3D ERC-20 (precompile) interaction implementation (<Link to="https://github.com/3Dpass/3DP/tree/test/precompiles/balances-erc20"><i>Done</i></Link>)</li>
               <li>Solidity smart contracts deployment test (<i>Done</i>)</li>
               <li>Local assets: poscanAssets module - EVM assets-erc20 (precompile) integration (<Link to="https://github.com/3Dpass/3DP/tree/test/precompiles/assets-erc20"><i>Done</i></Link>)</li>
-              <li>Docs and guidelines (<i>In the process</i>)</li>
+              <li>Docs and guidelines (<i>Done</i>)</li>
             </ul>
             <li>DEX: Two-ways cross-chain bridge with Ethereum:</li>
             <ul className="page-content-text">
@@ -470,13 +470,13 @@ const Coin = () => {
                   <li>Public testing stage (<i>Done</i>)</li>
                   <li>Deploy the Counterstake bridge contracts to 3dpass mainnet (<i>Done</i>)</li>
                   <li>Setting up USDT Export and wUSDT Import on both ends: LoT and Ethereum (<Link to="https://github.com/3Dpass/counterstake-bridge?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"><i>Done</i></Link>)</li>
-                  <li>Running the Counterstake on maiinet (<i>Done</i>)</li>
+                  <li>Running the Counterstake on mainnet (<i>Done</i>)</li>
                 </ul>
               <li>Preparing the Node migration version (<i>Done</i>)</li>
               <li>Mainnet EVM release - Done (<Link to="https://github.com/3Dpass/3DP/releases/tag/v31">Node v31</Link> )</li>
               <li>Testing "wrapped" wUSDT within the LoT eco-system (<i>Done</i>)</li>
               <li>Web3 counterstake bridge UI (<Link to="https://github.com/3Dpass/bridge-frontendhttps://github.com/3Dpass/bridge-frontend">Done</Link>)</li>
-              <li>Docs and guidelines (<i>in the process</i>)</li>
+              <li>Docs and guidelines (<i>Done</i>)</li>
             </ul>
             <li>Web wallet:</li>
             <ul className="page-content-text">
@@ -493,7 +493,7 @@ const Coin = () => {
                <li>Assets metadata (<Link to="https://3dpscan.io/assets"><i>Done</i></Link> )</li>
                <li>Asset-to-Object linking (<Link to="https://3dpscan.io/assets"><i>Done</i></Link> )</li>
                <li>Bounties ( <Link to="https://3dpscan.io/bountie"><i>Done</i></Link> )</li>
-               <li>Codes revierw ( <Link to="https://github.com/3Dpass/3dpscan"><i>Done</i></Link> )</li>
+               <li>Codes review ( <Link to="https://github.com/3Dpass/3dpscan"><i>Done</i></Link> )</li>
               </ul>
               <li>Public commons: Start importing and processing (<i>in the process, lead by A_Mo</i>)</li>
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
@@ -512,12 +512,12 @@ const Coin = () => {
               </ul>
              <li>3DPRC-2: (<i>in the process, lead by PaulS and Mikhail</i>):</li>
              <ul className="page-content-text">
-               <li><Link to="/assets#general-human-perception-error">AI human impressions</Link> feature</li>
+               <li><Link to="/assets#general-human-perception-error">AI human impressions</Link> feature (<i>in the process</i>)</li>
                <li>2D recognition (based on machine vision)</li>
               </ul>
              <li>Mobile wallet: Atomic swap integration (<i> in the process, lead by L3odr0id</i>)</li>
              <li>Mobile wallet: all Substrate chains support (<i> lead by L3odr0id</i>)</li>
-             <li>Web wallet: 3DPRC-2 UI integration (<i> in the process</i>)</li>
+             <li>Web wallet: 3DPRC-2 UI integration (<Link to="https://wallet.3dpass.org/assets/objects"><i>Done</i></Link>)</li>
              <li>Web wallet: all Substrate chains support</li>
              <li>Launchpad: Web UI</li>
              <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
@@ -539,6 +539,7 @@ const Coin = () => {
                 <li>Sudo taking out procedure: execution</li>
               </ul>
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
+              <li>DEX: EVM methods integration (<Link to="https://3dpswap.online"><i>done</i></Link>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
               Q4 - Cases & Integrations

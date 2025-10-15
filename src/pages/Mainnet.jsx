@@ -414,7 +414,10 @@ const Mainnet = () => {
             <div className="one-subheader">Mobile Wallet</div>
           </a>
           <a href="https://3dpswap.online">
-            <div className="one-subheader">3dpswap DEX UI</div>
+            <div className="one-subheader">3dpswap DEX</div>
+          </a>
+          <a href="https://bridge.3dpswap.online">
+            <div className="one-subheader">Cross-Chain Bridge</div>
           </a>
           <a href="https://3dpscan.xyz">
             <div className="one-subheader">Blockchain Explorer</div>
