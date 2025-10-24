@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news] = useState([
       {
+      title: "3DPass has been added to Uniswap!",
+      description:
+        "V2 Liquidity pool P3D/USDT (P3D EVM - Bridged 3dpass P3D on Ethereum blockchain: 0x4f3a4e3770...45A15843025E1). The Price maintains EVM compatibility: 1 P3D EVM = 1 MP3D Native",
+      date: "Oct 23, 2025",
+      link: "https://app.uniswap.org/positions/v2/ethereum/0x2e128d21f94A4174E1eCAE9aF57d73425292296a"
+      },
+      {
       title: "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX!",
       description:
          "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX! USDT <-> wUSDT in/out is ensured by the cross-chain trustless bridge.",
@@ -42,14 +49,7 @@ const Home = () => {
         "Bridge details: HOME NETWORK (Ethereum), Export Contract: 0x3a96AC42A... <-> FOREIGN NETWORK (3DPass), Import Contract: 0x00D5f00250...",
       date: "Sep 19, 2025",
       link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"
-      },
-      {
-      title: "The Counterstake bridge core infrastructure has been deployed on mainnet!",
-      description:
-        "CounterstakeFactory: 0x1bB031c2Fc2..., AssistantFactory: 0x51D7976F5927244... Oracle: 0x237527b4F7bb0030...",
-      date: "Sep 13, 2025",
-      link: "https://github.com/3Dpass/bridge-frontend/tree/main/src/contracts/evm_substrate"
-    }
+      }
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
 

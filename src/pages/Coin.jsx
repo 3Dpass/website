@@ -184,8 +184,9 @@ const Coin = () => {
               providing resources and equipment for <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2</Link> {" "}
               tokenization standard to operate.  
             </div>
+            <div className="page-content-subtitle">P3D on Native runtime</div>
             <div className="page-content-text">
-              The smallest indivisible unit of account in 3DPass is Crumb. 1 P3D is equal to <i>1e12</i> Crumb, {" "}
+              The smallest indivisible unit of account in 3DPass is Crumb. 1 P3D is equal to <i>1e12</i> Crumbs, {" "}
               which is defined by the network genesis spec <Link to="https://raw.githubusercontent.com/3Dpass/3DP/main/mainnetSpecRaw.json">mainnetSpecRaw.json</Link>.
               Explore the <Link to="#specification">network specification</Link> for more detail. 
             </div>
@@ -203,13 +204,44 @@ const Coin = () => {
                 P3D: 1.000000000000
               </li>
             </ul>
-            <div className="page-content-subtitle">EVM</div>
+            <div className="page-content-subtitle">P3D on 3DPass EVM</div>
             <div className="page-content-text">
-              There is an EVM compatibility layer operating on LoT, in which P3D is presented as P3D token 
-              callable at the contract 0x0000000000000000000000000000000000000802. P3D has 18 decimals places in EVM.
-              It does not affect total supply.
+              There is an EVM compatibility layer operating on LoT, in which P3D is implemented as a cross-platform {" "}
+              <Link to="https://github.com/3Dpass/3DP/blob/9de7f4ad5ef0ab60d792ef808b4bb8e20fa43dde/precompiles/balances-erc20/ERC20.sol#L7">balances-erc20</Link> {" "}
+              precompile callable from Solidity at the address <i>0x0000000000000000000000000000000000000802</i>. 1 P3D on EVM is equal to <i>1e18</i> Crumbs
+              It does not affect total supply in Crumbs (min units), since the precompile is just an interface to the native balances module.
             </div>
+             <ul className="page-content-text">
+              <li>
+                Crumb: 0.000000000000000001
+              </li>
+              <li>
+                P3D on EVM: 1.000000000000000000
+              </li>
+              <li>
+               1 P3D on EVM = 1 MP3D on native runtime
+              </li>
+            </ul>
           </div>
+          <div className="page-content-subtitle">External Integrations</div>
+          <div className="page-content-text">
+            Bridged 3dpass P3D on Ethereum blockchain:
+          </div>
+          <ul className="page-content-text">
+            <li>
+              Contract: 0x4f3a4e37701402C61146071309e45A15843025E1
+            </li>
+            <li>
+              Standard: ERC20
+            </li>
+            <li>
+              Decimals: 18
+            </li>
+            <li>
+              Bridge: <Link to="https://bridge.3dpswap.online">Counterstake</Link>, 
+              Version: <Link to="https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate">v1.1-substrate</Link>
+            </li>
+          </ul>
         </div>
         <div className="page-content-block" id="white-papper">
           <div className="page-content-inner">

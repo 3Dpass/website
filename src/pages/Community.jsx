@@ -1191,10 +1191,13 @@ const Community = () => {
               <div className="url-block-title">Exchanges</div>
               <ul className="page-content-text">
                 <Link to="https://3dpswap.online">
-                  <li>3DPswap DEX</li>
+                  <li>3DPswap</li>
+                </Link>
+                <Link to="https://app.uniswap.org/positions/v2/ethereum/0x2e128d21f94A4174E1eCAE9aF57d73425292296a">
+                  <li>Uniswap V2</li>
                 </Link>
                 <Link to="https://bridge.3dpswap.online">
-                  <li>Cross-Chain Bridge USDT Ethereum - wUSDT 3Dpass</li>
+                  <li>Cross-Chain Bridge "Ethereum - 3Dpass"</li>
                 </Link>
                 <Link to="https://www.mexc.com/exchange/P3D_USDT">
                   <li>MEXC P3D/USDT</li>
