@@ -242,6 +242,24 @@ const Coin = () => {
               Version: <Link to="https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate">v1.1-substrate</Link>
             </li>
           </ul>
+          <div className="page-content-text">
+            Bridged 3dpass P3D on Binance Smart Chain blockchain:
+          </div>
+          <ul className="page-content-text">
+            <li>
+              Contract: 0x078E7A2037b63846836E9d721cf2dabC08b94281
+            </li>
+            <li>
+              Standard: BEP20
+            </li>
+            <li>
+              Decimals: 18
+            </li>
+            <li>
+              Bridge: <Link to="https://bridge.3dpswap.online">Counterstake</Link>, 
+              Version: <Link to="https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate">v1.1-substrate</Link>
+            </li>
+          </ul>
         </div>
         <div className="page-content-block" id="white-papper">
           <div className="page-content-inner">

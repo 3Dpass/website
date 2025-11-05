@@ -30,11 +30,18 @@ const Home = () => {
 
   const [news] = useState([
       {
+      title: "3DPass has been added to Pancakeswap!",
+      description:
+        "V2 Liquidity pool P3D/USDT (P3D EVM - Bridged 3dpass P3D on BSC blockchain: 0x078E7A20...f2dabC08b94281). The Price maintains EVM compatibility: 1 P3D EVM = 1 MP3D Native",
+      date: "Nov 05, 2025",
+      link: "https://pancakeswap.finance/liquidity/pool/bsc/0x63fA27a701AD609726A18E9d8bF6eB86C7cd52B2"
+      },
+      {
       title: "3DPass has been added to Uniswap!",
       description:
         "V2 Liquidity pool P3D/USDT (P3D EVM - Bridged 3dpass P3D on Ethereum blockchain: 0x4f3a4e3770...45A15843025E1). The Price maintains EVM compatibility: 1 P3D EVM = 1 MP3D Native",
       date: "Oct 23, 2025",
-      link: "https://app.uniswap.org/positions/v2/ethereum/0x2e128d21f94A4174E1eCAE9aF57d73425292296a"
+      link: "https://app.uniswap.org/explore/pools/ethereum/0x2e128d21f94a4174e1ecae9af57d73425292296a"
       },
       {
       title: "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX!",
@@ -43,13 +50,6 @@ const Home = () => {
       date: "Oct 15, 2025",
       link: "https://3dpswap.online/pools"
       },
-      {
-      title: "USDT <-> wUSDT bridge has been established between Ethereum and 3DPass blockchains!",
-      description:
-        "Bridge details: HOME NETWORK (Ethereum), Export Contract: 0x3a96AC42A... <-> FOREIGN NETWORK (3DPass), Import Contract: 0x00D5f00250...",
-      date: "Sep 19, 2025",
-      link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate?tab=readme-ov-file#reading-data-directly-from-deployed-contracts"
-      }
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
 

@@ -1193,14 +1193,20 @@ const Community = () => {
                 <Link to="https://3dpswap.online">
                   <li>3DPswap</li>
                 </Link>
-                <Link to="https://app.uniswap.org/positions/v2/ethereum/0x2e128d21f94A4174E1eCAE9aF57d73425292296a">
-                  <li>Uniswap V2</li>
-                </Link>
                 <Link to="https://bridge.3dpswap.online">
-                  <li>Cross-Chain Bridge "Ethereum - 3Dpass"</li>
+                  <li>Cross-Chain Bridge</li>
+                </Link>
+                <Link to="https://app.uniswap.org/explore/pools/ethereum/0x2e128d21f94a4174e1ecae9af57d73425292296a">
+                  <li>Uniswap V2 P3D/USDT</li>
+                </Link>
+                <Link to="https://pancakeswap.finance/liquidity/pool/bsc/0x63fA27a701AD609726A18E9d8bF6eB86C7cd52B2">
+                  <li>Pancakeswap P3D/USDT</li>
                 </Link>
                 <Link to="https://www.mexc.com/exchange/P3D_USDT">
                   <li>MEXC P3D/USDT</li>
+                </Link>
+                <Link to="https://app.exbitron.com/exchange/?market=P3D-USDT">
+                  <li>Exbitron P3D/USDT</li>
                 </Link>
               </ul>
             </div>
