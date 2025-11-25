@@ -29,6 +29,13 @@ const Home = () => {
   ]);
 
   const [news] = useState([
+          {
+      title: "The bridge node new version has been released!",
+      description:
+        "Fast syncronization across the networks, data sharing, performance and stability",
+      date: "Nov 25, 2025",
+      link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate"
+      },
       {
       title: "3DPass has been added to Pancakeswap!",
       description:
@@ -42,13 +49,6 @@ const Home = () => {
         "V2 Liquidity pool P3D/USDT (P3D EVM - Bridged 3dpass P3D on Ethereum blockchain: 0x4f3a4e3770...45A15843025E1). The Price maintains EVM compatibility: 1 P3D EVM = 1 MP3D Native",
       date: "Oct 23, 2025",
       link: "https://app.uniswap.org/explore/pools/ethereum/0x2e128d21f94a4174e1ecae9af57d73425292296a"
-      },
-      {
-      title: "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX!",
-      description:
-         "P3D/wUSDT Liquidity Pool came into operation on 3dpswap DEX! USDT <-> wUSDT in/out is ensured by the cross-chain trustless bridge.",
-      date: "Oct 15, 2025",
-      link: "https://3dpswap.online/pools"
       },
   ]);
   const [activeIndex, setActiveIndex] = useState(null);

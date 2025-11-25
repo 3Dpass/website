@@ -1196,8 +1196,8 @@ const Community = () => {
             <div className="url-block">
               <div className="url-block-title">Exchanges</div>
               <ul className="page-content-text">
-                <Link to="https://3dpswap.online">
-                  <li>3DPswap</li>
+                <Link to="https://3dpswap.online/pools/0xFbFBFBFb00000000000000000000000000000017">
+                  <li>3DPswap P3D/wUSDT</li>
                 </Link>
                 <Link to="https://bridge.3dpswap.online">
                   <li>Cross-Chain Bridge</li>
