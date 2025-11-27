@@ -578,15 +578,15 @@ const Coin = () => {
             </div>
             <ul className="page-content-text">
             <li>3DPRC-2: Assets management</li>
-            <li>Decentralization: Taking out Sudo (<i> is being estimated, lead by PaulS</i>)</li>
+            <li>Decentralization: Taking out Sudo (<i> in the process, lead by PaulS</i>)</li>
               <ul className="page-content-text">
-                <li>Treasury & Bounties: Security limits implementation</li>
-                <li>Council: Security audit and limits implementation</li>
-                <li>Techincal Committee: Security audit and procedures implementation</li>
+                <li>Treasury & Bounties: Security limits implementation (<i>in the process</i>)</li>
+                <li>Council: Security audit and limits implementation (<i>in the process</i>)</li>
+                <li>Techincal Committee: Security audit and procedures implementation (<i>in the process</i>)</li>
                 <li>Techincal Committee: Community engagement public verification, github commits for the last quarter must be inspected</li>
-                <li>Sudo taking out procedure: formalization</li>
+                <li>Sudo taking out procedure: formalization (<i>in the process</i>)</li>
                 <li>Sudo taking out procedure: testing on testnet</li>
-                <li>Sudo taking out procedure: execution</li>
+                <li>Sudo taking out procedure: execution </li>
               </ul>
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
               <li>DEX: EVM methods integration (<Link to="https://3dpswap.online"><i>done</i></Link>)</li>
