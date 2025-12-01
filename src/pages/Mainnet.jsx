@@ -434,7 +434,7 @@ const Mainnet = () => {
           <a href="https://github.com/3Dpass">
             <div className="one-subheader">GitHub</div>
           </a>
-          <a href="https://miner.p3d.top">
+          <a href="https://3dp-mining-xbinodes.com">
             <div className="one-subheader">Mining & Validator dashboard</div>
           </a>
           <a href="/assets">
@@ -1891,7 +1891,7 @@ COW contract on EVM:
               <strong>Option 2 - Using the mining and validator dashboard: </strong> 
             </div>
             <ul className="page-content-text">
-              <li>Open the dashboard via <Link to="https://miner.p3d.top">miner.p3d.top</Link> or <Link to="https://mining.3dpscan.xyz">mining.3dpscan.xyz</Link></li>
+              <li>Open the dashboard via <Link to="https://3dp-mining.xbinodes.com/">miner.p3d.top</Link>
               <li>Navigate "Claim vasted rewards"</li>
               <li>Sign the transaction with the block author's/validator's address</li>
             </ul>
@@ -2091,8 +2091,7 @@ ls ~/3dp-chain/chains/3dpass/keystore
               4. Install the <Link to="https://polkadot.js.org/extension/">Polka js web browser extension</Link> {" "}
               for signing transactions, then open the Validator dashborad:
               <ul>
-                <li>Hosted: <Link to="https://miner.p3d.top">https://miner.p3d.top</Link></li>
-                <li>Hosted: <Link to="https://mining.3dpscan.xyz">https://mining.3dpscan.xyz</Link></li>
+                <li>Hosted: <Link to="https://3dp-mining.xbinodes.com">https://miner.p3d.top</Link></li>
                 <li>Local: build and run it from
                   {" "} <Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link></li>
               </ul>
@@ -2849,3 +2848,4 @@ SS58: d1GvktUdvKdghY7LB2zW2XDp1Wzio9ZPGGFcyaYhp2Nasy5LS
 };
 
 export default Mainnet;
+
