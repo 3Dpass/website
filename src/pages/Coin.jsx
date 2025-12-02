@@ -573,17 +573,49 @@ const Coin = () => {
              <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
             </ul>
             
-            <div className="page-content-text road-map-text mb0">
+            <div className="page-content-text road-map-text mb0" id="roadmap-2025-Q3">
               Q3 - Decentralization
             </div>
             <ul className="page-content-text">
-            <li>3DPRC-2: Assets management</li>
-            <li>Decentralization: Taking out Sudo (<i> in the process, lead by PaulS</i>)</li>
+            <li>Essential network infrastructure decentralization (<i>in the process, lead by PaulS</i>):</li>
+              <ul>
+                <li>RPC endpoints ( <Link to="https://github.com/3Dpass/rpc-list/blob/main/list.txt"><i>Done</i></Link>):</li>
+                <ul>
+                  <li>wss://rpc.3dpass.org - delegated to a validator owner's server (<i>Discord: bb100</i>)</li>
+                  <li>wss://rpc.p3d.top - has always been runing by a community representative (<i> Discord: lzmzjy, TG: @lzmzjy</i>)</li>
+                  <li>Additional commercial RPC provider: https://xbinodes.com</li>
+                </ul>
+                <li>Blockhain Explorer and Telemetry Server:</li>
+                <ul>
+                  <li>3dpscan.xyz - stopped by the team, delegated to lzmzjy (<i> Discord: lzmzjy, TG: @lzmzjy</i>), available on <Link to="https://github.com/3Dpass/explorer">GitHub</Link></li>
+                  <li>Centralized Telemetry Server (3dpass.netwrork) - stopped by the team, available on <Link to="https://github.com/3Dpass/telemetry">GitHub</Link></li>
+                </ul>
+              <li>Mining and Validators dashboard:</li>
+                <ul>
+                   <li>mining.3dpscan.xyz - the hosting is delegated to https://xbinodes.com (<Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link>, discord: xbinor), 
+                       availble on <Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link>
+                   </li>
+                </ul>
+              <li>Other User Interfaces:</li>
+                <ul>
+                  <li>DEX UI (frontend only WEB3 app) https://3dpswap.online -  moved to a static hosting (availble to fork on <Link to="https://github.com/3Dpass/swap">GitHub</Link>)</li>
+                  <li>Bridge UI (frontend only WEB3 app) https://bridge.3dpswap.online -  moved to a static hosting (availble to fork on <Link to="https://github.com/3Dpass/bridge-frontend">GitHub</Link>)</li>
+                  <li>Address Converter (frontend only WEB3 app) https://converter.3dpass.org - moved to a static hosting (availble to fork on <Link to="https://github.com/3Dpass/3dpass-evm-address-converter">GitHub</Link>)</li>
+                </ul>
+              </ul>
+            <li>Taking out Sudo (<i> in the process, lead by PaulS</i>):</li>
               <ul className="page-content-text">
-                <li>Treasury & Bounties: Security limits implementation (<i>in the process</i>)</li>
+                <li>Treasury & Bounties: Security limits implementation (<i>in the process</i>):</li>
+                  <ul>
+                    <li>Vesting mechanizm for Treasury (<i>in the process</i>)</li>
+                    <li>Transfering all the budgets to Treasury under vesting schedule</li>
+                  </ul>
                 <li>Council: Security audit and limits implementation (<i>in the process</i>)</li>
                 <li>Techincal Committee: Security audit and procedures implementation (<i>in the process</i>)</li>
-                <li>Techincal Committee: Community engagement public verification, github commits for the last quarter must be inspected</li>
+                  <ul>
+                    <li>Technical Committee members election/rotation mechanizm</li>
+                    <li>Techincal Committee members engagement public verification, last quarter github commits inspection</li>
+                  </ul>
                 <li>Sudo taking out procedure: formalization (<i>in the process</i>)</li>
                 <li>Sudo taking out procedure: testing on testnet</li>
                 <li>Sudo taking out procedure: execution </li>

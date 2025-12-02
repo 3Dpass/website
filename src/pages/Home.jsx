@@ -29,7 +29,14 @@ const Home = () => {
   ]);
 
   const [news] = useState([
-          {
+      {
+      title: "3DPass complete decentralization has begun!",
+      description:
+        "In accordance with the Roadmap 2025 The Ledger of Things stepped in the next phase of decentralization which ends up with sudo taking out execution.",
+      date: "Dec 02, 2025",
+      link: "/coin#roadmap-2025-Q3"
+      },
+      {
       title: "The bridge node new version has been released!",
       description:
         "Fast syncronization across the networks, data sharing, performance and stability",
@@ -43,13 +50,7 @@ const Home = () => {
       date: "Nov 05, 2025",
       link: "https://pancakeswap.finance/liquidity/pool/bsc/0x63fA27a701AD609726A18E9d8bF6eB86C7cd52B2"
       },
-      {
-      title: "3DPass has been added to Uniswap!",
-      description:
-        "V2 Liquidity pool P3D/USDT (P3D EVM - Bridged 3dpass P3D on Ethereum blockchain: 0x4f3a4e3770...45A15843025E1). The Price maintains EVM compatibility: 1 P3D EVM = 1 MP3D Native",
-      date: "Oct 23, 2025",
-      link: "https://app.uniswap.org/explore/pools/ethereum/0x2e128d21f94a4174e1ecae9af57d73425292296a"
-      },
+
   ]);
   const [activeIndex, setActiveIndex] = useState(null);
 
