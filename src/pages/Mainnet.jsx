@@ -1714,14 +1714,20 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
               style={{ marginBottom: "20px" }}
             />
             <div className="page-content-text">Mainnet public API endpoints:</div>
+             <pre className="main-pre">
+{`
+wss://rpc.p3d.top
+wss://rpc.3dpass.org
+`}
+             </pre>
             <ul className="page-content-text">
               <li>
-                The current RPC API providers list is available over this {" "}
+                The well known RPC API providers list is available over this {" "}
                 <Link to="https://github.com/3Dpass/rpc-list/blob/main/list.txt">GitHub repo</Link>
               </li>
               <li>
-                Due to the project's decentralized nature this repo cannot embrace the ultimate list of the 
-                endpoints operating, providing just short number of well tested ones.
+                Due to the project's decentralized nature we cannot embrace the ultimate list of the 
+                endpoints operating.
               </li>
             </ul>
             <div className="page-content-text">Local Node:</div>
@@ -1768,13 +1774,13 @@ yarn miner --interval 100 --host 127.0.0.1 --port 9933
 {`
 Name: 3dpass - The Ledger of Things
 Chain id: 1333
-RPC: https://rpc-http.3dpass.org
+RPC URL: https://rpc.p3d.top
 `}
 
                  </pre>
                  <img
                   className="page-img"
-                  src="/images/metamask_add_custom-chain-min.png"
+                  src="/images/metamask_add_custom-chain-min_1.png"
                   alt="img"
                   style={{ marginBottom: "20px" }}
                 />
