@@ -1109,7 +1109,7 @@ admin@admin pass3d % ./target/release/pass3d -s 12 -g 8 -a grid2d_v3a -d 10 -i r
 {`
 Name: 3dpass - The Ledger of Things
 Chain id: 1333
-RPC: https://rpc-http.3dpass.org
+RPC: https://rpc.p3d.top
 `}
 
                  </pre>
@@ -1251,7 +1251,7 @@ contract HelloWorld {
               {" "}<Link to="#3dprc-2-fungible">fungible asset</Link>. Once created, 
               the asset is being assigned with its unique identifier - the <strong>`assetID`</strong>, 
               which is a decimal value. We are going to take the 
-              {" "}<Link to="https://3dpscan.xyz/#/assets/16">COW</Link> token (assetID: 16) as an example. 
+              {" "}<Link to="https://scan.p3d.top/#/assets/16">COW</Link> token (assetID: 16) as an example. 
             </div>
             <ul className="page-content-text">
               <li>The asset precompile contract address format is <strong>`0xFBFBFBFA + assetID (in hex)`</strong>

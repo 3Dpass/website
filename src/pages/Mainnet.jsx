@@ -419,7 +419,7 @@ const Mainnet = () => {
           <a href="https://bridge.3dpswap.online">
             <div className="one-subheader">Cross-Chain Bridge</div>
           </a>
-          <a href="https://3dpscan.xyz">
+          <a href="https://scan.p3d.top">
             <div className="one-subheader">Blockchain Explorer</div>
           </a>
           <a href="https://discord.gg/u24WkXcwug">
@@ -434,7 +434,7 @@ const Mainnet = () => {
           <a href="https://github.com/3Dpass">
             <div className="one-subheader">GitHub</div>
           </a>
-          <a href="https://3dp-mining.xbinodes.com">
+          <a href="https://miner.p3d.top">
             <div className="one-subheader">Mining & Validator dashboard <i>(* third-party)</i></div>
           </a>
           <a href="/assets">
@@ -1325,12 +1325,16 @@ docker compose rm -f
             <ul className="page-content-text">
               <li>
                 Track your performance on the Mining Leaderboard: {" "} 
-                <Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link> <i>(third-party commercial service)</i>
+                <ul className="page-content-text">
+                  <li><Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link></li>
+                  <li><Link to="https://miner.p3d.top">https://miner.p3d.top</Link> <i>(third-party service)</i></li>
+                  <li><Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link> <i>(third-party service)</i></li>
+                </ul>
               </li>
-              <li>
+              {/*<li>
               Compare your machine configuraton to the other ones 
               presented on the network <Link to="https://3dpass.network">https://3dpass.network</Link>
-              </li>
+              </li>*/}
             </ul>
           </div>
         </div>
@@ -1620,13 +1624,17 @@ bun miner.js --host 127.0.0.1 --port 9933
                 which might be leveraged as an option
               </li>
               <li>
-                Track your performance on the Mining Leaderboard {" "}
-                <Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link> <i>(third-party commercial service)</i>
+                Track your performance on the Mining Leaderboard: {" "} 
+                <ul className="page-content-text">
+                  <li><Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link></li>
+                  <li><Link to="https://miner.p3d.top">https://miner.p3d.top</Link> <i>(third-party service)</i></li>
+                  <li><Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link> <i>(third-party service)</i></li>
+                </ul>
               </li>
-              <li>
-              Compare your machine configuration to the other ones 
+              {/*<li>
+              Compare your machine configuraton to the other ones 
               presented on the network <Link to="https://3dpass.network">https://3dpass.network</Link>
-              </li>
+              </li>*/}
             </ul>
             <div className="page-content-subtitle" id="linux-mac-miner-adjustment">
               Miner parameters adjustment (optional)
@@ -1840,7 +1848,7 @@ P3D contract on EVM:
                  </pre>
                   - `0xFBFBFBFA` is a constant prefix
                   - `assetID` is the asset index in `poscanAssets` runtime module. <br />
-                  e.g. the <Link to="https://3dpscan.xyz/#/assets/16">COW</Link> token's assetID is `16`. 
+                  e.g. the <Link to="https://scan.p3d.top/#/assets/16">COW</Link> token's assetID is `16`. 
                   The hex value of `16` is `10` . So, the EVM address to 
                   interact with COW is: 
                 <pre className="main-pre">
@@ -1898,7 +1906,7 @@ COW contract on EVM:
             </div>
             <ul className="page-content-text">
               <li>
-                Open the dashboard via <Link to="https://3dp-mining.xbinodes.com/">https://3dp-mining.xbinodes.com/</Link>, {" "}
+                Open the dashboard via <Link to="https://miner.p3d.top/">https://miner.p3d.top/</Link>, {" "}
                 which is a third-party commercial service. Alternatively, you can run it from the {" "} 
                 <Link to="https://github.com/3Dpass/3DP-mining-leaderboard">source code</Link> in local.
               </li>
@@ -2101,7 +2109,8 @@ ls ~/3dp-chain/chains/3dpass/keystore
               4. Install the <Link to="https://polkadot.js.org/extension/">Polka js web browser extension</Link> {" "}
               for signing transactions, then open the Validator dashborad:
               <ul>
-                <li>Hosted: <Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link> <i>(third-party commercial service)</i></li>
+                <li>Hosted: <Link to="https://miner.p3d.top">https://miner.p3d.top</Link> <i>(third-party service)</i></li>
+                <li>Hosted: <Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link> <i>(third-party service)</i></li>
                 <li>Local: build and run it from
                   {" "} <Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link></li>
               </ul>
@@ -2336,8 +2345,8 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
               Registrars
             </div>
             <ul className="page-content-text">
-              <li><Link to="https://3dpscan.xyz/#/identities/registrars">Current registrars</Link></li>
-              <li><Link to="https://3dpscan.xyz/#/identities">Identities history data</Link></li>
+              <li><Link to="https://scan.p3d.top/#/identities/registrars">Current registrars</Link></li>
+              <li><Link to="https://scan.p3d.top/#/identities">Identities history data</Link></li>
             </ul>
              <div className="page-content-text">
               <strong>How to become Registrar:</strong><br />
@@ -2472,7 +2481,7 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
             </div>
             <div className="page-content-text">
               For example, let's verify the Identity profile for 3DPASS REGISTRAR's
-              account <Link to="https://3dpscan.xyz/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h?tab=identity&page=1">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link>: 
+              account <Link to="https://scan.p3d.top/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h?tab=identity&page=1">d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h</Link>: 
             </div>
             <ol className="page-content-text">
               <li>
@@ -2480,7 +2489,7 @@ d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA
               introducing themselves as 3DPASS REGISTRAR.
               </li>
               <li>
-              You have already verified the email address associated with 3DPASS REGISTRAR's <Link to="https://3dpscan.xyz/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h?tab=identity&page=1">identity 
+              You have already verified the email address associated with 3DPASS REGISTRAR's <Link to="https://scan.p3d.top/#/accounts/d1CJYEbtNDtKWR3gdEABQRynTbcVi1u9AFTF9J6yCSazgYW1h?tab=identity&page=1">identity 
               profile</Link>, which proved to be correct.
               </li>
              <li> 

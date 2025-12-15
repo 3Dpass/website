@@ -395,16 +395,16 @@ const Grants = () => {
             </div>
             <ul className="page-content-text">
               <li>
-                Information web sites (e.g. <Link to="https://3dpass.org">3dpass.org</Link>)
+                Information web sites (e.g. <Link to="https://github.com/3Dpass/website">3dpass.org</Link>)
               </li>
               <li>
-                Block explorers (e.g. <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)
+                Block explorers (e.g. <Link to="https://github.com/3Dpass/explorer">3dpscan</Link>)
               </li>
               <li>
-                Mining leader boards (e.g. <Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link>)
+                Mining leader boards (e.g. <Link to="https://miner.p3d.top">https://miner.p3d.top</Link>)
               </li>
               <li>
-                DEX maintenance (e.g. <Link to="https://3dpswap.online">https://3dpswap.online</Link>)
+                DEX maintenance (e.g. <Link to="https://github.com/3Dpass/swap">3dpswap</Link>)
               </li>
               <li>
                 Open Governance apps and channels
@@ -413,10 +413,10 @@ const Grants = () => {
                 Cross-chain bridges
               </li>
               <li>
-                Web3 wallets maintenance and hositng (e.g. <Link to="https://wallet.3dpass.org">https://wallet.3dpass.org</Link>)
+                Web3 wallets maintenance and hositng (e.g. <Link to="https://github.com/3Dpass/wallet">3dpass web3 wallet</Link>)
               </li>
               <li>
-                Mobile wallets maintenance (e.g. <Link to="/mobile-wallet">3dpass mobile wallet</Link>)
+                Mobile wallets maintenance (e.g. <Link to="https://github.com/3Dpass/threedpass">3dpass mobile wallet</Link>)
               </li>
               <li>
                 Other dApps and scripts

@@ -502,16 +502,16 @@ const Community = () => {
                A "funny cow" tokenized example:
             </div>
             <ul className="page-content-text">
-              <li>
+              {/*<li>
                 Object tokenized: <strong>#16</strong>; {" "}
                <Link to="https://3dpscan.io/object/16">A funny cow</Link>.
+              </li>*/}
+              <li>
+               AssetId: <strong>#16</strong>; <Link to="https://scan.p3d.top/#/assets/16"><strong>COW</strong></Link>;
               </li>
               <li>
-               AssetId: <strong>#16</strong>; <Link to="https://3dpscan.xyz/#/assets/16"><strong>COW</strong></Link>;
-              </li>
-              <li>
-               Listed on DEX: Swap the cow shares: <Link to="https://3dpswap.online">P3D/COW</Link>; {" "}
-               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/COW</Link>
+               Listed on 3dpswap: {" "}
+               Liquidity Pool: <Link to="https://3dpswap.online/pools/3"> P3D/COW</Link>
               </li>
             </ul>
             <div className="page-content-subtitle" id="use-cases-lego">
@@ -546,16 +546,16 @@ const Community = () => {
                Example:
             </div>
             <ul className="page-content-text">
-              <li>
+              {/*<li>
                Object tokenized: <strong>#21</strong>; {" "}
                <Link to="https://3dpscan.io/object/21">Lego brick 2x2</Link>.
+              </li>*/}
+              <li>
+               AssetId: <strong>#21</strong>; <Link to="https://scan.p3d.top/#/assets/21"><strong>L2X2</strong></Link>;
               </li>
               <li>
-               AssetId: <strong>#21</strong>; <Link to="https://3dpscan.xyz/#/assets/21"><strong>L2X2</strong></Link>;
-              </li>
-              <li>
-               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/L2X2</Link>; {" "}
-               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/L2X2</Link>
+               Listed on 3dpswap: {" "}
+               <Link to="https://3dpswap.online/pools/9"> P3D/L2X2</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -655,16 +655,16 @@ const Community = () => {
                Example:
             </div>
             <ul className="page-content-text">
-              <li>
+              {/*<li>
                Object tokenized: <strong>#27</strong>; {" "}
                <Link to="https://3dpscan.io/object/27">Ring 3D</Link>.
+              </li>*/}
+              <li>
+               AssetId: <strong>#27</strong>; <Link to="https://scan.p3d.top/#/assets/27"><strong>RING</strong></Link>;
               </li>
               <li>
-               AssetId: <strong>#27</strong>; <Link to="https://3dpscan.xyz/#/assets/27"><strong>RING</strong></Link>;
-              </li>
-              <li>
-               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/RING</Link>; {" "}
-               Liquidity Pool: <Link to="https://3dpswap.online"> P3D/RING</Link>
+               Listed on 3dpswap: {" "}
+               <Link to="https://3dpswap.online/pools/11"> P3D/RING</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -772,16 +772,16 @@ const Community = () => {
                Example:
             </div>
             <ul className="page-content-text">
-              <li>
+              {/*<li>
                Object tokenized: <strong>#29</strong>; {" "}
                <Link to="https://3dpscan.io/object/29">3D crystal</Link>.
-              </li>
+              </li>*/}
               <li>
-               AssetId: <strong>#29</strong>; <Link to="https://3dpscan.xyz/#/assets/29"><strong>DCRT</strong></Link>;
+               AssetId: <strong>#29</strong>; <Link to="https://scan.p3d.top/#/assets/29"><strong>DCRT</strong></Link>;
               </li>
               <li>
                Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/DCRT</Link>; {" "}
-               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/DCRT</Link>
+               Liquidity Pool: <Link to="https://3dpswap.online/pools/12"> P3D/DCRT</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -796,16 +796,16 @@ const Community = () => {
                Example:
             </div>
             <ul className="page-content-text">
-              <li>
+              {/*<li>
                Object tokenized: <strong>#27</strong>; {" "}
                <Link to="https://3dpscan.io/object/27">3D diamond cut</Link>.
+              </li>*/}
+              <li>
+               AssetId: <strong>#27</strong>; <Link to="https://scan.p3d.top/#/events/#/assets/27"><strong>DIA</strong></Link>;
               </li>
               <li>
-               AssetId: <strong>#27</strong>; <Link to="https://3dpscan.xyz/#/assets/27"><strong>DIA</strong></Link>;
-              </li>
-              <li>
-               Listed on DEX: Swap: <Link to="https://3dpswap.online">P3D/DIA</Link>; {" "}
-               Liquidity Pool: <Link to="https://3dpswap.online/pools"> P3D/DIA</Link>
+               Listed on 3dpswap:{" "}
+               <Link to="https://3dpswap.online/pools/10"> P3D/DIA</Link>
               </li>
             </ul>
             <div className="page-content-text">
@@ -1137,7 +1137,7 @@ const Community = () => {
                 <Link to="/mobile-wallet">
                   <li>Mobile wallet</li>
                 </Link>
-                <Link to="https://3dpscan.xyz">
+                <Link to="https://scan.p3d.top">
                   <li>Explorer</li>
                 </Link>
                 <Link to="https://talisman.xyz">
@@ -1158,7 +1158,10 @@ const Community = () => {
                   <li>Nova wallet</li>
                 </Link>
                   <Link to="https://3dp-mining.xbinodes.com">
-                  <li>Mining & Validator dashboard</li>
+                  <li>Mining dashboard</li>
+                </Link>
+                <Link to="https://miner.p3d.top">
+                  <li>Mining and Validator dashboard</li>
                 </Link>
               </ul>
             </div>

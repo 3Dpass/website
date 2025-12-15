@@ -554,7 +554,7 @@ const Coin = () => {
             <ul className="page-content-text">
             <li>Essential netwok infrastructure optimization: (<i>lead by Mikhail</i>):</li>
             <ul className="page-content-text">
-               <li>New open source blockchain explorer  (<i>Done</i>: <Link to="https://3dpscan.xyz">3dpscan.xyz</Link>)</li>
+               <li>New open source blockchain explorer  (<i>Done</i>: <Link to="https://github.com/3Dpass/explorer">GitHub</Link>)</li>
                <li>Archive Nodes and RPC API endpoints (<i>Done</i>: <Link to="https://github.com/3Dpass/rpc-list">The endpoint providers list</Link>)</li>
                <li>New telemetry server (<i>Done</i>: <Link to="https://3dpass.network">3dpass.network</Link>)</li>
                <li>Mining & Validator dashboard (<Link to="https://github.com/3Dpass/mining-leaderboard"><i>Done</i></Link>)</li>
@@ -593,7 +593,7 @@ const Coin = () => {
                 </ul>
               <li>Mining and Validators dashboard:</li>
                 <ul>
-                   <li>mining.3dpscan.xyz - the hosting is delegated to https://xbinodes.com (<Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link>, discord: xbinor), 
+                   <li>mining.3dpscan.xyz - the hosting has been delegated to https://xbinodes.com (<Link to="https://3dp-mining.xbinodes.com">https://3dp-mining.xbinodes.com</Link>, discord: xbinor), 
                        available on <Link to="https://github.com/3Dpass/mining-leaderboard">GitHub</Link>
                    </li>
                 </ul>
@@ -769,8 +769,8 @@ const Coin = () => {
               </div>
               <div className="page-table-left page-table-info">Blockchain Explorer</div>
               <div className="page-table-right page-table-content">
-                <Link to="https://3dpscan.xyz">
-                  https://3dpscan.xyz
+                <Link to="https://scan.p3d.top">
+                  https://scan.p3d.top
                 </Link>
               </div>
               <div className="page-table-left page-table-info">Telemetry</div>
@@ -866,15 +866,15 @@ const Coin = () => {
                   The team share - 101 000 000 P3D (10.1% of total supply), issued
                   in genesis block. Vesting schedule: 30 000 000 P3D locked until the block #905700; 30 000 000 P3D locked until the block #1431300; 30 000 000 P3D locked until the block #1956900:
                   <ol>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ">d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP">d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB">d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE">d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ">d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx">d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF">d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp">d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp</Link></li>
-                    <li><Link to="https://3dpscan.xyz/#/accounts/d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp">d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ">d1CNDotJXNPvnSA5EQXpSbkUyXBVmaggkARY7kcgXim4BqeBJ</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP">d1E8Bh1ZoTjnSfRnnQCKgteV1ipd9yMvK3dQnD3gAHLv3notP</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB">d1GejSwamhiKSGP9sbChYq4GJjWSrpA7v3PdfNijdwL8aGYCB</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE">d1GZ8GxP3KzKJGRYmp9HMwxurnSKx3ACcqeZqLY5kpbLEyjzE</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ">d1F9pWAgHjcADhxrg9DeuiE4KJaNnFBzxCHJvsJUysygrWFnQ</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx">d1GjsUT5uKxmzrBZo2ed7Q5Woc8gi3g6mRenK8nXw9qhA9SSx</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF">d1GA9xWx3WgpQHp8LHCXHbYoZdvjY3NHhU6gR2fsdVCiC4TdF</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp">d1HBZPs7ZMs5wa3PWk6RorjXKXHx85XkuD9JjN3nyEofW5MBp</Link></li>
+                    <li><Link to="https://scan.p3d.top/#/accounts/d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp">d1Hun336VEgwk5tYFs6TusUESTyKMrLyHh3Yk3d2LMdZqaeDp</Link></li>
                   </ol>
                 </li>
                 <li>
@@ -882,14 +882,14 @@ const Coin = () => {
                   issued in genesis block. The budget is being spent through the Treasury account
                   controlled by the <Link to="/governance">Governance</Link>
                   <ul>
-                  <li><Link to="https://3dpscan.xyz/#/accounts/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>
+                  <li><Link to="https://scan.p3d.top/#/accounts/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>
                   </ul>
                 </li>
                 <li id="contribution-budget">
                   Contribution budget: 60 000 000 P3D (6% of total supply),
-                  issued in genesis block. The budget is transferred to and being spent through the <Link to="https://3dpscan.xyz/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">Treasury account</Link> controlled by the <Link to="/governance">Governance</Link>
+                  issued in genesis block. The budget is transferred to and being spent through the <Link to="https://scan.p3d.top/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">Treasury account</Link> controlled by the <Link to="/governance">Governance</Link>
                   <ul>
-                  <li>Initial address the budget was issued with: <Link to="https://3dpscan.xyz/#/accounts/d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf">d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf</Link></li>
+                  <li>Initial address the budget was issued with: <Link to="https://scan.p3d.top/#/accounts/d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf">d1EVSxVDFMMDa79NzV2EvW66PpdD1uLW9aQXjhWZefUfp8Mhf</Link></li>
                   </ul>
                 </li>
               </ul>
@@ -990,8 +990,8 @@ const Coin = () => {
               />
               <div className="page-content-text">
                 Stay up to date with the current block rewards distribution over {" "}
-                the  Mining Leaderborad <Link to="http://3dpassmining.info">3dpassmining.info</Link> {" "}
-                or via the open source blockchain explorer <Link to="https://3dpscan.xyz/">3dpscan.xyz</Link>. {" "}
+                the  Mining Leaderborad <Link to="http://miner.p3d.top">https://miner.p3d.top</Link> {" "}
+                or via the open source blockchain explorer <Link to="https://scan.p3d.top/">3dpscan</Link>. {" "}
                 Follow the <Link to="/mainnet">mining guidelines</Link> to join the competition.
               </div>
               <div

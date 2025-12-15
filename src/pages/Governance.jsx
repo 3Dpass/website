@@ -616,7 +616,7 @@ electorate - the total number of tokens issued in the network
             />  
           <div className="page-content-subtitle" id="how-to-get-voting-history">How to get the voting history</div>
           <div className="page-content-text">
-               Explore events on the <Link to="https://3dpscan.xyz/#/events">blockchain explorer</Link> and set up a filter 
+               Explore events on the <Link to="https://scan.p3d.top/#/events">blockchain explorer</Link> and set up a filter 
                for either the "Democracy" or "Referenda" seecton as follows:
           </div>
           <img
@@ -820,7 +820,7 @@ electorate - the total number of tokens issued in the network
               The Treasury is a pot of funds collected through either <Link to="/mainnet#validator-punishments">slashing
               Validators accounts</Link> for missbehaviour or direct donations. 3Dpass
               mainnet treasury accound is{" "}
-              <Link to="https://3dpscan.xyz/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
+              <Link to="https://scan.p3d.top/#/events/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c</Link>
             </div>
             <div className="page-content-text">
               The funds held in the Treasury can be spent by making a spending

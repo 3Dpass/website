@@ -120,15 +120,15 @@ const Footer = () => {
             <a href="/mobile-wallet">
               <div className="footer-item">Mobile Wallet</div>
             </a>
-            <a href="https://3dpscan.xyz">
+            <a href="https://scan.p3d.top">
               <div className="footer-item">Block Explorer</div>
             </a>
             <a href="https://3dpswap.online">
               <div className="footer-item">3DPswap DEX UI</div>
             </a>
-            <a href="https://3dpass.network">
+            {/*<a href="https://3dpass.network">
               <div className="footer-item">Network Telemetry</div>
-            </a>
+            </a>*/}
             <a href="/mainnet">
               <div className="footer-item">Mining Guidelines</div>
             </a>

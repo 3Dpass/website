@@ -30,7 +30,7 @@ const Home = () => {
 
   const [news] = useState([
       {
-      title: "3DPass complete decentralization has begun!",
+      title: "3DPass complete decentralization has just begun!",
       description:
         "In accordance with the Roadmap 2025 The Ledger of Things stepped in the next phase of decentralization which ends up with sudo taking out execution.",
       date: "Dec 02, 2025",
@@ -86,7 +86,7 @@ const Home = () => {
             <Link to="https://bridge.3dpswap.online">
               <Button type="button" label="Cross-Chain Bridge" />
             </Link>
-            <Link to="https://3dpscan.xyz">
+            <Link to="https://scan.p3d.top">
               <Button type="button" label="Block Explorer" />
             </Link>
             <Link to="/mainnet#linux-mac">
