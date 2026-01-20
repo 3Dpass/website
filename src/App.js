@@ -18,6 +18,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import Testnet from "./pages/Testnet";
 import TestnetRewards from "./pages/TestnetRewards";
 import Grants from "./pages/Grants";
+import Posts from "./pages/Posts";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
             <Route path="/governance" element={<Governance />} />
             <Route path="/proof-of-scan" element={<ProofOfScan />} />
             <Route path="/grants" element={<Grants />} />
+            <Route path="/posts" element={<Posts />} />
           </Routes>
         </ScrollToTop>
       </main>
