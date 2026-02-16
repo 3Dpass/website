@@ -1208,12 +1208,6 @@ const Community = () => {
                 <Link to="https://pancakeswap.finance/liquidity/pool/bsc/0x63fA27a701AD609726A18E9d8bF6eB86C7cd52B2">
                   <li>Pancakeswap P3D/USDT</li>
                 </Link>
-                <Link to="https://www.mexc.com/exchange/P3D_USDT">
-                  <li>MEXC P3D/USDT</li>
-                </Link>
-                <Link to="https://app.exbitron.com/exchange/?market=P3D-USDT">
-                  <li>Exbitron P3D/USDT</li>
-                </Link>
               </ul>
             </div>
             <div className="url-block">

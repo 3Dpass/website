@@ -553,14 +553,9 @@ const Assets = () => {
                 (the tokenization of the object share: <strong><i>%</i>; <i>Weight</i>; <i>Square</i>; <i>Length</i>; <i>Volume</i></strong>, etc).
                 The object is being stored on The Ledger of Things decentralized storage, if approved by the object authentication protocol.
                 Explore more detail by whatcing the 3DPRC-2 video explainer. {" "}
-                Enjoy the <Link tp="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">3DPRC-2 poScan API</Link>. 
+                Enjoy the <Link to="https://github.com/3Dpass/3DP/wiki/3DPRC%E2%80%902-PoScan-API">3DPRC-2 poScan API</Link>. 
                 Follow full <Link to="https://github.com/3Dpass/whitepaper/blob/main/3DPRC-2.md">3DPRC-2 standard description</Link>.
             </div>
-            <video
-              src="/images/3DPRC-2.mp4"
-              className="page-video"
-              controls
-            ></video>
           </div>
         </div>
         <div className="page-content-block" id="3dprc-2-object-authentication">

@@ -754,16 +754,7 @@ MD5 (red_beryl_3.obj) = 5ba84e5b5b0c4a720fc3109da4d174f4
                one of the most useful aspects of "Proof of Scan" consensus, which opens the capability 
                for the network to provide the tokenization service to customer. 
             </div>
-            <div className="page-content-text" id="difference">
-              Learn the difference between the revolutionary 3DPRC-2 tokenizaton standard based on the object recognition
-              {" "}
-               and conventional ERC-721 for NFT using just an account signature:
-            </div>
-            <video
-              src="/images/3DPRC-2.mp4"
-              className="page-video"
-              controls
-            ></video>
+
             <div className="page-content-subtitle" id="3dprc-2-implementation">
               3DPRC-2 implementation:
             </div>

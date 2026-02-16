@@ -30,6 +30,13 @@ const Home = () => {
 
   const [news] = useState([
       {
+      title: "Node sudo free version has been openned up for public review!",
+      description:
+        "The version includes Technical Committee members secure roataion mechanism as well as the upgrade plan.",
+      date: "Feb 02, 2026",
+      link: "https://github.com/3Dpass/3DP/tree/sudo_free_test"
+      },
+      {
       title: "3DPass complete decentralization has just begun!",
       description:
         "In accordance with the Roadmap 2025 The Ledger of Things stepped in the next phase of decentralization which ends up with sudo taking out execution.",
@@ -42,14 +49,7 @@ const Home = () => {
         "Fast syncronization across the networks, data sharing, performance and stability",
       date: "Nov 25, 2025",
       link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate"
-      },
-      {
-      title: "3DPass has been added to Pancakeswap!",
-      description:
-        "V2 Liquidity pool P3D/USDT (P3D EVM - Bridged 3dpass P3D on BSC blockchain: 0x078E7A20...f2dabC08b94281). The Price maintains EVM compatibility: 1 P3D EVM = 1 MP3D Native",
-      date: "Nov 05, 2025",
-      link: "https://pancakeswap.finance/liquidity/pool/bsc/0x63fA27a701AD609726A18E9d8bF6eB86C7cd52B2"
-      },
+      }
 
   ]);
   const [activeIndex, setActiveIndex] = useState(null);

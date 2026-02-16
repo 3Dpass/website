@@ -606,20 +606,18 @@ const Coin = () => {
               </ul>
             <li>Taking out Sudo (<i> in the process, lead by PaulS</i>):</li>
               <ul className="page-content-text">
-                <li>Treasury & Bounties: Security limits implementation (<i>in the process</i>):</li>
+                <li>Treasury & Bounties: Security limits implementation (<i>done</i>):</li>
                   <ul>
-                    <li>Vesting mechanism for Treasury (<i>in the process</i>)</li>
+                    <li>Vesting mechanism for Treasury (<i>done</i>)</li>
                     <li>Transferring all the budgets to Treasury under vesting schedule</li>
                   </ul>
-                <li>Council: Security audit and limits implementation (<i>in the process</i>)</li>
-                <li>Technical Committee: Security audit and procedures implementation (<i>in the process</i>)</li>
+                <li>Council: Security audit and limits implementation (<i>done</i>)</li>
+                <li>Technical Committee: Security audit and procedures implementation (<i>done</i>)</li>
                   <ul>
-                    <li>Technical Committee members election/rotation mechanism</li>
+                    <li>Technical Committee members election/rotation mechanism (projected)</li>
                     <li>Technical Committee members engagement public verification, last quarter github commits inspection</li>
                   </ul>
-                <li>Sudo taking out procedure: formalization (<i>in the process</i>)</li>
-                <li>Sudo taking out procedure: testing on testnet</li>
-                <li>Sudo taking out procedure: execution </li>
+                <li>Sudo taking out procedure: formalization (<i>done</i>)</li>
               </ul>
               <li>Business Development activities: (<i> is being researched by A_Mo</i> )</li>
               <li>DEX: EVM methods integration (<Link to="https://3dpswap.online"><i>done</i></Link>)</li>
@@ -633,8 +631,15 @@ const Coin = () => {
               </ul>
             <div className="page-content-subtitle" id="roadmap-2026">2026 (Forming up)</div>
             <div className="page-content-text road-map-text mb0">
-              Q1 - Cases & Integrations
+              Q1 - Sudo taking out execution
             </div>
+            <ul className="page-content-text">
+              <li>Node "sudo free" version implementation (<i><Link to="https://github.com/3Dpass/3DP/tree/sudo_free_test">done</Link></i>)</li>
+              <li>Technical Committee members rotation mechanism public review (<i><Link to="https://github.com/3Dpass/3DP/tree/sudo_free_test/pallets/tc-candidates">in the process</Link></i>)</li>
+              <li>Sudo taking out procedure: public review and testing (<i>in the process</i>)</li>
+              <li>Sudo taking out procedure: execution (<i><Link to="https://github.com/3Dpass/3DP/blob/sudo_free_test/SUDO_FREE_UPGRADE.md">planned</Link></i>)</li>
+              <li>Budget vesting schedule (<i>is being discussed</i>)</li>
+            </ul>
             <div className="page-content-text road-map-text mb0">
               Q2 - Cases & Integrations
             </div>
