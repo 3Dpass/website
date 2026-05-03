@@ -637,17 +637,31 @@ const Coin = () => {
               <li>Node "sudo free" version implementation (<i><Link to="https://github.com/3Dpass/3DP/tree/sudo_free_test">done</Link></i>)</li>
               <li>Technical Committee members rotation mechanism public review (<i><Link to="https://github.com/3Dpass/3DP/tree/sudo_free_test/pallets/tc-candidates">in the process</Link></i>)</li>
               <li>Sudo taking out procedure: public review and testing (<i>in the process</i>)</li>
-              <li>Sudo taking out procedure: execution (<i><Link to="https://github.com/3Dpass/3DP/blob/sudo_free_test/SUDO_FREE_UPGRADE.md">planned</Link></i>)</li>
-              <li>Budget vesting schedule (<i>is being discussed</i>)</li>
+              <li>Sudo taking out procedure: execution (<i><Link to="https://github.com/3Dpass/3DP/blob/sudo_free_test/SUDO_FREE_UPGRADE.md">being reviewed by the community</Link></i>){" "}
+                <br />
+                <br />
+                  <i>
+                    -- The community can now execute the upgrade anytime via the Referendum --
+                  </i>
+                <br />
+                <br />
+              </li>
+              <li>Budget vesting schedule (<i>discussed, implemented and transferred to Treasury: <Link to="https://scan.p3d.top/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c">26 Y vesting schedule</Link> has been applied</i>)</li>
             </ul>
             <div className="page-content-text road-map-text mb0">
-              Q2 - Cases & Integrations
+              <i> 
+                -- From this point on the project is completely decentralized --
+              </i>
+            </div> 
+            <br />
+            <div className="page-content-text road-map-text mb0">
+              Q2 - Being formed up  by the community
             </div>
             <div className="page-content-text road-map-text mb0">
-              Q3 - Cases & Integrations
+              Q3 - Being formed up  by the community
             </div>
             <div className="page-content-text road-map-text mb0">
-              Q4 - Cases & Integrations
+              Q4 - Being formed up  by the community
             </div>
           </div>
         </div>
@@ -884,7 +898,7 @@ const Coin = () => {
                 </li>
                 <li>
                   Marketing budget - 110 000 000 P3D (11% of total supply),
-                  issued in genesis block. The budget is being spent through the Treasury account
+                  issued in genesis block. The budget is being spent from the Treasury account
                   controlled by the <Link to="/governance">Governance</Link>
                   <ul>
                   <li><Link to="https://scan.p3d.top/#/accounts/d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL">d1ESJKwsk6zP8tBNJABUnf8mtKcqo1U2UVG7iEZ7uytGbWKAL</Link></li>

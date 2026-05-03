@@ -30,25 +30,25 @@ const Home = () => {
 
   const [news] = useState([
       {
-      title: "Node sudo free version has been openned up for public review!",
-      description:
-        "The version includes Technical Committee members secure roataion mechanism as well as the upgrade plan.",
-      date: "Feb 02, 2026",
-      link: "https://github.com/3Dpass/3DP/tree/sudo_free_test"
+        title: "The whole budget has been transferred to Treasury!",
+        description:
+          "In order to ensure complete decentalization, the budget has been transferred to Treasury under the 26Y vesting schedule",
+        date: "Mar 16, 2026",
+        link: "https://scan.p3d.top/#/accounts/d1EjCsWUVnKTG3dysQC2MWDfZKngtiwV2ZLegWRfFMbUR5d6c?tab=transfers&page=1"
       },
       {
-      title: "3DPass complete decentralization has just begun!",
-      description:
-        "In accordance with the Roadmap 2025 The Ledger of Things stepped in the next phase of decentralization which ends up with sudo taking out execution.",
-      date: "Dec 02, 2025",
-      link: "/coin#roadmap-2025-Q3"
+        title: "3Dpass Mobile wallet v2.20.0 has been released!",
+        description:
+          "Explorer URL customization, Object upload conditions, and other features are no available on the wallet.",
+        date: "Mar 14, 2026",
+        link: "https://github.com/3Dpass/threedpass/releases/tag/v2.20.0"
       },
       {
-      title: "The bridge node new version has been released!",
-      description:
-        "Fast syncronization across the networks, data sharing, performance and stability",
-      date: "Nov 25, 2025",
-      link: "https://github.com/3Dpass/counterstake-bridge/tree/v1.1-substrate"
+        title: "Node sudo free version has been provided for public review!",
+        description:
+          "The version includes Technical Committee members secure roataion mechanism as well as the upgrade plan.",
+        date: "Feb 02, 2026",
+        link: "https://github.com/3Dpass/3DP/tree/sudo_free_test"
       }
 
   ]);
