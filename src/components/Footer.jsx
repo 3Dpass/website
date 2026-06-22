@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"; // Dodaj import, jeśli nie ma
 import "../styles/footer.css";
 
 const Footer = () => {
@@ -13,18 +14,18 @@ const Footer = () => {
             <a href="https://t.me/pass3d"><div className="social-icon telegram"></div></a>
             <div className="footer-left-title">Donate:</div>
             <div className="footer-text-left">
-               d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA <br /><br />
+              d1Df6WwY7S9XDbdsAaT2t6daFMJRcCm5nnUNKC2U7iQQWYDzA <br /><br />
             </div>
-               <div className="footer-left-subtitle">Responsibility Disclaimer:</div>
-               <div className="footer-text-left">
-                This website is an open source free software maintained 
-                by 3dpass community members and providing some useful 
-                information about  The Ledger of Things (LoT) decentralized 
-                ecosystem, which might be partly inacurate, deprecated or invalid. 
-                Suggest your corrections by making a Pull Request into the repo: 
-             <a href="https://github.com/3Dpass/website">
-              <div className="footer-item-left">The Website GitHub link</div>
-             </a>
+            <div className="footer-left-subtitle">Responsibility Disclaimer:</div>
+            <div className="footer-text-left">
+              This website is an open source free software maintained 
+              by 3dpass community members and providing some useful 
+              information about The Ledger of Things (LoT) decentralized 
+              ecosystem, which might be partly inaccurate, deprecated or invalid. 
+              Suggest your corrections by making a Pull Request into the repo: 
+              <a href="https://github.com/3Dpass/website">
+                <div className="footer-item-left">The Website GitHub link</div>
+              </a>
             </div>
           </div>
         </div>
@@ -39,7 +40,7 @@ const Footer = () => {
             <a href="/features#scanproof">
               <div className="footer-item">Proof of Scan Consensus</div>
             </a>
-            <a href="features#3dprc-2">
+            <a href="/features#3dprc-2">
               <div className="footer-item">3DPRC-2 Standard</div>
             </a>
             <a href="/features#ledger">
@@ -83,11 +84,14 @@ const Footer = () => {
             <a href="/community#use-cases">
               <div className="footer-item">Use Cases</div>
             </a>
+            <Link to="/posts">
+              <div className="footer-item">Posts</div>
+            </Link>
           </div>
           <div className="footer-four-parts">
             <a href="/coin">
               <div className="footer-parts-title">3Dpass Coin</div>
-              </a>
+            </a>
             <a href="/coin#P3D">
               <div className="footer-item">P3D</div>
             </a>
@@ -136,14 +140,14 @@ const Footer = () => {
               <div className="footer-item">Validator Setup</div>
             </a>
             <a href="/assets">
-            <div className="footer-item">Assets</div>
-            </a>   
+              <div className="footer-item">Assets</div>
+            </a>
             <a href="/mainnet#chain">
-            <div className="footer-item">On-chain Identity</div>
+              <div className="footer-item">On-chain Identity</div>
             </a>
             <a href="https://deepwiki.com/3Dpass/3DP">
               <div className="footer-item">Dev Wiki</div>
-            </a>          
+            </a>
           </div>
         </div>
       </div>

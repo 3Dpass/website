@@ -1,0 +1,22 @@
+.posts-page {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .posts-header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .posts-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+  }
+  .posts-header p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  .posts-list {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #666;
+  }
